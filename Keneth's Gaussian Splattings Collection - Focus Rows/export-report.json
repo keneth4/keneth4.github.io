@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-02-23T06:46:16.110Z",
+  "generatedAt": "2026-02-23T18:39:32.747Z",
   "totals": {
     "files": 35,
     "assetFiles": 27,
     "shellFiles": 8,
-    "totalBytes": 102489354,
+    "totalBytes": 102489382,
     "assetBytes": 102300426,
-    "shellBytes": 188928,
+    "shellBytes": 188956,
     "firstViewAssetFiles": 4,
     "firstViewImageBytes": 28363102,
     "missingAssets": 0
