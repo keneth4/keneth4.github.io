@@ -1,5 +1,5 @@
 
-const DATA = {"meta":{"slug":"keneth-s-gaussian-splattings-collection","name":"Keneth's Gaussian Splattings Collection","restaurantName":{"es":"Keneth's","en":"Keneth's","de":"Keneth's"},"title":{"es":"Gaussian Splattings Collection","en":"Gaussian Splattings Collection","de":"Gaussian-Splatting-Kollektion"},"identityMode":"text","logoSrc":"","fontFamily":"Fraunces","fontSource":"","template":"focus-rows","locales":["es","en","de"],"defaultLocale":"es","currency":"MXN","currencyPosition":"left","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","fontRoles":{"identity":{"source":"assets/originals/fonts/SuperBrigadeGradient-V4qA6.otf"},"restaurant":{"source":"assets/originals/fonts/QuickingRegular-gw5KY.otf"},"title":{"source":"assets/originals/fonts/SuperBrigadeGradient-V4qA6.otf"},"section":{"source":"assets/originals/fonts/QuickingRegular-gw5KY.otf"},"item":{"source":"assets/originals/fonts/QuickingRegular-gw5KY.otf"}},"scrollSensitivity":{"item":5,"section":5}},"backgrounds":[{"id":"bg-1770875868463","label":"Fondo 1","src":"assets/derived/backgrounds/backgroundMannheim-md.gif","type":"image","originalSrc":"assets/originals/backgrounds/backgroundMannheim.gif","derived":{"profileId":"ffmpeg-v8-background-2of3-animated-gif","medium":{"gif":"assets/derived/backgrounds/backgroundMannheim-md.gif"},"large":{"gif":"assets/derived/backgrounds/backgroundMannheim-md.gif"}}}],"categories":[{"id":"section-1770875951604","name":{"es":"Naturaleza","en":"Nature","de":"Natur"},"backgroundId":"bg-1770875868463","items":[{"id":"dish-1770876206157","name":{"es":"Ramo de flores","en":"Flower Bouquet","de":"Blumenstrauß"},"description":{"es":"Arreglo floral colorido compuesto por una variedad de flores.","en":"A colorful bouquet made from a variety of flowers.","de":"Ein farbenfroher Strauß aus einer Vielzahl von Blumen."},"longDescription":{"es":"Desde hace siglos, los ramos de flores se usan para decir lo que a veces cuesta poner en palabras: gratitud, cariño, celebración o incluso un simple “pensé en ti”. En distintas culturas, cada flor ha tenido su propio simbolismo, y por eso un arreglo puede contar una pequeña historia sin necesidad de una sola frase.","en":"For centuries, flower bouquets have been a way to say what’s sometimes hard to put into words: gratitude, affection, celebration, or even a simple “I thought of you.” Across cultures, each flower has carried its own symbolism—so a bouquet can quietly tell a story without a single sentence.","de":"Seit Jahrhunderten sind Blumensträuße eine stille Art, Dinge auszudrücken, die sich nicht immer leicht in Worte fassen lassen: Dankbarkeit, Zuneigung, Feierlichkeit oder einfach ein „Ich hab an dich gedacht“. In vielen Kulturen haben einzelne Blumen ihre eigene Symbolik – so kann ein Strauß eine kleine Geschichte erzählen, ganz ohne ein einziges Wort."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360Flowers-md.gif","originalHero360":"assets/originals/items/360Flowers.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360Flowers-md.gif","medium":"assets/derived/items/360Flowers-md.gif","large":"assets/derived/items/360Flowers-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360Flowers-md.gif"},"large":{"gif":"assets/derived/items/360Flowers-md.gif"}}},"typography":{}},{"id":"dish-1770876434114","name":{"es":"Flor de Nochebuena","en":"Poinsettia","de":"Weihnachtsstern"},"description":{"es":"Arreglo floral pequeño con temática navideña.","en":"A small holiday-themed floral arrangement.","de":"Ein kleines, weihnachtlich inspiriertes Blumenarrangement."},"longDescription":{"es":"La flor de Nochebuena, conocida en muchos países como poinsettia, es originaria de México y desde hace siglos se asocia con la temporada decembrina. Su color rojo intenso no es un pétalo, sino una hoja modificada (bráctea), y por eso luce tan dramática: es naturaleza haciendo diseño gráfico.","en":"The poinsettia is native to Mexico and has been tied to the holiday season for centuries. Its vivid red “petals” aren’t petals at all—they’re modified leaves called bracts, which is why it looks so striking: nature doing graphic design.","de":"Der Weihnachtsstern stammt ursprünglich aus Mexiko und wird seit Jahrhunderten mit der Weihnachtszeit verbunden. Seine leuchtend roten „Blütenblätter“ sind in Wirklichkeit keine Blüten, sondern umgefärbte Hochblätter (Brakteen) – deshalb wirkt er so dramatisch: Natur als Grafikdesignerin."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360Nochebuena-md.gif","originalHero360":"assets/originals/items/360Nochebuena.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360Nochebuena-md.gif","medium":"assets/derived/items/360Nochebuena-md.gif","large":"assets/derived/items/360Nochebuena-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360Nochebuena-md.gif"},"large":{"gif":"assets/derived/items/360Nochebuena-md.gif"}}},"typography":{}},{"id":"dish-1770876569880","name":{"es":"Tesla dormido","en":"Sleeping Tesla","de":"Tesla (schlafend)"},"description":{"es":"Tesla es mi gato de 12 años. Le encanta que le soben la panza, pero suele ser tímido con desconocidos. Le gusta dormir con la pata en la cara.","en":"Tesla is my 12-year-old cat. He loves belly rubs, but he’s usually shy around strangers. He also likes sleeping with a paw over his face.","de":"Tesla ist mein 12 Jahre alter Kater. Er liebt es, am Bauch gekrault zu werden, ist aber Fremden gegenüber eher schüchtern. Außerdem schläft er gern mit der Pfote im Gesicht."},"longDescription":{"es":"Cuando un gato duerme con la pata sobre la cara, suele ser una mezcla de comodidad y autoprotección: bloquea la luz, conserva calor y se siente más “escondido” mientras descansa. También puede ser una forma de relajarse en una postura que le resulta familiar. En resumen: si ves esa pose, es señal de que se siente bastante a salvo.","en":"When a cat sleeps with a paw over their face, it’s usually a mix of comfort and self-protection: it blocks light, helps retain warmth, and makes them feel a little more “hidden” while they rest. It can also simply be a cozy posture they’ve learned to love. In short: that pose is a pretty good sign they feel safe.","de":"Wenn eine Katze mit der Pfote über dem Gesicht schläft, ist das meist eine Mischung aus Komfort und Selbstschutz: Es schirmt Licht ab, hält Wärme und lässt sie sich beim Schlafen ein bisschen „versteckter“ fühlen. Manchmal ist es auch einfach eine gemütliche Haltung, die sich bewährt hat. Kurz gesagt: Diese Pose ist oft ein Zeichen dafür, dass sie sich sicher fühlt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360Tesla-md.gif","originalHero360":"assets/originals/items/360Tesla.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360Tesla-md.gif","medium":"assets/derived/items/360Tesla-md.gif","large":"assets/derived/items/360Tesla-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360Tesla-md.gif"},"large":{"gif":"assets/derived/items/360Tesla-md.gif"}}},"typography":{}}]},{"id":"section-1770876020774","name":{"es":"Tecnología","en":"Technology","de":"Technologie"},"backgroundId":"bg-1770875868463","items":[{"id":"dish-1770876738287","name":{"es":"Meta Quest 3","en":"Meta Quest 3","de":"Meta Quest 3"},"description":{"es":"Headset de realidad virtual. Es mi herramienta de trabajo más actual y, honestamente, la mejor para visualizar Gaussian Splattings.","en":"A virtual reality headset. It’s my most up-to-date work tool—and honestly the best way to view Gaussian Splatting scenes.","de":"Ein Virtual-Reality-Headset. Es mein aktuellstes Arbeitswerkzeug – und ehrlich gesagt die beste Art, Gaussian-Splatting-Szenen zu betrachten."},"longDescription":{"es":"La Meta Quest 3 combina un visor de realidad virtual con capacidades de realidad mixta gracias a sus cámaras a color y sensores de profundidad. Esto permite pasar de un entorno totalmente inmersivo a ver el mundo real con elementos digitales encima. Además, su rendimiento y resolución la hacen ideal para explorar escenas 3D con mucho detalle, como los Gaussian Splattings, donde la sensación de escala y presencia se vuelve parte de la experiencia.","en":"The Meta Quest 3 blends virtual reality with mixed reality thanks to full-color passthrough cameras and depth sensing. That means you can switch from full immersion to seeing the real world with digital elements layered on top. Its performance and resolution also make it great for exploring high-detail 3D scenes—like Gaussian Splatting—where scale and presence become part of the experience.","de":"Die Meta Quest 3 verbindet Virtual Reality mit Mixed Reality dank Farbdurchsicht (Passthrough) und Tiefensensorik. So kann man zwischen voller Immersion und der realen Umgebung mit darübergelegten digitalen Elementen wechseln. Durch Leistung und Auflösung eignet sie sich außerdem hervorragend, um detailreiche 3D-Szenen zu erkunden – wie Gaussian Splatting – bei denen Maßstab und Präsenz zum Erlebnis gehören."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360vrHeadset-md.gif","originalHero360":"assets/originals/items/360vrHeadset.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360vrHeadset-md.gif","medium":"assets/derived/items/360vrHeadset-md.gif","large":"assets/derived/items/360vrHeadset-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360vrHeadset-md.gif"},"large":{"gif":"assets/derived/items/360vrHeadset-md.gif"}}},"typography":{}},{"id":"dish-1770876880105","name":{"es":"Cámara instantánea","en":"Instant Camera","de":"Sofortbildkamera"},"description":{"es":"Cámara Instax de Fujifilm. La compré durante mi estancia en Japón para poder sacar fotos del recuerdo con mis amigos internacionales.","en":"A Fujifilm Instax camera. I bought it during my time in Japan so I could take keepsake photos with my international friends.","de":"Eine Fujifilm-Instax-Kamera. Ich habe sie während meiner Zeit in Japan gekauft, um Erinnerungsfotos mit meinen internationalen Freunden zu machen."},"longDescription":{"es":"Las cámaras instantáneas tienen algo que el celular no puede replicar: el ritual. Disparas, esperas, y ves cómo la imagen aparece poco a poco como si fuera magia. Nacieron como una mezcla de química e ingeniería pensada para capturar el momento sin laboratorio, y con el tiempo se volvieron un símbolo de nostalgia, viajes y amistad. Una foto instantánea no solo guarda una imagen: guarda el “ahí estuvimos”.","en":"Instant cameras have something phones can’t really replicate: the ritual. You take the shot, you wait, and the image slowly appears like a little magic trick. They were born from a mix of chemistry and engineering meant to capture a moment without a darkroom, and over time they became a symbol of nostalgia, travel, and friendship. An instant photo doesn’t just save an image—it saves the feeling of “we were there.”","de":"Sofortbildkameras haben etwas, das Handys kaum nachmachen können: das Ritual. Du drückst ab, wartest, und siehst, wie das Bild langsam erscheint – fast wie ein kleiner Zaubertrick. Entstanden sind sie aus einer Mischung aus Chemie und Ingenieurskunst, um Momente ohne Fotolabor festzuhalten. Mit der Zeit wurden sie zu einem Symbol für Nostalgie, Reisen und Freundschaft. Ein Sofortbild speichert nicht nur ein Bild – sondern das Gefühl von „wir waren da“."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360Instax-md.gif","originalHero360":"assets/originals/items/360Instax.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360Instax-md.gif","medium":"assets/derived/items/360Instax-md.gif","large":"assets/derived/items/360Instax-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360Instax-md.gif"},"large":{"gif":"assets/derived/items/360Instax-md.gif"}}},"typography":{}},{"id":"dish-1770877008309","name":{"es":"Nintendo Switch","en":"Nintendo Switch","de":"Nintendo Switch"},"description":{"es":"Consola de videojuegos portátil de Nintendo.","en":"Nintendo’s hybrid portable game console.","de":"Nintendos Hybrid-Konsole für unterwegs und zu Hause."},"longDescription":{"es":"La Nintendo Switch nació con una idea simple pero brillante: que una consola no tuviera que elegir entre “de casa” o “portátil”. Su desarrollo se enfocó en hacer que el cambio entre modos fuera instantáneo, casi sin fricción, como si la consola se adaptara a tu día. Ese concepto redefinió cómo mucha gente juega: en el sofá, en el tren, en una sala de espera… o en cualquier rato libre.","en":"The Nintendo Switch was built around a simple but brilliant idea: a console shouldn’t have to choose between “home” and “portable.” Its design focused on making the transition between modes instant and frictionless, as if the console could adapt to your day. That concept reshaped how many people play—on the couch, on a train, in a waiting room… basically wherever you find a free moment.","de":"Die Nintendo Switch entstand aus einer einfachen, aber genialen Idee: Eine Konsole sollte sich nicht zwischen „zu Hause“ und „unterwegs“ entscheiden müssen. Bei der Entwicklung stand im Fokus, den Wechsel zwischen den Modi sofort und ohne Reibung zu machen – als würde sich die Konsole deinem Alltag anpassen. Dieses Konzept hat für viele verändert, wie gespielt wird: auf dem Sofa, im Zug, im Wartezimmer… eigentlich überall, wo gerade ein freier Moment ist."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360Switch-md.gif","originalHero360":"assets/originals/items/360Switch.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360Switch-md.gif","medium":"assets/derived/items/360Switch-md.gif","large":"assets/derived/items/360Switch-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360Switch-md.gif"},"large":{"gif":"assets/derived/items/360Switch-md.gif"}}},"typography":{}}]},{"id":"section-1770876032404","name":{"es":"Arte / Coleccionables","en":"Art / Collectibles","de":"Kunst / Sammlerstücke"},"backgroundId":"bg-1770875868463","items":[{"id":"dish-1770877112789","name":{"es":"¡Muchos gatos!","en":"So Many Cats!","de":"So viele Katzen!"},"description":{"es":"Colección pequeña de artículos varios, todos con temática de gatos. ¿Cuántos gatos puedes contar? (Pista: son alrededor de 16).","en":"A small collection of assorted cat-themed items. How many cats can you count? (Hint: it’s around 16).","de":"Eine kleine Sammlung verschiedener Dinge – alles im Katzenthema. Wie viele Katzen kannst du zählen? (Tipp: es sind ungefähr 16)."},"longDescription":{"es":"Los gatos han sido musas oficiales de la humanidad desde hace miles de años: aparecen en el arte del Antiguo Egipto, en manuscritos medievales, en grabados japoneses, en pinturas modernas y, por supuesto, en memes. Su mezcla de elegancia, misterio y actitud los vuelve irresistibles para artistas y coleccionistas. Esta colección es una versión miniatura de esa obsesión colectiva: un homenaje a la criatura que actúa como si pagara renta.","en":"Cats have been humanity’s official muses for thousands of years: they show up in Ancient Egyptian art, medieval manuscripts, Japanese prints, modern paintings—and of course, memes. Their mix of elegance, mystery, and pure attitude makes them irresistible to artists and collectors. This little collection is a miniature version of that shared obsession: a tribute to the creature that behaves like it pays rent.","de":"Katzen sind seit Jahrtausenden so etwas wie die offiziellen Musen der Menschheit: Sie tauchen in der Kunst des Alten Ägypten auf, in mittelalterlichen Handschriften, in japanischen Holzschnitten, in moderner Malerei – und natürlich in Memes. Ihre Mischung aus Eleganz, Geheimnis und Haltung macht sie für Künstler und Sammler unwiderstehlich. Diese kleine Sammlung ist eine Mini-Version dieser kollektiven Obsession: eine Hommage an das Wesen, das sich benimmt, als würde es Miete zahlen."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360Cats-md.gif","originalHero360":"assets/originals/items/360Cats.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360Cats-md.gif","medium":"assets/derived/items/360Cats-md.gif","large":"assets/derived/items/360Cats-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360Cats-md.gif"},"large":{"gif":"assets/derived/items/360Cats-md.gif"}}},"typography":{}},{"id":"dish-1770877246224","name":{"es":"Merry Go (One Piece)","en":"Going Merry (One Piece)","de":"Going Merry (One Piece)"},"description":{"es":"Figura coleccionable del barco Going Merry de One Piece.","en":"A collectible figure of the Going Merry ship from One Piece.","de":"Eine Sammlerfigur des Schiffs Going Merry aus One Piece."},"longDescription":{"es":"En Japón, la cultura del coleccionismo es enorme: no solo se trata de “tener cosas”, sino de conservar pedacitos de historias que marcaron a una generación. Figuras, gashapon, ediciones limitadas y modelos se convierten en recuerdos tangibles. Y cuando la pieza es de una serie como One Piece, no es solo decoración: es una declaración de amor a una aventura compartida.","en":"In Japan, collecting is a massive culture: it’s not just about “owning stuff,” but about keeping small pieces of stories that shaped a generation. Figures, gashapon, limited editions, and model kits become tangible memories. And when the item is from a series like One Piece, it’s not just decoration—it’s a love letter to a shared adventure.","de":"In Japan ist Sammeln eine riesige Kultur: Es geht nicht nur darum, „Sachen zu besitzen“, sondern kleine Stücke von Geschichten zu bewahren, die eine Generation geprägt haben. Figuren, Gashapon, Limited Editions und Modellbausätze werden zu greifbaren Erinnerungen. Und wenn das Stück aus einer Serie wie One Piece stammt, ist es nicht nur Deko – sondern eine Liebeserklärung an ein gemeinsames Abenteuer."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/derived/items/360MarryGo-md.gif","originalHero360":"assets/originals/items/360MarryGo.gif","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"responsive":{"small":"assets/derived/items/360MarryGo-md.gif","medium":"assets/derived/items/360MarryGo-md.gif","large":"assets/derived/items/360MarryGo-md.gif"},"derived":{"profileId":"ffmpeg-v12-item-2of3-animated-gif-detail-original","medium":{"gif":"assets/derived/items/360MarryGo-md.gif"},"large":{"gif":"assets/derived/items/360MarryGo-md.gif"}}},"typography":{}}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
+const DATA = {"meta":{"slug":"keneth-s-gaussian-splattings-collection","name":"Keneth's Gaussian Splattings Collection","restaurantName":{"es":"Keneth's","en":"Keneth's","de":"Keneth's"},"title":{"es":"Gaussian Splattings Collection","en":"Gaussian Splattings Collection","de":"Gaussian-Splatting-Kollektion"},"identityMode":"text","logoSrc":"","fontFamily":"Fraunces","fontSource":"","template":"focus-rows","locales":["es","en","de"],"defaultLocale":"es","currency":"MXN","currencyPosition":"left","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","fontRoles":{"restaurant":{"family":"","source":"assets/fonts/QuickingRegular-gw5KY.otf"},"title":{"family":"","source":"assets/fonts/SuperBrigadeGradient-V4qA6.otf"},"section":{"family":"","source":"assets/fonts/QuickingRegular-gw5KY.otf"},"item":{"family":"","source":"assets/fonts/QuickingRegular-gw5KY.otf"}},"scrollSensitivity":{"item":5,"section":5}},"backgrounds":[{"id":"bg-1771825781037","label":"Fondo 1","src":"assets/backgrounds/backgroundMannheim.gif","type":"image","originalSrc":"assets/backgrounds/backgroundMannheim.gif"}],"categories":[{"id":"section-1770875951604","name":{"es":"Naturaleza","en":"Nature","de":"Natur"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876206157","name":{"es":"Ramo de flores","en":"Flower Bouquet","de":"Blumenstrauß"},"description":{"es":"Arreglo floral colorido compuesto por una variedad de flores.","en":"A colorful bouquet made from a variety of flowers.","de":"Ein farbenfroher Strauß aus einer Vielzahl von Blumen."},"longDescription":{"es":"Desde hace siglos, los ramos de flores se usan para decir lo que a veces cuesta poner en palabras: gratitud, cariño, celebración o incluso un simple “pensé en ti”. En distintas culturas, cada flor ha tenido su propio simbolismo, y por eso un arreglo puede contar una pequeña historia sin necesidad de una sola frase.","en":"For centuries, flower bouquets have been a way to say what’s sometimes hard to put into words: gratitude, affection, celebration, or even a simple “I thought of you.” Across cultures, each flower has carried its own symbolism—so a bouquet can quietly tell a story without a single sentence.","de":"Seit Jahrhunderten sind Blumensträuße eine stille Art, Dinge auszudrücken, die sich nicht immer leicht in Worte fassen lassen: Dankbarkeit, Zuneigung, Feierlichkeit oder einfach ein „Ich hab an dich gedacht“. In vielen Kulturen haben einzelne Blumen ihre eigene Symbolik – so kann ein Strauß eine kleine Geschichte erzählen, ganz ohne ein einziges Wort."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Flowers-int-sprite-md.webp","originalHero360":"assets/items/360Flowers-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Flowers","responsive":{"small":"assets/items/360Flowers-int-sprite-md.webp","medium":"assets/items/360Flowers-int-sprite-md.webp","large":"assets/items/360Flowers-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Flowers-int-sprite-md.webp"},"large":{"webp":"assets/items/360Flowers-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Flowers-int-poster.webp","sprite":{"image":"assets/items/360Flowers-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770876434114","name":{"es":"Flor de Nochebuena","en":"Poinsettia","de":"Weihnachtsstern"},"description":{"es":"Arreglo floral pequeño con temática navideña.","en":"A small holiday-themed floral arrangement.","de":"Ein kleines, weihnachtlich inspiriertes Blumenarrangement."},"longDescription":{"es":"La flor de Nochebuena, conocida en muchos países como poinsettia, es originaria de México y desde hace siglos se asocia con la temporada decembrina. Su color rojo intenso no es un pétalo, sino una hoja modificada (bráctea), y por eso luce tan dramática: es naturaleza haciendo diseño gráfico.","en":"The poinsettia is native to Mexico and has been tied to the holiday season for centuries. Its vivid red “petals” aren’t petals at all—they’re modified leaves called bracts, which is why it looks so striking: nature doing graphic design.","de":"Der Weihnachtsstern stammt ursprünglich aus Mexiko und wird seit Jahrhunderten mit der Weihnachtszeit verbunden. Seine leuchtend roten „Blütenblätter“ sind in Wirklichkeit keine Blüten, sondern umgefärbte Hochblätter (Brakteen) – deshalb wirkt er so dramatisch: Natur als Grafikdesignerin."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Nochebuena-int-sprite-md.webp","originalHero360":"assets/items/360Nochebuena-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Nochebuena","responsive":{"small":"assets/items/360Nochebuena-int-sprite-md.webp","medium":"assets/items/360Nochebuena-int-sprite-md.webp","large":"assets/items/360Nochebuena-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"},"large":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Nochebuena-int-poster.webp","sprite":{"image":"assets/items/360Nochebuena-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770876569880","name":{"es":"Tesla dormido","en":"Sleeping Tesla","de":"Tesla (schlafend)"},"description":{"es":"Tesla es mi gato de 12 años. Le encanta que le soben la panza, pero suele ser tímido con desconocidos. Le gusta dormir con la pata en la cara.","en":"Tesla is my 12-year-old cat. He loves belly rubs, but he’s usually shy around strangers. He also likes sleeping with a paw over his face.","de":"Tesla ist mein 12 Jahre alter Kater. Er liebt es, am Bauch gekrault zu werden, ist aber Fremden gegenüber eher schüchtern. Außerdem schläft er gern mit der Pfote im Gesicht."},"longDescription":{"es":"Cuando un gato duerme con la pata sobre la cara, suele ser una mezcla de comodidad y autoprotección: bloquea la luz, conserva calor y se siente más “escondido” mientras descansa. También puede ser una forma de relajarse en una postura que le resulta familiar. En resumen: si ves esa pose, es señal de que se siente bastante a salvo.","en":"When a cat sleeps with a paw over their face, it’s usually a mix of comfort and self-protection: it blocks light, helps retain warmth, and makes them feel a little more “hidden” while they rest. It can also simply be a cozy posture they’ve learned to love. In short: that pose is a pretty good sign they feel safe.","de":"Wenn eine Katze mit der Pfote über dem Gesicht schläft, ist das meist eine Mischung aus Komfort und Selbstschutz: Es schirmt Licht ab, hält Wärme und lässt sie sich beim Schlafen ein bisschen „versteckter“ fühlen. Manchmal ist es auch einfach eine gemütliche Haltung, die sich bewährt hat. Kurz gesagt: Diese Pose ist oft ein Zeichen dafür, dass sie sich sicher fühlt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Tesla-int-sprite-md.webp","originalHero360":"assets/items/360Tesla-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Tesla","responsive":{"small":"assets/items/360Tesla-int-sprite-md.webp","medium":"assets/items/360Tesla-int-sprite-md.webp","large":"assets/items/360Tesla-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Tesla-int-sprite-md.webp"},"large":{"webp":"assets/items/360Tesla-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Tesla-int-poster.webp","sprite":{"image":"assets/items/360Tesla-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1770876020774","name":{"es":"Tecnología","en":"Technology","de":"Technologie"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876738287","name":{"es":"Meta Quest 3","en":"Meta Quest 3","de":"Meta Quest 3"},"description":{"es":"Headset de realidad virtual. Es mi herramienta de trabajo más actual y, honestamente, la mejor para visualizar Gaussian Splattings.","en":"A virtual reality headset. It’s my most up-to-date work tool—and honestly the best way to view Gaussian Splatting scenes.","de":"Ein Virtual-Reality-Headset. Es mein aktuellstes Arbeitswerkzeug – und ehrlich gesagt die beste Art, Gaussian-Splatting-Szenen zu betrachten."},"longDescription":{"es":"La Meta Quest 3 combina un visor de realidad virtual con capacidades de realidad mixta gracias a sus cámaras a color y sensores de profundidad. Esto permite pasar de un entorno totalmente inmersivo a ver el mundo real con elementos digitales encima. Además, su rendimiento y resolución la hacen ideal para explorar escenas 3D con mucho detalle, como los Gaussian Splattings, donde la sensación de escala y presencia se vuelve parte de la experiencia.","en":"The Meta Quest 3 blends virtual reality with mixed reality thanks to full-color passthrough cameras and depth sensing. That means you can switch from full immersion to seeing the real world with digital elements layered on top. Its performance and resolution also make it great for exploring high-detail 3D scenes—like Gaussian Splatting—where scale and presence become part of the experience.","de":"Die Meta Quest 3 verbindet Virtual Reality mit Mixed Reality dank Farbdurchsicht (Passthrough) und Tiefensensorik. So kann man zwischen voller Immersion und der realen Umgebung mit darübergelegten digitalen Elementen wechseln. Durch Leistung und Auflösung eignet sie sich außerdem hervorragend, um detailreiche 3D-Szenen zu erkunden – wie Gaussian Splatting – bei denen Maßstab und Präsenz zum Erlebnis gehören."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360vrHeadset-int-sprite-md.webp","originalHero360":"assets/items/360vrHeadset-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360vrHeadset","responsive":{"small":"assets/items/360vrHeadset-int-sprite-md.webp","medium":"assets/items/360vrHeadset-int-sprite-md.webp","large":"assets/items/360vrHeadset-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"},"large":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360vrHeadset-int-poster.webp","sprite":{"image":"assets/items/360vrHeadset-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770876880105","name":{"es":"Cámara instantánea","en":"Instant Camera","de":"Sofortbildkamera"},"description":{"es":"Cámara Instax de Fujifilm. La compré durante mi estancia en Japón para poder sacar fotos del recuerdo con mis amigos internacionales.","en":"A Fujifilm Instax camera. I bought it during my time in Japan so I could take keepsake photos with my international friends.","de":"Eine Fujifilm-Instax-Kamera. Ich habe sie während meiner Zeit in Japan gekauft, um Erinnerungsfotos mit meinen internationalen Freunden zu machen."},"longDescription":{"es":"Las cámaras instantáneas tienen algo que el celular no puede replicar: el ritual. Disparas, esperas, y ves cómo la imagen aparece poco a poco como si fuera magia. Nacieron como una mezcla de química e ingeniería pensada para capturar el momento sin laboratorio, y con el tiempo se volvieron un símbolo de nostalgia, viajes y amistad. Una foto instantánea no solo guarda una imagen: guarda el “ahí estuvimos”.","en":"Instant cameras have something phones can’t really replicate: the ritual. You take the shot, you wait, and the image slowly appears like a little magic trick. They were born from a mix of chemistry and engineering meant to capture a moment without a darkroom, and over time they became a symbol of nostalgia, travel, and friendship. An instant photo doesn’t just save an image—it saves the feeling of “we were there.”","de":"Sofortbildkameras haben etwas, das Handys kaum nachmachen können: das Ritual. Du drückst ab, wartest, und siehst, wie das Bild langsam erscheint – fast wie ein kleiner Zaubertrick. Entstanden sind sie aus einer Mischung aus Chemie und Ingenieurskunst, um Momente ohne Fotolabor festzuhalten. Mit der Zeit wurden sie zu einem Symbol für Nostalgie, Reisen und Freundschaft. Ein Sofortbild speichert nicht nur ein Bild – sondern das Gefühl von „wir waren da“."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Instax-int-sprite-md.webp","originalHero360":"assets/items/360Instax-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Instax","responsive":{"small":"assets/items/360Instax-int-sprite-md.webp","medium":"assets/items/360Instax-int-sprite-md.webp","large":"assets/items/360Instax-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Instax-int-sprite-md.webp"},"large":{"webp":"assets/items/360Instax-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Instax-int-poster.webp","sprite":{"image":"assets/items/360Instax-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770877008309","name":{"es":"Nintendo Switch","en":"Nintendo Switch","de":"Nintendo Switch"},"description":{"es":"Consola de videojuegos portátil de Nintendo.","en":"Nintendo’s hybrid portable game console.","de":"Nintendos Hybrid-Konsole für unterwegs und zu Hause."},"longDescription":{"es":"La Nintendo Switch nació con una idea simple pero brillante: que una consola no tuviera que elegir entre “de casa” o “portátil”. Su desarrollo se enfocó en hacer que el cambio entre modos fuera instantáneo, casi sin fricción, como si la consola se adaptara a tu día. Ese concepto redefinió cómo mucha gente juega: en el sofá, en el tren, en una sala de espera… o en cualquier rato libre.","en":"The Nintendo Switch was built around a simple but brilliant idea: a console shouldn’t have to choose between “home” and “portable.” Its design focused on making the transition between modes instant and frictionless, as if the console could adapt to your day. That concept reshaped how many people play—on the couch, on a train, in a waiting room… basically wherever you find a free moment.","de":"Die Nintendo Switch entstand aus einer einfachen, aber genialen Idee: Eine Konsole sollte sich nicht zwischen „zu Hause“ und „unterwegs“ entscheiden müssen. Bei der Entwicklung stand im Fokus, den Wechsel zwischen den Modi sofort und ohne Reibung zu machen – als würde sich die Konsole deinem Alltag anpassen. Dieses Konzept hat für viele verändert, wie gespielt wird: auf dem Sofa, im Zug, im Wartezimmer… eigentlich überall, wo gerade ein freier Moment ist."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Switch-int-sprite-md.webp","originalHero360":"assets/items/360Switch-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Switch","responsive":{"small":"assets/items/360Switch-int-sprite-md.webp","medium":"assets/items/360Switch-int-sprite-md.webp","large":"assets/items/360Switch-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Switch-int-sprite-md.webp"},"large":{"webp":"assets/items/360Switch-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Switch-int-poster.webp","sprite":{"image":"assets/items/360Switch-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1770876032404","name":{"es":"Arte / Coleccionables","en":"Art / Collectibles","de":"Kunst / Sammlerstücke"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877112789","name":{"es":"¡Muchos gatos!","en":"So Many Cats!","de":"So viele Katzen!"},"description":{"es":"Colección pequeña de artículos varios, todos con temática de gatos. ¿Cuántos gatos puedes contar? (Pista: son alrededor de 16).","en":"A small collection of assorted cat-themed items. How many cats can you count? (Hint: it’s around 16).","de":"Eine kleine Sammlung verschiedener Dinge – alles im Katzenthema. Wie viele Katzen kannst du zählen? (Tipp: es sind ungefähr 16)."},"longDescription":{"es":"Los gatos han sido musas oficiales de la humanidad desde hace miles de años: aparecen en el arte del Antiguo Egipto, en manuscritos medievales, en grabados japoneses, en pinturas modernas y, por supuesto, en memes. Su mezcla de elegancia, misterio y actitud los vuelve irresistibles para artistas y coleccionistas. Esta colección es una versión miniatura de esa obsesión colectiva: un homenaje a la criatura que actúa como si pagara renta.","en":"Cats have been humanity’s official muses for thousands of years: they show up in Ancient Egyptian art, medieval manuscripts, Japanese prints, modern paintings—and of course, memes. Their mix of elegance, mystery, and pure attitude makes them irresistible to artists and collectors. This little collection is a miniature version of that shared obsession: a tribute to the creature that behaves like it pays rent.","de":"Katzen sind seit Jahrtausenden so etwas wie die offiziellen Musen der Menschheit: Sie tauchen in der Kunst des Alten Ägypten auf, in mittelalterlichen Handschriften, in japanischen Holzschnitten, in moderner Malerei – und natürlich in Memes. Ihre Mischung aus Eleganz, Geheimnis und Haltung macht sie für Künstler und Sammler unwiderstehlich. Diese kleine Sammlung ist eine Mini-Version dieser kollektiven Obsession: eine Hommage an das Wesen, das sich benimmt, als würde es Miete zahlen."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Cats-int-sprite-md.webp","originalHero360":"assets/items/360Cats-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Cats","responsive":{"small":"assets/items/360Cats-int-sprite-md.webp","medium":"assets/items/360Cats-int-sprite-md.webp","large":"assets/items/360Cats-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Cats-int-sprite-md.webp"},"large":{"webp":"assets/items/360Cats-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Cats-int-poster.webp","sprite":{"image":"assets/items/360Cats-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770877246224","name":{"es":"Merry Go (One Piece)","en":"Going Merry (One Piece)","de":"Going Merry (One Piece)"},"description":{"es":"Figura coleccionable del barco Going Merry de One Piece.","en":"A collectible figure of the Going Merry ship from One Piece.","de":"Eine Sammlerfigur des Schiffs Going Merry aus One Piece."},"longDescription":{"es":"En Japón, la cultura del coleccionismo es enorme: no solo se trata de “tener cosas”, sino de conservar pedacitos de historias que marcaron a una generación. Figuras, gashapon, ediciones limitadas y modelos se convierten en recuerdos tangibles. Y cuando la pieza es de una serie como One Piece, no es solo decoración: es una declaración de amor a una aventura compartida.","en":"In Japan, collecting is a massive culture: it’s not just about “owning stuff,” but about keeping small pieces of stories that shaped a generation. Figures, gashapon, limited editions, and model kits become tangible memories. And when the item is from a series like One Piece, it’s not just decoration—it’s a love letter to a shared adventure.","de":"In Japan ist Sammeln eine riesige Kultur: Es geht nicht nur darum, „Sachen zu besitzen“, sondern kleine Stücke von Geschichten zu bewahren, die eine Generation geprägt haben. Figuren, Gashapon, Limited Editions und Modellbausätze werden zu greifbaren Erinnerungen. Und wenn das Stück aus einer Serie wie One Piece stammt, ist es nicht nur Deko – sondern eine Liebeserklärung an ein gemeinsames Abenteuer."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360MarryGo-int-sprite-md.webp","originalHero360":"assets/items/360MarryGo-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360MarryGo","responsive":{"small":"assets/items/360MarryGo-int-sprite-md.webp","medium":"assets/items/360MarryGo-int-sprite-md.webp","large":"assets/items/360MarryGo-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"},"large":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360MarryGo-int-poster.webp","sprite":{"image":"assets/items/360MarryGo-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
 const currencySymbols = {
   MXN: "$", USD: "$", EUR: "€", GBP: "£", JPY: "¥", COP: "$", ARS: "$"
 };
@@ -84,18 +84,17 @@ const JUKEBOX_HORIZONTAL_GESTURE_IDLE_MS = 240;
 const JUKEBOX_TOUCH_DELTA_SCALE = 2.1;
 const JUKEBOX_MAX_STEP_PER_INPUT = 0;
 const JUKEBOX_TOUCH_INTENT_THRESHOLD = 10;
-const INTERACTIVE_GIF_MAX_FRAMES = 72;
-const INTERACTIVE_KEEP_ORIGINAL_PLACEMENT = true;
+const INTERACTIVE_DEFAULT_FRAME_COUNT = 72;
 const ROTATE_CUE_RESHOW_IDLE_MS = 3000;
 const ROTATE_CUE_LOOP_MS = 5000;
-const DEBUG_INTERACTIVE_CENTER = new URLSearchParams(window.location.search).has("debugRotate");
 const interactiveDetailBytesCache = new Map();
 const interactiveDetailBytesPending = new Map();
-const interactiveDetailCenterOffsetCache = new Map();
 const detailPrefetchedSources = new Set();
 const startupAssetBytes = new Map();
 let startupAssetBytesPromise = null;
 let startupAssetBytesReady = false;
+const sectionBackgroundPreloadSources = new Set();
+const sectionBackgroundPreloadImages = [];
 let detailRotateDirection = -1;
 const jukeboxWheelState = new Map();
 const focusRowWheelState = new Map();
@@ -440,6 +439,8 @@ const readAlternateScrollSource = (item) =>
   item?.media?.scrollAnimationMode === "alternate"
     ? normalizeImageSource(item?.media?.scrollAnimationSrc)
     : null;
+const readInteractivePosterSource = (item) =>
+  normalizeImageSource(item?.media?.interactive?.poster);
 const readOriginalHeroSource = (item) =>
   normalizeImageSource(item?.media?.originalHero360);
 const pickPrioritySource = (item, priority) => {
@@ -465,7 +466,9 @@ const buildSrcSet = (item) => {
 const getCarouselImageSrc = (item) =>
   readAlternateScrollSource(item) || pickPrioritySource(item, CAROUSEL_VARIANT_PRIORITY);
 const getDetailImageSrc = (item) =>
-  readOriginalHeroSource(item) || pickPrioritySource(item, DETAIL_VARIANT_PRIORITY);
+  readInteractivePosterSource(item) ||
+  readOriginalHeroSource(item) ||
+  pickPrioritySource(item, DETAIL_VARIANT_PRIORITY);
 const decodeMaybe = (value) => {
   try {
     return decodeURIComponent(value);
@@ -473,304 +476,141 @@ const decodeMaybe = (value) => {
     return value;
   }
 };
-const getInteractiveAssetMime = (source) => {
-  if (!source) return null;
-  const candidates = [decodeMaybe(source.trim()).toLowerCase()];
-  try {
-    const url = new URL(source, window.location.href);
-    const encodedPath = url.searchParams.get("path");
-    if (encodedPath) {
-      candidates.push(decodeMaybe(encodedPath).toLowerCase());
-    }
-  } catch {}
-  for (const candidate of candidates) {
-    if (/\.gif(?:$|[?#&])/i.test(candidate)) return "image/gif";
-    if (/\.webp(?:$|[?#&])/i.test(candidate)) return "image/webp";
-  }
+const normalizeInteractiveSource = (value) => {
+  const trimmed = String(value || "").trim();
+  return trimmed.length > 0 ? trimmed : "";
+};
+const normalizePositiveInt = (value, minimum = 1) => {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return null;
+  const rounded = Math.round(parsed);
+  if (rounded < minimum) return null;
+  return rounded;
+};
+const normalizePositiveNumber = (value, minimum = 0.01) => {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed < minimum) return null;
+  return parsed;
+};
+const createVideoCapabilityProbe = () => {
+  if (typeof document === "undefined") return null;
+  return document.createElement("video");
+};
+const canPlayVideoType = (mimeType) => {
+  const video = createVideoCapabilityProbe();
+  if (!video || typeof video.canPlayType !== "function") return false;
+  return video.canPlayType(mimeType) !== "";
+};
+const isLikelyWebKit = () => {
+  const userAgent = String(navigator.userAgent || "").toLowerCase();
+  const vendor = String(navigator.vendor || "").toLowerCase();
+  const isSafariVendor = vendor.includes("apple");
+  const isExcluded = /crios|fxios|edgios|android|chromium|chrome/.test(userAgent);
+  return isSafariVendor && !isExcluded;
+};
+const pickInteractiveVideoSource = (video) => {
+  if (!video) return null;
+  const webm = normalizeInteractiveSource(video.webm);
+  const mp4 = normalizeInteractiveSource(video.mp4);
+  if (!webm && !mp4) return null;
+
+  const supportsVp9Webm =
+    canPlayVideoType('video/webm; codecs="vp9"') ||
+    canPlayVideoType('video/webm; codecs="vp09.00.10.08"') ||
+    canPlayVideoType("video/webm");
+  const supportsHvc1Mp4 =
+    canPlayVideoType('video/mp4; codecs="hvc1"') ||
+    canPlayVideoType('video/mp4; codecs="hev1"') ||
+    canPlayVideoType("video/mp4");
+
+  if (isLikelyWebKit() && mp4 && supportsHvc1Mp4) return mp4;
+  if (webm && supportsVp9Webm) return webm;
+  if (mp4 && supportsHvc1Mp4) return mp4;
+  if (webm) return webm;
+  if (mp4) return mp4;
   return null;
 };
+const pickInteractivePrimarySource = (asset) =>
+  normalizeInteractiveSource(asset?.sprite?.image) ||
+  normalizeInteractiveSource(asset?.video?.webm) ||
+  normalizeInteractiveSource(asset?.video?.mp4) ||
+  normalizeInteractiveSource(asset?.poster);
 const getInteractiveDetailAsset = (item) => {
-  const candidates = [
-    item?.media?.originalHero360,
-    item?.media?.hero360,
-    item?.media?.responsive?.large,
-    item?.media?.responsive?.medium,
-    item?.media?.responsive?.small
-  ];
-  for (const candidate of candidates) {
-    const source = (candidate || "").trim();
-    if (!source) continue;
-    const mime = getInteractiveAssetMime(source);
-    if (mime) return { source, mime };
-  }
-  return null;
+  const interactive = item?.media?.interactive;
+  if (!interactive || typeof interactive !== "object") return null;
+
+  const poster = normalizeInteractiveSource(interactive.poster) || undefined;
+  const videoWebm = normalizeInteractiveSource(interactive.video?.webm) || undefined;
+  const videoMp4 = normalizeInteractiveSource(interactive.video?.mp4) || undefined;
+  const spriteImage = normalizeInteractiveSource(interactive.sprite?.image);
+
+  const frameCount = normalizePositiveInt(interactive.sprite?.frameCount, 2);
+  const columns = normalizePositiveInt(interactive.sprite?.columns, 1);
+  const rows = normalizePositiveInt(interactive.sprite?.rows, 1);
+  const fps = normalizePositiveNumber(interactive.sprite?.fps, 0.01);
+  const frameWidth = normalizePositiveInt(interactive.sprite?.frameWidth, 1);
+  const frameHeight = normalizePositiveInt(interactive.sprite?.frameHeight, 1);
+
+  const sprite =
+    spriteImage && frameCount && columns && rows && fps && frameWidth && frameHeight
+      ? {
+          image: spriteImage,
+          frameCount,
+          columns,
+          rows,
+          fps,
+          frameWidth,
+          frameHeight
+        }
+      : undefined;
+
+  const video =
+    videoWebm || videoMp4
+      ? {
+          ...(videoWebm ? { webm: videoWebm } : {}),
+          ...(videoMp4 ? { mp4: videoMp4 } : {})
+        }
+      : undefined;
+
+  if (!poster && !video && !sprite) return null;
+  const source = pickInteractivePrimarySource({ poster, video, sprite });
+  if (!source) return null;
+
+  return {
+    source,
+    ...(poster ? { poster } : {}),
+    ...(video ? { video } : {}),
+    ...(sprite ? { sprite } : {})
+  };
 };
 const supportsInteractiveMedia = () =>
-  typeof window.ImageDecoder === "function" && typeof createImageBitmap === "function";
+  typeof window !== "undefined" &&
+  typeof document !== "undefined" &&
+  "PointerEvent" in window &&
+  typeof HTMLCanvasElement !== "undefined" &&
+  typeof HTMLVideoElement !== "undefined";
 const getDishRotateDirection = (dish) => (dish?.media?.rotationDirection === "ccw" ? 1 : -1);
-const INTERACTIVE_CENTER_SAMPLE_TARGET = 6;
-  const readForegroundCenterFromBitmap = (bitmap) => {
-    const maxSize = 140;
-    const scale = Math.min(1, maxSize / Math.max(bitmap.width, bitmap.height));
-    const width = Math.max(1, Math.round(bitmap.width * scale));
-    const height = Math.max(1, Math.round(bitmap.height * scale));
-    const offscreen = document.createElement("canvas");
-  offscreen.width = width;
-  offscreen.height = height;
-  const ctx = offscreen.getContext("2d", { willReadFrequently: true });
-  if (!ctx) return null;
-  ctx.drawImage(bitmap, 0, 0, width, height);
-  const { data } = ctx.getImageData(0, 0, width, height);
-  const alphaThreshold = 16;
-
-  const readAlphaBounds = () => {
-    let minX = width;
-    let minY = height;
-    let maxX = -1;
-    let maxY = -1;
-    for (let y = 0; y < height; y += 1) {
-      for (let x = 0; x < width; x += 1) {
-        const idx = (y * width + x) * 4;
-        if (data[idx + 3] <= alphaThreshold) continue;
-        if (x < minX) minX = x;
-        if (x > maxX) maxX = x;
-        if (y < minY) minY = y;
-        if (y > maxY) maxY = y;
-      }
-    }
-    if (maxX < 0 || maxY < 0) return null;
-    return { minX, minY, maxX, maxY };
-  };
-
-  let r = 0;
-  let g = 0;
-  let b = 0;
-  let r2 = 0;
-  let g2 = 0;
-  let b2 = 0;
-  let samples = 0;
-  const sampleEdge = (x, y) => {
-    const idx = (y * width + x) * 4;
-    if (data[idx + 3] <= alphaThreshold) return;
-    const rv = data[idx];
-    const gv = data[idx + 1];
-    const bv = data[idx + 2];
-    r += rv;
-    g += gv;
-    b += bv;
-    r2 += rv * rv;
-    g2 += gv * gv;
-    b2 += bv * bv;
-    samples += 1;
-  };
-  for (let x = 0; x < width; x += 1) {
-    sampleEdge(x, 0);
-    if (height > 1) sampleEdge(x, height - 1);
-  }
-  for (let y = 1; y < height - 1; y += 1) {
-    sampleEdge(0, y);
-    if (width > 1) sampleEdge(width - 1, y);
-  }
-  if (samples === 0) {
-    const bounds = readAlphaBounds();
-    if (!bounds) return null;
-    const centerX = (bounds.minX + bounds.maxX) / 2;
-    const centerY = (bounds.minY + bounds.maxY) / 2;
-    const invScale = scale > 0 ? 1 / scale : 1;
-    return {
-      center: { x: centerX * invScale, y: centerY * invScale },
-      bounds: {
-        minX: bounds.minX * invScale,
-        minY: bounds.minY * invScale,
-        maxX: bounds.maxX * invScale,
-        maxY: bounds.maxY * invScale
-      }
-    };
-  }
-  const meanR = r / samples;
-  const meanG = g / samples;
-  const meanB = b / samples;
-  const varR = Math.max(0, r2 / samples - meanR * meanR);
-  const varG = Math.max(0, g2 / samples - meanG * meanG);
-  const varB = Math.max(0, b2 / samples - meanB * meanB);
-  const colorStd = Math.sqrt(varR + varG + varB);
-  const threshold = Math.max(12, Math.min(60, colorStd * 2.6 + 10));
-  const thresholdSq = threshold * threshold;
-
-  const isBackground = (idx) => {
-    if (data[idx + 3] <= alphaThreshold) return true;
-    const dr = data[idx] - meanR;
-    const dg = data[idx + 1] - meanG;
-    const db = data[idx + 2] - meanB;
-    return dr * dr + dg * dg + db * db <= thresholdSq;
-  };
-
-  const pixelTotal = width * height;
-  const visited = new Uint8Array(pixelTotal);
-  const queue = [];
-  const pushIfBackground = (x, y) => {
-    if (x < 0 || y < 0 || x >= width || y >= height) return;
-    const idx = y * width + x;
-    if (visited[idx]) return;
-    if (!isBackground(idx * 4)) return;
-    visited[idx] = 1;
-    queue.push(idx);
-  };
-
-  for (let x = 0; x < width; x += 1) {
-    pushIfBackground(x, 0);
-    if (height > 1) pushIfBackground(x, height - 1);
-  }
-  for (let y = 1; y < height - 1; y += 1) {
-    pushIfBackground(0, y);
-    if (width > 1) pushIfBackground(width - 1, y);
-  }
-
-  while (queue.length) {
-    const idx = queue.pop() ?? 0;
-    const x = idx % width;
-    const y = Math.floor(idx / width);
-    pushIfBackground(x + 1, y);
-    pushIfBackground(x - 1, y);
-    pushIfBackground(x, y + 1);
-    pushIfBackground(x, y - 1);
-  }
-
-  let minX = width;
-  let minY = height;
-  let maxX = -1;
-  let maxY = -1;
-  const rowCounts = new Uint32Array(height);
-  const colCounts = new Uint32Array(width);
-  let foregroundTotal = 0;
-  for (let y = 0; y < height; y += 1) {
-    for (let x = 0; x < width; x += 1) {
-      const idx = y * width + x;
-      if (visited[idx]) continue;
-      const dataIdx = idx * 4;
-      if (data[dataIdx + 3] <= alphaThreshold) continue;
-      if (x < minX) minX = x;
-      if (x > maxX) maxX = x;
-      if (y < minY) minY = y;
-      if (y > maxY) maxY = y;
-      rowCounts[y] += 1;
-      colCounts[x] += 1;
-      foregroundTotal += 1;
-    }
-  }
-  if (maxX < 0 || maxY < 0) {
-    const bounds = readAlphaBounds();
-    if (!bounds) return null;
-    minX = bounds.minX;
-    minY = bounds.minY;
-    maxX = bounds.maxX;
-    maxY = bounds.maxY;
-  } else if (foregroundTotal > 0) {
-    const trimCount = Math.max(1, Math.round(foregroundTotal * 0.01));
-    const findMinIndex = (counts) => {
-      let acc = 0;
-      for (let i = 0; i < counts.length; i += 1) {
-        acc += counts[i];
-        if (acc >= trimCount) return i;
-      }
-      return 0;
-    };
-    const findMaxIndex = (counts) => {
-      let acc = 0;
-      for (let i = counts.length - 1; i >= 0; i -= 1) {
-        acc += counts[i];
-        if (acc >= trimCount) return i;
-      }
-      return counts.length - 1;
-    };
-    const trimmedMinY = findMinIndex(rowCounts);
-    const trimmedMaxY = findMaxIndex(rowCounts);
-    const trimmedMinX = findMinIndex(colCounts);
-    const trimmedMaxX = findMaxIndex(colCounts);
-    const baseW = maxX - minX;
-    const baseH = maxY - minY;
-    const trimmedW = trimmedMaxX - trimmedMinX;
-    const trimmedH = trimmedMaxY - trimmedMinY;
-    if (trimmedW > baseW * 0.4 && trimmedH > baseH * 0.4) {
-      minX = Math.min(Math.max(trimmedMinX, 0), width - 1);
-      maxX = Math.min(Math.max(trimmedMaxX, minX), width - 1);
-      minY = Math.min(Math.max(trimmedMinY, 0), height - 1);
-      maxY = Math.min(Math.max(trimmedMaxY, minY), height - 1);
-    }
-  }
-  const centerX = (minX + maxX) / 2;
-  const centerY = (minY + maxY) / 2;
-  const invScale = scale > 0 ? 1 / scale : 1;
-  return {
-    center: { x: centerX * invScale, y: centerY * invScale },
-    bounds: {
-      minX: minX * invScale,
-      minY: minY * invScale,
-      maxX: maxX * invScale,
-      maxY: maxY * invScale
-    }
-  };
-};
-const readCenterOffsetFromBitmaps = (bitmaps) => {
-  if (!bitmaps.length) return null;
-  const sampleTarget = Math.min(INTERACTIVE_CENTER_SAMPLE_TARGET, bitmaps.length);
-  const step = Math.max(1, Math.floor(bitmaps.length / sampleTarget));
-  const centers = [];
-  for (let index = 0; index < bitmaps.length && centers.length < sampleTarget; index += step) {
-    const info = readForegroundCenterFromBitmap(bitmaps[index]);
-    if (info) centers.push(info.center);
-  }
-  if (!centers.length) return null;
-  const xs = centers.map((center) => center.x).sort((a, b) => a - b);
-  const ys = centers.map((center) => center.y).sort((a, b) => a - b);
-  const medianX = xs[Math.floor(xs.length / 2)];
-  const medianY = ys[Math.floor(ys.length / 2)];
-  const width = bitmaps[0].width;
-  const height = bitmaps[0].height;
-  return {
-    x: Math.round(width / 2 - medianX),
-    y: Math.round(height / 2 - medianY)
-  };
-};
-const readContentBoundsFromBitmaps = (bitmaps) => {
-  if (!bitmaps.length) return null;
-  const sampleTarget = Math.min(INTERACTIVE_CENTER_SAMPLE_TARGET, bitmaps.length);
-  const step = Math.max(1, Math.floor(bitmaps.length / sampleTarget));
-  const boundsList = [];
-  for (let index = 0; index < bitmaps.length && boundsList.length < sampleTarget; index += step) {
-    const info = readForegroundCenterFromBitmap(bitmaps[index]);
-    if (info) boundsList.push(info.bounds);
-  }
-  if (!boundsList.length) return null;
-  const median = (values) => {
-    const sorted = [...values].sort((a, b) => a - b);
-    return sorted[Math.floor(sorted.length / 2)];
-  };
-  const minX = median(boundsList.map((b) => b.minX));
-  const minY = median(boundsList.map((b) => b.minY));
-  const maxX = median(boundsList.map((b) => b.maxX));
-  const maxY = median(boundsList.map((b) => b.maxY));
-  return { minX, minY, maxX, maxY };
-};
 const getInteractiveAssetBytes = async (source) => {
-  const cached = interactiveDetailBytesCache.get(source);
+  const normalized = normalizeInteractiveSource(source);
+  if (!normalized) return null;
+  const cached = interactiveDetailBytesCache.get(normalized);
   if (cached) return cached;
-  const pending = interactiveDetailBytesPending.get(source);
+  const pending = interactiveDetailBytesPending.get(normalized);
   if (pending) return pending;
   const task = (async () => {
     try {
-      const response = await fetch(source, { cache: "force-cache" });
+      const response = await fetch(normalized, { cache: "force-cache" });
       if (!response.ok) return null;
       const bytes = await response.arrayBuffer();
-      interactiveDetailBytesCache.set(source, bytes);
+      interactiveDetailBytesCache.set(normalized, bytes);
       return bytes;
     } catch {
       return null;
     } finally {
-      interactiveDetailBytesPending.delete(source);
+      interactiveDetailBytesPending.delete(normalized);
     }
   })();
-  interactiveDetailBytesPending.set(source, task);
+  interactiveDetailBytesPending.set(normalized, task);
   return task;
 };
 const prefetchDishDetailItem = (dish) => {
@@ -781,15 +621,6 @@ const prefetchDishDetailItem = (dish) => {
     const preload = new Image();
     preload.decoding = "async";
     preload.src = detailSource;
-  }
-  const interactiveAsset = getInteractiveDetailAsset(dish);
-  if (
-    interactiveAsset &&
-    supportsInteractiveMedia() &&
-    !detailPrefetchedSources.has(interactiveAsset.source)
-  ) {
-    detailPrefetchedSources.add(interactiveAsset.source);
-    void getInteractiveAssetBytes(interactiveAsset.source);
   }
 };
 const prefetchDishDetailByIds = (categoryId, itemId, includeNeighbors = false) => {
@@ -809,46 +640,28 @@ const prefetchDishDetailByIds = (categoryId, itemId, includeNeighbors = false) =
 const teardownInteractiveModalMedia = () => {
   modalMediaToken += 1;
   if (modalMediaCleanup) {
-    modalMediaCleanup();
+    modalMediaCleanup(true);
     modalMediaCleanup = null;
   }
 };
 const setupInteractiveModalMedia = async (asset) => {
   teardownInteractiveModalMedia();
   if (!asset || !modalContent) return;
-  const Decoder = window.ImageDecoder;
-  if (!Decoder) return;
   const host = modalContent.querySelector(".dish-modal__media");
   const image = host?.querySelector("img");
   if (!host || !image) return;
+  if (!host.isConnected || !image.isConnected) return;
+
   const token = ++modalMediaToken;
-  const abortController = new AbortController();
   let disposed = false;
-  let decoder = null;
-  const bitmaps = [];
-  let canvas = null;
-  let ctx = null;
-  let canvasDisplayWidth = 0;
-  let canvasDisplayHeight = 0;
-  let resizeObserver = null;
-  let pointerId = null;
-  let lastX = 0;
-  let frameCursor = 0;
-  let interactiveReady = false;
-  let imageHidden = false;
-  const allowAutoCenter = !INTERACTIVE_KEEP_ORIGINAL_PLACEMENT;
-  let centerOffset = allowAutoCenter
-    ? interactiveDetailCenterOffsetCache.get(asset.source) || { x: 0, y: 0 }
-    : { x: 0, y: 0 };
-  let contentBounds = null;
-  let renderSpec = null;
-  const debugEnabled = DEBUG_INTERACTIVE_CENTER;
-  let debugEl = null;
-  let debugBounds = null;
-  let debugVisibleRect = null;
-  let debugFrameSize = null;
-  const cueElement = host.querySelector(".dish-modal__rotate-cue");
+  let rendererNode = null;
+  let detachInteractions = null;
   let cueIdleTimeout = 0;
+  let imageHidden = false;
+  const cueElement = host.querySelector(".dish-modal__rotate-cue");
+
+  const isStale = () => disposed || token !== modalMediaToken;
+
   const clearCueTimers = () => {
     if (cueIdleTimeout) {
       window.clearTimeout(cueIdleTimeout);
@@ -869,454 +682,283 @@ const setupInteractiveModalMedia = async (asset) => {
     }
   };
   const scheduleCueVisible = () => {
-    if (disposed) return;
-    if (cueIdleTimeout) {
-      window.clearTimeout(cueIdleTimeout);
-    }
+    if (isStale()) return;
+    clearCueTimers();
     cueIdleTimeout = window.setTimeout(() => {
       cueIdleTimeout = 0;
-      if (disposed) return;
+      if (isStale()) return;
       setCueState("visible");
     }, ROTATE_CUE_RESHOW_IDLE_MS);
   };
-  host.classList.add("is-loading-interactive");
-  setCueState("visible");
+
   const hideImage = () => {
     if (imageHidden) return;
     imageHidden = true;
     image.classList.add("is-hidden");
   };
-  hideImage();
-  if (debugEnabled) {
-    debugEl = document.createElement("div");
-    debugEl.className = "dish-modal__media-debug";
-    host.appendChild(debugEl);
-  }
-  const updateDebugOverlay = () => {
-    if (!debugEnabled || !debugEl) return;
-    const frameLabel = canvas ? canvas.width + "x" + canvas.height : "-";
-    const offsetLabel = Math.round(centerOffset.x) + ", " + Math.round(centerOffset.y);
-    const boundsLabel = debugBounds
-      ? Math.round(debugBounds.minX) +
-        "," +
-        Math.round(debugBounds.minY) +
-        " " +
-        Math.round(debugBounds.maxX - debugBounds.minX) +
-        "x" +
-        Math.round(debugBounds.maxY - debugBounds.minY)
-      : "-";
-    const visibleLabel = debugVisibleRect
-      ? Math.round(debugVisibleRect.x) +
-        "," +
-        Math.round(debugVisibleRect.y) +
-        " " +
-        Math.round(debugVisibleRect.width) +
-        "x" +
-        Math.round(debugVisibleRect.height)
-      : "-";
-    const frameSizeLabel = debugFrameSize
-      ? Math.round(debugFrameSize.width) + "x" + Math.round(debugFrameSize.height)
-      : "-";
-    debugEl.textContent =
-      "offset: " +
-      offsetLabel +
-      "\nframe: " +
-      frameLabel +
-      "\nsource: " +
-      frameSizeLabel +
-      "\nvisible: " +
-      visibleLabel +
-      "\nbounds: " +
-      boundsLabel;
+  const showImage = () => {
+    if (!imageHidden) return;
+    imageHidden = false;
+    image.classList.remove("is-hidden");
   };
-  const cleanup = () => {
+  const clearRenderer = () => {
+    if (detachInteractions) {
+      detachInteractions();
+      detachInteractions = null;
+    }
+    if (rendererNode) {
+      rendererNode.remove();
+      rendererNode = null;
+    }
+  };
+  const cleanup = (force = false) => {
     if (disposed) return;
+    if (!force && token !== modalMediaToken) return;
     disposed = true;
-    abortController.abort();
-    if (resizeObserver) {
-      resizeObserver.disconnect();
-      resizeObserver = null;
-    }
-    if (canvas) {
-      canvas.remove();
-    }
-    if (debugEl) {
-      debugEl.remove();
-      debugEl = null;
-    }
-    if (imageHidden) {
-      image.classList.remove("is-hidden");
-    }
+    clearRenderer();
+    showImage();
     clearCueTimers();
     cueElement?.classList.remove("is-looping");
     delete host.dataset.cueState;
     host.classList.remove("is-loading-interactive");
     host.classList.remove("is-interactive");
-    bitmaps.forEach((bitmap) => bitmap.close?.());
-    bitmaps.length = 0;
-    try {
-      decoder?.close?.();
-    } catch {}
   };
   modalMediaCleanup = cleanup;
-  try {
-    const bytes = await getInteractiveAssetBytes(asset.source);
-    if (!bytes) {
-      cleanup();
-      return;
+
+  const attachDragInteractions = (target, onDelta) => {
+    let pointerId = null;
+    let lastX = 0;
+
+    const onPointerDown = (event) => {
+      pointerId = event.pointerId;
+      lastX = event.clientX;
+      clearCueTimers();
+      setCueState("hidden");
+      scheduleCueVisible();
+      try {
+        target.setPointerCapture(pointerId);
+      } catch {}
+      target.classList.add("is-dragging");
+      event.preventDefault();
+    };
+
+    const onPointerMove = (event) => {
+      if (pointerId !== event.pointerId) return;
+      const deltaX = event.clientX - lastX;
+      lastX = event.clientX;
+      setCueState("hidden");
+      scheduleCueVisible();
+      onDelta(deltaX);
+      event.preventDefault();
+    };
+
+    const onPointerRelease = (event) => {
+      if (pointerId === null || pointerId !== event.pointerId) return;
+      try {
+        target.releasePointerCapture(pointerId);
+      } catch {}
+      pointerId = null;
+      target.classList.remove("is-dragging");
+      setCueState("hidden");
+      scheduleCueVisible();
+    };
+
+    target.addEventListener("pointerdown", onPointerDown);
+    target.addEventListener("pointermove", onPointerMove);
+    target.addEventListener("pointerup", onPointerRelease);
+    target.addEventListener("pointercancel", onPointerRelease);
+    window.addEventListener("pointerup", onPointerRelease);
+    window.addEventListener("pointercancel", onPointerRelease);
+    target.addEventListener("contextmenu", (event) => event.preventDefault());
+    target.addEventListener("dragstart", (event) => event.preventDefault());
+
+    return () => {
+      target.removeEventListener("pointerdown", onPointerDown);
+      target.removeEventListener("pointermove", onPointerMove);
+      target.removeEventListener("pointerup", onPointerRelease);
+      target.removeEventListener("pointercancel", onPointerRelease);
+      window.removeEventListener("pointerup", onPointerRelease);
+      window.removeEventListener("pointercancel", onPointerRelease);
+    };
+  };
+
+  const markInteractiveReady = () => {
+    if (isStale()) return;
+    hideImage();
+    host.classList.remove("is-loading-interactive");
+    host.classList.add("is-interactive");
+    setCueState("visible");
+  };
+
+  const loadImageElement = (source) =>
+    new Promise((resolve, reject) => {
+      const spriteImage = new Image();
+      spriteImage.decoding = "async";
+      spriteImage.onload = () => resolve(spriteImage);
+      spriteImage.onerror = () => reject(new Error("Interactive sprite failed to load."));
+      spriteImage.src = source;
+    });
+
+  const trySetupVideoRenderer = async () => {
+    const source = pickInteractiveVideoSource(asset.video);
+    if (!source) return false;
+
+    const video = document.createElement("video");
+    video.className = "dish-modal__media-video";
+    video.preload = "auto";
+    video.playsInline = true;
+    video.muted = true;
+    video.loop = true;
+    video.autoplay = false;
+    video.controls = false;
+    video.setAttribute("aria-hidden", "true");
+    if (asset.poster) {
+      video.poster = asset.poster;
     }
-    if (disposed || token !== modalMediaToken) {
-      cleanup();
-      return;
-    }
-    decoder = new Decoder({ data: bytes, type: asset.mime });
-    await decoder.tracks.ready;
-    const frameCount = Number(decoder.tracks?.selectedTrack?.frameCount ?? 0);
-    if (frameCount < 2) {
-      cleanup();
-      return;
-    }
-    const frameStep = Math.max(1, Math.ceil(frameCount / INTERACTIVE_GIF_MAX_FRAMES));
-    const decodeIndices = [];
-    for (let frameIndex = 0; frameIndex < frameCount; frameIndex += frameStep) {
-      decodeIndices.push(frameIndex);
-    }
-    if (decodeIndices[decodeIndices.length - 1] !== frameCount - 1) {
-      decodeIndices.push(frameCount - 1);
-    }
+    video.src = source;
+
+    await new Promise((resolve, reject) => {
+      const timeout = window.setTimeout(() => {
+        cleanupListeners();
+        reject(new Error("Interactive video setup timed out."));
+      }, 2600);
+
+      const cleanupListeners = () => {
+        window.clearTimeout(timeout);
+        video.removeEventListener("loadedmetadata", onReady);
+        video.removeEventListener("loadeddata", onReady);
+        video.removeEventListener("error", onError);
+      };
+
+      const onReady = () => {
+        const duration = Number(video.duration);
+        if (!Number.isFinite(duration) || duration <= 0) return;
+        cleanupListeners();
+        resolve();
+      };
+
+      const onError = () => {
+        cleanupListeners();
+        reject(new Error("Interactive video failed to load."));
+      };
+
+      video.addEventListener("loadedmetadata", onReady);
+      video.addEventListener("loadeddata", onReady);
+      video.addEventListener("error", onError);
+    });
+
+    if (isStale()) return false;
+
+    const duration = Math.max(0.001, Number(video.duration) || 0.001);
+    const dragFrameCount = Math.max(2, asset.sprite?.frameCount || INTERACTIVE_DEFAULT_FRAME_COUNT);
     const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches ? 7 : 4;
-    const computeRenderSpec = () => {
-      if (!canvas || !contentBounds) return null;
-      const dpr = window.devicePixelRatio || 1;
-      const width = canvasDisplayWidth || canvas.width / dpr;
-      const height = canvasDisplayHeight || canvas.height / dpr;
-      const boundsW = Math.max(1, contentBounds.maxX - contentBounds.minX);
-      const boundsH = Math.max(1, contentBounds.maxY - contentBounds.minY);
-      const padding = Math.max(boundsW, boundsH) * 0.08;
-      let sx = contentBounds.minX - padding;
-      let sy = contentBounds.minY - padding;
-      let sw = boundsW + padding * 2;
-      let sh = boundsH + padding * 2;
+    let progress = 0;
 
-      sx = Math.max(0, Math.min(sx, width - 1));
-      sy = Math.max(0, Math.min(sy, height - 1));
-      sw = Math.max(1, Math.min(sw, width));
-      sh = Math.max(1, Math.min(sh, height));
-      if (sx + sw > width) {
-        sx = Math.max(0, width - sw);
-      }
-      if (sy + sh > height) {
-        sy = Math.max(0, height - sh);
-      }
-
-      const scale = Math.min(width / sw, height / sh);
-      const dw = sw * scale;
-      const dh = sh * scale;
-      const dx = (width - dw) / 2;
-      const dy = (height - dh) / 2;
-      return { sx, sy, sw, sh, dx, dy, dw, dh };
-    };
-  const render = () => {
-    if (!canvas || !ctx || disposed) return;
-    const dpr = window.devicePixelRatio || 1;
-    const displayWidth = canvasDisplayWidth || canvas.width / dpr;
-    const displayHeight = canvasDisplayHeight || canvas.height / dpr;
-    const frameCountSafe = Math.max(1, bitmaps.length);
-    const normalized =
-      ((Math.round(frameCursor) % frameCountSafe) + frameCountSafe) % frameCountSafe;
-    const frame = bitmaps[normalized];
-    if (!frame) return;
-    ctx.clearRect(0, 0, displayWidth, displayHeight);
-    let containScale = 1;
-    let containDx = 0;
-    let containDy = 0;
-    if (renderSpec) {
-      ctx.drawImage(
-        frame,
-        renderSpec.sx,
-        renderSpec.sy,
-        renderSpec.sw,
-        renderSpec.sh,
-        renderSpec.dx,
-        renderSpec.dy,
-        renderSpec.dw,
-        renderSpec.dh
-      );
-    } else {
-      containScale = Math.min(displayWidth / frame.width, displayHeight / frame.height);
-      const dw = frame.width * containScale;
-      const dh = frame.height * containScale;
-      containDx = (displayWidth - dw) / 2;
-      containDy = (displayHeight - dh) / 2;
-      ctx.drawImage(frame, containDx, containDy, dw, dh);
-    }
-      if (debugEnabled && debugBounds) {
-        let rectX = debugBounds.minX + centerOffset.x;
-        let rectY = debugBounds.minY + centerOffset.y;
-        let rectW = debugBounds.maxX - debugBounds.minX;
-        let rectH = debugBounds.maxY - debugBounds.minY;
-        if (renderSpec) {
-          const scaleX = renderSpec.dw / renderSpec.sw;
-          const scaleY = renderSpec.dh / renderSpec.sh;
-          rectX = renderSpec.dx + (debugBounds.minX - renderSpec.sx) * scaleX;
-          rectY = renderSpec.dy + (debugBounds.minY - renderSpec.sy) * scaleY;
-          rectW = (debugBounds.maxX - debugBounds.minX) * scaleX;
-          rectH = (debugBounds.maxY - debugBounds.minY) * scaleY;
-        } else {
-          rectX = containDx + debugBounds.minX * containScale;
-          rectY = containDy + debugBounds.minY * containScale;
-          rectW = (debugBounds.maxX - debugBounds.minX) * containScale;
-          rectH = (debugBounds.maxY - debugBounds.minY) * containScale;
-        }
-        const centerX = displayWidth / 2;
-        const centerY = displayHeight / 2;
-        const boundsCenterX = rectX + rectW / 2;
-        const boundsCenterY = rectY + rectH / 2;
-        ctx.save();
-        ctx.strokeStyle = "rgba(248, 250, 252, 0.7)";
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(centerX - 12, centerY);
-        ctx.lineTo(centerX + 12, centerY);
-        ctx.moveTo(centerX, centerY - 12);
-        ctx.lineTo(centerX, centerY + 12);
-        ctx.stroke();
-        ctx.strokeStyle = "rgba(251, 191, 36, 0.85)";
-        ctx.lineWidth = 2;
-        ctx.strokeRect(rectX, rectY, rectW, rectH);
-        ctx.fillStyle = "rgba(34, 197, 94, 0.9)";
-        ctx.beginPath();
-        ctx.arc(boundsCenterX, boundsCenterY, 4, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      }
-      updateDebugOverlay();
-    };
-    const ensureCanvas = (firstBitmap) => {
-      if (canvas || disposed) return;
-      if (allowAutoCenter) {
-        const computedOffset = readCenterOffsetFromBitmaps(bitmaps);
-        if (computedOffset) {
-          centerOffset = computedOffset;
-          interactiveDetailCenterOffsetCache.set(asset.source, centerOffset);
-        }
-      }
-      canvas = document.createElement("canvas");
-      canvas.className = "dish-modal__media-canvas";
-      canvas.width = firstBitmap.width;
-      canvas.height = firstBitmap.height;
-      ctx = canvas.getContext("2d");
-      if (!ctx) {
-        cleanup();
-        return;
-      }
-      if (allowAutoCenter && contentBounds) {
-        renderSpec = computeRenderSpec();
-      }
-      const onPointerDown = (event) => {
-        pointerId = event.pointerId;
-        lastX = event.clientX;
-        clearCueTimers();
-        setCueState("hidden");
-        canvas.setPointerCapture(pointerId);
-        canvas.classList.add("is-dragging");
-        event.preventDefault();
-      };
-      const onPointerMove = (event) => {
-        if (pointerId !== event.pointerId) return;
-        const deltaX = event.clientX - lastX;
-        lastX = event.clientX;
-        setCueState("hidden");
-        frameCursor += (deltaX / pixelsPerFrame) * detailRotateDirection;
-        render();
-        event.preventDefault();
-      };
-      const onPointerRelease = (event) => {
-        if (pointerId !== event.pointerId) return;
+    const render = () => {
+      const normalized = ((progress % 1) + 1) % 1;
+      const targetTime = Math.min(duration - 0.001, Math.max(0, normalized * duration));
+      if (Number.isFinite(targetTime)) {
         try {
-          canvas.releasePointerCapture(pointerId);
+          video.currentTime = targetTime;
         } catch {}
-        pointerId = null;
-        canvas.classList.remove("is-dragging");
-        setCueState("hidden");
-        scheduleCueVisible();
-      };
-      canvas.addEventListener("pointerdown", onPointerDown);
-      canvas.addEventListener("pointermove", onPointerMove);
-      canvas.addEventListener("pointerup", onPointerRelease);
-      canvas.addEventListener("pointercancel", onPointerRelease);
-      canvas.addEventListener("contextmenu", (event) => event.preventDefault());
-      canvas.addEventListener("dragstart", (event) => event.preventDefault());
+      }
+    };
 
-      host.appendChild(canvas);
-      const syncCanvasToImage = () => {
-        if (!canvas || !ctx) return;
-        const imageRect = image.getBoundingClientRect();
-        const hostRect = host.getBoundingClientRect();
-        const width = imageRect.width;
-        const height = imageRect.height;
-        if (!width || !height) {
-          requestAnimationFrame(syncCanvasToImage);
-          return;
-        }
-        canvasDisplayWidth = width;
-        canvasDisplayHeight = height;
-        canvas.style.position = "absolute";
-        canvas.style.left = imageRect.left - hostRect.left + "px";
-        canvas.style.top = imageRect.top - hostRect.top + "px";
-        canvas.style.width = width + "px";
-        canvas.style.height = height + "px";
-        const dpr = window.devicePixelRatio || 1;
-        canvas.width = Math.max(1, Math.round(width * dpr));
-        canvas.height = Math.max(1, Math.round(height * dpr));
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      };
-      syncCanvasToImage();
-      requestAnimationFrame(syncCanvasToImage);
-      if (!resizeObserver && "ResizeObserver" in window) {
-        resizeObserver = new ResizeObserver(() => {
-          syncCanvasToImage();
-          render();
-        });
-        resizeObserver.observe(host);
-      }
-      host.classList.remove("is-loading-interactive");
-    };
-    const normalizeDecodedFrame = async (frame) => {
-      if (debugEnabled && !debugFrameSize) {
-        debugFrameSize = {
-          width: frame.codedWidth || frame.displayWidth || frame.visibleRect?.width || 0,
-          height: frame.codedHeight || frame.displayHeight || frame.visibleRect?.height || 0
-        };
-      }
-      const visibleRect = frame.visibleRect;
-      if (debugEnabled && !debugVisibleRect && visibleRect) {
-        debugVisibleRect = {
-          x: visibleRect.x,
-          y: visibleRect.y,
-          width: visibleRect.width,
-          height: visibleRect.height
-        };
-      }
-      const fullWidth = frame.codedWidth || frame.displayWidth || visibleRect?.width || 0;
-      const fullHeight = frame.codedHeight || frame.displayHeight || visibleRect?.height || 0;
-      if (!visibleRect || !fullWidth || !fullHeight) {
-        return createImageBitmap(frame);
-      }
-      const sameBounds =
-        Math.round(visibleRect.x) === 0 &&
-        Math.round(visibleRect.y) === 0 &&
-        Math.round(visibleRect.width) === Math.round(fullWidth) &&
-        Math.round(visibleRect.height) === Math.round(fullHeight);
-      if (sameBounds) {
-        return createImageBitmap(frame);
-      }
-      const offscreen = document.createElement("canvas");
-      offscreen.width = fullWidth;
-      offscreen.height = fullHeight;
-      const offCtx = offscreen.getContext("2d");
-      if (!offCtx) {
-        return createImageBitmap(frame);
-      }
-      offCtx.clearRect(0, 0, fullWidth, fullHeight);
-      offCtx.drawImage(
-        frame,
+    rendererNode = video;
+    host.appendChild(video);
+    detachInteractions = attachDragInteractions(video, (deltaX) => {
+      progress += ((deltaX / pixelsPerFrame) * detailRotateDirection) / dragFrameCount;
+      render();
+    });
+
+    render();
+    markInteractiveReady();
+    return true;
+  };
+
+  const trySetupSpriteRenderer = async () => {
+    const sprite = asset.sprite;
+    if (!sprite) return false;
+
+    const spriteImage = await loadImageElement(sprite.image);
+    if (isStale()) return false;
+
+    const canvas = document.createElement("canvas");
+    canvas.className = "dish-modal__media-canvas";
+    canvas.width = sprite.frameWidth;
+    canvas.height = sprite.frameHeight;
+    const ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) return false;
+
+    const frameCount = Math.max(2, Math.min(sprite.frameCount, sprite.columns * sprite.rows));
+    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches ? 7 : 4;
+    let frameCursor = 0;
+
+    const render = () => {
+      const normalized = ((Math.round(frameCursor) % frameCount) + frameCount) % frameCount;
+      const column = normalized % sprite.columns;
+      const row = Math.floor(normalized / sprite.columns);
+      const sx = column * sprite.frameWidth;
+      const sy = row * sprite.frameHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(
+        spriteImage,
+        sx,
+        sy,
+        sprite.frameWidth,
+        sprite.frameHeight,
         0,
         0,
-        visibleRect.width,
-        visibleRect.height,
-        visibleRect.x,
-        visibleRect.y,
-        visibleRect.width,
-        visibleRect.height
+        canvas.width,
+        canvas.height
       );
-      return createImageBitmap(offscreen);
     };
-    let decodedCount = 0;
-    for (const frameIndex of decodeIndices) {
-      const decoded = await decoder.decode({ frameIndex, completeFramesOnly: true });
-      const frame = decoded?.image;
-      if (!frame) continue;
-      const bitmap = await normalizeDecodedFrame(frame);
-      frame.close?.();
-      if (disposed || token !== modalMediaToken) {
-        bitmap.close?.();
-        cleanup();
+
+    rendererNode = canvas;
+    host.appendChild(canvas);
+    detachInteractions = attachDragInteractions(canvas, (deltaX) => {
+      frameCursor += (deltaX / pixelsPerFrame) * detailRotateDirection;
+      render();
+    });
+
+    render();
+    markInteractiveReady();
+    return true;
+  };
+
+  host.classList.add("is-loading-interactive");
+  hideImage();
+  setCueState("hidden");
+
+  if (asset.sprite) {
+    try {
+      const setupSprite = await trySetupSpriteRenderer();
+      if (setupSprite) {
         return;
       }
-      bitmaps.push(bitmap);
-      if (debugEnabled && !debugBounds) {
-        const info = readForegroundCenterFromBitmap(bitmap);
-        if (info) debugBounds = info.bounds;
-      }
-      if (
-        allowAutoCenter &&
-        (bitmaps.length === 1 || bitmaps.length === INTERACTIVE_CENTER_SAMPLE_TARGET)
-      ) {
-        const computedOffset = readCenterOffsetFromBitmaps(bitmaps);
-        if (computedOffset) {
-          const delta =
-            Math.abs(computedOffset.x - centerOffset.x) +
-            Math.abs(computedOffset.y - centerOffset.y);
-          if (delta > 1) {
-            centerOffset = computedOffset;
-            interactiveDetailCenterOffsetCache.set(asset.source, centerOffset);
-          }
-        }
-        const computedBounds = readContentBoundsFromBitmaps(bitmaps);
-        if (computedBounds) {
-          contentBounds = computedBounds;
-          renderSpec = computeRenderSpec();
-          if (debugEnabled) {
-            debugBounds = computedBounds;
-          }
-        }
-      }
-      if (!canvas) {
-        ensureCanvas(bitmap);
-      }
-      render();
-      if (!interactiveReady && bitmaps.length >= 2) {
-        interactiveReady = true;
-        host.classList.add("is-interactive");
-      }
-      decodedCount += 1;
-      if (decodedCount % 6 === 0) {
-        await new Promise((resolve) => requestAnimationFrame(() => resolve(null)));
+    } catch (error) {
+      if (!isStale()) {
+        console.warn("Interactive sprite setup failed", asset.source, error);
       }
     }
-    if (!canvas) {
-      cleanup();
-      return;
-    }
-    if (allowAutoCenter) {
-      const computedOffset = readCenterOffsetFromBitmaps(bitmaps);
-      if (computedOffset) {
-        centerOffset = computedOffset;
-        interactiveDetailCenterOffsetCache.set(asset.source, centerOffset);
-        render();
-      }
-      const computedBounds = readContentBoundsFromBitmaps(bitmaps);
-      if (computedBounds) {
-        contentBounds = computedBounds;
-        renderSpec = computeRenderSpec();
-        if (debugEnabled) {
-          debugBounds = computedBounds;
-        }
-        render();
-      }
-    }
-    if (!interactiveReady && bitmaps.length >= 2) {
-      interactiveReady = true;
-      host.classList.add("is-interactive");
-    }
-  } catch (error) {
-    const isAbort = error instanceof DOMException && error.name === "AbortError";
-    if (!isAbort) {
-      console.warn("Interactive GIF decode failed", error);
-    }
-    cleanup();
+    clearRenderer();
   }
+
+  if (asset.video) {
+    try {
+      const setupVideo = await trySetupVideoRenderer();
+      if (setupVideo) {
+        return;
+      }
+    } catch (error) {
+      if (!isStale()) {
+        console.warn("Interactive video setup failed", asset.source, error);
+      }
+    }
+    clearRenderer();
+  }
+
+  cleanup();
 };
 const instructionCopy = {
   en: {
@@ -1827,16 +1469,27 @@ const render = () => {
   }
   applyBackgroundState = () => {
     const layers = Array.from(app.querySelectorAll(".menu-background"));
-    const warmIndexes = [];
-    if (backgrounds.length > 0 && activeBackgroundIndex >= 0) {
-      warmIndexes.push(activeBackgroundIndex);
+    const warmIndexes = new Set();
+    if (backgroundDisplayMode === "section") {
+      backgrounds.forEach((background, index) => {
+        warmIndexes.add(index);
+        const source = (background?.src || "").trim();
+        if (!source || sectionBackgroundPreloadSources.has(source)) return;
+        sectionBackgroundPreloadSources.add(source);
+        const preload = new Image();
+        preload.decoding = "async";
+        preload.src = source;
+        sectionBackgroundPreloadImages.push(preload);
+      });
+    } else if (backgrounds.length > 0 && activeBackgroundIndex >= 0) {
+      warmIndexes.add(activeBackgroundIndex);
       if (backgrounds.length > 1) {
-        warmIndexes.push((activeBackgroundIndex + 1) % backgrounds.length);
+        warmIndexes.add((activeBackgroundIndex + 1) % backgrounds.length);
       }
     }
     layers.forEach((layer, index) => {
       layer.classList.toggle("active", index === activeBackgroundIndex);
-      if (!warmIndexes.includes(index)) return;
+      if (!warmIndexes.has(index)) return;
       if (layer.dataset.bgLoaded === "1") return;
       const source = (layer.dataset.bgSrc || "").trim();
       if (!source) return;
@@ -1998,21 +1651,45 @@ const bindCarouselNav = () => {
   });
 };
 
+const HORIZONTAL_INDEX_HYSTERESIS_PX = 24;
+let stableHorizontalSectionIndex = -1;
 const getClosestHorizontalSectionIndex = (container) => {
   const sections = Array.from(container.querySelectorAll(".menu-section"));
-  if (sections.length === 0) return -1;
+  if (sections.length === 0) {
+    stableHorizontalSectionIndex = -1;
+    return -1;
+  }
   const center = container.scrollLeft + container.clientWidth / 2;
-  let closest = 0;
-  let minDistance = Number.POSITIVE_INFINITY;
+  let closestIndex = 0;
+  let closestDistance = Number.POSITIVE_INFINITY;
   sections.forEach((section, index) => {
     const sectionCenter = section.offsetLeft + section.offsetWidth / 2;
     const distance = Math.abs(sectionCenter - center);
-    if (distance < minDistance) {
-      minDistance = distance;
-      closest = index;
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
     }
   });
-  return closest;
+
+  if (
+    stableHorizontalSectionIndex >= 0 &&
+    stableHorizontalSectionIndex < sections.length &&
+    stableHorizontalSectionIndex !== closestIndex
+  ) {
+    const stableSection = sections[stableHorizontalSectionIndex];
+    const stableCenter = stableSection.offsetLeft + stableSection.offsetWidth / 2;
+    const stableDistance = Math.abs(stableCenter - center);
+    const hysteresisPx = Math.max(
+      HORIZONTAL_INDEX_HYSTERESIS_PX,
+      Math.round(container.clientWidth * 0.04)
+    );
+    if (stableDistance <= closestDistance + hysteresisPx) {
+      closestIndex = stableHorizontalSectionIndex;
+    }
+  }
+
+  stableHorizontalSectionIndex = closestIndex;
+  return closestIndex;
 };
 
 const centerSectionHorizontally = (container, index, behavior = "smooth") => {
@@ -2537,6 +2214,10 @@ const bindSectionFocus = () => {
     if (scroll.scrollWidth <= scroll.clientWidth + 4) return;
     let snapTimeout;
     const onScroll = () => {
+      const closestIndex = getClosestHorizontalSectionIndex(scroll);
+      if (closestIndex >= 0) {
+        syncBackgroundForSectionIndex(closestIndex);
+      }
       if (snapTimeout) window.clearTimeout(snapTimeout);
       snapTimeout = window.setTimeout(() => {
         const snapIndex = getClosestHorizontalSectionIndex(scroll);

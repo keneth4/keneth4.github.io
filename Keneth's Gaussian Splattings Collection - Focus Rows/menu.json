@@ -28,20 +28,21 @@
     "backgroundCarouselSeconds": 10,
     "backgroundDisplayMode": "carousel",
     "fontRoles": {
-      "identity": {
-        "source": "assets/originals/fonts/SuperBrigadeGradient-V4qA6.otf"
-      },
       "restaurant": {
-        "source": "assets/originals/fonts/QuickingRegular-gw5KY.otf"
+        "family": "",
+        "source": "assets/fonts/QuickingRegular-gw5KY.otf"
       },
       "title": {
-        "source": "assets/originals/fonts/SuperBrigadeGradient-V4qA6.otf"
+        "family": "",
+        "source": "assets/fonts/SuperBrigadeGradient-V4qA6.otf"
       },
       "section": {
-        "source": "assets/originals/fonts/QuickingRegular-gw5KY.otf"
+        "family": "",
+        "source": "assets/fonts/QuickingRegular-gw5KY.otf"
       },
       "item": {
-        "source": "assets/originals/fonts/QuickingRegular-gw5KY.otf"
+        "family": "",
+        "source": "assets/fonts/QuickingRegular-gw5KY.otf"
       }
     },
     "scrollSensitivity": {
@@ -51,20 +52,11 @@
   },
   "backgrounds": [
     {
-      "id": "bg-1770875868463",
+      "id": "bg-1771825781037",
       "label": "Fondo 1",
-      "src": "assets/derived/backgrounds/backgroundMannheim-md.gif",
+      "src": "assets/backgrounds/backgroundMannheim.gif",
       "type": "image",
-      "originalSrc": "assets/originals/backgrounds/backgroundMannheim.gif",
-      "derived": {
-        "profileId": "ffmpeg-v8-background-2of3-animated-gif",
-        "medium": {
-          "gif": "assets/derived/backgrounds/backgroundMannheim-md.gif"
-        },
-        "large": {
-          "gif": "assets/derived/backgrounds/backgroundMannheim-md.gif"
-        }
-      }
+      "originalSrc": "assets/backgrounds/backgroundMannheim.gif"
     }
   ],
   "categories": [
@@ -75,7 +67,7 @@
         "en": "Nature",
         "de": "Natur"
       },
-      "backgroundId": "bg-1770875868463",
+      "backgroundId": "bg-1771825781037",
       "items": [
         {
           "id": "dish-1770876206157",
@@ -102,24 +94,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360Flowers-md.gif",
-            "originalHero360": "assets/originals/items/360Flowers.gif",
+            "hero360": "assets/items/360Flowers-int-sprite-md.webp",
+            "originalHero360": "assets/items/360Flowers-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360Flowers",
             "responsive": {
-              "small": "assets/derived/items/360Flowers-md.gif",
-              "medium": "assets/derived/items/360Flowers-md.gif",
-              "large": "assets/derived/items/360Flowers-md.gif"
+              "small": "assets/items/360Flowers-int-sprite-md.webp",
+              "medium": "assets/items/360Flowers-int-sprite-md.webp",
+              "large": "assets/items/360Flowers-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360Flowers-md.gif"
+                "webp": "assets/items/360Flowers-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360Flowers-md.gif"
+                "webp": "assets/items/360Flowers-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360Flowers-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360Flowers-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -150,24 +156,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360Nochebuena-md.gif",
-            "originalHero360": "assets/originals/items/360Nochebuena.gif",
+            "hero360": "assets/items/360Nochebuena-int-sprite-md.webp",
+            "originalHero360": "assets/items/360Nochebuena-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360Nochebuena",
             "responsive": {
-              "small": "assets/derived/items/360Nochebuena-md.gif",
-              "medium": "assets/derived/items/360Nochebuena-md.gif",
-              "large": "assets/derived/items/360Nochebuena-md.gif"
+              "small": "assets/items/360Nochebuena-int-sprite-md.webp",
+              "medium": "assets/items/360Nochebuena-int-sprite-md.webp",
+              "large": "assets/items/360Nochebuena-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360Nochebuena-md.gif"
+                "webp": "assets/items/360Nochebuena-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360Nochebuena-md.gif"
+                "webp": "assets/items/360Nochebuena-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360Nochebuena-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360Nochebuena-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -198,24 +218,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360Tesla-md.gif",
-            "originalHero360": "assets/originals/items/360Tesla.gif",
+            "hero360": "assets/items/360Tesla-int-sprite-md.webp",
+            "originalHero360": "assets/items/360Tesla-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360Tesla",
             "responsive": {
-              "small": "assets/derived/items/360Tesla-md.gif",
-              "medium": "assets/derived/items/360Tesla-md.gif",
-              "large": "assets/derived/items/360Tesla-md.gif"
+              "small": "assets/items/360Tesla-int-sprite-md.webp",
+              "medium": "assets/items/360Tesla-int-sprite-md.webp",
+              "large": "assets/items/360Tesla-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360Tesla-md.gif"
+                "webp": "assets/items/360Tesla-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360Tesla-md.gif"
+                "webp": "assets/items/360Tesla-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360Tesla-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360Tesla-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -230,7 +264,7 @@
         "en": "Technology",
         "de": "Technologie"
       },
-      "backgroundId": "bg-1770875868463",
+      "backgroundId": "bg-1771825781037",
       "items": [
         {
           "id": "dish-1770876738287",
@@ -257,24 +291,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360vrHeadset-md.gif",
-            "originalHero360": "assets/originals/items/360vrHeadset.gif",
+            "hero360": "assets/items/360vrHeadset-int-sprite-md.webp",
+            "originalHero360": "assets/items/360vrHeadset-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360vrHeadset",
             "responsive": {
-              "small": "assets/derived/items/360vrHeadset-md.gif",
-              "medium": "assets/derived/items/360vrHeadset-md.gif",
-              "large": "assets/derived/items/360vrHeadset-md.gif"
+              "small": "assets/items/360vrHeadset-int-sprite-md.webp",
+              "medium": "assets/items/360vrHeadset-int-sprite-md.webp",
+              "large": "assets/items/360vrHeadset-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360vrHeadset-md.gif"
+                "webp": "assets/items/360vrHeadset-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360vrHeadset-md.gif"
+                "webp": "assets/items/360vrHeadset-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360vrHeadset-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360vrHeadset-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -305,24 +353,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360Instax-md.gif",
-            "originalHero360": "assets/originals/items/360Instax.gif",
+            "hero360": "assets/items/360Instax-int-sprite-md.webp",
+            "originalHero360": "assets/items/360Instax-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360Instax",
             "responsive": {
-              "small": "assets/derived/items/360Instax-md.gif",
-              "medium": "assets/derived/items/360Instax-md.gif",
-              "large": "assets/derived/items/360Instax-md.gif"
+              "small": "assets/items/360Instax-int-sprite-md.webp",
+              "medium": "assets/items/360Instax-int-sprite-md.webp",
+              "large": "assets/items/360Instax-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360Instax-md.gif"
+                "webp": "assets/items/360Instax-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360Instax-md.gif"
+                "webp": "assets/items/360Instax-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360Instax-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360Instax-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -353,24 +415,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360Switch-md.gif",
-            "originalHero360": "assets/originals/items/360Switch.gif",
+            "hero360": "assets/items/360Switch-int-sprite-md.webp",
+            "originalHero360": "assets/items/360Switch-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360Switch",
             "responsive": {
-              "small": "assets/derived/items/360Switch-md.gif",
-              "medium": "assets/derived/items/360Switch-md.gif",
-              "large": "assets/derived/items/360Switch-md.gif"
+              "small": "assets/items/360Switch-int-sprite-md.webp",
+              "medium": "assets/items/360Switch-int-sprite-md.webp",
+              "large": "assets/items/360Switch-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360Switch-md.gif"
+                "webp": "assets/items/360Switch-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360Switch-md.gif"
+                "webp": "assets/items/360Switch-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360Switch-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360Switch-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -385,7 +461,7 @@
         "en": "Art / Collectibles",
         "de": "Kunst / Sammlerstücke"
       },
-      "backgroundId": "bg-1770875868463",
+      "backgroundId": "bg-1771825781037",
       "items": [
         {
           "id": "dish-1770877112789",
@@ -412,24 +488,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360Cats-md.gif",
-            "originalHero360": "assets/originals/items/360Cats.gif",
+            "hero360": "assets/items/360Cats-int-sprite-md.webp",
+            "originalHero360": "assets/items/360Cats-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360Cats",
             "responsive": {
-              "small": "assets/derived/items/360Cats-md.gif",
-              "medium": "assets/derived/items/360Cats-md.gif",
-              "large": "assets/derived/items/360Cats-md.gif"
+              "small": "assets/items/360Cats-int-sprite-md.webp",
+              "medium": "assets/items/360Cats-int-sprite-md.webp",
+              "large": "assets/items/360Cats-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360Cats-md.gif"
+                "webp": "assets/items/360Cats-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360Cats-md.gif"
+                "webp": "assets/items/360Cats-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360Cats-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360Cats-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
@@ -460,24 +550,38 @@
           "allergens": [],
           "vegan": false,
           "media": {
-            "hero360": "assets/derived/items/360MarryGo-md.gif",
-            "originalHero360": "assets/originals/items/360MarryGo.gif",
+            "hero360": "assets/items/360MarryGo-int-sprite-md.webp",
+            "originalHero360": "assets/items/360MarryGo-int-poster.webp",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "gallery": [],
+            "assetSetId": "360MarryGo",
             "responsive": {
-              "small": "assets/derived/items/360MarryGo-md.gif",
-              "medium": "assets/derived/items/360MarryGo-md.gif",
-              "large": "assets/derived/items/360MarryGo-md.gif"
+              "small": "assets/items/360MarryGo-int-sprite-md.webp",
+              "medium": "assets/items/360MarryGo-int-sprite-md.webp",
+              "large": "assets/items/360MarryGo-int-sprite-md.webp"
             },
             "derived": {
-              "profileId": "ffmpeg-v12-item-2of3-animated-gif-detail-original",
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "gif": "assets/derived/items/360MarryGo-md.gif"
+                "webp": "assets/items/360MarryGo-int-sprite-md.webp"
               },
               "large": {
-                "gif": "assets/derived/items/360MarryGo-md.gif"
+                "webp": "assets/items/360MarryGo-int-sprite-md.webp"
+              }
+            },
+            "interactive": {
+              "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
+              "poster": "assets/items/360MarryGo-int-poster.webp",
+              "sprite": {
+                "image": "assets/items/360MarryGo-int-sprite.webp",
+                "frameCount": 60,
+                "columns": 10,
+                "rows": 6,
+                "fps": 24,
+                "frameWidth": 500,
+                "frameHeight": 500
               }
             }
           },
