@@ -54,9 +54,9 @@
     {
       "id": "bg-1771825781037",
       "label": "Fondo 1",
-      "src": "assets/backgrounds/backgroundMannheim.gif",
+      "src": "assets/backgrounds/backgroundMannheim-md.gif",
       "type": "image",
-      "originalSrc": "assets/backgrounds/backgroundMannheim.gif"
+      "originalSrc": "assets/backgrounds/backgroundMannheim-md.gif"
     }
   ],
   "categories": [

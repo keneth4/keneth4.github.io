@@ -1,8 +1,8 @@
 Open this exported site with a local server (recommended).
 
 macOS / Linux:
-1. Run chmod +x serve.command
-2. Run ./serve.command
+1. Run chmod +x serve.command (only needed once after unzip)
+2. Run ./serve.command (or double-click on macOS once executable)
 3. Open http://127.0.0.1:4173
 
 Windows:

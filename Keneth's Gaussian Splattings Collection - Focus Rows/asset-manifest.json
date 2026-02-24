@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-02-23T18:39:32.747Z",
+  "generatedAt": "2026-02-24T03:34:40.620Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 111013,
+      "bytes": 111019,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "assets/backgrounds/backgroundMannheim.gif",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim.gif",
+      "outputPath": "assets/backgrounds/backgroundMannheim-md.gif",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim-md.gif",
       "role": "background",
       "mime": "image/gif",
-      "bytes": 24487584,
+      "bytes": 13427789,
       "responsiveVariant": null,
       "firstView": true
     },
@@ -278,7 +278,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 30194,
+      "bytes": 30200,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -287,7 +287,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/plain",
-      "bytes": 215,
+      "bytes": 289,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -296,7 +296,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/octet-stream",
-      "bytes": 66,
+      "bytes": 751,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -305,7 +305,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/octet-stream",
-      "bytes": 85,
+      "bytes": 712,
       "responsiveVariant": null,
       "firstView": false
     },
