@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "slug": "keneth-s-gaussian-splattings-collection",
+  "generatedAt": "2026-02-24T03:34:40.620Z",
+  "assets": [
+    {
+      "outputPath": "app.js",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/javascript",
+      "bytes": 111019,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/backgrounds/backgroundMannheim-md.gif",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim-md.gif",
+      "role": "background",
+      "mime": "image/gif",
+      "bytes": 13427789,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/fonts/QuickingRegular-gw5KY.otf",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/fonts/QuickingRegular-gw5KY.otf",
+      "role": "font",
+      "mime": "font/otf",
+      "bytes": 21984,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/fonts/SuperBrigadeGradient-V4qA6.otf",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/fonts/SuperBrigadeGradient-V4qA6.otf",
+      "role": "font",
+      "mime": "font/otf",
+      "bytes": 60436,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Cats-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Cats-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 122584,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Cats-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Cats-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1758372,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Cats-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Cats-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 7456494,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Flowers-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Flowers-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 136540,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Flowers-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Flowers-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 2095632,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Flowers-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Flowers-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 8335784,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Instax-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Instax-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 95302,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Instax-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Instax-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1095672,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/360Instax-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Instax-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 5567558,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360MarryGo-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360MarryGo-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 117664,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360MarryGo-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360MarryGo-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1730204,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360MarryGo-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360MarryGo-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 7172292,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Nochebuena-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Nochebuena-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 186584,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Nochebuena-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Nochebuena-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 2245316,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Nochebuena-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Nochebuena-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 10326850,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Switch-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Switch-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 174692,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Switch-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Switch-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 2149828,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Switch-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Switch-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 11655062,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Tesla-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Tesla-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 69602,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360Tesla-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Tesla-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1105076,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/360Tesla-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Tesla-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 4124628,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360vrHeadset-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360vrHeadset-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 152252,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/360vrHeadset-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360vrHeadset-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1674770,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/360vrHeadset-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360vrHeadset-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 8181664,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "favicon.ico",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/x-icon",
+      "bytes": 967,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "index.html",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "text/html",
+      "bytes": 734,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "menu.json",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/json",
+      "bytes": 30200,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "README.txt",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "text/plain",
+      "bytes": 289,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "serve.bat",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/octet-stream",
+      "bytes": 751,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "serve.command",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/octet-stream",
+      "bytes": 712,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "styles.css",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "text/css",
+      "bytes": 45682,
+      "responsiveVariant": null,
+      "firstView": false
+    }
+  ]
+}
