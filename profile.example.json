@@ -1,0 +1,23 @@
+{
+  "name": "Keneth Ibarra",
+  "title": "Sr. Software Engineer / AI Enthusiast",
+  "tagline": "Empowering businesses with AI-driven solutions for enhanced customer experiences.",
+  "email": "k.ent@hotmail.com",
+  "phone": "+49 15257403004",
+  "location": "Mannheim, Germany",
+  "photo": "./profile-photo.jpg",
+  "links": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/keneth4/"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/keneth4/"
+    }
+  ],
+  "theme": {
+    "accent": "#50586C",
+    "accentSoft": "#DCE2F0"
+  }
+}

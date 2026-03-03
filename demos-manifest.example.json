@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "basePath": "/demos",
+  "total": 2,
+  "demos": [
+    {
+      "name": "CafeBrunch Menu - Jukebox",
+      "folder": "CafeBrunch Menu - Jukebox",
+      "href": "/demos/CafeBrunch%20Menu%20-%20Jukebox/"
+    },
+    {
+      "name": "Demo - Keneth's Collection",
+      "folder": "Demo - Keneth's Collection",
+      "href": "/demos/Demo%20-%20Keneth%27s%20Collection/"
+    }
+  ]
+}
