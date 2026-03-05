@@ -915,10 +915,19 @@ const UI_TEXT_BY_LOCALE = {
 
 const DEFAULT_PROFILE = {
   name: "Keneth Ibarra",
-  title: "Founder",
+  title: "Sr. Software Engineer / AI Enthusiast",
+  tagline: "Empowering businesses with AI-driven solutions for enhanced customer experiences.",
   email: "k.ent@hotmail.com",
   phone: "+49 15257403004",
-  links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/keneth4/" }]
+  location: "Mannheim, Germany",
+  links: [
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/keneth4/" },
+    { label: "GitHub", href: "https://github.com/keneth4" }
+  ],
+  theme: {
+    accent: "#50586C",
+    accentSoft: "#DCE2F0"
+  }
 };
 
 const DEFAULT_MANIFEST = {
@@ -930,7 +939,7 @@ const DEFAULT_MANIFEST = {
 
 const urlParams = new URLSearchParams(window.location.search);
 const manifestUrl = urlParams.get("manifest") ?? "/demos/demos-manifest.json";
-const profileUrl = urlParams.get("profile") ?? "./profile.json";
+const profileUrl = (urlParams.get("profile") ?? "").trim();
 
 let currentLocale = DEFAULT_LOCALE;
 let activeProfile = DEFAULT_PROFILE;
@@ -2057,6 +2066,9 @@ const fetchJson = async (url) => {
 };
 
 const loadProfile = async () => {
+  if (!profileUrl) {
+    return DEFAULT_PROFILE;
+  }
   try {
     return await fetchJson(profileUrl);
   } catch {
