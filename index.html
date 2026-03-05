@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -23,8 +24,22 @@
     <header class="site-header">
       <div class="container site-header-inner">
         <a href="#hero" class="brand-mark" aria-label="Creativivid Studio home">
-          <span class="brand-cube" aria-hidden="true"></span>
-          <span class="brand-text">CREATIVIVID STUDIO</span>
+          <span class="brand-wordmark" aria-hidden="true">
+            <img
+              class="brand-wordmark-image brand-wordmark-transparent"
+              src="./Brand-transparency.png"
+              alt=""
+              width="967"
+              height="354"
+            />
+            <img
+              class="brand-wordmark-image brand-wordmark-solid"
+              src="./Brand.png"
+              alt=""
+              width="967"
+              height="354"
+            />
+          </span>
         </a>
         <nav class="site-nav" aria-label="Main navigation">
           <a href="#experience">Experience</a>
@@ -274,7 +289,10 @@
 
     <footer class="site-footer">
       <div class="container site-footer-inner">
-        <p>© <span id="year"></span> Creativivid Studio. All rights reserved.</p>
+        <div class="footer-brand">
+          <img src="./Logo.png" alt="" aria-hidden="true" width="1080" height="1080" />
+          <p>© <span id="year"></span> Creativivid Studio. All rights reserved.</p>
+        </div>
         <a href="/privacy.html">Privacy Policy</a>
       </div>
     </footer>

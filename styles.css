@@ -51,8 +51,7 @@ img {
 h1,
 h2,
 h3,
-h4,
-.brand-text {
+h4 {
   font-family: "Sora", "Avenir Next", sans-serif;
   letter-spacing: -0.02em;
   line-height: 1.12;
@@ -93,13 +92,14 @@ ul {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(12px);
-  background: color-mix(in srgb, var(--bg-dark) 84%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--line-dark) 68%, transparent);
+  backdrop-filter: blur(14px);
+  background: rgba(245, 245, 247, 0.9);
+  border-bottom: 1px solid color-mix(in srgb, var(--line-light) 88%, #ffffff);
+  box-shadow: 0 6px 24px rgba(14, 14, 18, 0.08);
 }
 
 .site-header-inner {
-  min-height: 74px;
+  min-height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -107,26 +107,25 @@ ul {
 }
 
 .brand-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
+  display: inline-block;
   text-decoration: none;
   color: var(--text-light);
 }
 
-.brand-cube {
-  width: 24px;
-  aspect-ratio: 1;
-  border-radius: 6px;
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--accent) 72%, #ffffff), var(--accent-strong));
-  box-shadow: 0 10px 24px rgba(91, 61, 245, 0.4);
+.brand-wordmark {
+  display: block;
+  width: clamp(176px, 22vw, 256px);
+  filter: drop-shadow(0 4px 10px rgba(14, 14, 18, 0.06));
 }
 
-.brand-text {
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.brand-wordmark-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.brand-wordmark-solid {
+  display: none;
 }
 
 .site-nav {
@@ -137,7 +136,7 @@ ul {
 
 .site-nav a {
   text-decoration: none;
-  color: var(--text-muted-dark);
+  color: var(--text-muted);
   font-size: 0.86rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -146,7 +145,7 @@ ul {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: var(--text-light);
+  color: var(--accent-strong);
 }
 
 .section {
@@ -904,6 +903,19 @@ ul {
   gap: 1rem;
 }
 
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+}
+
+.footer-brand img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 9px;
+}
+
 .site-footer a {
   color: color-mix(in srgb, var(--text-light) 86%, transparent);
   text-decoration: none;
@@ -963,6 +975,23 @@ ul {
 
   .site-header-inner {
     min-height: 64px;
+    justify-content: center;
+  }
+
+  .brand-mark {
+    margin-inline: auto;
+  }
+
+  .brand-wordmark {
+    width: min(58vw, 212px);
+  }
+
+  .brand-wordmark-transparent {
+    display: block;
+  }
+
+  .brand-wordmark-solid {
+    display: none;
   }
 
   .site-nav {
