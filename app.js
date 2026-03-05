@@ -190,10 +190,9 @@ const LANDING_CONTENT = {
     eyebrow: "About the Studio",
     heading: "Engineering precision meets cinematic presentation.",
     body:
-      "Creativivid Studio blends AI and computer vision expertise with visual storytelling, informed by work across Mexico, the USA, and Germany."
+      "Creativivid Studio blends AI and computer vision expertise with visual storytelling to craft premium interactive menu experiences."
   },
   consultation: {
-    eyebrow: "Final CTA",
     heading: "Elevate how guests experience your menu.",
     body:
       "If your brand values presentation, story, and differentiation, let\'s discuss your concept and evaluate strategic fit."
@@ -241,6 +240,84 @@ const setText = (selector, value) => {
   const target = document.querySelector(selector);
   if (!target) return;
   target.textContent = value;
+};
+
+const syncHeaderOffset = () => {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const headerHeight = Math.ceil(header.getBoundingClientRect().height);
+  const offset = Math.max(64, headerHeight + 2);
+  document.documentElement.style.setProperty("--header-offset", `${offset}px`);
+};
+
+const scrollToSectionWithOffset = (hash, behavior = "smooth") => {
+  if (!hash || !hash.startsWith("#")) return;
+  const target = document.querySelector(hash);
+  if (!target) return;
+
+  const header = document.querySelector(".site-header");
+  const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+  const targetTop = window.scrollY + target.getBoundingClientRect().top;
+  const scrollTop = Math.max(0, targetTop - headerHeight - 2);
+
+  if (behavior === "instant") {
+    window.scrollTo(0, scrollTop);
+  } else {
+    window.scrollTo({ top: scrollTop, behavior });
+  }
+  if (history.replaceState) {
+    history.replaceState(null, "", hash);
+  } else {
+    window.location.hash = hash;
+  }
+};
+
+const setupStickyNavAnchors = () => {
+  const navLinks = Array.from(document.querySelectorAll(".site-header .site-nav a[href^='#']"));
+  if (!navLinks.length) return;
+  const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+  const behavior = prefersReducedMotion ? "instant" : "smooth";
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.defaultPrevented) return;
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      const hash = link.getAttribute("href");
+      if (!hash || hash === "#") return;
+      if (!document.querySelector(hash)) return;
+
+      event.preventDefault();
+      syncHeaderOffset();
+      scrollToSectionWithOffset(hash, behavior);
+    });
+  });
+};
+
+const setupBackToTop = () => {
+  const button = document.getElementById("back-to-top");
+  if (!button) return;
+
+  const threshold = 320;
+
+  const syncState = () => {
+    const isVisible = window.scrollY > threshold;
+    button.classList.toggle("is-visible", isVisible);
+    button.setAttribute("aria-hidden", String(!isVisible));
+    button.tabIndex = isVisible ? 0 : -1;
+  };
+
+  button.addEventListener("click", () => {
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+    if (prefersReducedMotion) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", syncState, { passive: true });
+  syncState();
 };
 
 const hydrateContentText = () => {
@@ -720,6 +797,14 @@ const hydrateLanding = () => {
 };
 
 const main = async () => {
+  syncHeaderOffset();
+  window.addEventListener("resize", syncHeaderOffset, { passive: true });
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(syncHeaderOffset).catch(() => {});
+  }
+  setupStickyNavAnchors();
+  setupBackToTop();
+
   hydrateLanding();
   setupRevealAnimation();
 
