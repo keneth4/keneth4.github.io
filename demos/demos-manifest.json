@@ -6,12 +6,14 @@
     {
       "name": "Demo - CafeBrunch Menu",
       "folder": "Demo - CafeBrunch Menu",
-      "href": "/demos/Demo%20-%20CafeBrunch%20Menu/"
+      "href": "/demos/Demo%20-%20CafeBrunch%20Menu/",
+      "previewImage": "/demos/Demo%20-%20CafeBrunch%20Menu/preview.webp"
     },
     {
       "name": "Demo - Keneth's Collection",
       "folder": "Demo - Keneth's Collection",
-      "href": "/demos/Demo%20-%20Keneth%27s%20Collection/"
+      "href": "/demos/Demo%20-%20Keneth%27s%20Collection/",
+      "previewImage": "/demos/Demo%20-%20Keneth%27s%20Collection/preview.webp"
     }
   ]
 }
