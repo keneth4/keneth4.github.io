@@ -664,6 +664,7 @@ const UI_TEXT_BY_LOCALE = {
       searchLabel: "Find a demo",
       searchPlaceholder: "Type a demo name...",
       cardCta: "Open demo",
+      previewFrameTitle: "Preview of {name}",
       emptyState: "No demos available yet. Publish exports to /demos/ first.",
       noResults: "No demos match your search.",
       untitled: "Untitled demo",
@@ -770,6 +771,7 @@ const UI_TEXT_BY_LOCALE = {
       searchLabel: "Buscar una demo",
       searchPlaceholder: "Escribe el nombre de una demo...",
       cardCta: "Abrir demo",
+      previewFrameTitle: "Vista previa de {name}",
       emptyState: "Aun no hay demos disponibles. Publica exportaciones en /demos/ primero.",
       noResults: "Ninguna demo coincide con tu busqueda.",
       untitled: "Demo sin titulo",
@@ -876,6 +878,7 @@ const UI_TEXT_BY_LOCALE = {
       searchLabel: "Demo finden",
       searchPlaceholder: "Demo-Namen eingeben...",
       cardCta: "Demo öffnen",
+      previewFrameTitle: "Vorschau von {name}",
       emptyState: "Noch keine Demos verfügbar. Veröffentliche zuerst Exporte nach /demos/.",
       noResults: "Keine Demos passen zu deiner Suche.",
       untitled: "Demo ohne Titel",
@@ -964,6 +967,8 @@ const manifestUrl = urlParams.get("manifest") ?? "/demos/demos-manifest.json";
 let currentLocale = DEFAULT_LOCALE;
 let manifestEntries = [];
 let manifestStatusState = null;
+const demoPreviewImageCache = new Map();
+let demoPreviewObserver = null;
 const assetStateByKey = new Map(
   Object.keys(SCHNITZEL_ASSETS).map((key) => [key, "idle"])
 );
@@ -1996,6 +2001,181 @@ const updateCount = (visible, total) => {
   count.textContent = formatTemplate(ui.demos.countLabel, { visible, total });
 };
 
+const toDemoRootHref = (href) => {
+  if (!href) return "";
+  try {
+    const url = new URL(String(href), window.location.origin);
+    const path = url.pathname.endsWith("/") ? url.pathname : `${url.pathname}/`;
+    return `${url.origin}${path}`;
+  } catch {
+    return "";
+  }
+};
+
+const toAssetUrlFromDemoRoot = (demoRootHref, outputPath) => {
+  if (!demoRootHref || !outputPath) return "";
+  try {
+    const url = new URL(String(outputPath), demoRootHref);
+    return `${url.pathname}${url.search}${url.hash}`;
+  } catch {
+    return "";
+  }
+};
+
+const toDemoPreviewImageHref = (demo) => {
+  const demoRootHref = toDemoRootHref(demo?.href ?? "");
+  const previewImage = String(demo?.previewImage ?? "").trim();
+  if (!previewImage) return "";
+
+  if (/^https?:\/\//i.test(previewImage) || previewImage.startsWith("/")) {
+    return toAbsoluteHref(previewImage);
+  }
+
+  return toAssetUrlFromDemoRoot(demoRootHref, previewImage);
+};
+
+const pickDemoPreviewAsset = (assets) => {
+  if (!Array.isArray(assets)) return null;
+  const imageAssets = assets
+    .filter((asset) => asset && typeof asset.outputPath === "string" && String(asset.mime ?? "").startsWith("image/"))
+    .map((asset) => ({
+      ...asset,
+      bytes: Number(asset.bytes) || Number.MAX_SAFE_INTEGER,
+      path: String(asset.outputPath),
+      role: String(asset.role ?? "").toLowerCase(),
+      mime: String(asset.mime ?? "").toLowerCase()
+    }))
+    .filter((asset) => !asset.path.toLowerCase().endsWith("favicon.ico"));
+
+  if (!imageAssets.length) return null;
+
+  const score = (asset) => {
+    const pathLower = asset.path.toLowerCase();
+    const isPoster = /-poster\.(webp|png|jpe?g)$/i.test(pathLower);
+    const isBackgroundFirst = asset.role === "background" && Boolean(asset.firstView);
+    const isBackground = asset.role === "background";
+    const isFirstView = Boolean(asset.firstView);
+    const isGif = asset.mime.endsWith("/gif") || pathLower.endsWith(".gif");
+    const isLogo = pathLower.includes("/logos/");
+
+    if (isPoster) return [0, asset.bytes];
+    if (isBackgroundFirst && asset.bytes <= 800000) return [1, asset.bytes];
+    if (isFirstView && !isGif && asset.bytes <= 1500000) return [2, asset.bytes];
+    if (isBackground && asset.bytes <= 1200000) return [3, asset.bytes];
+    if (isFirstView && asset.bytes <= 2000000) return [4, asset.bytes];
+    if (isLogo) return [6, asset.bytes];
+    return [5, asset.bytes];
+  };
+
+  return imageAssets.sort((a, b) => {
+    const [rankA, bytesA] = score(a);
+    const [rankB, bytesB] = score(b);
+    if (rankA !== rankB) return rankA - rankB;
+    return bytesA - bytesB;
+  })[0];
+};
+
+const resolveDemoPreviewImageSrc = async (demo) => {
+  const explicitPreviewHref = toDemoPreviewImageHref(demo);
+  if (explicitPreviewHref) return explicitPreviewHref;
+
+  const demoRootHref = toDemoRootHref(demo?.href ?? "");
+  if (!demoRootHref) return "";
+  if (demoPreviewImageCache.has(demoRootHref)) {
+    return demoPreviewImageCache.get(demoRootHref) ?? "";
+  }
+
+  const manifestHref = `${demoRootHref}asset-manifest.json`;
+
+  try {
+    const response = await fetch(manifestHref, { cache: "force-cache" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const manifest = await response.json();
+    const previewAsset = pickDemoPreviewAsset(manifest?.assets);
+    const previewSrc = previewAsset
+      ? toAssetUrlFromDemoRoot(demoRootHref, previewAsset.outputPath)
+      : toAssetUrlFromDemoRoot(demoRootHref, "favicon.ico");
+    demoPreviewImageCache.set(demoRootHref, previewSrc);
+    return previewSrc;
+  } catch {
+    const fallback = toAssetUrlFromDemoRoot(demoRootHref, "favicon.ico");
+    demoPreviewImageCache.set(demoRootHref, fallback);
+    return fallback;
+  }
+};
+
+const hydrateDemoPreview = async (preview) => {
+  if (!(preview instanceof HTMLElement)) return;
+  if (preview.dataset.previewHydrated === "true") return;
+  preview.dataset.previewHydrated = "true";
+
+  const demoHref = preview.dataset.demoHref ?? "";
+  const demoPreviewImage = preview.dataset.demoPreviewImage ?? "";
+  const image = preview.querySelector("img");
+  if (!(image instanceof HTMLImageElement)) return;
+
+  try {
+    const src = await resolveDemoPreviewImageSrc({
+      href: demoHref,
+      previewImage: demoPreviewImage
+    });
+    if (!src) {
+      preview.classList.add("is-error");
+      return;
+    }
+    image.addEventListener(
+      "load",
+      () => {
+        preview.classList.add("is-loaded");
+      },
+      { once: true }
+    );
+    image.addEventListener(
+      "error",
+      () => {
+        preview.classList.add("is-error");
+      },
+      { once: true }
+    );
+    image.src = src;
+  } catch {
+    preview.classList.add("is-error");
+  }
+};
+
+const observeDemoPreview = (preview) => {
+  if (!(preview instanceof HTMLElement)) return;
+  if (preview.dataset.previewObserved === "true") return;
+  preview.dataset.previewObserved = "true";
+
+  if (!("IntersectionObserver" in window)) {
+    hydrateDemoPreview(preview);
+    return;
+  }
+
+  if (!demoPreviewObserver) {
+    demoPreviewObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          observer.unobserve(entry.target);
+          hydrateDemoPreview(entry.target);
+        });
+      },
+      {
+        rootMargin: "260px 0px",
+        threshold: 0.01
+      }
+    );
+  }
+
+  demoPreviewObserver.observe(preview);
+};
+
+const setupDemoPreviews = () => {
+  document.querySelectorAll("[data-demo-preview]").forEach((preview) => observeDemoPreview(preview));
+};
+
 const renderDemoCards = (demos, total) => {
   const ui = getUiText();
   const list = document.getElementById("demos-list");
@@ -2015,15 +2195,29 @@ const renderDemoCards = (demos, total) => {
 
   list.innerHTML = demos
     .map((demo, index) => {
-      const name = htmlEscape(demo?.name ?? demo?.folder ?? ui.demos.untitled);
+      const rawName = String(demo?.name ?? demo?.folder ?? ui.demos.untitled);
+      const name = htmlEscape(rawName);
       const href = htmlEscape(toAbsoluteHref(demo?.href ?? ""));
-      const folder = htmlEscape(demo?.folder ?? ui.demos.publishedDemo);
+      const previewImage = htmlEscape(String(demo?.previewImage ?? "").trim());
       const search = htmlEscape(String(demo?.name ?? demo?.folder ?? "").toLowerCase());
+      const previewFrameTitle = htmlEscape(
+        formatTemplate(ui.demos.previewFrameTitle ?? "{name}", {
+          name: rawName
+        })
+      );
       return `
         <li data-site-card data-search="${search}">
           <a class="demo-card" href="${href}" ${index === 0 ? 'data-featured-demo="true"' : ""}>
+            <span
+              class="demo-preview"
+              data-demo-preview
+              data-demo-href="${href}"
+              data-demo-preview-image="${previewImage}"
+              aria-hidden="true"
+            >
+              <img loading="lazy" decoding="async" alt="${previewFrameTitle}" />
+            </span>
             <span class="demo-name">${name}</span>
-            <span class="demo-meta">${folder}</span>
             <span class="demo-cta">${htmlEscape(ui.demos.cardCta)}</span>
           </a>
         </li>
@@ -2031,6 +2225,7 @@ const renderDemoCards = (demos, total) => {
     })
     .join("");
 
+  setupDemoPreviews();
   updateCount(demos.length, total);
 };
 
