@@ -488,10 +488,11 @@ section[id] {
 
 .landing-media-canvas {
   z-index: 2;
-  touch-action: none;
+  touch-action: auto;
 }
 
 .landing-media-stage.is-interactive-ready .landing-media-canvas {
+  touch-action: none;
   cursor: grab;
 }
 
