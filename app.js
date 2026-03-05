@@ -10,8 +10,8 @@ const LANDING_CONTENT = {
     microValue: "Multi-language. Visual. Story-driven. Allergen-aware."
   },
   credibility: [
-    "Designed for modern hospitality brands in Germany.",
-    "Multi-language ready (EN / DE / ES).",
+    "Designed for independent restaurants and dining venues in Germany.",
+    "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
     "No subscription required. Delivered as fully-owned files.",
     "Selective studio: limited projects per quarter for quality."
   ],
@@ -44,10 +44,10 @@ const LANDING_CONTENT = {
       },
       {
         title: "Interactive Motion Layer",
-        body: "A richer preview using sprite-driven 3D-style movement to simulate depth and rotation.",
+        body: "A fluid interactive preview that reveals depth and detail as guests explore.",
         image:
           "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
-        alt: "MarryGo interactive sprite"
+        alt: "MarryGo interactive depth preview"
       },
       {
         title: "Visual Appetite Trigger",
@@ -63,10 +63,10 @@ const LANDING_CONTENT = {
     heading: "Published demo experiences"
   },
   hospitality: {
-    eyebrow: "Designed for Modern Hospitality",
-    heading: "Built for brands where presentation is part of the product.",
+    eyebrow: "Designed for Visual-First Dining Venues",
+    heading: "Built for independent venues where presentation is part of the experience.",
     body:
-      "Creativivid Studio creates immersive menu experiences for boutique cafes, cocktail bars, fine dining restaurants, Irish pubs, and visually-driven hospitality concepts.",
+      "Creativivid Studio creates immersive menu experiences for boutique cafes, brunch studios, cocktail or speakeasy bars, dessert-forward concepts, chef-led dining venues, and Irish pubs.",
     lines: ["It\'s experience.", "It\'s culture.", "It\'s story.", "It\'s your brand, made tangible."]
   },
   impact: {
@@ -103,29 +103,20 @@ const LANDING_CONTENT = {
   },
   howItWorks: {
     eyebrow: "How It Works",
-    heading: "Two collaboration paths. Same premium outcome.",
-    body: "We handle technical complexity end-to-end so your team can focus on hospitality.",
-    tracks: [
-      {
-        title: "Option 1: On-Site Capture",
-        subtitle: "Premium experience",
-        steps: [
-          "We visit your location.",
-          "We capture your dishes professionally.",
-          "We process immersive 3D assets.",
-          "You receive a ready-to-deploy interactive website."
-        ]
-      },
-      {
-        title: "Option 2: Remote Capture",
-        subtitle: "Flexible option",
-        steps: [
-          "You record guided 3-minute clips per item.",
-          "We convert captures into immersive assets.",
-          "We build your interactive web experience.",
-          "You receive delivery-ready files and guidance."
-        ]
-      }
+    heading: "Two capture paths. One production flow.",
+    body: "We handle technical complexity end-to-end so your team can stay focused on guest experience.",
+    pathATitle: "Option 1: On-Site Capture",
+    pathASubtitle: "Best for venues that want full production support",
+    pathAIntroSteps: ["We visit your location.", "We capture your dishes professionally."],
+    pathBTitle: "Option 2: Remote Capture",
+    pathBSubtitle: "Best for faster, flexible scheduling",
+    pathBIntroSteps: ["You record a guided few-minutes clip per item."],
+    sharedTitle: "Shared Production & Delivery Flow",
+    sharedSteps: [
+      "We process immersive 3D assets.",
+      "We build your interactive web experience.",
+      "You receive a ready-to-deploy interactive website.",
+      "Optional domain and server setup assistance is available."
     ]
   },
   deliverables: {
@@ -134,7 +125,7 @@ const LANDING_CONTENT = {
     items: [
       "Fully responsive interactive website",
       "Immersive 3D dish visualizations",
-      "Multi-language structure (EN / DE / ES ready)",
+      "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
       "Clear vegan and allergen indicators",
       "Story-rich dish detail structure",
       "Custom brand styling and direction",
@@ -145,27 +136,24 @@ const LANDING_CONTENT = {
   collaboration: {
     eyebrow: "Collaboration Options",
     heading: "Selective engagement model",
-    body: "Creativivid Studio works with a limited number of hospitality brands per quarter to maintain creative and technical excellence.",
+    body: "Creativivid Studio works with a limited number of independent dining venues per quarter to maintain creative and technical excellence.",
     packages: [
       {
         title: "Starter — Pilot Experience",
         subtitle: "Ideal for testing immersive presentation with focused scope.",
-        priceRange: "Germany: €1,500 - €2,000",
-        altPrice: "Mexico: $1,000 - $1,600",
+        priceRange: "€1,500 - €2,000",
         bullets: ["Up to 5 items", "Interactive website", "Remote capture workflow"]
       },
       {
         title: "Premium — Brand Elevation",
         subtitle: "For visually-driven restaurants ready to differentiate.",
-        priceRange: "Germany: €3,000 - €4,500",
-        altPrice: "Mexico: $2,000 - $3,200",
+        priceRange: "€3,000 - €4,500",
         bullets: ["Up to 15 items", "Advanced styling", "On-site capture available", "Deployment support"]
       },
       {
         title: "Signature — Full Immersive Concept",
-        subtitle: "For high-end brands seeking a statement experience.",
-        priceRange: "Germany: €6,000+",
-        altPrice: "Mexico: Custom",
+        subtitle: "For signature restaurants seeking a statement experience.",
+        priceRange: "€6,000+",
         bullets: [
           "20+ items",
           "Custom design direction",
@@ -194,7 +182,7 @@ const LANDING_CONTENT = {
       },
       {
         q: "Is this only for luxury restaurants?",
-        a: "It is for hospitality brands that value presentation, storytelling, and differentiation."
+        a: "It is for independent restaurants and dining venues that value presentation, storytelling, and differentiation."
       }
     ]
   },
@@ -202,7 +190,7 @@ const LANDING_CONTENT = {
     eyebrow: "About the Studio",
     heading: "Engineering precision meets cinematic presentation.",
     body:
-      "Creativivid Studio blends AI and computer vision expertise with visual storytelling to bring next-generation menu presentation into real-world hospitality."
+      "Creativivid Studio blends AI and computer vision expertise with visual storytelling, informed by work across Mexico, the USA, and Germany."
   },
   consultation: {
     eyebrow: "Final CTA",
@@ -317,19 +305,33 @@ const renderImpact = () => {
 const renderTimeline = () => {
   const target = document.getElementById("timeline-grid");
   if (!target) return;
-  target.innerHTML = LANDING_CONTENT.howItWorks.tracks
-    .map(
-      (track) => `
+  const section = LANDING_CONTENT.howItWorks;
+
+  target.innerHTML = `
+    <div class="timeline-fork-merge">
       <article class="timeline-track">
-        <h3>${htmlEscape(track.title)}</h3>
-        <p>${htmlEscape(track.subtitle)}</p>
+        <h3>${htmlEscape(section.pathATitle)}</h3>
+        <p>${htmlEscape(section.pathASubtitle)}</p>
         <ol>
-          ${track.steps.map((step) => `<li>${htmlEscape(step)}</li>`).join("")}
+          ${section.pathAIntroSteps.map((step) => `<li>${htmlEscape(step)}</li>`).join("")}
         </ol>
       </article>
-    `
-    )
-    .join("");
+      <article class="timeline-track">
+        <h3>${htmlEscape(section.pathBTitle)}</h3>
+        <p>${htmlEscape(section.pathBSubtitle)}</p>
+        <ol>
+          ${section.pathBIntroSteps.map((step) => `<li>${htmlEscape(step)}</li>`).join("")}
+        </ol>
+      </article>
+      <article class="timeline-track timeline-track-shared">
+        <h3>${htmlEscape(section.sharedTitle)}</h3>
+        <p>Both paths merge here.</p>
+        <ol>
+          ${section.sharedSteps.map((step) => `<li>${htmlEscape(step)}</li>`).join("")}
+        </ol>
+      </article>
+    </div>
+  `;
 };
 
 const renderDeliverables = () => {
@@ -348,7 +350,6 @@ const renderPackages = () => {
         <h3>${htmlEscape(item.title)}</h3>
         <p class="tier-subtitle">${htmlEscape(item.subtitle)}</p>
         <p class="price-range">${htmlEscape(item.priceRange)}</p>
-        <p class="tier-subtitle">${htmlEscape(item.altPrice)}</p>
         <ul>
           ${item.bullets.map((bullet) => `<li>${htmlEscape(bullet)}</li>`).join("")}
         </ul>
