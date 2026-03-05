@@ -675,11 +675,8 @@ const UI_TEXT_BY_LOCALE = {
       applyCta: "Apply for a Consultation"
     },
     about: {
-      signaturePrefix: "Founded by",
-      signatureSuffix: "with international experience in Mexico, the USA, and Germany across agency, enterprise, and product environments."
-    },
-    consultation: {
-      whatsappLabel: "WhatsApp"
+      signatureLine:
+        "Built by an international engineering-led team with experience across Mexico, the USA, and Germany in agency, enterprise, and product environments."
     },
     form: {
       menuSituationLegend: "Tell us a little about your menu",
@@ -722,7 +719,7 @@ const UI_TEXT_BY_LOCALE = {
       statusEndpoint:
         "Consultation form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
       statusSuccess: "Thank you. Your consultation request has been received.",
-      statusError: "Request failed. Please email us directly at k.ent@hotmail.com.",
+      statusError: "Request failed. Please try again shortly.",
       successHeadline: "Your consultation request has been received.",
       successBodyLine1: "Thank you for reaching out to Creativivid Studio.",
       successBodyLine2:
@@ -784,12 +781,8 @@ const UI_TEXT_BY_LOCALE = {
       applyCta: "Solicitar una consulta"
     },
     about: {
-      signaturePrefix: "Fundado por",
-      signatureSuffix:
-        "con experiencia internacional en Mexico, Estados Unidos y Alemania en entornos de agencia, empresa y producto."
-    },
-    consultation: {
-      whatsappLabel: "WhatsApp"
+      signatureLine:
+        "Creado por un equipo internacional con enfoque de ingeniería y experiencia en México, Estados Unidos y Alemania en entornos de agencia, empresa y producto."
     },
     form: {
       menuSituationLegend: "Cuéntanos un poco sobre tu menú",
@@ -832,7 +825,7 @@ const UI_TEXT_BY_LOCALE = {
       statusEndpoint:
         "El formulario aún no está conectado. Reemplaza FORM_ENDPOINT en app.js con tu endpoint de Formspree.",
       statusSuccess: "Gracias. Tu solicitud de consulta fue recibida.",
-      statusError: "La solicitud falló. Escríbenos directamente a k.ent@hotmail.com.",
+      statusError: "La solicitud falló. Inténtalo de nuevo en breve.",
       successHeadline: "Tu solicitud de consulta ha sido recibida.",
       successBodyLine1: "Gracias por contactar a Creativivid Studio.",
       successBodyLine2:
@@ -894,12 +887,8 @@ const UI_TEXT_BY_LOCALE = {
       applyCta: "Beratung anfragen"
     },
     about: {
-      signaturePrefix: "Gegründet von",
-      signatureSuffix:
-        "mit internationaler Erfahrung in Mexiko, den USA und Deutschland in Agentur-, Enterprise- und Produktumfeldern."
-    },
-    consultation: {
-      whatsappLabel: "WhatsApp"
+      signatureLine:
+        "Erstellt von einem internationalen, engineering-orientierten Team mit Erfahrung in Mexiko, den USA und Deutschland in Agentur-, Enterprise- und Produktumfeldern."
     },
     form: {
       menuSituationLegend: "Erzähl uns kurz etwas über dein Menü",
@@ -942,7 +931,7 @@ const UI_TEXT_BY_LOCALE = {
       statusEndpoint:
         "Das Formular ist noch nicht verbunden. Ersetze FORM_ENDPOINT in app.js durch deinen Formspree-Endpoint.",
       statusSuccess: "Danke. Deine Beratungsanfrage wurde erhalten.",
-      statusError: "Anfrage fehlgeschlagen. Bitte direkt an k.ent@hotmail.com schreiben.",
+      statusError: "Anfrage fehlgeschlagen. Bitte versuche es in Kürze erneut.",
       successHeadline: "Deine Beratungsanfrage ist eingegangen.",
       successBodyLine1: "Danke, dass du Creativivid Studio kontaktiert hast.",
       successBodyLine2:
@@ -962,23 +951,6 @@ const UI_TEXT_BY_LOCALE = {
   }
 };
 
-const DEFAULT_PROFILE = {
-  name: "Keneth Ibarra",
-  title: "Sr. Software Engineer / AI Enthusiast",
-  tagline: "Empowering businesses with AI-driven solutions for enhanced customer experiences.",
-  email: "k.ent@hotmail.com",
-  phone: "+49 15257403004",
-  location: "Mannheim, Germany",
-  links: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/keneth4/" },
-    { label: "GitHub", href: "https://github.com/keneth4" }
-  ],
-  theme: {
-    accent: "#50586C",
-    accentSoft: "#DCE2F0"
-  }
-};
-
 const DEFAULT_MANIFEST = {
   schemaVersion: 1,
   basePath: "/demos",
@@ -988,10 +960,8 @@ const DEFAULT_MANIFEST = {
 
 const urlParams = new URLSearchParams(window.location.search);
 const manifestUrl = urlParams.get("manifest") ?? "/demos/demos-manifest.json";
-const profileUrl = (urlParams.get("profile") ?? "").trim();
 
 let currentLocale = DEFAULT_LOCALE;
-let activeProfile = DEFAULT_PROFILE;
 let manifestEntries = [];
 let manifestStatusState = null;
 const assetStateByKey = new Map(
@@ -1320,7 +1290,7 @@ const setLocale = (nextLocale, options = {}) => {
   if (!rerender) return;
 
   hydrateLanding();
-  hydrateProfile(activeProfile);
+  hydrateFooterYear();
   refreshManifestStatus();
   renderDemosFiltered();
 };
@@ -2117,17 +2087,6 @@ const fetchJson = async (url) => {
   return response.json();
 };
 
-const loadProfile = async () => {
-  if (!profileUrl) {
-    return DEFAULT_PROFILE;
-  }
-  try {
-    return await fetchJson(profileUrl);
-  } catch {
-    return DEFAULT_PROFILE;
-  }
-};
-
 const loadManifest = async () => {
   try {
     const manifest = await fetchJson(manifestUrl);
@@ -2145,15 +2104,7 @@ const loadManifest = async () => {
   }
 };
 
-const hydrateProfile = (profile) => {
-  activeProfile = {
-    ...DEFAULT_PROFILE,
-    ...(profile ?? {})
-  };
-
-  const founder = document.getElementById("about-founder");
-  if (founder) founder.textContent = activeProfile.name;
-
+const hydrateFooterYear = () => {
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 };
@@ -2337,8 +2288,8 @@ const main = async () => {
   hydrateLanding();
   setupRevealAnimation();
 
-  const [profile, manifest] = await Promise.all([loadProfile(), loadManifest()]);
-  hydrateProfile(profile);
+  hydrateFooterYear();
+  const manifest = await loadManifest();
   manifestEntries = Array.isArray(manifest?.demos) ? manifest.demos : [];
 
   setupSearch();

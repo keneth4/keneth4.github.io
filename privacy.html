@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="only light" />
     <meta
       name="description"
-      content="Privacy details for Creativivid Studio consultation requests and follow-up communication."
+      content="Privacy details for Creativivid Studio consultation and data-rights requests, including processor and transfer information."
     />
     <title>Privacy Policy | Creativivid Studio</title>
     <link rel="icon" type="image/png" href="./favicon.png" />
@@ -35,7 +35,7 @@
         background: var(--bg);
       }
       .wrap {
-        width: min(860px, calc(100% - 1.4rem));
+        width: min(920px, calc(100% - 1.4rem));
         margin: 2rem auto;
         background: var(--surface);
         border: 1px solid var(--line);
@@ -69,57 +69,202 @@
       a {
         color: var(--accent);
       }
+      .privacy-form {
+        margin-top: 0.9rem;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 0.95rem;
+        display: grid;
+        gap: 0.72rem;
+      }
+      .privacy-form-grid {
+        display: grid;
+        gap: 0.72rem;
+      }
+      label {
+        display: grid;
+        gap: 0.34rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      input,
+      select,
+      textarea,
+      button {
+        font: inherit;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        padding: 0.66rem 0.72rem;
+        color: var(--text);
+        background: #fff;
+      }
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible,
+      button:focus-visible {
+        outline: 2px solid color-mix(in srgb, var(--accent) 58%, #ffffff);
+        outline-offset: 1px;
+      }
+      .consent-row {
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: 0.56rem;
+        font-weight: 500;
+      }
+      .consent-row input {
+        width: 16px;
+        height: 16px;
+        margin-top: 0.25rem;
+      }
+      button {
+        border: 1px solid color-mix(in srgb, var(--accent) 40%, #ffffff);
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 650;
+        padding: 0.62rem 1.04rem;
+        width: max-content;
+        cursor: pointer;
+      }
+      button[disabled] {
+        opacity: 0.68;
+        cursor: not-allowed;
+      }
+      .form-status {
+        margin: 0;
+        min-height: 1.2rem;
+        font-size: 0.84rem;
+      }
+      .form-status.error {
+        color: #9a2e2e;
+      }
+      .form-status.success {
+        color: #1a7b4d;
+      }
+      @media (min-width: 760px) {
+        .privacy-form-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .privacy-form-grid label:last-child,
+        .privacy-form-grid .span-2 {
+          grid-column: 1 / -1;
+        }
+      }
     </style>
   </head>
   <body>
     <main class="wrap">
       <h1 data-i18n="title">Privacy Policy</h1>
       <p data-i18n="intro">
-        This policy describes how Creativivid Studio processes personal data submitted through the consultation form on
-        this website.
+        This policy describes how Creativivid Studio processes personal data submitted through consultation and data-rights
+        requests on this website.
       </p>
 
       <h2 data-i18n="purposeTitle">1. Purpose of Data Processing</h2>
       <p data-i18n="purposeBody">
-        We collect contact and project information to review your inquiry, respond to your request, and discuss
-        possible collaboration.
+        We process submitted information to review inquiries, respond to requests, evaluate potential collaboration, and
+        handle data-rights requests.
       </p>
 
       <h2 data-i18n="dataTitle">2. Data We Process</h2>
       <ul>
-        <li data-i18n="dataLine1">Name and email address</li>
-        <li data-i18n="dataLine2">Restaurant/brand and location details</li>
-        <li data-i18n="dataLine3">Menu situation, collaboration level, timeline, and project message</li>
+        <li data-i18n="dataLine1">Contact details you provide (for example, name and email address)</li>
+        <li data-i18n="dataLine2">Restaurant/brand and optional location or project context details</li>
+        <li data-i18n="dataLine3">Menu situation, collaboration level, timeline, and optional message fields</li>
+        <li data-i18n="dataLine4">Data-rights request details submitted through the privacy request form</li>
       </ul>
 
       <h2 data-i18n="legalTitle">3. Legal Basis</h2>
       <p data-i18n="legalBody">
-        Data is processed based on your explicit consent when submitting the consultation form and requesting contact.
+        Consultation data is processed based on consent. Data-rights requests are processed to comply with legal obligations
+        under applicable data protection law.
       </p>
 
       <h2 data-i18n="retentionTitle">4. Retention</h2>
       <p data-i18n="retentionBody">
-        We keep inquiry data only as long as needed for consultation and follow-up. If no collaboration proceeds, data
-        is deleted within a reasonable period unless legal retention obligations apply.
+        We keep data only as long as necessary for request handling, follow-up, and legal compliance. If no collaboration
+        proceeds, data is deleted within a reasonable period unless retention obligations apply.
       </p>
 
       <h2 data-i18n="rightsTitle">5. Your Rights</h2>
-      <p>
-        <span data-i18n="rightsPrefix">You may request access, correction, deletion, or restriction of your personal data by contacting </span>
-        <a href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a><span data-i18n="rightsSuffix">.</span>
+      <p data-i18n="rightsBody">
+        You may request access, correction, deletion, restriction, portability, or objection to processing where applicable.
+        You may also withdraw consent at any time.
+      </p>
+      <p data-i18n="rightsTimeline">
+        We aim to respond without undue delay and normally within one month, as required by applicable law.
       </p>
 
-      <h2 data-i18n="processorTitle">6. Third-Party Processor</h2>
-      <p data-i18n="processorBody">
-        Consultation form submissions may be routed through Formspree (form backend service). Their processing is
-        governed by their own privacy and security policies.
+      <h2 data-i18n="processorTitle">6. Third-Party Processor and Transfers</h2>
+      <p data-i18n="processorBody1">
+        Consultation and privacy requests may be processed through Formspree (form backend service) acting as a processor.
+      </p>
+      <p data-i18n="processorBody2">
+        Where data is transferred outside the EEA, appropriate safeguards (such as Standard Contractual Clauses) are applied
+        according to provider documentation.
       </p>
 
-      <h2 data-i18n="contactTitle">7. Contact</h2>
-      <p>
-        <span data-i18n="contactPrefix">For privacy questions, email </span><a href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a
-        ><span data-i18n="contactSuffix">.</span>
+      <h2 data-i18n="contactTitle">7. Privacy Contact Channel</h2>
+      <p data-i18n="contactBody">
+        To exercise privacy rights or ask privacy questions, use the form below.
       </p>
+
+      <form id="privacy-request-form" class="privacy-form" novalidate>
+        <div class="privacy-form-grid">
+          <label>
+            <span data-i18n="form.nameLabel">Full name *</span>
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            <span data-i18n="form.emailLabel">Email *</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span data-i18n="form.requestTypeLabel">Request type *</span>
+            <select name="request_type" required>
+              <option value="" data-i18n="form.selectOne">Select one...</option>
+              <option value="access" data-i18n="form.typeAccess">Access</option>
+              <option value="rectification" data-i18n="form.typeRectification">Rectification</option>
+              <option value="erasure" data-i18n="form.typeErasure">Erasure</option>
+              <option value="restriction" data-i18n="form.typeRestriction">Restriction</option>
+              <option value="portability" data-i18n="form.typePortability">Portability</option>
+              <option value="objection" data-i18n="form.typeObjection">Objection</option>
+              <option value="withdraw_consent" data-i18n="form.typeWithdraw">Withdraw consent</option>
+              <option value="question" data-i18n="form.typeQuestion">Privacy question</option>
+              <option value="other" data-i18n="form.typeOther">Other</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="form.countryLabel">Country/Region (optional)</span>
+            <input name="country_region" type="text" autocomplete="country-name" />
+          </label>
+          <label class="span-2">
+            <span data-i18n="form.messageLabel">Request details *</span>
+            <textarea
+              name="message"
+              rows="5"
+              required
+              placeholder="Describe your request so we can process it correctly."
+              data-i18n-placeholder="form.messagePlaceholder"
+            ></textarea>
+          </label>
+        </div>
+
+        <label class="consent-row">
+          <input name="consent" type="checkbox" required />
+          <span data-i18n="form.consentLabel">
+            I confirm this request concerns my data or that I am authorized to act on behalf of the data subject.
+          </span>
+        </label>
+
+        <button id="privacy-submit" type="submit" data-i18n="form.submitIdle">Send Privacy Request</button>
+        <p id="privacy-form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
 
       <p><a id="back-home" href="/" data-i18n="backHome">Back to homepage</a></p>
     </main>
@@ -128,100 +273,201 @@
       const SUPPORTED_LOCALES = ["en", "es", "de"];
       const DEFAULT_LOCALE = "en";
       const LOCALE_STORAGE_KEY = "cv_locale";
+      const PRIVACY_FORM_ENDPOINT = "https://formspree.io/f/mjgabawp";
+      const MIN_SUBMIT_MS = 900;
 
       const PRIVACY_CONTENT_BY_LOCALE = {
         en: {
           metaTitle: "Privacy Policy | Creativivid Studio",
-          metaDescription: "Privacy details for Creativivid Studio consultation requests and follow-up communication.",
+          metaDescription:
+            "Privacy details for Creativivid Studio consultation and data-rights requests, including processor and transfer information.",
           title: "Privacy Policy",
           intro:
-            "This policy describes how Creativivid Studio processes personal data submitted through the consultation form on this website.",
+            "This policy describes how Creativivid Studio processes personal data submitted through consultation and data-rights requests on this website.",
           purposeTitle: "1. Purpose of Data Processing",
           purposeBody:
-            "We collect contact and project information to review your inquiry, respond to your request, and discuss possible collaboration.",
+            "We process submitted information to review inquiries, respond to requests, evaluate potential collaboration, and handle data-rights requests.",
           dataTitle: "2. Data We Process",
-          dataLine1: "Name and email address",
-          dataLine2: "Restaurant/brand and location details",
-          dataLine3: "Menu situation, collaboration level, timeline, and project message",
+          dataLine1: "Contact details you provide (for example, name and email address)",
+          dataLine2: "Restaurant/brand and optional location or project context details",
+          dataLine3: "Menu situation, collaboration level, timeline, and optional message fields",
+          dataLine4: "Data-rights request details submitted through the privacy request form",
           legalTitle: "3. Legal Basis",
           legalBody:
-            "Data is processed based on your explicit consent when submitting the consultation form and requesting contact.",
+            "Consultation data is processed based on consent. Data-rights requests are processed to comply with legal obligations under applicable data protection law.",
           retentionTitle: "4. Retention",
           retentionBody:
-            "We keep inquiry data only as long as needed for consultation and follow-up. If no collaboration proceeds, data is deleted within a reasonable period unless legal retention obligations apply.",
+            "We keep data only as long as necessary for request handling, follow-up, and legal compliance. If no collaboration proceeds, data is deleted within a reasonable period unless retention obligations apply.",
           rightsTitle: "5. Your Rights",
-          rightsPrefix:
-            "You may request access, correction, deletion, or restriction of your personal data by contacting ",
-          rightsSuffix: ".",
-          processorTitle: "6. Third-Party Processor",
-          processorBody:
-            "Consultation form submissions may be routed through Formspree (form backend service). Their processing is governed by their own privacy and security policies.",
-          contactTitle: "7. Contact",
-          contactPrefix: "For privacy questions, email ",
-          contactSuffix: ".",
-          backHome: "Back to homepage"
+          rightsBody:
+            "You may request access, correction, deletion, restriction, portability, or objection to processing where applicable. You may also withdraw consent at any time.",
+          rightsTimeline:
+            "We aim to respond without undue delay and normally within one month, as required by applicable law.",
+          processorTitle: "6. Third-Party Processor and Transfers",
+          processorBody1:
+            "Consultation and privacy requests may be processed through Formspree (form backend service) acting as a processor.",
+          processorBody2:
+            "Where data is transferred outside the EEA, appropriate safeguards (such as Standard Contractual Clauses) are applied according to provider documentation.",
+          contactTitle: "7. Privacy Contact Channel",
+          contactBody: "To exercise privacy rights or ask privacy questions, use the form below.",
+          backHome: "Back to homepage",
+          form: {
+            nameLabel: "Full name *",
+            emailLabel: "Email *",
+            requestTypeLabel: "Request type *",
+            selectOne: "Select one...",
+            typeAccess: "Access",
+            typeRectification: "Rectification",
+            typeErasure: "Erasure",
+            typeRestriction: "Restriction",
+            typePortability: "Portability",
+            typeObjection: "Objection",
+            typeWithdraw: "Withdraw consent",
+            typeQuestion: "Privacy question",
+            typeOther: "Other",
+            countryLabel: "Country/Region (optional)",
+            messageLabel: "Request details *",
+            messagePlaceholder: "Describe your request so we can process it correctly.",
+            consentLabel:
+              "I confirm this request concerns my data or that I am authorized to act on behalf of the data subject.",
+            submitIdle: "Send Privacy Request",
+            submitSending: "Sending...",
+            statusRequired: "Please complete name, email, request type, and request details.",
+            statusInvalidEmail: "Please provide a valid email address.",
+            statusNoConsent: "Please confirm authorization to proceed.",
+            statusEndpoint: "Privacy request form is not configured correctly.",
+            statusSending: "Sending your privacy request...",
+            statusSuccess: "Your privacy request has been submitted.",
+            statusError: "Request failed. Please try again shortly."
+          }
         },
         es: {
           metaTitle: "Política de privacidad | Creativivid Studio",
-          metaDescription: "Detalles de privacidad para solicitudes de consulta y seguimiento de Creativivid Studio.",
+          metaDescription:
+            "Detalles de privacidad para solicitudes de consulta y derechos de datos en Creativivid Studio, incluyendo procesador y transferencias.",
           title: "Política de privacidad",
           intro:
-            "Esta política describe cómo Creativivid Studio procesa los datos personales enviados mediante el formulario de consulta de este sitio.",
+            "Esta política describe cómo Creativivid Studio procesa datos personales enviados mediante consultas y solicitudes de derechos de datos en este sitio web.",
           purposeTitle: "1. Finalidad del tratamiento de datos",
           purposeBody:
-            "Recopilamos datos de contacto y del proyecto para revisar tu solicitud, responder tu consulta y conversar posibles colaboraciones.",
+            "Procesamos la información enviada para revisar consultas, responder solicitudes, evaluar posibles colaboraciones y gestionar solicitudes de derechos de datos.",
           dataTitle: "2. Datos que procesamos",
-          dataLine1: "Nombre y correo electrónico",
-          dataLine2: "Detalles de restaurante/marca y ubicación",
-          dataLine3: "Situación del menú, nivel de colaboración, plazo y mensaje del proyecto",
+          dataLine1: "Datos de contacto que proporcionas (por ejemplo, nombre y correo electrónico)",
+          dataLine2: "Datos de restaurante/marca y detalles opcionales de ubicación o contexto del proyecto",
+          dataLine3: "Situación del menú, nivel de colaboración, plazo y campos opcionales de mensaje",
+          dataLine4: "Detalles de solicitudes de derechos enviados mediante el formulario de privacidad",
           legalTitle: "3. Base legal",
           legalBody:
-            "Los datos se procesan sobre la base de tu consentimiento explícito al enviar el formulario y solicitar contacto.",
+            "Los datos de consulta se procesan con base en consentimiento. Las solicitudes de derechos se procesan para cumplir obligaciones legales de protección de datos.",
           retentionTitle: "4. Conservación",
           retentionBody:
-            "Conservamos los datos solo el tiempo necesario para consulta y seguimiento. Si no avanza una colaboracion, eliminamos los datos en un plazo razonable, salvo obligaciones legales.",
+            "Conservamos los datos solo el tiempo necesario para gestionar solicitudes, seguimiento y cumplimiento legal. Si no avanza una colaboración, los datos se eliminan en un plazo razonable salvo obligaciones de conservación.",
           rightsTitle: "5. Tus derechos",
-          rightsPrefix:
-            "Puedes solicitar acceso, corrección, eliminación o limitación de tus datos personales escribiendo a ",
-          rightsSuffix: ".",
-          processorTitle: "6. Procesador externo",
-          processorBody:
-            "Las solicitudes del formulario pueden enviarse a través de Formspree (servicio backend del formulario). Su procesamiento se rige por sus propias políticas de privacidad y seguridad.",
-          contactTitle: "7. Contacto",
-          contactPrefix: "Para preguntas de privacidad, escribe a ",
-          contactSuffix: ".",
-          backHome: "Volver al inicio"
+          rightsBody:
+            "Puedes solicitar acceso, corrección, eliminación, limitación, portabilidad u oposición al tratamiento cuando aplique. También puedes retirar tu consentimiento en cualquier momento.",
+          rightsTimeline:
+            "Buscamos responder sin demora indebida y normalmente dentro de un mes, según la ley aplicable.",
+          processorTitle: "6. Procesador externo y transferencias",
+          processorBody1:
+            "Las solicitudes de consulta y privacidad pueden procesarse a través de Formspree (servicio backend de formularios) como procesador.",
+          processorBody2:
+            "Cuando haya transferencias de datos fuera del EEE, se aplican salvaguardas adecuadas (como cláusulas contractuales tipo) según la documentación del proveedor.",
+          contactTitle: "7. Canal de contacto de privacidad",
+          contactBody: "Para ejercer derechos o realizar consultas de privacidad, utiliza el siguiente formulario.",
+          backHome: "Volver al inicio",
+          form: {
+            nameLabel: "Nombre completo *",
+            emailLabel: "Correo electrónico *",
+            requestTypeLabel: "Tipo de solicitud *",
+            selectOne: "Selecciona una opción...",
+            typeAccess: "Acceso",
+            typeRectification: "Rectificación",
+            typeErasure: "Eliminación",
+            typeRestriction: "Limitación",
+            typePortability: "Portabilidad",
+            typeObjection: "Oposición",
+            typeWithdraw: "Retirar consentimiento",
+            typeQuestion: "Consulta de privacidad",
+            typeOther: "Otro",
+            countryLabel: "País/Región (opcional)",
+            messageLabel: "Detalles de la solicitud *",
+            messagePlaceholder: "Describe tu solicitud para que podamos procesarla correctamente.",
+            consentLabel:
+              "Confirmo que esta solicitud trata sobre mis datos o que estoy autorizado para actuar en nombre del titular.",
+            submitIdle: "Enviar solicitud de privacidad",
+            submitSending: "Enviando...",
+            statusRequired: "Completa nombre, correo, tipo de solicitud y detalles.",
+            statusInvalidEmail: "Ingresa un correo electrónico válido.",
+            statusNoConsent: "Confirma autorización para continuar.",
+            statusEndpoint: "El formulario de privacidad no está configurado correctamente.",
+            statusSending: "Enviando tu solicitud de privacidad...",
+            statusSuccess: "Tu solicitud de privacidad fue enviada.",
+            statusError: "La solicitud falló. Inténtalo de nuevo en breve."
+          }
         },
         de: {
           metaTitle: "Datenschutz | Creativivid Studio",
-          metaDescription: "Datenschutzdetails für Beratungsanfragen und Follow-up bei Creativivid Studio.",
+          metaDescription:
+            "Datenschutzdetails für Beratungs- und Betroffenenanfragen bei Creativivid Studio, inklusive Verarbeiter- und Transferhinweisen.",
           title: "Datenschutz",
           intro:
-            "Diese Richtlinie beschreibt, wie Creativivid Studio personenbezogene Daten verarbeitet, die über das Beratungsformular dieser Website übermittelt werden.",
+            "Diese Richtlinie beschreibt, wie Creativivid Studio personenbezogene Daten verarbeitet, die über Beratungs- und Betroffenenanfragen auf dieser Website übermittelt werden.",
           purposeTitle: "1. Zweck der Datenverarbeitung",
           purposeBody:
-            "Wir erfassen Kontakt- und Projektdaten, um deine Anfrage zu prüfen, zu antworten und mögliche Zusammenarbeit zu besprechen.",
+            "Wir verarbeiten übermittelte Informationen zur Bearbeitung von Anfragen, zur Rückmeldung, zur Bewertung möglicher Zusammenarbeit und zur Bearbeitung von Betroffenenrechten.",
           dataTitle: "2. Welche Daten wir verarbeiten",
-          dataLine1: "Name und E-Mail-Adresse",
-          dataLine2: "Restaurant-/Markenangaben und Standortdaten",
-          dataLine3: "Menüsituation, Kollaborationsniveau, Zeitrahmen und Projektnachricht",
+          dataLine1: "Von dir bereitgestellte Kontaktdaten (z. B. Name und E-Mail-Adresse)",
+          dataLine2: "Restaurant-/Markenangaben sowie optionale Standort- oder Projektkontextdaten",
+          dataLine3: "Menüsituation, Kollaborationsniveau, Zeitrahmen und optionale Nachrichtenfelder",
+          dataLine4: "Details zu Betroffenenanfragen aus dem Datenschutzformular",
           legalTitle: "3. Rechtsgrundlage",
           legalBody:
-            "Die Datenverarbeitung erfolgt auf Basis deiner ausdrücklichen Einwilligung beim Absenden des Formulars.",
+            "Beratungsdaten werden auf Grundlage der Einwilligung verarbeitet. Betroffenenanfragen werden zur Erfüllung gesetzlicher Datenschutzpflichten verarbeitet.",
           retentionTitle: "4. Aufbewahrung",
           retentionBody:
-            "Wir speichern Anfragedaten nur so lange, wie sie für Beratung und Follow-up erforderlich sind. Wenn keine Zusammenarbeit zustande kommt, werden Daten innerhalb eines angemessenen Zeitraums gelöscht, sofern keine gesetzlichen Pflichten entgegenstehen.",
+            "Wir speichern Daten nur so lange, wie es für Anfragebearbeitung, Follow-up und rechtliche Pflichten erforderlich ist. Kommt keine Zusammenarbeit zustande, werden Daten innerhalb eines angemessenen Zeitraums gelöscht, sofern keine Aufbewahrungspflichten bestehen.",
           rightsTitle: "5. Deine Rechte",
-          rightsPrefix:
-            "Du kannst Auskunft, Berichtigung, Löschung oder Einschränkung deiner personenbezogenen Daten anfordern unter ",
-          rightsSuffix: ".",
-          processorTitle: "6. Externer Verarbeiter",
-          processorBody:
-            "Formularanfragen können über Formspree (Formular-Backend-Service) übermittelt werden. Deren Verarbeitung richtet sich nach den eigenen Datenschutz- und Sicherheitsrichtlinien.",
-          contactTitle: "7. Kontakt",
-          contactPrefix: "Bei Datenschutzfragen schreibe an ",
-          contactSuffix: ".",
-          backHome: "Zurück zur Startseite"
+          rightsBody:
+            "Du kannst je nach Anwendbarkeit Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit oder Widerspruch verlangen. Eine erteilte Einwilligung kannst du jederzeit widerrufen.",
+          rightsTimeline:
+            "Wir antworten ohne unangemessene Verzögerung und in der Regel innerhalb eines Monats gemäß geltendem Recht.",
+          processorTitle: "6. Externer Verarbeiter und Transfers",
+          processorBody1:
+            "Beratungs- und Datenschutzanfragen können über Formspree (Formular-Backend-Service) als Verarbeiter verarbeitet werden.",
+          processorBody2:
+            "Wenn Daten außerhalb des EWR übertragen werden, werden geeignete Garantien (z. B. Standardvertragsklauseln) gemäß Anbieterdokumentation angewendet.",
+          contactTitle: "7. Datenschutz-Kontaktkanal",
+          contactBody: "Um Datenschutzrechte auszuüben oder Fragen zu stellen, nutze bitte das folgende Formular.",
+          backHome: "Zurück zur Startseite",
+          form: {
+            nameLabel: "Vollständiger Name *",
+            emailLabel: "E-Mail *",
+            requestTypeLabel: "Anfragetyp *",
+            selectOne: "Bitte auswählen...",
+            typeAccess: "Auskunft",
+            typeRectification: "Berichtigung",
+            typeErasure: "Löschung",
+            typeRestriction: "Einschränkung",
+            typePortability: "Datenübertragbarkeit",
+            typeObjection: "Widerspruch",
+            typeWithdraw: "Einwilligung widerrufen",
+            typeQuestion: "Datenschutzfrage",
+            typeOther: "Sonstiges",
+            countryLabel: "Land/Region (optional)",
+            messageLabel: "Anfragedetails *",
+            messagePlaceholder: "Beschreibe deine Anfrage, damit wir sie korrekt bearbeiten können.",
+            consentLabel:
+              "Ich bestätige, dass diese Anfrage meine Daten betrifft oder dass ich zur Vertretung der betroffenen Person berechtigt bin.",
+            submitIdle: "Datenschutzanfrage senden",
+            submitSending: "Wird gesendet...",
+            statusRequired: "Bitte Name, E-Mail, Anfragetyp und Details ausfüllen.",
+            statusInvalidEmail: "Bitte eine gültige E-Mail-Adresse eingeben.",
+            statusNoConsent: "Bitte Berechtigung bestätigen.",
+            statusEndpoint: "Datenschutzformular ist nicht korrekt konfiguriert.",
+            statusSending: "Deine Datenschutzanfrage wird gesendet...",
+            statusSuccess: "Deine Datenschutzanfrage wurde übermittelt.",
+            statusError: "Anfrage fehlgeschlagen. Bitte versuche es in Kürze erneut."
+          }
         }
       };
 
@@ -260,25 +506,139 @@
       const locale = readLocaleFromUrl() ?? readLocaleFromStorage() ?? readLocaleFromNavigator() ?? DEFAULT_LOCALE;
       const content = PRIVACY_CONTENT_BY_LOCALE[locale] ?? PRIVACY_CONTENT_BY_LOCALE[DEFAULT_LOCALE];
 
+      const isEndpointConfigured = () =>
+        PRIVACY_FORM_ENDPOINT && /^https:\/\//.test(PRIVACY_FORM_ENDPOINT) && !PRIVACY_FORM_ENDPOINT.includes("REPLACE");
+
+      const setStatus = (message, type = "") => {
+        const status = document.getElementById("privacy-form-status");
+        if (!status) return;
+        status.textContent = message;
+        status.classList.remove("error", "success");
+        if (type) status.classList.add(type);
+      };
+
+      const applyTranslations = () => {
+        document.documentElement.lang = locale;
+        document.title = content.metaTitle;
+        const description = document.querySelector('meta[name="description"]');
+        if (description) description.setAttribute("content", content.metaDescription);
+
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const path = node.getAttribute("data-i18n");
+          if (!path) return;
+          const parts = path.split(".");
+          let value = content;
+          for (const part of parts) {
+            if (!value || typeof value !== "object") {
+              value = "";
+              break;
+            }
+            value = value[part];
+          }
+          if (typeof value === "string") node.textContent = value;
+        });
+
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+          const path = node.getAttribute("data-i18n-placeholder");
+          if (!path) return;
+          const parts = path.split(".");
+          let value = content;
+          for (const part of parts) {
+            if (!value || typeof value !== "object") {
+              value = "";
+              break;
+            }
+            value = value[part];
+          }
+          if (typeof value === "string" && "placeholder" in node) node.placeholder = value;
+        });
+
+        const backHome = document.getElementById("back-home");
+        if (backHome) backHome.href = `/?lang=${encodeURIComponent(locale)}`;
+      };
+
+      const setupPrivacyForm = () => {
+        const form = document.getElementById("privacy-request-form");
+        const submitButton = document.getElementById("privacy-submit");
+        if (!(form instanceof HTMLFormElement) || !(submitButton instanceof HTMLButtonElement)) return;
+        if (form.dataset.bound === "true") return;
+        form.dataset.bound = "true";
+
+        const ui = content.form;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const data = new FormData(form);
+          const payload = {
+            channel: "privacy_request",
+            locale,
+            name: String(data.get("name") ?? "").trim(),
+            email: String(data.get("email") ?? "").trim(),
+            request_type: String(data.get("request_type") ?? "").trim(),
+            country_region: String(data.get("country_region") ?? "").trim(),
+            message: String(data.get("message") ?? "").trim(),
+            consent: data.get("consent") === "on",
+            source_page: window.location.href
+          };
+
+          if (!payload.name || !payload.email || !payload.request_type || !payload.message) {
+            setStatus(ui.statusRequired, "error");
+            return;
+          }
+          if (!emailRegex.test(payload.email)) {
+            setStatus(ui.statusInvalidEmail, "error");
+            return;
+          }
+          if (!payload.consent) {
+            setStatus(ui.statusNoConsent, "error");
+            return;
+          }
+          if (!isEndpointConfigured()) {
+            setStatus(ui.statusEndpoint, "error");
+            return;
+          }
+
+          submitButton.disabled = true;
+          submitButton.textContent = ui.submitSending;
+          setStatus(ui.statusSending);
+          const start = performance.now();
+
+          try {
+            const response = await fetch(PRIVACY_FORM_ENDPOINT, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+              },
+              body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+            const elapsed = performance.now() - start;
+            const remaining = Math.max(0, MIN_SUBMIT_MS - elapsed);
+            if (remaining > 0) await new Promise((resolve) => window.setTimeout(resolve, remaining));
+
+            form.reset();
+            setStatus(ui.statusSuccess, "success");
+          } catch {
+            setStatus(ui.statusError, "error");
+          } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = ui.submitIdle;
+          }
+        });
+      };
+
       try {
         window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
       } catch {
         // ignore storage failures
       }
 
-      document.documentElement.lang = locale;
-      document.title = content.metaTitle;
-      const description = document.querySelector('meta[name="description"]');
-      if (description) description.setAttribute("content", content.metaDescription);
-
-      document.querySelectorAll("[data-i18n]").forEach((node) => {
-        const key = node.getAttribute("data-i18n");
-        const value = content[key];
-        if (typeof value === "string") node.textContent = value;
-      });
-
-      const backHome = document.getElementById("back-home");
-      if (backHome) backHome.href = `/?lang=${encodeURIComponent(locale)}`;
+      applyTranslations();
+      setupPrivacyForm();
     </script>
   </body>
 </html>
