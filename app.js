@@ -4,6 +4,18 @@ const FORM_ENDPOINT_PLACEHOLDER = "REPLACE_WITH_YOUR_FORM_ID";
 const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
 const LOCALE_STORAGE_KEY = "cv_locale";
+const SCHNITZEL_ASSETS = {
+  poster: "./Schnitzel-int-poster.webp",
+  spriteHq: "./Schnitzel-int-sprite.webp",
+  spriteMd: "./Schnitzel-int-sprite-md.webp"
+};
+const SPRITE_META = {
+  frameWidth: 500,
+  frameHeight: 500,
+  columns: 10,
+  rows: 6,
+  totalFrames: 60
+};
 
 const LANDING_CONTENT_BY_LOCALE = {
   en: {
@@ -43,22 +55,23 @@ const LANDING_CONTENT_BY_LOCALE = {
         {
           title: "Immersive Dish Preview",
           body: "Slow, tactile product viewing designed to create anticipation before ordering.",
-          image:
-            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
+          mediaType: "poster",
+          src: SCHNITZEL_ASSETS.poster,
           alt: "MarryGo dish poster"
         },
         {
           title: "Interactive Motion Layer",
           body: "A fluid interactive preview that reveals depth and detail as guests explore.",
-          image:
-            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
+          mediaType: "spriteSheet",
+          src: SCHNITZEL_ASSETS.spriteHq,
+          spriteMeta: SPRITE_META,
           alt: "MarryGo interactive depth preview"
         },
         {
           title: "Visual Appetite Trigger",
           body: "Real food texture and atmosphere to help guests decide faster with more confidence.",
-          image:
-            "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
+          mediaType: "animatedWebp",
+          src: SCHNITZEL_ASSETS.spriteMd,
           alt: "CafeBrunch dish animation"
         }
       ]
@@ -240,22 +253,23 @@ const LANDING_CONTENT_BY_LOCALE = {
         {
           title: "Vista Inmersiva del Plato",
           body: "Exploracion visual tactil y pausada para crear anticipacion antes de ordenar.",
-          image:
-            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
+          mediaType: "poster",
+          src: SCHNITZEL_ASSETS.poster,
           alt: "Vista del plato MarryGo"
         },
         {
           title: "Capa de Movimiento Interactivo",
           body: "Vista interactiva fluida que revela profundidad y detalle mientras se explora.",
-          image:
-            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
+          mediaType: "spriteSheet",
+          src: SCHNITZEL_ASSETS.spriteHq,
+          spriteMeta: SPRITE_META,
           alt: "Vista interactiva de profundidad MarryGo"
         },
         {
           title: "Disparador Visual de Apetito",
           body: "Textura real y ambiente visual para decidir más rápido y con mayor seguridad.",
-          image:
-            "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
+          mediaType: "animatedWebp",
+          src: SCHNITZEL_ASSETS.spriteMd,
           alt: "Animacion del plato CafeBrunch"
         }
       ]
@@ -437,22 +451,23 @@ const LANDING_CONTENT_BY_LOCALE = {
         {
           title: "Immersive Dish Preview",
           body: "Langsame, taktile Produktansicht für mehr Vorfreude vor der Bestellung.",
-          image:
-            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
+          mediaType: "poster",
+          src: SCHNITZEL_ASSETS.poster,
           alt: "MarryGo Gerichtsvorschau"
         },
         {
           title: "Interaktive Bewegungsebene",
           body: "Fließende interaktive Vorschau, die Tiefe und Details beim Erkunden sichtbar macht.",
-          image:
-            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
+          mediaType: "spriteSheet",
+          src: SCHNITZEL_ASSETS.spriteHq,
+          spriteMeta: SPRITE_META,
           alt: "MarryGo interaktive Tiefenvorschau"
         },
         {
           title: "Visueller Appetit-Trigger",
           body: "Echte Textur und visuelle Atmosphäre helfen bei schnelleren und sichereren Entscheidungen.",
-          image:
-            "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
+          mediaType: "animatedWebp",
+          src: SCHNITZEL_ASSETS.spriteMd,
           alt: "CafeBrunch Gerichtsanimation"
         }
       ]
@@ -622,7 +637,11 @@ const UI_TEXT_BY_LOCALE = {
       ctaConsult: "Book a Consultation",
       chipLanguages: "9 menu languages",
       chipDietary: "Dietary & allergen tags",
-      chipScroll: "Scroll to rotate"
+      chipScroll: "Drag or swipe to rotate",
+      dragHint: "Drag or swipe to rotate"
+    },
+    media: {
+      loadingAria: "Loading visual asset"
     },
     demos: {
       countLabel: "Showing {visible} of {total} demos",
@@ -711,7 +730,11 @@ const UI_TEXT_BY_LOCALE = {
       ctaConsult: "Reservar una consulta",
       chipLanguages: "9 idiomas de menú",
       chipDietary: "Etiquetas dietarias y de alérgenos",
-      chipScroll: "Desliza para rotar"
+      chipScroll: "Arrastra o desliza para rotar",
+      dragHint: "Arrastra o desliza para rotar"
+    },
+    media: {
+      loadingAria: "Cargando recurso visual"
     },
     demos: {
       countLabel: "Mostrando {visible} de {total} demos",
@@ -801,7 +824,11 @@ const UI_TEXT_BY_LOCALE = {
       ctaConsult: "Beratung buchen",
       chipLanguages: "9 Menüsprachen",
       chipDietary: "Ernährungs- und Allergenhinweise",
-      chipScroll: "Zum Drehen scrollen"
+      chipScroll: "Ziehen oder wischen zum Drehen",
+      dragHint: "Ziehen oder wischen zum Drehen"
+    },
+    media: {
+      loadingAria: "Visuelles Asset wird geladen"
     },
     demos: {
       countLabel: "{visible} von {total} Demos angezeigt",
@@ -894,6 +921,16 @@ let currentLocale = DEFAULT_LOCALE;
 let activeProfile = DEFAULT_PROFILE;
 let manifestEntries = [];
 let manifestStatusState = null;
+const assetStateByKey = new Map(
+  Object.keys(SCHNITZEL_ASSETS).map((key) => [key, "idle"])
+);
+const assetStateSubscribersByKey = new Map(
+  Object.keys(SCHNITZEL_ASSETS).map((key) => [key, new Set()])
+);
+const assetImageCacheByKey = new Map();
+const assetPromiseByKey = new Map();
+let landingAssetPreloadStarted = false;
+let landingMediaDisposers = [];
 
 const htmlEscape = (value) =>
   String(value ?? "")
@@ -915,6 +952,173 @@ const getByPath = (source, path) => {
   }
   return typeof current === "string" ? current : "";
 };
+
+const getSchnitzelAssetKeyBySrc = (src) =>
+  Object.entries(SCHNITZEL_ASSETS).find(([, value]) => value === src)?.[0] ?? "poster";
+
+const setAssetState = (assetKey, state) => {
+  assetStateByKey.set(assetKey, state);
+  const subscribers = assetStateSubscribersByKey.get(assetKey);
+  if (!subscribers) return;
+  subscribers.forEach((callback) => {
+    try {
+      callback(state);
+    } catch {}
+  });
+};
+
+const subscribeToAssetState = (assetKey, callback) => {
+  if (!(callback instanceof Function)) return () => {};
+  if (!assetStateSubscribersByKey.has(assetKey)) {
+    assetStateSubscribersByKey.set(assetKey, new Set());
+  }
+  const subscribers = assetStateSubscribersByKey.get(assetKey);
+  subscribers.add(callback);
+  callback(assetStateByKey.get(assetKey) ?? "idle");
+  return () => subscribers.delete(callback);
+};
+
+const loadLandingAssetImage = async (assetKey) => {
+  if (!(assetKey in SCHNITZEL_ASSETS)) {
+    throw new Error(`Unknown asset key: ${assetKey}`);
+  }
+
+  if (assetImageCacheByKey.has(assetKey)) {
+    setAssetState(assetKey, "loaded");
+    return assetImageCacheByKey.get(assetKey);
+  }
+
+  const pending = assetPromiseByKey.get(assetKey);
+  if (pending) return pending;
+
+  setAssetState(assetKey, "loading");
+  const task = new Promise((resolve, reject) => {
+    const image = new Image();
+    image.decoding = "async";
+    image.onload = () => {
+      assetImageCacheByKey.set(assetKey, image);
+      setAssetState(assetKey, "loaded");
+      resolve(image);
+    };
+    image.onerror = () => {
+      setAssetState(assetKey, "error");
+      reject(new Error(`Failed to load asset: ${assetKey}`));
+    };
+    image.src = SCHNITZEL_ASSETS[assetKey];
+  });
+
+  const wrappedTask = task.finally(() => {
+    assetPromiseByKey.delete(assetKey);
+  });
+
+  assetPromiseByKey.set(assetKey, wrappedTask);
+  return wrappedTask;
+};
+
+const startLandingAssetPreload = () => {
+  if (landingAssetPreloadStarted) return;
+  landingAssetPreloadStarted = true;
+
+  void (async () => {
+    await loadLandingAssetImage("spriteHq").catch(() => {});
+    await loadLandingAssetImage("spriteMd").catch(() => {});
+    await loadLandingAssetImage("poster").catch(() => {});
+  })();
+};
+
+const setMediaStageState = (stage, state) => {
+  if (!stage) return;
+  stage.classList.toggle("is-loading-media", state === "loading");
+  stage.classList.toggle("is-media-ready", state === "ready");
+  stage.classList.toggle("is-media-error", state === "error");
+};
+
+const attachDemoParityDragInteractions = (target, callbacks = {}) => {
+  let pointerId = null;
+  let lastX = 0;
+
+  const onPointerDown = (event) => {
+    pointerId = event.pointerId;
+    lastX = event.clientX;
+    callbacks.onStart?.(event);
+    try {
+      target.setPointerCapture(pointerId);
+    } catch {}
+    target.classList.add("is-dragging");
+    event.preventDefault();
+  };
+
+  const onPointerMove = (event) => {
+    if (pointerId !== event.pointerId) return;
+    const deltaX = event.clientX - lastX;
+    lastX = event.clientX;
+    callbacks.onMove?.(deltaX, event);
+    event.preventDefault();
+  };
+
+  const onPointerRelease = (event) => {
+    if (pointerId === null || pointerId !== event.pointerId) return;
+    try {
+      target.releasePointerCapture(pointerId);
+    } catch {}
+    pointerId = null;
+    target.classList.remove("is-dragging");
+    callbacks.onEnd?.(event);
+  };
+
+  target.addEventListener("pointerdown", onPointerDown);
+  target.addEventListener("pointermove", onPointerMove);
+  target.addEventListener("pointerup", onPointerRelease);
+  target.addEventListener("pointercancel", onPointerRelease);
+  window.addEventListener("pointerup", onPointerRelease);
+  window.addEventListener("pointercancel", onPointerRelease);
+  target.addEventListener("contextmenu", (event) => event.preventDefault());
+  target.addEventListener("dragstart", (event) => event.preventDefault());
+
+  return () => {
+    target.removeEventListener("pointerdown", onPointerDown);
+    target.removeEventListener("pointermove", onPointerMove);
+    target.removeEventListener("pointerup", onPointerRelease);
+    target.removeEventListener("pointercancel", onPointerRelease);
+    window.removeEventListener("pointerup", onPointerRelease);
+    window.removeEventListener("pointercancel", onPointerRelease);
+    target.classList.remove("is-dragging");
+  };
+};
+
+const animateValue = (from, to, durationMs, onUpdate, isCancelled) =>
+  new Promise((resolve) => {
+    const startAt = performance.now();
+    const easing = (value) =>
+      value < 0.5 ? 2 * value * value : 1 - Math.pow(-2 * value + 2, 2) / 2;
+
+    const step = (now) => {
+      if (isCancelled()) {
+        resolve(false);
+        return;
+      }
+      const elapsed = Math.max(0, now - startAt);
+      const progress = Math.min(1, elapsed / durationMs);
+      const eased = easing(progress);
+      onUpdate(from + (to - from) * eased);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+        return;
+      }
+      resolve(true);
+    };
+
+    window.requestAnimationFrame(step);
+  });
+
+const delayIfActive = (durationMs, isCancelled) =>
+  new Promise((resolve) => {
+    const timer = window.setTimeout(() => resolve(!isCancelled()), durationMs);
+    if (isCancelled()) {
+      window.clearTimeout(timer);
+      resolve(false);
+    }
+  });
 
 const normalizeLocale = (value) => {
   if (!value) return null;
@@ -1159,21 +1363,340 @@ const renderProblemList = () => {
 
 const renderExperience = () => {
   const content = getLandingContent();
+  const ui = getUiText();
   const grid = document.getElementById("experience-grid");
   if (!grid) return;
   grid.innerHTML = content.experience.cards
-    .map(
-      (card) => `
+    .map((card) => {
+      const mediaType = card.mediaType ?? "poster";
+      const mediaKey = getSchnitzelAssetKeyBySrc(card.src);
+      const showHint = mediaType === "spriteSheet";
+      const canvasMarkup =
+        mediaType === "spriteSheet"
+          ? '<canvas class="landing-media-canvas experience-media-canvas" data-experience-media-canvas hidden></canvas>'
+          : "";
+
+      return `
       <article class="experience-card">
-        <img src="${htmlEscape(card.image)}" alt="${htmlEscape(card.alt)}" loading="lazy" />
+        <div class="landing-media-stage experience-media-stage" data-experience-media-stage data-media-type="${htmlEscape(mediaType)}" data-media-key="${htmlEscape(mediaKey)}">
+          <div class="landing-media-loader" role="status" aria-live="polite" aria-label="${htmlEscape(ui.media.loadingAria)}">
+            <span class="landing-media-loader__spinner" aria-hidden="true"></span>
+          </div>
+          <img class="landing-media-fallback experience-media-image" src="${htmlEscape(SCHNITZEL_ASSETS.poster)}" alt="${htmlEscape(card.alt)}" loading="lazy" decoding="async" draggable="false" />
+          ${canvasMarkup}
+          ${showHint ? `<span class="landing-media-drag-hint">${htmlEscape(ui.hero.dragHint)}</span>` : ""}
+        </div>
         <div class="experience-card-body">
           <h3>${htmlEscape(card.title)}</h3>
           <p>${htmlEscape(card.body)}</p>
         </div>
       </article>
-    `
-    )
+    `;
+    })
     .join("");
+};
+
+const teardownLandingMedia = () => {
+  landingMediaDisposers.forEach((dispose) => {
+    try {
+      dispose();
+    } catch {}
+  });
+  landingMediaDisposers = [];
+};
+
+const createImageStageController = ({ stage, imageNode, primaryAssetKey, fallbackAssetKey = "poster" }) => {
+  if (!stage || !(imageNode instanceof HTMLImageElement)) return () => {};
+  let disposed = false;
+  const unsubscribe = subscribeToAssetState(primaryAssetKey, (state) => {
+    if (disposed) return;
+    if (state === "loading") setMediaStageState(stage, "loading");
+  });
+
+  const applyImageSource = (assetKey) => {
+    imageNode.src = SCHNITZEL_ASSETS[assetKey] ?? SCHNITZEL_ASSETS.poster;
+  };
+
+  setMediaStageState(stage, "loading");
+  imageNode.classList.remove("is-hidden");
+  applyImageSource(fallbackAssetKey);
+
+  void loadLandingAssetImage(primaryAssetKey)
+    .then(() => {
+      if (disposed) return;
+      applyImageSource(primaryAssetKey);
+      setMediaStageState(stage, "ready");
+    })
+    .catch(async () => {
+      if (disposed) return;
+      if (primaryAssetKey !== fallbackAssetKey) {
+        try {
+          await loadLandingAssetImage(fallbackAssetKey);
+          if (!disposed) applyImageSource(fallbackAssetKey);
+        } catch {}
+      }
+      if (!disposed) setMediaStageState(stage, "error");
+    });
+
+  return () => {
+    disposed = true;
+    unsubscribe();
+  };
+};
+
+const createSpriteStageController = ({
+  stage,
+  fallbackImage,
+  canvas,
+  hintNode,
+  assetKey,
+  spriteMeta = SPRITE_META,
+  cueEnabled = true
+}) => {
+  if (!stage || !(canvas instanceof HTMLCanvasElement)) return () => {};
+  const context = canvas.getContext("2d", { alpha: true });
+  if (!context) {
+    setMediaStageState(stage, "error");
+    return () => {};
+  }
+
+  let disposed = false;
+  let dragging = false;
+  let hintDismissed = false;
+  let detachDrag = null;
+  let cueTimer = null;
+  let cueToken = 0;
+  const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+  const frameCount = Math.max(
+    2,
+    Math.min(
+      Number(spriteMeta.totalFrames) || SPRITE_META.totalFrames,
+      (Number(spriteMeta.columns) || SPRITE_META.columns) * (Number(spriteMeta.rows) || SPRITE_META.rows)
+    )
+  );
+  const centerFrame = Math.floor(frameCount / 2);
+  const cueOffset = Math.max(4, Math.round(frameCount * 0.18));
+  let frameCursor = centerFrame;
+  const unsubscribe = subscribeToAssetState(assetKey, (state) => {
+    if (disposed) return;
+    if (state === "loading") setMediaStageState(stage, "loading");
+  });
+
+  canvas.width = Number(spriteMeta.frameWidth) || SPRITE_META.frameWidth;
+  canvas.height = Number(spriteMeta.frameHeight) || SPRITE_META.frameHeight;
+
+  const showFallback = () => {
+    if (fallbackImage instanceof HTMLElement) fallbackImage.classList.remove("is-hidden");
+  };
+
+  const hideFallback = () => {
+    if (fallbackImage instanceof HTMLElement) fallbackImage.classList.add("is-hidden");
+  };
+
+  const dismissHint = () => {
+    if (hintDismissed || !(hintNode instanceof HTMLElement)) return;
+    hintDismissed = true;
+    hintNode.classList.add("is-hidden");
+  };
+
+  const clearCue = () => {
+    cueToken += 1;
+    if (cueTimer) {
+      window.clearTimeout(cueTimer);
+      cueTimer = null;
+    }
+  };
+
+  const drawFrame = (spriteImage, rawFrame) => {
+    const frame = ((Math.round(rawFrame) % frameCount) + frameCount) % frameCount;
+    const columns = Number(spriteMeta.columns) || SPRITE_META.columns;
+    const frameWidth = Number(spriteMeta.frameWidth) || SPRITE_META.frameWidth;
+    const frameHeight = Number(spriteMeta.frameHeight) || SPRITE_META.frameHeight;
+    const column = frame % columns;
+    const row = Math.floor(frame / columns);
+    const sx = column * frameWidth;
+    const sy = row * frameHeight;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(spriteImage, sx, sy, frameWidth, frameHeight, 0, 0, canvas.width, canvas.height);
+  };
+
+  const scheduleCue = (spriteImage, delayMs = 900) => {
+    if (disposed || prefersReducedMotion || !cueEnabled) return;
+    clearCue();
+    const token = cueToken;
+    cueTimer = window.setTimeout(() => {
+      if (disposed || dragging || token !== cueToken) return;
+      void runCue(spriteImage, token);
+    }, delayMs);
+  };
+
+  const runCue = async (spriteImage, token) => {
+    const cancelled = () => disposed || dragging || token !== cueToken;
+    const targetFrame = Math.min(frameCount - 1, centerFrame + cueOffset);
+    for (let repeat = 0; repeat < 2; repeat += 1) {
+      const forward = await animateValue(frameCursor, targetFrame, 460, (value) => {
+        frameCursor = value;
+        drawFrame(spriteImage, frameCursor);
+      }, cancelled);
+      if (!forward) return;
+
+      const back = await animateValue(frameCursor, centerFrame, 540, (value) => {
+        frameCursor = value;
+        drawFrame(spriteImage, frameCursor);
+      }, cancelled);
+      if (!back) return;
+
+      const waited = await delayIfActive(160, cancelled);
+      if (!waited) return;
+    }
+
+    dismissHint();
+    cueTimer = window.setTimeout(() => {
+      if (cancelled()) return;
+      void runCue(spriteImage, token);
+    }, 3000);
+  };
+
+  setMediaStageState(stage, "loading");
+  canvas.hidden = true;
+  showFallback();
+
+  void loadLandingAssetImage(assetKey)
+    .then((spriteImage) => {
+      if (disposed) return;
+      frameCursor = centerFrame;
+      drawFrame(spriteImage, frameCursor);
+      canvas.hidden = false;
+      hideFallback();
+      stage.classList.add("is-interactive-ready");
+      setMediaStageState(stage, "ready");
+
+      detachDrag = attachDemoParityDragInteractions(canvas, {
+        onStart: () => {
+          dragging = true;
+          dismissHint();
+          clearCue();
+        },
+        onMove: (deltaX) => {
+          const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches ? 7 : 4;
+          frameCursor += (deltaX / pixelsPerFrame) * -1;
+          drawFrame(spriteImage, frameCursor);
+        },
+        onEnd: () => {
+          dragging = false;
+          scheduleCue(spriteImage, 1100);
+        }
+      });
+
+      scheduleCue(spriteImage, 700);
+    })
+    .catch(() => {
+      if (disposed) return;
+      canvas.hidden = true;
+      showFallback();
+      stage.classList.remove("is-interactive-ready");
+      setMediaStageState(stage, "error");
+    });
+
+  return () => {
+    disposed = true;
+    unsubscribe();
+    clearCue();
+    if (detachDrag) detachDrag();
+    canvas.hidden = true;
+    stage.classList.remove("is-interactive-ready");
+    showFallback();
+  };
+};
+
+const observeStageOnce = (stage, callback) => {
+  if (!("IntersectionObserver" in window)) {
+    callback();
+    return () => {};
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries.some((entry) => entry.isIntersecting);
+      if (!visible) return;
+      observer.disconnect();
+      callback();
+    },
+    {
+      threshold: 0.16,
+      rootMargin: "0px 0px -8% 0px"
+    }
+  );
+
+  observer.observe(stage);
+  return () => observer.disconnect();
+};
+
+const setupHeroMediaStage = () => {
+  const stage = document.querySelector("[data-hero-media-stage]");
+  if (!(stage instanceof HTMLElement)) return;
+  const fallbackImage = stage.querySelector("[data-hero-media-fallback]");
+  const canvas = stage.querySelector("[data-hero-media-canvas]");
+  const hintNode = stage.querySelector("[data-hero-drag-hint]");
+  if (hintNode instanceof HTMLElement) hintNode.classList.remove("is-hidden");
+  const dispose = createSpriteStageController({
+    stage,
+    fallbackImage,
+    canvas,
+    hintNode,
+    assetKey: "spriteHq",
+    spriteMeta: SPRITE_META,
+    cueEnabled: true
+  });
+  landingMediaDisposers.push(dispose);
+};
+
+const setupExperienceMediaStages = () => {
+  const stages = Array.from(document.querySelectorAll("[data-experience-media-stage]"));
+  stages.forEach((stage) => {
+    if (!(stage instanceof HTMLElement)) return;
+    const initStage = () => {
+      const mediaType = stage.dataset.mediaType ?? "poster";
+      const mediaKey = stage.dataset.mediaKey ?? "poster";
+      const imageNode = stage.querySelector(".landing-media-fallback");
+      if (imageNode instanceof HTMLImageElement) imageNode.src = SCHNITZEL_ASSETS.poster;
+
+      if (mediaType === "spriteSheet") {
+        const canvas = stage.querySelector("[data-experience-media-canvas]");
+        const hintNode = stage.querySelector(".landing-media-drag-hint");
+        const dispose = createSpriteStageController({
+          stage,
+          fallbackImage: imageNode,
+          canvas,
+          hintNode,
+          assetKey: mediaKey,
+          spriteMeta: SPRITE_META,
+          cueEnabled: true
+        });
+        landingMediaDisposers.push(dispose);
+        return;
+      }
+
+      const fallbackKey = mediaType === "animatedWebp" ? "poster" : mediaKey;
+      const dispose = createImageStageController({
+        stage,
+        imageNode,
+        primaryAssetKey: mediaKey,
+        fallbackAssetKey: fallbackKey
+      });
+      landingMediaDisposers.push(dispose);
+    };
+
+    const detachObserver = observeStageOnce(stage, initStage);
+    landingMediaDisposers.push(detachObserver);
+  });
+};
+
+const setupLandingMedia = () => {
+  teardownLandingMedia();
+  startLandingAssetPreload();
+  setupHeroMediaStage();
+  setupExperienceMediaStages();
 };
 
 const renderHospitalityLines = () => {
@@ -1645,6 +2168,7 @@ const hydrateLanding = () => {
   renderDeliverables();
   renderPackages();
   renderFaq();
+  setupLandingMedia();
 };
 
 const main = async () => {

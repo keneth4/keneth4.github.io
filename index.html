@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href="./Schnitzel-int-sprite.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="./Schnitzel-int-sprite-md.webp" fetchpriority="high" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -96,12 +98,33 @@
           </div>
 
           <div class="hero-visual reveal" aria-label="Interactive dish preview">
-            <div class="hero-visual-frame">
+            <div class="hero-visual-frame landing-media-stage" data-hero-media-stage>
+              <div
+                class="landing-media-loader"
+                role="status"
+                aria-live="polite"
+                data-i18n-aria-label="media.loadingAria"
+              >
+                <span class="landing-media-loader__spinner" aria-hidden="true"></span>
+              </div>
               <img
-                src="/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp"
-                alt="MarryGo immersive 3D dish preview"
-                loading="eager"
+                class="landing-media-fallback hero-media-fallback"
+                data-hero-media-fallback
+                src="./Schnitzel-int-poster.webp"
+                alt="Schnitzel immersive 3D dish preview"
+                loading="lazy"
+                fetchpriority="low"
               />
+              <canvas
+                class="landing-media-canvas hero-media-canvas"
+                data-hero-media-canvas
+                width="500"
+                height="500"
+                hidden
+              ></canvas>
+              <span class="landing-media-drag-hint hero-media-drag-hint" data-hero-drag-hint data-i18n="hero.dragHint"
+                >Drag or swipe to rotate</span
+              >
               <div class="hero-glow" aria-hidden="true"></div>
             </div>
 
