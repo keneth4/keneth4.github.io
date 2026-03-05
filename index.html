@@ -266,96 +266,133 @@
       </section>
 
       <section id="consultation" class="section section-dark consultation">
-        <div class="container consultation-grid reveal">
-          <div>
+        <div id="consultation-layout" class="container consultation-grid reveal">
+          <div id="consultation-intro">
             <h2 data-content="consultation.heading"></h2>
             <p class="section-intro" data-content="consultation.body"></p>
-            <div class="contact-links">
-              <a id="contact-email-link" href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a>
-              <a
-                id="contact-whatsapp-link"
-                href="https://wa.me/4915257403004"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n="consultation.whatsappLabel"
-              >
-                WhatsApp
-              </a>
-            </div>
           </div>
 
-          <form id="consultation-form" class="consultation-form" novalidate>
-            <label>
-              <span data-i18n="form.nameLabel">Name *</span>
-              <input name="name" type="text" autocomplete="name" required />
-            </label>
+          <div class="consultation-form-wrap" id="consultation-form-wrap">
+            <form id="consultation-form" class="consultation-form" novalidate>
+              <fieldset class="menu-situation-fieldset">
+                <legend data-i18n="form.menuSituationLegend">Tell us a little about your menu</legend>
+                <div class="menu-situation-options">
+                  <label class="menu-situation-option">
+                    <input name="menu_situation" type="radio" value="paper_or_pdf" required />
+                    <span data-i18n="form.menuSituationPaperPdf">We currently use a paper or PDF menu</span>
+                  </label>
+                  <label class="menu-situation-option">
+                    <input name="menu_situation" type="radio" value="website_menu" required />
+                    <span data-i18n="form.menuSituationWebsite">We already have a website menu</span>
+                  </label>
+                  <label class="menu-situation-option">
+                    <input name="menu_situation" type="radio" value="completely_new" required />
+                    <span data-i18n="form.menuSituationNew">We want something completely new</span>
+                  </label>
+                </div>
+              </fieldset>
 
-            <label>
-              <span data-i18n="form.emailLabel">Email *</span>
-              <input name="email" type="email" autocomplete="email" required />
-            </label>
+              <div class="consultation-form-stage">
+                <p class="consultation-form-stage-title" data-i18n="form.contactStageTitle">Contact Details</p>
+                <label>
+                  <span data-i18n="form.restaurantBrandLabel">Restaurant / Brand *</span>
+                  <input name="restaurant_brand" type="text" autocomplete="organization" required />
+                </label>
+                <label>
+                  <span data-i18n="form.contactNameLabel">Contact Name *</span>
+                  <input name="contact_name" type="text" autocomplete="name" required />
+                </label>
+                <label>
+                  <span data-i18n="form.contactEmailLabel">Email *</span>
+                  <input name="contact_email" type="email" autocomplete="email" required />
+                </label>
+              </div>
 
-            <label>
-              <span data-i18n="form.restaurantLabel">Restaurant / Brand</span>
-              <input name="restaurant" type="text" autocomplete="organization" />
-            </label>
+              <details class="consultation-form-optional">
+                <summary data-i18n="form.optionalDetailsSummary">Optional details (helps us prepare the consultation)</summary>
+                <div class="consultation-form-optional-grid">
+                  <label>
+                    <span data-i18n="form.cityCountryLabel">City / Country</span>
+                    <input name="city_country" type="text" autocomplete="address-level2" />
+                  </label>
+                  <label>
+                    <span data-i18n="form.estimatedMenuSizeLabel">Estimated Menu Size</span>
+                    <select name="estimated_menu_size">
+                      <option value="" data-i18n="form.selectOneOption">Select one...</option>
+                      <option value="1_10" data-i18n="form.estimatedMenuSize1to10">1-10 dishes</option>
+                      <option value="10_25" data-i18n="form.estimatedMenuSize10to25">10-25 dishes</option>
+                      <option value="25_plus" data-i18n="form.estimatedMenuSize25plus">25+ dishes</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span data-i18n="form.collaborationLevelLabel">Which collaboration level best fits your needs?</span>
+                    <select name="collaboration_level">
+                      <option value="" data-i18n="form.selectOneOption">Select one...</option>
+                      <option value="starter" data-i18n="form.collaborationLevelStarter">Starter - Pilot Experience</option>
+                      <option value="premium" data-i18n="form.collaborationLevelPremium">Premium - Brand Elevation</option>
+                      <option value="signature" data-i18n="form.collaborationLevelSignature">Signature - Full Immersive Concept</option>
+                      <option value="not_sure" data-i18n="form.collaborationLevelNotSure">Not sure yet - let's discuss</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span data-i18n="form.timelineLabel">When are you hoping to launch or update your menu?</span>
+                    <select name="timeline">
+                      <option value="" data-i18n="form.selectOneOption">Select one...</option>
+                      <option value="asap" data-i18n="form.timelineAsapOption">As soon as possible</option>
+                      <option value="1_2_months" data-i18n="form.timelineSoonOption">Within 1-2 months</option>
+                      <option value="future_exploring" data-i18n="form.timelineExploringOption">Exploring for the future</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span data-i18n="form.messageLabel">Anything you'd like us to know about your restaurant or project?</span>
+                    <textarea
+                      name="message"
+                      rows="4"
+                      placeholder="Tell us about your concept, menu goals, or context."
+                      data-i18n-placeholder="form.messagePlaceholder"
+                    ></textarea>
+                  </label>
+                </div>
+              </details>
 
-            <label>
-              <span data-i18n="form.cityCountryLabel">City / Country</span>
-              <input name="city_country" type="text" autocomplete="address-level2" />
-            </label>
-
-            <label>
-              <span data-i18n="form.budgetLabel">Budget Range</span>
-              <select name="budget_range">
-                <option value="" data-i18n="form.budgetSelectOption">Select one...</option>
-                <option value="starter" data-i18n="form.budgetStarterOption">Starter (€1,500 - €2,000)</option>
-                <option value="premium" data-i18n="form.budgetPremiumOption">Premium (€3,000 - €4,500)</option>
-                <option value="signature" data-i18n="form.budgetSignatureOption">Signature (€6,000+)</option>
-                <option value="custom" data-i18n="form.budgetCustomOption">Custom scope / Not sure yet</option>
-              </select>
-            </label>
-
-            <label>
-              <span data-i18n="form.timelineLabel">Timeline</span>
-              <select name="timeline">
-                <option value="" data-i18n="form.timelineSelectOption">Select one...</option>
-                <option value="asap" data-i18n="form.timelineAsapOption">As soon as possible</option>
-                <option value="1_2_months" data-i18n="form.timelineSoonOption">In 1-2 months</option>
-                <option value="3_plus_months" data-i18n="form.timelineLaterOption">In 3+ months</option>
-                <option value="exploring" data-i18n="form.timelineExploringOption">Just exploring</option>
-              </select>
-            </label>
-
-            <label>
-              <span data-i18n="form.detailsLabel">Project Details *</span>
-              <textarea
-                name="message"
-                rows="5"
-                required
-                placeholder="Tell us about your concept, number of menu items, and goals."
-                data-i18n-placeholder="form.detailsPlaceholder"
-              ></textarea>
-            </label>
-
-            <label class="consent-row">
-              <input name="consent" type="checkbox" required />
-              <span>
-                <span data-i18n="form.consentPrefix">
-                  I consent to Creativivid Studio processing my information to respond to this inquiry and understand the
+              <label class="consent-row">
+                <input name="consent" type="checkbox" required />
+                <span>
+                  <span data-i18n="form.consentPrefix">
+                    I consent to Creativivid Studio processing my information to respond to this inquiry and understand the
+                  </span>
+                  <a href="/privacy.html" target="_blank" rel="noopener noreferrer" data-privacy-link data-i18n="form.privacyLinkText">
+                    privacy policy
+                  </a>
+                  <span data-i18n="form.consentSuffix">.</span>
                 </span>
-                <a href="/privacy.html" target="_blank" rel="noopener noreferrer" data-privacy-link data-i18n="form.privacyLinkText">
-                  privacy policy
-                </a>
-                <span data-i18n="form.consentSuffix">.</span>
-              </span>
-            </label>
+              </label>
 
-            <button id="consultation-submit" type="submit" class="btn btn-primary" data-i18n="form.submitIdle">
-              Send Consultation Request
-            </button>
-            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-          </form>
+              <button id="consultation-submit" type="submit" class="btn btn-primary" data-i18n="form.submitIdle">
+                Send Consultation Request
+              </button>
+              <p class="form-reassurance" data-i18n="form.reassuranceText">No obligation - just a short conversation about possibilities.</p>
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <aside id="consultation-success-panel" class="consultation-success-panel" hidden>
+            <div class="consultation-success-stack">
+              <h2 id="consultation-success-heading" data-i18n="form.successHeadline">Your consultation request has been received.</h2>
+              <p data-i18n="form.successBodyLine1">Thank you for reaching out to Creativivid Studio.</p>
+              <p data-i18n="form.successBodyLine2">
+                We'll review your message and respond shortly to discuss how we can elevate your restaurant's menu experience.
+              </p>
+              <p class="consultation-success-footnote" data-i18n="form.successFootnote">Typical response time: within 24 hours.</p>
+              <div class="consultation-success-divider" aria-hidden="true"></div>
+              <p class="consultation-success-cta-copy" data-i18n="form.successDemoText">
+                While you wait, explore one of our interactive demos.
+              </p>
+              <a id="consultation-success-demo-cta" class="btn btn-primary" href="#demos" data-i18n="form.successDemoCta">
+                View Interactive Demo
+              </a>
+            </div>
+          </aside>
         </div>
       </section>
     </main>

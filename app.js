@@ -1,5 +1,6 @@
 const FORM_ENDPOINT = "https://formspree.io/f/xjgabebv";
 const FORM_ENDPOINT_PLACEHOLDER = "REPLACE_WITH_YOUR_FORM_ID";
+const CONSULTATION_MIN_LOADING_MS = 1200;
 
 const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
@@ -681,38 +682,54 @@ const UI_TEXT_BY_LOCALE = {
       whatsappLabel: "WhatsApp"
     },
     form: {
-      nameLabel: "Name *",
-      emailLabel: "Email *",
-      restaurantLabel: "Restaurant / Brand",
+      menuSituationLegend: "Tell us a little about your menu",
+      menuSituationPaperPdf: "We currently use a paper or PDF menu",
+      menuSituationWebsite: "We already have a website menu",
+      menuSituationNew: "We want something completely new",
+      contactStageTitle: "Contact Details",
+      restaurantBrandLabel: "Restaurant / Brand *",
+      contactNameLabel: "Contact Name *",
+      contactEmailLabel: "Email *",
+      optionalDetailsSummary: "Optional details (helps us prepare the consultation)",
       cityCountryLabel: "City / Country",
-      budgetLabel: "Budget Range",
-      budgetSelectOption: "Select one...",
-      budgetStarterOption: "Starter (€1,500 - €2,000)",
-      budgetPremiumOption: "Premium (€3,000 - €4,500)",
-      budgetSignatureOption: "Signature (€6,000+)",
-      budgetCustomOption: "Custom scope / Not sure yet",
-      timelineLabel: "Timeline",
-      timelineSelectOption: "Select one...",
+      estimatedMenuSizeLabel: "Estimated Menu Size",
+      estimatedMenuSize1to10: "1-10 dishes",
+      estimatedMenuSize10to25: "10-25 dishes",
+      estimatedMenuSize25plus: "25+ dishes",
+      collaborationLevelLabel: "Which collaboration level best fits your needs?",
+      collaborationLevelStarter: "Starter - Pilot Experience",
+      collaborationLevelPremium: "Premium - Brand Elevation",
+      collaborationLevelSignature: "Signature - Full Immersive Concept",
+      collaborationLevelNotSure: "Not sure yet - let's discuss",
+      timelineLabel: "When are you hoping to launch or update your menu?",
+      selectOneOption: "Select one...",
       timelineAsapOption: "As soon as possible",
-      timelineSoonOption: "In 1-2 months",
-      timelineLaterOption: "In 3+ months",
-      timelineExploringOption: "Just exploring",
-      detailsLabel: "Project Details *",
-      detailsPlaceholder: "Tell us about your concept, number of menu items, and goals.",
+      timelineSoonOption: "Within 1-2 months",
+      timelineExploringOption: "Exploring for the future",
+      messageLabel: "Anything you'd like us to know about your restaurant or project?",
+      messagePlaceholder: "Tell us about your concept, menu goals, or context.",
       consentPrefix:
         "I consent to Creativivid Studio processing my information to respond to this inquiry and understand the ",
       privacyLinkText: "privacy policy",
       consentSuffix: ".",
       submitIdle: "Send Consultation Request",
       submitSending: "Sending...",
+      reassuranceText: "No obligation - just a short conversation about possibilities.",
       statusSending: "Sending your request...",
-      statusRequired: "Please complete Name, Email, and Project Details.",
+      statusRequired: "Please complete menu situation, restaurant/brand, contact name, and email.",
       statusInvalidEmail: "Please provide a valid email address.",
       statusNoConsent: "Please provide consent to continue.",
       statusEndpoint:
         "Consultation form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
-      statusSuccess: "Thank you. Your consultation request has been sent.",
-      statusError: "Request failed. Please email us directly at k.ent@hotmail.com."
+      statusSuccess: "Thank you. Your consultation request has been received.",
+      statusError: "Request failed. Please email us directly at k.ent@hotmail.com.",
+      successHeadline: "Your consultation request has been received.",
+      successBodyLine1: "Thank you for reaching out to Creativivid Studio.",
+      successBodyLine2:
+        "We'll review your message and respond shortly to discuss how we can elevate your restaurant's menu experience.",
+      successFootnote: "Typical response time: within 24 hours.",
+      successDemoText: "While you wait, explore one of our interactive demos.",
+      successDemoCta: "View Interactive Demo"
     },
     footer: {
       copyrightBody: "Creativivid Studio. All rights reserved.",
@@ -775,38 +792,54 @@ const UI_TEXT_BY_LOCALE = {
       whatsappLabel: "WhatsApp"
     },
     form: {
-      nameLabel: "Nombre *",
-      emailLabel: "Correo electrónico *",
-      restaurantLabel: "Restaurante / Marca",
-      cityCountryLabel: "Ciudad / Pais",
-      budgetLabel: "Rango de presupuesto",
-      budgetSelectOption: "Selecciona una opcion...",
-      budgetStarterOption: "Starter (€1,500 - €2,000)",
-      budgetPremiumOption: "Premium (€3,000 - €4,500)",
-      budgetSignatureOption: "Signature (€6,000+)",
-      budgetCustomOption: "Alcance personalizado / Aun no estoy seguro",
-      timelineLabel: "Tiempo estimado",
-      timelineSelectOption: "Selecciona una opcion...",
+      menuSituationLegend: "Cuéntanos un poco sobre tu menú",
+      menuSituationPaperPdf: "Actualmente usamos un menú en papel o PDF",
+      menuSituationWebsite: "Ya tenemos un menú en nuestra web",
+      menuSituationNew: "Queremos algo completamente nuevo",
+      contactStageTitle: "Datos de contacto",
+      restaurantBrandLabel: "Restaurante / Marca *",
+      contactNameLabel: "Nombre de contacto *",
+      contactEmailLabel: "Correo electrónico *",
+      optionalDetailsSummary: "Detalles opcionales (nos ayudan a preparar la consulta)",
+      cityCountryLabel: "Ciudad / País",
+      estimatedMenuSizeLabel: "Tamaño estimado del menú",
+      estimatedMenuSize1to10: "1-10 platos",
+      estimatedMenuSize10to25: "10-25 platos",
+      estimatedMenuSize25plus: "25+ platos",
+      collaborationLevelLabel: "¿Qué nivel de colaboración se ajusta mejor a tus necesidades?",
+      collaborationLevelStarter: "Starter - Experiencia piloto",
+      collaborationLevelPremium: "Premium - Elevación de marca",
+      collaborationLevelSignature: "Signature - Concepto inmersivo completo",
+      collaborationLevelNotSure: "Aún no estoy seguro - mejor lo conversamos",
+      timelineLabel: "¿Cuándo esperas lanzar o actualizar tu menú?",
+      selectOneOption: "Selecciona una opción...",
       timelineAsapOption: "Lo antes posible",
-      timelineSoonOption: "En 1-2 meses",
-      timelineLaterOption: "En 3+ meses",
-      timelineExploringOption: "Solo explorando",
-      detailsLabel: "Detalles del proyecto *",
-      detailsPlaceholder: "Cuéntanos sobre tu concepto, número de items y objetivos.",
+      timelineSoonOption: "Dentro de 1-2 meses",
+      timelineExploringOption: "Explorando para más adelante",
+      messageLabel: "¿Hay algo que quieras contarnos sobre tu restaurante o proyecto?",
+      messagePlaceholder: "Cuéntanos sobre tu concepto, objetivos del menú o contexto.",
       consentPrefix:
         "Acepto que Creativivid Studio procese mi información para responder esta consulta y entiendo la ",
       privacyLinkText: "política de privacidad",
       consentSuffix: ".",
       submitIdle: "Enviar solicitud de consulta",
       submitSending: "Enviando...",
+      reassuranceText: "Sin compromiso: solo una breve conversación sobre posibilidades.",
       statusSending: "Enviando tu solicitud...",
-      statusRequired: "Completa Nombre, Correo electrónico y Detalles del proyecto.",
+      statusRequired: "Completa situación del menú, restaurante/marca, nombre de contacto y correo electrónico.",
       statusInvalidEmail: "Ingresa un correo electrónico válido.",
       statusNoConsent: "Debes otorgar consentimiento para continuar.",
       statusEndpoint:
         "El formulario aún no está conectado. Reemplaza FORM_ENDPOINT en app.js con tu endpoint de Formspree.",
-      statusSuccess: "Gracias. Tu solicitud de consulta fue enviada.",
-      statusError: "La solicitud fallo. Escribenos directamente a k.ent@hotmail.com."
+      statusSuccess: "Gracias. Tu solicitud de consulta fue recibida.",
+      statusError: "La solicitud falló. Escríbenos directamente a k.ent@hotmail.com.",
+      successHeadline: "Tu solicitud de consulta ha sido recibida.",
+      successBodyLine1: "Gracias por contactar a Creativivid Studio.",
+      successBodyLine2:
+        "Revisaremos tu mensaje y te responderemos pronto para hablar sobre cómo elevar la experiencia del menú de tu restaurante.",
+      successFootnote: "Tiempo de respuesta habitual: dentro de 24 horas.",
+      successDemoText: "Mientras esperas, explora una de nuestras demos interactivas.",
+      successDemoCta: "Ver demo interactiva"
     },
     footer: {
       copyrightBody: "Creativivid Studio. Todos los derechos reservados.",
@@ -869,38 +902,54 @@ const UI_TEXT_BY_LOCALE = {
       whatsappLabel: "WhatsApp"
     },
     form: {
-      nameLabel: "Name *",
-      emailLabel: "E-Mail *",
-      restaurantLabel: "Restaurant / Marke",
+      menuSituationLegend: "Erzähl uns kurz etwas über dein Menü",
+      menuSituationPaperPdf: "Wir nutzen aktuell ein Papier- oder PDF-Menü",
+      menuSituationWebsite: "Wir haben bereits ein Menü auf unserer Website",
+      menuSituationNew: "Wir möchten etwas komplett Neues",
+      contactStageTitle: "Kontaktdaten",
+      restaurantBrandLabel: "Restaurant / Marke *",
+      contactNameLabel: "Ansprechperson *",
+      contactEmailLabel: "E-Mail *",
+      optionalDetailsSummary: "Optionale Details (helfen uns bei der Vorbereitung)",
       cityCountryLabel: "Stadt / Land",
-      budgetLabel: "Budgetrahmen",
-      budgetSelectOption: "Bitte auswählen...",
-      budgetStarterOption: "Starter (€1,500 - €2,000)",
-      budgetPremiumOption: "Premium (€3,000 - €4,500)",
-      budgetSignatureOption: "Signature (€6,000+)",
-      budgetCustomOption: "Individueller Umfang / Noch unsicher",
-      timelineLabel: "Zeitrahmen",
-      timelineSelectOption: "Bitte auswählen...",
+      estimatedMenuSizeLabel: "Geschätzte Menügröße",
+      estimatedMenuSize1to10: "1-10 Gerichte",
+      estimatedMenuSize10to25: "10-25 Gerichte",
+      estimatedMenuSize25plus: "25+ Gerichte",
+      collaborationLevelLabel: "Welches Kollaborationsniveau passt am besten zu euren Anforderungen?",
+      collaborationLevelStarter: "Starter - Pilot Experience",
+      collaborationLevelPremium: "Premium - Brand Elevation",
+      collaborationLevelSignature: "Signature - Full Immersive Concept",
+      collaborationLevelNotSure: "Noch nicht sicher - lasst uns sprechen",
+      timelineLabel: "Wann möchtet ihr euer Menü launchen oder aktualisieren?",
+      selectOneOption: "Bitte auswählen...",
       timelineAsapOption: "So schnell wie möglich",
-      timelineSoonOption: "In 1-2 Monaten",
-      timelineLaterOption: "In 3+ Monaten",
-      timelineExploringOption: "Erst einmal orientieren",
-      detailsLabel: "Projektdetails *",
-      detailsPlaceholder: "Beschreibe Konzept, Anzahl der Menü-Items und Ziele.",
+      timelineSoonOption: "Innerhalb von 1-2 Monaten",
+      timelineExploringOption: "Erst einmal für später orientieren",
+      messageLabel: "Gibt es etwas, das wir über euer Restaurant oder Projekt wissen sollten?",
+      messagePlaceholder: "Beschreibe kurz Konzept, Menüziele oder Kontext.",
       consentPrefix:
         "Ich stimme zu, dass Creativivid Studio meine Daten zur Beantwortung dieser Anfrage verarbeitet und die ",
       privacyLinkText: "Datenschutzerklärung",
       consentSuffix: " verstehe.",
       submitIdle: "Beratungsanfrage senden",
       submitSending: "Wird gesendet...",
+      reassuranceText: "Unverbindlich - nur ein kurzes Gespräch über Möglichkeiten.",
       statusSending: "Deine Anfrage wird gesendet...",
-      statusRequired: "Bitte Name, E-Mail und Projektdetails ausfüllen.",
+      statusRequired: "Bitte Menüsituation, Restaurant/Marke, Ansprechperson und E-Mail ausfüllen.",
       statusInvalidEmail: "Bitte eine gültige E-Mail-Adresse eingeben.",
       statusNoConsent: "Bitte Zustimmung erteilen, um fortzufahren.",
       statusEndpoint:
         "Das Formular ist noch nicht verbunden. Ersetze FORM_ENDPOINT in app.js durch deinen Formspree-Endpoint.",
-      statusSuccess: "Danke. Deine Beratungsanfrage wurde gesendet.",
-      statusError: "Anfrage fehlgeschlagen. Bitte direkt an k.ent@hotmail.com schreiben."
+      statusSuccess: "Danke. Deine Beratungsanfrage wurde erhalten.",
+      statusError: "Anfrage fehlgeschlagen. Bitte direkt an k.ent@hotmail.com schreiben.",
+      successHeadline: "Deine Beratungsanfrage ist eingegangen.",
+      successBodyLine1: "Danke, dass du Creativivid Studio kontaktiert hast.",
+      successBodyLine2:
+        "Wir prüfen deine Nachricht und melden uns zeitnah, um zu besprechen, wie wir das Menüerlebnis deines Restaurants aufwerten können.",
+      successFootnote: "Typische Antwortzeit: innerhalb von 24 Stunden.",
+      successDemoText: "Während du wartest, sieh dir eine unserer interaktiven Demos an.",
+      successDemoCta: "Interaktive Demo ansehen"
     },
     footer: {
       copyrightBody: "Creativivid Studio. Alle Rechte vorbehalten.",
@@ -2041,21 +2090,24 @@ const setupSearch = () => {
   input.addEventListener("input", () => renderDemosFiltered());
 };
 
-const setupHeroDemoCta = () => {
-  const trigger = document.getElementById("hero-demo-cta");
-  if (!trigger) return;
-  if (trigger.dataset.demoBound === "true") return;
-
-  trigger.dataset.demoBound = "true";
-  trigger.addEventListener("click", () => {
-    window.setTimeout(() => {
-      const featured = document.querySelector('[data-featured-demo="true"]');
-      if (!featured) return;
-      featured.classList.add("is-highlight");
-      window.setTimeout(() => featured.classList.remove("is-highlight"), 1600);
-    }, 220);
-  });
+const highlightFeaturedDemoCard = () => {
+  window.setTimeout(() => {
+    const featured = document.querySelector('[data-featured-demo="true"]');
+    if (!featured) return;
+    featured.classList.add("is-highlight");
+    window.setTimeout(() => featured.classList.remove("is-highlight"), 1600);
+  }, 220);
 };
+
+const bindDemoHighlightCta = (elementId, boundKey = "demoBound") => {
+  const trigger = document.getElementById(elementId);
+  if (!trigger) return;
+  if (trigger.dataset[boundKey] === "true") return;
+  trigger.dataset[boundKey] = "true";
+  trigger.addEventListener("click", highlightFeaturedDemoCard);
+};
+
+const setupHeroDemoCta = () => bindDemoHighlightCta("hero-demo-cta", "demoBound");
 
 const fetchJson = async (url) => {
   const response = await fetch(url, { cache: "no-store" });
@@ -2093,8 +2145,6 @@ const loadManifest = async () => {
   }
 };
 
-const normalizePhoneToDigits = (phone) => String(phone ?? "").replace(/\D+/g, "");
-
 const hydrateProfile = (profile) => {
   activeProfile = {
     ...DEFAULT_PROFILE,
@@ -2103,18 +2153,6 @@ const hydrateProfile = (profile) => {
 
   const founder = document.getElementById("about-founder");
   if (founder) founder.textContent = activeProfile.name;
-
-  const emailLink = document.getElementById("contact-email-link");
-  if (emailLink) {
-    emailLink.href = `mailto:${activeProfile.email}`;
-    emailLink.textContent = activeProfile.email;
-  }
-
-  const whatsapp = document.getElementById("contact-whatsapp-link");
-  if (whatsapp) {
-    const digits = normalizePhoneToDigits(activeProfile.phone);
-    if (digits) whatsapp.href = `https://wa.me/${digits}`;
-  }
 
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
@@ -2132,21 +2170,28 @@ const isEndpointConfigured = () =>
   FORM_ENDPOINT && !FORM_ENDPOINT.includes(FORM_ENDPOINT_PLACEHOLDER) && /^https:\/\//.test(FORM_ENDPOINT);
 
 const setupConsultationForm = () => {
+  const consultationLayout = document.getElementById("consultation-layout");
+  const consultationSection = document.getElementById("consultation");
+  const wrap = document.getElementById("consultation-form-wrap");
   const form = document.getElementById("consultation-form");
   const submitButton = document.getElementById("consultation-submit");
-  if (!form || !submitButton) return;
+  const successPanel = document.getElementById("consultation-success-panel");
+  if (!consultationLayout || !consultationSection || !wrap || !form || !submitButton || !successPanel) return;
   if (form.dataset.formBound === "true") return;
 
   form.dataset.formBound = "true";
+  bindDemoHighlightCta("consultation-success-demo-cta", "successDemoBound");
 
   const readPayload = () => {
     const data = new FormData(form);
     return {
-      name: String(data.get("name") ?? "").trim(),
-      email: String(data.get("email") ?? "").trim(),
-      restaurant: String(data.get("restaurant") ?? "").trim(),
+      menu_situation: String(data.get("menu_situation") ?? "").trim(),
+      restaurant_brand: String(data.get("restaurant_brand") ?? "").trim(),
+      contact_name: String(data.get("contact_name") ?? "").trim(),
+      contact_email: String(data.get("contact_email") ?? "").trim(),
       city_country: String(data.get("city_country") ?? "").trim(),
-      budget_range: String(data.get("budget_range") ?? "").trim(),
+      estimated_menu_size: String(data.get("estimated_menu_size") ?? "").trim(),
+      collaboration_level: String(data.get("collaboration_level") ?? "").trim(),
       timeline: String(data.get("timeline") ?? "").trim(),
       message: String(data.get("message") ?? "").trim(),
       consent: data.get("consent") === "on"
@@ -2154,19 +2199,38 @@ const setupConsultationForm = () => {
   };
 
   const emailLooksValid = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
+  const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+
+  const revealSuccessPanel = () => {
+    successPanel.hidden = false;
+    consultationLayout.classList.add("is-transitioning");
+    consultationLayout.classList.remove("is-success");
+    window.requestAnimationFrame(() => {
+      window.setTimeout(() => {
+        consultationLayout.classList.remove("is-transitioning");
+        consultationLayout.classList.add("is-success");
+        consultationSection.scrollIntoView({
+          behavior: prefersReducedMotion ? "auto" : "smooth",
+          block: "start"
+        });
+      }, 180);
+    });
+  };
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (consultationLayout.classList.contains("is-success") || consultationLayout.classList.contains("is-transitioning")) return;
 
     const ui = getUiText();
     const payload = readPayload();
 
-    if (!payload.name || !payload.email || !payload.message) {
+    if (!payload.menu_situation || !payload.restaurant_brand || !payload.contact_name || !payload.contact_email) {
       setFormStatus(ui.form.statusRequired, "error");
       return;
     }
 
-    if (!emailLooksValid(payload.email)) {
+    if (!emailLooksValid(payload.contact_email)) {
       setFormStatus(ui.form.statusInvalidEmail, "error");
       return;
     }
@@ -2184,6 +2248,7 @@ const setupConsultationForm = () => {
     submitButton.disabled = true;
     submitButton.textContent = ui.form.submitSending;
     setFormStatus(ui.form.statusSending);
+    const submitStart = performance.now();
 
     try {
       const response = await fetch(FORM_ENDPOINT, {
@@ -2199,11 +2264,16 @@ const setupConsultationForm = () => {
         throw new Error(`HTTP ${response.status}`);
       }
 
+      const elapsed = performance.now() - submitStart;
+      const remainingDelay = Math.max(0, CONSULTATION_MIN_LOADING_MS - elapsed);
+      if (remainingDelay > 0) await wait(remainingDelay);
+
       form.reset();
       setFormStatus(ui.form.statusSuccess, "success");
+      revealSuccessPanel();
+      submitButton.textContent = getUiText().form.submitIdle;
     } catch {
-      setFormStatus(ui.form.statusError, "error");
-    } finally {
+      setFormStatus(getUiText().form.statusError, "error");
       submitButton.disabled = false;
       submitButton.textContent = getUiText().form.submitIdle;
     }

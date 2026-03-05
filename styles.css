@@ -968,21 +968,16 @@ section[id] {
   gap: 1.3rem;
 }
 
-.contact-links {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.56rem;
+.consultation-form-wrap {
+  display: block;
 }
 
-.contact-links a {
-  text-decoration: none;
-  border: 1px solid color-mix(in srgb, var(--line-dark) 62%, #ffffff);
-  border-radius: 999px;
-  padding: 0.45rem 0.74rem;
-  color: color-mix(in srgb, var(--text-light) 92%, transparent);
-  font-weight: 600;
-  font-size: 0.87rem;
+#consultation-intro,
+.consultation-form-wrap {
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility var(--transition-fast);
 }
 
 .consultation-form {
@@ -991,7 +986,134 @@ section[id] {
   background: color-mix(in srgb, var(--bg-dark-soft) 86%, #000000);
   padding: 1rem;
   display: grid;
+  gap: 0.8rem;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility var(--transition-fast);
+}
+
+.consultation-grid.is-transitioning #consultation-intro,
+.consultation-grid.is-transitioning .consultation-form-wrap {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.consultation-grid.is-success #consultation-intro,
+.consultation-grid.is-success .consultation-form-wrap {
+  display: none;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.consultation-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-situation-fieldset {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.menu-situation-fieldset legend {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--text-light) 88%, transparent);
+  margin-bottom: 0.16rem;
+}
+
+.menu-situation-options {
+  display: grid;
+  gap: 0.46rem;
+}
+
+.menu-situation-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.52rem;
+  align-items: start;
+  border: 1px solid color-mix(in srgb, var(--line-dark) 74%, #ffffff);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--bg-dark) 88%, #000000);
+  padding: 0.6rem 0.68rem;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.menu-situation-option:hover,
+.menu-situation-option:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 58%, #ffffff);
+  background: color-mix(in srgb, var(--bg-dark) 82%, var(--accent));
+}
+
+.menu-situation-option:has(input:checked) {
+  border-color: color-mix(in srgb, var(--accent) 64%, #ffffff);
+  background: color-mix(in srgb, var(--bg-dark) 78%, var(--accent));
+}
+
+.menu-situation-option input {
+  width: 16px;
+  height: 16px;
+  margin-top: 0.1rem;
+  accent-color: var(--accent);
+}
+
+.menu-situation-option span {
+  font-size: 0.84rem;
+  color: color-mix(in srgb, var(--text-light) 90%, transparent);
+}
+
+.consultation-form-stage {
+  display: grid;
   gap: 0.72rem;
+}
+
+.consultation-form-stage-title {
+  margin: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text-muted-dark) 90%, transparent);
+}
+
+.consultation-form-optional {
+  border: 1px solid color-mix(in srgb, var(--line-dark) 74%, #ffffff);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--bg-dark) 89%, #000000);
+  padding: 0.08rem;
+}
+
+.consultation-form-optional summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--text-light) 88%, transparent);
+  padding: 0.64rem 0.68rem;
+  border-radius: 10px;
+}
+
+.consultation-form-optional summary::-webkit-details-marker {
+  display: none;
+}
+
+.consultation-form-optional summary::after {
+  content: "+";
+  float: right;
+  color: color-mix(in srgb, var(--text-muted-dark) 90%, transparent);
+}
+
+.consultation-form-optional[open] summary::after {
+  content: "−";
+}
+
+.consultation-form-optional-grid {
+  display: grid;
+  gap: 0.72rem;
+  padding: 0 0.68rem 0.68rem;
 }
 
 .consultation-form label {
@@ -1002,7 +1124,7 @@ section[id] {
   color: color-mix(in srgb, var(--text-light) 86%, transparent);
 }
 
-.consultation-form input,
+.consultation-form input:not([type="radio"]):not([type="checkbox"]),
 .consultation-form select,
 .consultation-form textarea {
   width: 100%;
@@ -1014,7 +1136,7 @@ section[id] {
   padding: 0.68rem 0.74rem;
 }
 
-.consultation-form input::placeholder,
+.consultation-form input:not([type="radio"]):not([type="checkbox"])::placeholder,
 .consultation-form textarea::placeholder {
   color: color-mix(in srgb, var(--text-muted-dark) 82%, transparent);
 }
@@ -1022,6 +1144,7 @@ section[id] {
 .consultation-form input:focus-visible,
 .consultation-form select:focus-visible,
 .consultation-form textarea:focus-visible,
+.menu-situation-option:focus-within,
 .btn:focus-visible,
 .site-nav a:focus-visible,
 .faq-question:focus-visible {
@@ -1045,8 +1168,15 @@ section[id] {
   color: color-mix(in srgb, var(--accent) 82%, #ffffff);
 }
 
+.form-reassurance {
+  margin: -0.06rem 0 0;
+  font-size: 0.78rem;
+  color: color-mix(in srgb, var(--text-muted-dark) 92%, transparent);
+}
+
 .form-status {
   min-height: 1.2rem;
+  margin: 0;
   font-size: 0.84rem;
   color: color-mix(in srgb, var(--text-muted-dark) 92%, transparent);
 }
@@ -1057,6 +1187,94 @@ section[id] {
 
 .form-status.success {
   color: #9ce7bf;
+}
+
+.consultation-success-panel {
+  grid-column: 1 / -1;
+  border: 1px solid color-mix(in srgb, var(--line-dark) 72%, #ffffff);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--bg-dark-soft) 84%, #000000);
+  padding: clamp(1rem, 2vw, 1.4rem);
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  pointer-events: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.consultation-success-panel::before {
+  content: "";
+  position: absolute;
+  inset: -20% -14%;
+  background: radial-gradient(circle at 78% 48%, rgba(91, 61, 245, 0.11), transparent 62%);
+  opacity: 0;
+  transition: opacity 520ms ease 120ms;
+}
+
+.consultation-success-panel[hidden] {
+  display: none !important;
+}
+
+.consultation-grid.is-success .consultation-success-panel {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  min-height: clamp(26rem, 62vh, 38rem);
+  display: flex;
+  align-items: center;
+}
+
+.consultation-grid.is-success .consultation-success-panel::before {
+  opacity: 1;
+}
+
+.consultation-success-stack {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: min(100%, 980px);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.consultation-success-stack h2 {
+  margin: 0;
+  max-width: 20ch;
+}
+
+.consultation-success-stack p {
+  margin: 0;
+  color: color-mix(in srgb, var(--text-light) 85%, transparent);
+}
+
+.consultation-success-footnote {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--text-muted-dark) 94%, transparent);
+}
+
+.consultation-success-divider {
+  margin-top: 0.36rem;
+  border-top: 1px solid color-mix(in srgb, var(--line-dark) 74%, #ffffff);
+}
+
+.consultation-success-cta-copy {
+  color: color-mix(in srgb, var(--text-light) 84%, transparent);
+}
+
+.consultation-success-stack .btn {
+  width: max-content;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 520ms ease 170ms, opacity 520ms ease 170ms;
+}
+
+.consultation-grid.is-success .consultation-success-stack .btn {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .site-footer {
@@ -1173,6 +1391,13 @@ section[id] {
   .hero-media-fallback {
     animation: none;
   }
+
+  .consultation-form,
+  .consultation-success-panel,
+  .consultation-success-panel::before,
+  .consultation-success-stack .btn {
+    transition-duration: 1ms !important;
+  }
 }
 
 @media (max-width: 1040px) {
@@ -1196,6 +1421,10 @@ section[id] {
 
   .timeline-track-shared {
     grid-column: auto;
+  }
+
+  .consultation-grid.is-success .consultation-success-panel {
+    min-height: auto;
   }
 }
 
@@ -1293,5 +1522,9 @@ section[id] {
     padding: 0.92rem 0;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .consultation-success-stack h2 {
+    font-size: clamp(1.7rem, 8.4vw, 2.08rem);
   }
 }
