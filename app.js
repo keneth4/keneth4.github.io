@@ -15,7 +15,7 @@ const LANDING_CONTENT_BY_LOCALE = {
       microValue: "Multi-language. Visual. Story-driven. Allergen-aware."
     },
     credibility: [
-      "Designed for independent restaurants and dining venues in Germany.",
+      "Based in Germany, collaborating with independent restaurants and dining venues internationally.",
       "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
       "No subscription required. Delivered as fully-owned files.",
       "Selective studio: limited projects per quarter for quality."
@@ -212,7 +212,7 @@ const LANDING_CONTENT_BY_LOCALE = {
       microValue: "Multilenguaje. Visual. Narrativo. Con alérgenos claros."
     },
     credibility: [
-      "Diseñado para restaurantes independientes y espacios gastronómicos en Alemania.",
+      "Con base en Alemania, colaboramos con restaurantes y espacios gastronómicos independientes a nivel internacional.",
       "Idiomas de menú: español, inglés, francés, portugués, italiano, alemán, japonés, coreano y chino.",
       "Sin suscripción. Entrega de archivos totalmente propios.",
       "Estudio selectivo: proyectos limitados por trimestre para asegurar calidad."
@@ -409,7 +409,7 @@ const LANDING_CONTENT_BY_LOCALE = {
       microValue: "Mehrsprachig. Visuell. Story-basiert. Allergen-sensibel."
     },
     credibility: [
-      "Entwickelt für unabhängige Restaurants und Dining Venues in Deutschland.",
+      "Mit Sitz in Deutschland arbeiten wir international mit unabhängigen Restaurants und Dining Venues zusammen.",
       "Menüsprachen: Spanisch, Englisch, Französisch, Portugiesisch, Italienisch, Deutsch, Japanisch, Koreanisch, Chinesisch.",
       "Kein Abo erforderlich. Vollständig übergebene Dateien.",
       "Selektives Studio: begrenzte Projekte pro Quartal für hohe Qualität."
