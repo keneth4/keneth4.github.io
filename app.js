@@ -273,12 +273,12 @@ const scrollToSectionWithOffset = (hash, behavior = "smooth") => {
 };
 
 const setupStickyNavAnchors = () => {
-  const navLinks = Array.from(document.querySelectorAll(".site-header .site-nav a[href^='#']"));
-  if (!navLinks.length) return;
+  const headerLinks = Array.from(document.querySelectorAll(".site-header a[href^='#']"));
+  if (!headerLinks.length) return;
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
   const behavior = prefersReducedMotion ? "instant" : "smooth";
 
-  navLinks.forEach((link) => {
+  headerLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
       if (event.defaultPrevented) return;
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
