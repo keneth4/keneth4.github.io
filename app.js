@@ -1,201 +1,873 @@
 const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID";
 const FORM_ENDPOINT_PLACEHOLDER = "REPLACE_WITH_YOUR_FORM_ID";
 
-const LANDING_CONTENT = {
-  hero: {
-    eyebrow: "Immersive 3D Experience Studio",
-    headline: "Designed to Be Desired.",
-    subheadline:
-      "Immersive interactive 3D menus designed for modern restaurants that want to attract, inform, and excite guests before the first bite.",
-    microValue: "Multi-language. Visual. Story-driven. Allergen-aware."
-  },
-  credibility: [
-    "Designed for independent restaurants and dining venues in Germany.",
-    "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
-    "No subscription required. Delivered as fully-owned files.",
-    "Selective studio: limited projects per quarter for quality."
-  ],
-  problem: {
-    eyebrow: "The Real Problem",
-    heading: "Static menus rarely create emotion.",
-    bodyA:
-      "Across Germany and Europe, many restaurants still rely on paper menus or static PDFs. For international guests, unfamiliar ingredients and unclear allergen context create friction at the point of ordering.",
-    bodyB:
-      "When guests cannot visualize what they are ordering, hesitation rises and premium perception drops. Presentation is not decoration. Presentation is positioning.",
-    listHeading: "What restaurants lose with static presentation",
-    points: [
-      "Craving trigger and emotional momentum",
-      "Clarity for ingredients and allergen confidence",
-      "Story depth behind each signature dish",
-      "A memorable digital impression worth sharing"
-    ]
-  },
-  experience: {
-    eyebrow: "The Experience",
-    heading: "Guests don\'t just read your menu. They explore it.",
-    body: "A modern interactive layer that blends 3D dish visualization, language flexibility, dietary context, and storytelling.",
-    cards: [
-      {
-        title: "Immersive Dish Preview",
-        body: "Slow, tactile product viewing designed to create anticipation before ordering.",
-        image:
-          "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
-        alt: "MarryGo dish poster"
-      },
-      {
-        title: "Interactive Motion Layer",
-        body: "A fluid interactive preview that reveals depth and detail as guests explore.",
-        image:
-          "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
-        alt: "MarryGo interactive depth preview"
-      },
-      {
-        title: "Visual Appetite Trigger",
-        body: "Real food texture and atmosphere to help guests decide faster with more confidence.",
-        image:
-          "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
-        alt: "CafeBrunch dish animation"
-      }
-    ]
-  },
-  demos: {
-    eyebrow: "Live Demos",
-    heading: "Published demo experiences"
-  },
-  hospitality: {
-    eyebrow: "Designed for Visual-First Dining Venues",
-    heading: "Built for independent venues where presentation is part of the experience.",
-    body:
-      "Creativivid Studio creates immersive menu experiences for boutique cafes, brunch studios, cocktail or speakeasy bars, dessert-forward concepts, chef-led dining venues, and Irish pubs.",
-    lines: ["It\'s experience.", "It\'s culture.", "It\'s story.", "It\'s your brand, made tangible."]
-  },
-  impact: {
-    eyebrow: "Why It Works",
-    heading: "Business impact, not visual noise.",
-    body:
-      "Interactive 3D showcases increase engagement and reduce ordering hesitation while elevating premium perception.",
-    items: [
-      {
-        title: "Increase Engagement Time",
-        body: "Guests spend longer exploring dishes, stories, and details before deciding."
-      },
-      {
-        title: "Elevate Premium Perception",
-        body: "Presentation signals quality before the first bite reaches the table."
-      },
-      {
-        title: "Stand Out from Competitors",
-        body: "Most restaurants still use static menus; immersive interaction differentiates instantly."
-      },
-      {
-        title: "Encourage Social Sharing",
-        body: "Visual-first experiences generate screenshots, conversation, and organic mentions."
-      },
-      {
-        title: "Reduce Ordering Hesitation",
-        body: "Dish clarity and context shorten decision time for international guests."
-      },
-      {
-        title: "Improve Guest Confidence",
-        body: "Allergen and dietary cues make ordering clearer and more comfortable."
-      }
-    ]
-  },
-  howItWorks: {
-    eyebrow: "How It Works",
-    heading: "Two capture paths. One production flow.",
-    body: "We handle technical complexity end-to-end so your team can stay focused on guest experience.",
-    pathATitle: "Option 1: On-Site Capture",
-    pathASubtitle: "Best for venues that want full production support",
-    pathAIntroSteps: ["We visit your location.", "We capture your dishes professionally."],
-    pathBTitle: "Option 2: Remote Capture",
-    pathBSubtitle: "Best for faster, flexible scheduling",
-    pathBIntroSteps: ["You record a guided few-minutes clip per item."],
-    sharedTitle: "Shared Production & Delivery Flow",
-    sharedSteps: [
-      "We process immersive 3D assets.",
-      "We build your interactive web experience.",
-      "You receive a ready-to-deploy interactive website.",
-      "Optional domain and server setup assistance is available."
-    ]
-  },
-  deliverables: {
-    eyebrow: "What You Receive",
-    heading: "Complete ownership and deployment-ready delivery.",
-    items: [
-      "Fully responsive interactive website",
-      "Immersive 3D dish visualizations",
+const SUPPORTED_LOCALES = ["en", "es", "de"];
+const DEFAULT_LOCALE = "en";
+const LOCALE_STORAGE_KEY = "cv_locale";
+
+const LANDING_CONTENT_BY_LOCALE = {
+  en: {
+    hero: {
+      eyebrow: "Immersive 3D Experience Studio",
+      headline: "Designed to Be Desired.",
+      subheadline:
+        "Immersive interactive 3D menus designed for modern restaurants that want to attract, inform, and excite guests before the first bite.",
+      microValue: "Multi-language. Visual. Story-driven. Allergen-aware."
+    },
+    credibility: [
+      "Designed for independent restaurants and dining venues in Germany.",
       "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
-      "Clear vegan and allergen indicators",
-      "Story-rich dish detail structure",
-      "Custom brand styling and direction",
-      "Deployment assistance (optional add-on)",
-      "Full ownership of delivered files"
-    ]
+      "No subscription required. Delivered as fully-owned files.",
+      "Selective studio: limited projects per quarter for quality."
+    ],
+    problem: {
+      eyebrow: "The Real Problem",
+      heading: "Static menus rarely create emotion.",
+      bodyA:
+        "Across Germany and Europe, many restaurants still rely on paper menus or static PDFs. For international guests, unfamiliar ingredients and unclear allergen context create friction at the point of ordering.",
+      bodyB:
+        "When guests cannot visualize what they are ordering, hesitation rises and premium perception drops. Presentation is not decoration. Presentation is positioning.",
+      listHeading: "What restaurants lose with static presentation",
+      points: [
+        "Craving trigger and emotional momentum",
+        "Clarity for ingredients and allergen confidence",
+        "Story depth behind each signature dish",
+        "A memorable digital impression worth sharing"
+      ]
+    },
+    experience: {
+      eyebrow: "The Experience",
+      heading: "Guests don't just read your menu. They explore it.",
+      body: "A modern interactive layer that blends 3D dish visualization, language flexibility, dietary context, and storytelling.",
+      cards: [
+        {
+          title: "Immersive Dish Preview",
+          body: "Slow, tactile product viewing designed to create anticipation before ordering.",
+          image:
+            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
+          alt: "MarryGo dish poster"
+        },
+        {
+          title: "Interactive Motion Layer",
+          body: "A fluid interactive preview that reveals depth and detail as guests explore.",
+          image:
+            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
+          alt: "MarryGo interactive depth preview"
+        },
+        {
+          title: "Visual Appetite Trigger",
+          body: "Real food texture and atmosphere to help guests decide faster with more confidence.",
+          image:
+            "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
+          alt: "CafeBrunch dish animation"
+        }
+      ]
+    },
+    demos: {
+      eyebrow: "Live Demos",
+      heading: "Published demo experiences"
+    },
+    hospitality: {
+      eyebrow: "Designed for Visual-First Dining Venues",
+      heading: "Built for independent venues where presentation is part of the experience.",
+      body:
+        "Creativivid Studio creates immersive menu experiences for boutique cafes, brunch studios, cocktail or speakeasy bars, dessert-forward concepts, chef-led dining venues, and Irish pubs.",
+      lines: ["It's experience.", "It's culture.", "It's story.", "It's your brand, made tangible."]
+    },
+    impact: {
+      eyebrow: "Why It Works",
+      heading: "Business impact, not visual noise.",
+      body:
+        "Interactive 3D showcases increase engagement and reduce ordering hesitation while elevating premium perception.",
+      items: [
+        {
+          title: "Increase Engagement Time",
+          body: "Guests spend longer exploring dishes, stories, and details before deciding."
+        },
+        {
+          title: "Elevate Premium Perception",
+          body: "Presentation signals quality before the first bite reaches the table."
+        },
+        {
+          title: "Stand Out from Competitors",
+          body: "Most restaurants still use static menus; immersive interaction differentiates instantly."
+        },
+        {
+          title: "Encourage Social Sharing",
+          body: "Visual-first experiences generate screenshots, conversation, and organic mentions."
+        },
+        {
+          title: "Reduce Ordering Hesitation",
+          body: "Dish clarity and context shorten decision time for international guests."
+        },
+        {
+          title: "Improve Guest Confidence",
+          body: "Allergen and dietary cues make ordering clearer and more comfortable."
+        }
+      ]
+    },
+    howItWorks: {
+      eyebrow: "How It Works",
+      heading: "Two capture paths. One production flow.",
+      body: "We handle technical complexity end-to-end so your team can stay focused on guest experience.",
+      pathATitle: "Option 1: On-Site Capture",
+      pathASubtitle: "Best for venues that want full production support",
+      pathAIntroSteps: ["We visit your location.", "We capture your dishes professionally."],
+      pathBTitle: "Option 2: Remote Capture",
+      pathBSubtitle: "Best for faster, flexible scheduling",
+      pathBIntroSteps: ["You record a guided few-minutes clip per item."],
+      sharedTitle: "Shared Production & Delivery Flow",
+      sharedSteps: [
+        "We process immersive 3D assets.",
+        "We build your interactive web experience.",
+        "You receive a ready-to-deploy interactive website.",
+        "Optional domain and server setup assistance is available."
+      ]
+    },
+    deliverables: {
+      eyebrow: "What You Receive",
+      heading: "Complete ownership and deployment-ready delivery.",
+      items: [
+        "Fully responsive interactive website",
+        "Immersive 3D dish visualizations",
+        "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
+        "Clear vegan and allergen indicators",
+        "Story-rich dish detail structure",
+        "Custom brand styling and direction",
+        "Deployment assistance (optional add-on)",
+        "Full ownership of delivered files"
+      ]
+    },
+    collaboration: {
+      eyebrow: "Collaboration Options",
+      heading: "Selective engagement model",
+      body: "Creativivid Studio works with a limited number of independent dining venues per quarter to maintain creative and technical excellence.",
+      packages: [
+        {
+          title: "Starter - Pilot Experience",
+          subtitle: "Ideal for testing immersive presentation with focused scope.",
+          priceRange: "€1,500 - €2,000",
+          bullets: ["Up to 5 items", "Interactive website", "Remote capture workflow"]
+        },
+        {
+          title: "Premium - Brand Elevation",
+          subtitle: "For visually-driven restaurants ready to differentiate.",
+          priceRange: "€3,000 - €4,500",
+          bullets: ["Up to 15 items", "Advanced styling", "On-site capture available", "Deployment support"]
+        },
+        {
+          title: "Signature - Full Immersive Concept",
+          subtitle: "For signature restaurants seeking a statement experience.",
+          priceRange: "€6,000+",
+          bullets: [
+            "20+ items",
+            "Custom design direction",
+            "On-site professional capture",
+            "Priority delivery",
+            "Full deployment and domain assistance"
+          ]
+        }
+      ]
+    },
+    faq: {
+      eyebrow: "FAQ",
+      heading: "Clear answers before we start",
+      items: [
+        {
+          q: "Do guests need to download an app?",
+          a: "No. Everything runs directly in the browser on mobile and desktop."
+        },
+        {
+          q: "Can we update dishes later?",
+          a: "Yes. Iterative updates can be requested based on your menu changes and campaigns."
+        },
+        {
+          q: "What if we do not have professional recording equipment?",
+          a: "We provide a practical remote capture guide and quality checks before production starts."
+        },
+        {
+          q: "Is this only for luxury restaurants?",
+          a: "It is for independent restaurants and dining venues that value presentation, storytelling, and differentiation."
+        }
+      ]
+    },
+    about: {
+      eyebrow: "About the Studio",
+      heading: "Engineering precision meets cinematic presentation.",
+      body:
+        "Creativivid Studio blends AI and computer vision expertise with visual storytelling to craft premium interactive menu experiences."
+    },
+    consultation: {
+      heading: "Elevate how guests experience your menu.",
+      body:
+        "If your brand values presentation, story, and differentiation, let's discuss your concept and evaluate strategic fit."
+    }
   },
-  collaboration: {
-    eyebrow: "Collaboration Options",
-    heading: "Selective engagement model",
-    body: "Creativivid Studio works with a limited number of independent dining venues per quarter to maintain creative and technical excellence.",
-    packages: [
-      {
-        title: "Starter — Pilot Experience",
-        subtitle: "Ideal for testing immersive presentation with focused scope.",
-        priceRange: "€1,500 - €2,000",
-        bullets: ["Up to 5 items", "Interactive website", "Remote capture workflow"]
-      },
-      {
-        title: "Premium — Brand Elevation",
-        subtitle: "For visually-driven restaurants ready to differentiate.",
-        priceRange: "€3,000 - €4,500",
-        bullets: ["Up to 15 items", "Advanced styling", "On-site capture available", "Deployment support"]
-      },
-      {
-        title: "Signature — Full Immersive Concept",
-        subtitle: "For signature restaurants seeking a statement experience.",
-        priceRange: "€6,000+",
-        bullets: [
-          "20+ items",
-          "Custom design direction",
-          "On-site professional capture",
-          "Priority delivery",
-          "Full deployment and domain assistance"
-        ]
-      }
-    ]
+  es: {
+    hero: {
+      eyebrow: "Estudio de Experiencias 3D Inmersivas",
+      headline: "Diseñado para ser deseado.",
+      subheadline:
+        "Menús 3D interactivos e inmersivos para restaurantes modernos que quieren atraer, informar y entusiasmar a sus clientes antes del primer bocado.",
+      microValue: "Multilenguaje. Visual. Narrativo. Con alérgenos claros."
+    },
+    credibility: [
+      "Diseñado para restaurantes independientes y espacios gastronómicos en Alemania.",
+      "Idiomas de menú: español, inglés, francés, portugués, italiano, alemán, japonés, coreano y chino.",
+      "Sin suscripción. Entrega de archivos totalmente propios.",
+      "Estudio selectivo: proyectos limitados por trimestre para asegurar calidad."
+    ],
+    problem: {
+      eyebrow: "El Problema Real",
+      heading: "Los menús estáticos rara vez generan emoción.",
+      bodyA:
+        "En Alemania y Europa, muchos restaurantes aún dependen de menús impresos o PDF estáticos. Para clientes internacionales, ingredientes poco familiares y contexto de alérgenos poco claro generan fricción al ordenar.",
+      bodyB:
+        "Cuando los clientes no pueden visualizar lo que piden, aumenta la duda y baja la percepción premium. La presentación no es decoración. La presentación es posicionamiento.",
+      listHeading: "Lo que pierden los restaurantes con una presentación estática",
+      points: [
+        "Impacto emocional y deseo inmediato",
+        "Claridad de ingredientes y confianza en alérgenos",
+        "Profundidad narrativa de cada plato insignia",
+        "Una impresión digital memorable para compartir"
+      ]
+    },
+    experience: {
+      eyebrow: "La Experiencia",
+      heading: "Tus clientes no solo leen el menú. Lo exploran.",
+      body: "Una capa interactiva moderna que combina visualización 3D, flexibilidad de idioma, contexto alimentario y narrativa.",
+      cards: [
+        {
+          title: "Vista Inmersiva del Plato",
+          body: "Exploracion visual tactil y pausada para crear anticipacion antes de ordenar.",
+          image:
+            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
+          alt: "Vista del plato MarryGo"
+        },
+        {
+          title: "Capa de Movimiento Interactivo",
+          body: "Vista interactiva fluida que revela profundidad y detalle mientras se explora.",
+          image:
+            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
+          alt: "Vista interactiva de profundidad MarryGo"
+        },
+        {
+          title: "Disparador Visual de Apetito",
+          body: "Textura real y ambiente visual para decidir más rápido y con mayor seguridad.",
+          image:
+            "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
+          alt: "Animacion del plato CafeBrunch"
+        }
+      ]
+    },
+    demos: {
+      eyebrow: "Demos en Vivo",
+      heading: "Experiencias demo publicadas"
+    },
+    hospitality: {
+      eyebrow: "Diseñado para Espacios Gastronomicos Visuales",
+      heading: "Creado para espacios independientes donde la presentación es parte de la experiencia.",
+      body:
+        "Creativivid Studio crea experiencias de menú inmersivas para cafes boutique, brunch studios, bares de cócteles o speakeasy, conceptos de postres, espacios de autor e Irish pubs.",
+      lines: ["Es experiencia.", "Es cultura.", "Es historia.", "Es tu marca, hecha tangible."]
+    },
+    impact: {
+      eyebrow: "Por Que Funciona",
+      heading: "Impacto de negocio, no ruido visual.",
+      body:
+        "Las experiencias 3D interactivas aumentan el engagement, reducen la duda al ordenar y elevan la percepción premium.",
+      items: [
+        {
+          title: "Aumenta el Tiempo de Interaccion",
+          body: "Los clientes pasan más tiempo explorando platos, historias y detalles antes de decidir."
+        },
+        {
+          title: "Eleva la Percepcion Premium",
+          body: "La presentación comunica calidad antes del primer bocado."
+        },
+        {
+          title: "Diferencia Frente a la Competencia",
+          body: "La mayoría aún usa menús estáticos; la interacción inmersiva destaca de inmediato."
+        },
+        {
+          title: "Impulsa Compartidos en Redes",
+          body: "Las experiencias visuales generan capturas, conversacion y menciones organicas."
+        },
+        {
+          title: "Reduce la Duda al Ordenar",
+          body: "La claridad del plato y su contexto reducen el tiempo de decision de clientes internacionales."
+        },
+        {
+          title: "Mejora la Confianza del Cliente",
+          body: "Indicadores de dieta y alérgenos hacen el pedido más claro y seguro."
+        }
+      ]
+    },
+    howItWorks: {
+      eyebrow: "Como Funciona",
+      heading: "Dos rutas de captura. Un flujo de producción.",
+      body: "Nos encargamos de la complejidad técnica de principio a fin para que tu equipo se enfoque en la experiencia del cliente.",
+      pathATitle: "Opción 1: Captura en Sitio",
+      pathASubtitle: "Ideal para espacios que buscan soporte completo de producción",
+      pathAIntroSteps: ["Visitamos tu ubicación.", "Capturamos tus platos de forma profesional."],
+      pathBTitle: "Opción 2: Captura Remota",
+      pathBSubtitle: "Ideal para tiempos más rápidos y flexibles",
+      pathBIntroSteps: ["Tu grabas un clip guiado de pocos minutos por item."],
+      sharedTitle: "Flujo Compartido de Produccion y Entrega",
+      sharedSteps: [
+        "Procesamos activos 3D inmersivos.",
+        "Construimos tu experiencia web interactiva.",
+        "Recibes un sitio interactivo listo para desplegar.",
+        "Soporte opcional para dominio y servidor disponible."
+      ]
+    },
+    deliverables: {
+      eyebrow: "Lo Que Recibes",
+      heading: "Entrega completa, lista para desplegar y con propiedad total.",
+      items: [
+        "Sitio interactivo totalmente responsive",
+        "Visualizaciones 3D inmersivas de platos",
+        "Idiomas de menú: español, inglés, francés, portugués, italiano, alemán, japonés, coreano y chino.",
+        "Indicadores claros de dieta y alérgenos",
+        "Estructura narrativa para detalle de platos",
+        "Direccion visual y estilo de marca personalizado",
+        "Soporte de despliegue (opcional)",
+        "Propiedad total de los archivos entregados"
+      ]
+    },
+    collaboration: {
+      eyebrow: "Opciones de Colaboración",
+      heading: "Modelo de colaboracion selectivo",
+      body: "Creativivid Studio trabaja con un número limitado de espacios gastronómicos independientes por trimestre para mantener excelencia creativa y técnica.",
+      packages: [
+        {
+          title: "Starter - Experiencia Piloto",
+          subtitle: "Ideal para validar presentación inmersiva con alcance enfocado.",
+          priceRange: "€1,500 - €2,000",
+          bullets: ["Hasta 5 items", "Sitio interactivo", "Flujo remoto de captura"]
+        },
+        {
+          title: "Premium - Elevacion de Marca",
+          subtitle: "Para restaurantes visuales listos para diferenciarse.",
+          priceRange: "€3,000 - €4,500",
+          bullets: ["Hasta 15 items", "Estilo avanzado", "Captura en sitio disponible", "Soporte de despliegue"]
+        },
+        {
+          title: "Signature - Concepto Inmersivo Completo",
+          subtitle: "Para restaurantes distintivos que buscan una experiencia de impacto.",
+          priceRange: "€6,000+",
+          bullets: [
+            "20+ items",
+            "Direccion de diseño personalizada",
+            "Captura profesional en sitio",
+            "Entrega prioritaria",
+            "Soporte completo de dominio y despliegue"
+          ]
+        }
+      ]
+    },
+    faq: {
+      eyebrow: "Preguntas Frecuentes",
+      heading: "Respuestas claras antes de empezar",
+      items: [
+        {
+          q: "Los clientes necesitan descargar una app?",
+          a: "No. Todo funciona directamente en el navegador, en movil y desktop."
+        },
+        {
+          q: "Podemos actualizar platos despues?",
+          a: "Sí. Se pueden solicitar actualizaciones iterativas según cambios de menú y campañas."
+        },
+        {
+          q: "Que pasa si no tenemos equipo profesional de grabacion?",
+          a: "Entregamos una guia practica de captura remota y validamos calidad antes de producir."
+        },
+        {
+          q: "Esto es solo para restaurantes de lujo?",
+          a: "Es para restaurantes y espacios gastronómicos independientes que valoran presentación, historia y diferenciación."
+        }
+      ]
+    },
+    about: {
+      eyebrow: "Sobre el Estudio",
+      heading: "Precisión de ingeniería con presentación cinemática.",
+      body:
+        "Creativivid Studio combina experiencia en IA y visión por computadora con narrativa visual para crear experiencias de menú interactivas premium."
+    },
+    consultation: {
+      heading: "Eleva la forma en que tus clientes viven tu menú.",
+      body:
+        "Si tu marca valora presentación, historia y diferenciación, conversemos tu concepto y evaluemos si hay encaje estratégico."
+    }
   },
-  faq: {
-    eyebrow: "FAQ",
-    heading: "Clear answers before we start",
-    items: [
-      {
-        q: "Do guests need to download an app?",
-        a: "No. Everything runs directly in the browser on mobile and desktop."
-      },
-      {
-        q: "Can we update dishes later?",
-        a: "Yes. Iterative updates can be requested based on your menu changes and campaigns."
-      },
-      {
-        q: "What if we do not have professional recording equipment?",
-        a: "We provide a practical remote capture guide and quality checks before production starts."
-      },
-      {
-        q: "Is this only for luxury restaurants?",
-        a: "It is for independent restaurants and dining venues that value presentation, storytelling, and differentiation."
-      }
-    ]
+  de: {
+    hero: {
+      eyebrow: "Studio für Immersive 3D Experiences",
+      headline: "Gestaltet, um begehrt zu werden.",
+      subheadline:
+        "Immersive interaktive 3D-Menüs für moderne Restaurants, die Gäste schon vor dem ersten Bissen begeistern wollen.",
+      microValue: "Mehrsprachig. Visuell. Story-basiert. Allergen-sensibel."
+    },
+    credibility: [
+      "Entwickelt für unabhängige Restaurants und Dining Venues in Deutschland.",
+      "Menüsprachen: Spanisch, Englisch, Französisch, Portugiesisch, Italienisch, Deutsch, Japanisch, Koreanisch, Chinesisch.",
+      "Kein Abo erforderlich. Vollständig übergebene Dateien.",
+      "Selektives Studio: begrenzte Projekte pro Quartal für hohe Qualität."
+    ],
+    problem: {
+      eyebrow: "Das Eigentliche Problem",
+      heading: "Statische Menüs erzeugen selten Emotion.",
+      bodyA:
+        "In Deutschland und Europa setzen viele Restaurants noch auf Papiermenüs oder statische PDFs. Für internationale Gäste sorgen unbekannte Zutaten und unklarer Allergenkontext für Reibung beim Bestellen.",
+      bodyB:
+        "Wenn Gäste nicht sehen können, was sie bestellen, steigt Unsicherheit und die Premium-Wahrnehmung sinkt. Präsentation ist nicht Dekoration. Präsentation ist Positionierung.",
+      listHeading: "Was Restaurants durch statische Präsentation verlieren",
+      points: [
+        "Emotionale Dynamik und Appetitimpuls",
+        "Klarheit bei Zutaten und Allergenen",
+        "Story-Tiefe hinter Signature-Gerichten",
+        "Ein digitaler Eindruck, der in Erinnerung bleibt"
+      ]
+    },
+    experience: {
+      eyebrow: "Die Experience",
+      heading: "Gäste lesen dein Menü nicht nur. Sie erkunden es.",
+      body: "Eine moderne interaktive Ebene aus 3D-Visualisierung, Sprachflexibilität, Ernährungskontext und Storytelling.",
+      cards: [
+        {
+          title: "Immersive Dish Preview",
+          body: "Langsame, taktile Produktansicht für mehr Vorfreude vor der Bestellung.",
+          image:
+            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-poster.webp",
+          alt: "MarryGo Gerichtsvorschau"
+        },
+        {
+          title: "Interaktive Bewegungsebene",
+          body: "Fließende interaktive Vorschau, die Tiefe und Details beim Erkunden sichtbar macht.",
+          image:
+            "/demos/Demo%20-%20Keneth%27s%20Collection/assets/items/360MarryGo-int-sprite-md.webp",
+          alt: "MarryGo interaktive Tiefenvorschau"
+        },
+        {
+          title: "Visueller Appetit-Trigger",
+          body: "Echte Textur und visuelle Atmosphäre helfen bei schnelleren und sichereren Entscheidungen.",
+          image:
+            "/demos/Demo%20-%20CafeBrunch%20Menu/assets/derived/items/blue-berry-pancakes-6028f0-md.gif",
+          alt: "CafeBrunch Gerichtsanimation"
+        }
+      ]
+    },
+    demos: {
+      eyebrow: "Live-Demos",
+      heading: "Veröffentlichte Demo-Erlebnisse"
+    },
+    hospitality: {
+      eyebrow: "Für visuell starke Dining Venues entwickelt",
+      heading: "Für unabhängige Locations, in denen Präsentation Teil der Experience ist.",
+      body:
+        "Creativivid Studio entwickelt immersive Menü-Erlebnisse für Boutique-Cafes, Brunch-Studios, Cocktail- oder Speakeasy-Bars, Dessert-Konzepte, chefgeführte Dining Venues und Irish Pubs.",
+      lines: ["Es ist Experience.", "Es ist Kultur.", "Es ist Story.", "Es ist deine Marke - greifbar gemacht."]
+    },
+    impact: {
+      eyebrow: "Warum es funktioniert",
+      heading: "Business Impact statt visueller Lärm.",
+      body:
+        "Interaktive 3D-Showcases steigern Engagement, reduzieren Bestellunsicherheit und erhöhen die Premium-Wahrnehmung.",
+      items: [
+        {
+          title: "Mehr Engagement-Zeit",
+          body: "Gäste verbringen mehr Zeit mit der Erkundung von Gerichten, Stories und Details."
+        },
+        {
+          title: "Stärkere Premium-Wahrnehmung",
+          body: "Präsentation signalisiert Qualität schon vor dem ersten Bissen."
+        },
+        {
+          title: "Klarer Wettbewerbsvorteil",
+          body: "Viele Restaurants nutzen weiterhin statische Menüs; immersive Interaktion differenziert sofort."
+        },
+        {
+          title: "Mehr Social Sharing",
+          body: "Visuelle Erlebnisse erzeugen Screenshots, Gespräche und organische Erwähnungen."
+        },
+        {
+          title: "Weniger Unsicherheit bei Bestellungen",
+          body: "Mehr Klarheit zum Gericht verkürzt die Entscheidungszeit internationaler Gäste."
+        },
+        {
+          title: "Mehr Sicherheit für Gäste",
+          body: "Allergen- und Ernährungshinweise machen Bestellungen klarer und angenehmer."
+        }
+      ]
+    },
+    howItWorks: {
+      eyebrow: "So funktioniert es",
+      heading: "Zwei Capture-Wege. Ein Produktionsfluss.",
+      body: "Wir übernehmen die technische Komplexität end-to-end, damit dein Team beim Gästeerlebnis bleiben kann.",
+      pathATitle: "Option 1: Capture vor Ort",
+      pathASubtitle: "Ideal für Venues mit Wunsch nach voller Produktionsbegleitung",
+      pathAIntroSteps: ["Wir besuchen deine Location.", "Wir erfassen deine Gerichte professionell."],
+      pathBTitle: "Option 2: Remote Capture",
+      pathBSubtitle: "Ideal für schnellere, flexible Zeitpläne",
+      pathBIntroSteps: ["Du zeichnest pro Item einen gefuehrten Kurzclip auf."],
+      sharedTitle: "Gemeinsamer Produktions- und Delivery-Flow",
+      sharedSteps: [
+        "Wir verarbeiten immersive 3D-Assets.",
+        "Wir bauen dein interaktives Web-Erlebnis.",
+        "Du erhältst eine sofort einsetzbare interaktive Website.",
+        "Optionale Hilfe bei Domain- und Server-Setup verfügbar."
+      ]
+    },
+    deliverables: {
+      eyebrow: "Was du erhältst",
+      heading: "Vollständige Ownership und deployment-fähige Lieferung.",
+      items: [
+        "Voll responsive interaktive Website",
+        "Immersive 3D-Gerichtsvisualisierungen",
+        "Menüsprachen: Spanisch, Englisch, Französisch, Portugiesisch, Italienisch, Deutsch, Japanisch, Koreanisch, Chinesisch.",
+        "Klare Vegan- und Allergenhinweise",
+        "Story-starke Struktur für Gerichtsdetails",
+        "Individuelle Brand-Gestaltung",
+        "Deployment-Unterstuetzung (optional)",
+        "Vollständige Dateiübergabe"
+      ]
+    },
+    collaboration: {
+      eyebrow: "Zusammenarbeitsoptionen",
+      heading: "Selektives Engagement-Modell",
+      body: "Creativivid Studio arbeitet pro Quartal mit einer begrenzten Zahl unabhängiger Dining Venues, um kreative und technische Exzellenz zu sichern.",
+      packages: [
+        {
+          title: "Starter - Pilot Experience",
+          subtitle: "Ideal zum Testen immersiver Präsentation mit fokussiertem Umfang.",
+          priceRange: "€1,500 - €2,000",
+          bullets: ["Bis zu 5 Items", "Interaktive Website", "Remote-Capture-Workflow"]
+        },
+        {
+          title: "Premium - Brand Elevation",
+          subtitle: "Für visuell starke Restaurants mit Differenzierungsfokus.",
+          priceRange: "€3,000 - €4,500",
+          bullets: ["Bis zu 15 Items", "Advanced Styling", "Capture vor Ort verfügbar", "Deployment-Support"]
+        },
+        {
+          title: "Signature - Voll immersives Konzept",
+          subtitle: "Für Signature-Restaurants mit Anspruch auf ein Statement-Erlebnis.",
+          priceRange: "€6,000+",
+          bullets: [
+            "20+ Items",
+            "Individuelle Designrichtung",
+            "Professionelles Capture vor Ort",
+            "Priorisierte Lieferung",
+            "Vollständige Domain- und Deployment-Hilfe"
+          ]
+        }
+      ]
+    },
+    faq: {
+      eyebrow: "FAQ",
+      heading: "Klare Antworten vor dem Start",
+      items: [
+        {
+          q: "Müssen Gäste eine App herunterladen?",
+          a: "Nein. Alles läuft direkt im Browser auf Mobile und Desktop."
+        },
+        {
+          q: "Können wir Gerichte später aktualisieren?",
+          a: "Ja. Iterative Updates sind entsprechend Menüänderungen und Kampagnen möglich."
+        },
+        {
+          q: "Was, wenn wir kein professionelles Aufnahme-Equipment haben?",
+          a: "Wir liefern eine praxisnahe Remote-Capture-Anleitung und Qualitätschecks vor Produktionsstart."
+        },
+        {
+          q: "Ist das nur für Luxusrestaurants?",
+          a: "Es ist für unabhängige Restaurants und Dining Venues, die Präsentation, Storytelling und Differenzierung schätzen."
+        }
+      ]
+    },
+    about: {
+      eyebrow: "Über das Studio",
+      heading: "Engineering-Präzision trifft cineastische Präsentation.",
+      body:
+        "Creativivid Studio verbindet KI- und Computer-Vision-Expertise mit visueller Story, um premium interaktive Menü-Erlebnisse zu gestalten."
+    },
+    consultation: {
+      heading: "Steigere, wie Gäste dein Menü erleben.",
+      body:
+        "Wenn deine Marke Präsentation, Story und Differenzierung schätzt, sprechen wir über dein Konzept und prüfen den strategischen Fit."
+    }
+  }
+};
+
+const UI_TEXT_BY_LOCALE = {
+  en: {
+    meta: {
+      title: "Creativivid Studio | Immersive 3D Menus",
+      description: "Creativivid Studio creates immersive 3D menu experiences for independent restaurants and dining venues in Germany and beyond."
+    },
+    skipLink: "Skip to content",
+    brandAria: "Creativivid Studio home",
+    nav: {
+      aria: "Main navigation",
+      experience: "Experience",
+      demos: "Demos",
+      pricing: "Pricing",
+      consultation: "Consultation"
+    },
+    locale: {
+      label: "Language"
+    },
+    hero: {
+      ctaDemo: "View Interactive Demo",
+      ctaConsult: "Book a Consultation",
+      chipLanguages: "9 menu languages",
+      chipDietary: "Dietary & allergen tags",
+      chipScroll: "Scroll to rotate"
+    },
+    demos: {
+      countLabel: "Showing {visible} of {total} demos",
+      searchLabel: "Find a demo",
+      searchPlaceholder: "Type a demo name...",
+      cardCta: "Open demo",
+      emptyState: "No demos available yet. Publish exports to /demos/ first.",
+      noResults: "No demos match your search.",
+      untitled: "Untitled demo",
+      publishedDemo: "Published demo",
+      statusFallback: "Using local fallback manifest ({manifestUrl} unavailable).",
+      statusError: "Could not load demos manifest from {manifestUrl}."
+    },
+    collaboration: {
+      applyCta: "Apply for a Consultation"
+    },
+    about: {
+      signaturePrefix: "Founded by",
+      signatureSuffix: "with international experience in Mexico, the USA, and Germany across agency, enterprise, and product environments."
+    },
+    consultation: {
+      whatsappLabel: "WhatsApp"
+    },
+    form: {
+      nameLabel: "Name *",
+      emailLabel: "Email *",
+      restaurantLabel: "Restaurant / Brand",
+      cityCountryLabel: "City / Country",
+      budgetLabel: "Budget Range",
+      budgetSelectOption: "Select one...",
+      budgetStarterOption: "Starter (€1,500 - €2,000)",
+      budgetPremiumOption: "Premium (€3,000 - €4,500)",
+      budgetSignatureOption: "Signature (€6,000+)",
+      budgetCustomOption: "Custom scope / Not sure yet",
+      timelineLabel: "Timeline",
+      timelineSelectOption: "Select one...",
+      timelineAsapOption: "As soon as possible",
+      timelineSoonOption: "In 1-2 months",
+      timelineLaterOption: "In 3+ months",
+      timelineExploringOption: "Just exploring",
+      detailsLabel: "Project Details *",
+      detailsPlaceholder: "Tell us about your concept, number of menu items, and goals.",
+      consentPrefix:
+        "I consent to Creativivid Studio processing my information to respond to this inquiry and understand the ",
+      privacyLinkText: "privacy policy",
+      consentSuffix: ".",
+      submitIdle: "Send Consultation Request",
+      submitSending: "Sending...",
+      statusSending: "Sending your request...",
+      statusRequired: "Please complete Name, Email, and Project Details.",
+      statusInvalidEmail: "Please provide a valid email address.",
+      statusNoConsent: "Please provide consent to continue.",
+      statusEndpoint:
+        "Consultation form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
+      statusSuccess: "Thank you. Your consultation request has been sent.",
+      statusError: "Request failed. Please email us directly at k.ent@hotmail.com."
+    },
+    footer: {
+      copyrightBody: "Creativivid Studio. All rights reserved.",
+      privacyPolicy: "Privacy Policy"
+    },
+    backToTopAria: "Back to top",
+    faq: {
+      mergeNote: "Both paths merge here."
+    }
   },
-  about: {
-    eyebrow: "About the Studio",
-    heading: "Engineering precision meets cinematic presentation.",
-    body:
-      "Creativivid Studio blends AI and computer vision expertise with visual storytelling to craft premium interactive menu experiences."
+  es: {
+    meta: {
+      title: "Creativivid Studio | Menus 3D Inmersivos",
+      description: "Creativivid Studio crea experiencias de menú 3D inmersivas para restaurantes y espacios gastronómicos independientes en Alemania y más allá."
+    },
+    skipLink: "Saltar al contenido",
+    brandAria: "Inicio de Creativivid Studio",
+    nav: {
+      aria: "Navegación principal",
+      experience: "Experiencia",
+      demos: "Demos",
+      pricing: "Precios",
+      consultation: "Consulta"
+    },
+    locale: {
+      label: "Idioma"
+    },
+    hero: {
+      ctaDemo: "Ver demo interactiva",
+      ctaConsult: "Reservar una consulta",
+      chipLanguages: "9 idiomas de menú",
+      chipDietary: "Etiquetas dietarias y de alérgenos",
+      chipScroll: "Desliza para rotar"
+    },
+    demos: {
+      countLabel: "Mostrando {visible} de {total} demos",
+      searchLabel: "Buscar una demo",
+      searchPlaceholder: "Escribe el nombre de una demo...",
+      cardCta: "Abrir demo",
+      emptyState: "Aun no hay demos disponibles. Publica exportaciones en /demos/ primero.",
+      noResults: "Ninguna demo coincide con tu busqueda.",
+      untitled: "Demo sin titulo",
+      publishedDemo: "Demo publicada",
+      statusFallback: "Usando manifiesto local de respaldo ({manifestUrl} no disponible).",
+      statusError: "No se pudo cargar el manifiesto de demos desde {manifestUrl}."
+    },
+    collaboration: {
+      applyCta: "Solicitar una consulta"
+    },
+    about: {
+      signaturePrefix: "Fundado por",
+      signatureSuffix:
+        "con experiencia internacional en Mexico, Estados Unidos y Alemania en entornos de agencia, empresa y producto."
+    },
+    consultation: {
+      whatsappLabel: "WhatsApp"
+    },
+    form: {
+      nameLabel: "Nombre *",
+      emailLabel: "Correo electrónico *",
+      restaurantLabel: "Restaurante / Marca",
+      cityCountryLabel: "Ciudad / Pais",
+      budgetLabel: "Rango de presupuesto",
+      budgetSelectOption: "Selecciona una opcion...",
+      budgetStarterOption: "Starter (€1,500 - €2,000)",
+      budgetPremiumOption: "Premium (€3,000 - €4,500)",
+      budgetSignatureOption: "Signature (€6,000+)",
+      budgetCustomOption: "Alcance personalizado / Aun no estoy seguro",
+      timelineLabel: "Tiempo estimado",
+      timelineSelectOption: "Selecciona una opcion...",
+      timelineAsapOption: "Lo antes posible",
+      timelineSoonOption: "En 1-2 meses",
+      timelineLaterOption: "En 3+ meses",
+      timelineExploringOption: "Solo explorando",
+      detailsLabel: "Detalles del proyecto *",
+      detailsPlaceholder: "Cuéntanos sobre tu concepto, número de items y objetivos.",
+      consentPrefix:
+        "Acepto que Creativivid Studio procese mi información para responder esta consulta y entiendo la ",
+      privacyLinkText: "política de privacidad",
+      consentSuffix: ".",
+      submitIdle: "Enviar solicitud de consulta",
+      submitSending: "Enviando...",
+      statusSending: "Enviando tu solicitud...",
+      statusRequired: "Completa Nombre, Correo electrónico y Detalles del proyecto.",
+      statusInvalidEmail: "Ingresa un correo electrónico válido.",
+      statusNoConsent: "Debes otorgar consentimiento para continuar.",
+      statusEndpoint:
+        "El formulario aún no está conectado. Reemplaza FORM_ENDPOINT en app.js con tu endpoint de Formspree.",
+      statusSuccess: "Gracias. Tu solicitud de consulta fue enviada.",
+      statusError: "La solicitud fallo. Escribenos directamente a k.ent@hotmail.com."
+    },
+    footer: {
+      copyrightBody: "Creativivid Studio. Todos los derechos reservados.",
+      privacyPolicy: "Política de privacidad"
+    },
+    backToTopAria: "Volver arriba",
+    faq: {
+      mergeNote: "Ambas rutas se unen aquí."
+    }
   },
-  consultation: {
-    heading: "Elevate how guests experience your menu.",
-    body:
-      "If your brand values presentation, story, and differentiation, let\'s discuss your concept and evaluate strategic fit."
+  de: {
+    meta: {
+      title: "Creativivid Studio | Immersive 3D-Menüs",
+      description: "Creativivid Studio entwickelt immersive 3D-Menü-Erlebnisse für unabhängige Restaurants und Dining Venues in Deutschland und darüber hinaus."
+    },
+    skipLink: "Zum Inhalt springen",
+    brandAria: "Startseite Creativivid Studio",
+    nav: {
+      aria: "Hauptnavigation",
+      experience: "Experience",
+      demos: "Demos",
+      pricing: "Preise",
+      consultation: "Beratung"
+    },
+    locale: {
+      label: "Sprache"
+    },
+    hero: {
+      ctaDemo: "Interaktive Demo ansehen",
+      ctaConsult: "Beratung buchen",
+      chipLanguages: "9 Menüsprachen",
+      chipDietary: "Ernährungs- und Allergenhinweise",
+      chipScroll: "Zum Drehen scrollen"
+    },
+    demos: {
+      countLabel: "{visible} von {total} Demos angezeigt",
+      searchLabel: "Demo finden",
+      searchPlaceholder: "Demo-Namen eingeben...",
+      cardCta: "Demo öffnen",
+      emptyState: "Noch keine Demos verfügbar. Veröffentliche zuerst Exporte nach /demos/.",
+      noResults: "Keine Demos passen zu deiner Suche.",
+      untitled: "Demo ohne Titel",
+      publishedDemo: "Veröffentlichte Demo",
+      statusFallback: "Lokales Fallback-Manifest wird verwendet ({manifestUrl} nicht verfügbar).",
+      statusError: "Demo-Manifest konnte nicht von {manifestUrl} geladen werden."
+    },
+    collaboration: {
+      applyCta: "Beratung anfragen"
+    },
+    about: {
+      signaturePrefix: "Gegründet von",
+      signatureSuffix:
+        "mit internationaler Erfahrung in Mexiko, den USA und Deutschland in Agentur-, Enterprise- und Produktumfeldern."
+    },
+    consultation: {
+      whatsappLabel: "WhatsApp"
+    },
+    form: {
+      nameLabel: "Name *",
+      emailLabel: "E-Mail *",
+      restaurantLabel: "Restaurant / Marke",
+      cityCountryLabel: "Stadt / Land",
+      budgetLabel: "Budgetrahmen",
+      budgetSelectOption: "Bitte auswählen...",
+      budgetStarterOption: "Starter (€1,500 - €2,000)",
+      budgetPremiumOption: "Premium (€3,000 - €4,500)",
+      budgetSignatureOption: "Signature (€6,000+)",
+      budgetCustomOption: "Individueller Umfang / Noch unsicher",
+      timelineLabel: "Zeitrahmen",
+      timelineSelectOption: "Bitte auswählen...",
+      timelineAsapOption: "So schnell wie möglich",
+      timelineSoonOption: "In 1-2 Monaten",
+      timelineLaterOption: "In 3+ Monaten",
+      timelineExploringOption: "Erst einmal orientieren",
+      detailsLabel: "Projektdetails *",
+      detailsPlaceholder: "Beschreibe Konzept, Anzahl der Menü-Items und Ziele.",
+      consentPrefix:
+        "Ich stimme zu, dass Creativivid Studio meine Daten zur Beantwortung dieser Anfrage verarbeitet und die ",
+      privacyLinkText: "Datenschutzerklärung",
+      consentSuffix: " verstehe.",
+      submitIdle: "Beratungsanfrage senden",
+      submitSending: "Wird gesendet...",
+      statusSending: "Deine Anfrage wird gesendet...",
+      statusRequired: "Bitte Name, E-Mail und Projektdetails ausfüllen.",
+      statusInvalidEmail: "Bitte eine gültige E-Mail-Adresse eingeben.",
+      statusNoConsent: "Bitte Zustimmung erteilen, um fortzufahren.",
+      statusEndpoint:
+        "Das Formular ist noch nicht verbunden. Ersetze FORM_ENDPOINT in app.js durch deinen Formspree-Endpoint.",
+      statusSuccess: "Danke. Deine Beratungsanfrage wurde gesendet.",
+      statusError: "Anfrage fehlgeschlagen. Bitte direkt an k.ent@hotmail.com schreiben."
+    },
+    footer: {
+      copyrightBody: "Creativivid Studio. Alle Rechte vorbehalten.",
+      privacyPolicy: "Datenschutz"
+    },
+    backToTopAria: "Nach oben",
+    faq: {
+      mergeNote: "Beide Wege führen hier zusammen."
+    }
   }
 };
 
@@ -214,9 +886,14 @@ const DEFAULT_MANIFEST = {
   demos: []
 };
 
-const params = new URLSearchParams(window.location.search);
-const manifestUrl = params.get("manifest") ?? "/demos/demos-manifest.json";
-const profileUrl = params.get("profile") ?? "./profile.json";
+const urlParams = new URLSearchParams(window.location.search);
+const manifestUrl = urlParams.get("manifest") ?? "/demos/demos-manifest.json";
+const profileUrl = urlParams.get("profile") ?? "./profile.json";
+
+let currentLocale = DEFAULT_LOCALE;
+let activeProfile = DEFAULT_PROFILE;
+let manifestEntries = [];
+let manifestStatusState = null;
 
 const htmlEscape = (value) =>
   String(value ?? "")
@@ -225,6 +902,9 @@ const htmlEscape = (value) =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+
+const formatTemplate = (template, values = {}) =>
+  String(template ?? "").replace(/\{([a-zA-Z0-9_]+)\}/g, (_, key) => String(values[key] ?? ""));
 
 const getByPath = (source, path) => {
   const parts = String(path ?? "").split(".").filter(Boolean);
@@ -236,10 +916,144 @@ const getByPath = (source, path) => {
   return typeof current === "string" ? current : "";
 };
 
-const setText = (selector, value) => {
-  const target = document.querySelector(selector);
-  if (!target) return;
-  target.textContent = value;
+const normalizeLocale = (value) => {
+  if (!value) return null;
+  const normalized = String(value).trim().toLowerCase();
+  if (!normalized) return null;
+  const primary = normalized.replace("_", "-").split("-")[0];
+  return SUPPORTED_LOCALES.includes(primary) ? primary : null;
+};
+
+const safeLocalStorageGet = (key) => {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+
+const safeLocalStorageSet = (key, value) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // ignore storage failures in privacy mode
+  }
+};
+
+const resolveLocaleFromUrl = () => {
+  const params = new URLSearchParams(window.location.search);
+  return normalizeLocale(params.get("lang"));
+};
+
+const resolveLocaleFromStorage = () => normalizeLocale(safeLocalStorageGet(LOCALE_STORAGE_KEY));
+
+const resolveLocaleFromNavigator = () => {
+  const candidates = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language];
+  for (const candidate of candidates) {
+    const normalized = normalizeLocale(candidate);
+    if (normalized) return normalized;
+  }
+  return null;
+};
+
+const resolveInitialLocale = () =>
+  resolveLocaleFromUrl() ?? resolveLocaleFromStorage() ?? resolveLocaleFromNavigator() ?? DEFAULT_LOCALE;
+
+const getUiText = () => UI_TEXT_BY_LOCALE[currentLocale] ?? UI_TEXT_BY_LOCALE[DEFAULT_LOCALE];
+
+const getLandingContent = () =>
+  LANDING_CONTENT_BY_LOCALE[currentLocale] ?? LANDING_CONTENT_BY_LOCALE[DEFAULT_LOCALE];
+
+const applyDocumentLocale = () => {
+  const ui = getUiText();
+  document.documentElement.lang = currentLocale;
+  document.title = ui.meta.title;
+  const description = document.querySelector('meta[name="description"]');
+  if (description) description.setAttribute("content", ui.meta.description);
+};
+
+const syncLocaleSelects = () => {
+  document.querySelectorAll("[data-locale-select]").forEach((select) => {
+    if (select instanceof HTMLSelectElement) {
+      select.value = currentLocale;
+    }
+  });
+};
+
+const updateUrlLang = (nextLocale) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", nextLocale);
+  const next = `${url.pathname}${url.search}${url.hash}`;
+  window.history.replaceState(null, "", next);
+};
+
+const syncPrivacyLinks = () => {
+  const path = `/privacy.html?lang=${encodeURIComponent(currentLocale)}`;
+  document.querySelectorAll("[data-privacy-link]").forEach((node) => {
+    if (node instanceof HTMLAnchorElement) {
+      node.href = path;
+    }
+  });
+};
+
+const applyStaticTranslations = () => {
+  const ui = getUiText();
+
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    const key = node.getAttribute("data-i18n");
+    const value = getByPath(ui, key);
+    if (value) node.textContent = value;
+  });
+
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    const key = node.getAttribute("data-i18n-placeholder");
+    const value = getByPath(ui, key);
+    if (!value) return;
+    if ("placeholder" in node) node.placeholder = value;
+  });
+
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((node) => {
+    const key = node.getAttribute("data-i18n-aria-label");
+    const value = getByPath(ui, key);
+    if (value) node.setAttribute("aria-label", value);
+  });
+
+  syncPrivacyLinks();
+};
+
+const setLocale = (nextLocale, options = {}) => {
+  const { persist = true, updateUrl = false, rerender = true } = options;
+  const normalized = normalizeLocale(nextLocale) ?? DEFAULT_LOCALE;
+  currentLocale = normalized;
+
+  if (persist) safeLocalStorageSet(LOCALE_STORAGE_KEY, currentLocale);
+  if (updateUrl) updateUrlLang(currentLocale);
+
+  syncLocaleSelects();
+  applyDocumentLocale();
+  applyStaticTranslations();
+
+  if (!rerender) return;
+
+  hydrateLanding();
+  hydrateProfile(activeProfile);
+  refreshManifestStatus();
+  renderDemosFiltered();
+};
+
+const setupLocaleSwitchers = () => {
+  document.querySelectorAll("[data-locale-select]").forEach((node) => {
+    if (!(node instanceof HTMLSelectElement)) return;
+    if (node.dataset.localeBound === "true") return;
+
+    node.dataset.localeBound = "true";
+    node.addEventListener("change", () => {
+      const nextLocale = normalizeLocale(node.value) ?? DEFAULT_LOCALE;
+      setLocale(nextLocale, { persist: true, updateUrl: true, rerender: true });
+    });
+  });
 };
 
 const syncHeaderOffset = () => {
@@ -265,6 +1079,7 @@ const scrollToSectionWithOffset = (hash, behavior = "smooth") => {
   } else {
     window.scrollTo({ top: scrollTop, behavior });
   }
+
   if (history.replaceState) {
     history.replaceState(null, "", hash);
   } else {
@@ -321,29 +1136,32 @@ const setupBackToTop = () => {
 };
 
 const hydrateContentText = () => {
-  const targets = document.querySelectorAll("[data-content]");
-  targets.forEach((target) => {
+  const content = getLandingContent();
+  document.querySelectorAll("[data-content]").forEach((target) => {
     const key = target.getAttribute("data-content");
-    target.textContent = getByPath(LANDING_CONTENT, key);
+    target.textContent = getByPath(content, key);
   });
 };
 
 const renderCredibility = () => {
+  const content = getLandingContent();
   const list = document.getElementById("credibility-list");
   if (!list) return;
-  list.innerHTML = LANDING_CONTENT.credibility.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
+  list.innerHTML = content.credibility.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
 };
 
 const renderProblemList = () => {
+  const content = getLandingContent();
   const list = document.getElementById("problem-list");
   if (!list) return;
-  list.innerHTML = LANDING_CONTENT.problem.points.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
+  list.innerHTML = content.problem.points.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
 };
 
 const renderExperience = () => {
+  const content = getLandingContent();
   const grid = document.getElementById("experience-grid");
   if (!grid) return;
-  grid.innerHTML = LANDING_CONTENT.experience.cards
+  grid.innerHTML = content.experience.cards
     .map(
       (card) => `
       <article class="experience-card">
@@ -359,15 +1177,17 @@ const renderExperience = () => {
 };
 
 const renderHospitalityLines = () => {
+  const content = getLandingContent();
   const target = document.getElementById("hospitality-lines");
   if (!target) return;
-  target.innerHTML = LANDING_CONTENT.hospitality.lines.map((line) => `<p>${htmlEscape(line)}</p>`).join("");
+  target.innerHTML = content.hospitality.lines.map((line) => `<p>${htmlEscape(line)}</p>`).join("");
 };
 
 const renderImpact = () => {
+  const content = getLandingContent();
   const target = document.getElementById("impact-list");
   if (!target) return;
-  target.innerHTML = LANDING_CONTENT.impact.items
+  target.innerHTML = content.impact.items
     .map(
       (item) => `
       <li>
@@ -380,9 +1200,11 @@ const renderImpact = () => {
 };
 
 const renderTimeline = () => {
+  const content = getLandingContent();
+  const ui = getUiText();
   const target = document.getElementById("timeline-grid");
   if (!target) return;
-  const section = LANDING_CONTENT.howItWorks;
+  const section = content.howItWorks;
 
   target.innerHTML = `
     <div class="timeline-fork-merge">
@@ -402,7 +1224,7 @@ const renderTimeline = () => {
       </article>
       <article class="timeline-track timeline-track-shared">
         <h3>${htmlEscape(section.sharedTitle)}</h3>
-        <p>Both paths merge here.</p>
+        <p>${htmlEscape(ui.faq.mergeNote)}</p>
         <ol>
           ${section.sharedSteps.map((step) => `<li>${htmlEscape(step)}</li>`).join("")}
         </ol>
@@ -412,15 +1234,17 @@ const renderTimeline = () => {
 };
 
 const renderDeliverables = () => {
+  const content = getLandingContent();
   const target = document.getElementById("deliverables-list");
   if (!target) return;
-  target.innerHTML = LANDING_CONTENT.deliverables.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
+  target.innerHTML = content.deliverables.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
 };
 
 const renderPackages = () => {
+  const content = getLandingContent();
   const target = document.getElementById("package-grid");
   if (!target) return;
-  target.innerHTML = LANDING_CONTENT.collaboration.packages
+  target.innerHTML = content.collaboration.packages
     .map(
       (item) => `
       <article class="package-card">
@@ -437,10 +1261,11 @@ const renderPackages = () => {
 };
 
 const renderFaq = () => {
+  const content = getLandingContent();
   const target = document.getElementById("faq-list");
   if (!target) return;
 
-  target.innerHTML = LANDING_CONTENT.faq.items
+  target.innerHTML = content.faq.items
     .map(
       (item, index) => `
       <article class="faq-item">
@@ -524,80 +1349,105 @@ const toAbsoluteHref = (href) => {
   return `/${value.replace(/^\.?\//, "")}`;
 };
 
-const setManifestStatus = (message = "", visible = false) => {
+const refreshManifestStatus = () => {
   const status = document.getElementById("manifest-status");
   if (!status) return;
-  status.textContent = message;
-  status.hidden = !visible;
+
+  if (!manifestStatusState) {
+    status.hidden = true;
+    status.textContent = "";
+    return;
+  }
+
+  const ui = getUiText();
+  const template =
+    manifestStatusState.key === "fallback" ? ui.demos.statusFallback : ui.demos.statusError;
+  status.textContent = formatTemplate(template, manifestStatusState.params ?? {});
+  status.hidden = false;
+};
+
+const setManifestStatus = (key = null, params = {}) => {
+  manifestStatusState = key ? { key, params } : null;
+  refreshManifestStatus();
 };
 
 const updateCount = (visible, total) => {
+  const ui = getUiText();
   const count = document.getElementById("visible-count");
   if (!count) return;
-  count.textContent = `Showing ${visible} of ${total} demos`;
+  count.textContent = formatTemplate(ui.demos.countLabel, { visible, total });
 };
 
-const renderDemos = (demos) => {
+const renderDemoCards = (demos, total) => {
+  const ui = getUiText();
   const list = document.getElementById("demos-list");
   if (!list) return;
 
-  if (!Array.isArray(demos) || demos.length === 0) {
-    list.innerHTML =
-      '<li class="empty-state">No demos available yet. Publish exports to <code>/demos/</code> first.</li>';
+  if (total === 0) {
+    list.innerHTML = `<li class="empty-state">${htmlEscape(ui.demos.emptyState)}</li>`;
     updateCount(0, 0);
+    return;
+  }
+
+  if (!Array.isArray(demos) || demos.length === 0) {
+    list.innerHTML = `<li class="empty-state">${htmlEscape(ui.demos.noResults)}</li>`;
+    updateCount(0, total);
     return;
   }
 
   list.innerHTML = demos
     .map((demo, index) => {
-      const name = htmlEscape(demo?.name ?? demo?.folder ?? "Untitled demo");
+      const name = htmlEscape(demo?.name ?? demo?.folder ?? ui.demos.untitled);
       const href = htmlEscape(toAbsoluteHref(demo?.href ?? ""));
-      const folder = htmlEscape(demo?.folder ?? "Published demo");
+      const folder = htmlEscape(demo?.folder ?? ui.demos.publishedDemo);
       const search = htmlEscape(String(demo?.name ?? demo?.folder ?? "").toLowerCase());
       return `
         <li data-site-card data-search="${search}">
           <a class="demo-card" href="${href}" ${index === 0 ? 'data-featured-demo="true"' : ""}>
             <span class="demo-name">${name}</span>
             <span class="demo-meta">${folder}</span>
-            <span class="demo-cta">Open demo</span>
+            <span class="demo-cta">${htmlEscape(ui.demos.cardCta)}</span>
           </a>
         </li>
       `;
     })
     .join("");
 
-  updateCount(demos.length, demos.length);
+  updateCount(demos.length, total);
+};
+
+const renderDemosFiltered = () => {
+  const input = document.getElementById("demo-search");
+  const query = String(input?.value ?? "").trim().toLowerCase();
+
+  if (!Array.isArray(manifestEntries) || manifestEntries.length === 0) {
+    renderDemoCards([], 0);
+    return;
+  }
+
+  const filtered = manifestEntries.filter((demo) => {
+    const search = String(demo?.name ?? demo?.folder ?? "").toLowerCase();
+    return !query || search.includes(query);
+  });
+
+  renderDemoCards(filtered, manifestEntries.length);
 };
 
 const setupSearch = () => {
   const input = document.getElementById("demo-search");
-  const list = document.getElementById("demos-list");
-  if (!input || !list) return;
+  if (!input) return;
+  if (input.dataset.searchBound === "true") return;
 
-  const cards = Array.from(list.querySelectorAll("[data-site-card]"));
-  const total = cards.length;
-
-  const applyFilter = (value) => {
-    const query = String(value ?? "").trim().toLowerCase();
-    let visible = 0;
-
-    cards.forEach((card) => {
-      const search = card.getAttribute("data-search") ?? "";
-      const matches = !query || search.includes(query);
-      card.hidden = !matches;
-      if (matches) visible += 1;
-    });
-
-    updateCount(visible, total);
-  };
-
-  input.addEventListener("input", (event) => applyFilter(event.target.value));
+  input.dataset.searchBound = "true";
+  input.addEventListener("input", () => renderDemosFiltered());
 };
 
 const setupHeroDemoCta = () => {
   const trigger = document.getElementById("hero-demo-cta");
   if (!trigger) return;
+  if (trigger.dataset.demoBound === "true") return;
 
+  trigger.dataset.demoBound = "true";
   trigger.addEventListener("click", () => {
     window.setTimeout(() => {
       const featured = document.querySelector('[data-featured-demo="true"]');
@@ -626,14 +1476,16 @@ const loadProfile = async () => {
 
 const loadManifest = async () => {
   try {
-    return await fetchJson(manifestUrl);
+    const manifest = await fetchJson(manifestUrl);
+    setManifestStatus(null);
+    return manifest;
   } catch {
     try {
       const fallback = await fetchJson("./demos-manifest.example.json");
-      setManifestStatus(`Using local fallback manifest (${manifestUrl} unavailable).`, true);
+      setManifestStatus("fallback", { manifestUrl });
       return fallback;
     } catch {
-      setManifestStatus(`Could not load demos manifest from ${manifestUrl}.`, true);
+      setManifestStatus("error", { manifestUrl });
       return DEFAULT_MANIFEST;
     }
   }
@@ -642,26 +1494,24 @@ const loadManifest = async () => {
 const normalizePhoneToDigits = (phone) => String(phone ?? "").replace(/\D+/g, "");
 
 const hydrateProfile = (profile) => {
-  const merged = {
+  activeProfile = {
     ...DEFAULT_PROFILE,
     ...(profile ?? {})
   };
 
   const founder = document.getElementById("about-founder");
-  if (founder) founder.textContent = merged.name;
+  if (founder) founder.textContent = activeProfile.name;
 
   const emailLink = document.getElementById("contact-email-link");
   if (emailLink) {
-    emailLink.href = `mailto:${merged.email}`;
-    emailLink.textContent = merged.email;
+    emailLink.href = `mailto:${activeProfile.email}`;
+    emailLink.textContent = activeProfile.email;
   }
 
   const whatsapp = document.getElementById("contact-whatsapp-link");
   if (whatsapp) {
-    const digits = normalizePhoneToDigits(merged.phone);
-    if (digits) {
-      whatsapp.href = `https://wa.me/${digits}`;
-    }
+    const digits = normalizePhoneToDigits(activeProfile.phone);
+    if (digits) whatsapp.href = `https://wa.me/${digits}`;
   }
 
   const year = document.getElementById("year");
@@ -683,6 +1533,9 @@ const setupConsultationForm = () => {
   const form = document.getElementById("consultation-form");
   const submitButton = document.getElementById("consultation-submit");
   if (!form || !submitButton) return;
+  if (form.dataset.formBound === "true") return;
+
+  form.dataset.formBound = "true";
 
   const readPayload = () => {
     const data = new FormData(form);
@@ -703,34 +1556,32 @@ const setupConsultationForm = () => {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
+    const ui = getUiText();
     const payload = readPayload();
 
     if (!payload.name || !payload.email || !payload.message) {
-      setFormStatus("Please complete Name, Email, and Project Details.", "error");
+      setFormStatus(ui.form.statusRequired, "error");
       return;
     }
 
     if (!emailLooksValid(payload.email)) {
-      setFormStatus("Please provide a valid email address.", "error");
+      setFormStatus(ui.form.statusInvalidEmail, "error");
       return;
     }
 
     if (!payload.consent) {
-      setFormStatus("Please provide consent to continue.", "error");
+      setFormStatus(ui.form.statusNoConsent, "error");
       return;
     }
 
     if (!isEndpointConfigured()) {
-      setFormStatus(
-        "Consultation form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
-        "error"
-      );
+      setFormStatus(ui.form.statusEndpoint, "error");
       return;
     }
 
     submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
-    setFormStatus("Sending your request...");
+    submitButton.textContent = ui.form.submitSending;
+    setFormStatus(ui.form.statusSending);
 
     try {
       const response = await fetch(FORM_ENDPOINT, {
@@ -747,12 +1598,12 @@ const setupConsultationForm = () => {
       }
 
       form.reset();
-      setFormStatus("Thank you. Your consultation request has been sent.", "success");
+      setFormStatus(ui.form.statusSuccess, "success");
     } catch {
-      setFormStatus("Request failed. Please email us directly at k.ent@hotmail.com.", "error");
+      setFormStatus(ui.form.statusError, "error");
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = "Send Consultation Request";
+      submitButton.textContent = getUiText().form.submitIdle;
     }
   });
 };
@@ -797,11 +1648,16 @@ const hydrateLanding = () => {
 };
 
 const main = async () => {
+  currentLocale = resolveInitialLocale();
+  setupLocaleSwitchers();
+  setLocale(currentLocale, { persist: true, updateUrl: false, rerender: false });
+
   syncHeaderOffset();
   window.addEventListener("resize", syncHeaderOffset, { passive: true });
   if (document.fonts?.ready) {
     document.fonts.ready.then(syncHeaderOffset).catch(() => {});
   }
+
   setupStickyNavAnchors();
   setupBackToTop();
 
@@ -810,9 +1666,10 @@ const main = async () => {
 
   const [profile, manifest] = await Promise.all([loadProfile(), loadManifest()]);
   hydrateProfile(profile);
-  renderDemos(Array.isArray(manifest?.demos) ? manifest.demos : []);
+  manifestEntries = Array.isArray(manifest?.demos) ? manifest.demos : [];
 
   setupSearch();
+  renderDemosFiltered();
   setupHeroDemoCta();
   setupConsultationForm();
 };

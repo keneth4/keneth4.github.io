@@ -19,11 +19,11 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#hero">Skip to content</a>
+    <a class="skip-link" href="#hero" data-i18n="skipLink">Skip to content</a>
 
     <header class="site-header">
       <div class="container site-header-inner">
-        <a href="#hero" class="brand-mark" aria-label="Creativivid Studio home">
+        <a href="#hero" class="brand-mark" aria-label="Creativivid Studio home" data-i18n-aria-label="brandAria">
           <span class="brand-wordmark" aria-hidden="true">
             <img
               class="brand-wordmark-image brand-wordmark-transparent"
@@ -41,12 +41,26 @@
             />
           </span>
         </a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="#experience">Experience</a>
-          <a href="#demos">Demos</a>
-          <a href="#collaboration">Pricing</a>
-          <a href="#consultation">Consultation</a>
+        <nav class="site-nav" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#demos" data-i18n="nav.demos">Demos</a>
+          <a href="#collaboration" data-i18n="nav.pricing">Pricing</a>
+          <a href="#consultation" data-i18n="nav.consultation">Consultation</a>
         </nav>
+        <div class="locale-switch locale-switch-desktop">
+          <label class="locale-label" for="locale-select-desktop" data-i18n="locale.label">Language</label>
+          <select
+            id="locale-select-desktop"
+            class="locale-select"
+            data-locale-select
+            aria-label="Language"
+            data-i18n-aria-label="locale.label"
+          >
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="de">DE</option>
+          </select>
+        </div>
       </div>
     </header>
 
@@ -61,9 +75,23 @@
 
             <div class="hero-cta-row">
               <a id="hero-demo-cta" class="btn btn-primary" href="#demos" data-demo-jump>
-                View Interactive Demo
+                <span data-i18n="hero.ctaDemo">View Interactive Demo</span>
               </a>
-              <a class="btn btn-ghost" href="#consultation">Book a Consultation</a>
+              <a class="btn btn-ghost" href="#consultation" data-i18n="hero.ctaConsult">Book a Consultation</a>
+            </div>
+            <div class="locale-switch locale-switch-mobile">
+              <label class="locale-label" for="locale-select-mobile" data-i18n="locale.label">Language</label>
+              <select
+                id="locale-select-mobile"
+                class="locale-select"
+                data-locale-select
+                aria-label="Language"
+                data-i18n-aria-label="locale.label"
+              >
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+                <option value="de">DE</option>
+              </select>
             </div>
           </div>
 
@@ -78,9 +106,9 @@
             </div>
 
             <div class="hero-ui-layer" aria-hidden="true">
-              <span class="chip">9 menu languages</span>
-              <span class="chip">Dietary &amp; allergen tags</span>
-              <span class="chip subtle">Scroll to rotate</span>
+              <span class="chip" data-i18n="hero.chipLanguages">9 menu languages</span>
+              <span class="chip" data-i18n="hero.chipDietary">Dietary &amp; allergen tags</span>
+              <span class="chip subtle" data-i18n="hero.chipScroll">Scroll to rotate</span>
             </div>
           </div>
         </div>
@@ -127,8 +155,14 @@
           </div>
 
           <div class="search-wrap">
-            <label for="demo-search">Find a demo</label>
-            <input id="demo-search" type="search" placeholder="Type a demo name..." autocomplete="off" />
+            <label for="demo-search" data-i18n="demos.searchLabel">Find a demo</label>
+            <input
+              id="demo-search"
+              type="search"
+              placeholder="Type a demo name..."
+              data-i18n-placeholder="demos.searchPlaceholder"
+              autocomplete="off"
+            />
           </div>
 
           <ul class="demos-list" id="demos-list"></ul>
@@ -179,7 +213,9 @@
           <h2 data-content="collaboration.heading"></h2>
           <p class="section-intro" data-content="collaboration.body"></p>
           <div id="package-grid" class="package-grid"></div>
-          <a class="btn btn-primary package-cta" href="#consultation">Apply for a Consultation</a>
+          <a class="btn btn-primary package-cta" href="#consultation" data-i18n="collaboration.applyCta">
+            Apply for a Consultation
+          </a>
         </div>
       </section>
 
@@ -197,8 +233,12 @@
           <h2 data-content="about.heading"></h2>
           <p class="section-intro" data-content="about.body"></p>
           <p class="about-signature">
-            Founded by <strong id="about-founder">Keneth Ibarra</strong>, with international experience in Mexico, the
-            USA, and Germany across agency, enterprise, and product environments.
+            <span data-i18n="about.signaturePrefix">Founded by</span>
+            <strong id="about-founder">Keneth Ibarra</strong>,
+            <span data-i18n="about.signatureSuffix">
+              with international experience in Mexico, the USA, and Germany across agency, enterprise, and product
+              environments.
+            </span>
           </p>
         </div>
       </section>
@@ -210,7 +250,13 @@
             <p class="section-intro" data-content="consultation.body"></p>
             <div class="contact-links">
               <a id="contact-email-link" href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a>
-              <a id="contact-whatsapp-link" href="https://wa.me/4915257403004" target="_blank" rel="noopener noreferrer">
+              <a
+                id="contact-whatsapp-link"
+                href="https://wa.me/4915257403004"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="consultation.whatsappLabel"
+              >
                 WhatsApp
               </a>
             </div>
@@ -218,66 +264,74 @@
 
           <form id="consultation-form" class="consultation-form" novalidate>
             <label>
-              Name *
+              <span data-i18n="form.nameLabel">Name *</span>
               <input name="name" type="text" autocomplete="name" required />
             </label>
 
             <label>
-              Email *
+              <span data-i18n="form.emailLabel">Email *</span>
               <input name="email" type="email" autocomplete="email" required />
             </label>
 
             <label>
-              Restaurant / Brand
+              <span data-i18n="form.restaurantLabel">Restaurant / Brand</span>
               <input name="restaurant" type="text" autocomplete="organization" />
             </label>
 
             <label>
-              City / Country
+              <span data-i18n="form.cityCountryLabel">City / Country</span>
               <input name="city_country" type="text" autocomplete="address-level2" />
             </label>
 
             <label>
-              Budget Range
+              <span data-i18n="form.budgetLabel">Budget Range</span>
               <select name="budget_range">
-                <option value="">Select one...</option>
-                <option value="starter">Starter (€1,500 - €2,000)</option>
-                <option value="premium">Premium (€3,000 - €4,500)</option>
-                <option value="signature">Signature (€6,000+)</option>
-                <option value="custom">Custom scope / Not sure yet</option>
+                <option value="" data-i18n="form.budgetSelectOption">Select one...</option>
+                <option value="starter" data-i18n="form.budgetStarterOption">Starter (€1,500 - €2,000)</option>
+                <option value="premium" data-i18n="form.budgetPremiumOption">Premium (€3,000 - €4,500)</option>
+                <option value="signature" data-i18n="form.budgetSignatureOption">Signature (€6,000+)</option>
+                <option value="custom" data-i18n="form.budgetCustomOption">Custom scope / Not sure yet</option>
               </select>
             </label>
 
             <label>
-              Timeline
+              <span data-i18n="form.timelineLabel">Timeline</span>
               <select name="timeline">
-                <option value="">Select one...</option>
-                <option value="asap">As soon as possible</option>
-                <option value="1_2_months">In 1-2 months</option>
-                <option value="3_plus_months">In 3+ months</option>
-                <option value="exploring">Just exploring</option>
+                <option value="" data-i18n="form.timelineSelectOption">Select one...</option>
+                <option value="asap" data-i18n="form.timelineAsapOption">As soon as possible</option>
+                <option value="1_2_months" data-i18n="form.timelineSoonOption">In 1-2 months</option>
+                <option value="3_plus_months" data-i18n="form.timelineLaterOption">In 3+ months</option>
+                <option value="exploring" data-i18n="form.timelineExploringOption">Just exploring</option>
               </select>
             </label>
 
             <label>
-              Project Details *
+              <span data-i18n="form.detailsLabel">Project Details *</span>
               <textarea
                 name="message"
                 rows="5"
                 required
                 placeholder="Tell us about your concept, number of menu items, and goals."
+                data-i18n-placeholder="form.detailsPlaceholder"
               ></textarea>
             </label>
 
             <label class="consent-row">
               <input name="consent" type="checkbox" required />
               <span>
-                I consent to Creativivid Studio processing my information to respond to this inquiry and understand the
-                <a href="/privacy.html" target="_blank" rel="noopener noreferrer">privacy policy</a>.
+                <span data-i18n="form.consentPrefix">
+                  I consent to Creativivid Studio processing my information to respond to this inquiry and understand the
+                </span>
+                <a href="/privacy.html" target="_blank" rel="noopener noreferrer" data-privacy-link data-i18n="form.privacyLinkText">
+                  privacy policy
+                </a>
+                <span data-i18n="form.consentSuffix">.</span>
               </span>
             </label>
 
-            <button id="consultation-submit" type="submit" class="btn btn-primary">Send Consultation Request</button>
+            <button id="consultation-submit" type="submit" class="btn btn-primary" data-i18n="form.submitIdle">
+              Send Consultation Request
+            </button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -288,13 +342,21 @@
       <div class="container site-footer-inner">
         <div class="footer-brand">
           <img src="./Logo.png" alt="" aria-hidden="true" width="1080" height="1080" />
-          <p>© <span id="year"></span> Creativivid Studio. All rights reserved.</p>
+          <p>© <span id="year"></span> <span data-i18n="footer.copyrightBody">Creativivid Studio. All rights reserved.</span></p>
         </div>
-        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/privacy.html" data-privacy-link data-i18n="footer.privacyPolicy">Privacy Policy</a>
       </div>
     </footer>
 
-    <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top" aria-hidden="true" tabindex="-1">
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      type="button"
+      aria-label="Back to top"
+      data-i18n-aria-label="backToTopAria"
+      aria-hidden="true"
+      tabindex="-1"
+    >
       ↑
     </button>
 

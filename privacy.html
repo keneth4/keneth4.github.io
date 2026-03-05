@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="only light" />
+    <meta
+      name="description"
+      content="Privacy details for Creativivid Studio consultation requests and follow-up communication."
+    />
     <title>Privacy Policy | Creativivid Studio</title>
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -69,54 +73,212 @@
   </head>
   <body>
     <main class="wrap">
-      <h1>Privacy Policy</h1>
-      <p>
+      <h1 data-i18n="title">Privacy Policy</h1>
+      <p data-i18n="intro">
         This policy describes how Creativivid Studio processes personal data submitted through the consultation form on
         this website.
       </p>
 
-      <h2>1. Purpose of Data Processing</h2>
-      <p>
+      <h2 data-i18n="purposeTitle">1. Purpose of Data Processing</h2>
+      <p data-i18n="purposeBody">
         We collect contact and project information to review your inquiry, respond to your request, and discuss
         possible collaboration.
       </p>
 
-      <h2>2. Data We Process</h2>
+      <h2 data-i18n="dataTitle">2. Data We Process</h2>
       <ul>
-        <li>Name and email address</li>
-        <li>Restaurant/brand and location details</li>
-        <li>Budget/timeline context and project message</li>
+        <li data-i18n="dataLine1">Name and email address</li>
+        <li data-i18n="dataLine2">Restaurant/brand and location details</li>
+        <li data-i18n="dataLine3">Budget/timeline context and project message</li>
       </ul>
 
-      <h2>3. Legal Basis</h2>
-      <p>
+      <h2 data-i18n="legalTitle">3. Legal Basis</h2>
+      <p data-i18n="legalBody">
         Data is processed based on your explicit consent when submitting the consultation form and requesting contact.
       </p>
 
-      <h2>4. Retention</h2>
-      <p>
+      <h2 data-i18n="retentionTitle">4. Retention</h2>
+      <p data-i18n="retentionBody">
         We keep inquiry data only as long as needed for consultation and follow-up. If no collaboration proceeds, data
         is deleted within a reasonable period unless legal retention obligations apply.
       </p>
 
-      <h2>5. Your Rights</h2>
+      <h2 data-i18n="rightsTitle">5. Your Rights</h2>
       <p>
-        You may request access, correction, deletion, or restriction of your personal data by contacting
-        <a href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a>.
+        <span data-i18n="rightsPrefix">You may request access, correction, deletion, or restriction of your personal data by contacting </span>
+        <a href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a><span data-i18n="rightsSuffix">.</span>
       </p>
 
-      <h2>6. Third-Party Processor</h2>
-      <p>
+      <h2 data-i18n="processorTitle">6. Third-Party Processor</h2>
+      <p data-i18n="processorBody">
         Consultation form submissions may be routed through Formspree (form backend service). Their processing is
         governed by their own privacy and security policies.
       </p>
 
-      <h2>7. Contact</h2>
+      <h2 data-i18n="contactTitle">7. Contact</h2>
       <p>
-        For privacy questions, email <a href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a>.
+        <span data-i18n="contactPrefix">For privacy questions, email </span><a href="mailto:k.ent@hotmail.com">k.ent@hotmail.com</a
+        ><span data-i18n="contactSuffix">.</span>
       </p>
 
-      <p><a href="/">Back to homepage</a></p>
+      <p><a id="back-home" href="/" data-i18n="backHome">Back to homepage</a></p>
     </main>
+
+    <script>
+      const SUPPORTED_LOCALES = ["en", "es", "de"];
+      const DEFAULT_LOCALE = "en";
+      const LOCALE_STORAGE_KEY = "cv_locale";
+
+      const PRIVACY_CONTENT_BY_LOCALE = {
+        en: {
+          metaTitle: "Privacy Policy | Creativivid Studio",
+          metaDescription: "Privacy details for Creativivid Studio consultation requests and follow-up communication.",
+          title: "Privacy Policy",
+          intro:
+            "This policy describes how Creativivid Studio processes personal data submitted through the consultation form on this website.",
+          purposeTitle: "1. Purpose of Data Processing",
+          purposeBody:
+            "We collect contact and project information to review your inquiry, respond to your request, and discuss possible collaboration.",
+          dataTitle: "2. Data We Process",
+          dataLine1: "Name and email address",
+          dataLine2: "Restaurant/brand and location details",
+          dataLine3: "Budget/timeline context and project message",
+          legalTitle: "3. Legal Basis",
+          legalBody:
+            "Data is processed based on your explicit consent when submitting the consultation form and requesting contact.",
+          retentionTitle: "4. Retention",
+          retentionBody:
+            "We keep inquiry data only as long as needed for consultation and follow-up. If no collaboration proceeds, data is deleted within a reasonable period unless legal retention obligations apply.",
+          rightsTitle: "5. Your Rights",
+          rightsPrefix:
+            "You may request access, correction, deletion, or restriction of your personal data by contacting ",
+          rightsSuffix: ".",
+          processorTitle: "6. Third-Party Processor",
+          processorBody:
+            "Consultation form submissions may be routed through Formspree (form backend service). Their processing is governed by their own privacy and security policies.",
+          contactTitle: "7. Contact",
+          contactPrefix: "For privacy questions, email ",
+          contactSuffix: ".",
+          backHome: "Back to homepage"
+        },
+        es: {
+          metaTitle: "Política de privacidad | Creativivid Studio",
+          metaDescription: "Detalles de privacidad para solicitudes de consulta y seguimiento de Creativivid Studio.",
+          title: "Política de privacidad",
+          intro:
+            "Esta política describe cómo Creativivid Studio procesa los datos personales enviados mediante el formulario de consulta de este sitio.",
+          purposeTitle: "1. Finalidad del tratamiento de datos",
+          purposeBody:
+            "Recopilamos datos de contacto y del proyecto para revisar tu solicitud, responder tu consulta y conversar posibles colaboraciones.",
+          dataTitle: "2. Datos que procesamos",
+          dataLine1: "Nombre y correo electrónico",
+          dataLine2: "Detalles de restaurante/marca y ubicación",
+          dataLine3: "Contexto de presupuesto/plazo y mensaje del proyecto",
+          legalTitle: "3. Base legal",
+          legalBody:
+            "Los datos se procesan sobre la base de tu consentimiento explícito al enviar el formulario y solicitar contacto.",
+          retentionTitle: "4. Conservación",
+          retentionBody:
+            "Conservamos los datos solo el tiempo necesario para consulta y seguimiento. Si no avanza una colaboracion, eliminamos los datos en un plazo razonable, salvo obligaciones legales.",
+          rightsTitle: "5. Tus derechos",
+          rightsPrefix:
+            "Puedes solicitar acceso, corrección, eliminación o limitación de tus datos personales escribiendo a ",
+          rightsSuffix: ".",
+          processorTitle: "6. Procesador externo",
+          processorBody:
+            "Las solicitudes del formulario pueden enviarse a través de Formspree (servicio backend del formulario). Su procesamiento se rige por sus propias políticas de privacidad y seguridad.",
+          contactTitle: "7. Contacto",
+          contactPrefix: "Para preguntas de privacidad, escribe a ",
+          contactSuffix: ".",
+          backHome: "Volver al inicio"
+        },
+        de: {
+          metaTitle: "Datenschutz | Creativivid Studio",
+          metaDescription: "Datenschutzdetails für Beratungsanfragen und Follow-up bei Creativivid Studio.",
+          title: "Datenschutz",
+          intro:
+            "Diese Richtlinie beschreibt, wie Creativivid Studio personenbezogene Daten verarbeitet, die über das Beratungsformular dieser Website übermittelt werden.",
+          purposeTitle: "1. Zweck der Datenverarbeitung",
+          purposeBody:
+            "Wir erfassen Kontakt- und Projektdaten, um deine Anfrage zu prüfen, zu antworten und mögliche Zusammenarbeit zu besprechen.",
+          dataTitle: "2. Welche Daten wir verarbeiten",
+          dataLine1: "Name und E-Mail-Adresse",
+          dataLine2: "Restaurant-/Markenangaben und Standortdaten",
+          dataLine3: "Budget-/Zeitkontext und Projektnachricht",
+          legalTitle: "3. Rechtsgrundlage",
+          legalBody:
+            "Die Datenverarbeitung erfolgt auf Basis deiner ausdrücklichen Einwilligung beim Absenden des Formulars.",
+          retentionTitle: "4. Aufbewahrung",
+          retentionBody:
+            "Wir speichern Anfragedaten nur so lange, wie sie für Beratung und Follow-up erforderlich sind. Wenn keine Zusammenarbeit zustande kommt, werden Daten innerhalb eines angemessenen Zeitraums gelöscht, sofern keine gesetzlichen Pflichten entgegenstehen.",
+          rightsTitle: "5. Deine Rechte",
+          rightsPrefix:
+            "Du kannst Auskunft, Berichtigung, Löschung oder Einschränkung deiner personenbezogenen Daten anfordern unter ",
+          rightsSuffix: ".",
+          processorTitle: "6. Externer Verarbeiter",
+          processorBody:
+            "Formularanfragen können über Formspree (Formular-Backend-Service) übermittelt werden. Deren Verarbeitung richtet sich nach den eigenen Datenschutz- und Sicherheitsrichtlinien.",
+          contactTitle: "7. Kontakt",
+          contactPrefix: "Bei Datenschutzfragen schreibe an ",
+          contactSuffix: ".",
+          backHome: "Zurück zur Startseite"
+        }
+      };
+
+      const normalizeLocale = (value) => {
+        if (!value) return null;
+        const normalized = String(value).trim().toLowerCase();
+        if (!normalized) return null;
+        const primary = normalized.replace("_", "-").split("-")[0];
+        return SUPPORTED_LOCALES.includes(primary) ? primary : null;
+      };
+
+      const readLocaleFromUrl = () => {
+        const params = new URLSearchParams(window.location.search);
+        return normalizeLocale(params.get("lang"));
+      };
+
+      const readLocaleFromStorage = () => {
+        try {
+          return normalizeLocale(window.localStorage.getItem(LOCALE_STORAGE_KEY));
+        } catch {
+          return null;
+        }
+      };
+
+      const readLocaleFromNavigator = () => {
+        const candidates = Array.isArray(navigator.languages) && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language];
+        for (const candidate of candidates) {
+          const normalized = normalizeLocale(candidate);
+          if (normalized) return normalized;
+        }
+        return null;
+      };
+
+      const locale = readLocaleFromUrl() ?? readLocaleFromStorage() ?? readLocaleFromNavigator() ?? DEFAULT_LOCALE;
+      const content = PRIVACY_CONTENT_BY_LOCALE[locale] ?? PRIVACY_CONTENT_BY_LOCALE[DEFAULT_LOCALE];
+
+      try {
+        window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+      } catch {
+        // ignore storage failures
+      }
+
+      document.documentElement.lang = locale;
+      document.title = content.metaTitle;
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.setAttribute("content", content.metaDescription);
+
+      document.querySelectorAll("[data-i18n]").forEach((node) => {
+        const key = node.getAttribute("data-i18n");
+        const value = content[key];
+        if (typeof value === "string") node.textContent = value;
+      });
+
+      const backHome = document.getElementById("back-home");
+      if (backHome) backHome.href = `/?lang=${encodeURIComponent(locale)}`;
+    </script>
   </body>
 </html>
