@@ -1,4 +1,4 @@
-const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID";
+const FORM_ENDPOINT = "https://formspree.io/f/xjgabebv";
 const FORM_ENDPOINT_PLACEHOLDER = "REPLACE_WITH_YOUR_FORM_ID";
 
 const SUPPORTED_LOCALES = ["en", "es", "de"];
