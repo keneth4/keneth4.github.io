@@ -351,6 +351,7 @@ section[id] {
   margin-top: 0.9rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.52rem;
 }
 

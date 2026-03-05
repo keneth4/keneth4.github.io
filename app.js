@@ -16,6 +16,21 @@ const SPRITE_META = {
   rows: 6,
   totalFrames: 60
 };
+const DEMO_PARITY_PIXELS_PER_FRAME = {
+  coarse: 7,
+  fine: 4
+};
+const SPRITE_CUE_PROFILE_CALM = {
+  forwardMs: 420,
+  returnMs: 480,
+  turnPauseMs: 320,
+  offsetRatio: 0.1,
+  minOffsetFrames: 3,
+  loopIdleMs: 5200,
+  startDelayMs: 1200,
+  resumeDelayMs: 1200,
+  hintReshowIdleMs: 15000
+};
 
 const LANDING_CONTENT_BY_LOCALE = {
   en: {
@@ -1120,6 +1135,11 @@ const delayIfActive = (durationMs, isCancelled) =>
     }
   });
 
+const getDemoParityPixelsPerFrame = () =>
+  window.matchMedia("(pointer: coarse)").matches
+    ? DEMO_PARITY_PIXELS_PER_FRAME.coarse
+    : DEMO_PARITY_PIXELS_PER_FRAME.fine;
+
 const normalizeLocale = (value) => {
   if (!value) return null;
   const normalized = String(value).trim().toLowerCase();
@@ -1370,7 +1390,6 @@ const renderExperience = () => {
     .map((card) => {
       const mediaType = card.mediaType ?? "poster";
       const mediaKey = getSchnitzelAssetKeyBySrc(card.src);
-      const showHint = mediaType === "spriteSheet";
       const canvasMarkup =
         mediaType === "spriteSheet"
           ? '<canvas class="landing-media-canvas experience-media-canvas" data-experience-media-canvas hidden></canvas>'
@@ -1384,7 +1403,6 @@ const renderExperience = () => {
           </div>
           <img class="landing-media-fallback experience-media-image" src="${htmlEscape(SCHNITZEL_ASSETS.poster)}" alt="${htmlEscape(card.alt)}" loading="lazy" decoding="async" draggable="false" />
           ${canvasMarkup}
-          ${showHint ? `<span class="landing-media-drag-hint">${htmlEscape(ui.hero.dragHint)}</span>` : ""}
         </div>
         <div class="experience-card-body">
           <h3>${htmlEscape(card.title)}</h3>
@@ -1451,7 +1469,10 @@ const createSpriteStageController = ({
   hintNode,
   assetKey,
   spriteMeta = SPRITE_META,
-  cueEnabled = true
+  cueEnabled = true,
+  interactiveEnabled = true,
+  cueProfile = SPRITE_CUE_PROFILE_CALM,
+  hintReshowIdleMs
 }) => {
   if (!stage || !(canvas instanceof HTMLCanvasElement)) return () => {};
   const context = canvas.getContext("2d", { alpha: true });
@@ -1462,10 +1483,14 @@ const createSpriteStageController = ({
 
   let disposed = false;
   let dragging = false;
-  let hintDismissed = false;
+  let hintIdleTimer = null;
   let detachDrag = null;
   let cueTimer = null;
   let cueToken = 0;
+  const resolvedCueProfile = { ...SPRITE_CUE_PROFILE_CALM, ...(cueProfile ?? {}) };
+  const resolvedHintReshowIdleMs = Number.isFinite(Number(hintReshowIdleMs))
+    ? Number(hintReshowIdleMs)
+    : resolvedCueProfile.hintReshowIdleMs;
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
   const frameCount = Math.max(
     2,
@@ -1475,7 +1500,10 @@ const createSpriteStageController = ({
     )
   );
   const centerFrame = Math.floor(frameCount / 2);
-  const cueOffset = Math.max(4, Math.round(frameCount * 0.18));
+  const cueOffset = Math.max(
+    Number(resolvedCueProfile.minOffsetFrames) || 3,
+    Math.round(frameCount * (Number(resolvedCueProfile.offsetRatio) || 0.1))
+  );
   let frameCursor = centerFrame;
   const unsubscribe = subscribeToAssetState(assetKey, (state) => {
     if (disposed) return;
@@ -1493,10 +1521,31 @@ const createSpriteStageController = ({
     if (fallbackImage instanceof HTMLElement) fallbackImage.classList.add("is-hidden");
   };
 
-  const dismissHint = () => {
-    if (hintDismissed || !(hintNode instanceof HTMLElement)) return;
-    hintDismissed = true;
+  const clearHintTimer = () => {
+    if (hintIdleTimer) {
+      window.clearTimeout(hintIdleTimer);
+      hintIdleTimer = null;
+    }
+  };
+
+  const showHint = () => {
+    if (!(hintNode instanceof HTMLElement)) return;
+    hintNode.classList.remove("is-hidden");
+  };
+
+  const hideHint = () => {
+    if (!(hintNode instanceof HTMLElement)) return;
     hintNode.classList.add("is-hidden");
+  };
+
+  const scheduleHintReshow = () => {
+    if (!(hintNode instanceof HTMLElement)) return;
+    clearHintTimer();
+    hintIdleTimer = window.setTimeout(() => {
+      hintIdleTimer = null;
+      if (disposed || dragging) return;
+      showHint();
+    }, resolvedHintReshowIdleMs);
   };
 
   const clearCue = () => {
@@ -1520,7 +1569,7 @@ const createSpriteStageController = ({
     context.drawImage(spriteImage, sx, sy, frameWidth, frameHeight, 0, 0, canvas.width, canvas.height);
   };
 
-  const scheduleCue = (spriteImage, delayMs = 900) => {
+  const scheduleCue = (spriteImage, delayMs = resolvedCueProfile.startDelayMs) => {
     if (disposed || prefersReducedMotion || !cueEnabled) return;
     clearCue();
     const token = cueToken;
@@ -1532,29 +1581,29 @@ const createSpriteStageController = ({
 
   const runCue = async (spriteImage, token) => {
     const cancelled = () => disposed || dragging || token !== cueToken;
-    const targetFrame = Math.min(frameCount - 1, centerFrame + cueOffset);
+    const cueBaseFrame = frameCursor;
+    const cueTargetFrame = cueBaseFrame + cueOffset;
     for (let repeat = 0; repeat < 2; repeat += 1) {
-      const forward = await animateValue(frameCursor, targetFrame, 460, (value) => {
+      const forward = await animateValue(cueBaseFrame, cueTargetFrame, resolvedCueProfile.forwardMs, (value) => {
         frameCursor = value;
         drawFrame(spriteImage, frameCursor);
       }, cancelled);
       if (!forward) return;
 
-      const back = await animateValue(frameCursor, centerFrame, 540, (value) => {
+      const back = await animateValue(cueTargetFrame, cueBaseFrame, resolvedCueProfile.returnMs, (value) => {
         frameCursor = value;
         drawFrame(spriteImage, frameCursor);
       }, cancelled);
       if (!back) return;
 
-      const waited = await delayIfActive(160, cancelled);
+      const waited = await delayIfActive(resolvedCueProfile.turnPauseMs, cancelled);
       if (!waited) return;
     }
 
-    dismissHint();
     cueTimer = window.setTimeout(() => {
       if (cancelled()) return;
       void runCue(spriteImage, token);
-    }, 3000);
+    }, resolvedCueProfile.loopIdleMs);
   };
 
   setMediaStageState(stage, "loading");
@@ -1568,27 +1617,39 @@ const createSpriteStageController = ({
       drawFrame(spriteImage, frameCursor);
       canvas.hidden = false;
       hideFallback();
-      stage.classList.add("is-interactive-ready");
+      if (interactiveEnabled) {
+        stage.classList.add("is-interactive-ready");
+      } else {
+        stage.classList.remove("is-interactive-ready");
+      }
       setMediaStageState(stage, "ready");
 
-      detachDrag = attachDemoParityDragInteractions(canvas, {
-        onStart: () => {
-          dragging = true;
-          dismissHint();
-          clearCue();
-        },
-        onMove: (deltaX) => {
-          const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches ? 7 : 4;
-          frameCursor += (deltaX / pixelsPerFrame) * -1;
-          drawFrame(spriteImage, frameCursor);
-        },
-        onEnd: () => {
-          dragging = false;
-          scheduleCue(spriteImage, 1100);
-        }
-      });
+      showHint();
+      if (interactiveEnabled) {
+        detachDrag = attachDemoParityDragInteractions(canvas, {
+          onStart: () => {
+            dragging = true;
+            hideHint();
+            scheduleHintReshow();
+            clearCue();
+          },
+          onMove: (deltaX) => {
+            const pixelsPerFrame = getDemoParityPixelsPerFrame();
+            frameCursor += (deltaX / pixelsPerFrame) * -1;
+            drawFrame(spriteImage, frameCursor);
+            hideHint();
+            scheduleHintReshow();
+          },
+          onEnd: () => {
+            dragging = false;
+            hideHint();
+            scheduleHintReshow();
+            scheduleCue(spriteImage, resolvedCueProfile.startDelayMs);
+          }
+        });
+      }
 
-      scheduleCue(spriteImage, 700);
+      scheduleCue(spriteImage, resolvedCueProfile.startDelayMs);
     })
     .catch(() => {
       if (disposed) return;
@@ -1602,8 +1663,10 @@ const createSpriteStageController = ({
     disposed = true;
     unsubscribe();
     clearCue();
+    clearHintTimer();
     if (detachDrag) detachDrag();
     canvas.hidden = true;
+    hideHint();
     stage.classList.remove("is-interactive-ready");
     showFallback();
   };
@@ -1646,7 +1709,10 @@ const setupHeroMediaStage = () => {
     hintNode,
     assetKey: "spriteHq",
     spriteMeta: SPRITE_META,
-    cueEnabled: true
+    cueEnabled: true,
+    interactiveEnabled: true,
+    cueProfile: SPRITE_CUE_PROFILE_CALM,
+    hintReshowIdleMs: SPRITE_CUE_PROFILE_CALM.hintReshowIdleMs
   });
   landingMediaDisposers.push(dispose);
 };
@@ -1663,15 +1729,16 @@ const setupExperienceMediaStages = () => {
 
       if (mediaType === "spriteSheet") {
         const canvas = stage.querySelector("[data-experience-media-canvas]");
-        const hintNode = stage.querySelector(".landing-media-drag-hint");
         const dispose = createSpriteStageController({
           stage,
           fallbackImage: imageNode,
           canvas,
-          hintNode,
+          hintNode: null,
           assetKey: mediaKey,
           spriteMeta: SPRITE_META,
-          cueEnabled: true
+          cueEnabled: true,
+          interactiveEnabled: false,
+          cueProfile: SPRITE_CUE_PROFILE_CALM
         });
         landingMediaDisposers.push(dispose);
         return;
