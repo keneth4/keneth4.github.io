@@ -63,6 +63,10 @@ body {
   backface-visibility: hidden;
 }
 
+.menu-preview.is-modal-frozen {
+  pointer-events: none;
+}
+
 .menu-background {
   position: absolute;
   inset: 0;
@@ -661,6 +665,12 @@ body {
   scroll-behavior: smooth;
   scroll-padding-block: 20px;
   scrollbar-width: none;
+}
+
+.menu-preview.is-modal-frozen .menu-scroll {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
 }
 
 .menu-scroll.menu-scroll--recoil {

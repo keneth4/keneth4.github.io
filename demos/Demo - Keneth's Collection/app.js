@@ -63,6 +63,7 @@ let activeBackgroundIndex =
     : 0;
 let backgroundTimer;
 let applyBackgroundState = () => {};
+let restartBackgroundRotation = () => {};
 const injectedFontFaceKeys = new Set();
 const injectedFontLinks = new Set();
 const app = document.getElementById("app");
@@ -122,9 +123,11 @@ const resolveDebugFlickerRenderer = () => {
 let modalMediaCleanup = null;
 let modalMediaToken = 0;
 let activeModalInteractiveAsset = null;
+let interactiveModalSurfaceFrozen = false;
 let debugFlickerPreset = resolveDebugFlickerPreset();
 let debugFlickerRenderer = resolveDebugFlickerRenderer();
 let debugFlickerResolvedRenderer = "fallback-image";
+let debugFlickerBlockedCount = 0;
 let appliedDebugFlickerPresetClass = "";
 let carouselCleanup = [];
 let startupLoading = true;
@@ -157,6 +160,9 @@ const sectionBackgroundPreloadImages = [];
 let detailRotateDirection = -1;
 const jukeboxWheelState = new Map();
 const focusRowWheelState = new Map();
+let verticalSectionFocusRaf = 0;
+let verticalSectionSnapTimeout = 0;
+let horizontalSectionSnapTimeout = 0;
 
 const textOf = (entry) => entry?.[locale] ?? entry?.[DATA.meta.defaultLocale] ?? "";
 const menuTerms = {"es":{"allergens":"Alérgenos","spice":"Picante"},"en":{"allergens":"Allergens","spice":"Spice"},"fr":{"allergens":"Allergènes","spice":"Épicé"},"pt":{"allergens":"Alergênicos","spice":"Picante"},"it":{"allergens":"Allergeni","spice":"Piccante"},"de":{"allergens":"Allergene","spice":"Scharf"},"ja":{"allergens":"アレルゲン","spice":"辛さ"},"ko":{"allergens":"알레르겐","spice":"매운맛"},"zh":{"allergens":"过敏原","spice":"辣度"}};
@@ -417,6 +423,7 @@ const getSectionBackgroundIndexByCategoryId = (categoryId) => {
   return -1;
 };
 const syncBackgroundForSectionIndex = (index) => {
+  if (interactiveModalSurfaceFrozen) return;
   if (backgroundDisplayMode !== "section") return;
   const category = DATA.categories[index];
   if (!category) return;
@@ -804,6 +811,12 @@ const renderDebugFlickerHud = () => {
     '<span data-debug-flicker-resolved>Renderer: ' +
     escapeHtml(debugFlickerResolvedRenderer) +
     "</span>" +
+    '<span data-debug-flicker-freeze>Freeze: ' +
+    escapeHtml(interactiveModalSurfaceFrozen ? "active" : "inactive") +
+    "</span>" +
+    '<span data-debug-flicker-blocked>Blocked: ' +
+    escapeHtml(String(debugFlickerBlockedCount)) +
+    "</span>" +
     "</div>" +
     '<div class="dish-modal__flicker-debug-controls">' +
     '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="preset">Preset</button>' +
@@ -818,9 +831,98 @@ const updateDebugFlickerHud = () => {
   const preset = modalContent.querySelector("[data-debug-flicker-preset]");
   const renderer = modalContent.querySelector("[data-debug-flicker-renderer]");
   const resolved = modalContent.querySelector("[data-debug-flicker-resolved]");
+  const freeze = modalContent.querySelector("[data-debug-flicker-freeze]");
+  const blocked = modalContent.querySelector("[data-debug-flicker-blocked]");
   if (preset) preset.textContent = "Preset: " + debugFlickerPreset;
   if (renderer) renderer.textContent = "Override: " + debugFlickerRenderer;
   if (resolved) resolved.textContent = "Renderer: " + debugFlickerResolvedRenderer;
+  if (freeze) freeze.textContent = "Freeze: " + (interactiveModalSurfaceFrozen ? "active" : "inactive");
+  if (blocked) blocked.textContent = "Blocked: " + String(debugFlickerBlockedCount);
+};
+const recordFrozenSurfaceBlockedEvent = () => {
+  if (!interactiveModalSurfaceFrozen) return;
+  debugFlickerBlockedCount += 1;
+  updateDebugFlickerHud();
+};
+const blockFrozenEvent = (event) => {
+  if (!interactiveModalSurfaceFrozen) return false;
+  event.preventDefault?.();
+  event.stopPropagation?.();
+  if (typeof event.stopImmediatePropagation === "function") {
+    event.stopImmediatePropagation();
+  }
+  recordFrozenSurfaceBlockedEvent();
+  return true;
+};
+const shouldBlockFrozenModalSurfaceEvent = (target) => {
+  if (!interactiveModalSurfaceFrozen || !(target instanceof Element)) return false;
+  return Boolean(target.closest(".dish-modal__media, .dish-modal__backdrop, .dish-modal__flicker-debug"));
+};
+const clearRuntimeSurfaceTransientState = () => {
+  if (verticalSectionFocusRaf) {
+    cancelAnimationFrame(verticalSectionFocusRaf);
+    verticalSectionFocusRaf = 0;
+  }
+  if (verticalSectionSnapTimeout) {
+    window.clearTimeout(verticalSectionSnapTimeout);
+    verticalSectionSnapTimeout = 0;
+  }
+  if (horizontalSectionSnapTimeout) {
+    window.clearTimeout(horizontalSectionSnapTimeout);
+    horizontalSectionSnapTimeout = 0;
+  }
+  Array.from(recoilResetTimers.values()).forEach((timer) => {
+    window.clearTimeout(timer);
+  });
+  recoilResetTimers.clear();
+  const scroll = app.querySelector(".menu-scroll");
+  scroll?.classList.remove("menu-scroll--recoil");
+  scroll?.style.removeProperty("--menu-recoil-x");
+  scroll?.style.removeProperty("--menu-recoil-y");
+  jukeboxWheelState.forEach((state) => {
+    if (state.settle) {
+      window.clearTimeout(state.settle);
+      state.settle = 0;
+    }
+    state.touch = null;
+    state.sectionCarry = 0;
+    state.sectionLockUntil = 0;
+    state.sectionGestureUntil = 0;
+    state.sectionGestureConsumed = false;
+  });
+  focusRowWheelState.forEach((state) => {
+    if (state.settle) {
+      window.clearTimeout(state.settle);
+      state.settle = 0;
+    }
+    state.touch = null;
+  });
+};
+const syncInteractiveModalSurfaceFrozenState = () => {
+  const preview = app.querySelector(".menu-preview");
+  preview?.classList.toggle("is-modal-frozen", interactiveModalSurfaceFrozen);
+  updateDebugFlickerHud();
+};
+const stopBackgroundRotation = () => {
+  if (backgroundTimer) {
+    window.clearInterval(backgroundTimer);
+    backgroundTimer = undefined;
+  }
+};
+const setInteractiveModalSurfaceFrozen = (next) => {
+  if (interactiveModalSurfaceFrozen === next) {
+    syncInteractiveModalSurfaceFrozenState();
+    return;
+  }
+  interactiveModalSurfaceFrozen = next;
+  if (interactiveModalSurfaceFrozen) {
+    debugFlickerBlockedCount = 0;
+    clearRuntimeSurfaceTransientState();
+    stopBackgroundRotation();
+  } else {
+    restartBackgroundRotation();
+  }
+  syncInteractiveModalSurfaceFrozenState();
 };
 const refreshInteractiveModalRenderer = () => {
   if (!activeModalInteractiveAsset || !modal?.classList.contains("open")) {
@@ -1656,7 +1758,7 @@ const render = () => {
   }
   ensureFont();
   app.innerHTML = `
-    <div class="menu-preview ${templateClass} ${backgroundModeClass} ${startupLoading ? "is-loading" : ""}">
+    <div class="menu-preview ${templateClass} ${backgroundModeClass} ${startupLoading ? "is-loading" : ""} ${interactiveModalSurfaceFrozen ? "is-modal-frozen" : ""}">
       <div class="menu-startup-loader ${startupLoading ? "active" : ""}">
         <div class="menu-startup-loader__card">
           <p class="menu-startup-loader__label">${getLoadingLabel()}</p>
@@ -1852,7 +1954,7 @@ const render = () => {
       layer.dataset.bgLoaded = "1";
     });
   };
-  const startBackgroundRotation = () => {
+  restartBackgroundRotation = () => {
     if (backgroundTimer) {
       window.clearInterval(backgroundTimer);
       backgroundTimer = undefined;
@@ -1884,7 +1986,7 @@ const render = () => {
     }, backgroundRotationMs);
   };
   applyBackgroundState();
-  startBackgroundRotation();
+  restartBackgroundRotation();
   const localeSelect = document.getElementById("menu-locale");
   localeSelect?.addEventListener("pointerdown", () => {
     dismissRuntimeGuidance();
@@ -1982,6 +2084,10 @@ const refreshVisibleCarouselMedia = () => {
 };
 
 const shiftCarousel = (categoryId, direction) => {
+  if (interactiveModalSurfaceFrozen) {
+    recordFrozenSurfaceBlockedEvent();
+    return;
+  }
   const container = app.querySelector(
     '.menu-carousel[data-category-id="' + categoryId + '"]'
   );
@@ -2061,8 +2167,12 @@ const centerSectionHorizontally = (container, index, behavior = "smooth") => {
   container.scrollTo({ left: targetLeft, behavior });
 };
 
-const recoilResetTimers = new WeakMap();
+const recoilResetTimers = new Map();
 const triggerSectionBoundaryRecoil = (container, axis, direction) => {
+  if (interactiveModalSurfaceFrozen) {
+    recordFrozenSurfaceBlockedEvent();
+    return;
+  }
   if (!container) return;
   const activeTimer = recoilResetTimers.get(container);
   if (activeTimer) {
@@ -2086,6 +2196,10 @@ const triggerSectionBoundaryRecoil = (container, axis, direction) => {
 };
 
 const shiftSection = (direction) => {
+  if (interactiveModalSurfaceFrozen) {
+    recordFrozenSurfaceBlockedEvent();
+    return;
+  }
   const container = app.querySelector(".menu-scroll");
   if (!container) return;
   const sections = Array.from(container.querySelectorAll(".menu-section"));
@@ -2278,6 +2392,10 @@ const bindCarousels = () => {
         queueSnap();
       };
       const onWheel = (event) => {
+        if (interactiveModalSurfaceFrozen) {
+          blockFrozenEvent(event);
+          return;
+        }
         const absX = Math.abs(event.deltaX);
         const absY = Math.abs(event.deltaY);
         if (absX <= 1 && absY <= 1) return;
@@ -2336,6 +2454,10 @@ const bindCarousels = () => {
         applyDelta(delta);
       };
       const onTouchStart = (event) => {
+        if (interactiveModalSurfaceFrozen) {
+          recordFrozenSurfaceBlockedEvent();
+          return;
+        }
         const touch = event.changedTouches?.[0];
         if (!touch) return;
         state.touch = {
@@ -2347,6 +2469,10 @@ const bindCarousels = () => {
         };
       };
       const onTouchMove = (event) => {
+        if (interactiveModalSurfaceFrozen) {
+          blockFrozenEvent(event);
+          return;
+        }
         if (!state.touch) return;
         const touch = Array.from(event.touches || []).find(
           (entry) => entry.identifier === state.touch.id
@@ -2427,6 +2553,10 @@ const bindCarousels = () => {
       queueSnap();
     };
     const onWheel = (event) => {
+      if (interactiveModalSurfaceFrozen) {
+        blockFrozenEvent(event);
+        return;
+      }
       if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
       event.preventDefault();
       dismissRuntimeGuidance();
@@ -2435,6 +2565,10 @@ const bindCarousels = () => {
       applyDelta(delta);
     };
     const onTouchStart = (event) => {
+      if (interactiveModalSurfaceFrozen) {
+        recordFrozenSurfaceBlockedEvent();
+        return;
+      }
       const touch = event.changedTouches?.[0];
       if (!touch) return;
       state.touch = {
@@ -2446,6 +2580,10 @@ const bindCarousels = () => {
       };
     };
     const onTouchMove = (event) => {
+      if (interactiveModalSurfaceFrozen) {
+        blockFrozenEvent(event);
+        return;
+      }
       if (!state.touch) return;
       const touch = Array.from(event.touches || []).find(
         (entry) => entry.identifier === state.touch.id
@@ -2499,10 +2637,18 @@ const bindRuntimeGuidanceDismissal = () => {
   const scroll = app.querySelector(".menu-scroll");
   if (!scroll) return;
   const onWheel = (event) => {
+    if (interactiveModalSurfaceFrozen) {
+      blockFrozenEvent(event);
+      return;
+    }
     if (Math.abs(event.deltaX) <= 1 && Math.abs(event.deltaY) <= 1) return;
     dismissRuntimeGuidance();
   };
   const onScroll = () => {
+    if (interactiveModalSurfaceFrozen) {
+      recordFrozenSurfaceBlockedEvent();
+      return;
+    }
     dismissRuntimeGuidance();
   };
   scroll.addEventListener("wheel", onWheel, { passive: true });
@@ -2534,6 +2680,7 @@ const bindCards = () => {
       const badgeHtml = renderBadgeList(dish, "dish-modal__badges");
       const asset = getInteractiveDetailAsset(dish);
       activeModalInteractiveAsset = asset && supportsInteractiveMedia() ? asset : null;
+      setInteractiveModalSurfaceFrozen(Boolean(activeModalInteractiveAsset));
       debugFlickerResolvedRenderer = "fallback-image";
       detailRotateDirection = getDishRotateDirection(dish);
       modalContent.style.cssText = getItemFontStyle(dish);
@@ -2544,7 +2691,7 @@ const bindCards = () => {
           <button class="dish-modal__close" id="modal-close">✕</button>
         </div>
         <div class="dish-modal__media">
-          ${asset && supportsInteractiveMedia() && !runtimeGuidanceCaptureMode
+          ${activeModalInteractiveAsset && !runtimeGuidanceCaptureMode
             ? '<div class="dish-modal__interactive-guidance is-hidden" aria-hidden="true">' +
               '<img class="dish-modal__interactive-guidance-image" src="' +
               RUNTIME_GUIDANCE_ASSETS.hero360Monolithic +
@@ -2624,15 +2771,18 @@ const bindSectionFocus = () => {
   if (sections.length === 0) return;
   if (isJukeboxTemplate()) {
     if (scroll.scrollWidth <= scroll.clientWidth + 4) return;
-    let snapTimeout;
     const onScroll = () => {
+      if (interactiveModalSurfaceFrozen) {
+        recordFrozenSurfaceBlockedEvent();
+        return;
+      }
       dismissRuntimeGuidance();
       const closestIndex = getClosestHorizontalSectionIndex(scroll);
       if (closestIndex >= 0) {
         syncBackgroundForSectionIndex(closestIndex);
       }
-      if (snapTimeout) window.clearTimeout(snapTimeout);
-      snapTimeout = window.setTimeout(() => {
+      if (horizontalSectionSnapTimeout) window.clearTimeout(horizontalSectionSnapTimeout);
+      horizontalSectionSnapTimeout = window.setTimeout(() => {
         const snapIndex = getClosestHorizontalSectionIndex(scroll);
         if (snapIndex >= 0) {
           centerSectionHorizontally(scroll, snapIndex, "smooth");
@@ -2643,31 +2793,38 @@ const bindSectionFocus = () => {
     scroll.addEventListener("scroll", onScroll);
     carouselCleanup.push(() => {
       scroll.removeEventListener("scroll", onScroll);
-      if (snapTimeout) window.clearTimeout(snapTimeout);
+      if (horizontalSectionSnapTimeout) {
+        window.clearTimeout(horizontalSectionSnapTimeout);
+        horizontalSectionSnapTimeout = 0;
+      }
     });
     return;
   }
   applySectionFocus(scroll);
   if (scroll.scrollHeight <= scroll.clientHeight + 4) return;
-
-  let raf;
-  let snapTimeout;
   const onScroll = () => {
+    if (interactiveModalSurfaceFrozen) {
+      recordFrozenSurfaceBlockedEvent();
+      return;
+    }
     dismissRuntimeGuidance();
-    if (raf) cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
+    if (verticalSectionFocusRaf) cancelAnimationFrame(verticalSectionFocusRaf);
+    verticalSectionFocusRaf = requestAnimationFrame(() => {
       applySectionFocus(scroll);
+      verticalSectionFocusRaf = 0;
     });
-    if (snapTimeout) window.clearTimeout(snapTimeout);
-    snapTimeout = window.setTimeout(() => {
+    if (verticalSectionSnapTimeout) window.clearTimeout(verticalSectionSnapTimeout);
+    verticalSectionSnapTimeout = window.setTimeout(() => {
       const closestIndex = getClosestSectionIndex(scroll);
       if (closestIndex >= 0) {
         centerSection(scroll, closestIndex, "smooth");
       }
       applySectionFocus(scroll);
+      verticalSectionSnapTimeout = 0;
     }, 180);
   };
   const onResize = () => {
+    if (interactiveModalSurfaceFrozen) return;
     applySectionFocus(scroll);
   };
 
@@ -2678,8 +2835,14 @@ const bindSectionFocus = () => {
     scroll.removeEventListener("scroll", onScroll);
     window.removeEventListener("resize", onResize);
     window.removeEventListener("orientationchange", onResize);
-    if (raf) cancelAnimationFrame(raf);
-    if (snapTimeout) window.clearTimeout(snapTimeout);
+    if (verticalSectionFocusRaf) {
+      cancelAnimationFrame(verticalSectionFocusRaf);
+      verticalSectionFocusRaf = 0;
+    }
+    if (verticalSectionSnapTimeout) {
+      window.clearTimeout(verticalSectionSnapTimeout);
+      verticalSectionSnapTimeout = 0;
+    }
   });
 };
 
@@ -2688,6 +2851,7 @@ const closeModal = () => {
   detailRotateDirection = -1;
   activeModalInteractiveAsset = null;
   debugFlickerResolvedRenderer = "fallback-image";
+  setInteractiveModalSurfaceFrozen(false);
   modal.classList.remove("open");
   syncDebugFlickerBodyClass();
 };
@@ -2702,6 +2866,22 @@ modal?.addEventListener("dragstart", (event) => {
     event.preventDefault();
   }
 });
+modal?.addEventListener(
+  "wheel",
+  (event) => {
+    if (!shouldBlockFrozenModalSurfaceEvent(event.target)) return;
+    blockFrozenEvent(event);
+  },
+  { capture: true, passive: false }
+);
+modal?.addEventListener(
+  "touchmove",
+  (event) => {
+    if (!shouldBlockFrozenModalSurfaceEvent(event.target)) return;
+    blockFrozenEvent(event);
+  },
+  { capture: true, passive: false }
+);
 window.addEventListener("keydown", handleKeyboardNavigation);
 
 render();
