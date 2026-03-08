@@ -733,8 +733,9 @@ const setupInteractiveModalMedia = async (asset) => {
   let rendererNode = null;
   let detachInteractions = null;
   let imageHidden = false;
-  const guidanceElement = host.querySelector(".dish-modal__interactive-guidance");
-  const previewRoot = document.querySelector(".menu-preview");
+  let guidanceElement = host.querySelector(".dish-modal__interactive-guidance");
+  const interactionMode =
+    host.dataset.interactionMode === "stable-touch" ? "stable-touch" : "rich";
 
   const isStale = () => disposed || token !== modalMediaToken;
 
@@ -750,6 +751,11 @@ const setupInteractiveModalMedia = async (asset) => {
   };
   const setGuidanceVisible = (visible) => {
     if (!guidanceElement) return;
+    if (!visible && interactionMode === "stable-touch" && modalInteractiveGuidanceDismissed) {
+      guidanceElement.remove();
+      guidanceElement = null;
+      return;
+    }
     guidanceElement.classList.toggle("is-hidden", !visible);
   };
   const dismissModalInteractiveGuidance = () => {
@@ -775,7 +781,6 @@ const setupInteractiveModalMedia = async (asset) => {
     showImage();
     setGuidanceVisible(false);
     host.classList.remove("is-dragging-interactive");
-    previewRoot?.classList.remove("is-modal-interacting");
     host.classList.remove("is-loading-interactive");
     host.classList.remove("is-interactive");
   };
@@ -789,7 +794,6 @@ const setupInteractiveModalMedia = async (asset) => {
       pointerId = event.pointerId;
       lastX = event.clientX;
       host.classList.add("is-dragging-interactive");
-      previewRoot?.classList.add("is-modal-interacting");
       dismissModalInteractiveGuidance();
       try {
         target.setPointerCapture(pointerId);
@@ -815,7 +819,6 @@ const setupInteractiveModalMedia = async (asset) => {
       pointerId = null;
       target.classList.remove("is-dragging");
       host.classList.remove("is-dragging-interactive");
-      previewRoot?.classList.remove("is-modal-interacting");
       dismissModalInteractiveGuidance();
     };
 
@@ -1042,6 +1045,7 @@ const instructionCopy = {"en":{"loadingLabel":"Loading assets","tapHint":"Tap fo
 const runtimeLegalCopy = {"es":{"openAriaLabel":"Abrir aviso legal","dialogTitle":"Aviso legal","closeAriaLabel":"Cerrar aviso legal"},"en":{"openAriaLabel":"Open legal notice","dialogTitle":"Legal notice","closeAriaLabel":"Close legal notice"}};
 const RUNTIME_GUIDANCE_ASSETS = {"circularMotionArrows":"visual_onboarding/circular_motion_arrows.png","horVerMotionArrows":"visual_onboarding/hor_ver_motion_arrows.png","horizontalMotionArrows":"visual_onboarding/horizontal_motion_arrows.png","pointingHand":"visual_onboarding/pointing_hand.png","sampleDish":"visual_onboarding/sample_2d_dish.png"};
 const RUNTIME_GUIDANCE_CAPTURE_QUERY_PARAM = "capture";
+const HERO360_INTERACTION_MODE_TOUCH_QUERY = "(pointer: coarse)";
 
 const normalizeLocale = (value) => (value || "").toLowerCase().split("-")[0];
 const escapeHtml = (value) =>
@@ -1070,6 +1074,15 @@ const hasRuntimeGuidanceCaptureMode = () => {
     return false;
   }
 };
+const resolveHero360InteractionMode = () => {
+  const coarsePointer =
+    typeof window.matchMedia === "function" &&
+    window.matchMedia(HERO360_INTERACTION_MODE_TOUCH_QUERY).matches;
+  const maxTouchPoints =
+    typeof navigator !== "undefined" ? Number(navigator.maxTouchPoints || 0) : 0;
+  return coarsePointer || maxTouchPoints > 0 ? "stable-touch" : "rich";
+};
+const hero360InteractionMode = resolveHero360InteractionMode();
 const runtimeGuidanceCaptureMode = hasRuntimeGuidanceCaptureMode();
 let runtimeGuidanceDismissed = runtimeGuidanceCaptureMode;
 let runtimeGuidanceVisible = false;
@@ -2363,6 +2376,7 @@ const bindCards = () => {
       const allergens = getAllergenValues(dish).join(", ");
       const badgeHtml = renderBadgeList(dish, "dish-modal__badges");
       const asset = getInteractiveDetailAsset(dish);
+      const stableTouchHero360 = Boolean(asset) && supportsInteractiveMedia() && hero360InteractionMode === "stable-touch";
       detailRotateDirection = getDishRotateDirection(dish);
       modalContent.style.cssText = getItemFontStyle(dish);
       modalContent.innerHTML = `
@@ -2370,9 +2384,11 @@ const bindCards = () => {
           <p class="dish-modal__title">${textOf(dish.name)}</p>
           <button class="dish-modal__close" id="modal-close">✕</button>
         </div>
-        <div class="dish-modal__media">
+        <div class="dish-modal__media ${stableTouchHero360 ? "dish-modal__media--stable-touch" : ""}" data-interaction-mode="${hero360InteractionMode}">
           ${asset && supportsInteractiveMedia() && !runtimeGuidanceCaptureMode
-            ? '<div class="dish-modal__interactive-guidance is-hidden" aria-hidden="true">' +
+            ? '<div class="dish-modal__interactive-guidance is-hidden ' +
+              (stableTouchHero360 ? 'dish-modal__interactive-guidance--stable-touch' : '') +
+              '" aria-hidden="true">' +
               '<div class="dish-modal__interactive-guidance-scene">' +
               '<img class="dish-modal__interactive-guidance-layer dish-modal__interactive-guidance-layer--ellipse" src="' +
               RUNTIME_GUIDANCE_ASSETS.circularMotionArrows +
@@ -2403,8 +2419,8 @@ const bindCards = () => {
           ${dish.priceVisible === false ? "" : '<p class="dish-modal__price">' + formatPrice(dish.price.amount) + "</p>"}
         </div>
       `;
+      modal.classList.toggle("dish-modal--stable-touch", stableTouchHero360);
       modal.classList.add("open");
-      document.querySelector(".menu-preview")?.classList.add("is-modal-open");
       if (asset && supportsInteractiveMedia()) {
         void setupInteractiveModalMedia(asset);
       }
@@ -2525,8 +2541,7 @@ const closeModal = () => {
   teardownInteractiveModalMedia();
   detailRotateDirection = -1;
   modal.classList.remove("open");
-  document.querySelector(".menu-preview")?.classList.remove("is-modal-open");
-  document.querySelector(".menu-preview")?.classList.remove("is-modal-interacting");
+  modal.classList.remove("dish-modal--stable-touch");
 };
 
 modal?.addEventListener("click", (event) => {
