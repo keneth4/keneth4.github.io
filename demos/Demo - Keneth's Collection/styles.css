@@ -1421,6 +1421,11 @@ body {
   will-change: opacity;
 }
 
+.dish-modal.dish-modal--interactive-frozen .dish-modal__backdrop {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
 .dish-modal__card {
   font-family: var(
     --item-font,
@@ -1725,7 +1730,7 @@ body {
   cursor: pointer;
 }
 
-body.debug-flicker-active.debug-flicker-preset-backdrop-dark-only .dish-modal__backdrop {
+body.debug-flicker-active.debug-flicker-preset-backdrop-dark-only .dish-modal.dish-modal--interactive-frozen .dish-modal__backdrop {
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
 }

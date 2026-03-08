@@ -901,6 +901,10 @@ const clearRuntimeSurfaceTransientState = () => {
 const syncInteractiveModalSurfaceFrozenState = () => {
   const preview = app.querySelector(".menu-preview");
   preview?.classList.toggle("is-modal-frozen", interactiveModalSurfaceFrozen);
+  modal?.classList.toggle(
+    "dish-modal--interactive-frozen",
+    interactiveModalSurfaceFrozen && Boolean(activeModalInteractiveAsset)
+  );
   updateDebugFlickerHud();
 };
 const stopBackgroundRotation = () => {
