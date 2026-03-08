@@ -1683,6 +1683,7 @@ body {
   cursor: grabbing;
 }
 
+.dish-modal__surface-stabilizer,
 .dish-modal__flicker-debug {
   position: absolute;
   top: max(16px, env(safe-area-inset-top, 0px) + 8px);
@@ -1690,30 +1691,64 @@ body {
   transform: translateX(-50%);
   z-index: 5;
   width: min(360px, calc(100vw - 28px));
-  display: grid;
-  gap: 8px;
   padding: 10px 12px;
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.32);
   background: rgba(2, 6, 23, 0.76);
-  color: rgba(241, 245, 249, 0.96);
   box-shadow: 0 16px 40px rgba(2, 6, 23, 0.36);
   backdrop-filter: blur(10px) saturate(0.9);
+}
+
+.dish-modal__surface-stabilizer {
+  display: grid;
+  gap: 8px;
+  opacity: 0.015;
+  pointer-events: none;
+}
+
+.dish-modal__surface-stabilizer-copy,
+.dish-modal__flicker-debug-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.dish-modal__surface-stabilizer-copy span {
+  display: block;
+  height: calc(0.68rem * 1.35);
+  border-radius: 999px;
+  background: rgba(241, 245, 249, 0.92);
+}
+
+.dish-modal__surface-stabilizer-controls,
+.dish-modal__flicker-debug-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dish-modal__surface-stabilizer-pill {
+  display: block;
+  width: 74px;
+  min-height: 32px;
+  border: 1px solid rgba(148, 163, 184, 0.34);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.dish-modal__flicker-debug {
+  display: grid;
+  gap: 8px;
+  color: rgba(241, 245, 249, 0.96);
   pointer-events: none;
 }
 
 .dish-modal__flicker-debug-copy {
-  display: grid;
-  gap: 4px;
   font-size: 0.68rem;
   line-height: 1.35;
   letter-spacing: 0.02em;
 }
 
 .dish-modal__flicker-debug-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
   pointer-events: auto;
 }
 

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-03-08T19:31:19.824Z",
+  "generatedAt": "2026-03-08T19:58:54.576Z",
   "totals": {
     "files": 48,
     "assetFiles": 36,
     "shellFiles": 12,
-    "totalBytes": 113858070,
+    "totalBytes": 113859521,
     "assetBytes": 110273914,
-    "shellBytes": 3584156,
+    "shellBytes": 3585607,
     "firstViewAssetFiles": 4,
     "firstViewImageBytes": 14145890,
     "missingAssets": 0
@@ -29,14 +29,14 @@
         "key": "jsGzipBytes",
         "label": "Export JS (gzip)",
         "threshold": 97280,
-        "actual": 35769,
+        "actual": 35888,
         "status": "pass"
       },
       {
         "key": "cssGzipBytes",
         "label": "Export CSS (gzip)",
         "threshold": 12288,
-        "actual": 10694,
+        "actual": 10798,
         "status": "pass"
       },
       {

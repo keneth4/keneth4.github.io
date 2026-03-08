@@ -826,6 +826,27 @@ const renderDebugFlickerHud = () => {
     "</div>"
   );
 };
+const renderModalSurfaceStabilizer = () => {
+  if (debugFlickerEnabled || !interactiveModalSurfaceFrozen || !activeModalInteractiveAsset) {
+    return "";
+  }
+  return (
+    '<div class="dish-modal__surface-stabilizer" aria-hidden="true">' +
+    '<div class="dish-modal__surface-stabilizer-copy">' +
+    "<span></span>" +
+    "<span></span>" +
+    "<span></span>" +
+    "<span></span>" +
+    "<span></span>" +
+    "</div>" +
+    '<div class="dish-modal__surface-stabilizer-controls">' +
+    '<span class="dish-modal__surface-stabilizer-pill"></span>' +
+    '<span class="dish-modal__surface-stabilizer-pill"></span>' +
+    '<span class="dish-modal__surface-stabilizer-pill"></span>' +
+    "</div>" +
+    "</div>"
+  );
+};
 const updateDebugFlickerHud = () => {
   if (!debugFlickerEnabled || !modalContent) return;
   const preset = modalContent.querySelector("[data-debug-flicker-preset]");
@@ -2689,7 +2710,7 @@ const bindCards = () => {
       detailRotateDirection = getDishRotateDirection(dish);
       modalContent.style.cssText = getItemFontStyle(dish);
       modalContent.innerHTML = `
-        ${renderDebugFlickerHud()}
+        ${renderDebugFlickerHud() || renderModalSurfaceStabilizer()}
         <div class="dish-modal__header">
           <p class="dish-modal__title">${textOf(dish.name)}</p>
           <button class="dish-modal__close" id="modal-close">✕</button>
