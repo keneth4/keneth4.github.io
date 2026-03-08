@@ -69,8 +69,63 @@ const app = document.getElementById("app");
 const modal = document.getElementById("dish-modal");
 const modalBackdrop = document.getElementById("dish-modal-backdrop");
 const modalContent = document.getElementById("dish-modal-content");
+const DEBUG_FLICKER_QUERY_PARAM = "debugFlicker";
+const DEBUG_FLICKER_PRESET_QUERY_PARAM = "debugFlickerPreset";
+const DEBUG_FLICKER_RENDERER_QUERY_PARAM = "debugFlickerRenderer";
+const DEBUG_FLICKER_PRESET_SESSION_KEY = "menu.debugFlicker.preset";
+const DEBUG_FLICKER_RENDERER_SESSION_KEY = "menu.debugFlicker.renderer";
+const DEBUG_FLICKER_PRESETS = ["baseline","backdrop-dark-only","backdrop-off","cards-flat","surface-flat","modal-media-flat"];
+const DEBUG_FLICKER_RENDERERS = ["auto","sprite","video"];
+const DEBUG_FLICKER_ACTIVE_BODY_CLASS = "debug-flicker-active";
+const DEBUG_FLICKER_PRESET_BODY_CLASS_PREFIX = "debug-flicker-preset-";
+const debugFlickerSearchParams = new URLSearchParams(window.location.search);
+const debugFlickerEnabled = debugFlickerSearchParams.get(DEBUG_FLICKER_QUERY_PARAM) === "1";
+const getDebugFlickerStorage = () => {
+  try {
+    return window.sessionStorage;
+  } catch {
+    return null;
+  }
+};
+const normalizeDebugFlickerPreset = (value) => {
+  const normalized = String(value || "").trim().toLowerCase();
+  return DEBUG_FLICKER_PRESETS.includes(normalized) ? normalized : DEBUG_FLICKER_PRESETS[0];
+};
+const normalizeDebugFlickerRenderer = (value) => {
+  const normalized = String(value || "").trim().toLowerCase();
+  return DEBUG_FLICKER_RENDERERS.includes(normalized) ? normalized : DEBUG_FLICKER_RENDERERS[0];
+};
+const cycleDebugFlickerPresetValue = (value) => {
+  const normalized = normalizeDebugFlickerPreset(value);
+  const index = DEBUG_FLICKER_PRESETS.indexOf(normalized);
+  return DEBUG_FLICKER_PRESETS[(index + 1) % DEBUG_FLICKER_PRESETS.length];
+};
+const cycleDebugFlickerRendererValue = (value) => {
+  const normalized = normalizeDebugFlickerRenderer(value);
+  const index = DEBUG_FLICKER_RENDERERS.indexOf(normalized);
+  return DEBUG_FLICKER_RENDERERS[(index + 1) % DEBUG_FLICKER_RENDERERS.length];
+};
+const resolveDebugFlickerPreset = () => {
+  if (!debugFlickerEnabled) return "baseline";
+  const fromQuery = debugFlickerSearchParams.get(DEBUG_FLICKER_PRESET_QUERY_PARAM);
+  if (fromQuery) return normalizeDebugFlickerPreset(fromQuery);
+  return normalizeDebugFlickerPreset(getDebugFlickerStorage()?.getItem(DEBUG_FLICKER_PRESET_SESSION_KEY));
+};
+const resolveDebugFlickerRenderer = () => {
+  if (!debugFlickerEnabled) return "auto";
+  const fromQuery = debugFlickerSearchParams.get(DEBUG_FLICKER_RENDERER_QUERY_PARAM);
+  if (fromQuery) return normalizeDebugFlickerRenderer(fromQuery);
+  return normalizeDebugFlickerRenderer(
+    getDebugFlickerStorage()?.getItem(DEBUG_FLICKER_RENDERER_SESSION_KEY)
+  );
+};
 let modalMediaCleanup = null;
 let modalMediaToken = 0;
+let activeModalInteractiveAsset = null;
+let debugFlickerPreset = resolveDebugFlickerPreset();
+let debugFlickerRenderer = resolveDebugFlickerRenderer();
+let debugFlickerResolvedRenderer = "fallback-image";
+let appliedDebugFlickerPresetClass = "";
 let carouselCleanup = [];
 let startupLoading = true;
 let startupProgress = 0;
@@ -714,6 +769,118 @@ const prefetchDishDetailByIds = (categoryId, itemId, includeNeighbors = false) =
     prefetchDishDetailItem(category.items[target]);
   });
 };
+const persistDebugFlickerState = () => {
+  if (!debugFlickerEnabled) return;
+  const storage = getDebugFlickerStorage();
+  storage?.setItem(DEBUG_FLICKER_PRESET_SESSION_KEY, debugFlickerPreset);
+  storage?.setItem(DEBUG_FLICKER_RENDERER_SESSION_KEY, debugFlickerRenderer);
+};
+const syncDebugFlickerBodyClass = () => {
+  if (!debugFlickerEnabled) return;
+  const isModalOpen = modal?.classList.contains("open");
+  document.body.classList.toggle(DEBUG_FLICKER_ACTIVE_BODY_CLASS, Boolean(isModalOpen));
+  const nextPresetClass = isModalOpen
+    ? DEBUG_FLICKER_PRESET_BODY_CLASS_PREFIX + debugFlickerPreset
+    : "";
+  if (appliedDebugFlickerPresetClass && appliedDebugFlickerPresetClass !== nextPresetClass) {
+    document.body.classList.remove(appliedDebugFlickerPresetClass);
+  }
+  if (nextPresetClass) {
+    document.body.classList.add(nextPresetClass);
+  }
+  appliedDebugFlickerPresetClass = nextPresetClass;
+};
+const renderDebugFlickerHud = () => {
+  if (!debugFlickerEnabled) return "";
+  return (
+    '<div class="dish-modal__flicker-debug" aria-live="polite">' +
+    '<div class="dish-modal__flicker-debug-copy">' +
+    '<span data-debug-flicker-preset>Preset: ' +
+    escapeHtml(debugFlickerPreset) +
+    "</span>" +
+    '<span data-debug-flicker-renderer>Override: ' +
+    escapeHtml(debugFlickerRenderer) +
+    "</span>" +
+    '<span data-debug-flicker-resolved>Renderer: ' +
+    escapeHtml(debugFlickerResolvedRenderer) +
+    "</span>" +
+    "</div>" +
+    '<div class="dish-modal__flicker-debug-controls">' +
+    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="preset">Preset</button>' +
+    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="renderer">Renderer</button>' +
+    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="reset">Reset</button>' +
+    "</div>" +
+    "</div>"
+  );
+};
+const updateDebugFlickerHud = () => {
+  if (!debugFlickerEnabled || !modalContent) return;
+  const preset = modalContent.querySelector("[data-debug-flicker-preset]");
+  const renderer = modalContent.querySelector("[data-debug-flicker-renderer]");
+  const resolved = modalContent.querySelector("[data-debug-flicker-resolved]");
+  if (preset) preset.textContent = "Preset: " + debugFlickerPreset;
+  if (renderer) renderer.textContent = "Override: " + debugFlickerRenderer;
+  if (resolved) resolved.textContent = "Renderer: " + debugFlickerResolvedRenderer;
+};
+const refreshInteractiveModalRenderer = () => {
+  if (!activeModalInteractiveAsset || !modal?.classList.contains("open")) {
+    debugFlickerResolvedRenderer = "fallback-image";
+    updateDebugFlickerHud();
+    return;
+  }
+  void setupInteractiveModalMedia(activeModalInteractiveAsset);
+};
+const setDebugFlickerPreset = (nextPreset) => {
+  if (!debugFlickerEnabled) return;
+  debugFlickerPreset = normalizeDebugFlickerPreset(nextPreset);
+  persistDebugFlickerState();
+  syncDebugFlickerBodyClass();
+  updateDebugFlickerHud();
+};
+const setDebugFlickerRenderer = (nextRenderer) => {
+  if (!debugFlickerEnabled) return;
+  debugFlickerRenderer = normalizeDebugFlickerRenderer(nextRenderer);
+  persistDebugFlickerState();
+  updateDebugFlickerHud();
+  refreshInteractiveModalRenderer();
+};
+const resetDebugFlickerState = () => {
+  if (!debugFlickerEnabled) return;
+  debugFlickerPreset = "baseline";
+  debugFlickerRenderer = "auto";
+  persistDebugFlickerState();
+  syncDebugFlickerBodyClass();
+  updateDebugFlickerHud();
+  refreshInteractiveModalRenderer();
+};
+const bindDebugFlickerHud = (root) => {
+  if (!debugFlickerEnabled || !root) return;
+  root.querySelectorAll("[data-debug-flicker-action]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const action = button.getAttribute("data-debug-flicker-action");
+      if (action === "preset") {
+        setDebugFlickerPreset(cycleDebugFlickerPresetValue(debugFlickerPreset));
+      } else if (action === "renderer") {
+        setDebugFlickerRenderer(cycleDebugFlickerRendererValue(debugFlickerRenderer));
+      } else if (action === "reset") {
+        resetDebugFlickerState();
+      }
+    });
+  });
+};
+const resolveInteractiveRendererOrder = (asset) => {
+  const hasSprite = Boolean(asset?.sprite);
+  const hasVideo = Boolean(asset?.video);
+  if (debugFlickerRenderer === "video") {
+    return [hasVideo ? "video" : null, hasSprite ? "sprite" : null].filter(Boolean);
+  }
+  if (debugFlickerRenderer === "sprite") {
+    return [hasSprite ? "sprite" : null, hasVideo ? "video" : null].filter(Boolean);
+  }
+  return [hasSprite ? "sprite" : null, hasVideo ? "video" : null].filter(Boolean);
+};
 const teardownInteractiveModalMedia = () => {
   modalMediaToken += 1;
   if (modalMediaCleanup) {
@@ -723,11 +890,23 @@ const teardownInteractiveModalMedia = () => {
 };
 const setupInteractiveModalMedia = async (asset) => {
   teardownInteractiveModalMedia();
-  if (!asset || !modalContent) return;
+  if (!asset || !modalContent) {
+    debugFlickerResolvedRenderer = "fallback-image";
+    updateDebugFlickerHud();
+    return;
+  }
   const host = modalContent.querySelector(".dish-modal__media");
   const image = host?.querySelector(".dish-modal__media-image");
-  if (!host || !image) return;
-  if (!host.isConnected || !image.isConnected) return;
+  if (!host || !image) {
+    debugFlickerResolvedRenderer = "fallback-image";
+    updateDebugFlickerHud();
+    return;
+  }
+  if (!host.isConnected || !image.isConnected) {
+    debugFlickerResolvedRenderer = "fallback-image";
+    updateDebugFlickerHud();
+    return;
+  }
 
   const token = ++modalMediaToken;
   let disposed = false;
@@ -735,6 +914,8 @@ const setupInteractiveModalMedia = async (asset) => {
   let detachInteractions = null;
   let imageHidden = false;
   let guidanceElement = host.querySelector(".dish-modal__interactive-guidance");
+  debugFlickerResolvedRenderer = "fallback-image";
+  updateDebugFlickerHud();
 
   const isStale = () => disposed || token !== modalMediaToken;
 
@@ -952,6 +1133,8 @@ const setupInteractiveModalMedia = async (asset) => {
 
     render();
     markInteractiveReady();
+    debugFlickerResolvedRenderer = "video";
+    updateDebugFlickerHud();
     return true;
   };
 
@@ -1004,6 +1187,8 @@ const setupInteractiveModalMedia = async (asset) => {
 
     render();
     markInteractiveReady();
+    debugFlickerResolvedRenderer = "sprite";
+    updateDebugFlickerHud();
     return true;
   };
 
@@ -1011,34 +1196,26 @@ const setupInteractiveModalMedia = async (asset) => {
   hideImage();
   setGuidanceVisible(false);
 
-  if (asset.sprite) {
+  const rendererOrder = resolveInteractiveRendererOrder(asset);
+  for (const renderer of rendererOrder) {
     try {
-      const setupSprite = await trySetupSpriteRenderer();
-      if (setupSprite) {
+      const ready =
+        renderer === "sprite"
+          ? await trySetupSpriteRenderer()
+          : await trySetupVideoRenderer();
+      if (ready) {
         return;
       }
     } catch (error) {
       if (!isStale()) {
-        console.warn("Interactive sprite setup failed", asset.source, error);
+        console.warn("Interactive " + renderer + " setup failed", asset.source, error);
       }
     }
     clearRenderer();
   }
 
-  if (asset.video) {
-    try {
-      const setupVideo = await trySetupVideoRenderer();
-      if (setupVideo) {
-        return;
-      }
-    } catch (error) {
-      if (!isStale()) {
-        console.warn("Interactive video setup failed", asset.source, error);
-      }
-    }
-    clearRenderer();
-  }
-
+  debugFlickerResolvedRenderer = "fallback-image";
+  updateDebugFlickerHud();
   cleanup();
 };
 const instructionCopy = {"en":{"loadingLabel":"Loading assets","tapHint":"Tap for details","assetDisclaimer":"Assets belong to their owners. Do not copy or reuse this content without permission.","jukeboxHint":"Scroll to rotate • Swipe to explore","focusRowsHint":"Scroll to browse • Swipe to explore","rotateHintTouch":"Swipe horizontally on the image to rotate","rotateHintMouse":"Drag horizontally with the mouse to rotate","rotateToggle":"Reverse rotation"},"es":{"loadingLabel":"Cargando assets","tapHint":"Toca para ver detalles","assetDisclaimer":"Los assets pertenecen a sus propietarios. No copies ni reutilices este contenido sin autorización.","jukeboxHint":"Desplaza para girar • Desliza para explorar","focusRowsHint":"Desplaza para recorrer • Desliza para explorar","rotateHintTouch":"Desliza horizontal sobre la imagen para girar","rotateHintMouse":"Arrastra horizontal con el mouse para girar","rotateToggle":"Invertir giro"},"fr":{"loadingLabel":"Chargement des assets","tapHint":"Touchez pour voir les détails","assetDisclaimer":"Les assets appartiennent à leurs propriétaires. Ne copiez ni ne réutilisez ce contenu sans autorisation.","jukeboxHint":"Faites défiler pour tourner • Balayez pour explorer","focusRowsHint":"Faites défiler pour parcourir • Balayez pour explorer","rotateHintTouch":"Balayez horizontalement l'image pour faire tourner","rotateHintMouse":"Faites glisser horizontalement avec la souris pour faire tourner","rotateToggle":"Inverser la rotation"},"pt":{"loadingLabel":"Carregando assets","tapHint":"Toque para ver detalhes","assetDisclaimer":"Os assets pertencem aos seus proprietários. Não copie nem reutilize este conteúdo sem autorização.","jukeboxHint":"Role para girar • Deslize para explorar","focusRowsHint":"Role para navegar • Deslize para explorar","rotateHintTouch":"Deslize horizontalmente na imagem para girar","rotateHintMouse":"Arraste horizontalmente com o mouse para girar","rotateToggle":"Inverter rotação"},"it":{"loadingLabel":"Caricamento assets","tapHint":"Tocca per i dettagli","assetDisclaimer":"Gli assets appartengono ai rispettivi proprietari. Non copiare o riutilizzare questo contenuto senza autorizzazione.","jukeboxHint":"Scorri per ruotare • Sfiora per esplorare","focusRowsHint":"Scorri per sfogliare • Sfiora per esplorare","rotateHintTouch":"Scorri orizzontalmente sull'immagine per ruotare","rotateHintMouse":"Trascina orizzontalmente con il mouse per ruotare","rotateToggle":"Inverti rotazione"},"de":{"loadingLabel":"Assets werden geladen","tapHint":"Tippen für Details","assetDisclaimer":"Assets gehören ihren Eigentümern. Bitte nicht ohne Genehmigung kopieren oder wiederverwenden.","jukeboxHint":"Scrollen zum Drehen • Wischen zum Entdecken","focusRowsHint":"Scrollen zum Blättern • Wischen zum Entdecken","rotateHintTouch":"Wische horizontal über das Bild, um zu drehen","rotateHintMouse":"Ziehe horizontal mit der Maus, um zu drehen","rotateToggle":"Drehrichtung umkehren"},"ja":{"loadingLabel":"アセットを読み込み中","tapHint":"タップで詳細","assetDisclaimer":"アセットは各所有者に帰属します。許可なく複製・再利用しないでください。","jukeboxHint":"スクロールで回転 • スワイプで探索","focusRowsHint":"スクロールで閲覧 • スワイプで探索","rotateHintTouch":"画像上で横にスワイプして回転","rotateHintMouse":"画像上で横にドラッグして回転","rotateToggle":"回転方向を反転"},"ko":{"loadingLabel":"에셋 로딩 중","tapHint":"탭해서 자세히 보기","assetDisclaimer":"에셋은 각 소유자에게 귀속됩니다. 허가 없이 복사하거나 재사용하지 마세요.","jukeboxHint":"스크롤로 회전 • 스와이프로 탐색","focusRowsHint":"스크롤로 둘러보기 • 스와이프로 탐색","rotateHintTouch":"이미지에서 가로로 스와이프해 회전","rotateHintMouse":"마우스로 가로로 드래그해 회전","rotateToggle":"회전 방향 반전"},"zh":{"loadingLabel":"正在加载素材","tapHint":"点按查看详情","assetDisclaimer":"素材归其所有者所有。未经许可请勿复制或再利用。","jukeboxHint":"滚动可旋转 • 滑动可探索","focusRowsHint":"滚动可浏览 • 滑动可探索","rotateHintTouch":"在图片上横向滑动以旋转","rotateHintMouse":"用鼠标横向拖动以旋转","rotateToggle":"反向旋转"}};
@@ -2356,9 +2533,12 @@ const bindCards = () => {
       const allergens = getAllergenValues(dish).join(", ");
       const badgeHtml = renderBadgeList(dish, "dish-modal__badges");
       const asset = getInteractiveDetailAsset(dish);
+      activeModalInteractiveAsset = asset && supportsInteractiveMedia() ? asset : null;
+      debugFlickerResolvedRenderer = "fallback-image";
       detailRotateDirection = getDishRotateDirection(dish);
       modalContent.style.cssText = getItemFontStyle(dish);
       modalContent.innerHTML = `
+        ${renderDebugFlickerHud()}
         <div class="dish-modal__header">
           <p class="dish-modal__title">${textOf(dish.name)}</p>
           <button class="dish-modal__close" id="modal-close">✕</button>
@@ -2384,8 +2564,11 @@ const bindCards = () => {
         </div>
       `;
       modal.classList.add("open");
-      if (asset && supportsInteractiveMedia()) {
-        void setupInteractiveModalMedia(asset);
+      syncDebugFlickerBodyClass();
+      bindDebugFlickerHud(modalContent);
+      updateDebugFlickerHud();
+      if (activeModalInteractiveAsset) {
+        void setupInteractiveModalMedia(activeModalInteractiveAsset);
       }
       modal.querySelector("#modal-close")?.addEventListener("click", closeModal);
     });
@@ -2503,7 +2686,10 @@ const bindSectionFocus = () => {
 const closeModal = () => {
   teardownInteractiveModalMedia();
   detailRotateDirection = -1;
+  activeModalInteractiveAsset = null;
+  debugFlickerResolvedRenderer = "fallback-image";
   modal.classList.remove("open");
+  syncDebugFlickerBodyClass();
 };
 
 modal?.addEventListener("click", (event) => {
