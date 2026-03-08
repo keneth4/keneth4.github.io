@@ -69,6 +69,10 @@ body {
   backface-visibility: hidden;
 }
 
+.menu-preview.is-modal-open {
+  touch-action: none;
+}
+
 .menu-preview.is-modal-open .menu-background,
 .menu-preview.is-modal-open .menu-overlay,
 .menu-preview.is-modal-open .menu-topbar,
@@ -88,6 +92,14 @@ body {
   contain: paint;
 }
 
+.menu-preview.is-modal-open .menu-scroll,
+.menu-preview.is-modal-open .menu-topbar,
+.menu-preview.is-modal-open .section-nav,
+.menu-preview.is-modal-open .carousel-nav,
+.menu-preview.is-modal-open .menu-legal-trigger {
+  pointer-events: none;
+}
+
 .menu-preview.is-modal-interacting .menu-background,
 .menu-preview.is-modal-interacting .menu-overlay,
 .menu-preview.is-modal-interacting .menu-topbar,
@@ -99,6 +111,16 @@ body {
 
 .menu-preview.is-modal-interacting .menu-background {
   transition: none;
+}
+
+.menu-preview.is-modal-interacting .menu-overlay,
+.menu-preview.is-modal-interacting .menu-scroll,
+.menu-preview.is-modal-interacting .carousel-card,
+.menu-preview.is-modal-interacting .carousel-text,
+.menu-preview.is-modal-interacting .menu-eyebrow,
+.menu-preview.is-modal-interacting .menu-title {
+  transition: none !important;
+  animation: none !important;
 }
 
 .menu-background {
