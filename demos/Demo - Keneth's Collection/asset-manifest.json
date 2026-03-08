@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-03-08T19:58:54.576Z",
+  "generatedAt": "2026-03-08T20:25:30.138Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 147147,
+      "bytes": 147407,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -404,7 +404,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 67251,
+      "bytes": 66845,
       "responsiveVariant": null,
       "firstView": false
     },

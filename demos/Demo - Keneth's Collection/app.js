@@ -783,11 +783,16 @@ const persistDebugFlickerState = () => {
   storage?.setItem(DEBUG_FLICKER_RENDERER_SESSION_KEY, debugFlickerRenderer);
 };
 const syncDebugFlickerBodyClass = () => {
-  if (!debugFlickerEnabled) return;
   const isModalOpen = modal?.classList.contains("open");
-  document.body.classList.toggle(DEBUG_FLICKER_ACTIVE_BODY_CLASS, Boolean(isModalOpen));
-  const nextPresetClass = isModalOpen
-    ? DEBUG_FLICKER_PRESET_BODY_CLASS_PREFIX + debugFlickerPreset
+  const shouldMirrorGhostDebugFlicker =
+    !debugFlickerEnabled &&
+    Boolean(isModalOpen && interactiveModalSurfaceFrozen && activeModalInteractiveAsset);
+  document.body.classList.toggle(
+    DEBUG_FLICKER_ACTIVE_BODY_CLASS,
+    Boolean(isModalOpen && (debugFlickerEnabled || shouldMirrorGhostDebugFlicker))
+  );
+  const nextPresetClass = isModalOpen && (debugFlickerEnabled || shouldMirrorGhostDebugFlicker)
+    ? DEBUG_FLICKER_PRESET_BODY_CLASS_PREFIX + (debugFlickerEnabled ? debugFlickerPreset : "baseline")
     : "";
   if (appliedDebugFlickerPresetClass && appliedDebugFlickerPresetClass !== nextPresetClass) {
     document.body.classList.remove(appliedDebugFlickerPresetClass);
@@ -799,8 +804,21 @@ const syncDebugFlickerBodyClass = () => {
 };
 const renderDebugFlickerHud = () => {
   if (!debugFlickerEnabled) return "";
+  return renderFlickerDebugHudMarkup();
+};
+const renderGhostDebugFlickerHud = () => {
+  if (debugFlickerEnabled || !interactiveModalSurfaceFrozen || !activeModalInteractiveAsset) {
+    return "";
+  }
+  return renderFlickerDebugHudMarkup(true);
+};
+const renderFlickerDebugHudMarkup = (ghost = false) => {
+  const rootClass =
+    "dish-modal__flicker-debug" + (ghost ? " dish-modal__flicker-debug--ghost" : "");
+  const rootAttrs = ghost ? ' aria-hidden="true"' : ' aria-live="polite"';
+  const buttonAttrs = ghost ? ' tabindex="-1" aria-hidden="true"' : "";
   return (
-    '<div class="dish-modal__flicker-debug" aria-live="polite">' +
+    '<div class="' + rootClass + '"' + rootAttrs + ">" +
     '<div class="dish-modal__flicker-debug-copy">' +
     '<span data-debug-flicker-preset>Preset: ' +
     escapeHtml(debugFlickerPreset) +
@@ -819,36 +837,21 @@ const renderDebugFlickerHud = () => {
     "</span>" +
     "</div>" +
     '<div class="dish-modal__flicker-debug-controls">' +
-    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="preset">Preset</button>' +
-    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="renderer">Renderer</button>' +
-    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="reset">Reset</button>' +
-    "</div>" +
-    "</div>"
-  );
-};
-const renderModalSurfaceStabilizer = () => {
-  if (debugFlickerEnabled || !interactiveModalSurfaceFrozen || !activeModalInteractiveAsset) {
-    return "";
-  }
-  return (
-    '<div class="dish-modal__surface-stabilizer" aria-hidden="true">' +
-    '<div class="dish-modal__surface-stabilizer-copy">' +
-    "<span></span>" +
-    "<span></span>" +
-    "<span></span>" +
-    "<span></span>" +
-    "<span></span>" +
-    "</div>" +
-    '<div class="dish-modal__surface-stabilizer-controls">' +
-    '<span class="dish-modal__surface-stabilizer-pill"></span>' +
-    '<span class="dish-modal__surface-stabilizer-pill"></span>' +
-    '<span class="dish-modal__surface-stabilizer-pill"></span>' +
+    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="preset"' +
+    buttonAttrs +
+    ">Preset</button>" +
+    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="renderer"' +
+    buttonAttrs +
+    ">Renderer</button>" +
+    '<button class="dish-modal__flicker-debug-btn" type="button" data-debug-flicker-action="reset"' +
+    buttonAttrs +
+    ">Reset</button>" +
     "</div>" +
     "</div>"
   );
 };
 const updateDebugFlickerHud = () => {
-  if (!debugFlickerEnabled || !modalContent) return;
+  if (!modalContent || !modalContent.querySelector(".dish-modal__flicker-debug")) return;
   const preset = modalContent.querySelector("[data-debug-flicker-preset]");
   const renderer = modalContent.querySelector("[data-debug-flicker-renderer]");
   const resolved = modalContent.querySelector("[data-debug-flicker-resolved]");
@@ -926,6 +929,7 @@ const syncInteractiveModalSurfaceFrozenState = () => {
     "dish-modal--interactive-frozen",
     interactiveModalSurfaceFrozen && Boolean(activeModalInteractiveAsset)
   );
+  syncDebugFlickerBodyClass();
   updateDebugFlickerHud();
 };
 const stopBackgroundRotation = () => {
@@ -2710,7 +2714,7 @@ const bindCards = () => {
       detailRotateDirection = getDishRotateDirection(dish);
       modalContent.style.cssText = getItemFontStyle(dish);
       modalContent.innerHTML = `
-        ${renderDebugFlickerHud() || renderModalSurfaceStabilizer()}
+        ${renderDebugFlickerHud() || renderGhostDebugFlickerHud()}
         <div class="dish-modal__header">
           <p class="dish-modal__title">${textOf(dish.name)}</p>
           <button class="dish-modal__close" id="modal-close">✕</button>
