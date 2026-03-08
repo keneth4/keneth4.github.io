@@ -57,18 +57,9 @@
     {
       "id": "bg-1771825781037",
       "label": "Fondo 1",
-      "src": "assets/backgrounds/backgroundMannheim-md.webp",
+      "src": "assets/backgrounds/backgroundMannheim.webp",
       "type": "image",
-      "originalSrc": "assets/backgrounds/backgroundMannheim.webp",
-      "derived": {
-        "profileId": "ffmpeg-v2-copy-fallback",
-        "medium": {
-          "webp": "assets/backgrounds/backgroundMannheim-md.webp"
-        },
-        "large": {
-          "webp": "assets/backgrounds/backgroundMannheim-md.webp"
-        }
-      }
+      "originalSrc": "assets/backgrounds/backgroundMannheim.webp"
     }
   ],
   "categories": [

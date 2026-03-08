@@ -1,34 +1,25 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-03-08T04:17:07.610Z",
+  "generatedAt": "2026-03-08T04:43:31.264Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 133375,
+      "bytes": 133354,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "assets/backgrounds/backgroundMannheim-md.webp",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim-md.webp",
+      "outputPath": "assets/backgrounds/backgroundMannheim.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim.webp",
       "role": "background",
       "mime": "image/webp",
       "bytes": 10731348,
       "responsiveVariant": null,
       "firstView": true
-    },
-    {
-      "outputPath": "assets/backgrounds/backgroundMannheim.webp",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim.webp",
-      "role": "other",
-      "mime": "image/webp",
-      "bytes": 10731348,
-      "responsiveVariant": null,
-      "firstView": false
     },
     {
       "outputPath": "assets/fonts/QuickingRegular-gw5KY.otf",
@@ -377,7 +368,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 41299,
+      "bytes": 41028,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -413,7 +404,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 64212,
+      "bytes": 65578,
       "responsiveVariant": null,
       "firstView": false
     },

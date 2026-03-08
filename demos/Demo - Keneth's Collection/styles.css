@@ -1267,6 +1267,9 @@ body {
   opacity: var(--fade);
   filter: blur(calc((1 - var(--fade)) * 8px));
   transform: scale(calc(0.4 + var(--fade) * 0.6));
+  isolation: isolate;
+  contain: paint;
+  backface-visibility: hidden;
 }
 
 .carousel-card.active {
@@ -1334,6 +1337,8 @@ body {
   position: relative;
   overflow: hidden;
   margin-bottom: -10px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .carousel-media__loader {
@@ -1356,6 +1361,8 @@ body {
   opacity: 0;
   filter: drop-shadow(0 16px 26px rgba(2, 6, 23, 0.5));
   transition: opacity 180ms ease;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .carousel-media.is-loading .carousel-media__loader {
@@ -1392,6 +1399,11 @@ body {
   background-color: var(--menu-theme-surface-panel);
   color: var(--item-text-color, var(--menu-text-item, var(--menu-theme-on-surface-panel)));
   width: 100%;
+  isolation: isolate;
+  contain: paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 }
 
 .carousel-row {
@@ -1408,12 +1420,16 @@ body {
   gap: 6px;
   font-size: 0.95rem;
   color: inherit;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .carousel-desc {
   font-size: 0.75rem;
   color: inherit;
   opacity: 0.78;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .carousel-price {
@@ -1421,12 +1437,16 @@ body {
   color: inherit;
   opacity: 0.94;
   text-align: right;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .carousel-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .menu-pill {
@@ -1484,6 +1504,7 @@ body {
   place-items: center;
   z-index: 60;
   padding: 20px;
+  isolation: isolate;
 }
 
 .dish-modal__backdrop {
@@ -1513,6 +1534,9 @@ body {
   max-height: calc(100dvh - 40px);
   overflow-y: auto;
   z-index: 1;
+  isolation: isolate;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .dish-modal__header {
@@ -1557,6 +1581,10 @@ body {
   display: grid;
   place-items: center;
   overflow: hidden;
+  isolation: isolate;
+  contain: layout paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .dish-modal__media.is-interactive {
@@ -1578,6 +1606,16 @@ body {
     inset 0 0 0 1px rgba(148, 163, 184, 0.12),
     inset 0 18px 36px rgba(125, 211, 252, 0.05),
     inset 0 -28px 48px rgba(1, 4, 12, 0.44);
+  will-change: transform;
+}
+
+.dish-modal__media.is-dragging-interactive {
+  will-change: transform;
+}
+
+.dish-modal__media.is-dragging-interactive .dish-modal__interactive-guidance {
+  transition: none;
+  backdrop-filter: none;
 }
 
 .dish-modal__interactive-guidance {
@@ -1597,6 +1635,9 @@ body {
   transition:
     opacity 220ms ease,
     visibility 220ms ease;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: opacity;
 }
 
 .dish-modal__interactive-guidance.is-hidden {
@@ -1608,6 +1649,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .dish-modal__interactive-guidance-layer {
@@ -1684,6 +1727,8 @@ body {
   object-fit: contain;
   position: relative;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .dish-modal__media-image,
@@ -1759,6 +1804,9 @@ body {
   cursor: grab;
   user-select: none;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .dish-modal__media-video {
@@ -1769,6 +1817,9 @@ body {
   cursor: grab;
   user-select: none;
   z-index: 1;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .dish-modal__media-canvas.is-dragging {
