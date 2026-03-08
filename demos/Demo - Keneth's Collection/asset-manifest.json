@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-03-08T06:01:45.558Z",
+  "generatedAt": "2026-03-08T13:57:59.259Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 134614,
+      "bytes": 131602,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -404,52 +404,34 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 66640,
+      "bytes": 62696,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "visual_onboarding/circular_motion_arrows.png",
+      "outputPath": "visual_onboarding/hero360_monolithic.png",
       "sourcePath": null,
       "role": "shell",
       "mime": "image/png",
-      "bytes": 96270,
+      "bytes": 1367761,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "visual_onboarding/hor_ver_motion_arrows.png",
+      "outputPath": "visual_onboarding/startup_action_monolithic.png",
       "sourcePath": null,
       "role": "shell",
       "mime": "image/png",
-      "bytes": 140583,
+      "bytes": 796872,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "visual_onboarding/horizontal_motion_arrows.png",
+      "outputPath": "visual_onboarding/startup_motion_monolithic.png",
       "sourcePath": null,
       "role": "shell",
       "mime": "image/png",
-      "bytes": 38405,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
-      "outputPath": "visual_onboarding/pointing_hand.png",
-      "sourcePath": null,
-      "role": "shell",
-      "mime": "image/png",
-      "bytes": 165571,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
-      "outputPath": "visual_onboarding/sample_2d_dish.png",
-      "sourcePath": null,
-      "role": "shell",
-      "mime": "image/png",
-      "bytes": 354589,
+      "bytes": 471219,
       "responsiveVariant": null,
       "firstView": false
     }
