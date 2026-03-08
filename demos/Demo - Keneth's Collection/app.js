@@ -734,6 +734,7 @@ const setupInteractiveModalMedia = async (asset) => {
   let detachInteractions = null;
   let imageHidden = false;
   const guidanceElement = host.querySelector(".dish-modal__interactive-guidance");
+  const previewRoot = document.querySelector(".menu-preview");
 
   const isStale = () => disposed || token !== modalMediaToken;
 
@@ -774,6 +775,7 @@ const setupInteractiveModalMedia = async (asset) => {
     showImage();
     setGuidanceVisible(false);
     host.classList.remove("is-dragging-interactive");
+    previewRoot?.classList.remove("is-modal-interacting");
     host.classList.remove("is-loading-interactive");
     host.classList.remove("is-interactive");
   };
@@ -787,6 +789,7 @@ const setupInteractiveModalMedia = async (asset) => {
       pointerId = event.pointerId;
       lastX = event.clientX;
       host.classList.add("is-dragging-interactive");
+      previewRoot?.classList.add("is-modal-interacting");
       dismissModalInteractiveGuidance();
       try {
         target.setPointerCapture(pointerId);
@@ -812,6 +815,7 @@ const setupInteractiveModalMedia = async (asset) => {
       pointerId = null;
       target.classList.remove("is-dragging");
       host.classList.remove("is-dragging-interactive");
+      previewRoot?.classList.remove("is-modal-interacting");
       dismissModalInteractiveGuidance();
     };
 
@@ -2400,6 +2404,7 @@ const bindCards = () => {
         </div>
       `;
       modal.classList.add("open");
+      document.querySelector(".menu-preview")?.classList.add("is-modal-open");
       if (asset && supportsInteractiveMedia()) {
         void setupInteractiveModalMedia(asset);
       }
@@ -2520,6 +2525,8 @@ const closeModal = () => {
   teardownInteractiveModalMedia();
   detailRotateDirection = -1;
   modal.classList.remove("open");
+  document.querySelector(".menu-preview")?.classList.remove("is-modal-open");
+  document.querySelector(".menu-preview")?.classList.remove("is-modal-interacting");
 };
 
 modal?.addEventListener("click", (event) => {

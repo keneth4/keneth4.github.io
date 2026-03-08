@@ -58,6 +58,47 @@ body {
   display: flex;
   flex-direction: column;
   font-family: var(--menu-font-ui, var(--menu-font, "Fraunces", "Georgia", serif));
+  isolation: isolate;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.menu-preview.is-modal-open,
+.menu-preview.is-modal-interacting {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.menu-preview.is-modal-open .menu-background,
+.menu-preview.is-modal-open .menu-overlay,
+.menu-preview.is-modal-open .menu-topbar,
+.menu-preview.is-modal-open .menu-title-content,
+.menu-preview.is-modal-open .menu-eyebrow,
+.menu-preview.is-modal-open .menu-title,
+.menu-preview.is-modal-open .menu-scroll,
+.menu-preview.is-modal-interacting .menu-background,
+.menu-preview.is-modal-interacting .menu-overlay,
+.menu-preview.is-modal-interacting .menu-topbar,
+.menu-preview.is-modal-interacting .menu-title-content,
+.menu-preview.is-modal-interacting .menu-eyebrow,
+.menu-preview.is-modal-interacting .menu-title,
+.menu-preview.is-modal-interacting .menu-scroll {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  contain: paint;
+}
+
+.menu-preview.is-modal-interacting .menu-background,
+.menu-preview.is-modal-interacting .menu-overlay,
+.menu-preview.is-modal-interacting .menu-topbar,
+.menu-preview.is-modal-interacting .menu-title-content,
+.menu-preview.is-modal-interacting .menu-eyebrow,
+.menu-preview.is-modal-interacting .menu-title {
+  will-change: transform, opacity;
+}
+
+.menu-preview.is-modal-interacting .menu-background {
+  transition: none;
 }
 
 .menu-background {
