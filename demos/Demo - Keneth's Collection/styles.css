@@ -1499,12 +1499,13 @@ body {
 .dish-modal {
   position: fixed;
   inset: 0;
-  background: rgba(2, 6, 23, 0.8);
+  background: transparent;
   display: grid;
   place-items: center;
   z-index: 60;
   padding: 20px;
   isolation: isolate;
+  overscroll-behavior: contain;
 }
 
 .dish-modal__backdrop {
@@ -1513,8 +1514,13 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  background: transparent;
+  background: rgba(2, 6, 23, 0.8);
   cursor: default;
+  z-index: 0;
+  contain: paint;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: opacity;
 }
 
 .dish-modal__card {
@@ -1535,8 +1541,10 @@ body {
   overflow-y: auto;
   z-index: 1;
   isolation: isolate;
+  contain: paint;
   transform: translateZ(0);
   backface-visibility: hidden;
+  overscroll-behavior: contain;
 }
 
 .dish-modal__header {
@@ -1606,6 +1614,8 @@ body {
     inset 0 0 0 1px rgba(148, 163, 184, 0.12),
     inset 0 18px 36px rgba(125, 211, 252, 0.05),
     inset 0 -28px 48px rgba(1, 4, 12, 0.44);
+  touch-action: none;
+  overscroll-behavior: contain;
   will-change: transform;
 }
 
@@ -1807,6 +1817,7 @@ body {
   transform: translateZ(0);
   backface-visibility: hidden;
   will-change: transform;
+  overscroll-behavior: contain;
 }
 
 .dish-modal__media-video {
@@ -1820,6 +1831,7 @@ body {
   transform: translateZ(0);
   backface-visibility: hidden;
   will-change: transform;
+  overscroll-behavior: contain;
 }
 
 .dish-modal__media-canvas.is-dragging {
