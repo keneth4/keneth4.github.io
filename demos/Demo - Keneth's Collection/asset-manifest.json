@@ -1,25 +1,34 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-02-24T03:34:40.620Z",
+  "generatedAt": "2026-03-08T04:17:07.610Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 111019,
+      "bytes": 133375,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "assets/backgrounds/backgroundMannheim-md.gif",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim-md.gif",
+      "outputPath": "assets/backgrounds/backgroundMannheim-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim-md.webp",
       "role": "background",
-      "mime": "image/gif",
-      "bytes": 13427789,
+      "mime": "image/webp",
+      "bytes": 10731348,
       "responsiveVariant": null,
       "firstView": true
+    },
+    {
+      "outputPath": "assets/backgrounds/backgroundMannheim.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/backgrounds/backgroundMannheim.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 10731348,
+      "responsiveVariant": null,
+      "firstView": false
     },
     {
       "outputPath": "assets/fonts/QuickingRegular-gw5KY.otf",
@@ -175,33 +184,6 @@
       "firstView": false
     },
     {
-      "outputPath": "assets/items/360Switch-int-poster.webp",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Switch-int-poster.webp",
-      "role": "other",
-      "mime": "image/webp",
-      "bytes": 174692,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
-      "outputPath": "assets/items/360Switch-int-sprite-md.webp",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Switch-int-sprite-md.webp",
-      "role": "hero",
-      "mime": "image/webp",
-      "bytes": 2149828,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
-      "outputPath": "assets/items/360Switch-int-sprite.webp",
-      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Switch-int-sprite.webp",
-      "role": "other",
-      "mime": "image/webp",
-      "bytes": 11655062,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
       "outputPath": "assets/items/360Tesla-int-poster.webp",
       "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/360Tesla-int-poster.webp",
       "role": "other",
@@ -244,7 +226,7 @@
       "mime": "image/webp",
       "bytes": 1674770,
       "responsiveVariant": null,
-      "firstView": true
+      "firstView": false
     },
     {
       "outputPath": "assets/items/360vrHeadset-int-sprite.webp",
@@ -256,11 +238,119 @@
       "firstView": false
     },
     {
-      "outputPath": "favicon.ico",
+      "outputPath": "assets/items/Cat-Painting-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Cat-Painting-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 148678,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cat-Painting-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Cat-Painting-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1213794,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/Cat-Painting-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Cat-Painting-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 6693038,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cat-Sculpture-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Cat-Sculpture-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 102606,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cat-Sculpture-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Cat-Sculpture-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1370700,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cat-Sculpture-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Cat-Sculpture-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 6189484,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Glass-Cat-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Glass-Cat-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 147224,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Glass-Cat-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Glass-Cat-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1860660,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Glass-Cat-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Glass-Cat-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 9149532,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Switch-int-poster.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Switch-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 149470,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Switch-int-sprite-md.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Switch-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1422446,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Switch-int-sprite.webp",
+      "sourcePath": "projects/keneth-s-gaussian-splattings-collection/assets/items/Switch-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 7261674,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "favicon.png",
       "sourcePath": null,
       "role": "shell",
-      "mime": "image/x-icon",
-      "bytes": 967,
+      "mime": "image/png",
+      "bytes": 345838,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -269,7 +359,16 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/html",
-      "bytes": 734,
+      "bytes": 751,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "Logo.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 345838,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -278,7 +377,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 30200,
+      "bytes": 41299,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -314,7 +413,52 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 45682,
+      "bytes": 64212,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/circular_motion_arrows.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 96270,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/hor_ver_motion_arrows.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 140583,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/horizontal_motion_arrows.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 38405,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/pointing_hand.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 165571,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/sample_2d_dish.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 354589,
       "responsiveVariant": null,
       "firstView": false
     }

@@ -1,8 +1,11 @@
 
-const DATA = {"meta":{"slug":"keneth-s-gaussian-splattings-collection","name":"Keneth's Gaussian Splattings Collection","restaurantName":{"es":"Keneth's","en":"Keneth's","de":"Keneth's"},"title":{"es":"Gaussian Splattings Collection","en":"Gaussian Splattings Collection","de":"Gaussian-Splatting-Kollektion"},"identityMode":"text","logoSrc":"","fontFamily":"Fraunces","fontSource":"","template":"focus-rows","locales":["es","en","de"],"defaultLocale":"es","currency":"MXN","currencyPosition":"left","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","fontRoles":{"restaurant":{"family":"","source":"assets/fonts/QuickingRegular-gw5KY.otf"},"title":{"family":"","source":"assets/fonts/SuperBrigadeGradient-V4qA6.otf"},"section":{"family":"","source":"assets/fonts/QuickingRegular-gw5KY.otf"},"item":{"family":"","source":"assets/fonts/QuickingRegular-gw5KY.otf"}},"scrollSensitivity":{"item":5,"section":5}},"backgrounds":[{"id":"bg-1771825781037","label":"Fondo 1","src":"assets/backgrounds/backgroundMannheim-md.gif","type":"image","originalSrc":"assets/backgrounds/backgroundMannheim-md.gif"}],"categories":[{"id":"section-1770875951604","name":{"es":"Naturaleza","en":"Nature","de":"Natur"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876206157","name":{"es":"Ramo de flores","en":"Flower Bouquet","de":"Blumenstrauß"},"description":{"es":"Arreglo floral colorido compuesto por una variedad de flores.","en":"A colorful bouquet made from a variety of flowers.","de":"Ein farbenfroher Strauß aus einer Vielzahl von Blumen."},"longDescription":{"es":"Desde hace siglos, los ramos de flores se usan para decir lo que a veces cuesta poner en palabras: gratitud, cariño, celebración o incluso un simple “pensé en ti”. En distintas culturas, cada flor ha tenido su propio simbolismo, y por eso un arreglo puede contar una pequeña historia sin necesidad de una sola frase.","en":"For centuries, flower bouquets have been a way to say what’s sometimes hard to put into words: gratitude, affection, celebration, or even a simple “I thought of you.” Across cultures, each flower has carried its own symbolism—so a bouquet can quietly tell a story without a single sentence.","de":"Seit Jahrhunderten sind Blumensträuße eine stille Art, Dinge auszudrücken, die sich nicht immer leicht in Worte fassen lassen: Dankbarkeit, Zuneigung, Feierlichkeit oder einfach ein „Ich hab an dich gedacht“. In vielen Kulturen haben einzelne Blumen ihre eigene Symbolik – so kann ein Strauß eine kleine Geschichte erzählen, ganz ohne ein einziges Wort."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Flowers-int-sprite-md.webp","originalHero360":"assets/items/360Flowers-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Flowers","responsive":{"small":"assets/items/360Flowers-int-sprite-md.webp","medium":"assets/items/360Flowers-int-sprite-md.webp","large":"assets/items/360Flowers-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Flowers-int-sprite-md.webp"},"large":{"webp":"assets/items/360Flowers-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Flowers-int-poster.webp","sprite":{"image":"assets/items/360Flowers-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770876434114","name":{"es":"Flor de Nochebuena","en":"Poinsettia","de":"Weihnachtsstern"},"description":{"es":"Arreglo floral pequeño con temática navideña.","en":"A small holiday-themed floral arrangement.","de":"Ein kleines, weihnachtlich inspiriertes Blumenarrangement."},"longDescription":{"es":"La flor de Nochebuena, conocida en muchos países como poinsettia, es originaria de México y desde hace siglos se asocia con la temporada decembrina. Su color rojo intenso no es un pétalo, sino una hoja modificada (bráctea), y por eso luce tan dramática: es naturaleza haciendo diseño gráfico.","en":"The poinsettia is native to Mexico and has been tied to the holiday season for centuries. Its vivid red “petals” aren’t petals at all—they’re modified leaves called bracts, which is why it looks so striking: nature doing graphic design.","de":"Der Weihnachtsstern stammt ursprünglich aus Mexiko und wird seit Jahrhunderten mit der Weihnachtszeit verbunden. Seine leuchtend roten „Blütenblätter“ sind in Wirklichkeit keine Blüten, sondern umgefärbte Hochblätter (Brakteen) – deshalb wirkt er so dramatisch: Natur als Grafikdesignerin."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Nochebuena-int-sprite-md.webp","originalHero360":"assets/items/360Nochebuena-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Nochebuena","responsive":{"small":"assets/items/360Nochebuena-int-sprite-md.webp","medium":"assets/items/360Nochebuena-int-sprite-md.webp","large":"assets/items/360Nochebuena-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"},"large":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Nochebuena-int-poster.webp","sprite":{"image":"assets/items/360Nochebuena-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770876569880","name":{"es":"Tesla dormido","en":"Sleeping Tesla","de":"Tesla (schlafend)"},"description":{"es":"Tesla es mi gato de 12 años. Le encanta que le soben la panza, pero suele ser tímido con desconocidos. Le gusta dormir con la pata en la cara.","en":"Tesla is my 12-year-old cat. He loves belly rubs, but he’s usually shy around strangers. He also likes sleeping with a paw over his face.","de":"Tesla ist mein 12 Jahre alter Kater. Er liebt es, am Bauch gekrault zu werden, ist aber Fremden gegenüber eher schüchtern. Außerdem schläft er gern mit der Pfote im Gesicht."},"longDescription":{"es":"Cuando un gato duerme con la pata sobre la cara, suele ser una mezcla de comodidad y autoprotección: bloquea la luz, conserva calor y se siente más “escondido” mientras descansa. También puede ser una forma de relajarse en una postura que le resulta familiar. En resumen: si ves esa pose, es señal de que se siente bastante a salvo.","en":"When a cat sleeps with a paw over their face, it’s usually a mix of comfort and self-protection: it blocks light, helps retain warmth, and makes them feel a little more “hidden” while they rest. It can also simply be a cozy posture they’ve learned to love. In short: that pose is a pretty good sign they feel safe.","de":"Wenn eine Katze mit der Pfote über dem Gesicht schläft, ist das meist eine Mischung aus Komfort und Selbstschutz: Es schirmt Licht ab, hält Wärme und lässt sie sich beim Schlafen ein bisschen „versteckter“ fühlen. Manchmal ist es auch einfach eine gemütliche Haltung, die sich bewährt hat. Kurz gesagt: Diese Pose ist oft ein Zeichen dafür, dass sie sich sicher fühlt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Tesla-int-sprite-md.webp","originalHero360":"assets/items/360Tesla-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Tesla","responsive":{"small":"assets/items/360Tesla-int-sprite-md.webp","medium":"assets/items/360Tesla-int-sprite-md.webp","large":"assets/items/360Tesla-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Tesla-int-sprite-md.webp"},"large":{"webp":"assets/items/360Tesla-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Tesla-int-poster.webp","sprite":{"image":"assets/items/360Tesla-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1770876020774","name":{"es":"Tecnología","en":"Technology","de":"Technologie"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876738287","name":{"es":"Meta Quest 3","en":"Meta Quest 3","de":"Meta Quest 3"},"description":{"es":"Headset de realidad virtual. Es mi herramienta de trabajo más actual y, honestamente, la mejor para visualizar Gaussian Splattings.","en":"A virtual reality headset. It’s my most up-to-date work tool—and honestly the best way to view Gaussian Splatting scenes.","de":"Ein Virtual-Reality-Headset. Es mein aktuellstes Arbeitswerkzeug – und ehrlich gesagt die beste Art, Gaussian-Splatting-Szenen zu betrachten."},"longDescription":{"es":"La Meta Quest 3 combina un visor de realidad virtual con capacidades de realidad mixta gracias a sus cámaras a color y sensores de profundidad. Esto permite pasar de un entorno totalmente inmersivo a ver el mundo real con elementos digitales encima. Además, su rendimiento y resolución la hacen ideal para explorar escenas 3D con mucho detalle, como los Gaussian Splattings, donde la sensación de escala y presencia se vuelve parte de la experiencia.","en":"The Meta Quest 3 blends virtual reality with mixed reality thanks to full-color passthrough cameras and depth sensing. That means you can switch from full immersion to seeing the real world with digital elements layered on top. Its performance and resolution also make it great for exploring high-detail 3D scenes—like Gaussian Splatting—where scale and presence become part of the experience.","de":"Die Meta Quest 3 verbindet Virtual Reality mit Mixed Reality dank Farbdurchsicht (Passthrough) und Tiefensensorik. So kann man zwischen voller Immersion und der realen Umgebung mit darübergelegten digitalen Elementen wechseln. Durch Leistung und Auflösung eignet sie sich außerdem hervorragend, um detailreiche 3D-Szenen zu erkunden – wie Gaussian Splatting – bei denen Maßstab und Präsenz zum Erlebnis gehören."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360vrHeadset-int-sprite-md.webp","originalHero360":"assets/items/360vrHeadset-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360vrHeadset","responsive":{"small":"assets/items/360vrHeadset-int-sprite-md.webp","medium":"assets/items/360vrHeadset-int-sprite-md.webp","large":"assets/items/360vrHeadset-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"},"large":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360vrHeadset-int-poster.webp","sprite":{"image":"assets/items/360vrHeadset-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770876880105","name":{"es":"Cámara instantánea","en":"Instant Camera","de":"Sofortbildkamera"},"description":{"es":"Cámara Instax de Fujifilm. La compré durante mi estancia en Japón para poder sacar fotos del recuerdo con mis amigos internacionales.","en":"A Fujifilm Instax camera. I bought it during my time in Japan so I could take keepsake photos with my international friends.","de":"Eine Fujifilm-Instax-Kamera. Ich habe sie während meiner Zeit in Japan gekauft, um Erinnerungsfotos mit meinen internationalen Freunden zu machen."},"longDescription":{"es":"Las cámaras instantáneas tienen algo que el celular no puede replicar: el ritual. Disparas, esperas, y ves cómo la imagen aparece poco a poco como si fuera magia. Nacieron como una mezcla de química e ingeniería pensada para capturar el momento sin laboratorio, y con el tiempo se volvieron un símbolo de nostalgia, viajes y amistad. Una foto instantánea no solo guarda una imagen: guarda el “ahí estuvimos”.","en":"Instant cameras have something phones can’t really replicate: the ritual. You take the shot, you wait, and the image slowly appears like a little magic trick. They were born from a mix of chemistry and engineering meant to capture a moment without a darkroom, and over time they became a symbol of nostalgia, travel, and friendship. An instant photo doesn’t just save an image—it saves the feeling of “we were there.”","de":"Sofortbildkameras haben etwas, das Handys kaum nachmachen können: das Ritual. Du drückst ab, wartest, und siehst, wie das Bild langsam erscheint – fast wie ein kleiner Zaubertrick. Entstanden sind sie aus einer Mischung aus Chemie und Ingenieurskunst, um Momente ohne Fotolabor festzuhalten. Mit der Zeit wurden sie zu einem Symbol für Nostalgie, Reisen und Freundschaft. Ein Sofortbild speichert nicht nur ein Bild – sondern das Gefühl von „wir waren da“."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Instax-int-sprite-md.webp","originalHero360":"assets/items/360Instax-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Instax","responsive":{"small":"assets/items/360Instax-int-sprite-md.webp","medium":"assets/items/360Instax-int-sprite-md.webp","large":"assets/items/360Instax-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Instax-int-sprite-md.webp"},"large":{"webp":"assets/items/360Instax-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Instax-int-poster.webp","sprite":{"image":"assets/items/360Instax-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770877008309","name":{"es":"Nintendo Switch","en":"Nintendo Switch","de":"Nintendo Switch"},"description":{"es":"Consola de videojuegos portátil de Nintendo.","en":"Nintendo’s hybrid portable game console.","de":"Nintendos Hybrid-Konsole für unterwegs und zu Hause."},"longDescription":{"es":"La Nintendo Switch nació con una idea simple pero brillante: que una consola no tuviera que elegir entre “de casa” o “portátil”. Su desarrollo se enfocó en hacer que el cambio entre modos fuera instantáneo, casi sin fricción, como si la consola se adaptara a tu día. Ese concepto redefinió cómo mucha gente juega: en el sofá, en el tren, en una sala de espera… o en cualquier rato libre.","en":"The Nintendo Switch was built around a simple but brilliant idea: a console shouldn’t have to choose between “home” and “portable.” Its design focused on making the transition between modes instant and frictionless, as if the console could adapt to your day. That concept reshaped how many people play—on the couch, on a train, in a waiting room… basically wherever you find a free moment.","de":"Die Nintendo Switch entstand aus einer einfachen, aber genialen Idee: Eine Konsole sollte sich nicht zwischen „zu Hause“ und „unterwegs“ entscheiden müssen. Bei der Entwicklung stand im Fokus, den Wechsel zwischen den Modi sofort und ohne Reibung zu machen – als würde sich die Konsole deinem Alltag anpassen. Dieses Konzept hat für viele verändert, wie gespielt wird: auf dem Sofa, im Zug, im Wartezimmer… eigentlich überall, wo gerade ein freier Moment ist."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Switch-int-sprite-md.webp","originalHero360":"assets/items/360Switch-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Switch","responsive":{"small":"assets/items/360Switch-int-sprite-md.webp","medium":"assets/items/360Switch-int-sprite-md.webp","large":"assets/items/360Switch-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Switch-int-sprite-md.webp"},"large":{"webp":"assets/items/360Switch-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Switch-int-poster.webp","sprite":{"image":"assets/items/360Switch-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1770876032404","name":{"es":"Arte / Coleccionables","en":"Art / Collectibles","de":"Kunst / Sammlerstücke"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877112789","name":{"es":"¡Muchos gatos!","en":"So Many Cats!","de":"So viele Katzen!"},"description":{"es":"Colección pequeña de artículos varios, todos con temática de gatos. ¿Cuántos gatos puedes contar? (Pista: son alrededor de 16).","en":"A small collection of assorted cat-themed items. How many cats can you count? (Hint: it’s around 16).","de":"Eine kleine Sammlung verschiedener Dinge – alles im Katzenthema. Wie viele Katzen kannst du zählen? (Tipp: es sind ungefähr 16)."},"longDescription":{"es":"Los gatos han sido musas oficiales de la humanidad desde hace miles de años: aparecen en el arte del Antiguo Egipto, en manuscritos medievales, en grabados japoneses, en pinturas modernas y, por supuesto, en memes. Su mezcla de elegancia, misterio y actitud los vuelve irresistibles para artistas y coleccionistas. Esta colección es una versión miniatura de esa obsesión colectiva: un homenaje a la criatura que actúa como si pagara renta.","en":"Cats have been humanity’s official muses for thousands of years: they show up in Ancient Egyptian art, medieval manuscripts, Japanese prints, modern paintings—and of course, memes. Their mix of elegance, mystery, and pure attitude makes them irresistible to artists and collectors. This little collection is a miniature version of that shared obsession: a tribute to the creature that behaves like it pays rent.","de":"Katzen sind seit Jahrtausenden so etwas wie die offiziellen Musen der Menschheit: Sie tauchen in der Kunst des Alten Ägypten auf, in mittelalterlichen Handschriften, in japanischen Holzschnitten, in moderner Malerei – und natürlich in Memes. Ihre Mischung aus Eleganz, Geheimnis und Haltung macht sie für Künstler und Sammler unwiderstehlich. Diese kleine Sammlung ist eine Mini-Version dieser kollektiven Obsession: eine Hommage an das Wesen, das sich benimmt, als würde es Miete zahlen."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360Cats-int-sprite-md.webp","originalHero360":"assets/items/360Cats-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Cats","responsive":{"small":"assets/items/360Cats-int-sprite-md.webp","medium":"assets/items/360Cats-int-sprite-md.webp","large":"assets/items/360Cats-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Cats-int-sprite-md.webp"},"large":{"webp":"assets/items/360Cats-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Cats-int-poster.webp","sprite":{"image":"assets/items/360Cats-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1770877246224","name":{"es":"Merry Go (One Piece)","en":"Going Merry (One Piece)","de":"Going Merry (One Piece)"},"description":{"es":"Figura coleccionable del barco Going Merry de One Piece.","en":"A collectible figure of the Going Merry ship from One Piece.","de":"Eine Sammlerfigur des Schiffs Going Merry aus One Piece."},"longDescription":{"es":"En Japón, la cultura del coleccionismo es enorme: no solo se trata de “tener cosas”, sino de conservar pedacitos de historias que marcaron a una generación. Figuras, gashapon, ediciones limitadas y modelos se convierten en recuerdos tangibles. Y cuando la pieza es de una serie como One Piece, no es solo decoración: es una declaración de amor a una aventura compartida.","en":"In Japan, collecting is a massive culture: it’s not just about “owning stuff,” but about keeping small pieces of stories that shaped a generation. Figures, gashapon, limited editions, and model kits become tangible memories. And when the item is from a series like One Piece, it’s not just decoration—it’s a love letter to a shared adventure.","de":"In Japan ist Sammeln eine riesige Kultur: Es geht nicht nur darum, „Sachen zu besitzen“, sondern kleine Stücke von Geschichten zu bewahren, die eine Generation geprägt haben. Figuren, Gashapon, Limited Editions und Modellbausätze werden zu greifbaren Erinnerungen. Und wenn das Stück aus einer Serie wie One Piece stammt, ist es nicht nur Deko – sondern eine Liebeserklärung an ein gemeinsames Abenteuer."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"vegan":false,"media":{"hero360":"assets/items/360MarryGo-int-sprite-md.webp","originalHero360":"assets/items/360MarryGo-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360MarryGo","responsive":{"small":"assets/items/360MarryGo-int-sprite-md.webp","medium":"assets/items/360MarryGo-int-sprite-md.webp","large":"assets/items/360MarryGo-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"},"large":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360MarryGo-int-poster.webp","sprite":{"image":"assets/items/360MarryGo-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
+const DATA = {"meta":{"slug":"keneth-s-gaussian-splattings-collection","name":"Keneth's Gaussian Splattings Collection","restaurantName":{"es":"Keneth's","en":"Keneth's","de":"Keneth's"},"title":{"es":"Gaussian Splattings Collection","en":"Gaussian Splattings Collection","de":"Gaussian-Splatting-Kollektion"},"identityMode":"text","logoSrc":"","fontFamily":"Fraunces","fontSource":"","template":"focus-rows","locales":["es","en","de"],"defaultLocale":"es","currency":"MXN","currencyPosition":"left","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","fontRoles":{"restaurant":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"},"title":{"source":"assets/fonts/SuperBrigadeGradient-V4qA6.otf"},"section":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"},"item":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"}},"scrollSensitivity":{"hero360":3,"item":5,"section":5},"primaryColor":{"mode":"preset","preset":"midnight-blue","tone":-5,"opacity":0.8}},"backgrounds":[{"id":"bg-1771825781037","label":"Fondo 1","src":"assets/backgrounds/backgroundMannheim-md.webp","type":"image","originalSrc":"assets/backgrounds/backgroundMannheim.webp","derived":{"profileId":"ffmpeg-v2-copy-fallback","medium":{"webp":"assets/backgrounds/backgroundMannheim-md.webp"},"large":{"webp":"assets/backgrounds/backgroundMannheim-md.webp"}}}],"categories":[{"id":"section-1770876032404","name":{"es":"Arte / Coleccionables","en":"Art / Collectibles","de":"Kunst / Sammlerstücke"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877112789","name":{"es":"¡Muchos gatos!","en":"So Many Cats!","de":"So viele Katzen!"},"description":{"es":"Colección pequeña de artículos varios, todos con temática de gatos. ¿Cuántos gatos puedes contar? (Pista: son alrededor de 16).","en":"A small collection of assorted cat-themed items. How many cats can you count? (Hint: it’s around 16).","de":"Eine kleine Sammlung verschiedener Dinge – alles im Katzenthema. Wie viele Katzen kannst du zählen? (Tipp: es sind ungefähr 16)."},"longDescription":{"es":"Los gatos han sido musas oficiales de la humanidad desde hace miles de años: aparecen en el arte del Antiguo Egipto, en manuscritos medievales, en grabados japoneses, en pinturas modernas y, por supuesto, en memes. Su mezcla de elegancia, misterio y actitud los vuelve irresistibles para artistas y coleccionistas. Esta colección es una versión miniatura de esa obsesión colectiva: un homenaje a la criatura que actúa como si pagara renta.","en":"Cats have been humanity’s official muses for thousands of years: they show up in Ancient Egyptian art, medieval manuscripts, Japanese prints, modern paintings—and of course, memes. Their mix of elegance, mystery, and pure attitude makes them irresistible to artists and collectors. This little collection is a miniature version of that shared obsession: a tribute to the creature that behaves like it pays rent.","de":"Katzen sind seit Jahrtausenden so etwas wie die offiziellen Musen der Menschheit: Sie tauchen in der Kunst des Alten Ägypten auf, in mittelalterlichen Handschriften, in japanischen Holzschnitten, in moderner Malerei – und natürlich in Memes. Ihre Mischung aus Eleganz, Geheimnis und Haltung macht sie für Künstler und Sammler unwiderstehlich. Diese kleine Sammlung ist eine Mini-Version dieser kollektiven Obsession: eine Hommage an das Wesen, das sich benimmt, als würde es Miete zahlen."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Cats-int-sprite-md.webp","originalHero360":"assets/items/360Cats-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Cats","responsive":{"small":"assets/items/360Cats-int-sprite-md.webp","medium":"assets/items/360Cats-int-sprite-md.webp","large":"assets/items/360Cats-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Cats-int-sprite-md.webp"},"large":{"webp":"assets/items/360Cats-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Cats-int-poster.webp","sprite":{"image":"assets/items/360Cats-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1772934816012","name":{"es":"Pintura de gato negro","en":"Black Cat Painting","de":"Gemälde einer schwarzen Katze"},"description":{"es":"Pintura en miniatura de un gato negro asomando la cabeza.","en":"A miniature painting of a black cat peeking its head out.","de":"Ein Miniaturgemälde einer schwarzen Katze, die ihren Kopf hervorstreckt."},"longDescription":{"es":"Adquirí esta pintura en miniatura en un mercado local de mi ciudad natal. La artista se llama Vero Rocha y ¡tiene una gran variedad de obras en miniatura! La próxima vez que la vea, pienso comisionarle una miniatura de cada uno de mis gatos.","en":"I found this miniature painting at a local market in my hometown. The artist is named Vero Rocha and she creates a wide variety of miniature artworks! The next time I see her, I plan to commission a miniature painting of each of my cats.","de":"Dieses Miniaturgemälde habe ich auf einem lokalen Markt in meiner Heimatstadt gefunden. Die Künstlerin heißt Vero Rocha und sie macht eine große Vielfalt an Miniaturwerken! Wenn ich sie das nächste Mal sehe, möchte ich eine Miniatur von jedem meiner Katzen bei ihr in Auftrag geben."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cat-Painting-int-sprite-md.webp","originalHero360":"assets/items/Cat-Painting-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cat-Painting","gallery":[],"responsive":{"small":"assets/items/Cat-Painting-int-sprite-md.webp","medium":"assets/items/Cat-Painting-int-sprite-md.webp","large":"assets/items/Cat-Painting-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cat-Painting-int-sprite-md.webp"},"large":{"webp":"assets/items/Cat-Painting-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cat-Painting-int-poster.webp","sprite":{"image":"assets/items/Cat-Painting-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1772935523073","name":{"es":"Escultura cerámica de gato","en":"Ceramic Cat Sculpture","de":"Keramische Katzenskulptur"},"description":{"es":"Pieza de cerámica con forma de gato, inspirada en el estilo del Día de Muertos en México y adornada con luces LED.","en":"A ceramic cat sculpture inspired by Mexico’s Day of the Dead style, decorated with LED lights.","de":"Eine Keramikskulptur in Katzenform, inspiriert vom Stil des mexikanischen Día de los Muertos und mit LED-Lichtern dekoriert."},"longDescription":{"es":"La obra forma parte de una colección llamada \"Ofrenda\". Es un homenaje a la tradición, al amor por los animales y a nuestras mascotas que ya no están con nosotros. Está pintada a mano con detalles que evocan las calaveras de azúcar. Sus perforaciones en forma de huesos permiten que la luz atraviese la pieza, revelando su espíritu interior y recordándonos que el vínculo con ellos nunca se apaga.","en":"This piece belongs to a collection called \"Ofrenda.\" It is a tribute to tradition, to the love of animals, and to the pets who are no longer with us. It is hand-painted with details that evoke traditional sugar skulls. Bone-shaped perforations allow light to shine through the sculpture, revealing its inner spirit and reminding us that our bond with them never fades.","de":"Dieses Werk gehört zu einer Kollektion namens \"Ofrenda\". Es ist eine Hommage an Tradition, an die Liebe zu Tieren und an unsere Haustiere, die nicht mehr bei uns sind. Die Skulptur ist handbemalt mit Details, die an Zuckerschädel erinnern. Knochenförmige Öffnungen lassen das Licht hindurchscheinen und enthüllen den inneren Geist der Figur – eine Erinnerung daran, dass unsere Verbindung zu ihnen niemals erlischt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cat-Sculpture-int-sprite-md.webp","originalHero360":"assets/items/Cat-Sculpture-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cat-Sculpture","gallery":[],"responsive":{"small":"assets/items/Cat-Sculpture-int-sprite-md.webp","medium":"assets/items/Cat-Sculpture-int-sprite-md.webp","large":"assets/items/Cat-Sculpture-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cat-Sculpture-int-sprite-md.webp"},"large":{"webp":"assets/items/Cat-Sculpture-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cat-Sculpture-int-poster.webp","sprite":{"image":"assets/items/Cat-Sculpture-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1772935892779","name":{"es":"Gato de vidrio / Posavasos Thekenchor","en":"Glass Cat / Thekenchor Coaster","de":"Glaskatze / Thekenchor-Untersetzer"},"description":{"es":"Escultura miniatura de vidrio fundido en forma de gato, colocada sobre un posavasos con temática de un coro musical de la ciudad de Mannheim, Alemania.","en":"A miniature glass cat sculpture placed on a coaster themed after a musical choir from the city of Mannheim, Germany.","de":"Eine Miniaturskulptur aus geschmolzenem Glas in Form einer Katze, die auf einem Untersetzer mit Bezug zu einem Musikchor aus Mannheim in Deutschland steht."},"longDescription":{"es":"Hace un tiempo tuve la oportunidad de visitar a un amigo alemán después de no vernos durante años. Él me llevó a un pueblo cerca de la ciudad de Brunswick, y fue allí donde encontré esta hermosa escultura en miniatura.\n\nDesde que me mudé a la ciudad de Mannheim he tenido la oportunidad de conocer a muchas personas maravillosas participando en un coro. Contrario a lo que muchos piensan, no es un coro de iglesia, sino uno donde no es necesario saber cantar: lo único necesario es reunirse en un bar y divertirse al ritmo de la música.","en":"Some time ago I had the chance to visit a German friend after not seeing each other for years. He took me to a town near the city of Brunswick, and that’s where I found this beautiful miniature sculpture.\n\nSince moving to Mannheim, I’ve had the chance to meet many wonderful people by taking part in a choir. Contrary to what many might think, it’s not a church choir, it’s a choir where you don’t need to know how to sing. The only requirement is to gather in a bar and have fun with music!","de":"Vor einiger Zeit hatte ich die Gelegenheit, einen deutschen Freund zu besuchen, nachdem wir uns jahrelang nicht gesehen hatten. Er nahm mich mit in ein Dorf in der Nähe der Stadt Braunschweig, und dort entdeckte ich diese wunderschöne Miniaturskulptur.\n\nSeit ich in die Stadt Mannheim gezogen bin, habe ich durch die Teilnahme an einem Chor viele wunderbare Menschen kennengelernt. Entgegen dem, was viele denken, ist es kein Kirchenchor, man muss nicht einmal singen können. Das Einzige, was man braucht, ist sich in einer Bar zu treffen und gemeinsam Spaß mit Musik zu haben."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Glass-Cat-int-sprite-md.webp","originalHero360":"assets/items/Glass-Cat-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Glass-Cat","gallery":[],"responsive":{"small":"assets/items/Glass-Cat-int-sprite-md.webp","medium":"assets/items/Glass-Cat-int-sprite-md.webp","large":"assets/items/Glass-Cat-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Glass-Cat-int-sprite-md.webp"},"large":{"webp":"assets/items/Glass-Cat-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Glass-Cat-int-poster.webp","sprite":{"image":"assets/items/Glass-Cat-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1770877246224","name":{"es":"Merry Go (One Piece)","en":"Going Merry (One Piece)","de":"Going Merry (One Piece)"},"description":{"es":"Figura coleccionable del barco Going Merry de One Piece.","en":"A collectible figure of the Going Merry ship from One Piece.","de":"Eine Sammlerfigur des Schiffs Going Merry aus One Piece."},"longDescription":{"es":"En Japón, la cultura del coleccionismo es enorme: no solo se trata de “tener cosas”, sino de conservar pedacitos de historias que marcaron a una generación. Figuras, gashapon, ediciones limitadas y modelos se convierten en recuerdos tangibles. Y cuando la pieza es de una serie como One Piece, no es solo decoración: es una declaración de amor a una aventura compartida.","en":"In Japan, collecting is a massive culture: it’s not just about “owning stuff,” but about keeping small pieces of stories that shaped a generation. Figures, gashapon, limited editions, and model kits become tangible memories. And when the item is from a series like One Piece, it’s not just decoration—it’s a love letter to a shared adventure.","de":"In Japan ist Sammeln eine riesige Kultur: Es geht nicht nur darum, „Sachen zu besitzen“, sondern kleine Stücke von Geschichten zu bewahren, die eine Generation geprägt haben. Figuren, Gashapon, Limited Editions und Modellbausätze werden zu greifbaren Erinnerungen. Und wenn das Stück aus einer Serie wie One Piece stammt, ist es nicht nur Deko – sondern eine Liebeserklärung an ein gemeinsames Abenteuer."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360MarryGo-int-sprite-md.webp","originalHero360":"assets/items/360MarryGo-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360MarryGo","responsive":{"small":"assets/items/360MarryGo-int-sprite-md.webp","medium":"assets/items/360MarryGo-int-sprite-md.webp","large":"assets/items/360MarryGo-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"},"large":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360MarryGo-int-poster.webp","sprite":{"image":"assets/items/360MarryGo-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]},{"id":"section-1770875951604","name":{"es":"Naturaleza","en":"Nature","de":"Natur"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876206157","name":{"es":"Ramo de flores","en":"Flower Bouquet","de":"Blumenstrauß"},"description":{"es":"Arreglo floral colorido compuesto por una variedad de flores.","en":"A colorful bouquet made from a variety of flowers.","de":"Ein farbenfroher Strauß aus einer Vielzahl von Blumen."},"longDescription":{"es":"Desde hace siglos, los ramos de flores se usan para decir lo que a veces cuesta poner en palabras: gratitud, cariño, celebración o incluso un simple “pensé en ti”. En distintas culturas, cada flor ha tenido su propio simbolismo, y por eso un arreglo puede contar una pequeña historia sin necesidad de una sola frase.","en":"For centuries, flower bouquets have been a way to say what’s sometimes hard to put into words: gratitude, affection, celebration, or even a simple “I thought of you.” Across cultures, each flower has carried its own symbolism—so a bouquet can quietly tell a story without a single sentence.","de":"Seit Jahrhunderten sind Blumensträuße eine stille Art, Dinge auszudrücken, die sich nicht immer leicht in Worte fassen lassen: Dankbarkeit, Zuneigung, Feierlichkeit oder einfach ein „Ich hab an dich gedacht“. In vielen Kulturen haben einzelne Blumen ihre eigene Symbolik – so kann ein Strauß eine kleine Geschichte erzählen, ganz ohne ein einziges Wort."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Flowers-int-sprite-md.webp","originalHero360":"assets/items/360Flowers-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Flowers","responsive":{"small":"assets/items/360Flowers-int-sprite-md.webp","medium":"assets/items/360Flowers-int-sprite-md.webp","large":"assets/items/360Flowers-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Flowers-int-sprite-md.webp"},"large":{"webp":"assets/items/360Flowers-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Flowers-int-poster.webp","sprite":{"image":"assets/items/360Flowers-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876434114","name":{"es":"Flor de Nochebuena","en":"Poinsettia","de":"Weihnachtsstern"},"description":{"es":"Arreglo floral pequeño con temática navideña.","en":"A small holiday-themed floral arrangement.","de":"Ein kleines, weihnachtlich inspiriertes Blumenarrangement."},"longDescription":{"es":"La flor de Nochebuena, conocida en muchos países como poinsettia, es originaria de México y desde hace siglos se asocia con la temporada decembrina. Su color rojo intenso no es un pétalo, sino una hoja modificada (bráctea), y por eso luce tan dramática: es naturaleza haciendo diseño gráfico.","en":"The poinsettia is native to Mexico and has been tied to the holiday season for centuries. Its vivid red “petals” aren’t petals at all—they’re modified leaves called bracts, which is why it looks so striking: nature doing graphic design.","de":"Der Weihnachtsstern stammt ursprünglich aus Mexiko und wird seit Jahrhunderten mit der Weihnachtszeit verbunden. Seine leuchtend roten „Blütenblätter“ sind in Wirklichkeit keine Blüten, sondern umgefärbte Hochblätter (Brakteen) – deshalb wirkt er so dramatisch: Natur als Grafikdesignerin."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Nochebuena-int-sprite-md.webp","originalHero360":"assets/items/360Nochebuena-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Nochebuena","responsive":{"small":"assets/items/360Nochebuena-int-sprite-md.webp","medium":"assets/items/360Nochebuena-int-sprite-md.webp","large":"assets/items/360Nochebuena-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"},"large":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Nochebuena-int-poster.webp","sprite":{"image":"assets/items/360Nochebuena-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876569880","name":{"es":"Tesla dormido","en":"Sleeping Tesla","de":"Tesla (schlafend)"},"description":{"es":"Tesla es mi gato de 12 años. Le encanta que le soben la panza, pero suele ser tímido con desconocidos. Le gusta dormir con la pata en la cara.","en":"Tesla is my 12-year-old cat. He loves belly rubs, but he’s usually shy around strangers. He also likes sleeping with a paw over his face.","de":"Tesla ist mein 12 Jahre alter Kater. Er liebt es, am Bauch gekrault zu werden, ist aber Fremden gegenüber eher schüchtern. Außerdem schläft er gern mit der Pfote im Gesicht."},"longDescription":{"es":"Cuando un gato duerme con la pata sobre la cara, suele ser una mezcla de comodidad y autoprotección: bloquea la luz, conserva calor y se siente más “escondido” mientras descansa. También puede ser una forma de relajarse en una postura que le resulta familiar. En resumen: si ves esa pose, es señal de que se siente bastante a salvo.","en":"When a cat sleeps with a paw over their face, it’s usually a mix of comfort and self-protection: it blocks light, helps retain warmth, and makes them feel a little more “hidden” while they rest. It can also simply be a cozy posture they’ve learned to love. In short: that pose is a pretty good sign they feel safe.","de":"Wenn eine Katze mit der Pfote über dem Gesicht schläft, ist das meist eine Mischung aus Komfort und Selbstschutz: Es schirmt Licht ab, hält Wärme und lässt sie sich beim Schlafen ein bisschen „versteckter“ fühlen. Manchmal ist es auch einfach eine gemütliche Haltung, die sich bewährt hat. Kurz gesagt: Diese Pose ist oft ein Zeichen dafür, dass sie sich sicher fühlt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Tesla-int-sprite-md.webp","originalHero360":"assets/items/360Tesla-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Tesla","responsive":{"small":"assets/items/360Tesla-int-sprite-md.webp","medium":"assets/items/360Tesla-int-sprite-md.webp","large":"assets/items/360Tesla-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Tesla-int-sprite-md.webp"},"large":{"webp":"assets/items/360Tesla-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Tesla-int-poster.webp","sprite":{"image":"assets/items/360Tesla-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]},{"id":"section-1770876020774","name":{"es":"Tecnología","en":"Technology","de":"Technologie"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877008309","name":{"es":"Nintendo Switch","en":"Nintendo Switch","de":"Nintendo Switch"},"description":{"es":"Consola de videojuegos portátil de Nintendo.","en":"Nintendo’s hybrid portable game console.","de":"Nintendos Hybrid-Konsole für unterwegs und zu Hause."},"longDescription":{"es":"La Nintendo Switch nació con una idea simple pero brillante: que una consola no tuviera que elegir entre “de casa” o “portátil”. Su desarrollo se enfocó en hacer que el cambio entre modos fuera instantáneo, casi sin fricción, como si la consola se adaptara a tu día. Ese concepto redefinió cómo mucha gente juega: en el sofá, en el tren, en una sala de espera… o en cualquier rato libre.","en":"The Nintendo Switch was built around a simple but brilliant idea: a console shouldn’t have to choose between “home” and “portable.” Its design focused on making the transition between modes instant and frictionless, as if the console could adapt to your day. That concept reshaped how many people play—on the couch, on a train, in a waiting room… basically wherever you find a free moment.","de":"Die Nintendo Switch entstand aus einer einfachen, aber genialen Idee: Eine Konsole sollte sich nicht zwischen „zu Hause“ und „unterwegs“ entscheiden müssen. Bei der Entwicklung stand im Fokus, den Wechsel zwischen den Modi sofort und ohne Reibung zu machen – als würde sich die Konsole deinem Alltag anpassen. Dieses Konzept hat für viele verändert, wie gespielt wird: auf dem Sofa, im Zug, im Wartezimmer… eigentlich überall, wo gerade ein freier Moment ist."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/Switch-int-sprite-md.webp","originalHero360":"assets/items/Switch-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"Switch","responsive":{"small":"assets/items/Switch-int-sprite-md.webp","medium":"assets/items/Switch-int-sprite-md.webp","large":"assets/items/Switch-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Switch-int-sprite-md.webp"},"large":{"webp":"assets/items/Switch-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Switch-int-poster.webp","sprite":{"image":"assets/items/Switch-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876738287","name":{"es":"Meta Quest 3","en":"Meta Quest 3","de":"Meta Quest 3"},"description":{"es":"Headset de realidad virtual. Es mi herramienta de trabajo más actual y, honestamente, la mejor para visualizar Gaussian Splattings.","en":"A virtual reality headset. It’s my most up-to-date work tool—and honestly the best way to view Gaussian Splatting scenes.","de":"Ein Virtual-Reality-Headset. Es mein aktuellstes Arbeitswerkzeug – und ehrlich gesagt die beste Art, Gaussian-Splatting-Szenen zu betrachten."},"longDescription":{"es":"La Meta Quest 3 combina un visor de realidad virtual con capacidades de realidad mixta gracias a sus cámaras a color y sensores de profundidad. Esto permite pasar de un entorno totalmente inmersivo a ver el mundo real con elementos digitales encima. Además, su rendimiento y resolución la hacen ideal para explorar escenas 3D con mucho detalle, como los Gaussian Splattings, donde la sensación de escala y presencia se vuelve parte de la experiencia.","en":"The Meta Quest 3 blends virtual reality with mixed reality thanks to full-color passthrough cameras and depth sensing. That means you can switch from full immersion to seeing the real world with digital elements layered on top. Its performance and resolution also make it great for exploring high-detail 3D scenes—like Gaussian Splatting—where scale and presence become part of the experience.","de":"Die Meta Quest 3 verbindet Virtual Reality mit Mixed Reality dank Farbdurchsicht (Passthrough) und Tiefensensorik. So kann man zwischen voller Immersion und der realen Umgebung mit darübergelegten digitalen Elementen wechseln. Durch Leistung und Auflösung eignet sie sich außerdem hervorragend, um detailreiche 3D-Szenen zu erkunden – wie Gaussian Splatting – bei denen Maßstab und Präsenz zum Erlebnis gehören."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360vrHeadset-int-sprite-md.webp","originalHero360":"assets/items/360vrHeadset-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360vrHeadset","responsive":{"small":"assets/items/360vrHeadset-int-sprite-md.webp","medium":"assets/items/360vrHeadset-int-sprite-md.webp","large":"assets/items/360vrHeadset-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"},"large":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360vrHeadset-int-poster.webp","sprite":{"image":"assets/items/360vrHeadset-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876880105","name":{"es":"Cámara instantánea","en":"Instant Camera","de":"Sofortbildkamera"},"description":{"es":"Cámara Instax de Fujifilm. La compré durante mi estancia en Japón para poder sacar fotos del recuerdo con mis amigos internacionales.","en":"A Fujifilm Instax camera. I bought it during my time in Japan so I could take keepsake photos with my international friends.","de":"Eine Fujifilm-Instax-Kamera. Ich habe sie während meiner Zeit in Japan gekauft, um Erinnerungsfotos mit meinen internationalen Freunden zu machen."},"longDescription":{"es":"Las cámaras instantáneas tienen algo que el celular no puede replicar: el ritual. Disparas, esperas, y ves cómo la imagen aparece poco a poco como si fuera magia. Nacieron como una mezcla de química e ingeniería pensada para capturar el momento sin laboratorio, y con el tiempo se volvieron un símbolo de nostalgia, viajes y amistad. Una foto instantánea no solo guarda una imagen: guarda el “ahí estuvimos”.","en":"Instant cameras have something phones can’t really replicate: the ritual. You take the shot, you wait, and the image slowly appears like a little magic trick. They were born from a mix of chemistry and engineering meant to capture a moment without a darkroom, and over time they became a symbol of nostalgia, travel, and friendship. An instant photo doesn’t just save an image—it saves the feeling of “we were there.”","de":"Sofortbildkameras haben etwas, das Handys kaum nachmachen können: das Ritual. Du drückst ab, wartest, und siehst, wie das Bild langsam erscheint – fast wie ein kleiner Zaubertrick. Entstanden sind sie aus einer Mischung aus Chemie und Ingenieurskunst, um Momente ohne Fotolabor festzuhalten. Mit der Zeit wurden sie zu einem Symbol für Nostalgie, Reisen und Freundschaft. Ein Sofortbild speichert nicht nur ein Bild – sondern das Gefühl von „wir waren da“."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Instax-int-sprite-md.webp","originalHero360":"assets/items/360Instax-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Instax","responsive":{"small":"assets/items/360Instax-int-sprite-md.webp","medium":"assets/items/360Instax-int-sprite-md.webp","large":"assets/items/360Instax-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Instax-int-sprite-md.webp"},"large":{"webp":"assets/items/360Instax-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Instax-int-poster.webp","sprite":{"image":"assets/items/360Instax-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
 const currencySymbols = {
   MXN: "$", USD: "$", EUR: "€", GBP: "£", JPY: "¥", COP: "$", ARS: "$"
 };
+const BRAND_LANDING_URL = "https://keneth4.github.io/";
+const BRAND_SIGNATURE_ARIA_LABEL = "Creativivid Studio";
+const BRAND_SIGNATURE_LOGO = "Logo.png";
 const FOCUS_ROWS_WHEEL_STEP_THRESHOLD = 260;
 const FOCUS_ROWS_WHEEL_SETTLE_MS = 200;
 const FOCUS_ROWS_WHEEL_DELTA_CAP = 140;
@@ -85,8 +88,8 @@ const JUKEBOX_TOUCH_DELTA_SCALE = 2.1;
 const JUKEBOX_MAX_STEP_PER_INPUT = 0;
 const JUKEBOX_TOUCH_INTENT_THRESHOLD = 10;
 const INTERACTIVE_DEFAULT_FRAME_COUNT = 72;
-const ROTATE_CUE_RESHOW_IDLE_MS = 3000;
-const ROTATE_CUE_LOOP_MS = 5000;
+const INTERACTIVE_PIXELS_PER_FRAME_DESKTOP = 6.25;
+const INTERACTIVE_PIXELS_PER_FRAME_COARSE = 10.94;
 const interactiveDetailBytesCache = new Map();
 const interactiveDetailBytesPending = new Map();
 const detailPrefetchedSources = new Set();
@@ -100,20 +103,65 @@ const jukeboxWheelState = new Map();
 const focusRowWheelState = new Map();
 
 const textOf = (entry) => entry?.[locale] ?? entry?.[DATA.meta.defaultLocale] ?? "";
-const menuTerms = {
-  es: { allergens: "Alérgenos", vegan: "Vegano" },
-  en: { allergens: "Allergens", vegan: "Vegan" },
-  fr: { allergens: "Allergènes", vegan: "Végétalien" },
-  pt: { allergens: "Alergênicos", vegan: "Vegano" },
-  it: { allergens: "Allergeni", vegan: "Vegano" },
-  de: { allergens: "Allergene", vegan: "Vegan" },
-  ja: { allergens: "アレルゲン", vegan: "ヴィーガン" },
-  ko: { allergens: "알레르겐", vegan: "비건" },
-  zh: { allergens: "过敏原", vegan: "纯素" }
-};
+const menuTerms = {"es":{"allergens":"Alérgenos","spice":"Picante"},"en":{"allergens":"Allergens","spice":"Spice"},"fr":{"allergens":"Allergènes","spice":"Épicé"},"pt":{"allergens":"Alergênicos","spice":"Picante"},"it":{"allergens":"Allergeni","spice":"Piccante"},"de":{"allergens":"Allergene","spice":"Scharf"},"ja":{"allergens":"アレルゲン","spice":"辛さ"},"ko":{"allergens":"알레르겐","spice":"매운맛"},"zh":{"allergens":"过敏原","spice":"辣度"}};
+const badgeCatalog = [{"id":"vegan","tone":"vegan","label":{"es":"Vegano","en":"Vegan","fr":"Végétalien","pt":"Vegano","it":"Vegano","de":"Vegan","ja":"ヴィーガン","ko":"비건","zh":"纯素"}},{"id":"halal","tone":"neutral","label":{"es":"Halal","en":"Halal","fr":"Halal","pt":"Halal","it":"Halal","de":"Halal","ja":"ハラール","ko":"할랄","zh":"清真"}},{"id":"kosher","tone":"neutral","label":{"es":"Kosher","en":"Kosher","fr":"Casher","pt":"Kosher","it":"Kosher","de":"Koscher","ja":"コーシャ","ko":"코셔","zh":"洁食"}}];
+const badgeCatalogById = new Map(badgeCatalog.map((badge) => [badge.id, badge]));
 const getTerm = (key) => {
   const lang = (locale || "").toLowerCase().split("-")[0];
   return (menuTerms[lang] || menuTerms.en)[key];
+};
+const normalizeBadges = (value) => {
+  if (!Array.isArray(value)) return [];
+  const seen = new Set();
+  return value.filter((entry) => {
+    if (!badgeCatalogById.has(entry) || seen.has(entry)) return false;
+    seen.add(entry);
+    return true;
+  });
+};
+const normalizeSpiceLevel = (value) => {
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return 0;
+  return Math.max(0, Math.min(3, Math.round(parsed)));
+};
+const getBadgeLabel = (badgeId) => {
+  const badge = badgeCatalogById.get(badgeId);
+  if (!badge) return badgeId;
+  return textOf(badge.label) || badgeId;
+};
+const getItemBadges = (dish) => {
+  const badges = badgeCatalog
+    .filter((badge) => normalizeBadges(dish.badges).includes(badge.id))
+    .map((badge) => ({
+      key: badge.id,
+      label: getBadgeLabel(badge.id),
+      tone: badge.tone
+    }));
+  const spiceLevel = normalizeSpiceLevel(dish.spiceLevel);
+  if (spiceLevel > 0) {
+    badges.push({
+      key: "spice-" + spiceLevel,
+      label: getTerm("spice"),
+      tone: "spice",
+      spiceLevel
+    });
+  }
+  return badges;
+};
+const renderBadgePill = (badge, className = "") => {
+  const meter = badge.spiceLevel
+    ? '<span class="menu-pill__meter" aria-hidden="true">' +
+      Array.from({ length: 3 }, (_, index) =>
+        '<span class="menu-pill__meter-dot ' + (index + 1 <= badge.spiceLevel ? "is-active" : "") + '"></span>'
+      ).join("") +
+      "</span>"
+    : "";
+  return '<span class="menu-pill menu-pill--' + badge.tone + (className ? " " + className : "") + '"><span>' + badge.label + "</span>" + meter + "</span>";
+};
+const renderBadgeList = (dish, className) => {
+  const badges = getItemBadges(dish);
+  if (badges.length === 0) return "";
+  return '<div class="' + className + '">' + badges.map((badge) => renderBadgePill(badge)).join("") + "</div>";
 };
 const getAllergenValues = (dish) =>
   (dish.allergens || [])
@@ -168,11 +216,12 @@ const deriveFontFamilyFromSource = (source) => {
 };
 const normalizeFontConfig = (config) => ({
   family: String(config?.family || "").trim(),
-  source: String(config?.source || "").trim()
+  source: String(config?.source || "").trim(),
+  color: String(config?.color || "").trim()
 });
 const withResolvedFontFamily = (config) =>
   config.source
-    ? { family: deriveFontFamilyFromSource(config.source), source: config.source }
+    ? { family: deriveFontFamilyFromSource(config.source), source: config.source, color: config.color }
     : config;
 const getInterfaceFontConfig = () =>
   withResolvedFontFamily(normalizeFontConfig({ family: fontFamily, source: fontSource }));
@@ -181,7 +230,8 @@ const getRoleFontConfig = (role) => {
   const roleFont = normalizeFontConfig(fontRoles?.[role]);
   return withResolvedFontFamily({
     family: roleFont.family || interfaceFont.family,
-    source: roleFont.source || interfaceFont.source
+    source: roleFont.source || interfaceFont.source,
+    color: roleFont.color
   });
 };
 const getItemFontConfig = (item) => {
@@ -189,7 +239,8 @@ const getItemFontConfig = (item) => {
   const itemConfig = normalizeFontConfig(item?.typography?.item);
   return withResolvedFontFamily({
     family: itemConfig.family || fallback.family,
-    source: itemConfig.source || fallback.source
+    source: itemConfig.source || fallback.source,
+    color: itemConfig.color || fallback.color
   });
 };
 const collectRuntimeFontConfigs = () => {
@@ -208,6 +259,7 @@ const collectRuntimeFontConfigs = () => {
   pushConfig(getRoleFontConfig("title"));
   pushConfig(getRoleFontConfig("section"));
   pushConfig(getRoleFontConfig("item"));
+  pushConfig(getRoleFontConfig("disclaimer"));
   (DATA.categories || []).forEach((category) => {
     (category.items || []).forEach((item) => {
       pushConfig(getItemFontConfig(item));
@@ -250,34 +302,58 @@ const ensureFont = () => {
     injectedFontLinks.add(builtInFontHref);
   });
 };
-const getPreviewFontVars = () => {
+const applyPreviewFontVars = (target) => {
+  if (!target) return;
   const interfaceFont = getInterfaceFontConfig();
   const restaurantFont = getRoleFontConfig("restaurant");
   const titleFont = getRoleFontConfig("title");
   const sectionFont = getRoleFontConfig("section");
   const itemFont = getRoleFontConfig("item");
-  return (
-    "--menu-font:" +
-    getFontStack(interfaceFont.family) +
-    ";--menu-font-ui:" +
-    getFontStack(interfaceFont.family) +
-    ";--menu-font-identity:" +
-    getFontStack(interfaceFont.family) +
-    ";--menu-font-restaurant:" +
-    getFontStack(restaurantFont.family) +
-    ";--menu-font-title:" +
-    getFontStack(titleFont.family) +
-    ";--menu-font-section:" +
-    getFontStack(sectionFont.family) +
-    ";--menu-font-item:" +
-    getFontStack(itemFont.family) +
-    ";"
-  );
+  const disclaimerFont = getRoleFontConfig("disclaimer");
+  target.style.setProperty("--menu-font", getFontStack(interfaceFont.family));
+  target.style.setProperty("--menu-font-ui", getFontStack(interfaceFont.family));
+  target.style.setProperty("--menu-font-identity", getFontStack(interfaceFont.family));
+  target.style.setProperty("--menu-font-restaurant", getFontStack(restaurantFont.family));
+  target.style.setProperty("--menu-font-title", getFontStack(titleFont.family));
+  target.style.setProperty("--menu-font-section", getFontStack(sectionFont.family));
+  target.style.setProperty("--menu-font-item", getFontStack(itemFont.family));
+  target.style.setProperty("--menu-font-disclaimer", getFontStack(disclaimerFont.family));
+  if (restaurantFont.color) {
+    target.style.setProperty("--menu-text-restaurant", restaurantFont.color);
+  } else {
+    target.style.removeProperty("--menu-text-restaurant");
+  }
+  if (titleFont.color) {
+    target.style.setProperty("--menu-text-title", titleFont.color);
+  } else {
+    target.style.removeProperty("--menu-text-title");
+  }
+  if (sectionFont.color) {
+    target.style.setProperty("--menu-text-section", sectionFont.color);
+  } else {
+    target.style.removeProperty("--menu-text-section");
+  }
+  if (itemFont.color) {
+    target.style.setProperty("--menu-text-item", itemFont.color);
+  } else {
+    target.style.removeProperty("--menu-text-item");
+  }
+  if (disclaimerFont.color) {
+    target.style.setProperty("--menu-text-disclaimer", disclaimerFont.color);
+  } else {
+    target.style.removeProperty("--menu-text-disclaimer");
+  }
 };
 const getItemFontStyle = (item) => {
   const itemFont = getItemFontConfig(item);
-  if (!itemFont.family) return "";
-  return "--item-font:" + getFontStack(itemFont.family) + ";";
+  let style = "";
+  if (itemFont.family) {
+    style += "--item-font:" + getFontStack(itemFont.family) + ";";
+  }
+  if (itemFont.color) {
+    style += "--item-text-color:" + itemFont.color + ";";
+  }
+  return style;
 };
 const getSectionBackgroundIndexByCategoryId = (categoryId) => {
   const index = sectionBackgroundByCategoryId.get(categoryId);
@@ -648,7 +724,7 @@ const setupInteractiveModalMedia = async (asset) => {
   teardownInteractiveModalMedia();
   if (!asset || !modalContent) return;
   const host = modalContent.querySelector(".dish-modal__media");
-  const image = host?.querySelector("img");
+  const image = host?.querySelector(".dish-modal__media-image");
   if (!host || !image) return;
   if (!host.isConnected || !image.isConnected) return;
 
@@ -656,40 +732,10 @@ const setupInteractiveModalMedia = async (asset) => {
   let disposed = false;
   let rendererNode = null;
   let detachInteractions = null;
-  let cueIdleTimeout = 0;
   let imageHidden = false;
-  const cueElement = host.querySelector(".dish-modal__rotate-cue");
+  const guidanceElement = host.querySelector(".dish-modal__interactive-guidance");
 
   const isStale = () => disposed || token !== modalMediaToken;
-
-  const clearCueTimers = () => {
-    if (cueIdleTimeout) {
-      window.clearTimeout(cueIdleTimeout);
-      cueIdleTimeout = 0;
-    }
-  };
-  const restartCueLoop = () => {
-    if (!cueElement) return;
-    cueElement.style.setProperty("--rotate-cue-loop-ms", ROTATE_CUE_LOOP_MS + "ms");
-    cueElement.classList.remove("is-looping");
-    void cueElement.offsetWidth;
-    cueElement.classList.add("is-looping");
-  };
-  const setCueState = (state) => {
-    host.dataset.cueState = state;
-    if (state === "visible") {
-      restartCueLoop();
-    }
-  };
-  const scheduleCueVisible = () => {
-    if (isStale()) return;
-    clearCueTimers();
-    cueIdleTimeout = window.setTimeout(() => {
-      cueIdleTimeout = 0;
-      if (isStale()) return;
-      setCueState("visible");
-    }, ROTATE_CUE_RESHOW_IDLE_MS);
-  };
 
   const hideImage = () => {
     if (imageHidden) return;
@@ -700,6 +746,15 @@ const setupInteractiveModalMedia = async (asset) => {
     if (!imageHidden) return;
     imageHidden = false;
     image.classList.remove("is-hidden");
+  };
+  const setGuidanceVisible = (visible) => {
+    if (!guidanceElement) return;
+    guidanceElement.classList.toggle("is-hidden", !visible);
+  };
+  const dismissModalInteractiveGuidance = () => {
+    if (modalInteractiveGuidanceDismissed) return;
+    modalInteractiveGuidanceDismissed = true;
+    setGuidanceVisible(false);
   };
   const clearRenderer = () => {
     if (detachInteractions) {
@@ -717,9 +772,7 @@ const setupInteractiveModalMedia = async (asset) => {
     disposed = true;
     clearRenderer();
     showImage();
-    clearCueTimers();
-    cueElement?.classList.remove("is-looping");
-    delete host.dataset.cueState;
+    setGuidanceVisible(false);
     host.classList.remove("is-loading-interactive");
     host.classList.remove("is-interactive");
   };
@@ -732,9 +785,7 @@ const setupInteractiveModalMedia = async (asset) => {
     const onPointerDown = (event) => {
       pointerId = event.pointerId;
       lastX = event.clientX;
-      clearCueTimers();
-      setCueState("hidden");
-      scheduleCueVisible();
+      dismissModalInteractiveGuidance();
       try {
         target.setPointerCapture(pointerId);
       } catch {}
@@ -746,8 +797,7 @@ const setupInteractiveModalMedia = async (asset) => {
       if (pointerId !== event.pointerId) return;
       const deltaX = event.clientX - lastX;
       lastX = event.clientX;
-      setCueState("hidden");
-      scheduleCueVisible();
+      dismissModalInteractiveGuidance();
       onDelta(deltaX);
       event.preventDefault();
     };
@@ -759,14 +809,28 @@ const setupInteractiveModalMedia = async (asset) => {
       } catch {}
       pointerId = null;
       target.classList.remove("is-dragging");
-      setCueState("hidden");
-      scheduleCueVisible();
+      dismissModalInteractiveGuidance();
+    };
+
+    const onClick = () => {
+      dismissModalInteractiveGuidance();
+    };
+
+    const onTouchStart = () => {
+      dismissModalInteractiveGuidance();
+    };
+
+    const onTouchMove = () => {
+      dismissModalInteractiveGuidance();
     };
 
     target.addEventListener("pointerdown", onPointerDown);
     target.addEventListener("pointermove", onPointerMove);
     target.addEventListener("pointerup", onPointerRelease);
     target.addEventListener("pointercancel", onPointerRelease);
+    target.addEventListener("click", onClick);
+    target.addEventListener("touchstart", onTouchStart, { passive: true });
+    target.addEventListener("touchmove", onTouchMove, { passive: true });
     window.addEventListener("pointerup", onPointerRelease);
     window.addEventListener("pointercancel", onPointerRelease);
     target.addEventListener("contextmenu", (event) => event.preventDefault());
@@ -777,6 +841,9 @@ const setupInteractiveModalMedia = async (asset) => {
       target.removeEventListener("pointermove", onPointerMove);
       target.removeEventListener("pointerup", onPointerRelease);
       target.removeEventListener("pointercancel", onPointerRelease);
+      target.removeEventListener("click", onClick);
+      target.removeEventListener("touchstart", onTouchStart);
+      target.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("pointerup", onPointerRelease);
       window.removeEventListener("pointercancel", onPointerRelease);
     };
@@ -787,7 +854,7 @@ const setupInteractiveModalMedia = async (asset) => {
     hideImage();
     host.classList.remove("is-loading-interactive");
     host.classList.add("is-interactive");
-    setCueState("visible");
+    setGuidanceVisible(!runtimeGuidanceCaptureMode && !modalInteractiveGuidanceDismissed);
   };
 
   const loadImageElement = (source) =>
@@ -851,7 +918,9 @@ const setupInteractiveModalMedia = async (asset) => {
 
     const duration = Math.max(0.001, Number(video.duration) || 0.001);
     const dragFrameCount = Math.max(2, asset.sprite?.frameCount || INTERACTIVE_DEFAULT_FRAME_COUNT);
-    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches ? 7 : 4;
+    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches
+      ? INTERACTIVE_PIXELS_PER_FRAME_COARSE
+      : INTERACTIVE_PIXELS_PER_FRAME_DESKTOP;
     let progress = 0;
 
     const render = () => {
@@ -891,7 +960,9 @@ const setupInteractiveModalMedia = async (asset) => {
     if (!ctx) return false;
 
     const frameCount = Math.max(2, Math.min(sprite.frameCount, sprite.columns * sprite.rows));
-    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches ? 7 : 4;
+    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches
+      ? INTERACTIVE_PIXELS_PER_FRAME_COARSE
+      : INTERACTIVE_PIXELS_PER_FRAME_DESKTOP;
     let frameCursor = 0;
 
     const render = () => {
@@ -928,7 +999,7 @@ const setupInteractiveModalMedia = async (asset) => {
 
   host.classList.add("is-loading-interactive");
   hideImage();
-  setCueState("hidden");
+  setGuidanceVisible(false);
 
   if (asset.sprite) {
     try {
@@ -960,110 +1031,18 @@ const setupInteractiveModalMedia = async (asset) => {
 
   cleanup();
 };
-const instructionCopy = {
-  en: {
-    loadingLabel: "Loading assets",
-    tapHint: "Tap or click an item for details",
-    assetDisclaimer:
-      "Assets belong to their owners. Do not copy or reuse this content without permission.",
-    jukeboxHint: "Scroll vertically to spin the disc. Horizontal to switch sections.",
-    focusRowsHint: "Scroll vertically for sections. Horizontally for items.",
-    rotateHintTouch: "Swipe horizontally on the image to rotate",
-    rotateHintMouse: "Drag horizontally with the mouse to rotate",
-    rotateToggle: "Reverse rotation"
-  },
-  es: {
-    loadingLabel: "Cargando assets",
-    tapHint: "Toca o haz clic en un item para ver detalles",
-    assetDisclaimer:
-      "Los assets pertenecen a sus propietarios. No copies ni reutilices este contenido sin autorización.",
-    jukeboxHint: "Desliza vertical para girar el disco. Horizontal para cambiar sección.",
-    focusRowsHint: "Desliza vertical para secciones. Horizontal para items.",
-    rotateHintTouch: "Desliza horizontal sobre la imagen para girar",
-    rotateHintMouse: "Arrastra horizontal con el mouse para girar",
-    rotateToggle: "Invertir giro"
-  },
-  fr: {
-    loadingLabel: "Chargement des assets",
-    tapHint: "Touchez ou cliquez sur un élément pour voir les détails",
-    assetDisclaimer:
-      "Les assets appartiennent à leurs propriétaires. Ne copiez ni ne réutilisez ce contenu sans autorisation.",
-    jukeboxHint:
-      "Faites défiler verticalement pour faire tourner le disque. Horizontalement pour changer de section.",
-    focusRowsHint:
-      "Faites défiler verticalement pour les sections. Horizontalement pour les éléments.",
-    rotateHintTouch: "Balayez horizontalement l'image pour faire tourner",
-    rotateHintMouse: "Faites glisser horizontalement avec la souris pour faire tourner",
-    rotateToggle: "Inverser la rotation"
-  },
-  pt: {
-    loadingLabel: "Carregando assets",
-    tapHint: "Toque ou clique em um item para ver detalhes",
-    assetDisclaimer:
-      "Os assets pertencem aos seus proprietários. Não copie nem reutilize este conteúdo sem autorização.",
-    jukeboxHint: "Deslize verticalmente para girar o disco. Horizontalmente para mudar de seção.",
-    focusRowsHint: "Deslize verticalmente para seções. Horizontalmente para itens.",
-    rotateHintTouch: "Deslize horizontalmente na imagem para girar",
-    rotateHintMouse: "Arraste horizontalmente com o mouse para girar",
-    rotateToggle: "Inverter rotação"
-  },
-  it: {
-    loadingLabel: "Caricamento assets",
-    tapHint: "Tocca o fai clic su un articolo per vedere i dettagli",
-    assetDisclaimer:
-      "Gli assets appartengono ai rispettivi proprietari. Non copiare o riutilizzare questo contenuto senza autorizzazione.",
-    jukeboxHint: "Scorri verticalmente per far girare il disco. Orizzontalmente per cambiare sezione.",
-    focusRowsHint: "Scorri verticalmente per le sezioni. Orizzontalmente per gli articoli.",
-    rotateHintTouch: "Scorri orizzontalmente sull'immagine per ruotare",
-    rotateHintMouse: "Trascina orizzontalmente con il mouse per ruotare",
-    rotateToggle: "Inverti rotazione"
-  },
-  de: {
-    loadingLabel: "Assets werden geladen",
-    tapHint: "Tippe oder klicke auf ein Element, um Details zu sehen",
-    assetDisclaimer:
-      "Assets gehören ihren Eigentümern. Bitte nicht ohne Genehmigung kopieren oder wiederverwenden.",
-    jukeboxHint: "Vertikal scrollen, um die Scheibe zu drehen. Horizontal, um die Sektion zu wechseln.",
-    focusRowsHint: "Vertikal für Sektionen scrollen. Horizontal für Elemente.",
-    rotateHintTouch: "Wische horizontal über das Bild, um zu drehen",
-    rotateHintMouse: "Ziehe horizontal mit der Maus, um zu drehen",
-    rotateToggle: "Drehrichtung umkehren"
-  },
-  ja: {
-    loadingLabel: "アセットを読み込み中",
-    tapHint: "アイテムをタップまたはクリックして詳細を見る",
-    assetDisclaimer:
-      "アセットは各所有者に帰属します。許可なく複製・再利用しないでください。",
-    jukeboxHint: "縦スクロールでディスクを回転。横スクロールでセクション切替。",
-    focusRowsHint: "縦スクロールでセクション。横スクロールでアイテム。",
-    rotateHintTouch: "画像上で横にスワイプして回転",
-    rotateHintMouse: "画像上で横にドラッグして回転",
-    rotateToggle: "回転方向を反転"
-  },
-  ko: {
-    loadingLabel: "에셋 로딩 중",
-    tapHint: "아이템을 탭하거나 클릭해 상세 정보를 확인하세요",
-    assetDisclaimer:
-      "에셋은 각 소유자에게 귀속됩니다. 허가 없이 복사하거나 재사용하지 마세요.",
-    jukeboxHint: "세로 스크롤로 디스크를 회전. 가로 스크롤로 섹션 전환.",
-    focusRowsHint: "세로 스크롤로 섹션. 가로 스크롤로 아이템.",
-    rotateHintTouch: "이미지에서 가로로 스와이프해 회전",
-    rotateHintMouse: "마우스로 가로로 드래그해 회전",
-    rotateToggle: "회전 방향 반전"
-  },
-  zh: {
-    loadingLabel: "正在加载素材",
-    tapHint: "点按或点击项目查看详情",
-    assetDisclaimer: "素材归其所有者所有。未经许可请勿复制或再利用。",
-    jukeboxHint: "纵向滚动旋转转盘，横向滚动切换分类。",
-    focusRowsHint: "纵向滚动浏览分类，横向滚动浏览项目。",
-    rotateHintTouch: "在图片上横向滑动以旋转",
-    rotateHintMouse: "用鼠标横向拖动以旋转",
-    rotateToggle: "反向旋转"
-  }
-};
+const instructionCopy = {"en":{"loadingLabel":"Loading assets","tapHint":"Tap for details","assetDisclaimer":"Assets belong to their owners. Do not copy or reuse this content without permission.","jukeboxHint":"Scroll to rotate • Swipe to explore","focusRowsHint":"Scroll to browse • Swipe to explore","rotateHintTouch":"Swipe horizontally on the image to rotate","rotateHintMouse":"Drag horizontally with the mouse to rotate","rotateToggle":"Reverse rotation"},"es":{"loadingLabel":"Cargando assets","tapHint":"Toca para ver detalles","assetDisclaimer":"Los assets pertenecen a sus propietarios. No copies ni reutilices este contenido sin autorización.","jukeboxHint":"Desplaza para girar • Desliza para explorar","focusRowsHint":"Desplaza para recorrer • Desliza para explorar","rotateHintTouch":"Desliza horizontal sobre la imagen para girar","rotateHintMouse":"Arrastra horizontal con el mouse para girar","rotateToggle":"Invertir giro"},"fr":{"loadingLabel":"Chargement des assets","tapHint":"Touchez pour voir les détails","assetDisclaimer":"Les assets appartiennent à leurs propriétaires. Ne copiez ni ne réutilisez ce contenu sans autorisation.","jukeboxHint":"Faites défiler pour tourner • Balayez pour explorer","focusRowsHint":"Faites défiler pour parcourir • Balayez pour explorer","rotateHintTouch":"Balayez horizontalement l'image pour faire tourner","rotateHintMouse":"Faites glisser horizontalement avec la souris pour faire tourner","rotateToggle":"Inverser la rotation"},"pt":{"loadingLabel":"Carregando assets","tapHint":"Toque para ver detalhes","assetDisclaimer":"Os assets pertencem aos seus proprietários. Não copie nem reutilize este conteúdo sem autorização.","jukeboxHint":"Role para girar • Deslize para explorar","focusRowsHint":"Role para navegar • Deslize para explorar","rotateHintTouch":"Deslize horizontalmente na imagem para girar","rotateHintMouse":"Arraste horizontalmente com o mouse para girar","rotateToggle":"Inverter rotação"},"it":{"loadingLabel":"Caricamento assets","tapHint":"Tocca per i dettagli","assetDisclaimer":"Gli assets appartengono ai rispettivi proprietari. Non copiare o riutilizzare questo contenuto senza autorizzazione.","jukeboxHint":"Scorri per ruotare • Sfiora per esplorare","focusRowsHint":"Scorri per sfogliare • Sfiora per esplorare","rotateHintTouch":"Scorri orizzontalmente sull'immagine per ruotare","rotateHintMouse":"Trascina orizzontalmente con il mouse per ruotare","rotateToggle":"Inverti rotazione"},"de":{"loadingLabel":"Assets werden geladen","tapHint":"Tippen für Details","assetDisclaimer":"Assets gehören ihren Eigentümern. Bitte nicht ohne Genehmigung kopieren oder wiederverwenden.","jukeboxHint":"Scrollen zum Drehen • Wischen zum Entdecken","focusRowsHint":"Scrollen zum Blättern • Wischen zum Entdecken","rotateHintTouch":"Wische horizontal über das Bild, um zu drehen","rotateHintMouse":"Ziehe horizontal mit der Maus, um zu drehen","rotateToggle":"Drehrichtung umkehren"},"ja":{"loadingLabel":"アセットを読み込み中","tapHint":"タップで詳細","assetDisclaimer":"アセットは各所有者に帰属します。許可なく複製・再利用しないでください。","jukeboxHint":"スクロールで回転 • スワイプで探索","focusRowsHint":"スクロールで閲覧 • スワイプで探索","rotateHintTouch":"画像上で横にスワイプして回転","rotateHintMouse":"画像上で横にドラッグして回転","rotateToggle":"回転方向を反転"},"ko":{"loadingLabel":"에셋 로딩 중","tapHint":"탭해서 자세히 보기","assetDisclaimer":"에셋은 각 소유자에게 귀속됩니다. 허가 없이 복사하거나 재사용하지 마세요.","jukeboxHint":"스크롤로 회전 • 스와이프로 탐색","focusRowsHint":"스크롤로 둘러보기 • 스와이프로 탐색","rotateHintTouch":"이미지에서 가로로 스와이프해 회전","rotateHintMouse":"마우스로 가로로 드래그해 회전","rotateToggle":"회전 방향 반전"},"zh":{"loadingLabel":"正在加载素材","tapHint":"点按查看详情","assetDisclaimer":"素材归其所有者所有。未经许可请勿复制或再利用。","jukeboxHint":"滚动可旋转 • 滑动可探索","focusRowsHint":"滚动可浏览 • 滑动可探索","rotateHintTouch":"在图片上横向滑动以旋转","rotateHintMouse":"用鼠标横向拖动以旋转","rotateToggle":"反向旋转"}};
+const runtimeLegalCopy = {"es":{"openAriaLabel":"Abrir aviso legal","dialogTitle":"Aviso legal","closeAriaLabel":"Cerrar aviso legal"},"en":{"openAriaLabel":"Open legal notice","dialogTitle":"Legal notice","closeAriaLabel":"Close legal notice"}};
+const RUNTIME_GUIDANCE_ASSETS = {"circularMotionArrows":"visual_onboarding/circular_motion_arrows.png","horVerMotionArrows":"visual_onboarding/hor_ver_motion_arrows.png","horizontalMotionArrows":"visual_onboarding/horizontal_motion_arrows.png","pointingHand":"visual_onboarding/pointing_hand.png","sampleDish":"visual_onboarding/sample_2d_dish.png"};
+const RUNTIME_GUIDANCE_CAPTURE_QUERY_PARAM = "capture";
 
 const normalizeLocale = (value) => (value || "").toLowerCase().split("-")[0];
+const escapeHtml = (value) =>
+  String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 
 const getInstructionCopy = (key) => {
   const localeKey = normalizeLocale(locale);
@@ -1072,10 +1051,107 @@ const getInstructionCopy = (key) => {
 };
 
 const getLoadingLabel = () => getInstructionCopy("loadingLabel");
-const getTapHint = () => getInstructionCopy("tapHint");
-const getAssetDisclaimer = () => getInstructionCopy("assetDisclaimer");
-const getJukeboxHint = () => getInstructionCopy("jukeboxHint");
-const getFocusRowsHint = () => getInstructionCopy("focusRowsHint");
+const getRuntimeLegalCopy = (key) => {
+  const localeKey = normalizeLocale(locale);
+  const pack = runtimeLegalCopy[localeKey] || runtimeLegalCopy.en;
+  return pack[key] || runtimeLegalCopy.en[key];
+};
+const hasRuntimeGuidanceCaptureMode = () => {
+  try {
+    return new URLSearchParams(window.location.search).get(RUNTIME_GUIDANCE_CAPTURE_QUERY_PARAM) === "1";
+  } catch {
+    return false;
+  }
+};
+const runtimeGuidanceCaptureMode = hasRuntimeGuidanceCaptureMode();
+let runtimeGuidanceDismissed = runtimeGuidanceCaptureMode;
+let runtimeGuidanceVisible = false;
+let modalInteractiveGuidanceDismissed = runtimeGuidanceCaptureMode;
+let assetUsageDialogOpen = false;
+let applyRuntimeGuidanceState = () => {};
+let runtimeGuidanceGhostClickGuard = false;
+let runtimeGuidanceGhostClickGuardTimer = null;
+const syncRuntimeGuidanceState = () => {
+  applyRuntimeGuidanceState();
+};
+const dismissRuntimeGuidance = () => {
+  if (runtimeGuidanceDismissed && !runtimeGuidanceVisible) return;
+  runtimeGuidanceDismissed = true;
+  runtimeGuidanceVisible = false;
+  syncRuntimeGuidanceState();
+};
+const clearRuntimeGuidanceGhostClickGuard = () => {
+  runtimeGuidanceGhostClickGuard = false;
+  if (runtimeGuidanceGhostClickGuardTimer !== null) {
+    clearTimeout(runtimeGuidanceGhostClickGuardTimer);
+    runtimeGuidanceGhostClickGuardTimer = null;
+  }
+};
+const armRuntimeGuidanceGhostClickGuard = () => {
+  runtimeGuidanceGhostClickGuard = true;
+  if (runtimeGuidanceGhostClickGuardTimer !== null) {
+    clearTimeout(runtimeGuidanceGhostClickGuardTimer);
+  }
+  runtimeGuidanceGhostClickGuardTimer = setTimeout(() => {
+    runtimeGuidanceGhostClickGuard = false;
+    runtimeGuidanceGhostClickGuardTimer = null;
+  }, 700);
+};
+const dismissRuntimeGuidanceFromOverlay = (event) => {
+  if (!runtimeGuidanceVisible || runtimeGuidanceDismissed) return;
+  event.preventDefault();
+  event.stopPropagation();
+  if (typeof event.stopImmediatePropagation === "function") {
+    event.stopImmediatePropagation();
+  }
+  const isTouchPointerEvent =
+    typeof PointerEvent !== "undefined" &&
+    event instanceof PointerEvent &&
+    (event.pointerType === "touch" || event.pointerType === "pen");
+  if (event.type === "touchstart" || isTouchPointerEvent) {
+    armRuntimeGuidanceGhostClickGuard();
+  }
+  dismissRuntimeGuidance();
+};
+const consumeRuntimeGuidanceGhostClick = (event) => {
+  if (!runtimeGuidanceGhostClickGuard) return;
+  event.preventDefault();
+  event.stopPropagation();
+  if (typeof event.stopImmediatePropagation === "function") {
+    event.stopImmediatePropagation();
+  }
+  clearRuntimeGuidanceGhostClickGuard();
+};
+const maybeShowRuntimeGuidance = () => {
+  if (runtimeGuidanceCaptureMode || startupLoading) {
+    runtimeGuidanceVisible = false;
+    syncRuntimeGuidanceState();
+    return;
+  }
+  if (!DATA.categories.some((category) => Array.isArray(category.items) && category.items.length > 0)) {
+    runtimeGuidanceDismissed = true;
+    runtimeGuidanceVisible = false;
+    syncRuntimeGuidanceState();
+    return;
+  }
+  if (runtimeGuidanceDismissed || runtimeGuidanceVisible) {
+    syncRuntimeGuidanceState();
+    return;
+  }
+  runtimeGuidanceVisible = true;
+  syncRuntimeGuidanceState();
+};
+const resolveAssetUsageDisclaimer = () => {
+  const localized = DATA.meta.assetUsageDisclaimer;
+  if (!localized || typeof localized !== "object") return "";
+  const direct = typeof localized[locale] === "string" ? localized[locale] : "";
+  if (direct.trim().length > 0) return direct;
+  const fallback =
+    typeof localized[DATA.meta.defaultLocale] === "string"
+      ? localized[DATA.meta.defaultLocale]
+      : "";
+  return fallback.trim().length > 0 ? fallback : "";
+};
 const normalizeTemplateToken = (value) =>
   String(value || "")
     .trim()
@@ -1271,6 +1347,11 @@ const syncStartupUi = () => {
   loader?.classList.toggle("active", startupLoading);
   if (fill) fill.style.width = startupProgress + "%";
   if (value) value.textContent = Math.round(startupProgress) + "%";
+  if (startupLoading) {
+    syncRuntimeGuidanceState();
+  } else {
+    maybeShowRuntimeGuidance();
+  }
 };
 const preloadStartupAssets = async () => {
   const token = ++startupToken;
@@ -1344,6 +1425,7 @@ const buildCarousel = (category) => {
             entry.item.priceVisible === false
               ? ""
               : '<span class="carousel-price">' + formatPrice(entry.item.price.amount) + "</span>";
+          const badgeHtml = renderBadgeList(entry.item, "carousel-meta");
           return `
             <button class="carousel-card" type="button" style="${getItemFontStyle(entry.item)}" data-item="${entry.item.id}" data-source="${entry.sourceIndex}">
               <div class="carousel-media is-loaded">
@@ -1352,10 +1434,11 @@ const buildCarousel = (category) => {
               </div>
               <div class="carousel-text">
                 <div class="carousel-row">
-                  <p class="carousel-title">${textOf(entry.item.name)}${entry.item.vegan ? '<span class="vegan-icon" title="' + getTerm("vegan") + '">🌿</span>' : ""}</p>
+                  <p class="carousel-title">${textOf(entry.item.name)}</p>
                   ${priceHtml}
                 </div>
                 <p class="carousel-desc">${textOf(entry.item.description)}</p>
+                ${badgeHtml}
               </div>
             </button>
           `;
@@ -1380,6 +1463,10 @@ const render = () => {
   const templateClass = "template-" + activeTemplateId;
   const backgroundModeClass =
     backgroundDisplayMode === "section" ? "background-mode-section" : "background-mode-carousel";
+  const assetUsageDisclaimer = resolveAssetUsageDisclaimer();
+  if (!assetUsageDisclaimer) {
+    assetUsageDialogOpen = false;
+  }
   ensureFont();
   app.innerHTML = `
     <div class="menu-preview ${templateClass} ${backgroundModeClass} ${startupLoading ? "is-loading" : ""}">
@@ -1399,12 +1486,45 @@ const render = () => {
         )
         .join("")}
       <div class="menu-overlay"></div>
+      ${!runtimeGuidanceCaptureMode &&
+      DATA.categories.some((category) => Array.isArray(category.items) && category.items.length > 0)
+        ? '<div class="menu-guidance-overlay" aria-hidden="true">' +
+          '<div class="menu-guidance-overlay__grid">' +
+          '<div class="menu-guidance-overlay__panel menu-guidance-overlay__panel--motion">' +
+          '<div class="menu-guidance-overlay__stage">' +
+          '<img class="menu-guidance-overlay__asset menu-guidance-overlay__asset--crosshair" src="' +
+          RUNTIME_GUIDANCE_ASSETS.horVerMotionArrows +
+          '" alt="" decoding="async" draggable="false" />' +
+          '<span class="menu-guidance-overlay__hand-wrap menu-guidance-overlay__hand-wrap--motion">' +
+          '<img class="menu-guidance-overlay__asset menu-guidance-overlay__asset--hand" src="' +
+          RUNTIME_GUIDANCE_ASSETS.pointingHand +
+          '" alt="" decoding="async" draggable="false" />' +
+          "</span>" +
+          "</div>" +
+          "</div>" +
+          '<div class="menu-guidance-overlay__panel menu-guidance-overlay__panel--action">' +
+          '<div class="menu-guidance-overlay__stage">' +
+          '<img class="menu-guidance-overlay__asset menu-guidance-overlay__asset--dish" src="' +
+          RUNTIME_GUIDANCE_ASSETS.sampleDish +
+          '" alt="" decoding="async" draggable="false" />' +
+          '<span class="menu-guidance-overlay__hand-wrap menu-guidance-overlay__hand-wrap--tap">' +
+          '<img class="menu-guidance-overlay__asset menu-guidance-overlay__asset--hand" src="' +
+          RUNTIME_GUIDANCE_ASSETS.pointingHand +
+          '" alt="" decoding="async" draggable="false" />' +
+          "</span>" +
+          "</div>" +
+          "</div>" +
+          "</div>" +
+          "</div>"
+        : ""}
       <header class="menu-topbar">
         <div class="menu-title-block">
-          ${identityMode === "logo" && logoSrc
-            ? '<img class="menu-logo" src="' + logoSrc + '" alt="' + logoAlt + '" decoding="async" />'
-            : (restaurantName ? '<p class="menu-eyebrow">' + restaurantName + "</p>" : "")}
-          <h1 class="menu-title">${menuTitle || "Menu"}</h1>
+          <div class="menu-title-content">
+            ${identityMode === "logo" && logoSrc
+              ? '<img class="menu-logo" src="' + logoSrc + '" alt="' + logoAlt + '" decoding="async" />'
+              : (restaurantName ? '<p class="menu-eyebrow">' + restaurantName + "</p>" : "")}
+            <h1 class="menu-title">${menuTitle || "Menu"}</h1>
+          </div>
         </div>
         <div class="menu-lang">
           <select class="menu-select" id="menu-locale">
@@ -1419,14 +1539,8 @@ const render = () => {
       window.matchMedia("(min-width: 900px)").matches
         ? '<div class="section-nav">' +
           '<button class="section-nav__btn prev" type="button" data-section-dir="-1" aria-label="Previous section"><span aria-hidden="true">‹</span></button>' +
-          '<span class="section-nav__label">' + getJukeboxHint() + "</span>" +
           '<button class="section-nav__btn next" type="button" data-section-dir="1" aria-label="Next section"><span aria-hidden="true">›</span></button>' +
           "</div>"
-        : ""}
-      ${!isJukeboxTemplate()
-        ? '<div class="focus-rows-hint" aria-hidden="true"><span class="focus-rows-hint__label">' +
-          getFocusRowsHint() +
-          "</span></div>"
         : ""}
       <div class="menu-scroll">
         ${DATA.categories
@@ -1438,35 +1552,99 @@ const render = () => {
           )
           .join("")}
       </div>
-      <div class="menu-tap-hint" aria-hidden="true">
-        <span class="menu-tap-hint__dot"></span>
-        <span>${getTapHint()}</span>
-      </div>
-      <p class="menu-asset-disclaimer" aria-hidden="true">${getAssetDisclaimer()}</p>
+      ${assetUsageDisclaimer
+        ? '<button class="menu-legal-trigger" type="button" aria-label="' +
+          escapeHtml(getRuntimeLegalCopy("openAriaLabel")) +
+          '"><span aria-hidden="true">i</span></button>'
+        : ""}
+      ${assetUsageDialogOpen && assetUsageDisclaimer
+        ? '<div class="menu-legal-dialog" role="dialog" aria-modal="true" aria-label="' +
+          escapeHtml(getRuntimeLegalCopy("dialogTitle")) +
+          '">' +
+          '<button class="menu-legal-dialog__backdrop" type="button" aria-label="' +
+          escapeHtml(getRuntimeLegalCopy("closeAriaLabel")) +
+          '"></button>' +
+          '<div class="menu-legal-dialog__card">' +
+          '<div class="menu-legal-dialog__header">' +
+          '<p class="menu-legal-dialog__title">' +
+          escapeHtml(getRuntimeLegalCopy("dialogTitle")) +
+          "</p>" +
+          '<button class="menu-legal-dialog__close" type="button" aria-label="' +
+          escapeHtml(getRuntimeLegalCopy("closeAriaLabel")) +
+          '"><span aria-hidden="true">×</span></button>' +
+          "</div>" +
+          '<p class="menu-legal-dialog__body">' +
+          escapeHtml(assetUsageDisclaimer) +
+          "</p>" +
+          "</div>" +
+          "</div>"
+        : ""}
+      <a class="menu-powered-by" href="${BRAND_LANDING_URL}" target="_blank" rel="noreferrer noopener" aria-label="${BRAND_SIGNATURE_ARIA_LABEL}">
+        <img src="${BRAND_SIGNATURE_LOGO}" alt="" aria-hidden="true" decoding="async" />
+      </a>
     </div>
   `;
   const preview = app.querySelector(".menu-preview");
+  applyRuntimeGuidanceState = () => {
+    const overlay = app.querySelector(".menu-guidance-overlay");
+    overlay?.classList.toggle("is-hidden", !runtimeGuidanceVisible || runtimeGuidanceDismissed);
+  };
+  const applyThemeVars = (target) => {
+    if (!target) return;
+    target.style.setProperty("--menu-theme-surface-panel", "rgba(8, 20, 56, 0.80)");
+    target.style.setProperty("--menu-theme-surface-panel-strong", "rgba(8, 20, 56, 0.80)");
+    target.style.setProperty("--menu-theme-surface-panel-composite", "#071131");
+    target.style.setProperty("--menu-theme-surface-panel-strong-composite", "#071131");
+    target.style.setProperty("--menu-theme-on-surface-panel", "#ffffff");
+    target.style.setProperty("--menu-theme-editor-shell", "rgba(8, 20, 56, 0.80)");
+    target.style.setProperty("--menu-theme-editor-shell-strong", "rgba(8, 20, 56, 0.80)");
+    target.style.setProperty("--menu-theme-on-editor-shell", "#ffffff");
+    target.style.setProperty("--menu-theme-accent", "#1d4ed8");
+    target.style.setProperty("--menu-theme-accent-strong", "#173ea9");
+    target.style.setProperty("--menu-theme-accent-soft", "rgba(29, 78, 216, 0.18)");
+    target.style.setProperty("--menu-theme-on-accent", "#ffffff");
+    target.style.setProperty("--menu-theme-focus-ring", "rgba(29, 78, 216, 0.42)");
+  };
   if (preview) {
-    const interfaceFont = getInterfaceFontConfig();
-    const restaurantFont = getRoleFontConfig("restaurant");
-    const titleFont = getRoleFontConfig("title");
-    const sectionFont = getRoleFontConfig("section");
-    const itemFont = getRoleFontConfig("item");
-    preview.style.setProperty("--menu-font", getFontStack(interfaceFont.family));
-    preview.style.setProperty("--menu-font-ui", getFontStack(interfaceFont.family));
-    preview.style.setProperty("--menu-font-identity", getFontStack(interfaceFont.family));
-    preview.style.setProperty("--menu-font-restaurant", getFontStack(restaurantFont.family));
-    preview.style.setProperty("--menu-font-title", getFontStack(titleFont.family));
-    preview.style.setProperty("--menu-font-section", getFontStack(sectionFont.family));
-    preview.style.setProperty("--menu-font-item", getFontStack(itemFont.family));
+    applyPreviewFontVars(preview);
+    applyThemeVars(preview);
+    applyRuntimeGuidanceState();
+    window.addEventListener("click", consumeRuntimeGuidanceGhostClick, true);
+    const guidanceOverlay = preview.querySelector(".menu-guidance-overlay");
+    guidanceOverlay?.addEventListener("pointerdown", dismissRuntimeGuidanceFromOverlay, true);
+    guidanceOverlay?.addEventListener("click", dismissRuntimeGuidanceFromOverlay, true);
+    guidanceOverlay?.addEventListener("touchstart", dismissRuntimeGuidanceFromOverlay, {
+      capture: true,
+      passive: false
+    });
+    guidanceOverlay?.addEventListener("wheel", dismissRuntimeGuidanceFromOverlay, {
+      capture: true,
+      passive: false
+    });
     preview.addEventListener("contextmenu", (event) => event.preventDefault());
     preview.addEventListener("dragstart", (event) => {
       const target = event.target;
-      if (target instanceof HTMLImageElement) {
-        event.preventDefault();
+        if (target instanceof HTMLImageElement) {
+          event.preventDefault();
       }
     });
+    const legalTrigger = preview.querySelector(".menu-legal-trigger");
+    legalTrigger?.addEventListener("click", () => {
+      dismissRuntimeGuidance();
+      assetUsageDialogOpen = true;
+      render();
+    });
+    preview.querySelector(".menu-legal-dialog__backdrop")?.addEventListener("click", () => {
+      assetUsageDialogOpen = false;
+      render();
+    });
+    preview.querySelector(".menu-legal-dialog__close")?.addEventListener("click", () => {
+      assetUsageDialogOpen = false;
+      render();
+    });
   }
+  applyPreviewFontVars(modal);
+  applyThemeVars(modal);
   applyBackgroundState = () => {
     const layers = Array.from(app.querySelectorAll(".menu-background"));
     const warmIndexes = new Set();
@@ -1531,7 +1709,11 @@ const render = () => {
   applyBackgroundState();
   startBackgroundRotation();
   const localeSelect = document.getElementById("menu-locale");
+  localeSelect?.addEventListener("pointerdown", () => {
+    dismissRuntimeGuidance();
+  });
   localeSelect?.addEventListener("change", (event) => {
+    dismissRuntimeGuidance();
     locale = event.target.value;
     render();
   });
@@ -1539,6 +1721,7 @@ const render = () => {
   bindCarouselNav();
   bindSectionNav();
   bindSectionFocus();
+  bindRuntimeGuidanceDismissal();
   bindCards();
   syncStartupUi();
 };
@@ -1642,6 +1825,7 @@ const bindCarouselNav = () => {
       const categoryId = button.dataset.categoryId;
       if (!categoryId) return;
       const direction = Number(button.dataset.dir || "1");
+      dismissRuntimeGuidance();
       shiftCarousel(categoryId, direction);
     };
     button.addEventListener("click", handler);
@@ -1779,6 +1963,12 @@ const handleKeyboardNavigation = (event) => {
   if (isEditableKeyboardTarget(event.target)) return;
 
   if (event.key === "Escape") {
+    if (assetUsageDialogOpen) {
+      event.preventDefault();
+      assetUsageDialogOpen = false;
+      render();
+      return;
+    }
     if (modal?.classList.contains("open")) {
       event.preventDefault();
       closeModal();
@@ -1795,21 +1985,25 @@ const handleKeyboardNavigation = (event) => {
   if (isJukeboxTemplate()) {
     if (event.key === "ArrowLeft") {
       event.preventDefault();
+      dismissRuntimeGuidance();
       shiftSection(-1);
       return;
     }
     if (event.key === "ArrowRight") {
       event.preventDefault();
+      dismissRuntimeGuidance();
       shiftSection(1);
       return;
     }
     if (event.key === "ArrowUp") {
       event.preventDefault();
+      dismissRuntimeGuidance();
       shiftCarousel(categoryId, -1);
       return;
     }
     if (event.key === "ArrowDown") {
       event.preventDefault();
+      dismissRuntimeGuidance();
       shiftCarousel(categoryId, 1);
     }
     return;
@@ -1817,21 +2011,25 @@ const handleKeyboardNavigation = (event) => {
 
   if (event.key === "ArrowUp") {
     event.preventDefault();
+    dismissRuntimeGuidance();
     shiftSection(-1);
     return;
   }
   if (event.key === "ArrowDown") {
     event.preventDefault();
+    dismissRuntimeGuidance();
     shiftSection(1);
     return;
   }
   if (event.key === "ArrowLeft") {
     event.preventDefault();
+    dismissRuntimeGuidance();
     shiftCarousel(categoryId, -1);
     return;
   }
   if (event.key === "ArrowRight") {
     event.preventDefault();
+    dismissRuntimeGuidance();
     shiftCarousel(categoryId, 1);
   }
 };
@@ -1841,6 +2039,7 @@ const bindSectionNav = () => {
   buttons.forEach((button) => {
     const handler = () => {
       const direction = Number(button.dataset.sectionDir || "1");
+      dismissRuntimeGuidance();
       shiftSection(direction);
     };
     button.addEventListener("click", handler);
@@ -1915,6 +2114,7 @@ const bindCarousels = () => {
           Math.abs(horizontalDelta) >= JUKEBOX_HORIZONTAL_WHEEL_MIN_PX && !verticalIntent;
         if (horizontalIntent) {
           event.preventDefault();
+          dismissRuntimeGuidance();
           const now = Date.now();
           const inGesture = now <= (state.sectionGestureUntil || 0);
           state.sectionGestureUntil = now + JUKEBOX_HORIZONTAL_GESTURE_IDLE_MS;
@@ -1953,6 +2153,7 @@ const bindCarousels = () => {
         state.sectionGestureConsumed = false;
         state.sectionGestureUntil = 0;
         event.preventDefault();
+        dismissRuntimeGuidance();
         const delta = normalizeJukeboxWheelDelta(event);
         if (!delta) return;
         applyDelta(delta);
@@ -1984,6 +2185,7 @@ const bindCarousels = () => {
         }
         if (state.touch.axis !== "vertical") return;
         event.preventDefault();
+        dismissRuntimeGuidance();
         const deltaY = touch.clientY - state.touch.lastY;
         state.touch.lastY = touch.clientY;
         if (Math.abs(deltaY) < 0.2) return;
@@ -2050,6 +2252,7 @@ const bindCarousels = () => {
     const onWheel = (event) => {
       if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
       event.preventDefault();
+      dismissRuntimeGuidance();
       const delta = normalizeFocusRowWheelDelta(event);
       if (!delta) return;
       applyDelta(delta);
@@ -2081,6 +2284,7 @@ const bindCarousels = () => {
       }
       if (state.touch.axis !== "horizontal") return;
       event.preventDefault();
+      dismissRuntimeGuidance();
       const deltaX = touch.clientX - state.touch.lastX;
       state.touch.lastX = touch.clientX;
       if (Math.abs(deltaX) < 0.2) return;
@@ -2114,6 +2318,24 @@ const bindCarousels = () => {
   });
 };
 
+const bindRuntimeGuidanceDismissal = () => {
+  const scroll = app.querySelector(".menu-scroll");
+  if (!scroll) return;
+  const onWheel = (event) => {
+    if (Math.abs(event.deltaX) <= 1 && Math.abs(event.deltaY) <= 1) return;
+    dismissRuntimeGuidance();
+  };
+  const onScroll = () => {
+    dismissRuntimeGuidance();
+  };
+  scroll.addEventListener("wheel", onWheel, { passive: true });
+  scroll.addEventListener("scroll", onScroll);
+  carouselCleanup.push(() => {
+    scroll.removeEventListener("wheel", onWheel);
+    scroll.removeEventListener("scroll", onScroll);
+  });
+};
+
 const bindCards = () => {
   document.querySelectorAll(".carousel-card").forEach((card) => {
     const categoryId = card.closest(".menu-carousel")?.dataset.categoryId;
@@ -2127,11 +2349,12 @@ const bindCards = () => {
       const category = DATA.categories.find((item) => item.id === categoryId);
       const dish = category?.items.find((item) => item.id === itemId);
       if (!dish) return;
+      dismissRuntimeGuidance();
       prefetchDishDetailByIds(categoryId, itemId, true);
       const allergenLabel = getTerm("allergens");
-      const veganLabel = getTerm("vegan");
       const longDesc = textOf(dish.longDescription);
       const allergens = getAllergenValues(dish).join(", ");
+      const badgeHtml = renderBadgeList(dish, "dish-modal__badges");
       const asset = getInteractiveDetailAsset(dish);
       detailRotateDirection = getDishRotateDirection(dish);
       modalContent.style.cssText = getItemFontStyle(dish);
@@ -2141,15 +2364,34 @@ const bindCards = () => {
           <button class="dish-modal__close" id="modal-close">✕</button>
         </div>
         <div class="dish-modal__media">
-          ${asset && supportsInteractiveMedia() ? '<div class="dish-modal__rotate-cue" aria-hidden="true"><span class="dish-modal__rotate-cue-gesture"><svg class="dish-modal__rotate-cue-gesture-main" data-icon="gesture-swipe-horizontal" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true"><path d="M6 1L3 4l3 3V5h3v2l3-3l-3-3v2H6zm5 7a1 1 0 0 0-1 1v10l-3.2-1.72h-.22c-.28 0-.55.11-.74.32l-.74.77l4.9 4.2c.26.28.62.43 1 .43h6.5a1.5 1.5 0 0 0 1.5-1.5v-4.36c0-.58-.32-1.11-.85-1.35l-4.94-2.19l-1.21-.13V9a1 1 0 0 0-1-1"></path></svg><svg class="dish-modal__rotate-cue-gesture-ghost" data-icon="gesture-swipe-horizontal" viewBox="0 0 24 24" role="presentation" focusable="false" aria-hidden="true"><path d="M6 1L3 4l3 3V5h3v2l3-3l-3-3v2H6zm5 7a1 1 0 0 0-1 1v10l-3.2-1.72h-.22c-.28 0-.55.11-.74.32l-.74.77l4.9 4.2c.26.28.62.43 1 .43h6.5a1.5 1.5 0 0 0 1.5-1.5v-4.36c0-.58-.32-1.11-.85-1.35l-4.94-2.19l-1.21-.13V9a1 1 0 0 0-1-1"></path></svg></span></div>' : ""}
-          <img src="${getDetailImageSrc(dish)}" alt="${textOf(dish.name)}" draggable="false" oncontextmenu="return false;" ondragstart="return false;" decoding="async" />
+          ${asset && supportsInteractiveMedia() && !runtimeGuidanceCaptureMode
+            ? '<div class="dish-modal__interactive-guidance is-hidden" aria-hidden="true">' +
+              '<div class="dish-modal__interactive-guidance-scene">' +
+              '<img class="dish-modal__interactive-guidance-layer dish-modal__interactive-guidance-layer--ellipse" src="' +
+              RUNTIME_GUIDANCE_ASSETS.circularMotionArrows +
+              '" alt="" decoding="async" draggable="false" />' +
+              '<img class="dish-modal__interactive-guidance-layer dish-modal__interactive-guidance-layer--dish" src="' +
+              RUNTIME_GUIDANCE_ASSETS.sampleDish +
+              '" alt="" decoding="async" draggable="false" />' +
+              '<img class="dish-modal__interactive-guidance-layer dish-modal__interactive-guidance-layer--track" src="' +
+              RUNTIME_GUIDANCE_ASSETS.horizontalMotionArrows +
+              '" alt="" decoding="async" draggable="false" />' +
+              '<span class="dish-modal__interactive-guidance-hand-wrap">' +
+              '<img class="dish-modal__interactive-guidance-layer dish-modal__interactive-guidance-layer--hand" src="' +
+              RUNTIME_GUIDANCE_ASSETS.pointingHand +
+              '" alt="" decoding="async" draggable="false" />' +
+              "</span>" +
+              "</div>" +
+              "</div>"
+            : ""}
+          <img class="dish-modal__media-image" src="${getDetailImageSrc(dish)}" alt="${textOf(dish.name)}" draggable="false" oncontextmenu="return false;" ondragstart="return false;" decoding="async" />
         </div>
         <div class="dish-modal__content">
           <div class="dish-modal__text">
             <p class="dish-modal__desc">${textOf(dish.description)}</p>
             ${longDesc ? '<p class="dish-modal__long">' + longDesc + '</p>' : ""}
             ${allergens ? '<p class="dish-modal__allergens">' + allergenLabel + ': ' + allergens + '</p>' : ""}
-            ${dish.vegan ? '<span class="dish-modal__badge">🌿 ' + veganLabel + '</span>' : ""}
+            ${badgeHtml}
           </div>
           ${dish.priceVisible === false ? "" : '<p class="dish-modal__price">' + formatPrice(dish.price.amount) + "</p>"}
         </div>
@@ -2214,6 +2456,7 @@ const bindSectionFocus = () => {
     if (scroll.scrollWidth <= scroll.clientWidth + 4) return;
     let snapTimeout;
     const onScroll = () => {
+      dismissRuntimeGuidance();
       const closestIndex = getClosestHorizontalSectionIndex(scroll);
       if (closestIndex >= 0) {
         syncBackgroundForSectionIndex(closestIndex);
@@ -2240,6 +2483,7 @@ const bindSectionFocus = () => {
   let raf;
   let snapTimeout;
   const onScroll = () => {
+    dismissRuntimeGuidance();
     if (raf) cancelAnimationFrame(raf);
     raf = requestAnimationFrame(() => {
       applySectionFocus(scroll);

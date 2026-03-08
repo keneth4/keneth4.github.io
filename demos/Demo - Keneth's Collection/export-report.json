@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-02-24T03:34:40.620Z",
+  "generatedAt": "2026-03-08T04:17:07.610Z",
   "totals": {
-    "files": 35,
-    "assetFiles": 27,
-    "shellFiles": 8,
-    "totalBytes": 91430985,
-    "assetBytes": 91240631,
-    "shellBytes": 190354,
+    "files": 51,
+    "assetFiles": 37,
+    "shellFiles": 14,
+    "totalBytes": 122733745,
+    "assetBytes": 121005262,
+    "shellBytes": 1728483,
     "firstViewAssetFiles": 4,
-    "firstViewImageBytes": 17303307,
+    "firstViewImageBytes": 14145890,
     "missingAssets": 0
   },
   "responsiveCoverage": {
-    "heroSources": 8,
+    "heroSources": 11,
     "heroWithResponsiveVariants": 0,
     "ratio": 0
   },
   "references": {
-    "referencedAssets": 27,
+    "referencedAssets": 37,
     "unresolvedAssets": 0
   },
   "budgets": {
@@ -29,21 +29,21 @@
         "key": "jsGzipBytes",
         "label": "Export JS (gzip)",
         "threshold": 97280,
-        "actual": 28626,
+        "actual": 33313,
         "status": "pass"
       },
       {
         "key": "cssGzipBytes",
         "label": "Export CSS (gzip)",
         "threshold": 12288,
-        "actual": 7861,
+        "actual": 10541,
         "status": "pass"
       },
       {
         "key": "firstViewImageBytes",
         "label": "First-view images",
         "threshold": 1258291,
-        "actual": 17303307,
+        "actual": 14145890,
         "status": "fail"
       }
     ]
