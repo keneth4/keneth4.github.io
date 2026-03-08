@@ -67,6 +67,7 @@ const injectedFontFaceKeys = new Set();
 const injectedFontLinks = new Set();
 const app = document.getElementById("app");
 const modal = document.getElementById("dish-modal");
+const modalBackdrop = document.getElementById("dish-modal-backdrop");
 const modalContent = document.getElementById("dish-modal-content");
 let modalMediaCleanup = null;
 let modalMediaToken = 0;
@@ -1497,7 +1498,11 @@ const render = () => {
       <div class="menu-overlay"></div>
       ${!runtimeGuidanceCaptureMode &&
       DATA.categories.some((category) => Array.isArray(category.items) && category.items.length > 0)
-        ? '<div class="menu-guidance-overlay" aria-hidden="true">' +
+        ? '<div class="menu-guidance-overlay' +
+          (startupLoading || !runtimeGuidanceVisible || runtimeGuidanceDismissed
+            ? " is-hidden"
+            : "") +
+          '" aria-hidden="true">' +
           '<div class="menu-guidance-overlay__grid">' +
           '<div class="menu-guidance-overlay__panel menu-guidance-overlay__panel--motion">' +
           '<img class="menu-guidance-overlay__image menu-guidance-overlay__image--motion" src="' +
@@ -2504,6 +2509,7 @@ const closeModal = () => {
 modal?.addEventListener("click", (event) => {
   if (event.target === modal) closeModal();
 });
+modalBackdrop?.addEventListener("click", closeModal);
 modal?.addEventListener("contextmenu", (event) => event.preventDefault());
 modal?.addEventListener("dragstart", (event) => {
   if (event.target instanceof HTMLImageElement) {
