@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "slug": "restaurant-menu-final",
+  "generatedAt": "2026-03-09T00:58:09.292Z",
+  "assets": [
+    {
+      "outputPath": "app.js",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/javascript",
+      "bytes": 155056,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/backgrounds/Uhland-bg.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/backgrounds/Uhland-bg.webp",
+      "role": "background",
+      "mime": "image/webp",
+      "bytes": 6620676,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/Arizona-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Arizona-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 84878,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Arizona-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Arizona-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1082088,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/Arizona-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Arizona-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 5909554,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Baklava-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Baklava-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 148406,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Baklava-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Baklava-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1596304,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Baklava-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Baklava-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 9040740,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Beilagensalat-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Beilagensalat-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 185718,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Beilagensalat-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Beilagensalat-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1871608,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Beilagensalat-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Beilagensalat-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 11478302,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Bolognese-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Bolognese-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 125432,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Bolognese-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Bolognese-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1507320,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Bolognese-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Bolognese-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 8068928,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Chocolate-Croissant-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Chocolate-Croissant-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 102784,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Chocolate-Croissant-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Chocolate-Croissant-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1076834,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/Chocolate-Croissant-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Chocolate-Croissant-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 6260586,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cookies-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Cookies-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 155212,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cookies-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Cookies-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1800364,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Cookies-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Cookies-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 9813048,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Dona-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Dona-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 185840,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Dona-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Dona-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1943844,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Dona-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Dona-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 11216838,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Enmoladas-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Enmoladas-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 219732,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Enmoladas-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Enmoladas-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 2398214,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Enmoladas-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Enmoladas-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 13072964,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Pasta-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Pasta-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 126504,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Pasta-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Pasta-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1335578,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Pasta-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Pasta-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 7697644,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Prime-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Prime-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 77954,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Prime-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Prime-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 996100,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
+      "outputPath": "assets/items/Prime-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Prime-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 4747052,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Schnitzel-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Schnitzel-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 187424,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Schnitzel-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Schnitzel-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1859202,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Schnitzel-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Schnitzel-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 12379388,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Short-Ribs-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Short-Ribs-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 169180,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Short-Ribs-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Short-Ribs-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1750274,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Short-Ribs-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Short-Ribs-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 11125084,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Strawberry-Croissant-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Strawberry-Croissant-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 128146,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Strawberry-Croissant-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Strawberry-Croissant-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1399096,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Strawberry-Croissant-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Strawberry-Croissant-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 8251164,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Sushi-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Sushi-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 104910,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Sushi-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Sushi-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1233326,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Sushi-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-final/assets/items/Sushi-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 6523608,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/logos/pngwing.com.png",
+      "sourcePath": "projects/restaurant-menu-final/assets/logos/pngwing.com.png",
+      "role": "other",
+      "mime": "image/png",
+      "bytes": 8313777,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "favicon.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 345838,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "index.html",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "text/html",
+      "bytes": 877,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "Logo.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 345838,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "menu.json",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/json",
+      "bytes": 55827,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "README.txt",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "text/plain",
+      "bytes": 289,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "serve.bat",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/octet-stream",
+      "bytes": 751,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "serve.command",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/octet-stream",
+      "bytes": 712,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "styles.css",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "text/css",
+      "bytes": 66845,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/hero360_monolithic.webp",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/webp",
+      "bytes": 2582284,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/startup_action_monolithic.webp",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/webp",
+      "bytes": 1002252,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/startup_motion_monolithic.webp",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/webp",
+      "bytes": 1558956,
+      "responsiveVariant": null,
+      "firstView": false
+    }
+  ]
+}

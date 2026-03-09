@@ -1,8 +1,14 @@
 {
   "schemaVersion": 1,
   "basePath": "/demos",
-  "total": 1,
+  "total": 2,
   "demos": [
+    {
+      "name": "Demo - International Menu",
+      "folder": "Demo - International Menu",
+      "href": "/demos/Demo%20-%20International%20Menu/",
+      "previewImage": "/demos/Demo%20-%20International%20Menu/preview.webp"
+    },
     {
       "name": "Demo - Keneth's Collection",
       "folder": "Demo - Keneth's Collection",
