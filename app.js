@@ -5,10 +5,10 @@ const CONSULTATION_MIN_LOADING_MS = 1200;
 const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
 const LOCALE_STORAGE_KEY = "cv_locale";
-const SCHNITZEL_ASSETS = {
-  poster: "./Schnitzel-int-poster.webp",
-  spriteHq: "./Schnitzel-int-sprite.webp",
-  spriteMd: "./Schnitzel-int-sprite-md.webp"
+const FEATURED_DISH_ASSETS = {
+  poster: "./Short-Ribs-int-poster.webp",
+  spriteHq: "./Short-Ribs-int-sprite.webp",
+  spriteMd: "./Short-Ribs-int-sprite-md.webp"
 };
 const SPRITE_META = {
   frameWidth: 500,
@@ -72,14 +72,14 @@ const LANDING_CONTENT_BY_LOCALE = {
           title: "Immersive Dish Preview",
           body: "Slow, tactile product viewing designed to create anticipation before ordering.",
           mediaType: "poster",
-          src: SCHNITZEL_ASSETS.poster,
-          alt: "MarryGo dish poster"
+          src: FEATURED_DISH_ASSETS.poster,
+          alt: "Short ribs dish poster"
         },
         {
           title: "Interactive Motion Layer",
           body: "A fluid interactive preview that reveals depth and detail as guests explore.",
           mediaType: "spriteSheet",
-          src: SCHNITZEL_ASSETS.spriteHq,
+          src: FEATURED_DISH_ASSETS.spriteHq,
           spriteMeta: SPRITE_META,
           alt: "MarryGo interactive depth preview"
         },
@@ -87,8 +87,8 @@ const LANDING_CONTENT_BY_LOCALE = {
           title: "Visual Appetite Trigger",
           body: "Real food texture and atmosphere to help guests decide faster with more confidence.",
           mediaType: "animatedWebp",
-          src: SCHNITZEL_ASSETS.spriteMd,
-          alt: "CafeBrunch dish animation"
+          src: FEATURED_DISH_ASSETS.spriteMd,
+          alt: "Short ribs dish animation"
         }
       ]
     },
@@ -270,14 +270,14 @@ const LANDING_CONTENT_BY_LOCALE = {
           title: "Vista Inmersiva del Plato",
           body: "Exploracion visual tactil y pausada para crear anticipacion antes de ordenar.",
           mediaType: "poster",
-          src: SCHNITZEL_ASSETS.poster,
+          src: FEATURED_DISH_ASSETS.poster,
           alt: "Vista del plato MarryGo"
         },
         {
           title: "Capa de Movimiento Interactivo",
           body: "Vista interactiva fluida que revela profundidad y detalle mientras se explora.",
           mediaType: "spriteSheet",
-          src: SCHNITZEL_ASSETS.spriteHq,
+          src: FEATURED_DISH_ASSETS.spriteHq,
           spriteMeta: SPRITE_META,
           alt: "Vista interactiva de profundidad MarryGo"
         },
@@ -285,7 +285,7 @@ const LANDING_CONTENT_BY_LOCALE = {
           title: "Disparador Visual de Apetito",
           body: "Textura real y ambiente visual para decidir más rápido y con mayor seguridad.",
           mediaType: "animatedWebp",
-          src: SCHNITZEL_ASSETS.spriteMd,
+          src: FEATURED_DISH_ASSETS.spriteMd,
           alt: "Animacion del plato CafeBrunch"
         }
       ]
@@ -468,14 +468,14 @@ const LANDING_CONTENT_BY_LOCALE = {
           title: "Immersive Dish Preview",
           body: "Langsame, taktile Produktansicht für mehr Vorfreude vor der Bestellung.",
           mediaType: "poster",
-          src: SCHNITZEL_ASSETS.poster,
+          src: FEATURED_DISH_ASSETS.poster,
           alt: "MarryGo Gerichtsvorschau"
         },
         {
           title: "Interaktive Bewegungsebene",
           body: "Fließende interaktive Vorschau, die Tiefe und Details beim Erkunden sichtbar macht.",
           mediaType: "spriteSheet",
-          src: SCHNITZEL_ASSETS.spriteHq,
+          src: FEATURED_DISH_ASSETS.spriteHq,
           spriteMeta: SPRITE_META,
           alt: "MarryGo interaktive Tiefenvorschau"
         },
@@ -483,7 +483,7 @@ const LANDING_CONTENT_BY_LOCALE = {
           title: "Visueller Appetit-Trigger",
           body: "Echte Textur und visuelle Atmosphäre helfen bei schnelleren und sichereren Entscheidungen.",
           mediaType: "animatedWebp",
-          src: SCHNITZEL_ASSETS.spriteMd,
+          src: FEATURED_DISH_ASSETS.spriteMd,
           alt: "CafeBrunch Gerichtsanimation"
         }
       ]
@@ -970,10 +970,10 @@ let manifestStatusState = null;
 const demoPreviewImageCache = new Map();
 let demoPreviewObserver = null;
 const assetStateByKey = new Map(
-  Object.keys(SCHNITZEL_ASSETS).map((key) => [key, "idle"])
+  Object.keys(FEATURED_DISH_ASSETS).map((key) => [key, "idle"])
 );
 const assetStateSubscribersByKey = new Map(
-  Object.keys(SCHNITZEL_ASSETS).map((key) => [key, new Set()])
+  Object.keys(FEATURED_DISH_ASSETS).map((key) => [key, new Set()])
 );
 const assetImageCacheByKey = new Map();
 const assetPromiseByKey = new Map();
@@ -1001,8 +1001,8 @@ const getByPath = (source, path) => {
   return typeof current === "string" ? current : "";
 };
 
-const getSchnitzelAssetKeyBySrc = (src) =>
-  Object.entries(SCHNITZEL_ASSETS).find(([, value]) => value === src)?.[0] ?? "poster";
+const getFeaturedDishAssetKeyBySrc = (src) =>
+  Object.entries(FEATURED_DISH_ASSETS).find(([, value]) => value === src)?.[0] ?? "poster";
 
 const setAssetState = (assetKey, state) => {
   assetStateByKey.set(assetKey, state);
@@ -1027,7 +1027,7 @@ const subscribeToAssetState = (assetKey, callback) => {
 };
 
 const loadLandingAssetImage = async (assetKey) => {
-  if (!(assetKey in SCHNITZEL_ASSETS)) {
+  if (!(assetKey in FEATURED_DISH_ASSETS)) {
     throw new Error(`Unknown asset key: ${assetKey}`);
   }
 
@@ -1052,7 +1052,7 @@ const loadLandingAssetImage = async (assetKey) => {
       setAssetState(assetKey, "error");
       reject(new Error(`Failed to load asset: ${assetKey}`));
     };
-    image.src = SCHNITZEL_ASSETS[assetKey];
+    image.src = FEATURED_DISH_ASSETS[assetKey];
   });
 
   const wrappedTask = task.finally(() => {
@@ -1422,7 +1422,7 @@ const renderExperience = () => {
   grid.innerHTML = content.experience.cards
     .map((card) => {
       const mediaType = card.mediaType ?? "poster";
-      const mediaKey = getSchnitzelAssetKeyBySrc(card.src);
+      const mediaKey = getFeaturedDishAssetKeyBySrc(card.src);
       const canvasMarkup =
         mediaType === "spriteSheet"
           ? '<canvas class="landing-media-canvas experience-media-canvas" data-experience-media-canvas hidden></canvas>'
@@ -1434,7 +1434,7 @@ const renderExperience = () => {
           <div class="landing-media-loader" role="status" aria-live="polite" aria-label="${htmlEscape(ui.media.loadingAria)}">
             <span class="landing-media-loader__spinner" aria-hidden="true"></span>
           </div>
-          <img class="landing-media-fallback experience-media-image" src="${htmlEscape(SCHNITZEL_ASSETS.poster)}" alt="${htmlEscape(card.alt)}" loading="lazy" decoding="async" draggable="false" />
+          <img class="landing-media-fallback experience-media-image" src="${htmlEscape(FEATURED_DISH_ASSETS.poster)}" alt="${htmlEscape(card.alt)}" loading="lazy" decoding="async" draggable="false" />
           ${canvasMarkup}
         </div>
         <div class="experience-card-body">
@@ -1465,7 +1465,7 @@ const createImageStageController = ({ stage, imageNode, primaryAssetKey, fallbac
   });
 
   const applyImageSource = (assetKey) => {
-    imageNode.src = SCHNITZEL_ASSETS[assetKey] ?? SCHNITZEL_ASSETS.poster;
+    imageNode.src = FEATURED_DISH_ASSETS[assetKey] ?? FEATURED_DISH_ASSETS.poster;
   };
 
   setMediaStageState(stage, "loading");
@@ -1758,7 +1758,7 @@ const setupExperienceMediaStages = () => {
       const mediaType = stage.dataset.mediaType ?? "poster";
       const mediaKey = stage.dataset.mediaKey ?? "poster";
       const imageNode = stage.querySelector(".landing-media-fallback");
-      if (imageNode instanceof HTMLImageElement) imageNode.src = SCHNITZEL_ASSETS.poster;
+      if (imageNode instanceof HTMLImageElement) imageNode.src = FEATURED_DISH_ASSETS.poster;
 
       if (mediaType === "spriteSheet") {
         const canvas = stage.querySelector("[data-experience-media-canvas]");
