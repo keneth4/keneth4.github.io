@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "slug": "restaurant-menu-final",
+  "generatedAt": "2026-03-09T01:13:22.092Z",
+  "totals": {
+    "files": 56,
+    "assetFiles": 44,
+    "shellFiles": 12,
+    "totalBytes": 170487144,
+    "assetBytes": 164371625,
+    "shellBytes": 6115519,
+    "firstViewAssetFiles": 4,
+    "firstViewImageBytes": 9775698,
+    "missingAssets": 0
+  },
+  "responsiveCoverage": {
+    "heroSources": 14,
+    "heroWithResponsiveVariants": 0,
+    "ratio": 0
+  },
+  "references": {
+    "referencedAssets": 44,
+    "unresolvedAssets": 0
+  },
+  "budgets": {
+    "passed": false,
+    "checks": [
+      {
+        "key": "jsGzipBytes",
+        "label": "Export JS (gzip)",
+        "threshold": 97280,
+        "actual": 36369,
+        "status": "pass"
+      },
+      {
+        "key": "cssGzipBytes",
+        "label": "Export CSS (gzip)",
+        "threshold": 12288,
+        "actual": 10727,
+        "status": "pass"
+      },
+      {
+        "key": "firstViewImageBytes",
+        "label": "First-view images",
+        "threshold": 1258291,
+        "actual": 9775698,
+        "status": "fail"
+      }
+    ]
+  },
+  "missingAssets": []
+}

@@ -1,13 +1,19 @@
 {
   "schemaVersion": 1,
   "basePath": "/demos",
-  "total": 2,
+  "total": 3,
   "demos": [
     {
-      "name": "Demo - International Menu",
-      "folder": "Demo - International Menu",
-      "href": "/demos/Demo%20-%20International%20Menu/",
-      "previewImage": "/demos/Demo%20-%20International%20Menu/preview.webp"
+      "name": "Demo - International Menu v1",
+      "folder": "Demo - International Menu v1",
+      "href": "/demos/Demo%20-%20International%20Menu%20v1/",
+      "previewImage": "/demos/Demo%20-%20International%20Menu%20v1/preview.webp"
+    },
+    {
+      "name": "Demo - International Menu v2",
+      "folder": "Demo - International Menu v2",
+      "href": "/demos/Demo%20-%20International%20Menu%20v2/",
+      "previewImage": "/demos/Demo%20-%20International%20Menu%20v2/preview.webp"
     },
     {
       "name": "Demo - Keneth's Collection",
