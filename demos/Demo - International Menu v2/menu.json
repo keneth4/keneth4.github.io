@@ -1,6 +1,6 @@
 {
   "meta": {
-    "slug": "restaurant-menu-final",
+    "slug": "restaurant-menu",
     "name": "Restaurant Menu",
     "restaurantName": {
       "es": "Restaurante Internacional",
@@ -43,7 +43,8 @@
         "family": "Cinzel",
         "source": ""
       }
-    }
+    },
+    "priceDecimalSeparator": "comma"
   },
   "backgrounds": [
     {

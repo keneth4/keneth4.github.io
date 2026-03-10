@@ -688,25 +688,30 @@ body {
 }
 
 .section-nav {
-  position: relative;
-  z-index: 3;
-  margin: 2px 20px 4px;
+  position: absolute;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+  transform: translateX(-50%);
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 16px;
+  padding: 0;
 }
 
 .section-nav__btn {
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
   border: 1px solid var(--menu-theme-accent-soft);
   background: rgba(2, 6, 23, 0.68);
   color: #f8fafc;
   display: grid;
   place-items: center;
-  font-size: 1rem;
+  font-size: 1.15rem;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.34);
+  backdrop-filter: blur(8px);
   transition:
     transform 160ms ease,
     background 160ms ease,
@@ -944,7 +949,7 @@ body {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 4px 10px 18px;
+  padding: 4px 0 18px;
 }
 
 .template-jukebox .menu-section {
@@ -1171,10 +1176,6 @@ body {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 6px);
   }
 
-  .section-nav {
-    margin-inline: 10px;
-  }
-
   .section-nav__label {
     font-size: 0.48rem;
     letter-spacing: 0.1em;
@@ -1221,7 +1222,39 @@ body {
   }
 }
 
+@media (orientation: landscape), (min-width: 900px) {
+  .section-nav {
+    left: 0;
+    right: 0;
+    top: clamp(74px, 11vh, 104px);
+    bottom: 0;
+    transform: none;
+    justify-content: space-between;
+    padding-inline:
+      calc(env(safe-area-inset-left, 0px) + 14px)
+      calc(env(safe-area-inset-right, 0px) + 14px);
+    pointer-events: none;
+  }
+
+  .section-nav__btn {
+    pointer-events: auto;
+  }
+}
+
 @media (orientation: landscape) and (max-height: 560px) {
+  .section-nav {
+    top: clamp(58px, 13vh, 88px);
+    padding-inline:
+      calc(env(safe-area-inset-left, 0px) + 10px)
+      calc(env(safe-area-inset-right, 0px) + 10px);
+  }
+
+  .section-nav__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
   .template-jukebox .menu-carousel {
     height: clamp(210px, 50vh, 290px);
   }
@@ -2589,12 +2622,13 @@ body.debug-flicker-active.debug-flicker-preset-modal-media-flat .dish-modal__med
 
 .project-money-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 10px;
   align-items: end;
 }
 
-.project-money-position {
+.project-money-position,
+.project-money-decimal {
   min-width: 170px;
 }
 
@@ -2603,7 +2637,8 @@ body.debug-flicker-active.debug-flicker-preset-modal-media-flat .dish-modal__med
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .project-money-position {
+  .project-money-position,
+  .project-money-decimal {
     min-width: 0;
   }
 }
