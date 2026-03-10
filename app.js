@@ -170,33 +170,79 @@ const LANDING_CONTENT_BY_LOCALE = {
     collaboration: {
       eyebrow: "Collaboration Options",
       heading: "Selective engagement model",
-      body: "Creativivid Studio works with a limited number of independent dining venues per quarter to maintain creative and technical excellence.",
-      packages: [
-        {
-          title: "Starter - Pilot Experience",
-          subtitle: "Ideal for testing immersive presentation with focused scope.",
-          priceRange: "€1,500 - €2,000",
-          bullets: ["Up to 5 items", "Interactive website", "Remote capture workflow"]
-        },
-        {
-          title: "Premium - Brand Elevation",
-          subtitle: "For visually-driven restaurants ready to differentiate.",
-          priceRange: "€3,000 - €4,500",
-          bullets: ["Up to 15 items", "Advanced styling", "On-site capture available", "Deployment support"]
-        },
-        {
-          title: "Signature - Full Immersive Concept",
-          subtitle: "For signature restaurants seeking a statement experience.",
-          priceRange: "€6,000+",
-          bullets: [
-            "20+ items",
-            "Custom design direction",
-            "On-site professional capture",
-            "Priority delivery",
-            "Full deployment and domain assistance"
-          ]
-        }
-      ]
+      intro: [
+        "Creativivid Studio works with a limited number of independent dining venues per quarter to maintain creative and technical excellence.",
+        "Pricing is structured around a simple setup fee and the number of dishes included in the experience. Restaurants can begin with a focused selection and expand the experience over time."
+      ],
+      standardPricing: {
+        title: "Standard Project Pricing",
+        items: [
+          {
+            label: "Base setup",
+            price: "€500",
+            body: "Project setup, interactive menu structure, visual environment configuration, and deployment preparation."
+          },
+          {
+            label: "Dish digitization",
+            price: "€100 per dish",
+            body: "Dish capture and processing, visual optimization, and integration into the interactive menu."
+          },
+          {
+            label: "Typical project investment",
+            price: "€1,200 – €3,000",
+            body: "Final pricing depends primarily on the number of dishes included.",
+            emphasis: true
+          }
+        ],
+        examplesTitle: "Pricing examples",
+        examples: [
+          { label: "10 dishes", price: "€1,500" },
+          { label: "15 dishes", price: "€2,000" },
+          { label: "25 dishes", price: "€3,000" }
+        ]
+      },
+      included: {
+        title: "Included in every project",
+        items: [
+          "Interactive menu website",
+          "Dish visual integration",
+          "Multi-language menu support",
+          "Deployment assistance",
+          "1 year of menu updates included"
+        ]
+      },
+      updatesIncluded: {
+        title: "1 year of menu updates included",
+        items: [
+          "Price changes",
+          "Dish name adjustments",
+          "Description edits",
+          "Presentation background changes",
+          "Seasonal refinements"
+        ],
+        body: "These updates help keep the menu accurate as your offerings evolve.",
+        note: "New dishes are not included in these updates."
+      },
+      newDishes: {
+        title: "Add new dishes later",
+        items: [
+          { label: "Standard addition", price: "€100 per new dish" },
+          { label: "Seasonal bundle", price: "€400 for 5 dishes" }
+        ],
+        body: "The bundle is useful for seasonal menu updates or new menu sections."
+      },
+      launchOffer: {
+        title: "Launch Offer — First 5 Restaurants",
+        items: [
+          "No €500 setup fee",
+          "€70 per dish digitized",
+          "1 year of menu updates included",
+          "Limited availability"
+        ],
+        body: "This offer is intended for the first restaurants participating during the launch stage of the studio's interactive menu format."
+      },
+      aftercareNote:
+        "After the first year, ongoing menu updates and maintenance are available for €100 per year, including hosting, technical maintenance, and continued menu updates."
     },
     faq: {
       eyebrow: "FAQ",
@@ -208,7 +254,7 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           q: "Can we update dishes later?",
-          a: "Yes. Iterative updates can be requested based on your menu changes and campaigns."
+          a: "Yes. During the first year, text, pricing, and presentation refinements are included. New dishes can be added later with separate dish pricing."
         },
         {
           q: "What if we do not have professional recording equipment?",
@@ -368,33 +414,79 @@ const LANDING_CONTENT_BY_LOCALE = {
     collaboration: {
       eyebrow: "Opciones de Colaboración",
       heading: "Modelo de colaboracion selectivo",
-      body: "Creativivid Studio trabaja con un número limitado de espacios gastronómicos independientes por trimestre para mantener excelencia creativa y técnica.",
-      packages: [
-        {
-          title: "Starter - Experiencia Piloto",
-          subtitle: "Ideal para validar presentación inmersiva con alcance enfocado.",
-          priceRange: "€1,500 - €2,000",
-          bullets: ["Hasta 5 items", "Sitio interactivo", "Flujo remoto de captura"]
-        },
-        {
-          title: "Premium - Elevacion de Marca",
-          subtitle: "Para restaurantes visuales listos para diferenciarse.",
-          priceRange: "€3,000 - €4,500",
-          bullets: ["Hasta 15 items", "Estilo avanzado", "Captura en sitio disponible", "Soporte de despliegue"]
-        },
-        {
-          title: "Signature - Concepto Inmersivo Completo",
-          subtitle: "Para restaurantes distintivos que buscan una experiencia de impacto.",
-          priceRange: "€6,000+",
-          bullets: [
-            "20+ items",
-            "Direccion de diseño personalizada",
-            "Captura profesional en sitio",
-            "Entrega prioritaria",
-            "Soporte completo de dominio y despliegue"
-          ]
-        }
-      ]
+      intro: [
+        "Creativivid Studio trabaja con un número limitado de espacios gastronómicos independientes por trimestre para mantener excelencia creativa y técnica.",
+        "El precio se estructura de forma transparente con una tarifa base simple y el número de platos incluidos. Los restaurantes pueden comenzar con una selección enfocada y ampliar la experiencia con el tiempo."
+      ],
+      standardPricing: {
+        title: "Precio estándar del proyecto",
+        items: [
+          {
+            label: "Configuración base",
+            price: "€500",
+            body: "Configuración del proyecto, estructura del menú interactivo, configuración del entorno visual y preparación para el despliegue."
+          },
+          {
+            label: "Digitalización por plato",
+            price: "€100 por plato",
+            body: "Captura o procesamiento del plato, optimización visual e integración en el menú interactivo."
+          },
+          {
+            label: "Inversión típica del proyecto",
+            price: "€1,200 – €3,000",
+            body: "El precio final depende principalmente del número de platos incluidos.",
+            emphasis: true
+          }
+        ],
+        examplesTitle: "Ejemplos de precio",
+        examples: [
+          { label: "10 platos", price: "€1,500" },
+          { label: "15 platos", price: "€2,000" },
+          { label: "25 platos", price: "€3,000" }
+        ]
+      },
+      included: {
+        title: "Incluido en cada proyecto",
+        items: [
+          "Sitio web de menú interactivo",
+          "Integración visual de platos",
+          "Soporte de menú multilenguaje",
+          "Asistencia de despliegue",
+          "1 año de actualizaciones del menú incluido"
+        ]
+      },
+      updatesIncluded: {
+        title: "1 año de actualizaciones del menú incluido",
+        items: [
+          "Cambios de precio",
+          "Ajustes en nombres de platos",
+          "Ediciones de descripciones",
+          "Cambios en el fondo de presentación",
+          "Refinamientos estacionales"
+        ],
+        body: "Estas actualizaciones están incluidas para mantener el menú preciso y alineado con la evolución de tu oferta.",
+        note: "Los platos nuevos no están incluidos en estas actualizaciones."
+      },
+      newDishes: {
+        title: "Agregar nuevos platos después",
+        items: [
+          { label: "Adición estándar", price: "€100 por plato nuevo" },
+          { label: "Paquete estacional", price: "€400 por 5 platos" }
+        ],
+        body: "El paquete es útil para actualizaciones estacionales del menú o nuevas secciones."
+      },
+      launchOffer: {
+        title: "Oferta de lanzamiento — Primeros 5 restaurantes",
+        items: [
+          "Sin tarifa de configuración de €500",
+          "€70 por plato digitalizado",
+          "1 año de actualizaciones del menú incluido",
+          "Disponibilidad limitada"
+        ],
+        body: "Esta oferta está pensada para los primeros restaurantes que participen en la etapa de lanzamiento del formato de menú interactivo del estudio."
+      },
+      aftercareNote:
+        "Después del primer año, las actualizaciones continuas del menú y el mantenimiento están disponibles por €100 al año, incluyendo hosting, mantenimiento técnico y actualizaciones continuas del menú."
     },
     faq: {
       eyebrow: "Preguntas Frecuentes",
@@ -406,7 +498,7 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           q: "Podemos actualizar platos despues?",
-          a: "Sí. Se pueden solicitar actualizaciones iterativas según cambios de menú y campañas."
+          a: "Sí. Durante el primer año se incluyen ajustes de texto, precio y presentación. Los platos nuevos pueden añadirse después con precio por plato."
         },
         {
           q: "Que pasa si no tenemos equipo profesional de grabacion?",
@@ -566,33 +658,79 @@ const LANDING_CONTENT_BY_LOCALE = {
     collaboration: {
       eyebrow: "Zusammenarbeitsoptionen",
       heading: "Selektives Engagement-Modell",
-      body: "Creativivid Studio arbeitet pro Quartal mit einer begrenzten Zahl unabhängiger Dining Venues, um kreative und technische Exzellenz zu sichern.",
-      packages: [
-        {
-          title: "Starter - Pilot Experience",
-          subtitle: "Ideal zum Testen immersiver Präsentation mit fokussiertem Umfang.",
-          priceRange: "€1,500 - €2,000",
-          bullets: ["Bis zu 5 Items", "Interaktive Website", "Remote-Capture-Workflow"]
-        },
-        {
-          title: "Premium - Brand Elevation",
-          subtitle: "Für visuell starke Restaurants mit Differenzierungsfokus.",
-          priceRange: "€3,000 - €4,500",
-          bullets: ["Bis zu 15 Items", "Advanced Styling", "Capture vor Ort verfügbar", "Deployment-Support"]
-        },
-        {
-          title: "Signature - Voll immersives Konzept",
-          subtitle: "Für Signature-Restaurants mit Anspruch auf ein Statement-Erlebnis.",
-          priceRange: "€6,000+",
-          bullets: [
-            "20+ Items",
-            "Individuelle Designrichtung",
-            "Professionelles Capture vor Ort",
-            "Priorisierte Lieferung",
-            "Vollständige Domain- und Deployment-Hilfe"
-          ]
-        }
-      ]
+      intro: [
+        "Creativivid Studio arbeitet pro Quartal mit einer begrenzten Zahl unabhängiger Dining Venues, um kreative und technische Exzellenz zu sichern.",
+        "Die Preisgestaltung ist transparent aufgebaut: mit einer einfachen Grundgebühr und der Anzahl der eingebundenen Gerichte. Restaurants können mit einer fokussierten Auswahl starten und die Experience später erweitern."
+      ],
+      standardPricing: {
+        title: "Standard-Projektpreis",
+        items: [
+          {
+            label: "Basis-Setup",
+            price: "€500",
+            body: "Projektsetup, Struktur des interaktiven Menüs, Konfiguration der visuellen Umgebung und Vorbereitung des Deployments."
+          },
+          {
+            label: "Gerichtsdigitalisierung",
+            price: "€100 pro Gericht",
+            body: "Erfassung oder Verarbeitung des Gerichts, visuelle Optimierung und Integration in das interaktive Menü."
+          },
+          {
+            label: "Typische Projektinvestition",
+            price: "€1,200 – €3,000",
+            body: "Der Endpreis hängt vor allem von der Anzahl der eingebundenen Gerichte ab.",
+            emphasis: true
+          }
+        ],
+        examplesTitle: "Preisbeispiele",
+        examples: [
+          { label: "10 Gerichte", price: "€1,500" },
+          { label: "15 Gerichte", price: "€2,000" },
+          { label: "25 Gerichte", price: "€3,000" }
+        ]
+      },
+      included: {
+        title: "In jedem Projekt enthalten",
+        items: [
+          "Interaktive Menü-Website",
+          "Visuelle Gerichtsintegration",
+          "Mehrsprachige Menüunterstützung",
+          "Deployment-Unterstützung",
+          "1 Jahr Menüupdates inklusive"
+        ]
+      },
+      updatesIncluded: {
+        title: "1 Jahr Menüupdates inklusive",
+        items: [
+          "Preisänderungen",
+          "Anpassungen von Gerichtsnamen",
+          "Änderungen an Beschreibungen",
+          "Änderungen des Präsentationshintergrunds",
+          "Saisonale Verfeinerungen"
+        ],
+        body: "Diese Anpassungen sind inklusive, damit dein Menü korrekt bleibt und zu deinem sich entwickelnden Angebot passt.",
+        note: "Neue Gerichte sind in diesen Updates nicht enthalten."
+      },
+      newDishes: {
+        title: "Neue Gerichte später ergänzen",
+        items: [
+          { label: "Standard-Ergänzung", price: "€100 pro neues Gericht" },
+          { label: "Saisonales Bundle", price: "€400 für 5 Gerichte" }
+        ],
+        body: "Das Bundle eignet sich für saisonale Kartenupdates oder neue Menübereiche."
+      },
+      launchOffer: {
+        title: "Launch-Angebot — Erste 5 Restaurants",
+        items: [
+          "Keine €500 Setup-Gebühr",
+          "€70 pro digitalisiertem Gericht",
+          "1 Jahr Menüupdates inklusive",
+          "Begrenzte Verfügbarkeit"
+        ],
+        body: "Dieses Angebot ist für die ersten Restaurants gedacht, die sich in der Launch-Phase am interaktiven Menüformat des Studios beteiligen."
+      },
+      aftercareNote:
+        "Nach dem ersten Jahr sind laufende Menüupdates und Wartung für €100 pro Jahr verfügbar, inklusive Hosting, technischer Wartung und fortlaufenden Menüupdates."
     },
     faq: {
       eyebrow: "FAQ",
@@ -604,7 +742,7 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           q: "Können wir Gerichte später aktualisieren?",
-          a: "Ja. Iterative Updates sind entsprechend Menüänderungen und Kampagnen möglich."
+          a: "Ja. Im ersten Jahr sind Text-, Preis- und Präsentationsanpassungen inklusive. Neue Gerichte können später separat pro Gericht ergänzt werden."
         },
         {
           q: "Was, wenn wir kein professionelles Aufnahme-Equipment haben?",
@@ -673,7 +811,7 @@ const UI_TEXT_BY_LOCALE = {
       statusError: "Could not load demos manifest from {manifestUrl}."
     },
     collaboration: {
-      applyCta: "Apply for a Consultation"
+      applyCta: "Request a Consultation"
     },
     about: {
       signatureLine:
@@ -694,11 +832,11 @@ const UI_TEXT_BY_LOCALE = {
       estimatedMenuSize1to10: "1-10 dishes",
       estimatedMenuSize10to25: "10-25 dishes",
       estimatedMenuSize25plus: "25+ dishes",
-      collaborationLevelLabel: "Which collaboration level best fits your needs?",
-      collaborationLevelStarter: "Starter - Pilot Experience",
-      collaborationLevelPremium: "Premium - Brand Elevation",
-      collaborationLevelSignature: "Signature - Full Immersive Concept",
-      collaborationLevelNotSure: "Not sure yet - let's discuss",
+      projectScopeLabel: "What initial project scope fits best?",
+      projectScopeUpTo10: "Up to 10 dishes",
+      projectScope11to15: "11-15 dishes",
+      projectScope16to25: "16-25 dishes",
+      projectScopeNotSure: "Not sure yet - let's discuss",
       timelineLabel: "When are you hoping to launch or update your menu?",
       selectOneOption: "Select one...",
       timelineAsapOption: "As soon as possible",
@@ -801,11 +939,11 @@ const UI_TEXT_BY_LOCALE = {
       estimatedMenuSize1to10: "1-10 platos",
       estimatedMenuSize10to25: "10-25 platos",
       estimatedMenuSize25plus: "25+ platos",
-      collaborationLevelLabel: "¿Qué nivel de colaboración se ajusta mejor a tus necesidades?",
-      collaborationLevelStarter: "Starter - Experiencia piloto",
-      collaborationLevelPremium: "Premium - Elevación de marca",
-      collaborationLevelSignature: "Signature - Concepto inmersivo completo",
-      collaborationLevelNotSure: "Aún no estoy seguro - mejor lo conversamos",
+      projectScopeLabel: "¿Qué alcance inicial del proyecto encaja mejor?",
+      projectScopeUpTo10: "Hasta 10 platos",
+      projectScope11to15: "11-15 platos",
+      projectScope16to25: "16-25 platos",
+      projectScopeNotSure: "Aún no estoy seguro - mejor lo conversamos",
       timelineLabel: "¿Cuándo esperas lanzar o actualizar tu menú?",
       selectOneOption: "Selecciona una opción...",
       timelineAsapOption: "Lo antes posible",
@@ -908,11 +1046,11 @@ const UI_TEXT_BY_LOCALE = {
       estimatedMenuSize1to10: "1-10 Gerichte",
       estimatedMenuSize10to25: "10-25 Gerichte",
       estimatedMenuSize25plus: "25+ Gerichte",
-      collaborationLevelLabel: "Welches Kollaborationsniveau passt am besten zu euren Anforderungen?",
-      collaborationLevelStarter: "Starter - Pilot Experience",
-      collaborationLevelPremium: "Premium - Brand Elevation",
-      collaborationLevelSignature: "Signature - Full Immersive Concept",
-      collaborationLevelNotSure: "Noch nicht sicher - lasst uns sprechen",
+      projectScopeLabel: "Welcher anfängliche Projektumfang passt am besten?",
+      projectScopeUpTo10: "Bis zu 10 Gerichte",
+      projectScope11to15: "11-15 Gerichte",
+      projectScope16to25: "16-25 Gerichte",
+      projectScopeNotSure: "Noch nicht sicher - lasst uns sprechen",
       timelineLabel: "Wann möchtet ihr euer Menü launchen oder aktualisieren?",
       selectOneOption: "Bitte auswählen...",
       timelineAsapOption: "So schnell wie möglich",
@@ -1863,24 +2001,106 @@ const renderDeliverables = () => {
   target.innerHTML = content.deliverables.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
 };
 
-const renderPackages = () => {
+const renderCollaborationSection = () => {
   const content = getLandingContent();
-  const target = document.getElementById("package-grid");
+  const target = document.getElementById("collaboration-content");
   if (!target) return;
-  target.innerHTML = content.collaboration.packages
-    .map(
-      (item) => `
-      <article class="package-card">
-        <h3>${htmlEscape(item.title)}</h3>
-        <p class="tier-subtitle">${htmlEscape(item.subtitle)}</p>
-        <p class="price-range">${htmlEscape(item.priceRange)}</p>
-        <ul>
-          ${item.bullets.map((bullet) => `<li>${htmlEscape(bullet)}</li>`).join("")}
-        </ul>
+  const section = content.collaboration;
+
+  target.innerHTML = `
+    <div class="collaboration-intro">
+      ${section.intro
+        .map(
+          (paragraph, index) => `
+            <p class="${index === 0 ? "section-intro" : "collaboration-intro-secondary"}">${htmlEscape(paragraph)}</p>
+          `
+        )
+        .join("")}
+    </div>
+    <div class="collaboration-grid">
+      <article class="collaboration-card collaboration-card-standard">
+        <div class="collaboration-block collaboration-block-pricing">
+          <h3>${htmlEscape(section.standardPricing.title)}</h3>
+          <div class="pricing-rule-list">
+            ${section.standardPricing.items
+              .map(
+                (item) => `
+                  <div class="pricing-rule${item.emphasis ? " is-emphasis" : ""}">
+                    <div class="pricing-rule-head">
+                      <h4>${htmlEscape(item.label)}</h4>
+                      <p class="pricing-rule-price">${htmlEscape(item.price)}</p>
+                    </div>
+                    <p class="pricing-rule-body">${htmlEscape(item.body)}</p>
+                  </div>
+                `
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <div class="collaboration-block">
+          <h4>${htmlEscape(section.standardPricing.examplesTitle)}</h4>
+          <ul class="pricing-example-list">
+            ${section.standardPricing.examples
+              .map(
+                (example) => `
+                  <li class="pricing-example-item">
+                    <span class="pricing-example-label">${htmlEscape(example.label)}</span>
+                    <span class="pricing-example-arrow" aria-hidden="true">→</span>
+                    <strong class="pricing-example-price">${htmlEscape(example.price)}</strong>
+                  </li>
+                `
+              )
+              .join("")}
+          </ul>
+        </div>
+
+        <div class="collaboration-block">
+          <h4>${htmlEscape(section.included.title)}</h4>
+          <ul class="collaboration-checklist">
+            ${section.included.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="collaboration-detail-columns">
+          <section class="collaboration-block collaboration-detail-block">
+            <h4>${htmlEscape(section.updatesIncluded.title)}</h4>
+            <ul class="collaboration-checklist">
+              ${section.updatesIncluded.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
+            </ul>
+            <p class="collaboration-block-copy">${htmlEscape(section.updatesIncluded.body)}</p>
+            <p class="collaboration-note">${htmlEscape(section.updatesIncluded.note)}</p>
+          </section>
+
+          <section class="collaboration-block collaboration-detail-block">
+            <h4>${htmlEscape(section.newDishes.title)}</h4>
+            <ul class="collaboration-price-options">
+              ${section.newDishes.items
+                .map(
+                  (item) => `
+                    <li class="collaboration-price-option">
+                      <span class="collaboration-price-label">${htmlEscape(item.label)}</span>
+                      <strong class="collaboration-price-value">${htmlEscape(item.price)}</strong>
+                    </li>
+                  `
+                )
+                .join("")}
+            </ul>
+            <p class="collaboration-block-copy">${htmlEscape(section.newDishes.body)}</p>
+          </section>
+        </div>
       </article>
-    `
-    )
-    .join("");
+
+      <aside class="collaboration-card collaboration-card-offer">
+        <h3>${htmlEscape(section.launchOffer.title)}</h3>
+        <ul class="collaboration-offer-list">
+          ${section.launchOffer.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
+        </ul>
+        <p class="collaboration-offer-copy">${htmlEscape(section.launchOffer.body)}</p>
+      </aside>
+    </div>
+    <p class="collaboration-support-note">${htmlEscape(section.aftercareNote)}</p>
+  `;
 };
 
 const renderFaq = () => {
@@ -2337,7 +2557,7 @@ const setupConsultationForm = () => {
       contact_email: String(data.get("contact_email") ?? "").trim(),
       city_country: String(data.get("city_country") ?? "").trim(),
       estimated_menu_size: String(data.get("estimated_menu_size") ?? "").trim(),
-      collaboration_level: String(data.get("collaboration_level") ?? "").trim(),
+      project_scope: String(data.get("project_scope") ?? "").trim(),
       timeline: String(data.get("timeline") ?? "").trim(),
       message: String(data.get("message") ?? "").trim(),
       consent: data.get("consent") === "on"
@@ -2461,7 +2681,7 @@ const hydrateLanding = () => {
   renderImpact();
   renderTimeline();
   renderDeliverables();
-  renderPackages();
+  renderCollaborationSection();
   renderFaq();
   setupLandingMedia();
 };
