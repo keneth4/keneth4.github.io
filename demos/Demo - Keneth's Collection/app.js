@@ -1351,7 +1351,7 @@ const setupInteractiveModalMedia = async (asset) => {
 };
 const instructionCopy = {"en":{"loadingLabel":"Loading assets","tapHint":"Tap for details","assetDisclaimer":"Assets belong to their owners. Do not copy or reuse this content without permission.","jukeboxHint":"Scroll to rotate • Swipe to explore","focusRowsHint":"Scroll to browse • Swipe to explore","rotateHintTouch":"Swipe horizontally on the image to rotate","rotateHintMouse":"Drag horizontally with the mouse to rotate","rotateToggle":"Reverse rotation"},"es":{"loadingLabel":"Cargando assets","tapHint":"Toca para ver detalles","assetDisclaimer":"Los assets pertenecen a sus propietarios. No copies ni reutilices este contenido sin autorización.","jukeboxHint":"Desplaza para girar • Desliza para explorar","focusRowsHint":"Desplaza para recorrer • Desliza para explorar","rotateHintTouch":"Desliza horizontal sobre la imagen para girar","rotateHintMouse":"Arrastra horizontal con el mouse para girar","rotateToggle":"Invertir giro"},"fr":{"loadingLabel":"Chargement des assets","tapHint":"Touchez pour voir les détails","assetDisclaimer":"Les assets appartiennent à leurs propriétaires. Ne copiez ni ne réutilisez ce contenu sans autorisation.","jukeboxHint":"Faites défiler pour tourner • Balayez pour explorer","focusRowsHint":"Faites défiler pour parcourir • Balayez pour explorer","rotateHintTouch":"Balayez horizontalement l'image pour faire tourner","rotateHintMouse":"Faites glisser horizontalement avec la souris pour faire tourner","rotateToggle":"Inverser la rotation"},"pt":{"loadingLabel":"Carregando assets","tapHint":"Toque para ver detalhes","assetDisclaimer":"Os assets pertencem aos seus proprietários. Não copie nem reutilize este conteúdo sem autorização.","jukeboxHint":"Role para girar • Deslize para explorar","focusRowsHint":"Role para navegar • Deslize para explorar","rotateHintTouch":"Deslize horizontalmente na imagem para girar","rotateHintMouse":"Arraste horizontalmente com o mouse para girar","rotateToggle":"Inverter rotação"},"it":{"loadingLabel":"Caricamento assets","tapHint":"Tocca per i dettagli","assetDisclaimer":"Gli assets appartengono ai rispettivi proprietari. Non copiare o riutilizzare questo contenuto senza autorizzazione.","jukeboxHint":"Scorri per ruotare • Sfiora per esplorare","focusRowsHint":"Scorri per sfogliare • Sfiora per esplorare","rotateHintTouch":"Scorri orizzontalmente sull'immagine per ruotare","rotateHintMouse":"Trascina orizzontalmente con il mouse per ruotare","rotateToggle":"Inverti rotazione"},"de":{"loadingLabel":"Assets werden geladen","tapHint":"Tippen für Details","assetDisclaimer":"Assets gehören ihren Eigentümern. Bitte nicht ohne Genehmigung kopieren oder wiederverwenden.","jukeboxHint":"Scrollen zum Drehen • Wischen zum Entdecken","focusRowsHint":"Scrollen zum Blättern • Wischen zum Entdecken","rotateHintTouch":"Wische horizontal über das Bild, um zu drehen","rotateHintMouse":"Ziehe horizontal mit der Maus, um zu drehen","rotateToggle":"Drehrichtung umkehren"},"ja":{"loadingLabel":"アセットを読み込み中","tapHint":"タップで詳細","assetDisclaimer":"アセットは各所有者に帰属します。許可なく複製・再利用しないでください。","jukeboxHint":"スクロールで回転 • スワイプで探索","focusRowsHint":"スクロールで閲覧 • スワイプで探索","rotateHintTouch":"画像上で横にスワイプして回転","rotateHintMouse":"画像上で横にドラッグして回転","rotateToggle":"回転方向を反転"},"ko":{"loadingLabel":"에셋 로딩 중","tapHint":"탭해서 자세히 보기","assetDisclaimer":"에셋은 각 소유자에게 귀속됩니다. 허가 없이 복사하거나 재사용하지 마세요.","jukeboxHint":"스크롤로 회전 • 스와이프로 탐색","focusRowsHint":"스크롤로 둘러보기 • 스와이프로 탐색","rotateHintTouch":"이미지에서 가로로 스와이프해 회전","rotateHintMouse":"마우스로 가로로 드래그해 회전","rotateToggle":"회전 방향 반전"},"zh":{"loadingLabel":"正在加载素材","tapHint":"点按查看详情","assetDisclaimer":"素材归其所有者所有。未经许可请勿复制或再利用。","jukeboxHint":"滚动可旋转 • 滑动可探索","focusRowsHint":"滚动可浏览 • 滑动可探索","rotateHintTouch":"在图片上横向滑动以旋转","rotateHintMouse":"用鼠标横向拖动以旋转","rotateToggle":"反向旋转"}};
 const runtimeLegalCopy = {"es":{"openAriaLabel":"Abrir aviso legal","dialogTitle":"Aviso legal","closeAriaLabel":"Cerrar aviso legal"},"en":{"openAriaLabel":"Open legal notice","dialogTitle":"Legal notice","closeAriaLabel":"Close legal notice"}};
-const RUNTIME_GUIDANCE_ASSETS = {"startupMotionMonolithic":"visual_onboarding/startup_motion_monolithic.webp","startupActionMonolithic":"visual_onboarding/startup_action_monolithic.webp","hero360Monolithic":"visual_onboarding/hero360_monolithic.webp"};
+const RUNTIME_GUIDANCE_ASSETS = {"circularMotionArrows":"visual_onboarding/circular_motion_arrows.png","horVerMotionArrows":"visual_onboarding/hor_ver_motion_arrows.png","horizontalMotionArrows":"visual_onboarding/horizontal_motion_arrows.png","pointingHand":"visual_onboarding/pointing_hand.png","sampleDish":"visual_onboarding/sample_2d_dish.png"};
 const RUNTIME_GUIDANCE_CAPTURE_QUERY_PARAM = "capture";
 
 const normalizeLocale = (value) => (value || "").toLowerCase().split("-")[0];
@@ -1813,14 +1813,26 @@ const render = () => {
           '" aria-hidden="true">' +
           '<div class="menu-guidance-overlay__grid">' +
           '<div class="menu-guidance-overlay__panel menu-guidance-overlay__panel--motion">' +
-          '<img class="menu-guidance-overlay__image menu-guidance-overlay__image--motion" src="' +
-          RUNTIME_GUIDANCE_ASSETS.startupMotionMonolithic +
+          '<div class="menu-guidance-overlay__stage menu-guidance-overlay__stage--motion" style="--menu-guidance-bg-1:url(' +
+          RUNTIME_GUIDANCE_ASSETS.horVerMotionArrows +
+          ');">' +
+          '<span class="menu-guidance-overlay__hand-wrap menu-guidance-overlay__hand-wrap--motion">' +
+          '<img class="menu-guidance-overlay__hand" src="' +
+          RUNTIME_GUIDANCE_ASSETS.pointingHand +
           '" alt="" decoding="async" draggable="false" />' +
+          "</span>" +
+          "</div>" +
           "</div>" +
           '<div class="menu-guidance-overlay__panel menu-guidance-overlay__panel--action">' +
-          '<img class="menu-guidance-overlay__image menu-guidance-overlay__image--action" src="' +
-          RUNTIME_GUIDANCE_ASSETS.startupActionMonolithic +
+          '<div class="menu-guidance-overlay__stage menu-guidance-overlay__stage--action" style="--menu-guidance-bg-1:url(' +
+          RUNTIME_GUIDANCE_ASSETS.sampleDish +
+          ');">' +
+          '<span class="menu-guidance-overlay__hand-wrap menu-guidance-overlay__hand-wrap--tap">' +
+          '<img class="menu-guidance-overlay__hand" src="' +
+          RUNTIME_GUIDANCE_ASSETS.pointingHand +
           '" alt="" decoding="async" draggable="false" />' +
+          "</span>" +
+          "</div>" +
           "</div>" +
           "</div>" +
           "</div>"
@@ -2722,9 +2734,19 @@ const bindCards = () => {
         <div class="dish-modal__media">
           ${activeModalInteractiveAsset && !runtimeGuidanceCaptureMode
             ? '<div class="dish-modal__interactive-guidance is-hidden" aria-hidden="true">' +
-              '<img class="dish-modal__interactive-guidance-image" src="' +
-              RUNTIME_GUIDANCE_ASSETS.hero360Monolithic +
+              '<div class="dish-modal__interactive-guidance-scene" style="--dish-guidance-track:url(' +
+              RUNTIME_GUIDANCE_ASSETS.horizontalMotionArrows +
+              '); --dish-guidance-dish:url(' +
+              RUNTIME_GUIDANCE_ASSETS.sampleDish +
+              '); --dish-guidance-ellipse:url(' +
+              RUNTIME_GUIDANCE_ASSETS.circularMotionArrows +
+              ');">' +
+              '<span class="dish-modal__interactive-guidance-hand-wrap">' +
+              '<img class="dish-modal__interactive-guidance-hand" src="' +
+              RUNTIME_GUIDANCE_ASSETS.pointingHand +
               '" alt="" decoding="async" draggable="false" />' +
+              "</span>" +
+              "</div>" +
               "</div>"
             : ""}
           <img class="dish-modal__media-image" src="${getDetailImageSrc(dish)}" alt="${textOf(dish.name)}" draggable="false" oncontextmenu="return false;" ondragstart="return false;" decoding="async" />

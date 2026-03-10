@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-03-09T01:00:34.759Z",
+  "generatedAt": "2026-03-10T02:56:41.581Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 147410,
+      "bytes": 148611,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -404,34 +404,52 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 66845,
+      "bytes": 70334,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "visual_onboarding/hero360_monolithic.webp",
+      "outputPath": "visual_onboarding/circular_motion_arrows.png",
       "sourcePath": null,
       "role": "shell",
-      "mime": "image/webp",
-      "bytes": 2582284,
+      "mime": "image/png",
+      "bytes": 96270,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "visual_onboarding/startup_action_monolithic.webp",
+      "outputPath": "visual_onboarding/hor_ver_motion_arrows.png",
       "sourcePath": null,
       "role": "shell",
-      "mime": "image/webp",
-      "bytes": 1002252,
+      "mime": "image/png",
+      "bytes": 140583,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "visual_onboarding/startup_motion_monolithic.webp",
+      "outputPath": "visual_onboarding/horizontal_motion_arrows.png",
       "sourcePath": null,
       "role": "shell",
-      "mime": "image/webp",
-      "bytes": 1558956,
+      "mime": "image/png",
+      "bytes": 38405,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/pointing_hand.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 165571,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "visual_onboarding/sample_2d_dish.png",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "image/png",
+      "bytes": 354589,
       "responsiveVariant": null,
       "firstView": false
     }
