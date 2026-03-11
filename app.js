@@ -42,25 +42,33 @@ const LANDING_CONTENT_BY_LOCALE = {
         "Immersive interactive 3D menus designed for modern restaurants that want to attract, inform, and excite guests before the first bite.",
       microValue: "Multi-language. Visual. Story-driven. Allergen-aware."
     },
-    credibility: [
-      "Based in Germany, collaborating with independent restaurants and dining venues internationally.",
-      "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
-      "No subscription required. Delivered as fully-owned files.",
-      "Selective studio: limited projects per quarter for quality."
-    ],
-    problem: {
-      eyebrow: "The Real Problem",
-      heading: "Static menus rarely create emotion.",
-      bodyA:
+    whyItMatters: {
+      eyebrow: "Why It Matters",
+      heading: "Why this matters for restaurants",
+      intro: [
         "Across Germany and Europe, many restaurants still rely on paper menus or static PDFs. For international guests, unfamiliar ingredients and unclear allergen context create friction at the point of ordering.",
-      bodyB:
-        "When guests cannot visualize what they are ordering, hesitation rises and premium perception drops. Presentation is not decoration. Presentation is positioning.",
-      listHeading: "What restaurants lose with static presentation",
-      points: [
-        "Craving trigger and emotional momentum",
-        "Clarity for ingredients and allergen confidence",
-        "Story depth behind each signature dish",
-        "A memorable digital impression worth sharing"
+        "When guests cannot clearly visualize what they are ordering, hesitation rises and premium perception drops. Presentation is not decoration. Presentation is positioning."
+      ],
+      fitLabel: "Best fit for",
+      fitText:
+        "independent restaurants, boutique dining venues, and tourist-area concepts where visual clarity helps guests decide faster.",
+      impacts: [
+        {
+          title: "Elevate Premium Perception",
+          body: "Presentation signals quality before the first bite reaches the table."
+        },
+        {
+          title: "Stand Out from Competitors",
+          body: "Most restaurants still use static menus; immersive interaction differentiates instantly."
+        },
+        {
+          title: "Reduce Ordering Hesitation",
+          body: "Dish clarity and context shorten decision time for international guests."
+        },
+        {
+          title: "Improve Guest Confidence",
+          body: "Allergen and dietary cues make ordering clearer and more comfortable."
+        }
       ]
     },
     experience: {
@@ -94,46 +102,8 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     demos: {
       eyebrow: "Live Demos",
-      heading: "Published demo experiences"
-    },
-    hospitality: {
-      eyebrow: "Designed for Visual-First Dining Venues",
-      heading: "Built for independent venues where presentation is part of the experience.",
-      body:
-        "Creativivid Studio creates immersive menu experiences for boutique cafes, brunch studios, cocktail or speakeasy bars, dessert-forward concepts, chef-led dining venues, and Irish pubs.",
-      lines: ["It's experience.", "It's culture.", "It's story.", "It's your brand, made tangible."]
-    },
-    impact: {
-      eyebrow: "Why It Works",
-      heading: "Business impact, not visual noise.",
-      body:
-        "Interactive 3D showcases increase engagement and reduce ordering hesitation while elevating premium perception.",
-      items: [
-        {
-          title: "Increase Engagement Time",
-          body: "Guests spend longer exploring dishes, stories, and details before deciding."
-        },
-        {
-          title: "Elevate Premium Perception",
-          body: "Presentation signals quality before the first bite reaches the table."
-        },
-        {
-          title: "Stand Out from Competitors",
-          body: "Most restaurants still use static menus; immersive interaction differentiates instantly."
-        },
-        {
-          title: "Encourage Social Sharing",
-          body: "Visual-first experiences generate screenshots, conversation, and organic mentions."
-        },
-        {
-          title: "Reduce Ordering Hesitation",
-          body: "Dish clarity and context shorten decision time for international guests."
-        },
-        {
-          title: "Improve Guest Confidence",
-          body: "Allergen and dietary cues make ordering clearer and more comfortable."
-        }
-      ]
+      heading: "Published demo experiences",
+      body: "A focused selection of published demos to show how the interactive menu experience feels in practice."
     },
     howItWorks: {
       eyebrow: "How It Works",
@@ -151,20 +121,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         "We build your interactive web experience.",
         "You receive a ready-to-deploy interactive website.",
         "Optional domain and server setup assistance is available."
-      ]
-    },
-    deliverables: {
-      eyebrow: "What You Receive",
-      heading: "Complete ownership and deployment-ready delivery.",
-      items: [
-        "Fully responsive interactive website",
-        "Immersive 3D dish visualizations",
-        "Menu language support: Spanish, English, French, Portuguese, Italian, German, Japanese, Korean, Chinese.",
-        "Clear vegan and allergen indicators",
-        "Story-rich dish detail structure",
-        "Custom brand styling and direction",
-        "Deployment assistance (optional add-on)",
-        "Full ownership of delivered files"
       ]
     },
     collaboration: {
@@ -207,7 +163,7 @@ const LANDING_CONTENT_BY_LOCALE = {
           "Interactive menu website",
           "Dish visual integration",
           "Multi-language menu support",
-          "Deployment assistance",
+          "Full ownership of delivered files",
           "1 year of menu updates included"
         ]
       },
@@ -266,12 +222,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         }
       ]
     },
-    about: {
-      eyebrow: "About the Studio",
-      heading: "Engineering precision meets cinematic presentation.",
-      body:
-        "Creativivid Studio blends AI and computer vision expertise with visual storytelling to craft premium interactive menu experiences."
-    },
     consultation: {
       heading: "Elevate how guests experience your menu.",
       body:
@@ -286,25 +236,33 @@ const LANDING_CONTENT_BY_LOCALE = {
         "Menús 3D interactivos e inmersivos para restaurantes modernos que quieren atraer, informar y entusiasmar a sus clientes antes del primer bocado.",
       microValue: "Multilenguaje. Visual. Narrativo. Con alérgenos claros."
     },
-    credibility: [
-      "Con base en Alemania, colaboramos con restaurantes y espacios gastronómicos independientes a nivel internacional.",
-      "Idiomas de menú: español, inglés, francés, portugués, italiano, alemán, japonés, coreano y chino.",
-      "Sin suscripción. Entrega de archivos totalmente propios.",
-      "Estudio selectivo: proyectos limitados por trimestre para asegurar calidad."
-    ],
-    problem: {
-      eyebrow: "El Problema Real",
-      heading: "Los menús estáticos rara vez generan emoción.",
-      bodyA:
+    whyItMatters: {
+      eyebrow: "Por Qué Importa",
+      heading: "Por qué esto importa para los restaurantes",
+      intro: [
         "En Alemania y Europa, muchos restaurantes aún dependen de menús impresos o PDF estáticos. Para clientes internacionales, ingredientes poco familiares y contexto de alérgenos poco claro generan fricción al ordenar.",
-      bodyB:
-        "Cuando los clientes no pueden visualizar lo que piden, aumenta la duda y baja la percepción premium. La presentación no es decoración. La presentación es posicionamiento.",
-      listHeading: "Lo que pierden los restaurantes con una presentación estática",
-      points: [
-        "Impacto emocional y deseo inmediato",
-        "Claridad de ingredientes y confianza en alérgenos",
-        "Profundidad narrativa de cada plato insignia",
-        "Una impresión digital memorable para compartir"
+        "Cuando los clientes no pueden visualizar con claridad lo que piden, aumenta la duda y baja la percepción premium. La presentación no es decoración. La presentación es posicionamiento."
+      ],
+      fitLabel: "Ideal para",
+      fitText:
+        "restaurantes independientes, espacios boutique y conceptos en zonas turísticas donde la claridad visual ayuda a decidir más rápido.",
+      impacts: [
+        {
+          title: "Eleva la percepción premium",
+          body: "La presentación comunica calidad antes del primer bocado."
+        },
+        {
+          title: "Diferencia frente a la competencia",
+          body: "La mayoría aún usa menús estáticos; la interacción inmersiva destaca de inmediato."
+        },
+        {
+          title: "Reduce la duda al ordenar",
+          body: "La claridad del plato y su contexto reducen el tiempo de decisión de clientes internacionales."
+        },
+        {
+          title: "Mejora la confianza del cliente",
+          body: "Indicadores de dieta y alérgenos hacen el pedido más claro y seguro."
+        }
       ]
     },
     experience: {
@@ -338,46 +296,8 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     demos: {
       eyebrow: "Demos en Vivo",
-      heading: "Experiencias demo publicadas"
-    },
-    hospitality: {
-      eyebrow: "Diseñado para Espacios Gastronomicos Visuales",
-      heading: "Creado para espacios independientes donde la presentación es parte de la experiencia.",
-      body:
-        "Creativivid Studio crea experiencias de menú inmersivas para cafes boutique, brunch studios, bares de cócteles o speakeasy, conceptos de postres, espacios de autor e Irish pubs.",
-      lines: ["Es experiencia.", "Es cultura.", "Es historia.", "Es tu marca, hecha tangible."]
-    },
-    impact: {
-      eyebrow: "Por Que Funciona",
-      heading: "Impacto de negocio, no ruido visual.",
-      body:
-        "Las experiencias 3D interactivas aumentan el engagement, reducen la duda al ordenar y elevan la percepción premium.",
-      items: [
-        {
-          title: "Aumenta el Tiempo de Interaccion",
-          body: "Los clientes pasan más tiempo explorando platos, historias y detalles antes de decidir."
-        },
-        {
-          title: "Eleva la Percepcion Premium",
-          body: "La presentación comunica calidad antes del primer bocado."
-        },
-        {
-          title: "Diferencia Frente a la Competencia",
-          body: "La mayoría aún usa menús estáticos; la interacción inmersiva destaca de inmediato."
-        },
-        {
-          title: "Impulsa Compartidos en Redes",
-          body: "Las experiencias visuales generan capturas, conversacion y menciones organicas."
-        },
-        {
-          title: "Reduce la Duda al Ordenar",
-          body: "La claridad del plato y su contexto reducen el tiempo de decision de clientes internacionales."
-        },
-        {
-          title: "Mejora la Confianza del Cliente",
-          body: "Indicadores de dieta y alérgenos hacen el pedido más claro y seguro."
-        }
-      ]
+      heading: "Experiencias demo publicadas",
+      body: "Una selección enfocada de demos publicadas para mostrar cómo se siente la experiencia de menú interactivo."
     },
     howItWorks: {
       eyebrow: "Como Funciona",
@@ -395,20 +315,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         "Construimos tu experiencia web interactiva.",
         "Recibes un sitio interactivo listo para desplegar.",
         "Soporte opcional para dominio y servidor disponible."
-      ]
-    },
-    deliverables: {
-      eyebrow: "Lo Que Recibes",
-      heading: "Entrega completa, lista para desplegar y con propiedad total.",
-      items: [
-        "Sitio interactivo totalmente responsive",
-        "Visualizaciones 3D inmersivas de platos",
-        "Idiomas de menú: español, inglés, francés, portugués, italiano, alemán, japonés, coreano y chino.",
-        "Indicadores claros de dieta y alérgenos",
-        "Estructura narrativa para detalle de platos",
-        "Direccion visual y estilo de marca personalizado",
-        "Soporte de despliegue (opcional)",
-        "Propiedad total de los archivos entregados"
       ]
     },
     collaboration: {
@@ -451,7 +357,7 @@ const LANDING_CONTENT_BY_LOCALE = {
           "Sitio web de menú interactivo",
           "Integración visual de platos",
           "Soporte de menú multilenguaje",
-          "Asistencia de despliegue",
+          "Propiedad total de los archivos entregados",
           "1 año de actualizaciones del menú incluido"
         ]
       },
@@ -510,12 +416,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         }
       ]
     },
-    about: {
-      eyebrow: "Sobre el Estudio",
-      heading: "Precisión de ingeniería con presentación cinemática.",
-      body:
-        "Creativivid Studio combina experiencia en IA y visión por computadora con narrativa visual para crear experiencias de menú interactivas premium."
-    },
     consultation: {
       heading: "Eleva la forma en que tus clientes viven tu menú.",
       body:
@@ -530,25 +430,33 @@ const LANDING_CONTENT_BY_LOCALE = {
         "Immersive interaktive 3D-Menüs für moderne Restaurants, die Gäste schon vor dem ersten Bissen begeistern wollen.",
       microValue: "Mehrsprachig. Visuell. Story-basiert. Allergen-sensibel."
     },
-    credibility: [
-      "Mit Sitz in Deutschland arbeiten wir international mit unabhängigen Restaurants und Dining Venues zusammen.",
-      "Menüsprachen: Spanisch, Englisch, Französisch, Portugiesisch, Italienisch, Deutsch, Japanisch, Koreanisch, Chinesisch.",
-      "Kein Abo erforderlich. Vollständig übergebene Dateien.",
-      "Selektives Studio: begrenzte Projekte pro Quartal für hohe Qualität."
-    ],
-    problem: {
-      eyebrow: "Das Eigentliche Problem",
-      heading: "Statische Menüs erzeugen selten Emotion.",
-      bodyA:
+    whyItMatters: {
+      eyebrow: "Warum es wichtig ist",
+      heading: "Warum das für Restaurants wichtig ist",
+      intro: [
         "In Deutschland und Europa setzen viele Restaurants noch auf Papiermenüs oder statische PDFs. Für internationale Gäste sorgen unbekannte Zutaten und unklarer Allergenkontext für Reibung beim Bestellen.",
-      bodyB:
-        "Wenn Gäste nicht sehen können, was sie bestellen, steigt Unsicherheit und die Premium-Wahrnehmung sinkt. Präsentation ist nicht Dekoration. Präsentation ist Positionierung.",
-      listHeading: "Was Restaurants durch statische Präsentation verlieren",
-      points: [
-        "Emotionale Dynamik und Appetitimpuls",
-        "Klarheit bei Zutaten und Allergenen",
-        "Story-Tiefe hinter Signature-Gerichten",
-        "Ein digitaler Eindruck, der in Erinnerung bleibt"
+        "Wenn Gäste nicht klar erkennen können, was sie bestellen, steigt Unsicherheit und die Premium-Wahrnehmung sinkt. Präsentation ist nicht Dekoration. Präsentation ist Positionierung."
+      ],
+      fitLabel: "Ideal für",
+      fitText:
+        "unabhängige Restaurants, Boutique-Konzepte und Standorte in touristischen Lagen, in denen visuelle Klarheit schnellere Entscheidungen unterstützt.",
+      impacts: [
+        {
+          title: "Stärkere Premium-Wahrnehmung",
+          body: "Präsentation signalisiert Qualität schon vor dem ersten Bissen."
+        },
+        {
+          title: "Klarer Wettbewerbsvorteil",
+          body: "Viele Restaurants nutzen weiterhin statische Menüs; immersive Interaktion differenziert sofort."
+        },
+        {
+          title: "Weniger Unsicherheit bei Bestellungen",
+          body: "Mehr Klarheit zum Gericht verkürzt die Entscheidungszeit internationaler Gäste."
+        },
+        {
+          title: "Mehr Sicherheit für Gäste",
+          body: "Allergen- und Ernährungshinweise machen Bestellungen klarer und angenehmer."
+        }
       ]
     },
     experience: {
@@ -582,46 +490,8 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     demos: {
       eyebrow: "Live-Demos",
-      heading: "Veröffentlichte Demo-Erlebnisse"
-    },
-    hospitality: {
-      eyebrow: "Für visuell starke Dining Venues entwickelt",
-      heading: "Für unabhängige Locations, in denen Präsentation Teil der Experience ist.",
-      body:
-        "Creativivid Studio entwickelt immersive Menü-Erlebnisse für Boutique-Cafes, Brunch-Studios, Cocktail- oder Speakeasy-Bars, Dessert-Konzepte, chefgeführte Dining Venues und Irish Pubs.",
-      lines: ["Es ist Experience.", "Es ist Kultur.", "Es ist Story.", "Es ist deine Marke - greifbar gemacht."]
-    },
-    impact: {
-      eyebrow: "Warum es funktioniert",
-      heading: "Business Impact statt visueller Lärm.",
-      body:
-        "Interaktive 3D-Showcases steigern Engagement, reduzieren Bestellunsicherheit und erhöhen die Premium-Wahrnehmung.",
-      items: [
-        {
-          title: "Mehr Engagement-Zeit",
-          body: "Gäste verbringen mehr Zeit mit der Erkundung von Gerichten, Stories und Details."
-        },
-        {
-          title: "Stärkere Premium-Wahrnehmung",
-          body: "Präsentation signalisiert Qualität schon vor dem ersten Bissen."
-        },
-        {
-          title: "Klarer Wettbewerbsvorteil",
-          body: "Viele Restaurants nutzen weiterhin statische Menüs; immersive Interaktion differenziert sofort."
-        },
-        {
-          title: "Mehr Social Sharing",
-          body: "Visuelle Erlebnisse erzeugen Screenshots, Gespräche und organische Erwähnungen."
-        },
-        {
-          title: "Weniger Unsicherheit bei Bestellungen",
-          body: "Mehr Klarheit zum Gericht verkürzt die Entscheidungszeit internationaler Gäste."
-        },
-        {
-          title: "Mehr Sicherheit für Gäste",
-          body: "Allergen- und Ernährungshinweise machen Bestellungen klarer und angenehmer."
-        }
-      ]
+      heading: "Veröffentlichte Demo-Erlebnisse",
+      body: "Eine fokussierte Auswahl veröffentlichter Demos, damit das interaktive Menüerlebnis direkt greifbar wird."
     },
     howItWorks: {
       eyebrow: "So funktioniert es",
@@ -639,20 +509,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         "Wir bauen dein interaktives Web-Erlebnis.",
         "Du erhältst eine sofort einsetzbare interaktive Website.",
         "Optionale Hilfe bei Domain- und Server-Setup verfügbar."
-      ]
-    },
-    deliverables: {
-      eyebrow: "Was du erhältst",
-      heading: "Vollständige Ownership und deployment-fähige Lieferung.",
-      items: [
-        "Voll responsive interaktive Website",
-        "Immersive 3D-Gerichtsvisualisierungen",
-        "Menüsprachen: Spanisch, Englisch, Französisch, Portugiesisch, Italienisch, Deutsch, Japanisch, Koreanisch, Chinesisch.",
-        "Klare Vegan- und Allergenhinweise",
-        "Story-starke Struktur für Gerichtsdetails",
-        "Individuelle Brand-Gestaltung",
-        "Deployment-Unterstuetzung (optional)",
-        "Vollständige Dateiübergabe"
       ]
     },
     collaboration: {
@@ -695,7 +551,7 @@ const LANDING_CONTENT_BY_LOCALE = {
           "Interaktive Menü-Website",
           "Visuelle Gerichtsintegration",
           "Mehrsprachige Menüunterstützung",
-          "Deployment-Unterstützung",
+          "Vollständige Dateiübergabe",
           "1 Jahr Menüupdates inklusive"
         ]
       },
@@ -754,12 +610,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         }
       ]
     },
-    about: {
-      eyebrow: "Über das Studio",
-      heading: "Engineering-Präzision trifft cineastische Präsentation.",
-      body:
-        "Creativivid Studio verbindet KI- und Computer-Vision-Expertise mit visueller Story, um premium interaktive Menü-Erlebnisse zu gestalten."
-    },
     consultation: {
       heading: "Steigere, wie Gäste dein Menü erleben.",
       body:
@@ -798,24 +648,13 @@ const UI_TEXT_BY_LOCALE = {
       loadingAria: "Loading visual asset"
     },
     demos: {
-      countLabel: "Showing {visible} of {total} demos",
-      searchLabel: "Find a demo",
-      searchPlaceholder: "Type a demo name...",
       cardCta: "Open demo",
       previewFrameTitle: "Preview of {name}",
       emptyState: "No demos available yet. Publish exports to /demos/ first.",
-      noResults: "No demos match your search.",
-      untitled: "Untitled demo",
-      publishedDemo: "Published demo",
-      statusFallback: "Using local fallback manifest ({manifestUrl} unavailable).",
-      statusError: "Could not load demos manifest from {manifestUrl}."
+      untitled: "Untitled demo"
     },
     collaboration: {
       applyCta: "Request a Consultation"
-    },
-    about: {
-      signatureLine:
-        "Built by an international engineering-led team with experience across Mexico, the USA, and Germany in agency, enterprise, and product environments."
     },
     form: {
       menuSituationLegend: "Tell us a little about your menu",
@@ -905,24 +744,13 @@ const UI_TEXT_BY_LOCALE = {
       loadingAria: "Cargando recurso visual"
     },
     demos: {
-      countLabel: "Mostrando {visible} de {total} demos",
-      searchLabel: "Buscar una demo",
-      searchPlaceholder: "Escribe el nombre de una demo...",
       cardCta: "Abrir demo",
       previewFrameTitle: "Vista previa de {name}",
       emptyState: "Aun no hay demos disponibles. Publica exportaciones en /demos/ primero.",
-      noResults: "Ninguna demo coincide con tu busqueda.",
-      untitled: "Demo sin titulo",
-      publishedDemo: "Demo publicada",
-      statusFallback: "Usando manifiesto local de respaldo ({manifestUrl} no disponible).",
-      statusError: "No se pudo cargar el manifiesto de demos desde {manifestUrl}."
+      untitled: "Demo sin titulo"
     },
     collaboration: {
       applyCta: "Solicitar una consulta"
-    },
-    about: {
-      signatureLine:
-        "Creado por un equipo internacional con enfoque de ingeniería y experiencia en México, Estados Unidos y Alemania en entornos de agencia, empresa y producto."
     },
     form: {
       menuSituationLegend: "Cuéntanos un poco sobre tu menú",
@@ -1012,24 +840,13 @@ const UI_TEXT_BY_LOCALE = {
       loadingAria: "Visuelles Asset wird geladen"
     },
     demos: {
-      countLabel: "{visible} von {total} Demos angezeigt",
-      searchLabel: "Demo finden",
-      searchPlaceholder: "Demo-Namen eingeben...",
       cardCta: "Demo öffnen",
       previewFrameTitle: "Vorschau von {name}",
       emptyState: "Noch keine Demos verfügbar. Veröffentliche zuerst Exporte nach /demos/.",
-      noResults: "Keine Demos passen zu deiner Suche.",
-      untitled: "Demo ohne Titel",
-      publishedDemo: "Veröffentlichte Demo",
-      statusFallback: "Lokales Fallback-Manifest wird verwendet ({manifestUrl} nicht verfügbar).",
-      statusError: "Demo-Manifest konnte nicht von {manifestUrl} geladen werden."
+      untitled: "Demo ohne Titel"
     },
     collaboration: {
       applyCta: "Beratung anfragen"
-    },
-    about: {
-      signatureLine:
-        "Erstellt von einem internationalen, engineering-orientierten Team mit Erfahrung in Mexiko, den USA und Deutschland in Agentur-, Enterprise- und Produktumfeldern."
     },
     form: {
       menuSituationLegend: "Erzähl uns kurz etwas über dein Menü",
@@ -1104,7 +921,6 @@ const manifestUrl = urlParams.get("manifest") ?? "/demos/demos-manifest.json";
 
 let currentLocale = DEFAULT_LOCALE;
 let manifestEntries = [];
-let manifestStatusState = null;
 const demoPreviewImageCache = new Map();
 let demoPreviewObserver = null;
 const assetStateByKey = new Map(
@@ -1434,8 +1250,7 @@ const setLocale = (nextLocale, options = {}) => {
 
   hydrateLanding();
   hydrateFooterYear();
-  refreshManifestStatus();
-  renderDemosFiltered();
+  renderPublishedDemos();
 };
 
 const setupLocaleSwitchers = () => {
@@ -1538,18 +1353,37 @@ const hydrateContentText = () => {
   });
 };
 
-const renderCredibility = () => {
+const renderWhyItMatters = () => {
   const content = getLandingContent();
-  const list = document.getElementById("credibility-list");
-  if (!list) return;
-  list.innerHTML = content.credibility.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
-};
+  const target = document.getElementById("why-it-matters-content");
+  if (!target) return;
+  const section = content.whyItMatters;
 
-const renderProblemList = () => {
-  const content = getLandingContent();
-  const list = document.getElementById("problem-list");
-  if (!list) return;
-  list.innerHTML = content.problem.points.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
+  target.innerHTML = `
+    <div class="why-it-matters-layout">
+      <div class="why-it-matters-copy">
+        <p class="eyebrow">${htmlEscape(section.eyebrow)}</p>
+        <h2>${htmlEscape(section.heading)}</h2>
+        ${section.intro.map((paragraph) => `<p>${htmlEscape(paragraph)}</p>`).join("")}
+        <p class="why-fit-line">
+          <span class="why-fit-label">${htmlEscape(section.fitLabel)}</span>
+          <span>${htmlEscape(section.fitText)}</span>
+        </p>
+      </div>
+      <ul class="why-impact-grid">
+        ${section.impacts
+          .map(
+            (item) => `
+              <li class="why-impact-card">
+                <h3>${htmlEscape(item.title)}</h3>
+                <p>${htmlEscape(item.body)}</p>
+              </li>
+            `
+          )
+          .join("")}
+      </ul>
+    </div>
+  `;
 };
 
 const renderExperience = () => {
@@ -1937,29 +1771,6 @@ const setupLandingMedia = () => {
   setupExperienceMediaStages();
 };
 
-const renderHospitalityLines = () => {
-  const content = getLandingContent();
-  const target = document.getElementById("hospitality-lines");
-  if (!target) return;
-  target.innerHTML = content.hospitality.lines.map((line) => `<p>${htmlEscape(line)}</p>`).join("");
-};
-
-const renderImpact = () => {
-  const content = getLandingContent();
-  const target = document.getElementById("impact-list");
-  if (!target) return;
-  target.innerHTML = content.impact.items
-    .map(
-      (item) => `
-      <li>
-        <h3>${htmlEscape(item.title)}</h3>
-        <p>${htmlEscape(item.body)}</p>
-      </li>
-    `
-    )
-    .join("");
-};
-
 const renderTimeline = () => {
   const content = getLandingContent();
   const ui = getUiText();
@@ -1992,13 +1803,6 @@ const renderTimeline = () => {
       </article>
     </div>
   `;
-};
-
-const renderDeliverables = () => {
-  const content = getLandingContent();
-  const target = document.getElementById("deliverables-list");
-  if (!target) return;
-  target.innerHTML = content.deliverables.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("");
 };
 
 const renderCollaborationSection = () => {
@@ -2192,35 +1996,6 @@ const toAbsoluteHref = (href) => {
   return `/${value.replace(/^\.?\//, "")}`;
 };
 
-const refreshManifestStatus = () => {
-  const status = document.getElementById("manifest-status");
-  if (!status) return;
-
-  if (!manifestStatusState) {
-    status.hidden = true;
-    status.textContent = "";
-    return;
-  }
-
-  const ui = getUiText();
-  const template =
-    manifestStatusState.key === "fallback" ? ui.demos.statusFallback : ui.demos.statusError;
-  status.textContent = formatTemplate(template, manifestStatusState.params ?? {});
-  status.hidden = false;
-};
-
-const setManifestStatus = (key = null, params = {}) => {
-  manifestStatusState = key ? { key, params } : null;
-  refreshManifestStatus();
-};
-
-const updateCount = (visible, total) => {
-  const ui = getUiText();
-  const count = document.getElementById("visible-count");
-  if (!count) return;
-  count.textContent = formatTemplate(ui.demos.countLabel, { visible, total });
-};
-
 const toDemoRootHref = (href) => {
   if (!href) return "";
   try {
@@ -2396,20 +2171,13 @@ const setupDemoPreviews = () => {
   document.querySelectorAll("[data-demo-preview]").forEach((preview) => observeDemoPreview(preview));
 };
 
-const renderDemoCards = (demos, total) => {
+const renderDemoCards = (demos) => {
   const ui = getUiText();
   const list = document.getElementById("demos-list");
   if (!list) return;
 
-  if (total === 0) {
-    list.innerHTML = `<li class="empty-state">${htmlEscape(ui.demos.emptyState)}</li>`;
-    updateCount(0, 0);
-    return;
-  }
-
   if (!Array.isArray(demos) || demos.length === 0) {
-    list.innerHTML = `<li class="empty-state">${htmlEscape(ui.demos.noResults)}</li>`;
-    updateCount(0, total);
+    list.innerHTML = `<li class="empty-state">${htmlEscape(ui.demos.emptyState)}</li>`;
     return;
   }
 
@@ -2419,14 +2187,13 @@ const renderDemoCards = (demos, total) => {
       const name = htmlEscape(rawName);
       const href = htmlEscape(toAbsoluteHref(demo?.href ?? ""));
       const previewImage = htmlEscape(String(demo?.previewImage ?? "").trim());
-      const search = htmlEscape(String(demo?.name ?? demo?.folder ?? "").toLowerCase());
       const previewFrameTitle = htmlEscape(
         formatTemplate(ui.demos.previewFrameTitle ?? "{name}", {
           name: rawName
         })
       );
       return `
-        <li data-site-card data-search="${search}">
+        <li>
           <a class="demo-card" href="${href}" ${index === 0 ? 'data-featured-demo="true"' : ""}>
             <span
               class="demo-preview"
@@ -2446,33 +2213,11 @@ const renderDemoCards = (demos, total) => {
     .join("");
 
   setupDemoPreviews();
-  updateCount(demos.length, total);
 };
 
-const renderDemosFiltered = () => {
-  const input = document.getElementById("demo-search");
-  const query = String(input?.value ?? "").trim().toLowerCase();
-
-  if (!Array.isArray(manifestEntries) || manifestEntries.length === 0) {
-    renderDemoCards([], 0);
-    return;
-  }
-
-  const filtered = manifestEntries.filter((demo) => {
-    const search = String(demo?.name ?? demo?.folder ?? "").toLowerCase();
-    return !query || search.includes(query);
-  });
-
-  renderDemoCards(filtered, manifestEntries.length);
-};
-
-const setupSearch = () => {
-  const input = document.getElementById("demo-search");
-  if (!input) return;
-  if (input.dataset.searchBound === "true") return;
-
-  input.dataset.searchBound = "true";
-  input.addEventListener("input", () => renderDemosFiltered());
+const renderPublishedDemos = () => {
+  const demos = Array.isArray(manifestEntries) ? manifestEntries.slice(0, 3) : [];
+  renderDemoCards(demos);
 };
 
 const highlightFeaturedDemoCard = () => {
@@ -2504,16 +2249,11 @@ const fetchJson = async (url) => {
 
 const loadManifest = async () => {
   try {
-    const manifest = await fetchJson(manifestUrl);
-    setManifestStatus(null);
-    return manifest;
+    return await fetchJson(manifestUrl);
   } catch {
     try {
-      const fallback = await fetchJson("./demos-manifest.example.json");
-      setManifestStatus("fallback", { manifestUrl });
-      return fallback;
+      return await fetchJson("./demos-manifest.example.json");
     } catch {
-      setManifestStatus("error", { manifestUrl });
       return DEFAULT_MANIFEST;
     }
   }
@@ -2674,13 +2414,9 @@ const setupRevealAnimation = () => {
 
 const hydrateLanding = () => {
   hydrateContentText();
-  renderCredibility();
-  renderProblemList();
+  renderWhyItMatters();
   renderExperience();
-  renderHospitalityLines();
-  renderImpact();
   renderTimeline();
-  renderDeliverables();
   renderCollaborationSection();
   renderFaq();
   setupLandingMedia();
@@ -2707,8 +2443,7 @@ const main = async () => {
   const manifest = await loadManifest();
   manifestEntries = Array.isArray(manifest?.demos) ? manifest.demos : [];
 
-  setupSearch();
-  renderDemosFiltered();
+  renderPublishedDemos();
   setupHeroDemoCta();
   setupConsultationForm();
 };
