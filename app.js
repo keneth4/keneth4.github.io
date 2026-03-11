@@ -36,11 +36,12 @@ const SPRITE_CUE_PROFILE_CALM = {
 const LANDING_CONTENT_BY_LOCALE = {
   en: {
     hero: {
-      eyebrow: "Immersive 3D Experience Studio",
-      headline: "Designed to Be Desired.",
+      eyebrow: "Visual Menus for Restaurants",
+      headline: "Let guests see what they’re about to order.",
       subheadline:
-        "Immersive interactive 3D menus designed for modern restaurants that want to attract, inform, and excite guests before the first bite.",
-      microValue: "Multi-language. Visual. Story-driven. Allergen-aware."
+        "Interactive visual menus designed for restaurants with international visitors.",
+      microValue:
+        "Help guests order with confidence by showing them exactly what each dish looks like."
     },
     whyItMatters: {
       eyebrow: "Why It Matters",
@@ -230,11 +231,12 @@ const LANDING_CONTENT_BY_LOCALE = {
   },
   es: {
     hero: {
-      eyebrow: "Estudio de Experiencias 3D Inmersivas",
-      headline: "Diseñado para ser deseado.",
+      eyebrow: "Menús visuales para restaurantes",
+      headline: "Permite que los comensales vean lo que están a punto de pedir.",
       subheadline:
-        "Menús 3D interactivos e inmersivos para restaurantes modernos que quieren atraer, informar y entusiasmar a sus clientes antes del primer bocado.",
-      microValue: "Multilenguaje. Visual. Narrativo. Con alérgenos claros."
+        "Menús visuales interactivos diseñados para restaurantes con visitantes internacionales.",
+      microValue:
+        "Ayuda a los comensales a pedir con confianza mostrándoles exactamente cómo luce cada plato."
     },
     whyItMatters: {
       eyebrow: "Por Qué Importa",
@@ -424,11 +426,12 @@ const LANDING_CONTENT_BY_LOCALE = {
   },
   de: {
     hero: {
-      eyebrow: "Studio für Immersive 3D Experiences",
-      headline: "Gestaltet, um begehrt zu werden.",
+      eyebrow: "Visuelle Menüs für Restaurants",
+      headline: "Lassen Sie Gäste sehen, was sie gleich bestellen.",
       subheadline:
-        "Immersive interaktive 3D-Menüs für moderne Restaurants, die Gäste schon vor dem ersten Bissen begeistern wollen.",
-      microValue: "Mehrsprachig. Visuell. Story-basiert. Allergen-sensibel."
+        "Interaktive visuelle Menüs für Restaurants mit internationalen Gästen.",
+      microValue:
+        "Helfen Sie Gästen, sicherer zu bestellen, indem Sie genau zeigen, wie jedes Gericht aussieht."
     },
     whyItMatters: {
       eyebrow: "Warum es wichtig ist",
@@ -621,8 +624,9 @@ const LANDING_CONTENT_BY_LOCALE = {
 const UI_TEXT_BY_LOCALE = {
   en: {
     meta: {
-      title: "Creativivid Studio | Immersive 3D Menus",
-      description: "Creativivid Studio creates immersive 3D menu experiences for independent restaurants and dining venues in Germany and beyond."
+      title: "Creativivid Studio | Visual Menus for Restaurants",
+      description:
+        "Creativivid Studio creates interactive visual menus that help guests understand dishes before ordering, especially in restaurants with international visitors."
     },
     skipLink: "Skip to content",
     brandAria: "Creativivid Studio home",
@@ -717,8 +721,9 @@ const UI_TEXT_BY_LOCALE = {
   },
   es: {
     meta: {
-      title: "Creativivid Studio | Menus 3D Inmersivos",
-      description: "Creativivid Studio crea experiencias de menú 3D inmersivas para restaurantes y espacios gastronómicos independientes en Alemania y más allá."
+      title: "Creativivid Studio | Menús visuales para restaurantes",
+      description:
+        "Creativivid Studio crea menús visuales interactivos que ayudan a los comensales a entender los platos antes de pedir, especialmente en restaurantes con visitantes internacionales."
     },
     skipLink: "Saltar al contenido",
     brandAria: "Inicio de Creativivid Studio",
@@ -813,8 +818,9 @@ const UI_TEXT_BY_LOCALE = {
   },
   de: {
     meta: {
-      title: "Creativivid Studio | Immersive 3D-Menüs",
-      description: "Creativivid Studio entwickelt immersive 3D-Menü-Erlebnisse für unabhängige Restaurants und Dining Venues in Deutschland und darüber hinaus."
+      title: "Creativivid Studio | Visuelle Menüs für Restaurants",
+      description:
+        "Creativivid Studio entwickelt interaktive visuelle Menüs, die Gästen helfen, Gerichte vor der Bestellung besser zu verstehen, besonders in Restaurants mit internationalen Gästen."
     },
     skipLink: "Zum Inhalt springen",
     brandAria: "Startseite Creativivid Studio",
@@ -1365,10 +1371,6 @@ const renderWhyItMatters = () => {
         <p class="eyebrow">${htmlEscape(section.eyebrow)}</p>
         <h2>${htmlEscape(section.heading)}</h2>
         ${section.intro.map((paragraph) => `<p>${htmlEscape(paragraph)}</p>`).join("")}
-        <p class="why-fit-line">
-          <span class="why-fit-label">${htmlEscape(section.fitLabel)}</span>
-          <span>${htmlEscape(section.fitText)}</span>
-        </p>
       </div>
       <ul class="why-impact-grid">
         ${section.impacts
@@ -1382,6 +1384,10 @@ const renderWhyItMatters = () => {
           )
           .join("")}
       </ul>
+    </div>
+    <div class="why-fit-band">
+      <span class="why-fit-label">${htmlEscape(section.fitLabel)}</span>
+      <p>${htmlEscape(section.fitText)}</p>
     </div>
   `;
 };

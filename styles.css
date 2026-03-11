@@ -373,6 +373,7 @@ section[id] {
 
 .why-it-matters-content {
   display: grid;
+  gap: 1rem;
 }
 
 .why-it-matters-layout {
@@ -386,25 +387,31 @@ section[id] {
   margin-top: 0.86rem;
 }
 
-.why-fit-line {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  align-items: baseline;
-  margin-top: 1rem;
-  padding: 0.68rem 0.82rem;
+.why-fit-band {
+  display: grid;
+  gap: 0.42rem;
+  width: 100%;
+  padding: 0.92rem 1rem 1rem;
   border-radius: 12px;
   border: 1px solid color-mix(in srgb, var(--line-light) 82%, #ffffff);
   background: color-mix(in srgb, var(--surface-light) 90%, #ffffff);
   color: color-mix(in srgb, var(--text-dark) 78%, transparent);
+  box-shadow: var(--shadow-soft);
 }
 
 .why-fit-label {
+  display: block;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 800;
   color: var(--accent-strong);
+}
+
+.why-fit-band p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.52;
 }
 
 .why-impact-grid {
