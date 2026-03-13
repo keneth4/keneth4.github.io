@@ -9,6 +9,21 @@
       content="Creativivid Studio creates immersive 3D menu experiences for independent restaurants and dining venues in Germany and beyond."
     />
     <title>Creativivid Studio | Immersive 3D Menus</title>
+    <script>
+      (() => {
+        const redirectHosts = new Set(["www.creativivid.com", "keneth4.github.io", "keneth4.github.com"]);
+
+        if (!redirectHosts.has(window.location.hostname)) {
+          return;
+        }
+
+        const target = new URL(window.location.href);
+        target.protocol = "https:";
+        target.hostname = "creativivid.com";
+        target.port = "";
+        window.location.replace(target.toString());
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

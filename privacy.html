@@ -9,6 +9,21 @@
       content="Privacy details for Creativivid Studio consultation and data-rights requests, including processor and transfer information."
     />
     <title>Privacy Policy | Creativivid Studio</title>
+    <script>
+      (() => {
+        const redirectHosts = new Set(["www.creativivid.com", "keneth4.github.io", "keneth4.github.com"]);
+
+        if (!redirectHosts.has(window.location.hostname)) {
+          return;
+        }
+
+        const target = new URL(window.location.href);
+        target.protocol = "https:";
+        target.hostname = "creativivid.com";
+        target.port = "";
+        window.location.replace(target.toString());
+      })();
+    </script>
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
