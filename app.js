@@ -1,6 +1,8 @@
 const FORM_ENDPOINT = "https://formspree.io/f/xjgabebv";
 const FORM_ENDPOINT_PLACEHOLDER = "REPLACE_WITH_YOUR_FORM_ID";
 const CONSULTATION_MIN_LOADING_MS = 1200;
+const TURNSTILE_SITE_KEY = "0x4AAAAAACqP0xV6NCSkGF91";
+const TURNSTILE_TOKEN_FIELD = "cf-turnstile-response";
 
 const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
@@ -694,6 +696,7 @@ const UI_TEXT_BY_LOCALE = {
       statusRequired: "Please complete menu situation, restaurant/brand, contact name, and email.",
       statusInvalidEmail: "Please provide a valid email address.",
       statusNoConsent: "Please provide consent to continue.",
+      statusCaptchaRequired: "Complete the security check to continue.",
       statusEndpoint:
         "Consultation form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
       statusSuccess: "Thank you. Your consultation request has been received.",
@@ -787,6 +790,7 @@ const UI_TEXT_BY_LOCALE = {
       statusRequired: "Completa situación del menú, restaurante/marca, nombre de contacto y correo electrónico.",
       statusInvalidEmail: "Ingresa un correo electrónico válido.",
       statusNoConsent: "Debes otorgar consentimiento para continuar.",
+      statusCaptchaRequired: "Completa la verificación de seguridad para continuar.",
       statusEndpoint:
         "El formulario aún no está conectado. Reemplaza FORM_ENDPOINT en app.js con tu endpoint de Formspree.",
       statusSuccess: "Gracias. Tu solicitud de consulta fue recibida.",
@@ -880,6 +884,7 @@ const UI_TEXT_BY_LOCALE = {
       statusRequired: "Bitte Menüsituation, Restaurant/Marke, Ansprechperson und E-Mail ausfüllen.",
       statusInvalidEmail: "Bitte eine gültige E-Mail-Adresse eingeben.",
       statusNoConsent: "Bitte Zustimmung erteilen, um fortzufahren.",
+      statusCaptchaRequired: "Bitte schließe die Sicherheitsprüfung ab, um fortzufahren.",
       statusEndpoint:
         "Das Formular ist noch nicht verbunden. Ersetze FORM_ENDPOINT in app.js durch deinen Formspree-Endpoint.",
       statusSuccess: "Danke. Deine Beratungsanfrage wurde erhalten.",
@@ -912,6 +917,91 @@ const DEFAULT_MANIFEST = {
 
 const urlParams = new URLSearchParams(window.location.search);
 const manifestUrl = urlParams.get("manifest") ?? "/demos/demos-manifest.json";
+
+const waitForTurnstile = () =>
+  new Promise((resolve) => {
+    if (window.turnstile) {
+      resolve(window.turnstile);
+      return;
+    }
+
+    let attempts = 0;
+    const timer = window.setInterval(() => {
+      attempts += 1;
+      if (window.turnstile) {
+        window.clearInterval(timer);
+        resolve(window.turnstile);
+        return;
+      }
+
+      if (attempts >= 50) {
+        window.clearInterval(timer);
+        resolve(null);
+      }
+    }, 150);
+  });
+
+const detectCaptchaError = async (response) => {
+  try {
+    const data = await response.json();
+    if (!Array.isArray(data?.errors)) return false;
+    return data.errors.some((entry) => {
+      const value = `${entry?.code ?? ""} ${entry?.message ?? ""}`.toLowerCase();
+      return value.includes("turnstile") || value.includes("captcha") || value.includes("challenge");
+    });
+  } catch {
+    return false;
+  }
+};
+
+const createTurnstileController = ({ container, setStatus, getCaptchaMessage }) => {
+  let widgetId = null;
+
+  const ensureRendered = async () => {
+    if (!container || widgetId !== null) return widgetId;
+    const turnstile = await waitForTurnstile();
+    if (!turnstile) return null;
+
+    widgetId = turnstile.render(container, {
+      sitekey: TURNSTILE_SITE_KEY,
+      theme: "light",
+      callback: () => {
+        if (container.dataset.errorState !== "true") return;
+        container.dataset.errorState = "false";
+        setStatus("");
+      },
+      "expired-callback": () => {
+        container.dataset.errorState = "true";
+        setStatus(getCaptchaMessage(), "error");
+        turnstile.reset(widgetId);
+      },
+      "timeout-callback": () => {
+        container.dataset.errorState = "true";
+        setStatus(getCaptchaMessage(), "error");
+        turnstile.reset(widgetId);
+      },
+      "error-callback": () => {
+        container.dataset.errorState = "true";
+        setStatus(getCaptchaMessage(), "error");
+      }
+    });
+
+    return widgetId;
+  };
+
+  const getToken = () => {
+    if (widgetId === null || !window.turnstile) return "";
+    return window.turnstile.getResponse(widgetId) || "";
+  };
+
+  const reset = () => {
+    if (widgetId === null || !window.turnstile) return;
+    container.dataset.errorState = "false";
+    window.turnstile.reset(widgetId);
+  };
+
+  return { ensureRendered, getToken, reset };
+};
 
 let currentLocale = DEFAULT_LOCALE;
 let manifestEntries = [];
@@ -2276,6 +2366,7 @@ const setupConsultationForm = () => {
   const form = document.getElementById("consultation-form");
   const submitButton = document.getElementById("consultation-submit");
   const successPanel = document.getElementById("consultation-success-panel");
+  const turnstileContainer = document.getElementById("consultation-turnstile");
   if (!consultationLayout || !consultationSection || !wrap || !form || !submitButton || !successPanel) return;
   if (form.dataset.formBound === "true") return;
 
@@ -2300,6 +2391,17 @@ const setupConsultationForm = () => {
   const emailLooksValid = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+  const setCaptchaStatus = (message, type = "") => {
+    const status = document.getElementById("form-status");
+    if (!status) return;
+    if (message === "" && status.textContent !== getUiText().form.statusCaptchaRequired) return;
+    setFormStatus(message, type);
+  };
+  const turnstileController = createTurnstileController({
+    container: turnstileContainer,
+    setStatus: setCaptchaStatus,
+    getCaptchaMessage: () => getUiText().form.statusCaptchaRequired
+  });
 
   const revealSuccessPanel = () => {
     successPanel.hidden = false;
@@ -2316,6 +2418,8 @@ const setupConsultationForm = () => {
       }, 180);
     });
   };
+
+  void turnstileController.ensureRendered();
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -2344,23 +2448,38 @@ const setupConsultationForm = () => {
       return;
     }
 
+    await turnstileController.ensureRendered();
+    const captchaToken = turnstileController.getToken();
+    if (!captchaToken) {
+      setFormStatus(ui.form.statusCaptchaRequired, "error");
+      return;
+    }
+
     submitButton.disabled = true;
     submitButton.textContent = ui.form.submitSending;
     setFormStatus(ui.form.statusSending);
     const submitStart = performance.now();
 
     try {
+      const formData = new FormData(form);
+      formData.set("email", payload.contact_email);
+      formData.set("contact_email", payload.contact_email);
+      formData.set("locale", currentLocale);
+      formData.set("source_page", window.location.href);
+      formData.set("consent", payload.consent ? "true" : "false");
+      formData.set(TURNSTILE_TOKEN_FIELD, captchaToken);
+
       const response = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json"
         },
-        body: JSON.stringify(payload)
+        body: formData
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        const message = (await detectCaptchaError(response)) ? ui.form.statusCaptchaRequired : ui.form.statusError;
+        throw new Error(message);
       }
 
       const elapsed = performance.now() - submitStart;
@@ -2368,11 +2487,13 @@ const setupConsultationForm = () => {
       if (remainingDelay > 0) await wait(remainingDelay);
 
       form.reset();
+      turnstileController.reset();
       setFormStatus(ui.form.statusSuccess, "success");
       revealSuccessPanel();
       submitButton.textContent = getUiText().form.submitIdle;
-    } catch {
-      setFormStatus(getUiText().form.statusError, "error");
+    } catch (error) {
+      turnstileController.reset();
+      setFormStatus(error instanceof Error ? error.message : getUiText().form.statusError, "error");
       submitButton.disabled = false;
       submitButton.textContent = getUiText().form.submitIdle;
     }

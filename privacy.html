@@ -24,6 +24,7 @@
         window.location.replace(target.toString());
       })();
     </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -136,6 +137,12 @@
         height: 16px;
         margin-top: 0.25rem;
       }
+      .turnstile-wrap {
+        margin-top: 0.1rem;
+      }
+      .turnstile-widget {
+        min-height: 66px;
+      }
       button {
         border: 1px solid color-mix(in srgb, var(--accent) 40%, #ffffff);
         border-radius: 999px;
@@ -223,6 +230,10 @@
         Where data is transferred outside the EEA, appropriate safeguards (such as Standard Contractual Clauses) are applied
         according to provider documentation.
       </p>
+      <p data-i18n="processorBody3">
+        Cloudflare Turnstile may process technical interaction data to distinguish human visitors from automated abuse and
+        protect forms against spam.
+      </p>
 
       <h2 data-i18n="contactTitle">7. Privacy Contact Channel</h2>
       <p data-i18n="contactBody">
@@ -277,6 +288,10 @@
           </span>
         </label>
 
+        <div class="turnstile-wrap">
+          <div id="privacy-turnstile" class="turnstile-widget" aria-hidden="true"></div>
+        </div>
+
         <button id="privacy-submit" type="submit" data-i18n="form.submitIdle">Send Privacy Request</button>
         <p id="privacy-form-status" class="form-status" role="status" aria-live="polite"></p>
       </form>
@@ -289,6 +304,8 @@
       const DEFAULT_LOCALE = "en";
       const LOCALE_STORAGE_KEY = "cv_locale";
       const PRIVACY_FORM_ENDPOINT = "https://formspree.io/f/mjgabawp";
+      const TURNSTILE_SITE_KEY = "0x4AAAAAACqP0xV6NCSkGF91";
+      const TURNSTILE_TOKEN_FIELD = "cf-turnstile-response";
       const MIN_SUBMIT_MS = 900;
 
       const PRIVACY_CONTENT_BY_LOCALE = {
@@ -323,6 +340,8 @@
             "Consultation and privacy requests may be processed through Formspree (form backend service) acting as a processor.",
           processorBody2:
             "Where data is transferred outside the EEA, appropriate safeguards (such as Standard Contractual Clauses) are applied according to provider documentation.",
+          processorBody3:
+            "Cloudflare Turnstile may process technical interaction data to distinguish human visitors from automated abuse and protect forms against spam.",
           contactTitle: "7. Privacy Contact Channel",
           contactBody: "To exercise privacy rights or ask privacy questions, use the form below.",
           backHome: "Back to homepage",
@@ -350,6 +369,7 @@
             statusRequired: "Please complete name, email, request type, and request details.",
             statusInvalidEmail: "Please provide a valid email address.",
             statusNoConsent: "Please confirm authorization to proceed.",
+            statusCaptchaRequired: "Complete the security check to continue.",
             statusEndpoint: "Privacy request form is not configured correctly.",
             statusSending: "Sending your privacy request...",
             statusSuccess: "Your privacy request has been submitted.",
@@ -387,6 +407,8 @@
             "Las solicitudes de consulta y privacidad pueden procesarse a través de Formspree (servicio backend de formularios) como procesador.",
           processorBody2:
             "Cuando haya transferencias de datos fuera del EEE, se aplican salvaguardas adecuadas (como cláusulas contractuales tipo) según la documentación del proveedor.",
+          processorBody3:
+            "Cloudflare Turnstile puede procesar datos técnicos de interacción para distinguir visitantes humanos del abuso automatizado y proteger los formularios contra spam.",
           contactTitle: "7. Canal de contacto de privacidad",
           contactBody: "Para ejercer derechos o realizar consultas de privacidad, utiliza el siguiente formulario.",
           backHome: "Volver al inicio",
@@ -414,6 +436,7 @@
             statusRequired: "Completa nombre, correo, tipo de solicitud y detalles.",
             statusInvalidEmail: "Ingresa un correo electrónico válido.",
             statusNoConsent: "Confirma autorización para continuar.",
+            statusCaptchaRequired: "Completa la verificación de seguridad para continuar.",
             statusEndpoint: "El formulario de privacidad no está configurado correctamente.",
             statusSending: "Enviando tu solicitud de privacidad...",
             statusSuccess: "Tu solicitud de privacidad fue enviada.",
@@ -451,6 +474,8 @@
             "Beratungs- und Datenschutzanfragen können über Formspree (Formular-Backend-Service) als Verarbeiter verarbeitet werden.",
           processorBody2:
             "Wenn Daten außerhalb des EWR übertragen werden, werden geeignete Garantien (z. B. Standardvertragsklauseln) gemäß Anbieterdokumentation angewendet.",
+          processorBody3:
+            "Cloudflare Turnstile kann technische Interaktionsdaten verarbeiten, um menschliche Besucher von automatisiertem Missbrauch zu unterscheiden und Formulare vor Spam zu schützen.",
           contactTitle: "7. Datenschutz-Kontaktkanal",
           contactBody: "Um Datenschutzrechte auszuüben oder Fragen zu stellen, nutze bitte das folgende Formular.",
           backHome: "Zurück zur Startseite",
@@ -478,12 +503,98 @@
             statusRequired: "Bitte Name, E-Mail, Anfragetyp und Details ausfüllen.",
             statusInvalidEmail: "Bitte eine gültige E-Mail-Adresse eingeben.",
             statusNoConsent: "Bitte Berechtigung bestätigen.",
+            statusCaptchaRequired: "Bitte schließe die Sicherheitsprüfung ab, um fortzufahren.",
             statusEndpoint: "Datenschutzformular ist nicht korrekt konfiguriert.",
             statusSending: "Deine Datenschutzanfrage wird gesendet...",
             statusSuccess: "Deine Datenschutzanfrage wurde übermittelt.",
             statusError: "Anfrage fehlgeschlagen. Bitte versuche es in Kürze erneut."
           }
         }
+      };
+
+      const waitForTurnstile = () =>
+        new Promise((resolve) => {
+          if (window.turnstile) {
+            resolve(window.turnstile);
+            return;
+          }
+
+          let attempts = 0;
+          const timer = window.setInterval(() => {
+            attempts += 1;
+            if (window.turnstile) {
+              window.clearInterval(timer);
+              resolve(window.turnstile);
+              return;
+            }
+
+            if (attempts >= 50) {
+              window.clearInterval(timer);
+              resolve(null);
+            }
+          }, 150);
+        });
+
+      const detectCaptchaError = async (response) => {
+        try {
+          const data = await response.json();
+          if (!Array.isArray(data?.errors)) return false;
+          return data.errors.some((entry) => {
+            const value = `${entry?.code ?? ""} ${entry?.message ?? ""}`.toLowerCase();
+            return value.includes("turnstile") || value.includes("captcha") || value.includes("challenge");
+          });
+        } catch {
+          return false;
+        }
+      };
+
+      const createTurnstileController = ({ container, setStatus, getCaptchaMessage }) => {
+        let widgetId = null;
+
+        const ensureRendered = async () => {
+          if (!container || widgetId !== null) return widgetId;
+          const turnstile = await waitForTurnstile();
+          if (!turnstile) return null;
+
+          widgetId = turnstile.render(container, {
+            sitekey: TURNSTILE_SITE_KEY,
+            theme: "light",
+            callback: () => {
+              if (container.dataset.errorState !== "true") return;
+              container.dataset.errorState = "false";
+              setStatus("");
+            },
+            "expired-callback": () => {
+              container.dataset.errorState = "true";
+              setStatus(getCaptchaMessage(), "error");
+              turnstile.reset(widgetId);
+            },
+            "timeout-callback": () => {
+              container.dataset.errorState = "true";
+              setStatus(getCaptchaMessage(), "error");
+              turnstile.reset(widgetId);
+            },
+            "error-callback": () => {
+              container.dataset.errorState = "true";
+              setStatus(getCaptchaMessage(), "error");
+            }
+          });
+
+          return widgetId;
+        };
+
+        const getToken = () => {
+          if (widgetId === null || !window.turnstile) return "";
+          return window.turnstile.getResponse(widgetId) || "";
+        };
+
+        const reset = () => {
+          if (widgetId === null || !window.turnstile) return;
+          container.dataset.errorState = "false";
+          window.turnstile.reset(widgetId);
+        };
+
+        return { ensureRendered, getToken, reset };
       };
 
       const normalizeLocale = (value) => {
@@ -575,12 +686,26 @@
       const setupPrivacyForm = () => {
         const form = document.getElementById("privacy-request-form");
         const submitButton = document.getElementById("privacy-submit");
+        const turnstileContainer = document.getElementById("privacy-turnstile");
         if (!(form instanceof HTMLFormElement) || !(submitButton instanceof HTMLButtonElement)) return;
         if (form.dataset.bound === "true") return;
         form.dataset.bound = "true";
 
         const ui = content.form;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const setCaptchaStatus = (message, type = "") => {
+          const status = document.getElementById("privacy-form-status");
+          if (!status) return;
+          if (message === "" && status.textContent !== content.form.statusCaptchaRequired) return;
+          setStatus(message, type);
+        };
+        const turnstileController = createTurnstileController({
+          container: turnstileContainer,
+          setStatus: setCaptchaStatus,
+          getCaptchaMessage: () => content.form.statusCaptchaRequired
+        });
+
+        void turnstileController.ensureRendered();
 
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
@@ -614,31 +739,48 @@
             return;
           }
 
+          await turnstileController.ensureRendered();
+          const captchaToken = turnstileController.getToken();
+          if (!captchaToken) {
+            setStatus(ui.statusCaptchaRequired, "error");
+            return;
+          }
+
           submitButton.disabled = true;
           submitButton.textContent = ui.submitSending;
           setStatus(ui.statusSending);
           const start = performance.now();
 
           try {
+            data.set("channel", payload.channel);
+            data.set("locale", payload.locale);
+            data.set("source_page", payload.source_page);
+            data.set("consent", payload.consent ? "true" : "false");
+            data.set(TURNSTILE_TOKEN_FIELD, captchaToken);
+
             const response = await fetch(PRIVACY_FORM_ENDPOINT, {
               method: "POST",
               headers: {
-                "Content-Type": "application/json",
                 Accept: "application/json"
               },
-              body: JSON.stringify(payload)
+              body: data
             });
 
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            if (!response.ok) {
+              const message = (await detectCaptchaError(response)) ? ui.statusCaptchaRequired : ui.statusError;
+              throw new Error(message);
+            }
 
             const elapsed = performance.now() - start;
             const remaining = Math.max(0, MIN_SUBMIT_MS - elapsed);
             if (remaining > 0) await new Promise((resolve) => window.setTimeout(resolve, remaining));
 
             form.reset();
+            turnstileController.reset();
             setStatus(ui.statusSuccess, "success");
-          } catch {
-            setStatus(ui.statusError, "error");
+          } catch (error) {
+            turnstileController.reset();
+            setStatus(error instanceof Error ? error.message : ui.statusError, "error");
           } finally {
             submitButton.disabled = false;
             submitButton.textContent = ui.submitIdle;

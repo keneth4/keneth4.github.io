@@ -30,6 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <link rel="preload" as="image" href="./Short-Ribs-int-sprite.webp" fetchpriority="high" />
     <link rel="preload" as="image" href="./Short-Ribs-int-sprite-md.webp" fetchpriority="high" />
     <link rel="icon" type="image/png" href="./favicon.png" />
@@ -296,6 +297,10 @@
                   <span data-i18n="form.consentSuffix">.</span>
                 </span>
               </label>
+
+              <div class="turnstile-wrap">
+                <div id="consultation-turnstile" class="turnstile-widget" aria-hidden="true"></div>
+              </div>
 
               <button id="consultation-submit" type="submit" class="btn btn-primary" data-i18n="form.submitIdle">
                 Send Consultation Request

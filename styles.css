@@ -1277,6 +1277,14 @@ section[id] {
   color: color-mix(in srgb, var(--accent) 82%, #ffffff);
 }
 
+.turnstile-wrap {
+  margin-top: 0.12rem;
+}
+
+.turnstile-widget {
+  min-height: 66px;
+}
+
 .form-reassurance {
   margin: -0.06rem 0 0;
   font-size: 0.78rem;
