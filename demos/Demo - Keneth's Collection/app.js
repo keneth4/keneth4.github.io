@@ -1,9 +1,9 @@
 
-const DATA = {"meta":{"slug":"keneth-s-gaussian-splattings-collection","name":"Keneth's Gaussian Splattings Collection","restaurantName":{"es":"Keneth's","en":"Keneth's","de":"Keneth's"},"title":{"es":"Gaussian Splattings Collection","en":"Gaussian Splattings Collection","de":"Gaussian-Splatting-Kollektion"},"identityMode":"text","logoSrc":"","fontFamily":"Fraunces","fontSource":"","template":"focus-rows","locales":["es","en","de"],"defaultLocale":"es","currency":"MXN","currencyPosition":"left","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","fontRoles":{"restaurant":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"},"title":{"source":"assets/fonts/SuperBrigadeGradient-V4qA6.otf"},"section":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"},"item":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"}},"scrollSensitivity":{"hero360":3,"item":5,"section":5},"primaryColor":{"mode":"preset","preset":"midnight-blue","tone":-5,"opacity":0.8},"priceDecimalSeparator":"dot"},"backgrounds":[{"id":"bg-1771825781037","label":"Fondo 1","src":"assets/backgrounds/backgroundMannheim.webp","type":"image","originalSrc":"assets/backgrounds/backgroundMannheim.webp"}],"categories":[{"id":"section-1770876032404","name":{"es":"Arte / Coleccionables","en":"Art / Collectibles","de":"Kunst / Sammlerstücke"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877112789","name":{"es":"¡Muchos gatos!","en":"So Many Cats!","de":"So viele Katzen!"},"description":{"es":"Colección pequeña de artículos varios, todos con temática de gatos. ¿Cuántos gatos puedes contar? (Pista: son alrededor de 16).","en":"A small collection of assorted cat-themed items. How many cats can you count? (Hint: it’s around 16).","de":"Eine kleine Sammlung verschiedener Dinge – alles im Katzenthema. Wie viele Katzen kannst du zählen? (Tipp: es sind ungefähr 16)."},"longDescription":{"es":"Los gatos han sido musas oficiales de la humanidad desde hace miles de años: aparecen en el arte del Antiguo Egipto, en manuscritos medievales, en grabados japoneses, en pinturas modernas y, por supuesto, en memes. Su mezcla de elegancia, misterio y actitud los vuelve irresistibles para artistas y coleccionistas. Esta colección es una versión miniatura de esa obsesión colectiva: un homenaje a la criatura que actúa como si pagara renta.","en":"Cats have been humanity’s official muses for thousands of years: they show up in Ancient Egyptian art, medieval manuscripts, Japanese prints, modern paintings—and of course, memes. Their mix of elegance, mystery, and pure attitude makes them irresistible to artists and collectors. This little collection is a miniature version of that shared obsession: a tribute to the creature that behaves like it pays rent.","de":"Katzen sind seit Jahrtausenden so etwas wie die offiziellen Musen der Menschheit: Sie tauchen in der Kunst des Alten Ägypten auf, in mittelalterlichen Handschriften, in japanischen Holzschnitten, in moderner Malerei – und natürlich in Memes. Ihre Mischung aus Eleganz, Geheimnis und Haltung macht sie für Künstler und Sammler unwiderstehlich. Diese kleine Sammlung ist eine Mini-Version dieser kollektiven Obsession: eine Hommage an das Wesen, das sich benimmt, als würde es Miete zahlen."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Cats-int-sprite-md.webp","originalHero360":"assets/items/360Cats-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Cats","responsive":{"small":"assets/items/360Cats-int-sprite-md.webp","medium":"assets/items/360Cats-int-sprite-md.webp","large":"assets/items/360Cats-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Cats-int-sprite-md.webp"},"large":{"webp":"assets/items/360Cats-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Cats-int-poster.webp","sprite":{"image":"assets/items/360Cats-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1772934816012","name":{"es":"Pintura de gato negro","en":"Black Cat Painting","de":"Gemälde einer schwarzen Katze"},"description":{"es":"Pintura en miniatura de un gato negro asomando la cabeza.","en":"A miniature painting of a black cat peeking its head out.","de":"Ein Miniaturgemälde einer schwarzen Katze, die ihren Kopf hervorstreckt."},"longDescription":{"es":"Adquirí esta pintura en miniatura en un mercado local de mi ciudad natal. La artista se llama Vero Rocha y ¡tiene una gran variedad de obras en miniatura! La próxima vez que la vea, pienso comisionarle una miniatura de cada uno de mis gatos.","en":"I found this miniature painting at a local market in my hometown. The artist is named Vero Rocha and she creates a wide variety of miniature artworks! The next time I see her, I plan to commission a miniature painting of each of my cats.","de":"Dieses Miniaturgemälde habe ich auf einem lokalen Markt in meiner Heimatstadt gefunden. Die Künstlerin heißt Vero Rocha und sie macht eine große Vielfalt an Miniaturwerken! Wenn ich sie das nächste Mal sehe, möchte ich eine Miniatur von jedem meiner Katzen bei ihr in Auftrag geben."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cat-Painting-int-sprite-md.webp","originalHero360":"assets/items/Cat-Painting-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cat-Painting","gallery":[],"responsive":{"small":"assets/items/Cat-Painting-int-sprite-md.webp","medium":"assets/items/Cat-Painting-int-sprite-md.webp","large":"assets/items/Cat-Painting-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cat-Painting-int-sprite-md.webp"},"large":{"webp":"assets/items/Cat-Painting-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cat-Painting-int-poster.webp","sprite":{"image":"assets/items/Cat-Painting-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1772935523073","name":{"es":"Escultura cerámica de gato","en":"Ceramic Cat Sculpture","de":"Keramische Katzenskulptur"},"description":{"es":"Pieza de cerámica con forma de gato, inspirada en el estilo del Día de Muertos en México y adornada con luces LED.","en":"A ceramic cat sculpture inspired by Mexico’s Day of the Dead style, decorated with LED lights.","de":"Eine Keramikskulptur in Katzenform, inspiriert vom Stil des mexikanischen Día de los Muertos und mit LED-Lichtern dekoriert."},"longDescription":{"es":"La obra forma parte de una colección llamada \"Ofrenda\". Es un homenaje a la tradición, al amor por los animales y a nuestras mascotas que ya no están con nosotros. Está pintada a mano con detalles que evocan las calaveras de azúcar. Sus perforaciones en forma de huesos permiten que la luz atraviese la pieza, revelando su espíritu interior y recordándonos que el vínculo con ellos nunca se apaga.","en":"This piece belongs to a collection called \"Ofrenda.\" It is a tribute to tradition, to the love of animals, and to the pets who are no longer with us. It is hand-painted with details that evoke traditional sugar skulls. Bone-shaped perforations allow light to shine through the sculpture, revealing its inner spirit and reminding us that our bond with them never fades.","de":"Dieses Werk gehört zu einer Kollektion namens \"Ofrenda\". Es ist eine Hommage an Tradition, an die Liebe zu Tieren und an unsere Haustiere, die nicht mehr bei uns sind. Die Skulptur ist handbemalt mit Details, die an Zuckerschädel erinnern. Knochenförmige Öffnungen lassen das Licht hindurchscheinen und enthüllen den inneren Geist der Figur – eine Erinnerung daran, dass unsere Verbindung zu ihnen niemals erlischt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cat-Sculpture-int-sprite-md.webp","originalHero360":"assets/items/Cat-Sculpture-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cat-Sculpture","gallery":[],"responsive":{"small":"assets/items/Cat-Sculpture-int-sprite-md.webp","medium":"assets/items/Cat-Sculpture-int-sprite-md.webp","large":"assets/items/Cat-Sculpture-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cat-Sculpture-int-sprite-md.webp"},"large":{"webp":"assets/items/Cat-Sculpture-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cat-Sculpture-int-poster.webp","sprite":{"image":"assets/items/Cat-Sculpture-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1772935892779","name":{"es":"Gato de vidrio / Posavasos Thekenchor","en":"Glass Cat / Thekenchor Coaster","de":"Glaskatze / Thekenchor-Untersetzer"},"description":{"es":"Escultura miniatura de vidrio fundido en forma de gato, colocada sobre un posavasos con temática de un coro musical de la ciudad de Mannheim, Alemania.","en":"A miniature glass cat sculpture placed on a coaster themed after a musical choir from the city of Mannheim, Germany.","de":"Eine Miniaturskulptur aus geschmolzenem Glas in Form einer Katze, die auf einem Untersetzer mit Bezug zu einem Musikchor aus Mannheim in Deutschland steht."},"longDescription":{"es":"Hace un tiempo tuve la oportunidad de visitar a un amigo alemán después de no vernos durante años. Él me llevó a un pueblo cerca de la ciudad de Brunswick, y fue allí donde encontré esta hermosa escultura en miniatura.\n\nDesde que me mudé a la ciudad de Mannheim he tenido la oportunidad de conocer a muchas personas maravillosas participando en un coro. Contrario a lo que muchos piensan, no es un coro de iglesia, sino uno donde no es necesario saber cantar: lo único necesario es reunirse en un bar y divertirse al ritmo de la música.","en":"Some time ago I had the chance to visit a German friend after not seeing each other for years. He took me to a town near the city of Brunswick, and that’s where I found this beautiful miniature sculpture.\n\nSince moving to Mannheim, I’ve had the chance to meet many wonderful people by taking part in a choir. Contrary to what many might think, it’s not a church choir, it’s a choir where you don’t need to know how to sing. The only requirement is to gather in a bar and have fun with music!","de":"Vor einiger Zeit hatte ich die Gelegenheit, einen deutschen Freund zu besuchen, nachdem wir uns jahrelang nicht gesehen hatten. Er nahm mich mit in ein Dorf in der Nähe der Stadt Braunschweig, und dort entdeckte ich diese wunderschöne Miniaturskulptur.\n\nSeit ich in die Stadt Mannheim gezogen bin, habe ich durch die Teilnahme an einem Chor viele wunderbare Menschen kennengelernt. Entgegen dem, was viele denken, ist es kein Kirchenchor, man muss nicht einmal singen können. Das Einzige, was man braucht, ist sich in einer Bar zu treffen und gemeinsam Spaß mit Musik zu haben."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Glass-Cat-int-sprite-md.webp","originalHero360":"assets/items/Glass-Cat-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Glass-Cat","gallery":[],"responsive":{"small":"assets/items/Glass-Cat-int-sprite-md.webp","medium":"assets/items/Glass-Cat-int-sprite-md.webp","large":"assets/items/Glass-Cat-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Glass-Cat-int-sprite-md.webp"},"large":{"webp":"assets/items/Glass-Cat-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Glass-Cat-int-poster.webp","sprite":{"image":"assets/items/Glass-Cat-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1770877246224","name":{"es":"Merry Go (One Piece)","en":"Going Merry (One Piece)","de":"Going Merry (One Piece)"},"description":{"es":"Figura coleccionable del barco Going Merry de One Piece.","en":"A collectible figure of the Going Merry ship from One Piece.","de":"Eine Sammlerfigur des Schiffs Going Merry aus One Piece."},"longDescription":{"es":"En Japón, la cultura del coleccionismo es enorme: no solo se trata de “tener cosas”, sino de conservar pedacitos de historias que marcaron a una generación. Figuras, gashapon, ediciones limitadas y modelos se convierten en recuerdos tangibles. Y cuando la pieza es de una serie como One Piece, no es solo decoración: es una declaración de amor a una aventura compartida.","en":"In Japan, collecting is a massive culture: it’s not just about “owning stuff,” but about keeping small pieces of stories that shaped a generation. Figures, gashapon, limited editions, and model kits become tangible memories. And when the item is from a series like One Piece, it’s not just decoration—it’s a love letter to a shared adventure.","de":"In Japan ist Sammeln eine riesige Kultur: Es geht nicht nur darum, „Sachen zu besitzen“, sondern kleine Stücke von Geschichten zu bewahren, die eine Generation geprägt haben. Figuren, Gashapon, Limited Editions und Modellbausätze werden zu greifbaren Erinnerungen. Und wenn das Stück aus einer Serie wie One Piece stammt, ist es nicht nur Deko – sondern eine Liebeserklärung an ein gemeinsames Abenteuer."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360MarryGo-int-sprite-md.webp","originalHero360":"assets/items/360MarryGo-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360MarryGo","responsive":{"small":"assets/items/360MarryGo-int-sprite-md.webp","medium":"assets/items/360MarryGo-int-sprite-md.webp","large":"assets/items/360MarryGo-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"},"large":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360MarryGo-int-poster.webp","sprite":{"image":"assets/items/360MarryGo-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]},{"id":"section-1770875951604","name":{"es":"Naturaleza","en":"Nature","de":"Natur"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876206157","name":{"es":"Ramo de flores","en":"Flower Bouquet","de":"Blumenstrauß"},"description":{"es":"Arreglo floral colorido compuesto por una variedad de flores.","en":"A colorful bouquet made from a variety of flowers.","de":"Ein farbenfroher Strauß aus einer Vielzahl von Blumen."},"longDescription":{"es":"Desde hace siglos, los ramos de flores se usan para decir lo que a veces cuesta poner en palabras: gratitud, cariño, celebración o incluso un simple “pensé en ti”. En distintas culturas, cada flor ha tenido su propio simbolismo, y por eso un arreglo puede contar una pequeña historia sin necesidad de una sola frase.","en":"For centuries, flower bouquets have been a way to say what’s sometimes hard to put into words: gratitude, affection, celebration, or even a simple “I thought of you.” Across cultures, each flower has carried its own symbolism—so a bouquet can quietly tell a story without a single sentence.","de":"Seit Jahrhunderten sind Blumensträuße eine stille Art, Dinge auszudrücken, die sich nicht immer leicht in Worte fassen lassen: Dankbarkeit, Zuneigung, Feierlichkeit oder einfach ein „Ich hab an dich gedacht“. In vielen Kulturen haben einzelne Blumen ihre eigene Symbolik – so kann ein Strauß eine kleine Geschichte erzählen, ganz ohne ein einziges Wort."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Flowers-int-sprite-md.webp","originalHero360":"assets/items/360Flowers-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Flowers","responsive":{"small":"assets/items/360Flowers-int-sprite-md.webp","medium":"assets/items/360Flowers-int-sprite-md.webp","large":"assets/items/360Flowers-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Flowers-int-sprite-md.webp"},"large":{"webp":"assets/items/360Flowers-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Flowers-int-poster.webp","sprite":{"image":"assets/items/360Flowers-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876434114","name":{"es":"Flor de Nochebuena","en":"Poinsettia","de":"Weihnachtsstern"},"description":{"es":"Arreglo floral pequeño con temática navideña.","en":"A small holiday-themed floral arrangement.","de":"Ein kleines, weihnachtlich inspiriertes Blumenarrangement."},"longDescription":{"es":"La flor de Nochebuena, conocida en muchos países como poinsettia, es originaria de México y desde hace siglos se asocia con la temporada decembrina. Su color rojo intenso no es un pétalo, sino una hoja modificada (bráctea), y por eso luce tan dramática: es naturaleza haciendo diseño gráfico.","en":"The poinsettia is native to Mexico and has been tied to the holiday season for centuries. Its vivid red “petals” aren’t petals at all—they’re modified leaves called bracts, which is why it looks so striking: nature doing graphic design.","de":"Der Weihnachtsstern stammt ursprünglich aus Mexiko und wird seit Jahrhunderten mit der Weihnachtszeit verbunden. Seine leuchtend roten „Blütenblätter“ sind in Wirklichkeit keine Blüten, sondern umgefärbte Hochblätter (Brakteen) – deshalb wirkt er so dramatisch: Natur als Grafikdesignerin."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Nochebuena-int-sprite-md.webp","originalHero360":"assets/items/360Nochebuena-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Nochebuena","responsive":{"small":"assets/items/360Nochebuena-int-sprite-md.webp","medium":"assets/items/360Nochebuena-int-sprite-md.webp","large":"assets/items/360Nochebuena-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"},"large":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Nochebuena-int-poster.webp","sprite":{"image":"assets/items/360Nochebuena-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876569880","name":{"es":"Tesla dormido","en":"Sleeping Tesla","de":"Tesla (schlafend)"},"description":{"es":"Tesla es mi gato de 12 años. Le encanta que le soben la panza, pero suele ser tímido con desconocidos. Le gusta dormir con la pata en la cara.","en":"Tesla is my 12-year-old cat. He loves belly rubs, but he’s usually shy around strangers. He also likes sleeping with a paw over his face.","de":"Tesla ist mein 12 Jahre alter Kater. Er liebt es, am Bauch gekrault zu werden, ist aber Fremden gegenüber eher schüchtern. Außerdem schläft er gern mit der Pfote im Gesicht."},"longDescription":{"es":"Cuando un gato duerme con la pata sobre la cara, suele ser una mezcla de comodidad y autoprotección: bloquea la luz, conserva calor y se siente más “escondido” mientras descansa. También puede ser una forma de relajarse en una postura que le resulta familiar. En resumen: si ves esa pose, es señal de que se siente bastante a salvo.","en":"When a cat sleeps with a paw over their face, it’s usually a mix of comfort and self-protection: it blocks light, helps retain warmth, and makes them feel a little more “hidden” while they rest. It can also simply be a cozy posture they’ve learned to love. In short: that pose is a pretty good sign they feel safe.","de":"Wenn eine Katze mit der Pfote über dem Gesicht schläft, ist das meist eine Mischung aus Komfort und Selbstschutz: Es schirmt Licht ab, hält Wärme und lässt sie sich beim Schlafen ein bisschen „versteckter“ fühlen. Manchmal ist es auch einfach eine gemütliche Haltung, die sich bewährt hat. Kurz gesagt: Diese Pose ist oft ein Zeichen dafür, dass sie sich sicher fühlt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Tesla-int-sprite-md.webp","originalHero360":"assets/items/360Tesla-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Tesla","responsive":{"small":"assets/items/360Tesla-int-sprite-md.webp","medium":"assets/items/360Tesla-int-sprite-md.webp","large":"assets/items/360Tesla-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Tesla-int-sprite-md.webp"},"large":{"webp":"assets/items/360Tesla-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Tesla-int-poster.webp","sprite":{"image":"assets/items/360Tesla-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]},{"id":"section-1770876020774","name":{"es":"Tecnología","en":"Technology","de":"Technologie"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877008309","name":{"es":"Nintendo Switch","en":"Nintendo Switch","de":"Nintendo Switch"},"description":{"es":"Consola de videojuegos portátil de Nintendo.","en":"Nintendo’s hybrid portable game console.","de":"Nintendos Hybrid-Konsole für unterwegs und zu Hause."},"longDescription":{"es":"La Nintendo Switch nació con una idea simple pero brillante: que una consola no tuviera que elegir entre “de casa” o “portátil”. Su desarrollo se enfocó en hacer que el cambio entre modos fuera instantáneo, casi sin fricción, como si la consola se adaptara a tu día. Ese concepto redefinió cómo mucha gente juega: en el sofá, en el tren, en una sala de espera… o en cualquier rato libre.","en":"The Nintendo Switch was built around a simple but brilliant idea: a console shouldn’t have to choose between “home” and “portable.” Its design focused on making the transition between modes instant and frictionless, as if the console could adapt to your day. That concept reshaped how many people play—on the couch, on a train, in a waiting room… basically wherever you find a free moment.","de":"Die Nintendo Switch entstand aus einer einfachen, aber genialen Idee: Eine Konsole sollte sich nicht zwischen „zu Hause“ und „unterwegs“ entscheiden müssen. Bei der Entwicklung stand im Fokus, den Wechsel zwischen den Modi sofort und ohne Reibung zu machen – als würde sich die Konsole deinem Alltag anpassen. Dieses Konzept hat für viele verändert, wie gespielt wird: auf dem Sofa, im Zug, im Wartezimmer… eigentlich überall, wo gerade ein freier Moment ist."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/Switch-int-sprite-md.webp","originalHero360":"assets/items/Switch-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"Switch","responsive":{"small":"assets/items/Switch-int-sprite-md.webp","medium":"assets/items/Switch-int-sprite-md.webp","large":"assets/items/Switch-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Switch-int-sprite-md.webp"},"large":{"webp":"assets/items/Switch-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Switch-int-poster.webp","sprite":{"image":"assets/items/Switch-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876738287","name":{"es":"Meta Quest 3","en":"Meta Quest 3","de":"Meta Quest 3"},"description":{"es":"Headset de realidad virtual. Es mi herramienta de trabajo más actual y, honestamente, la mejor para visualizar Gaussian Splattings.","en":"A virtual reality headset. It’s my most up-to-date work tool—and honestly the best way to view Gaussian Splatting scenes.","de":"Ein Virtual-Reality-Headset. Es mein aktuellstes Arbeitswerkzeug – und ehrlich gesagt die beste Art, Gaussian-Splatting-Szenen zu betrachten."},"longDescription":{"es":"La Meta Quest 3 combina un visor de realidad virtual con capacidades de realidad mixta gracias a sus cámaras a color y sensores de profundidad. Esto permite pasar de un entorno totalmente inmersivo a ver el mundo real con elementos digitales encima. Además, su rendimiento y resolución la hacen ideal para explorar escenas 3D con mucho detalle, como los Gaussian Splattings, donde la sensación de escala y presencia se vuelve parte de la experiencia.","en":"The Meta Quest 3 blends virtual reality with mixed reality thanks to full-color passthrough cameras and depth sensing. That means you can switch from full immersion to seeing the real world with digital elements layered on top. Its performance and resolution also make it great for exploring high-detail 3D scenes—like Gaussian Splatting—where scale and presence become part of the experience.","de":"Die Meta Quest 3 verbindet Virtual Reality mit Mixed Reality dank Farbdurchsicht (Passthrough) und Tiefensensorik. So kann man zwischen voller Immersion und der realen Umgebung mit darübergelegten digitalen Elementen wechseln. Durch Leistung und Auflösung eignet sie sich außerdem hervorragend, um detailreiche 3D-Szenen zu erkunden – wie Gaussian Splatting – bei denen Maßstab und Präsenz zum Erlebnis gehören."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360vrHeadset-int-sprite-md.webp","originalHero360":"assets/items/360vrHeadset-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360vrHeadset","responsive":{"small":"assets/items/360vrHeadset-int-sprite-md.webp","medium":"assets/items/360vrHeadset-int-sprite-md.webp","large":"assets/items/360vrHeadset-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"},"large":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360vrHeadset-int-poster.webp","sprite":{"image":"assets/items/360vrHeadset-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876880105","name":{"es":"Cámara instantánea","en":"Instant Camera","de":"Sofortbildkamera"},"description":{"es":"Cámara Instax de Fujifilm. La compré durante mi estancia en Japón para poder sacar fotos del recuerdo con mis amigos internacionales.","en":"A Fujifilm Instax camera. I bought it during my time in Japan so I could take keepsake photos with my international friends.","de":"Eine Fujifilm-Instax-Kamera. Ich habe sie während meiner Zeit in Japan gekauft, um Erinnerungsfotos mit meinen internationalen Freunden zu machen."},"longDescription":{"es":"Las cámaras instantáneas tienen algo que el celular no puede replicar: el ritual. Disparas, esperas, y ves cómo la imagen aparece poco a poco como si fuera magia. Nacieron como una mezcla de química e ingeniería pensada para capturar el momento sin laboratorio, y con el tiempo se volvieron un símbolo de nostalgia, viajes y amistad. Una foto instantánea no solo guarda una imagen: guarda el “ahí estuvimos”.","en":"Instant cameras have something phones can’t really replicate: the ritual. You take the shot, you wait, and the image slowly appears like a little magic trick. They were born from a mix of chemistry and engineering meant to capture a moment without a darkroom, and over time they became a symbol of nostalgia, travel, and friendship. An instant photo doesn’t just save an image—it saves the feeling of “we were there.”","de":"Sofortbildkameras haben etwas, das Handys kaum nachmachen können: das Ritual. Du drückst ab, wartest, und siehst, wie das Bild langsam erscheint – fast wie ein kleiner Zaubertrick. Entstanden sind sie aus einer Mischung aus Chemie und Ingenieurskunst, um Momente ohne Fotolabor festzuhalten. Mit der Zeit wurden sie zu einem Symbol für Nostalgie, Reisen und Freundschaft. Ein Sofortbild speichert nicht nur ein Bild – sondern das Gefühl von „wir waren da“."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Instax-int-sprite-md.webp","originalHero360":"assets/items/360Instax-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Instax","responsive":{"small":"assets/items/360Instax-int-sprite-md.webp","medium":"assets/items/360Instax-int-sprite-md.webp","large":"assets/items/360Instax-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Instax-int-sprite-md.webp"},"large":{"webp":"assets/items/360Instax-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Instax-int-poster.webp","sprite":{"image":"assets/items/360Instax-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
+const DATA = {"meta":{"slug":"keneth-s-gaussian-splattings-collection","name":"Keneth's Gaussian Splattings Collection","restaurantName":{"es":"Keneth's","en":"Keneth's","de":"Keneth's"},"title":{"es":"Gaussian Splattings Collection","en":"Gaussian Splattings Collection","de":"Gaussian-Splatting-Kollektion"},"identityMode":"text","logoSrc":"","fontFamily":"Fraunces","fontSource":"","template":"focus-rows","locales":["es","en","de"],"defaultLocale":"es","currency":"MXN","currencyPosition":"left","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","fontRoles":{"restaurant":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"},"title":{"source":"assets/fonts/SuperBrigadeGradient-V4qA6.otf"},"section":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"},"item":{"source":"assets/fonts/QuickingRegular-gw5KY.otf"}},"scrollSensitivity":{"hero360":5,"item":5,"section":5},"primaryColor":{"mode":"preset","preset":"midnight-blue","tone":-5,"opacity":0.8},"priceDecimalSeparator":"dot"},"backgrounds":[{"id":"bg-1771825781037","label":"Fondo 1","src":"assets/backgrounds/backgroundMannheim.webp","type":"image","originalSrc":"assets/backgrounds/backgroundMannheim.webp"}],"categories":[{"id":"section-1770876032404","name":{"es":"Arte / Coleccionables","en":"Art / Collectibles","de":"Kunst / Sammlerstücke"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877112789","name":{"es":"¡Muchos gatos!","en":"So Many Cats!","de":"So viele Katzen!"},"description":{"es":"Colección pequeña de artículos varios, todos con temática de gatos. ¿Cuántos gatos puedes contar? (Pista: son alrededor de 16).","en":"A small collection of assorted cat-themed items. How many cats can you count? (Hint: it’s around 16).","de":"Eine kleine Sammlung verschiedener Dinge – alles im Katzenthema. Wie viele Katzen kannst du zählen? (Tipp: es sind ungefähr 16)."},"longDescription":{"es":"Los gatos han sido musas oficiales de la humanidad desde hace miles de años: aparecen en el arte del Antiguo Egipto, en manuscritos medievales, en grabados japoneses, en pinturas modernas y, por supuesto, en memes. Su mezcla de elegancia, misterio y actitud los vuelve irresistibles para artistas y coleccionistas. Esta colección es una versión miniatura de esa obsesión colectiva: un homenaje a la criatura que actúa como si pagara renta.","en":"Cats have been humanity’s official muses for thousands of years: they show up in Ancient Egyptian art, medieval manuscripts, Japanese prints, modern paintings—and of course, memes. Their mix of elegance, mystery, and pure attitude makes them irresistible to artists and collectors. This little collection is a miniature version of that shared obsession: a tribute to the creature that behaves like it pays rent.","de":"Katzen sind seit Jahrtausenden so etwas wie die offiziellen Musen der Menschheit: Sie tauchen in der Kunst des Alten Ägypten auf, in mittelalterlichen Handschriften, in japanischen Holzschnitten, in moderner Malerei – und natürlich in Memes. Ihre Mischung aus Eleganz, Geheimnis und Haltung macht sie für Künstler und Sammler unwiderstehlich. Diese kleine Sammlung ist eine Mini-Version dieser kollektiven Obsession: eine Hommage an das Wesen, das sich benimmt, als würde es Miete zahlen."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Cats-int-sprite-md.webp","originalHero360":"assets/items/360Cats-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Cats","responsive":{"small":"assets/items/360Cats-int-sprite-md.webp","medium":"assets/items/360Cats-int-sprite-md.webp","large":"assets/items/360Cats-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Cats-int-sprite-md.webp"},"large":{"webp":"assets/items/360Cats-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Cats-int-poster.webp","sprite":{"image":"assets/items/360Cats-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1772934816012","name":{"es":"Pintura de gato negro","en":"Black Cat Painting","de":"Gemälde einer schwarzen Katze"},"description":{"es":"Pintura en miniatura de un gato negro asomando la cabeza.","en":"A miniature painting of a black cat peeking its head out.","de":"Ein Miniaturgemälde einer schwarzen Katze, die ihren Kopf hervorstreckt."},"longDescription":{"es":"Adquirí esta pintura en miniatura en un mercado local de mi ciudad natal. La artista se llama Vero Rocha y ¡tiene una gran variedad de obras en miniatura! La próxima vez que la vea, pienso comisionarle una miniatura de cada uno de mis gatos.","en":"I found this miniature painting at a local market in my hometown. The artist is named Vero Rocha and she creates a wide variety of miniature artworks! The next time I see her, I plan to commission a miniature painting of each of my cats.","de":"Dieses Miniaturgemälde habe ich auf einem lokalen Markt in meiner Heimatstadt gefunden. Die Künstlerin heißt Vero Rocha und sie macht eine große Vielfalt an Miniaturwerken! Wenn ich sie das nächste Mal sehe, möchte ich eine Miniatur von jedem meiner Katzen bei ihr in Auftrag geben."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cat-Painting-int-sprite-md.webp","originalHero360":"assets/items/Cat-Painting-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cat-Painting","gallery":[],"responsive":{"small":"assets/items/Cat-Painting-int-sprite-md.webp","medium":"assets/items/Cat-Painting-int-sprite-md.webp","large":"assets/items/Cat-Painting-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cat-Painting-int-sprite-md.webp"},"large":{"webp":"assets/items/Cat-Painting-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cat-Painting-int-poster.webp","sprite":{"image":"assets/items/Cat-Painting-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1772935523073","name":{"es":"Escultura cerámica de gato","en":"Ceramic Cat Sculpture","de":"Keramische Katzenskulptur"},"description":{"es":"Pieza de cerámica con forma de gato, inspirada en el estilo del Día de Muertos en México y adornada con luces LED.","en":"A ceramic cat sculpture inspired by Mexico’s Day of the Dead style, decorated with LED lights.","de":"Eine Keramikskulptur in Katzenform, inspiriert vom Stil des mexikanischen Día de los Muertos und mit LED-Lichtern dekoriert."},"longDescription":{"es":"La obra forma parte de una colección llamada \"Ofrenda\". Es un homenaje a la tradición, al amor por los animales y a nuestras mascotas que ya no están con nosotros. Está pintada a mano con detalles que evocan las calaveras de azúcar. Sus perforaciones en forma de huesos permiten que la luz atraviese la pieza, revelando su espíritu interior y recordándonos que el vínculo con ellos nunca se apaga.","en":"This piece belongs to a collection called \"Ofrenda.\" It is a tribute to tradition, to the love of animals, and to the pets who are no longer with us. It is hand-painted with details that evoke traditional sugar skulls. Bone-shaped perforations allow light to shine through the sculpture, revealing its inner spirit and reminding us that our bond with them never fades.","de":"Dieses Werk gehört zu einer Kollektion namens \"Ofrenda\". Es ist eine Hommage an Tradition, an die Liebe zu Tieren und an unsere Haustiere, die nicht mehr bei uns sind. Die Skulptur ist handbemalt mit Details, die an Zuckerschädel erinnern. Knochenförmige Öffnungen lassen das Licht hindurchscheinen und enthüllen den inneren Geist der Figur – eine Erinnerung daran, dass unsere Verbindung zu ihnen niemals erlischt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cat-Sculpture-int-sprite-md.webp","originalHero360":"assets/items/Cat-Sculpture-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cat-Sculpture","gallery":[],"responsive":{"small":"assets/items/Cat-Sculpture-int-sprite-md.webp","medium":"assets/items/Cat-Sculpture-int-sprite-md.webp","large":"assets/items/Cat-Sculpture-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cat-Sculpture-int-sprite-md.webp"},"large":{"webp":"assets/items/Cat-Sculpture-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cat-Sculpture-int-poster.webp","sprite":{"image":"assets/items/Cat-Sculpture-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1772935892779","name":{"es":"Gato de vidrio / Posavasos Thekenchor","en":"Glass Cat / Thekenchor Coaster","de":"Glaskatze / Thekenchor-Untersetzer"},"description":{"es":"Escultura miniatura de vidrio fundido en forma de gato, colocada sobre un posavasos con temática de un coro musical de la ciudad de Mannheim, Alemania.","en":"A miniature glass cat sculpture placed on a coaster themed after a musical choir from the city of Mannheim, Germany.","de":"Eine Miniaturskulptur aus geschmolzenem Glas in Form einer Katze, die auf einem Untersetzer mit Bezug zu einem Musikchor aus Mannheim in Deutschland steht."},"longDescription":{"es":"Hace un tiempo tuve la oportunidad de visitar a un amigo alemán después de no vernos durante años. Él me llevó a un pueblo cerca de la ciudad de Brunswick, y fue allí donde encontré esta hermosa escultura en miniatura.\n\nDesde que me mudé a la ciudad de Mannheim he tenido la oportunidad de conocer a muchas personas maravillosas participando en un coro. Contrario a lo que muchos piensan, no es un coro de iglesia, sino uno donde no es necesario saber cantar: lo único necesario es reunirse en un bar y divertirse al ritmo de la música.","en":"Some time ago I had the chance to visit a German friend after not seeing each other for years. He took me to a town near the city of Brunswick, and that’s where I found this beautiful miniature sculpture.\n\nSince moving to Mannheim, I’ve had the chance to meet many wonderful people by taking part in a choir. Contrary to what many might think, it’s not a church choir, it’s a choir where you don’t need to know how to sing. The only requirement is to gather in a bar and have fun with music!","de":"Vor einiger Zeit hatte ich die Gelegenheit, einen deutschen Freund zu besuchen, nachdem wir uns jahrelang nicht gesehen hatten. Er nahm mich mit in ein Dorf in der Nähe der Stadt Braunschweig, und dort entdeckte ich diese wunderschöne Miniaturskulptur.\n\nSeit ich in die Stadt Mannheim gezogen bin, habe ich durch die Teilnahme an einem Chor viele wunderbare Menschen kennengelernt. Entgegen dem, was viele denken, ist es kein Kirchenchor, man muss nicht einmal singen können. Das Einzige, was man braucht, ist sich in einer Bar zu treffen und gemeinsam Spaß mit Musik zu haben."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Glass-Cat-int-sprite-md.webp","originalHero360":"assets/items/Glass-Cat-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Glass-Cat","gallery":[],"responsive":{"small":"assets/items/Glass-Cat-int-sprite-md.webp","medium":"assets/items/Glass-Cat-int-sprite-md.webp","large":"assets/items/Glass-Cat-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Glass-Cat-int-sprite-md.webp"},"large":{"webp":"assets/items/Glass-Cat-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Glass-Cat-int-poster.webp","sprite":{"image":"assets/items/Glass-Cat-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}}},{"id":"dish-1770877246224","name":{"es":"Merry Go (One Piece)","en":"Going Merry (One Piece)","de":"Going Merry (One Piece)"},"description":{"es":"Figura coleccionable del barco Going Merry de One Piece.","en":"A collectible figure of the Going Merry ship from One Piece.","de":"Eine Sammlerfigur des Schiffs Going Merry aus One Piece."},"longDescription":{"es":"En Japón, la cultura del coleccionismo es enorme: no solo se trata de “tener cosas”, sino de conservar pedacitos de historias que marcaron a una generación. Figuras, gashapon, ediciones limitadas y modelos se convierten en recuerdos tangibles. Y cuando la pieza es de una serie como One Piece, no es solo decoración: es una declaración de amor a una aventura compartida.","en":"In Japan, collecting is a massive culture: it’s not just about “owning stuff,” but about keeping small pieces of stories that shaped a generation. Figures, gashapon, limited editions, and model kits become tangible memories. And when the item is from a series like One Piece, it’s not just decoration—it’s a love letter to a shared adventure.","de":"In Japan ist Sammeln eine riesige Kultur: Es geht nicht nur darum, „Sachen zu besitzen“, sondern kleine Stücke von Geschichten zu bewahren, die eine Generation geprägt haben. Figuren, Gashapon, Limited Editions und Modellbausätze werden zu greifbaren Erinnerungen. Und wenn das Stück aus einer Serie wie One Piece stammt, ist es nicht nur Deko – sondern eine Liebeserklärung an ein gemeinsames Abenteuer."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360MarryGo-int-sprite-md.webp","originalHero360":"assets/items/360MarryGo-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360MarryGo","responsive":{"small":"assets/items/360MarryGo-int-sprite-md.webp","medium":"assets/items/360MarryGo-int-sprite-md.webp","large":"assets/items/360MarryGo-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"},"large":{"webp":"assets/items/360MarryGo-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360MarryGo-int-poster.webp","sprite":{"image":"assets/items/360MarryGo-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]},{"id":"section-1770875951604","name":{"es":"Naturaleza","en":"Nature","de":"Natur"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770876206157","name":{"es":"Ramo de flores","en":"Flower Bouquet","de":"Blumenstrauß"},"description":{"es":"Arreglo floral colorido compuesto por una variedad de flores.","en":"A colorful bouquet made from a variety of flowers.","de":"Ein farbenfroher Strauß aus einer Vielzahl von Blumen."},"longDescription":{"es":"Desde hace siglos, los ramos de flores se usan para decir lo que a veces cuesta poner en palabras: gratitud, cariño, celebración o incluso un simple “pensé en ti”. En distintas culturas, cada flor ha tenido su propio simbolismo, y por eso un arreglo puede contar una pequeña historia sin necesidad de una sola frase.","en":"For centuries, flower bouquets have been a way to say what’s sometimes hard to put into words: gratitude, affection, celebration, or even a simple “I thought of you.” Across cultures, each flower has carried its own symbolism—so a bouquet can quietly tell a story without a single sentence.","de":"Seit Jahrhunderten sind Blumensträuße eine stille Art, Dinge auszudrücken, die sich nicht immer leicht in Worte fassen lassen: Dankbarkeit, Zuneigung, Feierlichkeit oder einfach ein „Ich hab an dich gedacht“. In vielen Kulturen haben einzelne Blumen ihre eigene Symbolik – so kann ein Strauß eine kleine Geschichte erzählen, ganz ohne ein einziges Wort."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Flowers-int-sprite-md.webp","originalHero360":"assets/items/360Flowers-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Flowers","responsive":{"small":"assets/items/360Flowers-int-sprite-md.webp","medium":"assets/items/360Flowers-int-sprite-md.webp","large":"assets/items/360Flowers-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Flowers-int-sprite-md.webp"},"large":{"webp":"assets/items/360Flowers-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Flowers-int-poster.webp","sprite":{"image":"assets/items/360Flowers-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876434114","name":{"es":"Flor de Nochebuena","en":"Poinsettia","de":"Weihnachtsstern"},"description":{"es":"Arreglo floral pequeño con temática navideña.","en":"A small holiday-themed floral arrangement.","de":"Ein kleines, weihnachtlich inspiriertes Blumenarrangement."},"longDescription":{"es":"La flor de Nochebuena, conocida en muchos países como poinsettia, es originaria de México y desde hace siglos se asocia con la temporada decembrina. Su color rojo intenso no es un pétalo, sino una hoja modificada (bráctea), y por eso luce tan dramática: es naturaleza haciendo diseño gráfico.","en":"The poinsettia is native to Mexico and has been tied to the holiday season for centuries. Its vivid red “petals” aren’t petals at all—they’re modified leaves called bracts, which is why it looks so striking: nature doing graphic design.","de":"Der Weihnachtsstern stammt ursprünglich aus Mexiko und wird seit Jahrhunderten mit der Weihnachtszeit verbunden. Seine leuchtend roten „Blütenblätter“ sind in Wirklichkeit keine Blüten, sondern umgefärbte Hochblätter (Brakteen) – deshalb wirkt er so dramatisch: Natur als Grafikdesignerin."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Nochebuena-int-sprite-md.webp","originalHero360":"assets/items/360Nochebuena-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Nochebuena","responsive":{"small":"assets/items/360Nochebuena-int-sprite-md.webp","medium":"assets/items/360Nochebuena-int-sprite-md.webp","large":"assets/items/360Nochebuena-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"},"large":{"webp":"assets/items/360Nochebuena-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Nochebuena-int-poster.webp","sprite":{"image":"assets/items/360Nochebuena-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876569880","name":{"es":"Tesla dormido","en":"Sleeping Tesla","de":"Tesla (schlafend)"},"description":{"es":"Tesla es mi gato de 12 años. Le encanta que le soben la panza, pero suele ser tímido con desconocidos. Le gusta dormir con la pata en la cara.","en":"Tesla is my 12-year-old cat. He loves belly rubs, but he’s usually shy around strangers. He also likes sleeping with a paw over his face.","de":"Tesla ist mein 12 Jahre alter Kater. Er liebt es, am Bauch gekrault zu werden, ist aber Fremden gegenüber eher schüchtern. Außerdem schläft er gern mit der Pfote im Gesicht."},"longDescription":{"es":"Cuando un gato duerme con la pata sobre la cara, suele ser una mezcla de comodidad y autoprotección: bloquea la luz, conserva calor y se siente más “escondido” mientras descansa. También puede ser una forma de relajarse en una postura que le resulta familiar. En resumen: si ves esa pose, es señal de que se siente bastante a salvo.","en":"When a cat sleeps with a paw over their face, it’s usually a mix of comfort and self-protection: it blocks light, helps retain warmth, and makes them feel a little more “hidden” while they rest. It can also simply be a cozy posture they’ve learned to love. In short: that pose is a pretty good sign they feel safe.","de":"Wenn eine Katze mit der Pfote über dem Gesicht schläft, ist das meist eine Mischung aus Komfort und Selbstschutz: Es schirmt Licht ab, hält Wärme und lässt sie sich beim Schlafen ein bisschen „versteckter“ fühlen. Manchmal ist es auch einfach eine gemütliche Haltung, die sich bewährt hat. Kurz gesagt: Diese Pose ist oft ein Zeichen dafür, dass sie sich sicher fühlt."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Tesla-int-sprite-md.webp","originalHero360":"assets/items/360Tesla-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Tesla","responsive":{"small":"assets/items/360Tesla-int-sprite-md.webp","medium":"assets/items/360Tesla-int-sprite-md.webp","large":"assets/items/360Tesla-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Tesla-int-sprite-md.webp"},"large":{"webp":"assets/items/360Tesla-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Tesla-int-poster.webp","sprite":{"image":"assets/items/360Tesla-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]},{"id":"section-1770876020774","name":{"es":"Tecnología","en":"Technology","de":"Technologie"},"backgroundId":"bg-1771825781037","items":[{"id":"dish-1770877008309","name":{"es":"Nintendo Switch","en":"Nintendo Switch","de":"Nintendo Switch"},"description":{"es":"Consola de videojuegos portátil de Nintendo.","en":"Nintendo’s hybrid portable game console.","de":"Nintendos Hybrid-Konsole für unterwegs und zu Hause."},"longDescription":{"es":"La Nintendo Switch nació con una idea simple pero brillante: que una consola no tuviera que elegir entre “de casa” o “portátil”. Su desarrollo se enfocó en hacer que el cambio entre modos fuera instantáneo, casi sin fricción, como si la consola se adaptara a tu día. Ese concepto redefinió cómo mucha gente juega: en el sofá, en el tren, en una sala de espera… o en cualquier rato libre.","en":"The Nintendo Switch was built around a simple but brilliant idea: a console shouldn’t have to choose between “home” and “portable.” Its design focused on making the transition between modes instant and frictionless, as if the console could adapt to your day. That concept reshaped how many people play—on the couch, on a train, in a waiting room… basically wherever you find a free moment.","de":"Die Nintendo Switch entstand aus einer einfachen, aber genialen Idee: Eine Konsole sollte sich nicht zwischen „zu Hause“ und „unterwegs“ entscheiden müssen. Bei der Entwicklung stand im Fokus, den Wechsel zwischen den Modi sofort und ohne Reibung zu machen – als würde sich die Konsole deinem Alltag anpassen. Dieses Konzept hat für viele verändert, wie gespielt wird: auf dem Sofa, im Zug, im Wartezimmer… eigentlich überall, wo gerade ein freier Moment ist."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/Switch-int-sprite-md.webp","originalHero360":"assets/items/Switch-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"Switch","responsive":{"small":"assets/items/Switch-int-sprite-md.webp","medium":"assets/items/Switch-int-sprite-md.webp","large":"assets/items/Switch-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Switch-int-sprite-md.webp"},"large":{"webp":"assets/items/Switch-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Switch-int-poster.webp","sprite":{"image":"assets/items/Switch-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876738287","name":{"es":"Meta Quest 3","en":"Meta Quest 3","de":"Meta Quest 3"},"description":{"es":"Headset de realidad virtual. Es mi herramienta de trabajo más actual y, honestamente, la mejor para visualizar Gaussian Splattings.","en":"A virtual reality headset. It’s my most up-to-date work tool—and honestly the best way to view Gaussian Splatting scenes.","de":"Ein Virtual-Reality-Headset. Es mein aktuellstes Arbeitswerkzeug – und ehrlich gesagt die beste Art, Gaussian-Splatting-Szenen zu betrachten."},"longDescription":{"es":"La Meta Quest 3 combina un visor de realidad virtual con capacidades de realidad mixta gracias a sus cámaras a color y sensores de profundidad. Esto permite pasar de un entorno totalmente inmersivo a ver el mundo real con elementos digitales encima. Además, su rendimiento y resolución la hacen ideal para explorar escenas 3D con mucho detalle, como los Gaussian Splattings, donde la sensación de escala y presencia se vuelve parte de la experiencia.","en":"The Meta Quest 3 blends virtual reality with mixed reality thanks to full-color passthrough cameras and depth sensing. That means you can switch from full immersion to seeing the real world with digital elements layered on top. Its performance and resolution also make it great for exploring high-detail 3D scenes—like Gaussian Splatting—where scale and presence become part of the experience.","de":"Die Meta Quest 3 verbindet Virtual Reality mit Mixed Reality dank Farbdurchsicht (Passthrough) und Tiefensensorik. So kann man zwischen voller Immersion und der realen Umgebung mit darübergelegten digitalen Elementen wechseln. Durch Leistung und Auflösung eignet sie sich außerdem hervorragend, um detailreiche 3D-Szenen zu erkunden – wie Gaussian Splatting – bei denen Maßstab und Präsenz zum Erlebnis gehören."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360vrHeadset-int-sprite-md.webp","originalHero360":"assets/items/360vrHeadset-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360vrHeadset","responsive":{"small":"assets/items/360vrHeadset-int-sprite-md.webp","medium":"assets/items/360vrHeadset-int-sprite-md.webp","large":"assets/items/360vrHeadset-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"},"large":{"webp":"assets/items/360vrHeadset-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360vrHeadset-int-poster.webp","sprite":{"image":"assets/items/360vrHeadset-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0},{"id":"dish-1770876880105","name":{"es":"Cámara instantánea","en":"Instant Camera","de":"Sofortbildkamera"},"description":{"es":"Cámara Instax de Fujifilm. La compré durante mi estancia en Japón para poder sacar fotos del recuerdo con mis amigos internacionales.","en":"A Fujifilm Instax camera. I bought it during my time in Japan so I could take keepsake photos with my international friends.","de":"Eine Fujifilm-Instax-Kamera. Ich habe sie während meiner Zeit in Japan gekauft, um Erinnerungsfotos mit meinen internationalen Freunden zu machen."},"longDescription":{"es":"Las cámaras instantáneas tienen algo que el celular no puede replicar: el ritual. Disparas, esperas, y ves cómo la imagen aparece poco a poco como si fuera magia. Nacieron como una mezcla de química e ingeniería pensada para capturar el momento sin laboratorio, y con el tiempo se volvieron un símbolo de nostalgia, viajes y amistad. Una foto instantánea no solo guarda una imagen: guarda el “ahí estuvimos”.","en":"Instant cameras have something phones can’t really replicate: the ritual. You take the shot, you wait, and the image slowly appears like a little magic trick. They were born from a mix of chemistry and engineering meant to capture a moment without a darkroom, and over time they became a symbol of nostalgia, travel, and friendship. An instant photo doesn’t just save an image—it saves the feeling of “we were there.”","de":"Sofortbildkameras haben etwas, das Handys kaum nachmachen können: das Ritual. Du drückst ab, wartest, und siehst, wie das Bild langsam erscheint – fast wie ein kleiner Zaubertrick. Entstanden sind sie aus einer Mischung aus Chemie und Ingenieurskunst, um Momente ohne Fotolabor festzuhalten. Mit der Zeit wurden sie zu einem Symbol für Nostalgie, Reisen und Freundschaft. Ein Sofortbild speichert nicht nur ein Bild – sondern das Gefühl von „wir waren da“."},"priceVisible":false,"price":{"amount":0,"currency":"MXN"},"allergens":[],"media":{"hero360":"assets/items/360Instax-int-sprite-md.webp","originalHero360":"assets/items/360Instax-int-poster.webp","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","gallery":[],"assetSetId":"360Instax","responsive":{"small":"assets/items/360Instax-int-sprite-md.webp","medium":"assets/items/360Instax-int-sprite-md.webp","large":"assets/items/360Instax-int-sprite-md.webp"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/360Instax-int-sprite-md.webp"},"large":{"webp":"assets/items/360Instax-int-sprite-md.webp"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/360Instax-int-poster.webp","sprite":{"image":"assets/items/360Instax-int-sprite.webp","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"badges":[],"spiceLevel":0}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
 const currencySymbols = {
   MXN: "$", USD: "$", EUR: "€", GBP: "£", JPY: "¥", COP: "$", ARS: "$"
 };
-const BRAND_LANDING_URL = "https://keneth4.github.io/";
+const BRAND_LANDING_URL = "https://creativivid.com/";
 const BRAND_SIGNATURE_ARIA_LABEL = "Creativivid Studio";
 const BRAND_SIGNATURE_LOGO = "Logo.png";
 const FOCUS_ROWS_WHEEL_STEP_THRESHOLD = 260;
@@ -29,6 +29,7 @@ const builtInFontSources = {
 const backgrounds = (DATA.backgrounds || []).filter(
   (item) => item?.src && String(item.src).trim().length > 0
 );
+const backgroundFocusStyles = ["--menu-bg-pos-portrait:50% 50%;--menu-bg-pos-wide:50% 50%;"];
 const backgroundIndexById = new Map(
   backgrounds.map((background, index) => [background.id || "", index])
 );
@@ -140,15 +141,22 @@ const JUKEBOX_WHEEL_DELTA_CAP = 140;
 const JUKEBOX_VERTICAL_DOMINANCE_RATIO = 2.2;
 const JUKEBOX_VERTICAL_WHEEL_MIN_PX = 10;
 const JUKEBOX_HORIZONTAL_WHEEL_MIN_PX = 0.1;
-const JUKEBOX_HORIZONTAL_SECTION_THRESHOLD_PX = 300;
+const SECTION_LANE_AXIS = "vertical";
+const ITEM_LANE_AXIS = "horizontal";
+const WIDE_FOCUS_LAYOUT = "two-zone";
+const WIDE_SECTION_PEEK_RATIO = 0.25;
+const SECTION_NAV_POLICY = "never";
+const SECTION_LANE_THRESHOLD_PX = 220;
+const SECTION_LANE_SETTLE_MS = 180;
+const SECTION_LANE_TOUCH_INTENT_THRESHOLD = 10;
+const SECTION_LANE_TOUCH_DELTA_SCALE = 2.2;
 const JUKEBOX_SECTION_WHEEL_COOLDOWN_MS = 240;
 const JUKEBOX_HORIZONTAL_GESTURE_IDLE_MS = 240;
 const JUKEBOX_TOUCH_DELTA_SCALE = 2.1;
 const JUKEBOX_MAX_STEP_PER_INPUT = 0;
 const JUKEBOX_TOUCH_INTENT_THRESHOLD = 10;
 const INTERACTIVE_DEFAULT_FRAME_COUNT = 72;
-const INTERACTIVE_PIXELS_PER_FRAME_DESKTOP = 6.25;
-const INTERACTIVE_PIXELS_PER_FRAME_COARSE = 10.94;
+const INTERACTIVE_HERO_TOUCH_SCALE = 1;
 const interactiveDetailBytesCache = new Map();
 const interactiveDetailBytesPending = new Map();
 const detailPrefetchedSources = new Set();
@@ -158,11 +166,14 @@ let startupAssetBytesReady = false;
 const sectionBackgroundPreloadSources = new Set();
 const sectionBackgroundPreloadImages = [];
 let detailRotateDirection = -1;
-const jukeboxWheelState = new Map();
-const focusRowWheelState = new Map();
-let verticalSectionFocusRaf = 0;
-let verticalSectionSnapTimeout = 0;
-let horizontalSectionSnapTimeout = 0;
+const itemLaneStateByCategory = new Map();
+let sectionLaneFocusRaf = 0;
+let sectionLaneSnapTimeout = 0;
+let sectionLaneWheelCarry = 0;
+let sectionLaneWheelCooldownUntil = 0;
+let sectionLaneWheelGestureUntil = 0;
+let sectionLaneWheelGestureConsumed = false;
+let sectionLaneTouchState = null;
 
 const textOf = (entry) => entry?.[locale] ?? entry?.[DATA.meta.defaultLocale] ?? "";
 const menuTerms = {"es":{"allergens":"Alérgenos","spice":"Picante"},"en":{"allergens":"Allergens","spice":"Spice"},"fr":{"allergens":"Allergènes","spice":"Épicé"},"pt":{"allergens":"Alergênicos","spice":"Picante"},"it":{"allergens":"Allergeni","spice":"Piccante"},"de":{"allergens":"Allergene","spice":"Scharf"},"ja":{"allergens":"アレルゲン","spice":"辛さ"},"ko":{"allergens":"알레르겐","spice":"매운맛"},"zh":{"allergens":"过敏原","spice":"辣度"}};
@@ -220,10 +231,16 @@ const renderBadgePill = (badge, className = "") => {
     : "";
   return '<span class="menu-pill menu-pill--' + badge.tone + (className ? " " + className : "") + '"><span>' + badge.label + "</span>" + meter + "</span>";
 };
-const renderBadgeList = (dish, className) => {
+const renderBadgeList = (dish, className, pillClassName = "") => {
   const badges = getItemBadges(dish);
   if (badges.length === 0) return "";
-  return '<div class="' + className + '">' + badges.map((badge) => renderBadgePill(badge)).join("") + "</div>";
+  return (
+    '<div class="' +
+    className +
+    '">' +
+    badges.map((badge) => renderBadgePill(badge, pillClassName)).join("") +
+    "</div>"
+  );
 };
 const getAllergenValues = (dish) =>
   (dish.allergens || [])
@@ -733,6 +750,66 @@ const supportsInteractiveMedia = () =>
   typeof HTMLCanvasElement !== "undefined" &&
   typeof HTMLVideoElement !== "undefined";
 const getDishRotateDirection = (dish) => (dish?.media?.rotationDirection === "ccw" ? 1 : -1);
+const resolveInteractiveOrbitFrame = (rect) => {
+  const left = Number(rect?.left) || 0;
+  const top = Number(rect?.top) || 0;
+  const width = Math.max(0, Number(rect?.width) || 0);
+  const height = Math.max(0, Number(rect?.height) || 0);
+  const rx = width / 2;
+  const ry = height / 2;
+  return {
+    left,
+    top,
+    width,
+    height,
+    cx: left + rx,
+    cy: top + ry,
+    rx,
+    ry,
+    arcRadiusPx: (rx + ry) / 2,
+    deadZoneRadiusPx: Math.min(width, height) * 0.14
+  };
+};
+const readInteractiveOrbitSample = (clientX, clientY, frame) => {
+  if (
+    frame.width <= 0 ||
+    frame.height <= 0 ||
+    clientX < frame.left ||
+    clientX > frame.left + frame.width ||
+    clientY < frame.top ||
+    clientY > frame.top + frame.height
+  ) {
+    return { kind: "outside-host" };
+  }
+  const dx = clientX - frame.cx;
+  const dy = clientY - frame.cy;
+  const distancePx = Math.hypot(dx, dy);
+  if (distancePx <= frame.deadZoneRadiusPx) {
+    return { kind: "dead-zone" };
+  }
+  const normalizedDx = frame.rx > 0 ? dx / frame.rx : 0;
+  const normalizedDy = frame.ry > 0 ? dy / frame.ry : 0;
+  return {
+    kind: "sample",
+    angleRad: Math.atan2(normalizedDy, normalizedDx)
+  };
+};
+const unwrapInteractiveAngleDelta = (prevAngleRad, nextAngleRad) => {
+  let delta = nextAngleRad - prevAngleRad;
+  while (delta <= -Math.PI) delta += Math.PI * 2;
+  while (delta > Math.PI) delta -= Math.PI * 2;
+  return delta;
+};
+const resolveInteractiveVirtualDeltaPx = (prevAngleRad, nextAngleRad, frame) =>
+  -unwrapInteractiveAngleDelta(prevAngleRad, nextAngleRad) * frame.arcRadiusPx;
+const resolveInteractiveOrbitPixelsPerFrame = (host, dragFrameCount) => {
+  const frame = resolveInteractiveOrbitFrame(host.getBoundingClientRect());
+  const basePixelsPerFrame = Math.max(
+    1,
+    Number(((Math.PI * (frame.rx + frame.ry)) / Math.max(2, dragFrameCount)).toFixed(2))
+  );
+  return Math.max(1, Number((basePixelsPerFrame / INTERACTIVE_HERO_TOUCH_SCALE).toFixed(2)));
+};
 const getInteractiveAssetBytes = async (source) => {
   const normalized = normalizeInteractiveSource(source);
   if (!normalized) return null;
@@ -884,21 +961,26 @@ const blockFrozenEvent = (event) => {
 };
 const shouldBlockFrozenModalSurfaceEvent = (target) => {
   if (!interactiveModalSurfaceFrozen || !(target instanceof Element)) return false;
-  return Boolean(target.closest(".dish-modal__media, .dish-modal__backdrop, .dish-modal__flicker-debug"));
+  return Boolean(
+    target.closest(
+      ".dish-modal__media-slot, .dish-modal__media, .dish-modal__backdrop, .dish-modal__flicker-debug"
+    )
+  );
 };
 const clearRuntimeSurfaceTransientState = () => {
-  if (verticalSectionFocusRaf) {
-    cancelAnimationFrame(verticalSectionFocusRaf);
-    verticalSectionFocusRaf = 0;
+  if (sectionLaneFocusRaf) {
+    cancelAnimationFrame(sectionLaneFocusRaf);
+    sectionLaneFocusRaf = 0;
   }
-  if (verticalSectionSnapTimeout) {
-    window.clearTimeout(verticalSectionSnapTimeout);
-    verticalSectionSnapTimeout = 0;
+  if (sectionLaneSnapTimeout) {
+    window.clearTimeout(sectionLaneSnapTimeout);
+    sectionLaneSnapTimeout = 0;
   }
-  if (horizontalSectionSnapTimeout) {
-    window.clearTimeout(horizontalSectionSnapTimeout);
-    horizontalSectionSnapTimeout = 0;
-  }
+  sectionLaneWheelCarry = 0;
+  sectionLaneWheelCooldownUntil = 0;
+  sectionLaneWheelGestureUntil = 0;
+  sectionLaneWheelGestureConsumed = false;
+  sectionLaneTouchState = null;
   Array.from(recoilResetTimers.values()).forEach((timer) => {
     window.clearTimeout(timer);
   });
@@ -907,23 +989,14 @@ const clearRuntimeSurfaceTransientState = () => {
   scroll?.classList.remove("menu-scroll--recoil");
   scroll?.style.removeProperty("--menu-recoil-x");
   scroll?.style.removeProperty("--menu-recoil-y");
-  jukeboxWheelState.forEach((state) => {
+  itemLaneStateByCategory.forEach((state) => {
     if (state.settle) {
       window.clearTimeout(state.settle);
       state.settle = 0;
     }
     state.touch = null;
-    state.sectionCarry = 0;
-    state.sectionLockUntil = 0;
-    state.sectionGestureUntil = 0;
-    state.sectionGestureConsumed = false;
-  });
-  focusRowWheelState.forEach((state) => {
-    if (state.settle) {
-      window.clearTimeout(state.settle);
-      state.settle = 0;
-    }
-    state.touch = null;
+    state.wheelCarry = 0;
+    state.lockUntil = 0;
   });
 };
 const syncInteractiveModalSurfaceFrozenState = () => {
@@ -1099,11 +1172,11 @@ const setupInteractiveModalMedia = async (asset) => {
 
   const attachDragInteractions = (target, onDelta) => {
     let pointerId = null;
-    let lastX = 0;
+    let lastAngleRad = null;
 
     const onPointerDown = (event) => {
       pointerId = event.pointerId;
-      lastX = event.clientX;
+      lastAngleRad = null;
       host.classList.add("is-dragging-interactive");
       dismissModalInteractiveGuidance();
       try {
@@ -1115,10 +1188,22 @@ const setupInteractiveModalMedia = async (asset) => {
 
     const onPointerMove = (event) => {
       if (pointerId !== event.pointerId) return;
-      const deltaX = event.clientX - lastX;
-      lastX = event.clientX;
       dismissModalInteractiveGuidance();
-      onDelta(deltaX);
+      const frame = resolveInteractiveOrbitFrame(host.getBoundingClientRect());
+      const sample = readInteractiveOrbitSample(event.clientX, event.clientY, frame);
+      if (sample.kind !== "sample") {
+        lastAngleRad = null;
+        event.preventDefault();
+        return;
+      }
+      if (lastAngleRad === null) {
+        lastAngleRad = sample.angleRad;
+        event.preventDefault();
+        return;
+      }
+      const deltaPx = resolveInteractiveVirtualDeltaPx(lastAngleRad, sample.angleRad, frame);
+      lastAngleRad = sample.angleRad;
+      onDelta(deltaPx);
       event.preventDefault();
     };
 
@@ -1128,6 +1213,7 @@ const setupInteractiveModalMedia = async (asset) => {
         target.releasePointerCapture(pointerId);
       } catch {}
       pointerId = null;
+      lastAngleRad = null;
       target.classList.remove("is-dragging");
       host.classList.remove("is-dragging-interactive");
       dismissModalInteractiveGuidance();
@@ -1244,9 +1330,6 @@ const setupInteractiveModalMedia = async (asset) => {
 
     const duration = Math.max(0.001, Number(video.duration) || 0.001);
     const dragFrameCount = Math.max(2, asset.sprite?.frameCount || INTERACTIVE_DEFAULT_FRAME_COUNT);
-    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches
-      ? INTERACTIVE_PIXELS_PER_FRAME_COARSE
-      : INTERACTIVE_PIXELS_PER_FRAME_DESKTOP;
     let progress = 0;
 
     const render = () => {
@@ -1261,8 +1344,9 @@ const setupInteractiveModalMedia = async (asset) => {
 
     rendererNode = video;
     host.appendChild(video);
-    detachInteractions = attachDragInteractions(video, (deltaX) => {
-      progress += ((deltaX / pixelsPerFrame) * detailRotateDirection) / dragFrameCount;
+    detachInteractions = attachDragInteractions(video, (deltaPx) => {
+      const pixelsPerFrame = resolveInteractiveOrbitPixelsPerFrame(host, dragFrameCount);
+      progress += ((deltaPx / pixelsPerFrame) * detailRotateDirection) / dragFrameCount;
       render();
     });
 
@@ -1288,9 +1372,6 @@ const setupInteractiveModalMedia = async (asset) => {
     if (!ctx) return false;
 
     const frameCount = Math.max(2, Math.min(sprite.frameCount, sprite.columns * sprite.rows));
-    const pixelsPerFrame = window.matchMedia("(pointer: coarse)").matches
-      ? INTERACTIVE_PIXELS_PER_FRAME_COARSE
-      : INTERACTIVE_PIXELS_PER_FRAME_DESKTOP;
     let frameCursor = 0;
 
     const render = () => {
@@ -1315,8 +1396,9 @@ const setupInteractiveModalMedia = async (asset) => {
 
     rendererNode = canvas;
     host.appendChild(canvas);
-    detachInteractions = attachDragInteractions(canvas, (deltaX) => {
-      frameCursor += (deltaX / pixelsPerFrame) * detailRotateDirection;
+    detachInteractions = attachDragInteractions(canvas, (deltaPx) => {
+      const pixelsPerFrame = resolveInteractiveOrbitPixelsPerFrame(host, frameCount);
+      frameCursor += (deltaPx / pixelsPerFrame) * detailRotateDirection;
       render();
     });
 
@@ -1743,11 +1825,15 @@ const buildCarousel = (category) => {
       ${entries
         .map((entry) => {
           const srcSet = buildSrcSet(entry.item);
+          const description = textOf(entry.item.description);
           const priceHtml =
             entry.item.priceVisible === false
               ? ""
               : '<span class="carousel-price">' + formatPrice(entry.item.price.amount) + "</span>";
           const badgeHtml = renderBadgeList(entry.item, "carousel-meta");
+          const copyHtml = description
+            ? '<div class="carousel-copy"><p class="carousel-desc">' + description + "</p></div>"
+            : "";
           return `
             <button class="carousel-card" type="button" style="${getItemFontStyle(entry.item)}" data-item="${entry.item.id}" data-source="${entry.sourceIndex}">
               <div class="carousel-media is-loaded">
@@ -1755,11 +1841,11 @@ const buildCarousel = (category) => {
                 <img src="${TRANSPARENT_PIXEL_SRC}" data-media-src="${getCarouselImageSrc(entry.item)}" ${srcSet ? 'data-media-srcset="' + srcSet + '"' : ""} sizes="(max-width: 640px) 64vw, (max-width: 1200px) 34vw, 260px" alt="${textOf(entry.item.name)}" draggable="false" oncontextmenu="return false;" ondragstart="return false;" loading="lazy" decoding="async" fetchpriority="low" />
               </div>
               <div class="carousel-text">
-                <div class="carousel-row">
+                <div class="carousel-header">
                   <p class="carousel-title">${textOf(entry.item.name)}</p>
                   ${priceHtml}
                 </div>
-                <p class="carousel-desc">${textOf(entry.item.description)}</p>
+                ${copyHtml}
                 ${badgeHtml}
               </div>
             </button>
@@ -1781,6 +1867,7 @@ const render = () => {
     "";
   const identityMode = DATA.meta.identityMode === "logo" ? "logo" : "text";
   const logoSrc = (DATA.meta.logoSrc || "").trim();
+  const topbarIdentityMode = identityMode === "logo" && logoSrc ? "logo" : "text";
   const logoAlt = (restaurantName || menuTitle || "Restaurant").replace(/"/g, "&quot;");
   const templateClass = "template-" + activeTemplateId;
   const backgroundModeClass =
@@ -1804,7 +1891,7 @@ const render = () => {
       ${backgrounds
         .map(
           (item, index) =>
-            `<div class="menu-background ${index === activeBackgroundIndex ? "active" : ""}" data-bg-src="${item.src}"></div>`
+            `<div class="menu-background ${index === activeBackgroundIndex ? "active" : ""}" data-bg-src="${item.src}" style="${escapeHtml(backgroundFocusStyles[index] || "")}"></div>`
         )
         .join("")}
       <div class="menu-overlay"></div>
@@ -1841,7 +1928,7 @@ const render = () => {
           "</div>" +
           "</div>"
         : ""}
-      <header class="menu-topbar">
+      <header class="menu-topbar menu-topbar--${topbarIdentityMode}">
         <div class="menu-title-block">
           <div class="menu-title-content">
             ${identityMode === "logo" && logoSrc
@@ -1858,9 +1945,9 @@ const render = () => {
           </select>
         </div>
       </header>
-      ${isJukeboxTemplate() &&
+      ${SECTION_NAV_POLICY !== "never" &&
       DATA.categories.length > 1
-        ? '<div class="section-nav">' +
+        ? '<div class="section-nav section-nav--' + SECTION_NAV_POLICY + '">' +
           '<button class="section-nav__btn prev" type="button" data-section-dir="-1" aria-label="Previous section"><span aria-hidden="true">‹</span></button>' +
           '<button class="section-nav__btn next" type="button" data-section-dir="1" aria-label="Next section"><span aria-hidden="true">›</span></button>' +
           "</div>"
@@ -2162,46 +2249,192 @@ const bindCarouselNav = () => {
   });
 };
 
+const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+const AXIS_INTENT_MIN_PX = 8;
+const AXIS_DOMINANCE_RATIO = 1.12;
+const SECTION_FOCUS_BAND_START_RATIO = 0.45;
+const SECTION_FOCUS_BAND_END_RATIO = 0.55;
 const HORIZONTAL_INDEX_HYSTERESIS_PX = 24;
+const VERTICAL_INDEX_HYSTERESIS_PX = 24;
+const ITEM_LANE_WHEEL_STEP_THRESHOLD =
+  ITEM_LANE_AXIS === "horizontal" ? FOCUS_ROWS_WHEEL_STEP_THRESHOLD : JUKEBOX_WHEEL_STEP_THRESHOLD;
+const ITEM_LANE_WHEEL_SETTLE_MS =
+  ITEM_LANE_AXIS === "horizontal" ? FOCUS_ROWS_WHEEL_SETTLE_MS : JUKEBOX_WHEEL_SETTLE_MS;
+const ITEM_LANE_TOUCH_DELTA_SCALE =
+  ITEM_LANE_AXIS === "horizontal" ? FOCUS_ROWS_TOUCH_DELTA_SCALE : JUKEBOX_TOUCH_DELTA_SCALE;
+const ITEM_LANE_TOUCH_INTENT_THRESHOLD =
+  ITEM_LANE_AXIS === "horizontal"
+    ? FOCUS_ROWS_TOUCH_INTENT_THRESHOLD
+    : JUKEBOX_TOUCH_INTENT_THRESHOLD;
+const ITEM_LANE_WHEEL_DELTA_CAP =
+  ITEM_LANE_AXIS === "horizontal" ? FOCUS_ROWS_WHEEL_DELTA_CAP : JUKEBOX_WHEEL_DELTA_CAP;
+const HORIZONTAL_SECTION_MIN_SPAN_PX = 240;
 let stableHorizontalSectionIndex = -1;
-const getClosestHorizontalSectionIndex = (container) => {
+let stableVerticalSectionIndex = -1;
+const sectionLaneFrameCache = new WeakMap();
+const isWideLayoutViewport = () =>
+  typeof window.matchMedia === "function" &&
+  window.matchMedia("(orientation: landscape), (min-width: 900px)").matches;
+
+const getSectionMetrics = (container, axis) => {
+  if (axis === "horizontal") {
+    return {
+      size: container.clientWidth,
+      scroll: container.scrollLeft,
+      setEdgeVars: (start, end, peek, span) => {
+        container.style.setProperty("--section-edge-inline-start", start + "px");
+        container.style.setProperty("--section-edge-inline-end", end + "px");
+        container.style.setProperty("--section-peek-inline", peek + "px");
+        container.style.setProperty("--section-span-inline", span + "px");
+      }
+    };
+  }
+  return {
+    size: container.clientHeight,
+    scroll: container.scrollTop,
+    setEdgeVars: (start, end, _peek, _span) => {
+      container.style.setProperty("--section-edge-block-start", start + "px");
+      container.style.setProperty("--section-edge-block-end", end + "px");
+      container.style.removeProperty("--section-span-inline");
+    }
+  };
+};
+
+const getSectionCenter = (section, axis) =>
+  axis === "horizontal"
+    ? section.offsetLeft + section.offsetWidth / 2
+    : section.offsetTop + section.offsetHeight / 2;
+
+const getSectionSize = (section, axis) =>
+  axis === "horizontal" ? section.offsetWidth : section.offsetHeight;
+
+const resolveHorizontalSectionLaneFrame = (
+  laneSizePx,
+  wideFocusLayout,
+  isWideViewport,
+  wideSectionPeekRatio = 0.25
+) => {
+  if (wideFocusLayout === "two-zone" && isWideViewport) {
+    const edgePx = Math.max(18, Math.round(laneSizePx * wideSectionPeekRatio));
+    const sectionSpanPx = Math.max(HORIZONTAL_SECTION_MIN_SPAN_PX, laneSizePx - edgePx * 2);
+    return {
+      peekPx: edgePx,
+      sectionSpanPx,
+      edgeStartPx: edgePx,
+      edgeEndPx: edgePx
+    };
+  }
+  const peekPx = clamp(Math.round(laneSizePx * 0.06), 16, 42);
+  const sectionSpanPx = Math.max(HORIZONTAL_SECTION_MIN_SPAN_PX, laneSizePx - peekPx * 2);
+  const edgePx = Math.max(peekPx, Math.round(laneSizePx * 0.5 - sectionSpanPx / 2));
+  return {
+    peekPx,
+    sectionSpanPx,
+    edgeStartPx: edgePx,
+    edgeEndPx: edgePx
+  };
+};
+
+const getPrimaryTouchValue = (touch, axis) =>
+  axis === "vertical" ? touch.clientY : touch.clientX;
+
+const readWheelAxisDelta = (event, axis) =>
+  axis === "horizontal"
+    ? Math.abs(event.deltaX) > 0.1
+      ? event.deltaX
+      : event.shiftKey
+        ? event.deltaY
+        : 0
+    : event.deltaY;
+
+const normalizeItemLaneWheelDelta = (event) => {
+  const modeScale = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? 240 : 1;
+  const scaled = readWheelAxisDelta(event, ITEM_LANE_AXIS) * modeScale;
+  return clamp(scaled, -ITEM_LANE_WHEEL_DELTA_CAP, ITEM_LANE_WHEEL_DELTA_CAP);
+};
+
+const resolveWheelLaneIntent = (event) => {
+  const sectionDelta = readWheelAxisDelta(event, SECTION_LANE_AXIS);
+  const itemDelta = readWheelAxisDelta(event, ITEM_LANE_AXIS);
+  const sectionMagnitude = Math.abs(sectionDelta);
+  const itemMagnitude = Math.abs(itemDelta);
+  if (sectionMagnitude < AXIS_INTENT_MIN_PX && itemMagnitude < AXIS_INTENT_MIN_PX) {
+    return { sectionIntent: false, itemIntent: false, sectionDelta: 0 };
+  }
+  const sectionIntent =
+    sectionMagnitude >= AXIS_INTENT_MIN_PX &&
+    (itemMagnitude < AXIS_INTENT_MIN_PX ||
+      sectionMagnitude >= itemMagnitude * AXIS_DOMINANCE_RATIO);
+  const itemIntent =
+    itemMagnitude >= AXIS_INTENT_MIN_PX &&
+    (sectionMagnitude < AXIS_INTENT_MIN_PX ||
+      itemMagnitude >= sectionMagnitude * AXIS_DOMINANCE_RATIO);
+  if (sectionIntent && !itemIntent) {
+    return { sectionIntent: true, itemIntent: false, sectionDelta };
+  }
+  if (itemIntent && !sectionIntent) {
+    return { sectionIntent: false, itemIntent: true, sectionDelta: 0 };
+  }
+  if (sectionMagnitude >= itemMagnitude) {
+    return { sectionIntent: true, itemIntent: false, sectionDelta };
+  }
+  return { sectionIntent: false, itemIntent: true, sectionDelta: 0 };
+};
+
+const resolveFocusedSectionIndexByAxis = (container, axis) => {
   const sections = Array.from(container.querySelectorAll(".menu-section"));
   if (sections.length === 0) {
-    stableHorizontalSectionIndex = -1;
+    if (axis === "horizontal") {
+      stableHorizontalSectionIndex = -1;
+    } else {
+      stableVerticalSectionIndex = -1;
+    }
     return -1;
   }
-  const center = container.scrollLeft + container.clientWidth / 2;
+  const { size, scroll } = getSectionMetrics(container, axis);
+  const focusBandStart = scroll + size * SECTION_FOCUS_BAND_START_RATIO;
+  const focusBandEnd = scroll + size * SECTION_FOCUS_BAND_END_RATIO;
+  const focusAnchor = scroll + size * 0.5;
   let closestIndex = 0;
   let closestDistance = Number.POSITIVE_INFINITY;
   sections.forEach((section, index) => {
-    const sectionCenter = section.offsetLeft + section.offsetWidth / 2;
-    const distance = Math.abs(sectionCenter - center);
+    const center = getSectionCenter(section, axis);
+    const distance = Math.abs(center - focusAnchor);
     if (distance < closestDistance) {
       closestDistance = distance;
       closestIndex = index;
     }
   });
 
-  if (
-    stableHorizontalSectionIndex >= 0 &&
-    stableHorizontalSectionIndex < sections.length &&
-    stableHorizontalSectionIndex !== closestIndex
-  ) {
-    const stableSection = sections[stableHorizontalSectionIndex];
-    const stableCenter = stableSection.offsetLeft + stableSection.offsetWidth / 2;
-    const stableDistance = Math.abs(stableCenter - center);
-    const hysteresisPx = Math.max(
-      HORIZONTAL_INDEX_HYSTERESIS_PX,
-      Math.round(container.clientWidth * 0.04)
-    );
-    if (stableDistance <= closestDistance + hysteresisPx) {
-      closestIndex = stableHorizontalSectionIndex;
+  const stableIndex = axis === "horizontal" ? stableHorizontalSectionIndex : stableVerticalSectionIndex;
+  if (stableIndex >= 0 && stableIndex < sections.length && stableIndex !== closestIndex) {
+    const stableCenter = getSectionCenter(sections[stableIndex], axis);
+    const stableDistance = Math.abs(stableCenter - focusAnchor);
+    if (stableCenter >= focusBandStart && stableCenter <= focusBandEnd) {
+      closestIndex = stableIndex;
+    } else {
+      const hysteresisPx = Math.max(
+        axis === "horizontal" ? HORIZONTAL_INDEX_HYSTERESIS_PX : VERTICAL_INDEX_HYSTERESIS_PX,
+        Math.round(size * 0.04)
+      );
+      if (stableDistance <= closestDistance + hysteresisPx) {
+        closestIndex = stableIndex;
+      }
     }
   }
 
-  stableHorizontalSectionIndex = closestIndex;
+  if (axis === "horizontal") {
+    stableHorizontalSectionIndex = closestIndex;
+  } else {
+    stableVerticalSectionIndex = closestIndex;
+  }
   return closestIndex;
 };
+
+const getClosestHorizontalSectionIndex = (container) =>
+  resolveFocusedSectionIndexByAxis(container, "horizontal");
+
+const getClosestSectionIndex = (container) => resolveFocusedSectionIndexByAxis(container, "vertical");
 
 const centerSectionHorizontally = (container, index, behavior = "smooth") => {
   const sections = Array.from(container.querySelectorAll(".menu-section"));
@@ -2209,6 +2442,63 @@ const centerSectionHorizontally = (container, index, behavior = "smooth") => {
   if (!target || container.clientWidth === 0) return;
   const targetLeft = target.offsetLeft + target.offsetWidth / 2 - container.clientWidth / 2;
   container.scrollTo({ left: targetLeft, behavior });
+};
+
+const centerSection = (container, index, behavior = "smooth") => {
+  const sections = Array.from(container.querySelectorAll(".menu-section"));
+  const target = sections[index];
+  if (!target || container.clientHeight === 0) return;
+  const targetTop = target.offsetTop + target.offsetHeight / 2 - container.clientHeight / 2;
+  container.scrollTo({ top: targetTop, behavior });
+};
+
+const syncSectionLaneFrame = (container) => {
+  const sections = Array.from(container.querySelectorAll(".menu-section"));
+  if (sections.length === 0) return;
+  const { size, setEdgeVars } = getSectionMetrics(container, SECTION_LANE_AXIS);
+  if (SECTION_LANE_AXIS === "horizontal") {
+      const { peekPx, sectionSpanPx, edgeStartPx, edgeEndPx } = resolveHorizontalSectionLaneFrame(
+        size,
+        WIDE_FOCUS_LAYOUT,
+        isWideLayoutViewport(),
+        WIDE_SECTION_PEEK_RATIO
+      );
+    const frameKey = "h:" + size + ":" + peekPx + ":" + sectionSpanPx + ":" + edgeStartPx + ":" + edgeEndPx;
+    if (sectionLaneFrameCache.get(container) === frameKey) return;
+    setEdgeVars(edgeStartPx, edgeEndPx, peekPx, sectionSpanPx);
+    sectionLaneFrameCache.set(container, frameKey);
+    return;
+  }
+  const first = sections[0];
+  const last = sections[sections.length - 1];
+  const peekPx = clamp(Math.round(size * 0.07), 18, 54);
+  const start = Math.max(
+    peekPx,
+    Math.round(size * 0.5 - getSectionSize(first, SECTION_LANE_AXIS) / 2)
+  );
+  const end = Math.max(
+    peekPx,
+    Math.round(size * 0.5 - getSectionSize(last, SECTION_LANE_AXIS) / 2)
+  );
+  const frameKey = "v:" + size + ":" + peekPx + ":" + start + ":" + end;
+  if (sectionLaneFrameCache.get(container) === frameKey) return;
+  setEdgeVars(start, end, peekPx, 0);
+  sectionLaneFrameCache.set(container, frameKey);
+};
+
+const getFocusedSectionIndex = (container = app.querySelector(".menu-scroll")) => {
+  if (!DATA.categories.length) return -1;
+  if (!container) return 0;
+  syncSectionLaneFrame(container);
+  return resolveFocusedSectionIndexByAxis(container, SECTION_LANE_AXIS);
+};
+
+const centerSectionByLane = (container, index, behavior = "smooth") => {
+  if (SECTION_LANE_AXIS === "horizontal") {
+    centerSectionHorizontally(container, index, behavior);
+    return;
+  }
+  centerSection(container, index, behavior);
 };
 
 const recoilResetTimers = new Map();
@@ -2239,6 +2529,38 @@ const triggerSectionBoundaryRecoil = (container, axis, direction) => {
   recoilResetTimers.set(container, timer);
 };
 
+const applySectionFocus = (container) => {
+  if (interactiveModalSurfaceFrozen) return;
+  syncSectionLaneFrame(container);
+  const sections = Array.from(container.querySelectorAll(".menu-section"));
+  if (sections.length === 0) return;
+  const { size, scroll } = getSectionMetrics(container, SECTION_LANE_AXIS);
+  const focusAnchor = scroll + size * 0.5;
+  const maxDistance = Math.max(size * 0.6, 1);
+  const closestIndex = getFocusedSectionIndex(container);
+  syncBackgroundForSectionIndex(closestIndex);
+  sections.forEach((section, index) => {
+    const sectionCenter = getSectionCenter(section, SECTION_LANE_AXIS);
+    const distance = Math.abs(sectionCenter - focusAnchor);
+    const ratio = Math.min(1, distance / maxDistance);
+    const focus = 1 - ratio * 0.14;
+    section.style.setProperty("--section-focus", focus.toFixed(3));
+    section.classList.toggle("is-centered", index === closestIndex);
+  });
+};
+
+const snapSectionLane = (container, behavior = "smooth") => {
+  if (interactiveModalSurfaceFrozen) {
+    recordFrozenSurfaceBlockedEvent();
+    return;
+  }
+  syncSectionLaneFrame(container);
+  const index = getFocusedSectionIndex(container);
+  if (index < 0) return;
+  centerSectionByLane(container, index, behavior);
+  syncBackgroundForSectionIndex(index);
+};
+
 const shiftSection = (direction, behavior = "smooth") => {
   if (interactiveModalSurfaceFrozen) {
     recordFrozenSurfaceBlockedEvent();
@@ -2246,29 +2568,19 @@ const shiftSection = (direction, behavior = "smooth") => {
   }
   const container = app.querySelector(".menu-scroll");
   if (!container) return;
+  syncSectionLaneFrame(container);
   const sections = Array.from(container.querySelectorAll(".menu-section"));
   if (sections.length <= 1) return;
-  const current = isJukeboxTemplate()
-    ? getClosestHorizontalSectionIndex(container)
-    : getClosestSectionIndex(container);
+  const current = getFocusedSectionIndex(container);
   if (current < 0) return;
   const next = Math.min(sections.length - 1, Math.max(0, current + direction));
   if (next === current) {
-    triggerSectionBoundaryRecoil(
-      container,
-      isJukeboxTemplate() ? "horizontal" : "vertical",
-      direction
-    );
+    triggerSectionBoundaryRecoil(container, SECTION_LANE_AXIS, direction);
     return;
   }
-  if (isJukeboxTemplate()) {
-    centerSectionHorizontally(container, next, behavior);
-    syncBackgroundForSectionIndex(next);
-    return;
-  }
-  centerSection(container, next, behavior);
-  applySectionFocus(container);
+  centerSectionByLane(container, next, behavior);
   syncBackgroundForSectionIndex(next);
+  applySectionFocus(container);
 };
 
 const isEditableKeyboardTarget = (target) => {
@@ -2281,13 +2593,11 @@ const isEditableKeyboardTarget = (target) => {
   );
 };
 
-const getActiveSectionCategoryId = () => {
+const getFocusedSectionCategoryId = () => {
   if (!DATA.categories.length) return null;
   const container = app.querySelector(".menu-scroll");
   if (!container) return DATA.categories[0]?.id || null;
-  const index = isJukeboxTemplate()
-    ? getClosestHorizontalSectionIndex(container)
-    : getClosestSectionIndex(container);
+  const index = getFocusedSectionIndex(container);
   if (index < 0) return DATA.categories[0]?.id || null;
   return DATA.categories[index]?.id || DATA.categories[0]?.id || null;
 };
@@ -2314,59 +2624,150 @@ const handleKeyboardNavigation = (event) => {
   if (!window.matchMedia("(min-width: 900px)").matches) return;
   if (modal?.classList.contains("open")) return;
 
-  const categoryId = getActiveSectionCategoryId();
+  const categoryId = getFocusedSectionCategoryId();
   if (!categoryId) return;
 
-  if (isJukeboxTemplate()) {
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      dismissRuntimeGuidance();
-      shiftSection(-1);
-      return;
-    }
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      dismissRuntimeGuidance();
-      shiftSection(1);
-      return;
-    }
-    if (event.key === "ArrowUp") {
-      event.preventDefault();
-      dismissRuntimeGuidance();
-      shiftCarousel(categoryId, -1);
-      return;
-    }
-    if (event.key === "ArrowDown") {
-      event.preventDefault();
-      dismissRuntimeGuidance();
-      shiftCarousel(categoryId, 1);
-    }
-    return;
-  }
+  const sectionBackKey = SECTION_LANE_AXIS === "horizontal" ? "ArrowLeft" : "ArrowUp";
+  const sectionForwardKey = SECTION_LANE_AXIS === "horizontal" ? "ArrowRight" : "ArrowDown";
+  const itemBackKey = ITEM_LANE_AXIS === "horizontal" ? "ArrowLeft" : "ArrowUp";
+  const itemForwardKey = ITEM_LANE_AXIS === "horizontal" ? "ArrowRight" : "ArrowDown";
 
-  if (event.key === "ArrowUp") {
+  if (event.key === sectionBackKey) {
     event.preventDefault();
     dismissRuntimeGuidance();
     shiftSection(-1);
     return;
   }
-  if (event.key === "ArrowDown") {
+  if (event.key === sectionForwardKey) {
     event.preventDefault();
     dismissRuntimeGuidance();
     shiftSection(1);
     return;
   }
-  if (event.key === "ArrowLeft") {
+  if (event.key === itemBackKey) {
     event.preventDefault();
     dismissRuntimeGuidance();
     shiftCarousel(categoryId, -1);
     return;
   }
-  if (event.key === "ArrowRight") {
+  if (event.key === itemForwardKey) {
     event.preventDefault();
     dismissRuntimeGuidance();
     shiftCarousel(categoryId, 1);
   }
+};
+
+const getCarouselContainer = (categoryId) =>
+  app.querySelector('.menu-carousel[data-category-id="' + categoryId + '"]');
+
+const getCarouselItemCount = (categoryId) =>
+  DATA.categories.find((item) => item.id === categoryId)?.items.length || 0;
+
+const getItemLaneState = (categoryId) => {
+  const existing = itemLaneStateByCategory.get(categoryId);
+  if (existing) return existing;
+  const state = { settle: 0, touch: null, wheelCarry: 0, lockUntil: 0 };
+  itemLaneStateByCategory.set(categoryId, state);
+  return state;
+};
+
+const queueItemLaneSnap = (categoryId, count) => {
+  const state = getItemLaneState(categoryId);
+  if (state.settle) {
+    window.clearTimeout(state.settle);
+  }
+  state.settle = window.setTimeout(() => {
+    const container = getCarouselContainer(categoryId);
+    if (!container) {
+      state.settle = 0;
+      return;
+    }
+    const activeIndex = Number(container.dataset.activeIndex || "0") || 0;
+    const normalized = wrapCarouselIndex(Math.round(activeIndex), count);
+    container.dataset.activeIndex = String(normalized);
+    applyFocusState(container, normalized, count);
+    state.settle = 0;
+    state.wheelCarry = 0;
+    state.lockUntil = 0;
+  }, ITEM_LANE_WHEEL_SETTLE_MS);
+};
+
+const shiftItemLaneOneStep = (categoryId, direction) => {
+  if (!direction) return;
+  const container = getCarouselContainer(categoryId);
+  const count = getCarouselItemCount(categoryId);
+  if (!container || count <= 1) return;
+  const state = getItemLaneState(categoryId);
+  const current = Number(container.dataset.activeIndex || "0") || 0;
+  const next = wrapCarouselIndex(Math.round(current) + Math.sign(direction), count);
+  container.dataset.activeIndex = String(next);
+  applyFocusState(container, next, count);
+  state.lockUntil = Date.now() + ITEM_LANE_WHEEL_SETTLE_MS;
+  state.wheelCarry = 0;
+  queueItemLaneSnap(categoryId, count);
+};
+
+const applyItemLaneDelta = (categoryId, delta) => {
+  if (!delta) return;
+  const count = getCarouselItemCount(categoryId);
+  if (count <= 1) return;
+  const state = getItemLaneState(categoryId);
+  if (Date.now() < state.lockUntil) return;
+  state.wheelCarry += delta;
+  if (Math.abs(state.wheelCarry) < ITEM_LANE_WHEEL_STEP_THRESHOLD) return;
+  shiftItemLaneOneStep(categoryId, state.wheelCarry > 0 ? 1 : -1);
+};
+
+const beginItemLaneTouch = (categoryId, event) => {
+  const touch = event.changedTouches?.[0];
+  if (!touch) return;
+  const state = getItemLaneState(categoryId);
+  state.touch = {
+    id: touch.identifier,
+    startX: touch.clientX,
+    startY: touch.clientY,
+    lastPrimary: getPrimaryTouchValue(touch, ITEM_LANE_AXIS),
+    axis: "pending"
+  };
+};
+
+const moveItemLaneTouch = (categoryId, event) => {
+  const state = getItemLaneState(categoryId);
+  if (!state.touch) return false;
+  const touch = Array.from(event.touches || []).find(
+    (entry) => entry.identifier === state.touch.id
+  );
+  if (!touch) return false;
+  const totalDx = touch.clientX - state.touch.startX;
+  const totalDy = touch.clientY - state.touch.startY;
+  const primaryMagnitude =
+    ITEM_LANE_AXIS === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
+  const secondaryMagnitude =
+    ITEM_LANE_AXIS === "vertical" ? Math.abs(totalDx) : Math.abs(totalDy);
+  if (
+    state.touch.axis === "pending" &&
+    Math.max(Math.abs(totalDx), Math.abs(totalDy)) >= ITEM_LANE_TOUCH_INTENT_THRESHOLD
+  ) {
+    state.touch.axis = primaryMagnitude >= secondaryMagnitude ? "primary" : "secondary";
+  }
+  if (state.touch.axis !== "primary") return false;
+  event.preventDefault();
+  const currentPrimary = getPrimaryTouchValue(touch, ITEM_LANE_AXIS);
+  const delta = currentPrimary - state.touch.lastPrimary;
+  state.touch.lastPrimary = currentPrimary;
+  if (Math.abs(delta) < 0.2) return true;
+  applyItemLaneDelta(categoryId, -delta * ITEM_LANE_TOUCH_DELTA_SCALE);
+  return true;
+};
+
+const endItemLaneTouch = (categoryId, event) => {
+  const state = getItemLaneState(categoryId);
+  if (!state.touch) return;
+  const ended = Array.from(event.changedTouches || []).some(
+    (entry) => entry.identifier === state.touch.id
+  );
+  if (!ended) return;
+  state.touch = null;
 };
 
 const bindSectionNav = () => {
@@ -2401,289 +2802,68 @@ const bindCarousels = () => {
   const carousels = Array.from(document.querySelectorAll(".menu-carousel"));
   carousels.forEach((container) => {
     const id = container.dataset.categoryId;
-    const category = DATA.categories.find((item) => item.id === id);
-    const count = category?.items.length || 0;
-    if (count === 0) return;
-    if (isJukeboxTemplate()) {
-      const start = 0;
-      container.dataset.activeIndex = String(start);
-      applyFocusState(container, start, count);
-      const state = jukeboxWheelState.get(id) || {
-        settle: 0,
-        touch: null,
-        sectionCarry: 0,
-        sectionLockUntil: 0,
-        sectionGestureUntil: 0,
-        sectionGestureConsumed: false
-      };
-      jukeboxWheelState.set(id, state);
-      const queueSnap = () => {
-        if (state.settle) window.clearTimeout(state.settle);
-        state.settle = window.setTimeout(() => {
-          const activeIndex = Number(container.dataset.activeIndex || "0") || 0;
-          const normalized = wrapCarouselIndex(Math.round(activeIndex), count);
-          container.dataset.activeIndex = String(normalized);
-          applyFocusState(container, normalized, count);
-          state.settle = 0;
-        }, JUKEBOX_WHEEL_SETTLE_MS);
-      };
-      const applyDelta = (delta) => {
-        if (!delta) return;
-        const cappedDelta =
-          JUKEBOX_MAX_STEP_PER_INPUT > 0
-            ? Math.max(
-                -JUKEBOX_WHEEL_STEP_THRESHOLD * JUKEBOX_MAX_STEP_PER_INPUT,
-                Math.min(JUKEBOX_WHEEL_STEP_THRESHOLD * JUKEBOX_MAX_STEP_PER_INPUT, delta)
-              )
-            : delta;
-        if (!cappedDelta) return;
-        const current = Number(container.dataset.activeIndex || "0") || 0;
-        const next = wrapCarouselIndex(
-          current + cappedDelta / JUKEBOX_WHEEL_STEP_THRESHOLD,
-          count
-        );
-        container.dataset.activeIndex = String(next);
-        applyFocusState(container, next, count);
-        queueSnap();
-      };
-      const onWheel = (event) => {
-        if (interactiveModalSurfaceFrozen) {
-          blockFrozenEvent(event);
-          return;
-        }
-        const absX = Math.abs(event.deltaX);
-        const absY = Math.abs(event.deltaY);
-        if (absX <= 1 && absY <= 1) return;
-        const horizontalDelta =
-          absX >= JUKEBOX_HORIZONTAL_WHEEL_MIN_PX ? event.deltaX : event.shiftKey ? event.deltaY : 0;
-        const verticalIntent =
-          !event.shiftKey &&
-          absY >= JUKEBOX_VERTICAL_WHEEL_MIN_PX &&
-          (absX < JUKEBOX_HORIZONTAL_WHEEL_MIN_PX || absY >= absX * JUKEBOX_VERTICAL_DOMINANCE_RATIO);
-        const horizontalIntent =
-          Math.abs(horizontalDelta) >= JUKEBOX_HORIZONTAL_WHEEL_MIN_PX && !verticalIntent;
-        if (horizontalIntent) {
-          event.preventDefault();
-          dismissRuntimeGuidance();
-          const now = Date.now();
-          const inGesture = now <= (state.sectionGestureUntil || 0);
-          state.sectionGestureUntil = now + JUKEBOX_HORIZONTAL_GESTURE_IDLE_MS;
-          if (!inGesture) {
-            state.sectionCarry = 0;
-            state.sectionGestureConsumed = false;
-          }
-          if (state.sectionGestureConsumed) return;
-          if (now < (state.sectionLockUntil || 0)) return;
-          state.sectionCarry = (state.sectionCarry || 0) + horizontalDelta;
-          if (Math.abs(state.sectionCarry) < JUKEBOX_HORIZONTAL_SECTION_THRESHOLD_PX) return;
-          const direction = state.sectionCarry > 0 ? 1 : -1;
-          const menuScroll = app.querySelector(".menu-scroll");
-          const sections = menuScroll
-            ? Array.from(menuScroll.querySelectorAll(".menu-section"))
-            : [];
-          const currentIndex = menuScroll ? getClosestHorizontalSectionIndex(menuScroll) : -1;
-          if (
-            sections.length > 0 &&
-            currentIndex >= 0 &&
-            ((direction < 0 && currentIndex <= 0) ||
-              (direction > 0 && currentIndex >= sections.length - 1))
-          ) {
-            state.sectionCarry = 0;
-            triggerSectionBoundaryRecoil(menuScroll, "horizontal", direction);
-            return;
-          }
-          state.sectionCarry = 0;
-          state.sectionGestureConsumed = true;
-          state.sectionLockUntil = now + JUKEBOX_SECTION_WHEEL_COOLDOWN_MS;
-          shiftSection(direction);
-          return;
-        }
-        if (!verticalIntent) return;
-        state.sectionCarry = 0;
-        state.sectionGestureConsumed = false;
-        state.sectionGestureUntil = 0;
-        event.preventDefault();
-        dismissRuntimeGuidance();
-        const delta = normalizeJukeboxWheelDelta(event);
-        if (!delta) return;
-        applyDelta(delta);
-      };
-      const onTouchStart = (event) => {
-        if (interactiveModalSurfaceFrozen) {
-          recordFrozenSurfaceBlockedEvent();
-          return;
-        }
-        const touch = event.changedTouches?.[0];
-        if (!touch) return;
-        state.touch = {
-          id: touch.identifier,
-          startX: touch.clientX,
-          startY: touch.clientY,
-          lastY: touch.clientY,
-          axis: "pending"
-        };
-      };
-      const onTouchMove = (event) => {
-        if (interactiveModalSurfaceFrozen) {
-          blockFrozenEvent(event);
-          return;
-        }
-        if (!state.touch) return;
-        const touch = Array.from(event.touches || []).find(
-          (entry) => entry.identifier === state.touch.id
-        );
-        if (!touch) return;
-        const totalDx = touch.clientX - state.touch.startX;
-        const totalDy = touch.clientY - state.touch.startY;
-        if (
-          state.touch.axis === "pending" &&
-          Math.max(Math.abs(totalDx), Math.abs(totalDy)) >= JUKEBOX_TOUCH_INTENT_THRESHOLD
-        ) {
-          state.touch.axis = Math.abs(totalDy) >= Math.abs(totalDx) ? "vertical" : "horizontal";
-        }
-        if (state.touch.axis !== "vertical") return;
-        event.preventDefault();
-        dismissRuntimeGuidance();
-        const deltaY = touch.clientY - state.touch.lastY;
-        state.touch.lastY = touch.clientY;
-        if (Math.abs(deltaY) < 0.2) return;
-        applyDelta(-deltaY * JUKEBOX_TOUCH_DELTA_SCALE);
-      };
-      const clearTouch = (event) => {
-        if (!state.touch) return;
-        const ended = Array.from(event.changedTouches || []).some(
-          (entry) => entry.identifier === state.touch.id
-        );
-        if (!ended) return;
-        state.touch = null;
-      };
-      container.addEventListener("wheel", onWheel, { passive: false });
-      container.addEventListener("touchstart", onTouchStart, { passive: true });
-      container.addEventListener("touchmove", onTouchMove, { passive: false });
-      container.addEventListener("touchend", clearTouch, { passive: true });
-      container.addEventListener("touchcancel", clearTouch, { passive: true });
-      carouselCleanup.push(() => {
-        container.removeEventListener("wheel", onWheel);
-        container.removeEventListener("touchstart", onTouchStart);
-        container.removeEventListener("touchmove", onTouchMove);
-        container.removeEventListener("touchend", clearTouch);
-        container.removeEventListener("touchcancel", clearTouch);
-        if (state.settle) {
-          window.clearTimeout(state.settle);
-        }
-        state.touch = null;
-        jukeboxWheelState.delete(id);
-      });
-      return;
-    }
-    const start = 0;
-    container.dataset.activeIndex = String(start);
-    applyFocusState(container, start, count);
-    const state = focusRowWheelState.get(id) || { settle: 0, touch: null };
-    focusRowWheelState.set(id, state);
-    const queueSnap = () => {
-      if (state.settle) window.clearTimeout(state.settle);
-      state.settle = window.setTimeout(() => {
-        const activeIndex = Number(container.dataset.activeIndex || "0") || 0;
-        const normalized = wrapCarouselIndex(Math.round(activeIndex), count);
-        container.dataset.activeIndex = String(normalized);
-        applyFocusState(container, normalized, count);
-        state.settle = 0;
-      }, FOCUS_ROWS_WHEEL_SETTLE_MS);
-    };
-    const applyDelta = (delta) => {
-      if (!delta) return;
-      const cappedDelta =
-        FOCUS_ROWS_MAX_STEP_PER_INPUT > 0
-          ? Math.max(
-              -FOCUS_ROWS_WHEEL_STEP_THRESHOLD * FOCUS_ROWS_MAX_STEP_PER_INPUT,
-              Math.min(FOCUS_ROWS_WHEEL_STEP_THRESHOLD * FOCUS_ROWS_MAX_STEP_PER_INPUT, delta)
-            )
-          : delta;
-      if (!cappedDelta) return;
-      const current = Number(container.dataset.activeIndex || "0") || 0;
-      const next = wrapCarouselIndex(current + cappedDelta / FOCUS_ROWS_WHEEL_STEP_THRESHOLD, count);
-      container.dataset.activeIndex = String(next);
-      applyFocusState(container, next, count);
-      queueSnap();
-    };
+    const count = getCarouselItemCount(id);
+    if (!id || count === 0) return;
+    container.dataset.activeIndex = "0";
+    applyFocusState(container, 0, count);
+    getItemLaneState(id);
+
+    let routedTouchCategoryId = null;
+
     const onWheel = (event) => {
       if (interactiveModalSurfaceFrozen) {
         blockFrozenEvent(event);
         return;
       }
-      if (Math.abs(event.deltaX) <= Math.abs(event.deltaY)) return;
+      if (event.defaultPrevented) return;
+      const intent = resolveWheelLaneIntent(event);
+      if (!intent.itemIntent) return;
       event.preventDefault();
       dismissRuntimeGuidance();
-      const delta = normalizeFocusRowWheelDelta(event);
+      const targetCategoryId = getFocusedSectionCategoryId() || id;
+      const delta = normalizeItemLaneWheelDelta(event);
       if (!delta) return;
-      applyDelta(delta);
+      applyItemLaneDelta(targetCategoryId, delta);
     };
+
     const onTouchStart = (event) => {
       if (interactiveModalSurfaceFrozen) {
         recordFrozenSurfaceBlockedEvent();
         return;
       }
-      const touch = event.changedTouches?.[0];
-      if (!touch) return;
-      state.touch = {
-        id: touch.identifier,
-        startX: touch.clientX,
-        startY: touch.clientY,
-        lastX: touch.clientX,
-        axis: "pending"
-      };
+      routedTouchCategoryId = getFocusedSectionCategoryId() || id;
+      beginItemLaneTouch(routedTouchCategoryId, event);
     };
+
     const onTouchMove = (event) => {
       if (interactiveModalSurfaceFrozen) {
         blockFrozenEvent(event);
         return;
       }
-      if (!state.touch) return;
-      const touch = Array.from(event.touches || []).find(
-        (entry) => entry.identifier === state.touch.id
-      );
-      if (!touch) return;
-      const totalDx = touch.clientX - state.touch.startX;
-      const totalDy = touch.clientY - state.touch.startY;
-      if (
-        state.touch.axis === "pending" &&
-        Math.max(Math.abs(totalDx), Math.abs(totalDy)) >= FOCUS_ROWS_TOUCH_INTENT_THRESHOLD
-      ) {
-        state.touch.axis = Math.abs(totalDx) >= Math.abs(totalDy) ? "horizontal" : "vertical";
+      const targetCategoryId = routedTouchCategoryId || getFocusedSectionCategoryId() || id;
+      if (moveItemLaneTouch(targetCategoryId, event)) {
+        dismissRuntimeGuidance();
       }
-      if (state.touch.axis !== "horizontal") return;
-      event.preventDefault();
-      dismissRuntimeGuidance();
-      const deltaX = touch.clientX - state.touch.lastX;
-      state.touch.lastX = touch.clientX;
-      if (Math.abs(deltaX) < 0.2) return;
-      applyDelta(-deltaX * FOCUS_ROWS_TOUCH_DELTA_SCALE);
     };
-    const clearTouch = (event) => {
-      if (!state.touch) return;
-      const ended = Array.from(event.changedTouches || []).some(
-        (entry) => entry.identifier === state.touch.id
-      );
-      if (!ended) return;
-      state.touch = null;
+
+    const onTouchEnd = (event) => {
+      const targetCategoryId = routedTouchCategoryId || getFocusedSectionCategoryId() || id;
+      endItemLaneTouch(targetCategoryId, event);
+      routedTouchCategoryId = null;
     };
+
     container.addEventListener("wheel", onWheel, { passive: false });
     container.addEventListener("touchstart", onTouchStart, { passive: true });
     container.addEventListener("touchmove", onTouchMove, { passive: false });
-    container.addEventListener("touchend", clearTouch, { passive: true });
-    container.addEventListener("touchcancel", clearTouch, { passive: true });
+    container.addEventListener("touchend", onTouchEnd, { passive: true });
+    container.addEventListener("touchcancel", onTouchEnd, { passive: true });
     carouselCleanup.push(() => {
       container.removeEventListener("wheel", onWheel);
       container.removeEventListener("touchstart", onTouchStart);
       container.removeEventListener("touchmove", onTouchMove);
-      container.removeEventListener("touchend", clearTouch);
-      container.removeEventListener("touchcancel", clearTouch);
-      if (state.settle) {
-        window.clearTimeout(state.settle);
-      }
-      state.touch = null;
-      focusRowWheelState.delete(id);
+      container.removeEventListener("touchend", onTouchEnd);
+      container.removeEventListener("touchcancel", onTouchEnd);
+      routedTouchCategoryId = null;
     });
   });
 };
@@ -2721,9 +2901,33 @@ const bindCards = () => {
       dismissRuntimeGuidance();
       prefetchDishDetailByIds(categoryId, itemId, true);
       const allergenLabel = getTerm("allergens");
+      const description = textOf(dish.description);
       const longDesc = textOf(dish.longDescription);
       const allergens = getAllergenValues(dish).join(", ");
-      const badgeHtml = renderBadgeList(dish, "dish-modal__badges");
+      const badgeHtml = renderBadgeList(dish, "dish-modal__badges", "dish-modal__badge");
+      const copyHtml =
+        description || longDesc
+          ? '<div class="dish-modal__copy-scroll">' +
+            (description ? '<p class="dish-modal__desc">' + description + "</p>" : "") +
+            (longDesc ? '<p class="dish-modal__long">' + longDesc + "</p>" : "") +
+            "</div>"
+          : "";
+      const metaHtml =
+        badgeHtml ||
+        allergens ||
+        dish.priceVisible !== false
+          ? '<div class="dish-modal__meta">' +
+            badgeHtml +
+            (allergens
+              ? '<p class="dish-modal__allergens">' + allergenLabel + ': ' + allergens + "</p>"
+              : "") +
+            (dish.priceVisible === false
+              ? ""
+              : '<p class="dish-modal__price">' + formatPrice(dish.price.amount) + "</p>") +
+            "</div>"
+          : "";
+      const modalContentClass =
+        copyHtml ? "dish-modal__content" : "dish-modal__content dish-modal__content--meta-only";
       const asset = getInteractiveDetailAsset(dish);
       activeModalInteractiveAsset = asset && supportsInteractiveMedia() ? asset : null;
       setInteractiveModalSurfaceFrozen(Boolean(activeModalInteractiveAsset));
@@ -2736,34 +2940,29 @@ const bindCards = () => {
           <p class="dish-modal__title">${textOf(dish.name)}</p>
           <button class="dish-modal__close" id="modal-close">✕</button>
         </div>
-        <div class="dish-modal__media">
-          ${activeModalInteractiveAsset && !runtimeGuidanceCaptureMode
-            ? '<div class="dish-modal__interactive-guidance is-hidden" aria-hidden="true">' +
-              '<div class="dish-modal__interactive-guidance-scene" style="--dish-guidance-track:url(' +
-              RUNTIME_GUIDANCE_ASSETS.horizontalMotionArrows +
-              '); --dish-guidance-dish:url(' +
-              RUNTIME_GUIDANCE_ASSETS.sampleDish +
-              '); --dish-guidance-ellipse:url(' +
-              RUNTIME_GUIDANCE_ASSETS.circularMotionArrows +
-              ');">' +
-              '<span class="dish-modal__interactive-guidance-hand-wrap">' +
-              '<img class="dish-modal__interactive-guidance-hand" src="' +
-              RUNTIME_GUIDANCE_ASSETS.pointingHand +
-              '" alt="" decoding="async" draggable="false" />' +
-              "</span>" +
-              "</div>" +
-              "</div>"
-            : ""}
-          <img class="dish-modal__media-image" src="${getDetailImageSrc(dish)}" alt="${textOf(dish.name)}" draggable="false" oncontextmenu="return false;" ondragstart="return false;" decoding="async" />
-        </div>
-        <div class="dish-modal__content">
-          <div class="dish-modal__text">
-            <p class="dish-modal__desc">${textOf(dish.description)}</p>
-            ${longDesc ? '<p class="dish-modal__long">' + longDesc + '</p>' : ""}
-            ${allergens ? '<p class="dish-modal__allergens">' + allergenLabel + ': ' + allergens + '</p>' : ""}
-            ${badgeHtml}
+        <div class="dish-modal__media-slot">
+          <div class="dish-modal__media">
+            ${activeModalInteractiveAsset && !runtimeGuidanceCaptureMode
+              ? '<div class="dish-modal__interactive-guidance is-hidden" aria-hidden="true">' +
+                '<div class="dish-modal__interactive-guidance-scene" style="--dish-guidance-ellipse:url(' +
+                RUNTIME_GUIDANCE_ASSETS.circularMotionArrows +
+                '); --dish-guidance-dish:url(' +
+                RUNTIME_GUIDANCE_ASSETS.sampleDish +
+                ');">' +
+                '<span class="dish-modal__interactive-guidance-hand-wrap">' +
+                '<img class="dish-modal__interactive-guidance-hand" src="' +
+                RUNTIME_GUIDANCE_ASSETS.pointingHand +
+                '" alt="" decoding="async" draggable="false" />' +
+                "</span>" +
+                "</div>" +
+                "</div>"
+              : ""}
+            <img class="dish-modal__media-image" src="${getDetailImageSrc(dish)}" alt="${textOf(dish.name)}" draggable="false" oncontextmenu="return false;" ondragstart="return false;" decoding="async" />
           </div>
-          ${dish.priceVisible === false ? "" : '<p class="dish-modal__price">' + formatPrice(dish.price.amount) + "</p>"}
+        </div>
+        <div class="${modalContentClass}">
+          ${copyHtml}
+          ${metaHtml}
         </div>
       `;
       modal.classList.add("open");
@@ -2778,124 +2977,170 @@ const bindCards = () => {
   });
 };
 
-const getClosestSectionIndex = (container) => {
-  const sections = Array.from(container.querySelectorAll(".menu-section"));
-  if (sections.length === 0) return -1;
-  const centerY = container.scrollTop + container.clientHeight / 2;
-  let closest = 0;
-  let minDistance = Number.POSITIVE_INFINITY;
-  sections.forEach((section, index) => {
-    const sectionCenter = section.offsetTop + section.offsetHeight / 2;
-    const distance = Math.abs(sectionCenter - centerY);
-    if (distance < minDistance) {
-      minDistance = distance;
-      closest = index;
-    }
-  });
-  return closest;
-};
-
-const centerSection = (container, index, behavior = "smooth") => {
-  const sections = Array.from(container.querySelectorAll(".menu-section"));
-  const target = sections[index];
-  if (!target || container.clientHeight === 0) return;
-  const targetTop = target.offsetTop + target.offsetHeight / 2 - container.clientHeight / 2;
-  container.scrollTo({ top: targetTop, behavior });
-};
-
-const applySectionFocus = (container) => {
-  const sections = Array.from(container.querySelectorAll(".menu-section"));
-  if (sections.length === 0) return;
-  const centerY = container.scrollTop + container.clientHeight / 2;
-  const maxDistance = Math.max(container.clientHeight * 0.6, 1);
-  const closestIndex = getClosestSectionIndex(container);
-  syncBackgroundForSectionIndex(closestIndex);
-  sections.forEach((section, index) => {
-    const sectionCenter = section.offsetTop + section.offsetHeight / 2;
-    const distance = Math.abs(sectionCenter - centerY);
-    const ratio = Math.min(1, distance / maxDistance);
-    const focus = 1 - ratio * 0.14;
-    section.style.setProperty("--section-focus", focus.toFixed(3));
-    section.classList.toggle("is-centered", index === closestIndex);
-  });
-};
-
 const bindSectionFocus = () => {
   const scroll = app.querySelector(".menu-scroll");
   if (!scroll) return;
   const sections = Array.from(scroll.querySelectorAll(".menu-section"));
   if (sections.length === 0) return;
-  if (isJukeboxTemplate()) {
-    if (scroll.scrollWidth <= scroll.clientWidth + 4) return;
-    const onScroll = () => {
-      if (interactiveModalSurfaceFrozen) {
-        recordFrozenSurfaceBlockedEvent();
-        return;
-      }
-      const closestIndex = getClosestHorizontalSectionIndex(scroll);
-      if (closestIndex >= 0) {
-        syncBackgroundForSectionIndex(closestIndex);
-      }
-      if (horizontalSectionSnapTimeout) window.clearTimeout(horizontalSectionSnapTimeout);
-      horizontalSectionSnapTimeout = window.setTimeout(() => {
-        const snapIndex = getClosestHorizontalSectionIndex(scroll);
-        if (snapIndex >= 0) {
-          centerSectionHorizontally(scroll, snapIndex, "smooth");
-          syncBackgroundForSectionIndex(snapIndex);
-        }
-      }, 170);
-    };
-    scroll.addEventListener("scroll", onScroll);
-    carouselCleanup.push(() => {
-      scroll.removeEventListener("scroll", onScroll);
-      if (horizontalSectionSnapTimeout) {
-        window.clearTimeout(horizontalSectionSnapTimeout);
-        horizontalSectionSnapTimeout = 0;
-      }
-    });
-    return;
-  }
+  syncSectionLaneFrame(scroll);
+  scroll.scrollLeft = 0;
+  scroll.scrollTop = 0;
   applySectionFocus(scroll);
-  if (scroll.scrollHeight <= scroll.clientHeight + 4) return;
+
+  const onWheel = (event) => {
+    if (interactiveModalSurfaceFrozen) {
+      blockFrozenEvent(event);
+      return;
+    }
+    const intent = resolveWheelLaneIntent(event);
+    if (!intent.sectionIntent) return;
+    event.preventDefault();
+    dismissRuntimeGuidance();
+    const now = Date.now();
+    const inGesture = now <= sectionLaneWheelGestureUntil;
+    sectionLaneWheelGestureUntil = now + SECTION_LANE_SETTLE_MS;
+    if (!inGesture) {
+      sectionLaneWheelCarry = 0;
+      sectionLaneWheelGestureConsumed = false;
+    }
+    if (sectionLaneWheelGestureConsumed) return;
+    if (now < sectionLaneWheelCooldownUntil) return;
+    sectionLaneWheelCarry += intent.sectionDelta;
+    if (Math.abs(sectionLaneWheelCarry) < SECTION_LANE_THRESHOLD_PX) return;
+    const direction = sectionLaneWheelCarry > 0 ? 1 : -1;
+    const currentIndex = getFocusedSectionIndex(scroll);
+    if (
+      (direction < 0 && currentIndex <= 0) ||
+      (direction > 0 && currentIndex >= sections.length - 1)
+    ) {
+      sectionLaneWheelCarry = 0;
+      triggerSectionBoundaryRecoil(scroll, SECTION_LANE_AXIS, direction);
+      return;
+    }
+    sectionLaneWheelCarry = 0;
+    sectionLaneWheelGestureConsumed = true;
+    sectionLaneWheelCooldownUntil = now + SECTION_LANE_SETTLE_MS;
+    shiftSection(direction);
+  };
+
+  const onTouchStart = (event) => {
+    if (interactiveModalSurfaceFrozen) {
+      recordFrozenSurfaceBlockedEvent();
+      return;
+    }
+    const touch = event.changedTouches?.[0];
+    if (!touch) return;
+    sectionLaneTouchState = {
+      id: touch.identifier,
+      startX: touch.clientX,
+      startY: touch.clientY,
+      lastPrimary: getPrimaryTouchValue(touch, SECTION_LANE_AXIS),
+      axis: "pending"
+    };
+  };
+
+  const onTouchMove = (event) => {
+    if (interactiveModalSurfaceFrozen) {
+      blockFrozenEvent(event);
+      return;
+    }
+    if (!sectionLaneTouchState) return;
+    const touch = Array.from(event.touches || []).find(
+      (entry) => entry.identifier === sectionLaneTouchState.id
+    );
+    if (!touch) return;
+    const totalDx = touch.clientX - sectionLaneTouchState.startX;
+    const totalDy = touch.clientY - sectionLaneTouchState.startY;
+    const sectionMagnitude =
+      SECTION_LANE_AXIS === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
+    const itemMagnitude =
+      ITEM_LANE_AXIS === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
+    if (
+      sectionLaneTouchState.axis === "pending" &&
+      Math.max(Math.abs(totalDx), Math.abs(totalDy)) >= SECTION_LANE_TOUCH_INTENT_THRESHOLD
+    ) {
+      sectionLaneTouchState.axis = sectionMagnitude >= itemMagnitude ? "section" : "item";
+    }
+    if (sectionLaneTouchState.axis !== "section") return;
+    event.preventDefault();
+    dismissRuntimeGuidance();
+    if (Date.now() < sectionLaneWheelCooldownUntil) return;
+    const currentPrimary = getPrimaryTouchValue(touch, SECTION_LANE_AXIS);
+    const delta = currentPrimary - sectionLaneTouchState.lastPrimary;
+    sectionLaneTouchState.lastPrimary = currentPrimary;
+    if (Math.abs(delta) < 0.2) return;
+    sectionLaneWheelCarry += -delta * SECTION_LANE_TOUCH_DELTA_SCALE;
+    if (Math.abs(sectionLaneWheelCarry) < SECTION_LANE_THRESHOLD_PX) return;
+    const direction = sectionLaneWheelCarry > 0 ? 1 : -1;
+    sectionLaneWheelCarry = 0;
+    sectionLaneWheelCooldownUntil = Date.now() + SECTION_LANE_SETTLE_MS;
+    shiftSection(direction);
+  };
+
+  const onTouchEnd = (event) => {
+    if (!sectionLaneTouchState) return;
+    const ended = Array.from(event.changedTouches || []).some(
+      (entry) => entry.identifier === sectionLaneTouchState.id
+    );
+    if (!ended) return;
+    sectionLaneTouchState = null;
+    sectionLaneWheelCarry = 0;
+  };
+
   const onScroll = () => {
     if (interactiveModalSurfaceFrozen) {
       recordFrozenSurfaceBlockedEvent();
       return;
     }
-    if (verticalSectionFocusRaf) cancelAnimationFrame(verticalSectionFocusRaf);
-    verticalSectionFocusRaf = requestAnimationFrame(() => {
-      applySectionFocus(scroll);
-      verticalSectionFocusRaf = 0;
-    });
-    if (verticalSectionSnapTimeout) window.clearTimeout(verticalSectionSnapTimeout);
-    verticalSectionSnapTimeout = window.setTimeout(() => {
-      const closestIndex = getClosestSectionIndex(scroll);
-      if (closestIndex >= 0) {
-        centerSection(scroll, closestIndex, "smooth");
+    if (sectionLaneFocusRaf) cancelAnimationFrame(sectionLaneFocusRaf);
+    sectionLaneFocusRaf = requestAnimationFrame(() => {
+      if (SECTION_LANE_AXIS === "horizontal") {
+        const closestIndex = getClosestHorizontalSectionIndex(scroll);
+        if (closestIndex >= 0) {
+          syncBackgroundForSectionIndex(closestIndex);
+        }
       }
       applySectionFocus(scroll);
-      verticalSectionSnapTimeout = 0;
-    }, 180);
+      sectionLaneFocusRaf = 0;
+    });
+    if (sectionLaneSnapTimeout) window.clearTimeout(sectionLaneSnapTimeout);
+    sectionLaneSnapTimeout = window.setTimeout(() => {
+      snapSectionLane(scroll, "smooth");
+      applySectionFocus(scroll);
+      sectionLaneSnapTimeout = 0;
+    }, SECTION_LANE_SETTLE_MS);
   };
+
   const onResize = () => {
     if (interactiveModalSurfaceFrozen) return;
+    syncSectionLaneFrame(scroll);
     applySectionFocus(scroll);
   };
 
+  scroll.addEventListener("wheel", onWheel, { capture: true, passive: false });
   scroll.addEventListener("scroll", onScroll);
+  scroll.addEventListener("touchstart", onTouchStart, { passive: true });
+  scroll.addEventListener("touchmove", onTouchMove, { passive: false });
+  scroll.addEventListener("touchend", onTouchEnd, { passive: true });
+  scroll.addEventListener("touchcancel", onTouchEnd, { passive: true });
   window.addEventListener("resize", onResize);
   window.addEventListener("orientationchange", onResize);
   carouselCleanup.push(() => {
+    scroll.removeEventListener("wheel", onWheel, { capture: true });
     scroll.removeEventListener("scroll", onScroll);
+    scroll.removeEventListener("touchstart", onTouchStart);
+    scroll.removeEventListener("touchmove", onTouchMove);
+    scroll.removeEventListener("touchend", onTouchEnd);
+    scroll.removeEventListener("touchcancel", onTouchEnd);
     window.removeEventListener("resize", onResize);
     window.removeEventListener("orientationchange", onResize);
-    if (verticalSectionFocusRaf) {
-      cancelAnimationFrame(verticalSectionFocusRaf);
-      verticalSectionFocusRaf = 0;
+    if (sectionLaneFocusRaf) {
+      cancelAnimationFrame(sectionLaneFocusRaf);
+      sectionLaneFocusRaf = 0;
     }
-    if (verticalSectionSnapTimeout) {
-      window.clearTimeout(verticalSectionSnapTimeout);
-      verticalSectionSnapTimeout = 0;
+    if (sectionLaneSnapTimeout) {
+      window.clearTimeout(sectionLaneSnapTimeout);
+      sectionLaneSnapTimeout = 0;
     }
   });
 };

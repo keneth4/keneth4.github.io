@@ -34,7 +34,7 @@
     "backgroundCarouselSeconds": 10,
     "backgroundDisplayMode": "carousel",
     "scrollSensitivity": {
-      "hero360": 3,
+      "hero360": 5,
       "item": 5,
       "section": 5
     },
@@ -52,7 +52,13 @@
       "label": "Fondo 1",
       "src": "assets/backgrounds/Uhland-bg.webp",
       "type": "image",
-      "originalSrc": "assets/backgrounds/Uhland-bg.webp"
+      "originalSrc": "assets/backgrounds/Uhland-bg.webp",
+      "viewportFocus": {
+        "portrait": {
+          "x": 70,
+          "y": 50
+        }
+      }
     }
   ],
   "categories": [

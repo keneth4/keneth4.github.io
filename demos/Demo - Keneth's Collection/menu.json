@@ -42,7 +42,7 @@
       }
     },
     "scrollSensitivity": {
-      "hero360": 3,
+      "hero360": 5,
       "item": 5,
       "section": 5
     },
