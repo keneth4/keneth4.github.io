@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu",
-  "generatedAt": "2026-03-13T14:34:59.540Z",
+  "generatedAt": "2026-03-13T15:39:59.014Z",
   "totals": {
     "files": 58,
     "assetFiles": 44,
     "shellFiles": 14,
-    "totalBytes": 158789540,
+    "totalBytes": 158791719,
     "assetBytes": 156990535,
-    "shellBytes": 1799005,
+    "shellBytes": 1801184,
     "firstViewAssetFiles": 4,
     "firstViewImageBytes": 9634388,
     "missingAssets": 0
@@ -36,7 +36,7 @@
         "key": "cssGzipBytes",
         "label": "Export CSS (gzip)",
         "threshold": 12288,
-        "actual": 13831,
+        "actual": 14048,
         "status": "fail"
       },
       {

@@ -3484,6 +3484,115 @@ body.debug-flicker-active.debug-flicker-preset-modal-media-flat .dish-modal__med
   }
 }
 
+@media (orientation: landscape) and (max-height: 359px) and (min-height: 280px) and (min-width: 700px) {
+  .dish-modal {
+    align-items: center;
+    padding: 8px;
+  }
+
+  .dish-modal__card {
+    --dish-modal-stage-size: clamp(176px, min(29vw, calc(100dvh - 88px)), 228px);
+    --dish-modal-media-content-size: 92%;
+    width: min(860px, 96vw);
+    max-height: calc(100dvh - 16px);
+    padding: 10px 12px 12px;
+    grid-template-columns: var(--dish-modal-stage-size) minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas:
+      "media header"
+      "media content";
+    gap: 6px 10px;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .dish-modal__header {
+    grid-area: header;
+    align-self: start;
+    gap: 4px;
+    padding-right: 46px;
+  }
+
+  .dish-modal__title {
+    padding-right: 0;
+    font-size: clamp(0.98rem, 2vw, 1.15rem);
+  }
+
+  .dish-modal__close {
+    top: 8px;
+    right: 8px;
+    padding: 3px 8px;
+  }
+
+  .dish-modal__content {
+    grid-area: content;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    padding-right: 2px;
+    gap: 6px;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-content: stretch;
+  }
+
+  .dish-modal__content--meta-only {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 2px;
+  }
+
+  .dish-modal__copy-scroll {
+    align-self: stretch;
+    gap: 6px;
+    padding-right: 2px;
+  }
+
+  .dish-modal__desc {
+    font-size: 0.8rem;
+    line-height: 1.42;
+  }
+
+  .dish-modal__long {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+
+  .dish-modal__meta {
+    gap: 6px;
+    padding-top: 6px;
+  }
+
+  .dish-modal__allergens {
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+  }
+
+  .dish-modal__media-slot {
+    grid-area: media;
+    width: var(--dish-modal-stage-size);
+    min-width: var(--dish-modal-stage-size);
+    height: 100%;
+    align-self: stretch;
+    justify-self: start;
+  }
+
+  .dish-modal__media {
+    align-self: center;
+    min-height: 0;
+  }
+
+  .dish-modal__interactive-guidance {
+    padding: 0;
+  }
+
+  .dish-modal__interactive-guidance-scene {
+    background-size:
+      min(82%, 232px) auto,
+      min(78%, 238px) auto;
+  }
+}
+
 @media (orientation: landscape) and (max-height: 560px) and (min-height: 420px) and (min-width: 720px) {
   .dish-modal__card {
     --dish-modal-stage-size: clamp(230px, min(34vw, 44vh), 320px);

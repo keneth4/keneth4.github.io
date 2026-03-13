@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu",
-  "generatedAt": "2026-03-13T14:36:19.484Z",
+  "generatedAt": "2026-03-13T15:43:28.486Z",
   "assets": [
     {
       "outputPath": "app.js",
@@ -476,7 +476,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 87859,
+      "bytes": 90038,
       "responsiveVariant": null,
       "firstView": false
     },
