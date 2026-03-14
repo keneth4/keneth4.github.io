@@ -1,4 +1,4 @@
-const FORM_ENDPOINT = "https://formspree.io/f/xjgabebv";
+const FORM_ENDPOINT = "https://formspree.io/f/xyknpdjv";
 const FORM_ENDPOINT_PLACEHOLDER = "REPLACE_WITH_YOUR_FORM_ID";
 const CONSULTATION_MIN_LOADING_MS = 1200;
 const TURNSTILE_SITE_KEY = "0x4AAAAAACqP0xV6NCSkGF91";
