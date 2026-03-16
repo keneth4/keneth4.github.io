@@ -3941,11 +3941,10 @@ body.debug-flicker-active.debug-flicker-preset-modal-media-flat .dish-modal__med
   width: max-content;
   min-width: max-content;
   max-width: none;
+  margin: 0 auto;
 }
 
 .project-color-row {
-  display: flex;
-  justify-content: center;
   width: 100%;
   max-width: 100%;
   overflow-x: auto;

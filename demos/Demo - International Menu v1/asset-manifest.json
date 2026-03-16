@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu",
-  "generatedAt": "2026-03-13T15:39:59.014Z",
+  "generatedAt": "2026-03-16T19:24:22.906Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 165461,
+      "bytes": 168257,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -422,7 +422,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/html",
-      "bytes": 877,
+      "bytes": 994,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -440,7 +440,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 55962,
+      "bytes": 58026,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -476,7 +476,16 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 90038,
+      "bytes": 90012,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "sw.js",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/javascript",
+      "bytes": 3311,
       "responsiveVariant": null,
       "firstView": false
     },
