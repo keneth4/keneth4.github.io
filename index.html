@@ -31,8 +31,8 @@
       rel="stylesheet"
     />
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
-    <link rel="preload" as="image" href="./Short-Ribs-int-sprite.webp" fetchpriority="high" />
     <link rel="preload" as="image" href="./Short-Ribs-int-sprite-md.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="./Short-Ribs-int-poster.webp" fetchpriority="high" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -113,7 +113,7 @@
             </div>
           </div>
 
-          <div class="hero-visual reveal" aria-label="Interactive dish preview">
+          <div class="hero-visual reveal" aria-label="Dish preview teaser">
             <div class="hero-visual-frame landing-media-stage" data-hero-media-stage>
               <div
                 class="landing-media-loader"
@@ -125,22 +125,13 @@
               </div>
               <img
                 class="landing-media-fallback hero-media-fallback"
-                data-hero-media-fallback
-                src="./Short-Ribs-int-poster.webp"
+                data-hero-media-image
+                src="./Short-Ribs-int-sprite-md.webp"
                 alt="Short ribs immersive 3D dish preview"
                 loading="lazy"
                 fetchpriority="low"
+                decoding="async"
               />
-              <canvas
-                class="landing-media-canvas hero-media-canvas"
-                data-hero-media-canvas
-                width="500"
-                height="500"
-                hidden
-              ></canvas>
-              <span class="landing-media-drag-hint hero-media-drag-hint" data-hero-drag-hint data-i18n="hero.dragHint"
-                >Drag or swipe to rotate</span
-              >
               <div class="hero-glow" aria-hidden="true"></div>
             </div>
 

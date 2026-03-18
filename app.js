@@ -7,10 +7,39 @@ const TURNSTILE_TOKEN_FIELD = "cf-turnstile-response";
 const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
 const LOCALE_STORAGE_KEY = "cv_locale";
-const FEATURED_DISH_ASSETS = {
-  poster: "./Short-Ribs-int-poster.webp",
-  spriteHq: "./Short-Ribs-int-sprite.webp",
-  spriteMd: "./Short-Ribs-int-sprite-md.webp"
+const HERO_SAMPLE_ID = "short-ribs";
+const DEFAULT_EXPERIENCE_SAMPLE_ID = "sushi";
+const LANDING_DISH_MEDIA = {
+  "short-ribs": {
+    posterSrc: "./Short-Ribs-int-poster.webp",
+    teaserMdSrc: "./Short-Ribs-int-sprite-md.webp",
+    interactiveSpriteSrc: "./Short-Ribs-int-sprite.webp"
+  },
+  sushi: {
+    posterSrc: "./Sushi-int-poster.webp",
+    teaserMdSrc: "./Sushi-int-sprite-md.webp",
+    interactiveSpriteSrc: "./Sushi-int-sprite.webp"
+  },
+  "strawberry-croissant": {
+    posterSrc: "./Strawberry-Croissant-int-poster.webp",
+    teaserMdSrc: "./Strawberry-Croissant-int-sprite-md.webp",
+    interactiveSpriteSrc: "./Strawberry-Croissant-int-sprite.webp"
+  }
+};
+const LANDING_MEDIA_ASSETS = Object.fromEntries(
+  Object.entries(LANDING_DISH_MEDIA).flatMap(([sampleId, media]) => [
+    [`${sampleId}:poster`, media.posterSrc],
+    [`${sampleId}:teaser`, media.teaserMdSrc],
+    [`${sampleId}:interactive`, media.interactiveSpriteSrc]
+  ])
+);
+const LANDING_MEDIA_ASSET_KEYS_BY_SRC = new Map(
+  Object.entries(LANDING_MEDIA_ASSETS).map(([assetKey, src]) => [src, assetKey])
+);
+const LANDING_MODAL_GUIDANCE_ASSETS = {
+  circularMotionArrows: "./visual_onboarding/circular_motion_arrows.png",
+  pointingHand: "./visual_onboarding/pointing_hand.png",
+  sampleDish: "./visual_onboarding/sample_2d_dish.png"
 };
 const SPRITE_META = {
   frameWidth: 500,
@@ -19,22 +48,6 @@ const SPRITE_META = {
   rows: 6,
   totalFrames: 60
 };
-const DEMO_PARITY_PIXELS_PER_FRAME = {
-  coarse: 7,
-  fine: 4
-};
-const SPRITE_CUE_PROFILE_CALM = {
-  forwardMs: 420,
-  returnMs: 480,
-  turnPauseMs: 320,
-  offsetRatio: 0.1,
-  minOffsetFrames: 3,
-  loopIdleMs: 5200,
-  startDelayMs: 1200,
-  resumeDelayMs: 1200,
-  hintReshowIdleMs: 15000
-};
-
 const LANDING_CONTENT_BY_LOCALE = {
   en: {
     hero: {
@@ -76,32 +89,61 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     experience: {
       eyebrow: "The Experience",
-      heading: "Guests don't just read your menu. They explore it.",
-      body: "A modern interactive layer that blends 3D dish visualization, language flexibility, dietary context, and storytelling.",
-      cards: [
+      heading: "The future of menus is visual.",
+      body: "Notice how the same dish feels different.",
+      defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
+      steps: [
         {
-          title: "Immersive Dish Preview",
-          body: "Slow, tactile product viewing designed to create anticipation before ordering.",
-          mediaType: "poster",
-          src: FEATURED_DISH_ASSETS.poster,
-          alt: "Short ribs dish poster"
+          title: "TEXT",
+          body: "Guests guess what they’ll get."
         },
         {
-          title: "Interactive Motion Layer",
-          body: "A fluid interactive preview that reveals depth and detail as guests explore.",
-          mediaType: "spriteSheet",
-          src: FEATURED_DISH_ASSETS.spriteHq,
-          spriteMeta: SPRITE_META,
-          alt: "MarryGo interactive depth preview"
+          title: "PHOTO",
+          body: "Guests start to recognize dishes."
         },
         {
-          title: "Visual Appetite Trigger",
-          body: "Real food texture and atmosphere to help guests decide faster with more confidence.",
-          mediaType: "animatedWebp",
-          src: FEATURED_DISH_ASSETS.spriteMd,
-          alt: "Short ribs dish animation"
+          title: "INTERACTIVE",
+          body: "Guests know before they order."
         }
-      ]
+      ],
+      samples: {
+        "short-ribs": {
+          ...LANDING_DISH_MEDIA["short-ribs"],
+          name: "Braised Beef Short Ribs",
+          shortDescription: "Slow-cooked beef short rib served with mash, vegetables, and its own sauce.",
+          longDescription:
+            "Short ribs are prized for their rich flavor and silky texture when cooked slowly. Long braising allows the collagen to break down, making the meat especially tender. In contemporary cooking they are often paired with root vegetable purées, carrots, or squash, whose natural sweetness balances the depth of the meat juices.",
+          badges: [],
+          allergensText: "Dairy",
+          price: 26.8,
+          currency: "EUR",
+          alt: "Braised beef short ribs presentation"
+        },
+        sushi: {
+          ...LANDING_DISH_MEDIA.sushi,
+          name: "Mexican-Style Sushi Roll",
+          shortDescription: "Crunchy fusion roll with sesame topping, sauces, and bold flavors.",
+          longDescription:
+            "Mexican-style sushi is a contemporary reinterpretation of Japanese sushi, popular in many cities across Mexico and Latin America. It often incorporates crunchy textures, creamy dressings, sweet or spicy sauces, and generally bolder seasoning than traditional sushi. This version reflects a fusion approach that combines Japanese technique with local tastes.",
+          badges: [{ key: "spice-1", label: "Spice", tone: "spice", spiceLevel: 1 }],
+          allergensText: "Gluten, Egg, Soy, Fish, Sesame",
+          price: 14,
+          currency: "EUR",
+          alt: "Mexican-style sushi roll presentation"
+        },
+        "strawberry-croissant": {
+          ...LANDING_DISH_MEDIA["strawberry-croissant"],
+          name: "Strawberry Cream Croissant",
+          shortDescription: "Flaky croissant filled with cream and finished with strawberry and powdered sugar.",
+          longDescription:
+            "The croissant is one of the great icons of Viennese and French baking. It is made with laminated dough, whose light, flaky texture comes from alternating layers of dough and butter. In this dessert version it is filled with cream and finished with fresh fruit, creating a contrast between buttery pastry, smooth filling, and the natural brightness of strawberry.",
+          badges: [],
+          allergensText: "Gluten, Dairy, Egg",
+          price: 5,
+          currency: "EUR",
+          alt: "Strawberry cream croissant presentation"
+        }
+      }
     },
     demos: {
       eyebrow: "Live Demos",
@@ -271,32 +313,61 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     experience: {
       eyebrow: "La Experiencia",
-      heading: "Tus clientes no solo leen el menú. Lo exploran.",
-      body: "Una capa interactiva moderna que combina visualización 3D, flexibilidad de idioma, contexto alimentario y narrativa.",
-      cards: [
+      heading: "El futuro de los menús es visual.",
+      body: "Observa cómo el mismo plato se siente diferente.",
+      defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
+      steps: [
         {
-          title: "Vista Inmersiva del Plato",
-          body: "Exploracion visual tactil y pausada para crear anticipacion antes de ordenar.",
-          mediaType: "poster",
-          src: FEATURED_DISH_ASSETS.poster,
-          alt: "Vista del plato MarryGo"
+          title: "TEXTO",
+          body: "Los comensales adivinan qué van a recibir."
         },
         {
-          title: "Capa de Movimiento Interactivo",
-          body: "Vista interactiva fluida que revela profundidad y detalle mientras se explora.",
-          mediaType: "spriteSheet",
-          src: FEATURED_DISH_ASSETS.spriteHq,
-          spriteMeta: SPRITE_META,
-          alt: "Vista interactiva de profundidad MarryGo"
+          title: "FOTO",
+          body: "Los comensales empiezan a reconocer los platos."
         },
         {
-          title: "Disparador Visual de Apetito",
-          body: "Textura real y ambiente visual para decidir más rápido y con mayor seguridad.",
-          mediaType: "animatedWebp",
-          src: FEATURED_DISH_ASSETS.spriteMd,
-          alt: "Animacion del plato CafeBrunch"
+          title: "INTERACTIVO",
+          body: "Los comensales saben qué pedir antes de ordenar."
         }
-      ]
+      ],
+      samples: {
+        "short-ribs": {
+          ...LANDING_DISH_MEDIA["short-ribs"],
+          name: "Short ribs braseadas",
+          shortDescription: "Costilla de res cocinada lentamente, servida con puré, verduras y su jugo.",
+          longDescription:
+            "Las short ribs son un corte muy apreciado por su sabor intenso y su textura melosa cuando se cocinan a fuego lento. El braseado prolongado permite que el colágeno se transforme y vuelva la carne especialmente tierna. En cocina contemporánea suelen acompañarse con purés de raíz, zanahorias o calabaza, porque sus notas dulces equilibran la profundidad del jugo de carne.",
+          badges: [],
+          allergensText: "Lácteos",
+          price: 26.8,
+          currency: "EUR",
+          alt: "Presentación de short ribs braseadas"
+        },
+        sushi: {
+          ...LANDING_DISH_MEDIA.sushi,
+          name: "Sushi estilo mexicano",
+          shortDescription: "Roll crujiente con cobertura de ajonjolí, salsas y sabores intensos de fusión.",
+          longDescription:
+            "El sushi estilo mexicano es una reinterpretación contemporánea del sushi japonés, popular en muchas ciudades de México y América Latina. Suele incorporar ingredientes crujientes, aderezos cremosos, salsas dulces o picantes y, con frecuencia, un sabor más intenso que el sushi tradicional. Esta versión refleja una cocina de fusión que combina técnica japonesa con preferencias locales.",
+          badges: [{ key: "spice-1", label: "Picante", tone: "spice", spiceLevel: 1 }],
+          allergensText: "Gluten, Huevo, Soya, Pescado, Ajonjolí",
+          price: 14,
+          currency: "EUR",
+          alt: "Presentación de sushi estilo mexicano"
+        },
+        "strawberry-croissant": {
+          ...LANDING_DISH_MEDIA["strawberry-croissant"],
+          name: "Croissant relleno de crema y fresa",
+          shortDescription: "Croissant hojaldrado relleno de crema y decorado con fresa y azúcar glas.",
+          longDescription:
+            "El croissant es uno de los grandes íconos de la panadería vienesa y francesa. Se elabora con masa laminada, cuya textura ligera y hojaldrada surge de alternar capas de masa y mantequilla. En esta versión se presenta como postre, con relleno cremoso y fruta fresca, una combinación que aporta contraste entre la mantequilla del hojaldre, la suavidad de la crema y la acidez natural de la fresa.",
+          badges: [],
+          allergensText: "Gluten, Lácteos, Huevo",
+          price: 5,
+          currency: "EUR",
+          alt: "Presentación de croissant con crema y fresa"
+        }
+      }
     },
     demos: {
       eyebrow: "Demos en Vivo",
@@ -466,32 +537,61 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     experience: {
       eyebrow: "Die Experience",
-      heading: "Gäste lesen dein Menü nicht nur. Sie erkunden es.",
-      body: "Eine moderne interaktive Ebene aus 3D-Visualisierung, Sprachflexibilität, Ernährungskontext und Storytelling.",
-      cards: [
+      heading: "Die Zukunft von Menüs ist visuell.",
+      body: "Beobachte, wie sich dasselbe Gericht anders anfühlt.",
+      defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
+      steps: [
         {
-          title: "Immersive Dish Preview",
-          body: "Langsame, taktile Produktansicht für mehr Vorfreude vor der Bestellung.",
-          mediaType: "poster",
-          src: FEATURED_DISH_ASSETS.poster,
-          alt: "MarryGo Gerichtsvorschau"
+          title: "TEXT",
+          body: "Gäste ahnen, was sie bekommen."
         },
         {
-          title: "Interaktive Bewegungsebene",
-          body: "Fließende interaktive Vorschau, die Tiefe und Details beim Erkunden sichtbar macht.",
-          mediaType: "spriteSheet",
-          src: FEATURED_DISH_ASSETS.spriteHq,
-          spriteMeta: SPRITE_META,
-          alt: "MarryGo interaktive Tiefenvorschau"
+          title: "FOTO",
+          body: "Gäste beginnen, die Gerichte zu erkennen."
         },
         {
-          title: "Visueller Appetit-Trigger",
-          body: "Echte Textur und visuelle Atmosphäre helfen bei schnelleren und sichereren Entscheidungen.",
-          mediaType: "animatedWebp",
-          src: FEATURED_DISH_ASSETS.spriteMd,
-          alt: "CafeBrunch Gerichtsanimation"
+          title: "INTERAKTIV",
+          body: "Gäste wissen vor der Bestellung, was sie bestellen werden."
         }
-      ]
+      ],
+      samples: {
+        "short-ribs": {
+          ...LANDING_DISH_MEDIA["short-ribs"],
+          name: "Geschmorte Rinder-Short-Ribs",
+          shortDescription: "Langsam geschmorte Rinder-Short-Rib mit Püree, Gemüse und Bratensauce.",
+          longDescription:
+            "Short Ribs werden wegen ihres kräftigen Geschmacks und ihrer zarten, saftigen Konsistenz geschätzt, wenn sie langsam geschmort werden. Durch langes Garen wandelt sich das Kollagen und macht das Fleisch besonders weich. In der modernen Küche werden sie oft mit Pürees aus Wurzelgemüse, Karotten oder Kürbis serviert, deren Süße die intensive Sauce ausgleicht.",
+          badges: [],
+          allergensText: "Milchprodukte",
+          price: 26.8,
+          currency: "EUR",
+          alt: "Präsentation geschmorter Short Ribs"
+        },
+        sushi: {
+          ...LANDING_DISH_MEDIA.sushi,
+          name: "Sushi auf mexikanische Art",
+          shortDescription: "Knusprige Fusionsrolle mit Sesam, Saucen und kräftigen Aromen.",
+          longDescription:
+            "Mexikanisches Sushi ist eine moderne Neuinterpretation des japanischen Sushi und in vielen Städten Mexikos und Lateinamerikas beliebt. Häufig enthält es knusprige Elemente, cremige Dressings, süße oder scharfe Saucen und insgesamt kräftigere Aromen als klassisches Sushi. Diese Variante steht für eine Fusionsküche, die japanische Technik mit lokalen Vorlieben verbindet.",
+          badges: [{ key: "spice-1", label: "Scharf", tone: "spice", spiceLevel: 1 }],
+          allergensText: "Gluten, Ei, Soja, Fisch, Sesam",
+          price: 14,
+          currency: "EUR",
+          alt: "Präsentation von Sushi auf mexikanische Art"
+        },
+        "strawberry-croissant": {
+          ...LANDING_DISH_MEDIA["strawberry-croissant"],
+          name: "Croissant mit Erdbeere und Creme",
+          shortDescription: "Blättriges Croissant mit Cremefüllung, Erdbeere und Puderzucker.",
+          longDescription:
+            "Das Croissant gehört zu den großen Klassikern der Wiener und französischen Backkunst. Es wird aus laminiertem Teig hergestellt, dessen leichte, blättrige Struktur durch viele Schichten aus Teig und Butter entsteht. In dieser Dessertvariante ist es mit Creme gefüllt und mit frischer Frucht garniert – ein Zusammenspiel aus buttrigem Gebäck, weicher Füllung und frischer Erdbeere.",
+          badges: [],
+          allergensText: "Gluten, Milchprodukte, Ei",
+          price: 5,
+          currency: "EUR",
+          alt: "Präsentation eines Croissants mit Erdbeere und Creme"
+        }
+      }
     },
     demos: {
       eyebrow: "Live-Demos",
@@ -648,7 +748,10 @@ const UI_TEXT_BY_LOCALE = {
       chipLanguages: "9 menu languages",
       chipDietary: "Dietary & allergen tags",
       chipScroll: "Drag or swipe to rotate",
-      dragHint: "Drag or swipe to rotate"
+      dragHint: "Drag to inspect"
+    },
+    menuTerms: {
+      allergens: "Allergens"
     },
     media: {
       loadingAria: "Loading visual asset"
@@ -742,7 +845,10 @@ const UI_TEXT_BY_LOCALE = {
       chipLanguages: "9 idiomas de menú",
       chipDietary: "Etiquetas dietarias y de alérgenos",
       chipScroll: "Arrastra o desliza para rotar",
-      dragHint: "Arrastra o desliza para rotar"
+      dragHint: "Arrastra para inspeccionar"
+    },
+    menuTerms: {
+      allergens: "Alérgenos"
     },
     media: {
       loadingAria: "Cargando recurso visual"
@@ -836,7 +942,10 @@ const UI_TEXT_BY_LOCALE = {
       chipLanguages: "9 Menüsprachen",
       chipDietary: "Ernährungs- und Allergenhinweise",
       chipScroll: "Ziehen oder wischen zum Drehen",
-      dragHint: "Ziehen oder wischen zum Drehen"
+      dragHint: "Zum Erkunden ziehen"
+    },
+    menuTerms: {
+      allergens: "Allergene"
     },
     media: {
       loadingAria: "Visuelles Asset wird geladen"
@@ -1008,15 +1117,16 @@ let manifestEntries = [];
 const demoPreviewImageCache = new Map();
 let demoPreviewObserver = null;
 const assetStateByKey = new Map(
-  Object.keys(FEATURED_DISH_ASSETS).map((key) => [key, "idle"])
+  Object.keys(LANDING_MEDIA_ASSETS).map((key) => [key, "idle"])
 );
 const assetStateSubscribersByKey = new Map(
-  Object.keys(FEATURED_DISH_ASSETS).map((key) => [key, new Set()])
+  Object.keys(LANDING_MEDIA_ASSETS).map((key) => [key, new Set()])
 );
 const assetImageCacheByKey = new Map();
 const assetPromiseByKey = new Map();
 let landingAssetPreloadStarted = false;
-let landingMediaDisposers = [];
+let heroMediaDispose = null;
+let experienceMediaDisposers = [];
 
 const htmlEscape = (value) =>
   String(value ?? "")
@@ -1029,6 +1139,18 @@ const htmlEscape = (value) =>
 const formatTemplate = (template, values = {}) =>
   String(template ?? "").replace(/\{([a-zA-Z0-9_]+)\}/g, (_, key) => String(values[key] ?? ""));
 
+const formatPrice = (amount, currency = "EUR") => {
+  const numericAmount = Number(amount);
+  const normalizedAmount = Number.isFinite(numericAmount) ? numericAmount : 0;
+  const fractionDigits = Number.isInteger(normalizedAmount) ? 0 : 1;
+  return new Intl.NumberFormat(currentLocale, {
+    style: "currency",
+    currency,
+    minimumFractionDigits: fractionDigits,
+    maximumFractionDigits: fractionDigits
+  }).format(normalizedAmount);
+};
+
 const getByPath = (source, path) => {
   const parts = String(path ?? "").split(".").filter(Boolean);
   let current = source;
@@ -1039,8 +1161,7 @@ const getByPath = (source, path) => {
   return typeof current === "string" ? current : "";
 };
 
-const getFeaturedDishAssetKeyBySrc = (src) =>
-  Object.entries(FEATURED_DISH_ASSETS).find(([, value]) => value === src)?.[0] ?? "poster";
+const getLandingMediaAssetKeyBySrc = (src) => LANDING_MEDIA_ASSET_KEYS_BY_SRC.get(src) ?? "";
 
 const setAssetState = (assetKey, state) => {
   assetStateByKey.set(assetKey, state);
@@ -1065,7 +1186,7 @@ const subscribeToAssetState = (assetKey, callback) => {
 };
 
 const loadLandingAssetImage = async (assetKey) => {
-  if (!(assetKey in FEATURED_DISH_ASSETS)) {
+  if (!(assetKey in LANDING_MEDIA_ASSETS)) {
     throw new Error(`Unknown asset key: ${assetKey}`);
   }
 
@@ -1090,7 +1211,7 @@ const loadLandingAssetImage = async (assetKey) => {
       setAssetState(assetKey, "error");
       reject(new Error(`Failed to load asset: ${assetKey}`));
     };
-    image.src = FEATURED_DISH_ASSETS[assetKey];
+    image.src = LANDING_MEDIA_ASSETS[assetKey];
   });
 
   const wrappedTask = task.finally(() => {
@@ -1106,9 +1227,8 @@ const startLandingAssetPreload = () => {
   landingAssetPreloadStarted = true;
 
   void (async () => {
-    await loadLandingAssetImage("spriteHq").catch(() => {});
-    await loadLandingAssetImage("spriteMd").catch(() => {});
-    await loadLandingAssetImage("poster").catch(() => {});
+    await loadLandingAssetImage(`${HERO_SAMPLE_ID}:teaser`).catch(() => {});
+    await loadLandingAssetImage(`${HERO_SAMPLE_ID}:poster`).catch(() => {});
   })();
 };
 
@@ -1119,14 +1239,82 @@ const setMediaStageState = (stage, state) => {
   stage.classList.toggle("is-media-error", state === "error");
 };
 
-const attachDemoParityDragInteractions = (target, callbacks = {}) => {
+const resolveInteractiveOrbitFrame = (rect) => {
+  const left = Number(rect?.left) || 0;
+  const top = Number(rect?.top) || 0;
+  const width = Math.max(0, Number(rect?.width) || 0);
+  const height = Math.max(0, Number(rect?.height) || 0);
+  const rx = width / 2;
+  const ry = height / 2;
+
+  return {
+    left,
+    top,
+    width,
+    height,
+    cx: left + rx,
+    cy: top + ry,
+    rx,
+    ry,
+    arcRadiusPx: (rx + ry) / 2,
+    deadZoneRadiusPx: Math.min(width, height) * 0.14
+  };
+};
+
+const readInteractiveOrbitSample = (clientX, clientY, frame) => {
+  if (
+    frame.width <= 0 ||
+    frame.height <= 0 ||
+    clientX < frame.left ||
+    clientX > frame.left + frame.width ||
+    clientY < frame.top ||
+    clientY > frame.top + frame.height
+  ) {
+    return { kind: "outside-host" };
+  }
+
+  const dx = clientX - frame.cx;
+  const dy = clientY - frame.cy;
+  const distancePx = Math.hypot(dx, dy);
+  if (distancePx <= frame.deadZoneRadiusPx) {
+    return { kind: "dead-zone" };
+  }
+
+  const normalizedDx = frame.rx > 0 ? dx / frame.rx : 0;
+  const normalizedDy = frame.ry > 0 ? dy / frame.ry : 0;
+
+  return {
+    kind: "sample",
+    angleRad: Math.atan2(normalizedDy, normalizedDx)
+  };
+};
+
+const unwrapInteractiveAngleDelta = (previousAngleRad, nextAngleRad) => {
+  let delta = nextAngleRad - previousAngleRad;
+  while (delta <= -Math.PI) delta += Math.PI * 2;
+  while (delta > Math.PI) delta -= Math.PI * 2;
+  return delta;
+};
+
+const resolveInteractiveVirtualDeltaPx = (previousAngleRad, nextAngleRad, frame) =>
+  -unwrapInteractiveAngleDelta(previousAngleRad, nextAngleRad) * frame.arcRadiusPx;
+
+const resolveInteractiveOrbitPixelsPerFrame = (frame, frameCount) =>
+  Math.max(1, Number(Math.max(1, (Math.PI * (frame.rx + frame.ry)) / Math.max(2, frameCount)).toFixed(2)));
+
+const attachInteractiveOrbitDrag = ({ host, target, frameCount, onDelta, onDismiss }) => {
   let pointerId = null;
-  let lastX = 0;
+  let lastAngleRad = null;
+
+  const dismissGuidance = () => {
+    onDismiss?.();
+  };
 
   const onPointerDown = (event) => {
     pointerId = event.pointerId;
-    lastX = event.clientX;
-    callbacks.onStart?.(event);
+    lastAngleRad = null;
+    host.classList.add("is-dragging-interactive");
+    dismissGuidance();
     try {
       target.setPointerCapture(pointerId);
     } catch {}
@@ -1136,9 +1324,23 @@ const attachDemoParityDragInteractions = (target, callbacks = {}) => {
 
   const onPointerMove = (event) => {
     if (pointerId !== event.pointerId) return;
-    const deltaX = event.clientX - lastX;
-    lastX = event.clientX;
-    callbacks.onMove?.(deltaX, event);
+    dismissGuidance();
+    const frame = resolveInteractiveOrbitFrame(host.getBoundingClientRect());
+    const sample = readInteractiveOrbitSample(event.clientX, event.clientY, frame);
+    if (sample.kind !== "sample") {
+      lastAngleRad = null;
+      event.preventDefault();
+      return;
+    }
+    if (lastAngleRad === null) {
+      lastAngleRad = sample.angleRad;
+      event.preventDefault();
+      return;
+    }
+    const deltaPx = resolveInteractiveVirtualDeltaPx(lastAngleRad, sample.angleRad, frame);
+    lastAngleRad = sample.angleRad;
+    const pixelsPerFrame = resolveInteractiveOrbitPixelsPerFrame(frame, frameCount);
+    onDelta((deltaPx / pixelsPerFrame) * -1);
     event.preventDefault();
   };
 
@@ -1148,14 +1350,31 @@ const attachDemoParityDragInteractions = (target, callbacks = {}) => {
       target.releasePointerCapture(pointerId);
     } catch {}
     pointerId = null;
+    lastAngleRad = null;
     target.classList.remove("is-dragging");
-    callbacks.onEnd?.(event);
+    host.classList.remove("is-dragging-interactive");
+    dismissGuidance();
+  };
+
+  const onClick = () => {
+    dismissGuidance();
+  };
+
+  const onTouchStart = () => {
+    dismissGuidance();
+  };
+
+  const onTouchMove = () => {
+    dismissGuidance();
   };
 
   target.addEventListener("pointerdown", onPointerDown);
   target.addEventListener("pointermove", onPointerMove);
   target.addEventListener("pointerup", onPointerRelease);
   target.addEventListener("pointercancel", onPointerRelease);
+  target.addEventListener("click", onClick);
+  target.addEventListener("touchstart", onTouchStart, { passive: true });
+  target.addEventListener("touchmove", onTouchMove, { passive: true });
   window.addEventListener("pointerup", onPointerRelease);
   window.addEventListener("pointercancel", onPointerRelease);
   target.addEventListener("contextmenu", (event) => event.preventDefault());
@@ -1166,50 +1385,15 @@ const attachDemoParityDragInteractions = (target, callbacks = {}) => {
     target.removeEventListener("pointermove", onPointerMove);
     target.removeEventListener("pointerup", onPointerRelease);
     target.removeEventListener("pointercancel", onPointerRelease);
+    target.removeEventListener("click", onClick);
+    target.removeEventListener("touchstart", onTouchStart);
+    target.removeEventListener("touchmove", onTouchMove);
     window.removeEventListener("pointerup", onPointerRelease);
     window.removeEventListener("pointercancel", onPointerRelease);
     target.classList.remove("is-dragging");
+    host.classList.remove("is-dragging-interactive");
   };
 };
-
-const animateValue = (from, to, durationMs, onUpdate, isCancelled) =>
-  new Promise((resolve) => {
-    const startAt = performance.now();
-    const easing = (value) =>
-      value < 0.5 ? 2 * value * value : 1 - Math.pow(-2 * value + 2, 2) / 2;
-
-    const step = (now) => {
-      if (isCancelled()) {
-        resolve(false);
-        return;
-      }
-      const elapsed = Math.max(0, now - startAt);
-      const progress = Math.min(1, elapsed / durationMs);
-      const eased = easing(progress);
-      onUpdate(from + (to - from) * eased);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-        return;
-      }
-      resolve(true);
-    };
-
-    window.requestAnimationFrame(step);
-  });
-
-const delayIfActive = (durationMs, isCancelled) =>
-  new Promise((resolve) => {
-    const timer = window.setTimeout(() => resolve(!isCancelled()), durationMs);
-    if (isCancelled()) {
-      window.clearTimeout(timer);
-      resolve(false);
-    }
-  });
-
-const getDemoParityPixelsPerFrame = () =>
-  window.matchMedia("(pointer: coarse)").matches
-    ? DEMO_PARITY_PIXELS_PER_FRAME.coarse
-    : DEMO_PARITY_PIXELS_PER_FRAME.fine;
 
 const normalizeLocale = (value) => {
   if (!value) return null;
@@ -1470,49 +1654,325 @@ const renderWhyItMatters = () => {
   `;
 };
 
+const getExperienceContent = () => getLandingContent().experience ?? {};
+
+const renderExperienceMenuEntry = (sample, descriptionText, modifierClass = "") => {
+  if (!sample) return "";
+  const modifier = modifierClass ? ` ${modifierClass}` : "";
+  return `
+    <div class="experience-menu-entry${modifier}">
+      <div class="experience-menu-entry-head">
+        <p class="experience-menu-entry-name">${htmlEscape(sample.name)}</p>
+        <p class="experience-menu-entry-price">${htmlEscape(formatPrice(sample.price, sample.currency))}</p>
+      </div>
+      <p class="experience-menu-entry-description">${htmlEscape(descriptionText)}</p>
+    </div>
+  `;
+};
+
+const EXPERIENCE_STORY_PHASES = ["text", "photo", "interactive"];
+const EXPERIENCE_STORY_TRACK_PHASES = [...EXPERIENCE_STORY_PHASES, "tail"];
+const EXPERIENCE_CHAPTER_TRANSITION_START = 0.72;
+const EXPERIENCE_INTERACTIVE_UNLOCK_START = 0.84;
+
+const clampNumber = (value, min = 0, max = 1) => {
+  const numericValue = Number(value);
+  if (!Number.isFinite(numericValue)) return min;
+  return Math.min(max, Math.max(min, numericValue));
+};
+
+const remapClamped = (value, start, end) => {
+  if (end <= start) return value >= end ? 1 : 0;
+  return clampNumber((value - start) / (end - start));
+};
+
+const renderExperienceStoryChapters = (steps = []) =>
+  EXPERIENCE_STORY_PHASES.map((phase, index) => {
+    const step = steps[index] ?? {};
+    const number = String(index + 1).padStart(2, "0");
+    return `
+      <article
+        class="experience-story-chapter${index === 0 ? " is-active is-revealed" : ""}"
+        data-experience-chapter
+        data-phase="${htmlEscape(phase)}"
+      >
+        <span class="experience-story-chapter-index">${htmlEscape(number)}</span>
+        <p class="experience-story-chapter-title">${htmlEscape(step.title ?? "")}</p>
+        <h3>${htmlEscape(step.body ?? "")}</h3>
+      </article>
+    `;
+  }).join("");
+
+const renderExperienceStoryTrack = () => `
+  <div class="experience-story-track" data-experience-story-track aria-hidden="true">
+    ${EXPERIENCE_STORY_TRACK_PHASES.map(
+      (phase) =>
+        `<div class="experience-story-track-step${phase === "tail" ? " experience-story-track-step--tail" : ""}" data-experience-story-track-step data-phase="${htmlEscape(phase)}"></div>`
+    ).join("")}
+  </div>
+`;
+
+const renderExperienceStoryTextSurface = (sample) => `
+  <div class="experience-story-surface experience-story-surface--text" data-experience-story-layer="text">
+    <div class="experience-story-surface-inner experience-story-surface-inner--text">
+      <div class="experience-story-ticket experience-story-ticket--text">
+        ${renderExperienceMenuEntry(sample, sample.shortDescription, "experience-menu-entry--story-ticket")}
+      </div>
+    </div>
+  </div>
+`;
+
+const resolveExperiencePhotoDescription = (sample) => {
+  const shortDescription = String(sample?.shortDescription ?? "").trim();
+  if (shortDescription) return shortDescription;
+  return String(sample?.longDescription ?? "").trim();
+};
+
+const renderExperienceStoryPhotoSurface = ({ sample, posterAssetKey, ui }) => {
+  const photoDescription = resolveExperiencePhotoDescription(sample);
+  return `
+  <div class="experience-story-surface experience-story-surface--photo" data-experience-story-layer="photo">
+    <div class="experience-story-surface-inner experience-story-surface-inner--photo">
+      <div class="experience-photo-shell">
+        <div class="experience-embedded-modal experience-embedded-modal--photo">
+          <div class="dish-modal__card experience-photo-card">
+            <div class="dish-modal__media-slot experience-photo-card__media-slot">
+              <div
+                class="landing-media-stage experience-media-stage experience-photo-card__media dish-modal__media"
+                data-experience-photo-stage
+                data-media-kind="image"
+                data-primary-asset-key="${htmlEscape(posterAssetKey)}"
+                data-fallback-asset-key="${htmlEscape(posterAssetKey)}"
+              >
+                <div class="landing-media-loader" role="status" aria-live="polite" aria-label="${htmlEscape(ui.media.loadingAria)}">
+                  <span class="landing-media-loader__spinner" aria-hidden="true"></span>
+                </div>
+                <img
+                  class="experience-media-image dish-modal__media-image"
+                  data-experience-photo-image
+                  src="${htmlEscape(sample.posterSrc)}"
+                  alt="${htmlEscape(sample.alt)}"
+                  loading="lazy"
+                  decoding="async"
+                  draggable="false"
+                />
+              </div>
+            </div>
+            <div class="experience-photo-card__support${photoDescription ? "" : " experience-photo-card__support--empty"}">
+              ${renderExperienceMenuEntry(sample, photoDescription, "experience-menu-entry--supporting experience-menu-entry--wide")}
+            </div>
+          </div>
+        </div>
+        <div class="experience-story-ticket experience-story-ticket--photo">
+          ${renderExperienceMenuEntry(sample, photoDescription, "experience-menu-entry--supporting")}
+        </div>
+      </div>
+    </div>
+  </div>
+`;
+};
+
+const renderExperienceStoryInteractiveSurface = ({ sample, posterAssetKey, interactiveSpriteAssetKey, ui }) => `
+  <div class="experience-story-surface experience-story-surface--interactive" data-experience-story-layer="interactive">
+    <div class="experience-story-surface-inner experience-story-surface-inner--interactive">
+      ${renderEmbeddedInteractiveModal({
+        sample,
+        posterAssetKey,
+        interactiveSpriteAssetKey,
+        ui
+      })}
+    </div>
+  </div>
+`;
+
+const renderExperienceModalBadges = (sample) => {
+  const badges = Array.isArray(sample?.badges) ? sample.badges.filter(Boolean) : [];
+  if (!badges.length) return "";
+
+  return `
+    <div class="dish-modal__badges">
+      ${badges
+        .map((badge) => {
+          const tone = badge?.tone === "vegan" || badge?.tone === "spice" ? badge.tone : "neutral";
+          const spiceLevel = Number.isFinite(Number(badge?.spiceLevel))
+            ? Math.max(0, Math.min(3, Math.round(Number(badge.spiceLevel))))
+            : 0;
+          return `
+            <span class="menu-pill menu-pill--${htmlEscape(tone)} dish-modal__badge">
+              <span>${htmlEscape(String(badge?.label ?? ""))}</span>
+              ${
+                spiceLevel > 0
+                  ? `
+                    <span class="menu-pill__meter" aria-hidden="true">
+                      ${Array.from({ length: 3 }, (_, index) => index + 1)
+                        .map(
+                          (level) =>
+                            `<span class="menu-pill__meter-dot${level <= spiceLevel ? " is-active" : ""}"></span>`
+                        )
+                        .join("")}
+                    </span>
+                  `
+                  : ""
+              }
+            </span>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+};
+
+const renderExperienceModalAllergens = (sample, ui) => {
+  const allergensText = String(sample?.allergensText ?? "").trim();
+  if (!allergensText) return "";
+  const allergensLabel = String(ui?.menuTerms?.allergens ?? "Allergens").trim() || "Allergens";
+  return `<p class="dish-modal__allergens">${htmlEscape(allergensLabel)}: ${htmlEscape(allergensText)}</p>`;
+};
+
+const renderEmbeddedInteractiveModal = ({ sample, posterAssetKey, interactiveSpriteAssetKey, ui }) => {
+  if (!sample) return "";
+  const hasLongDescription = Boolean(String(sample.longDescription ?? "").trim());
+  const hasShortDescription = Boolean(String(sample.shortDescription ?? "").trim());
+  const contentClass = hasLongDescription || hasShortDescription
+    ? "dish-modal__content"
+    : "dish-modal__content dish-modal__content--meta-only";
+
+  return `
+    <div class="experience-embedded-modal">
+      <div class="dish-modal__card experience-embedded-modal__card">
+        <div class="dish-modal__header">
+          <p class="dish-modal__title">${htmlEscape(sample.name)}</p>
+        </div>
+        <div class="dish-modal__media-slot">
+          <div
+            class="landing-media-stage experience-media-stage experience-media-stage--interactive dish-modal__media"
+            data-experience-media-stage
+            data-media-kind="sprite"
+            data-primary-asset-key="${htmlEscape(interactiveSpriteAssetKey)}"
+            data-fallback-asset-key="${htmlEscape(posterAssetKey)}"
+          >
+            <div class="dish-modal__interactive-guidance is-hidden" data-experience-guidance aria-hidden="true">
+              <div
+                class="dish-modal__interactive-guidance-scene"
+                data-experience-guidance-scene
+                data-guidance-ellipse-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.circularMotionArrows)}"
+                data-guidance-dish-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.sampleDish)}"
+              >
+                <span class="dish-modal__interactive-guidance-hand-wrap">
+                  <img
+                    class="dish-modal__interactive-guidance-hand"
+                    data-experience-guidance-hand
+                    data-guidance-hand-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.pointingHand)}"
+                    alt=""
+                    draggable="false"
+                    decoding="async"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="landing-media-loader" role="status" aria-live="polite" aria-label="${htmlEscape(ui.media.loadingAria)}">
+              <span class="landing-media-loader__spinner" aria-hidden="true"></span>
+            </div>
+            <img
+              class="dish-modal__media-image"
+              data-experience-media-image
+              src="${htmlEscape(sample.posterSrc)}"
+              alt="${htmlEscape(sample.alt)}"
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+            />
+            <canvas class="dish-modal__media-canvas" data-experience-media-canvas hidden></canvas>
+          </div>
+        </div>
+        <div class="${contentClass}">
+          ${
+            hasShortDescription || hasLongDescription
+              ? `
+                <div class="dish-modal__copy-scroll">
+                  ${hasShortDescription ? `<p class="dish-modal__desc">${htmlEscape(sample.shortDescription)}</p>` : ""}
+                  ${hasLongDescription ? `<p class="dish-modal__long">${htmlEscape(sample.longDescription)}</p>` : ""}
+                </div>
+              `
+              : ""
+          }
+          <div class="dish-modal__meta">
+            ${renderExperienceModalBadges(sample)}
+            ${renderExperienceModalAllergens(sample, ui)}
+            <p class="dish-modal__price">${htmlEscape(formatPrice(sample.price, sample.currency))}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
+
 const renderExperience = () => {
-  const content = getLandingContent();
+  const experience = getExperienceContent();
   const ui = getUiText();
   const grid = document.getElementById("experience-grid");
   if (!grid) return;
-  grid.innerHTML = content.experience.cards
-    .map((card) => {
-      const mediaType = card.mediaType ?? "poster";
-      const mediaKey = getFeaturedDishAssetKeyBySrc(card.src);
-      const canvasMarkup =
-        mediaType === "spriteSheet"
-          ? '<canvas class="landing-media-canvas experience-media-canvas" data-experience-media-canvas hidden></canvas>'
-          : "";
 
-      return `
-      <article class="experience-card">
-        <div class="landing-media-stage experience-media-stage" data-experience-media-stage data-media-type="${htmlEscape(mediaType)}" data-media-key="${htmlEscape(mediaKey)}">
-          <div class="landing-media-loader" role="status" aria-live="polite" aria-label="${htmlEscape(ui.media.loadingAria)}">
-            <span class="landing-media-loader__spinner" aria-hidden="true"></span>
+  const selectedSample = experience.samples?.[DEFAULT_EXPERIENCE_SAMPLE_ID] ?? null;
+  if (!selectedSample) {
+    grid.innerHTML = "";
+    return;
+  }
+
+  const posterAssetKey = getLandingMediaAssetKeyBySrc(selectedSample.posterSrc);
+  const interactiveSpriteAssetKey = getLandingMediaAssetKeyBySrc(selectedSample.interactiveSpriteSrc);
+
+  grid.innerHTML = `
+    <div
+      class="experience-story"
+      data-experience-story
+      data-active-phase="text"
+      data-interactive-prepared="false"
+      data-interactive-unlocked="false"
+    >
+      <div class="experience-story-layout">
+        <div class="experience-narrative-column">
+          <div class="experience-narrative-sticky">
+            <div class="experience-narrative-rail">
+              ${renderExperienceStoryChapters(Array.isArray(experience.steps) ? experience.steps : [])}
+            </div>
           </div>
-          <img class="landing-media-fallback experience-media-image" src="${htmlEscape(FEATURED_DISH_ASSETS.poster)}" alt="${htmlEscape(card.alt)}" loading="lazy" decoding="async" draggable="false" />
-          ${canvasMarkup}
+          ${renderExperienceStoryTrack()}
         </div>
-        <div class="experience-card-body">
-          <h3>${htmlEscape(card.title)}</h3>
-          <p>${htmlEscape(card.body)}</p>
+        <div class="experience-stage-column">
+          <div class="experience-stage-sticky">
+            <div class="experience-stage-shell" data-experience-story-stage-shell>
+              <div class="experience-stage-frame" aria-hidden="true"></div>
+              ${renderExperienceStoryTextSurface(selectedSample)}
+              ${renderExperienceStoryPhotoSurface({
+                sample: selectedSample,
+                posterAssetKey,
+                ui
+              })}
+              ${renderExperienceStoryInteractiveSurface({
+                sample: selectedSample,
+                posterAssetKey,
+                interactiveSpriteAssetKey,
+                ui
+              })}
+            </div>
+          </div>
         </div>
-      </article>
-    `;
-    })
-    .join("");
+      </div>
+    </div>
+  `;
 };
 
-const teardownLandingMedia = () => {
-  landingMediaDisposers.forEach((dispose) => {
+const teardownExperienceMedia = () => {
+  experienceMediaDisposers.forEach((dispose) => {
     try {
       dispose();
     } catch {}
   });
-  landingMediaDisposers = [];
+  experienceMediaDisposers = [];
 };
 
-const createImageStageController = ({ stage, imageNode, primaryAssetKey, fallbackAssetKey = "poster" }) => {
+const createImageStageController = ({ stage, imageNode, primaryAssetKey, fallbackAssetKey = primaryAssetKey }) => {
   if (!stage || !(imageNode instanceof HTMLImageElement)) return () => {};
   let disposed = false;
   const unsubscribe = subscribeToAssetState(primaryAssetKey, (state) => {
@@ -1521,7 +1981,7 @@ const createImageStageController = ({ stage, imageNode, primaryAssetKey, fallbac
   });
 
   const applyImageSource = (assetKey) => {
-    imageNode.src = FEATURED_DISH_ASSETS[assetKey] ?? FEATURED_DISH_ASSETS.poster;
+    imageNode.src = LANDING_MEDIA_ASSETS[assetKey] ?? imageNode.src;
   };
 
   setMediaStageState(stage, "loading");
@@ -1555,32 +2015,30 @@ const createSpriteStageController = ({
   stage,
   fallbackImage,
   canvas,
-  hintNode,
   assetKey,
+  guidanceNode,
   spriteMeta = SPRITE_META,
-  cueEnabled = true,
-  interactiveEnabled = true,
-  cueProfile = SPRITE_CUE_PROFILE_CALM,
-  hintReshowIdleMs
+  onPrepare = null
 }) => {
-  if (!stage || !(canvas instanceof HTMLCanvasElement)) return () => {};
+  const noopController = {
+    prepare() {},
+    setUnlocked() {},
+    dispose() {}
+  };
+  if (!stage || !(canvas instanceof HTMLCanvasElement) || !assetKey) return noopController;
   const context = canvas.getContext("2d", { alpha: true });
   if (!context) {
     setMediaStageState(stage, "error");
-    return () => {};
+    return noopController;
   }
 
   let disposed = false;
-  let dragging = false;
-  let hintIdleTimer = null;
+  let prepared = false;
+  let unlocked = false;
+  let failed = false;
+  let spriteImage = null;
   let detachDrag = null;
-  let cueTimer = null;
-  let cueToken = 0;
-  const resolvedCueProfile = { ...SPRITE_CUE_PROFILE_CALM, ...(cueProfile ?? {}) };
-  const resolvedHintReshowIdleMs = Number.isFinite(Number(hintReshowIdleMs))
-    ? Number(hintReshowIdleMs)
-    : resolvedCueProfile.hintReshowIdleMs;
-  const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
+  let guidanceDismissed = false;
   const frameCount = Math.max(
     2,
     Math.min(
@@ -1588,15 +2046,13 @@ const createSpriteStageController = ({
       (Number(spriteMeta.columns) || SPRITE_META.columns) * (Number(spriteMeta.rows) || SPRITE_META.rows)
     )
   );
-  const centerFrame = Math.floor(frameCount / 2);
-  const cueOffset = Math.max(
-    Number(resolvedCueProfile.minOffsetFrames) || 3,
-    Math.round(frameCount * (Number(resolvedCueProfile.offsetRatio) || 0.1))
-  );
-  let frameCursor = centerFrame;
+  let frameCursor = 0;
   const unsubscribe = subscribeToAssetState(assetKey, (state) => {
-    if (disposed) return;
-    if (state === "loading") setMediaStageState(stage, "loading");
+    if (disposed || !prepared || spriteImage || failed) return;
+    if (state === "loading") {
+      stage.classList.add("is-loading-interactive");
+      setMediaStageState(stage, "loading");
+    }
   });
 
   canvas.width = Number(spriteMeta.frameWidth) || SPRITE_META.frameWidth;
@@ -1610,39 +2066,18 @@ const createSpriteStageController = ({
     if (fallbackImage instanceof HTMLElement) fallbackImage.classList.add("is-hidden");
   };
 
-  const clearHintTimer = () => {
-    if (hintIdleTimer) {
-      window.clearTimeout(hintIdleTimer);
-      hintIdleTimer = null;
+  const setGuidanceVisible = (visible) => {
+    if (!(guidanceNode instanceof HTMLElement)) return;
+    guidanceNode.classList.toggle("is-hidden", !visible);
+  };
+
+  const detachInteractiveDrag = () => {
+    if (detachDrag) {
+      detachDrag();
+      detachDrag = null;
     }
-  };
-
-  const showHint = () => {
-    if (!(hintNode instanceof HTMLElement)) return;
-    hintNode.classList.remove("is-hidden");
-  };
-
-  const hideHint = () => {
-    if (!(hintNode instanceof HTMLElement)) return;
-    hintNode.classList.add("is-hidden");
-  };
-
-  const scheduleHintReshow = () => {
-    if (!(hintNode instanceof HTMLElement)) return;
-    clearHintTimer();
-    hintIdleTimer = window.setTimeout(() => {
-      hintIdleTimer = null;
-      if (disposed || dragging) return;
-      showHint();
-    }, resolvedHintReshowIdleMs);
-  };
-
-  const clearCue = () => {
-    cueToken += 1;
-    if (cueTimer) {
-      window.clearTimeout(cueTimer);
-      cueTimer = null;
-    }
+    canvas.classList.remove("is-dragging");
+    stage.classList.remove("is-dragging-interactive");
   };
 
   const drawFrame = (spriteImage, rawFrame) => {
@@ -1658,201 +2093,358 @@ const createSpriteStageController = ({
     context.drawImage(spriteImage, sx, sy, frameWidth, frameHeight, 0, 0, canvas.width, canvas.height);
   };
 
-  const scheduleCue = (spriteImage, delayMs = resolvedCueProfile.startDelayMs) => {
-    if (disposed || prefersReducedMotion || !cueEnabled) return;
-    clearCue();
-    const token = cueToken;
-    cueTimer = window.setTimeout(() => {
-      if (disposed || dragging || token !== cueToken) return;
-      void runCue(spriteImage, token);
-    }, delayMs);
+  const dismissGuidance = () => {
+    if (guidanceDismissed) return;
+    guidanceDismissed = true;
+    setGuidanceVisible(false);
   };
 
-  const runCue = async (spriteImage, token) => {
-    const cancelled = () => disposed || dragging || token !== cueToken;
-    const cueBaseFrame = frameCursor;
-    const cueTargetFrame = cueBaseFrame + cueOffset;
-    for (let repeat = 0; repeat < 2; repeat += 1) {
-      const forward = await animateValue(cueBaseFrame, cueTargetFrame, resolvedCueProfile.forwardMs, (value) => {
-        frameCursor = value;
-        drawFrame(spriteImage, frameCursor);
-      }, cancelled);
-      if (!forward) return;
-
-      const back = await animateValue(cueTargetFrame, cueBaseFrame, resolvedCueProfile.returnMs, (value) => {
-        frameCursor = value;
-        drawFrame(spriteImage, frameCursor);
-      }, cancelled);
-      if (!back) return;
-
-      const waited = await delayIfActive(resolvedCueProfile.turnPauseMs, cancelled);
-      if (!waited) return;
-    }
-
-    cueTimer = window.setTimeout(() => {
-      if (cancelled()) return;
-      void runCue(spriteImage, token);
-    }, resolvedCueProfile.loopIdleMs);
-  };
-
-  setMediaStageState(stage, "loading");
   canvas.hidden = true;
   showFallback();
+  setGuidanceVisible(false);
 
-  void loadLandingAssetImage(assetKey)
-    .then((spriteImage) => {
-      if (disposed) return;
-      frameCursor = centerFrame;
-      drawFrame(spriteImage, frameCursor);
+  const syncInteractiveState = () => {
+    if (disposed) return;
+    const isReady = Boolean(spriteImage);
+    stage.classList.toggle("is-loading-interactive", prepared && !isReady && !failed);
+    stage.classList.toggle("is-interactive-ready", isReady);
+    stage.classList.toggle("is-interactive-unlocked", isReady && unlocked);
+
+    if (!isReady || !unlocked) {
+      detachInteractiveDrag();
+    }
+
+    if (isReady) {
       canvas.hidden = false;
       hideFallback();
-      if (interactiveEnabled) {
-        stage.classList.add("is-interactive-ready");
-      } else {
-        stage.classList.remove("is-interactive-ready");
-      }
       setMediaStageState(stage, "ready");
-
-      showHint();
-      if (interactiveEnabled) {
-        detachDrag = attachDemoParityDragInteractions(canvas, {
-          onStart: () => {
-            dragging = true;
-            hideHint();
-            scheduleHintReshow();
-            clearCue();
-          },
-          onMove: (deltaX) => {
-            const pixelsPerFrame = getDemoParityPixelsPerFrame();
-            frameCursor += (deltaX / pixelsPerFrame) * -1;
+      if (unlocked && !detachDrag) {
+        detachDrag = attachInteractiveOrbitDrag({
+          host: stage,
+          target: canvas,
+          frameCount,
+          onDismiss: dismissGuidance,
+          onDelta: (deltaFrames) => {
+            frameCursor += deltaFrames;
             drawFrame(spriteImage, frameCursor);
-            hideHint();
-            scheduleHintReshow();
-          },
-          onEnd: () => {
-            dragging = false;
-            hideHint();
-            scheduleHintReshow();
-            scheduleCue(spriteImage, resolvedCueProfile.startDelayMs);
           }
         });
       }
-
-      scheduleCue(spriteImage, resolvedCueProfile.startDelayMs);
-    })
-    .catch(() => {
-      if (disposed) return;
+    } else {
       canvas.hidden = true;
       showFallback();
-      stage.classList.remove("is-interactive-ready");
-      setMediaStageState(stage, "error");
-    });
+    }
 
-  return () => {
+    setGuidanceVisible(isReady && unlocked && !guidanceDismissed);
+  };
+
+  const prepare = () => {
+    if (disposed || prepared || failed) return;
+    prepared = true;
+    onPrepare?.();
+    setMediaStageState(stage, "loading");
+    stage.classList.add("is-loading-interactive");
+
+    void loadLandingAssetImage(assetKey)
+      .then((loadedSpriteImage) => {
+        if (disposed) return;
+        spriteImage = loadedSpriteImage;
+        frameCursor = 0;
+        drawFrame(spriteImage, frameCursor);
+        stage.classList.remove("is-loading-interactive");
+        syncInteractiveState();
+      })
+      .catch(() => {
+        if (disposed) return;
+        failed = true;
+        detachInteractiveDrag();
+        canvas.hidden = true;
+        showFallback();
+        setGuidanceVisible(false);
+        stage.classList.remove("is-loading-interactive");
+        stage.classList.remove("is-interactive-ready");
+        stage.classList.remove("is-interactive-unlocked");
+        setMediaStageState(stage, "error");
+      });
+  };
+
+  const setUnlocked = (nextUnlocked) => {
+    unlocked = Boolean(nextUnlocked);
+    syncInteractiveState();
+  };
+
+  const dispose = () => {
     disposed = true;
     unsubscribe();
-    clearCue();
-    clearHintTimer();
-    if (detachDrag) detachDrag();
+    detachInteractiveDrag();
     canvas.hidden = true;
-    hideHint();
+    setGuidanceVisible(false);
+    stage.classList.remove("is-loading-interactive");
     stage.classList.remove("is-interactive-ready");
+    stage.classList.remove("is-interactive-unlocked");
     showFallback();
   };
+
+  return { prepare, setUnlocked, dispose };
 };
 
-const observeStageOnce = (stage, callback) => {
-  if (!("IntersectionObserver" in window)) {
-    callback();
-    return () => {};
+const hydrateExperienceGuidanceAssets = (guidanceNode) => {
+  if (!(guidanceNode instanceof HTMLElement)) return;
+
+  const scene = guidanceNode.querySelector("[data-experience-guidance-scene]");
+  if (scene instanceof HTMLElement && scene.dataset.hydrated !== "true") {
+    const ellipseSrc = String(scene.dataset.guidanceEllipseSrc ?? "").trim();
+    const dishSrc = String(scene.dataset.guidanceDishSrc ?? "").trim();
+    if (ellipseSrc) scene.style.setProperty("--dish-guidance-ellipse", `url(${ellipseSrc})`);
+    if (dishSrc) scene.style.setProperty("--dish-guidance-dish", `url(${dishSrc})`);
+    scene.dataset.hydrated = "true";
   }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries.some((entry) => entry.isIntersecting);
-      if (!visible) return;
-      observer.disconnect();
-      callback();
-    },
-    {
-      threshold: 0.16,
-      rootMargin: "0px 0px -8% 0px"
-    }
-  );
-
-  observer.observe(stage);
-  return () => observer.disconnect();
+  const hand = guidanceNode.querySelector("[data-experience-guidance-hand]");
+  if (hand instanceof HTMLImageElement && !hand.getAttribute("src")) {
+    const handSrc = String(hand.dataset.guidanceHandSrc ?? "").trim();
+    if (handSrc) hand.src = handSrc;
+  }
 };
 
 const setupHeroMediaStage = () => {
   const stage = document.querySelector("[data-hero-media-stage]");
   if (!(stage instanceof HTMLElement)) return;
-  const fallbackImage = stage.querySelector("[data-hero-media-fallback]");
-  const canvas = stage.querySelector("[data-hero-media-canvas]");
-  const hintNode = stage.querySelector("[data-hero-drag-hint]");
-  if (hintNode instanceof HTMLElement) hintNode.classList.remove("is-hidden");
-  const dispose = createSpriteStageController({
+  if (heroMediaDispose) {
+    try {
+      heroMediaDispose();
+    } catch {}
+  }
+  const imageNode = stage.querySelector("[data-hero-media-image]");
+  heroMediaDispose = createImageStageController({
     stage,
-    fallbackImage,
-    canvas,
-    hintNode,
-    assetKey: "spriteHq",
+    imageNode,
+    primaryAssetKey: `${HERO_SAMPLE_ID}:teaser`,
+    fallbackAssetKey: `${HERO_SAMPLE_ID}:poster`
+  });
+};
+
+const applyExperienceStoryLayerStyles = (layer, { opacity, scale, translateY, blur = 0 }) => {
+  if (!(layer instanceof HTMLElement)) return;
+  layer.style.opacity = String(clampNumber(opacity, 0, 1));
+  layer.style.transform = `translate3d(0, ${translateY.toFixed(2)}px, 0) scale(${scale.toFixed(3)})`;
+  layer.style.filter = blur > 0 ? `blur(${blur.toFixed(2)}px)` : "none";
+};
+
+const resolveExperienceStoryPosition = (trackSteps, focusY) => {
+  if (!trackSteps.length) {
+    return { chapterIndex: 0, chapterProgress: 0 };
+  }
+
+  for (let index = 0; index < trackSteps.length; index += 1) {
+    const step = trackSteps[index];
+    const rect = step.getBoundingClientRect();
+    const height = Math.max(1, rect.height);
+
+    if (focusY < rect.top) {
+      return {
+        chapterIndex: Math.max(0, index - 1),
+        chapterProgress: index === 0 ? 0 : 1
+      };
+    }
+
+    if (focusY <= rect.bottom || index === trackSteps.length - 1) {
+      return {
+        chapterIndex: index,
+        chapterProgress: clampNumber((focusY - rect.top) / height, 0, 1)
+      };
+    }
+  }
+
+  return {
+    chapterIndex: trackSteps.length - 1,
+    chapterProgress: 1
+  };
+};
+
+const resolveExperienceStorySnapshot = ({ chapterIndex, chapterProgress }) => {
+  const finalChapterIndex = EXPERIENCE_STORY_PHASES.length - 1;
+  const isTail = chapterIndex > finalChapterIndex;
+  const activeChapterIndex = isTail ? finalChapterIndex : chapterIndex;
+  const activeChapterProgress = isTail ? 1 : chapterProgress;
+  const textToPhoto = activeChapterIndex === 0
+    ? remapClamped(activeChapterProgress, EXPERIENCE_CHAPTER_TRANSITION_START, 1)
+    : activeChapterIndex > 0
+      ? 1
+      : 0;
+  const photoToInteractive = activeChapterIndex === 1
+    ? remapClamped(activeChapterProgress, EXPERIENCE_CHAPTER_TRANSITION_START, 1)
+    : activeChapterIndex > 1
+      ? 1
+      : 0;
+  const interactiveSettle = activeChapterIndex === finalChapterIndex
+    ? isTail
+      ? 1
+      : remapClamped(activeChapterProgress, 0, 0.32)
+    : 0;
+  const interactiveUnlock = activeChapterIndex === finalChapterIndex
+    ? isTail
+      ? 1
+      : remapClamped(activeChapterProgress, EXPERIENCE_INTERACTIVE_UNLOCK_START, 1)
+    : 0;
+
+  return {
+    chapterIndex: activeChapterIndex,
+    chapterProgress: activeChapterProgress,
+    activePhase: EXPERIENCE_STORY_PHASES[activeChapterIndex] ?? EXPERIENCE_STORY_PHASES[finalChapterIndex],
+    textToPhoto,
+    photoToInteractive,
+    interactiveSettle,
+    interactiveUnlock,
+    shouldPrepareInteractive: activeChapterIndex > 1 || (activeChapterIndex === 1 && photoToInteractive > 0),
+    isInteractiveUnlocked: activeChapterIndex === finalChapterIndex
+  };
+};
+
+const setupExperienceStory = () => {
+  teardownExperienceMedia();
+  const story = document.querySelector("[data-experience-story]");
+  if (!(story instanceof HTMLElement)) return;
+
+  const track = story.querySelector("[data-experience-story-track]");
+  const trackSteps = Array.from(story.querySelectorAll("[data-experience-story-track-step]"));
+  const chapters = Array.from(story.querySelectorAll("[data-experience-chapter]"));
+  const textLayer = story.querySelector('[data-experience-story-layer="text"]');
+  const photoLayer = story.querySelector('[data-experience-story-layer="photo"]');
+  const interactiveLayer = story.querySelector('[data-experience-story-layer="interactive"]');
+
+  const photoStage = story.querySelector("[data-experience-photo-stage]");
+  const photoImage = story.querySelector("[data-experience-photo-image]");
+  if (photoStage instanceof HTMLElement && photoImage instanceof HTMLImageElement) {
+    const photoPrimaryAssetKey = photoStage.dataset.primaryAssetKey ?? "";
+    const photoFallbackAssetKey = photoStage.dataset.fallbackAssetKey ?? photoPrimaryAssetKey;
+    if (photoPrimaryAssetKey) {
+      experienceMediaDisposers.push(
+        createImageStageController({
+          stage: photoStage,
+          imageNode: photoImage,
+          primaryAssetKey: photoPrimaryAssetKey,
+          fallbackAssetKey: photoFallbackAssetKey
+        })
+      );
+    }
+  }
+
+  const interactiveStage = interactiveLayer?.querySelector("[data-experience-media-stage]");
+  const interactiveFallback = interactiveLayer?.querySelector("[data-experience-media-image]");
+  const interactiveCanvas = interactiveLayer?.querySelector("[data-experience-media-canvas]");
+  const guidanceNode = interactiveLayer?.querySelector("[data-experience-guidance]");
+  const interactiveAssetKey = interactiveStage instanceof HTMLElement
+    ? String(interactiveStage.dataset.primaryAssetKey ?? "").trim()
+    : "";
+  const interactiveController = createSpriteStageController({
+    stage: interactiveStage,
+    fallbackImage: interactiveFallback,
+    canvas: interactiveCanvas,
+    assetKey: interactiveAssetKey,
+    guidanceNode,
     spriteMeta: SPRITE_META,
-    cueEnabled: true,
-    interactiveEnabled: true,
-    cueProfile: SPRITE_CUE_PROFILE_CALM,
-    hintReshowIdleMs: SPRITE_CUE_PROFILE_CALM.hintReshowIdleMs
+    onPrepare: () => hydrateExperienceGuidanceAssets(guidanceNode)
   });
-  landingMediaDisposers.push(dispose);
+  experienceMediaDisposers.push(() => {
+    interactiveController.dispose();
+  });
+  let interactivePrepared = false;
+
+  if (!(track instanceof HTMLElement) || !trackSteps.length) {
+    return;
+  }
+
+  const syncStoryState = (snapshot) => {
+    story.dataset.activePhase = snapshot.activePhase;
+    story.dataset.interactivePrepared = String(interactivePrepared);
+    story.dataset.interactiveUnlocked = String(snapshot.isInteractiveUnlocked);
+    story.classList.toggle("is-interactive-prepared", interactivePrepared);
+    story.classList.toggle("is-interactive-unlocked", snapshot.isInteractiveUnlocked);
+
+    chapters.forEach((chapter, index) => {
+      if (!(chapter instanceof HTMLElement)) return;
+      chapter.classList.toggle("is-revealed", index <= snapshot.chapterIndex);
+      chapter.classList.toggle("is-active", index === snapshot.chapterIndex);
+      chapter.classList.toggle("is-complete", index < snapshot.chapterIndex);
+    });
+
+    applyExperienceStoryLayerStyles(textLayer, {
+      opacity: 1 - snapshot.textToPhoto,
+      scale: 1 - snapshot.textToPhoto * 0.08,
+      translateY: snapshot.textToPhoto * 56,
+      blur: snapshot.textToPhoto
+    });
+
+    applyExperienceStoryLayerStyles(photoLayer, {
+      opacity: snapshot.chapterIndex === 0 ? snapshot.textToPhoto : 1 - snapshot.photoToInteractive * 0.96,
+      scale:
+        snapshot.chapterIndex === 0
+          ? 0.88 + snapshot.textToPhoto * 0.12
+          : 1 - snapshot.photoToInteractive * 0.04,
+      translateY:
+        snapshot.chapterIndex === 0
+          ? (1 - snapshot.textToPhoto) * 34
+          : snapshot.chapterIndex === 1
+            ? 0
+            : -snapshot.photoToInteractive * 18,
+      blur: snapshot.photoToInteractive * 0.9
+    });
+
+    applyExperienceStoryLayerStyles(interactiveLayer, {
+      opacity: snapshot.chapterIndex === 0 ? 0 : snapshot.chapterIndex === 1 ? snapshot.photoToInteractive : 1,
+      scale: snapshot.chapterIndex === 1 ? 0.96 + snapshot.photoToInteractive * 0.04 : 1,
+      translateY:
+        snapshot.chapterIndex === 0
+          ? 28
+          : snapshot.chapterIndex === 1
+            ? (1 - snapshot.photoToInteractive) * 22
+            : -snapshot.interactiveSettle * 6,
+      blur: snapshot.chapterIndex === 1 ? (1 - snapshot.photoToInteractive) * 0.9 : 0
+    });
+  };
+
+  let rafId = 0;
+  const updateStory = () => {
+    const focusY = window.innerHeight * 0.52;
+    const snapshot = resolveExperienceStorySnapshot(resolveExperienceStoryPosition(trackSteps, focusY));
+
+    if (snapshot.shouldPrepareInteractive) {
+      interactivePrepared = true;
+      interactiveController.prepare();
+    }
+
+    interactiveController.setUnlocked(snapshot.isInteractiveUnlocked);
+    syncStoryState(snapshot);
+  };
+
+  const requestUpdate = () => {
+    if (rafId) return;
+    rafId = window.requestAnimationFrame(() => {
+      rafId = 0;
+      updateStory();
+    });
+  };
+
+  updateStory();
+
+  const resizeHandler = () => requestUpdate();
+  const scrollHandler = () => requestUpdate();
+  window.addEventListener("scroll", scrollHandler, { passive: true });
+  window.addEventListener("resize", resizeHandler, { passive: true });
+  window.addEventListener("orientationchange", resizeHandler, { passive: true });
+
+  experienceMediaDisposers.push(() => {
+    window.removeEventListener("scroll", scrollHandler);
+    window.removeEventListener("resize", resizeHandler);
+    window.removeEventListener("orientationchange", resizeHandler);
+    if (rafId) window.cancelAnimationFrame(rafId);
+  });
 };
 
-const setupExperienceMediaStages = () => {
-  const stages = Array.from(document.querySelectorAll("[data-experience-media-stage]"));
-  stages.forEach((stage) => {
-    if (!(stage instanceof HTMLElement)) return;
-    const initStage = () => {
-      const mediaType = stage.dataset.mediaType ?? "poster";
-      const mediaKey = stage.dataset.mediaKey ?? "poster";
-      const imageNode = stage.querySelector(".landing-media-fallback");
-      if (imageNode instanceof HTMLImageElement) imageNode.src = FEATURED_DISH_ASSETS.poster;
-
-      if (mediaType === "spriteSheet") {
-        const canvas = stage.querySelector("[data-experience-media-canvas]");
-        const dispose = createSpriteStageController({
-          stage,
-          fallbackImage: imageNode,
-          canvas,
-          hintNode: null,
-          assetKey: mediaKey,
-          spriteMeta: SPRITE_META,
-          cueEnabled: true,
-          interactiveEnabled: false,
-          cueProfile: SPRITE_CUE_PROFILE_CALM
-        });
-        landingMediaDisposers.push(dispose);
-        return;
-      }
-
-      const fallbackKey = mediaType === "animatedWebp" ? "poster" : mediaKey;
-      const dispose = createImageStageController({
-        stage,
-        imageNode,
-        primaryAssetKey: mediaKey,
-        fallbackAssetKey: fallbackKey
-      });
-      landingMediaDisposers.push(dispose);
-    };
-
-    const detachObserver = observeStageOnce(stage, initStage);
-    landingMediaDisposers.push(detachObserver);
-  });
-};
-
-const setupLandingMedia = () => {
-  teardownLandingMedia();
-  startLandingAssetPreload();
-  setupHeroMediaStage();
-  setupExperienceMediaStages();
+const refreshExperienceSection = () => {
+  renderExperience();
+  setupExperienceStory();
 };
 
 const renderTimeline = () => {
@@ -2529,11 +3121,10 @@ const setupRevealAnimation = () => {
 const hydrateLanding = () => {
   hydrateContentText();
   renderWhyItMatters();
-  renderExperience();
+  refreshExperienceSection();
   renderTimeline();
   renderCollaborationSection();
   renderFaq();
-  setupLandingMedia();
 };
 
 const main = async () => {
@@ -2551,6 +3142,8 @@ const main = async () => {
   setupBackToTop();
 
   hydrateLanding();
+  startLandingAssetPreload();
+  setupHeroMediaStage();
   setupRevealAnimation();
 
   hydrateFooterYear();
