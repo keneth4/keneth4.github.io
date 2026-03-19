@@ -79,19 +79,44 @@
             <option value="de">DE</option>
           </select>
         </div>
-        <div class="locale-switch locale-switch-mobile-header">
-          <label class="locale-label" for="locale-select-mobile-header" data-i18n="locale.label">Language</label>
-          <select
-            id="locale-select-mobile-header"
-            class="locale-select"
-            data-locale-select
-            aria-label="Language"
-            data-i18n-aria-label="locale.label"
-          >
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="de">DE</option>
-          </select>
+        <button
+          class="site-nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav-sheet"
+          aria-label="Open menu"
+          data-mobile-nav-toggle
+        >
+          <span class="visually-hidden" data-mobile-nav-toggle-label>Open menu</span>
+          <span class="site-nav-toggle-bars" aria-hidden="true">
+            <span class="site-nav-toggle-line"></span>
+            <span class="site-nav-toggle-line"></span>
+            <span class="site-nav-toggle-line"></span>
+          </span>
+        </button>
+      </div>
+      <div id="mobile-nav-sheet" class="mobile-nav-sheet" aria-hidden="true" data-mobile-nav-sheet>
+        <div class="container mobile-nav-sheet-inner">
+          <nav class="mobile-nav" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+            <a class="mobile-nav-link" href="#experience" data-i18n="nav.experience">Experience</a>
+            <a class="mobile-nav-link" href="#demos" data-i18n="nav.demos">Demos</a>
+            <a class="mobile-nav-link" href="#collaboration" data-i18n="nav.pricing">Pricing</a>
+            <a class="mobile-nav-link" href="#consultation" data-i18n="nav.consultation">Consultation</a>
+          </nav>
+          <div class="locale-switch locale-switch-mobile-sheet">
+            <label class="locale-label" for="locale-select-mobile-sheet" data-i18n="locale.label">Language</label>
+            <select
+              id="locale-select-mobile-sheet"
+              class="locale-select"
+              data-locale-select
+              aria-label="Language"
+              data-i18n-aria-label="locale.label"
+            >
+              <option value="en">EN</option>
+              <option value="es">ES</option>
+              <option value="de">DE</option>
+            </select>
+          </div>
         </div>
       </div>
     </header>

@@ -11,7 +11,7 @@ const EXCLUDED_ROOT_FILES = new Set([
   "wrangler.jsonc",
   "wrangler.toml"
 ]);
-const ROOT_DIRECTORIES_TO_COPY = ["demos"];
+const ROOT_DIRECTORIES_TO_COPY = ["demos", "visual_onboarding"];
 
 fs.rmSync(outputDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });

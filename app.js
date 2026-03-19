@@ -7,6 +7,7 @@ const TURNSTILE_TOKEN_FIELD = "cf-turnstile-response";
 const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
 const LOCALE_STORAGE_KEY = "cv_locale";
+const COMPACT_HEADER_MEDIA_QUERY = "(max-width: 760px), ((max-width: 1040px) and (orientation: landscape))";
 const HERO_SAMPLE_ID = "short-ribs";
 const DEFAULT_EXPERIENCE_SAMPLE_ID = "sushi";
 const LANDING_DISH_MEDIA = {
@@ -26,21 +27,30 @@ const LANDING_DISH_MEDIA = {
     interactiveSpriteSrc: "./Strawberry-Croissant-int-sprite.webp"
   }
 };
-const LANDING_MEDIA_ASSETS = Object.fromEntries(
-  Object.entries(LANDING_DISH_MEDIA).flatMap(([sampleId, media]) => [
-    [`${sampleId}:poster`, media.posterSrc],
-    [`${sampleId}:teaser`, media.teaserMdSrc],
-    [`${sampleId}:interactive`, media.interactiveSpriteSrc]
-  ])
-);
-const LANDING_MEDIA_ASSET_KEYS_BY_SRC = new Map(
-  Object.entries(LANDING_MEDIA_ASSETS).map(([assetKey, src]) => [src, assetKey])
-);
 const LANDING_MODAL_GUIDANCE_ASSETS = {
   circularMotionArrows: "./visual_onboarding/circular_motion_arrows.png",
   pointingHand: "./visual_onboarding/pointing_hand.png",
   sampleDish: "./visual_onboarding/sample_2d_dish.png"
 };
+const LANDING_MODAL_GUIDANCE_ASSET_KEYS = {
+  circularMotionArrows: "guidance:circularMotionArrows",
+  pointingHand: "guidance:pointingHand",
+  sampleDish: "guidance:sampleDish"
+};
+const LANDING_MEDIA_ASSETS = Object.fromEntries([
+  ...Object.entries(LANDING_DISH_MEDIA).flatMap(([sampleId, media]) => [
+    [`${sampleId}:poster`, media.posterSrc],
+    [`${sampleId}:teaser`, media.teaserMdSrc],
+    [`${sampleId}:interactive`, media.interactiveSpriteSrc]
+  ]),
+  ...Object.entries(LANDING_MODAL_GUIDANCE_ASSETS).map(([assetName, src]) => [
+    LANDING_MODAL_GUIDANCE_ASSET_KEYS[assetName],
+    src
+  ])
+]);
+const LANDING_MEDIA_ASSET_KEYS_BY_SRC = new Map(
+  Object.entries(LANDING_MEDIA_ASSETS).map(([assetKey, src]) => [src, assetKey])
+);
 const SPRITE_META = {
   frameWidth: 500,
   frameHeight: 500,
@@ -737,7 +747,9 @@ const UI_TEXT_BY_LOCALE = {
       experience: "Experience",
       demos: "Demos",
       pricing: "Pricing",
-      consultation: "Consultation"
+      consultation: "Consultation",
+      menuOpen: "Open menu",
+      menuClose: "Close menu"
     },
     locale: {
       label: "Language"
@@ -834,7 +846,9 @@ const UI_TEXT_BY_LOCALE = {
       experience: "Experiencia",
       demos: "Demos",
       pricing: "Precios",
-      consultation: "Consulta"
+      consultation: "Consulta",
+      menuOpen: "Abrir menú",
+      menuClose: "Cerrar menú"
     },
     locale: {
       label: "Idioma"
@@ -931,7 +945,9 @@ const UI_TEXT_BY_LOCALE = {
       experience: "Experience",
       demos: "Demos",
       pricing: "Preise",
-      consultation: "Beratung"
+      consultation: "Beratung",
+      menuOpen: "Menü öffnen",
+      menuClose: "Menü schließen"
     },
     locale: {
       label: "Sprache"
@@ -1127,6 +1143,7 @@ const assetPromiseByKey = new Map();
 let landingAssetPreloadStarted = false;
 let heroMediaDispose = null;
 let experienceMediaDisposers = [];
+let mobileHeaderController = null;
 
 const htmlEscape = (value) =>
   String(value ?? "")
@@ -1445,6 +1462,10 @@ const getUiText = () => UI_TEXT_BY_LOCALE[currentLocale] ?? UI_TEXT_BY_LOCALE[DE
 const getLandingContent = () =>
   LANDING_CONTENT_BY_LOCALE[currentLocale] ?? LANDING_CONTENT_BY_LOCALE[DEFAULT_LOCALE];
 
+const isMobileHeaderViewport = () => window.matchMedia?.(COMPACT_HEADER_MEDIA_QUERY)?.matches ?? false;
+
+const getMinimumHeaderOffset = () => (isMobileHeaderViewport() ? 56 : 64);
+
 const applyDocumentLocale = () => {
   const ui = getUiText();
   document.documentElement.lang = currentLocale;
@@ -1513,6 +1534,7 @@ const setLocale = (nextLocale, options = {}) => {
   syncLocaleSelects();
   applyDocumentLocale();
   applyStaticTranslations();
+  mobileHeaderController?.syncLabels();
 
   if (!rerender) return;
 
@@ -1538,18 +1560,23 @@ const syncHeaderOffset = () => {
   const header = document.querySelector(".site-header");
   if (!header) return;
   const headerHeight = Math.ceil(header.getBoundingClientRect().height);
-  const offset = Math.max(64, headerHeight + 2);
+  const offset = Math.max(getMinimumHeaderOffset(), headerHeight + 2);
   document.documentElement.style.setProperty("--header-offset", `${offset}px`);
 };
 
-const scrollToSectionWithOffset = (hash, behavior = "smooth") => {
+const scrollToSectionWithOffset = (hash, behavior = "smooth", headerOffsetOverride = null, targetTopAdjustment = 0) => {
   if (!hash || !hash.startsWith("#")) return;
   const target = document.querySelector(hash);
   if (!target) return;
 
   const header = document.querySelector(".site-header");
-  const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
-  const targetTop = window.scrollY + target.getBoundingClientRect().top;
+  const headerHeight =
+    typeof headerOffsetOverride === "number"
+      ? headerOffsetOverride
+      : header
+        ? Math.ceil(header.getBoundingClientRect().height)
+        : 0;
+  const targetTop = window.scrollY + target.getBoundingClientRect().top + targetTopAdjustment;
   const scrollTop = Math.max(0, targetTop - headerHeight - 2);
 
   if (behavior === "instant") {
@@ -1563,6 +1590,168 @@ const scrollToSectionWithOffset = (hash, behavior = "smooth") => {
   } else {
     window.location.hash = hash;
   }
+};
+
+const setupMobileHeader = () => {
+  const header = document.querySelector(".site-header");
+  const toggle = document.querySelector("[data-mobile-nav-toggle]");
+  const sheet = document.querySelector("[data-mobile-nav-sheet]");
+  if (!(header instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement) || !(sheet instanceof HTMLElement)) {
+    return null;
+  }
+
+  const mobileQuery = window.matchMedia(COMPACT_HEADER_MEDIA_QUERY);
+  const focusableNodes = Array.from(sheet.querySelectorAll("a, button, select")).filter(
+    (node) => node instanceof HTMLElement
+  );
+  const localeSelect = sheet.querySelector("[data-locale-select]");
+  const labelNode = toggle.querySelector("[data-mobile-nav-toggle-label]");
+  let isOpen = false;
+  let lastScrollY = window.scrollY;
+  let scrollTicking = false;
+  let holdVisibleUntil = 0;
+
+  const syncFocusableNodes = (enabled) => {
+    sheet.setAttribute("aria-hidden", String(!enabled));
+    focusableNodes.forEach((node) => {
+      if (!(node instanceof HTMLElement)) return;
+
+      if (enabled) {
+        const originalTabIndex = node.dataset.mobileNavOriginalTabindex;
+        if (originalTabIndex === "__none__") {
+          node.removeAttribute("tabindex");
+        } else if (typeof originalTabIndex === "string") {
+          node.setAttribute("tabindex", originalTabIndex);
+        }
+        delete node.dataset.mobileNavOriginalTabindex;
+        return;
+      }
+
+      if (!("mobileNavOriginalTabindex" in node.dataset)) {
+        node.dataset.mobileNavOriginalTabindex = node.getAttribute("tabindex") ?? "__none__";
+      }
+      node.setAttribute("tabindex", "-1");
+    });
+  };
+
+  const syncLabels = () => {
+    const ui = getUiText();
+    const label = isOpen ? ui.nav.menuClose : ui.nav.menuOpen;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", label);
+    if (labelNode) labelNode.textContent = label;
+    header.classList.toggle("site-header--menu-open", isOpen);
+    if (isOpen) header.classList.remove("site-header--hidden");
+    syncFocusableNodes(isOpen && mobileQuery.matches);
+  };
+
+  const setMenuOpen = (nextOpen, options = {}) => {
+    const { restoreFocus = false, syncOffset = true } = options;
+    const resolvedOpen = Boolean(nextOpen && mobileQuery.matches);
+    if (isOpen === resolvedOpen) {
+      if (!isOpen) header.classList.remove("site-header--menu-open");
+      if (syncOffset) window.requestAnimationFrame(syncHeaderOffset);
+      return;
+    }
+
+    isOpen = resolvedOpen;
+    syncLabels();
+    if (syncOffset) window.requestAnimationFrame(syncHeaderOffset);
+    if (!isOpen && restoreFocus) toggle.focus();
+  };
+
+  const applyScrollVisibility = () => {
+    scrollTicking = false;
+    const currentScrollY = window.scrollY;
+
+    if (!mobileQuery.matches || isOpen) {
+      header.classList.remove("site-header--hidden");
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    if (performance.now() < holdVisibleUntil) {
+      header.classList.remove("site-header--hidden");
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    if (currentScrollY <= 8) {
+      header.classList.remove("site-header--hidden");
+    } else if (currentScrollY > lastScrollY + 10 && currentScrollY > 80) {
+      header.classList.add("site-header--hidden");
+    } else if (currentScrollY < lastScrollY - 10) {
+      header.classList.remove("site-header--hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  const handleScroll = () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(applyScrollVisibility);
+  };
+
+  const handleViewportChange = () => {
+    if (!mobileQuery.matches) {
+      setMenuOpen(false, { syncOffset: false });
+      header.classList.remove("site-header--hidden");
+    } else {
+      syncLabels();
+    }
+    holdVisibleUntil = 0;
+    lastScrollY = window.scrollY;
+    syncHeaderOffset();
+  };
+
+  toggle.addEventListener("click", () => {
+    setMenuOpen(!isOpen);
+  });
+
+  if (localeSelect instanceof HTMLSelectElement) {
+    localeSelect.addEventListener("change", () => {
+      window.requestAnimationFrame(() => setMenuOpen(false));
+    });
+  }
+
+  document.addEventListener("click", (event) => {
+    if (!isOpen || !(event.target instanceof Node)) return;
+    if (header.contains(event.target)) return;
+    setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !isOpen) return;
+    event.preventDefault();
+    setMenuOpen(false, { restoreFocus: true });
+  });
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  sheet.addEventListener("transitionend", (event) => {
+    if (event.target === sheet && event.propertyName === "max-height") {
+      syncHeaderOffset();
+    }
+  });
+
+  if ("addEventListener" in mobileQuery) {
+    mobileQuery.addEventListener("change", handleViewportChange);
+  } else if ("addListener" in mobileQuery) {
+    mobileQuery.addListener(handleViewportChange);
+  }
+
+  syncLabels();
+  syncHeaderOffset();
+
+  return {
+    isMenuOpen: () => isOpen,
+    closeMenu: (options = {}) => setMenuOpen(false, options),
+    holdVisible: (durationMs = 900) => {
+      holdVisibleUntil = performance.now() + durationMs;
+      header.classList.remove("site-header--hidden");
+    },
+    syncLabels
+  };
 };
 
 const setupStickyNavAnchors = () => {
@@ -1581,6 +1770,19 @@ const setupStickyNavAnchors = () => {
       if (!document.querySelector(hash)) return;
 
       event.preventDefault();
+      const shouldUseCollapsedOffset = mobileHeaderController?.isMenuOpen?.() ?? false;
+      mobileHeaderController?.holdVisible?.();
+      if (shouldUseCollapsedOffset) {
+        const header = document.querySelector(".site-header");
+        const expandedHeaderHeight = header ? Math.ceil(header.getBoundingClientRect().height) : getMinimumHeaderOffset();
+        const collapsedOffset = getMinimumHeaderOffset();
+        const targetTopAdjustment = -Math.max(0, expandedHeaderHeight - collapsedOffset);
+        mobileHeaderController.closeMenu({ syncOffset: false });
+        scrollToSectionWithOffset(hash, behavior, collapsedOffset, targetTopAdjustment);
+        window.requestAnimationFrame(syncHeaderOffset);
+        return;
+      }
+
       syncHeaderOffset();
       scrollToSectionWithOffset(hash, behavior);
     });
@@ -1853,22 +2055,24 @@ const renderEmbeddedInteractiveModal = ({ sample, posterAssetKey, interactiveSpr
             data-fallback-asset-key="${htmlEscape(posterAssetKey)}"
           >
             <div class="dish-modal__interactive-guidance is-hidden" data-experience-guidance aria-hidden="true">
-              <div
-                class="dish-modal__interactive-guidance-scene"
-                data-experience-guidance-scene
-                data-guidance-ellipse-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.circularMotionArrows)}"
-                data-guidance-dish-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.sampleDish)}"
-              >
-                <span class="dish-modal__interactive-guidance-hand-wrap">
-                  <img
-                    class="dish-modal__interactive-guidance-hand"
-                    data-experience-guidance-hand
-                    data-guidance-hand-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.pointingHand)}"
-                    alt=""
-                    draggable="false"
-                    decoding="async"
-                  />
-                </span>
+              <div class="dish-modal__interactive-guidance-mask">
+                <div
+                  class="dish-modal__interactive-guidance-scene"
+                  data-experience-guidance-scene
+                  data-guidance-ellipse-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.circularMotionArrows)}"
+                  data-guidance-dish-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.sampleDish)}"
+                >
+                  <span class="dish-modal__interactive-guidance-hand-wrap">
+                    <img
+                      class="dish-modal__interactive-guidance-hand"
+                      data-experience-guidance-hand
+                      data-guidance-hand-src="${htmlEscape(LANDING_MODAL_GUIDANCE_ASSETS.pointingHand)}"
+                      alt=""
+                      draggable="false"
+                      decoding="async"
+                    />
+                  </span>
+                </div>
               </div>
             </div>
             <div class="landing-media-loader" role="status" aria-live="polite" aria-label="${htmlEscape(ui.media.loadingAria)}">
@@ -2045,6 +2249,9 @@ const createSpriteStageController = ({
   let spriteImage = null;
   let detachDrag = null;
   let guidanceDismissed = false;
+  let guidanceAssetsReady = false;
+  let guidanceAssetsFailed = false;
+  let guidancePrepareTask = null;
   const frameCount = Math.max(
     2,
     Math.min(
@@ -2075,6 +2282,33 @@ const createSpriteStageController = ({
   const setGuidanceVisible = (visible) => {
     if (!(guidanceNode instanceof HTMLElement)) return;
     guidanceNode.classList.toggle("is-hidden", !visible);
+    guidanceNode.setAttribute("aria-hidden", String(!visible));
+  };
+
+  const prepareGuidanceAssets = () => {
+    if (guidancePrepareTask) return guidancePrepareTask;
+    if (!(onPrepare instanceof Function)) {
+      guidanceAssetsFailed = true;
+      return Promise.resolve(false);
+    }
+
+    guidancePrepareTask = Promise.resolve(onPrepare())
+      .then((ready) => {
+        if (disposed) return Boolean(ready);
+        guidanceAssetsReady = Boolean(ready);
+        guidanceAssetsFailed = !guidanceAssetsReady;
+        syncInteractiveState();
+        return guidanceAssetsReady;
+      })
+      .catch(() => {
+        if (disposed) return false;
+        guidanceAssetsReady = false;
+        guidanceAssetsFailed = true;
+        syncInteractiveState();
+        return false;
+      });
+
+    return guidancePrepareTask;
   };
 
   const detachInteractiveDrag = () => {
@@ -2141,13 +2375,13 @@ const createSpriteStageController = ({
       showFallback();
     }
 
-    setGuidanceVisible(isReady && unlocked && !guidanceDismissed);
+    setGuidanceVisible(isReady && unlocked && guidanceAssetsReady && !guidanceDismissed && !guidanceAssetsFailed);
   };
 
   const prepare = () => {
     if (disposed || prepared || failed) return;
     prepared = true;
-    onPrepare?.();
+    void prepareGuidanceAssets();
     setMediaStageState(stage, "loading");
     stage.classList.add("is-loading-interactive");
 
@@ -2194,23 +2428,34 @@ const createSpriteStageController = ({
   return { prepare, setUnlocked, dispose };
 };
 
-const hydrateExperienceGuidanceAssets = (guidanceNode) => {
-  if (!(guidanceNode instanceof HTMLElement)) return;
+const hydrateExperienceGuidanceAssets = async (guidanceNode) => {
+  if (!(guidanceNode instanceof HTMLElement)) return false;
+
+  let ellipseImage;
+  let dishImage;
+  let handImage;
+  try {
+    [ellipseImage, dishImage, handImage] = await Promise.all([
+      loadLandingAssetImage(LANDING_MODAL_GUIDANCE_ASSET_KEYS.circularMotionArrows),
+      loadLandingAssetImage(LANDING_MODAL_GUIDANCE_ASSET_KEYS.sampleDish),
+      loadLandingAssetImage(LANDING_MODAL_GUIDANCE_ASSET_KEYS.pointingHand)
+    ]);
+  } catch {
+    return false;
+  }
 
   const scene = guidanceNode.querySelector("[data-experience-guidance-scene]");
-  if (scene instanceof HTMLElement && scene.dataset.hydrated !== "true") {
-    const ellipseSrc = String(scene.dataset.guidanceEllipseSrc ?? "").trim();
-    const dishSrc = String(scene.dataset.guidanceDishSrc ?? "").trim();
-    if (ellipseSrc) scene.style.setProperty("--dish-guidance-ellipse", `url(${ellipseSrc})`);
-    if (dishSrc) scene.style.setProperty("--dish-guidance-dish", `url(${dishSrc})`);
-    scene.dataset.hydrated = "true";
+  if (scene instanceof HTMLElement) {
+    scene.style.setProperty("--dish-guidance-ellipse", `url(${ellipseImage.src})`);
+    scene.style.setProperty("--dish-guidance-dish", `url(${dishImage.src})`);
   }
 
   const hand = guidanceNode.querySelector("[data-experience-guidance-hand]");
-  if (hand instanceof HTMLImageElement && !hand.getAttribute("src")) {
-    const handSrc = String(hand.dataset.guidanceHandSrc ?? "").trim();
-    if (handSrc) hand.src = handSrc;
+  if (hand instanceof HTMLImageElement) {
+    hand.src = handImage.src;
   }
+
+  return true;
 };
 
 const setupHeroMediaStage = () => {
@@ -3209,6 +3454,7 @@ const main = async () => {
   currentLocale = resolveInitialLocale();
   setupLocaleSwitchers();
   setLocale(currentLocale, { persist: true, updateUrl: false, rerender: false });
+  mobileHeaderController = setupMobileHeader();
 
   syncHeaderOffset();
   window.addEventListener("resize", syncHeaderOffset, { passive: true });
