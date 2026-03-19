@@ -2114,6 +2114,9 @@ body {
 }
 
 .dish-modal__media {
+  --dish-interactive-scale: 1;
+  --dish-interactive-origin-x: 50%;
+  --dish-interactive-origin-y: 50%;
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -2153,6 +2156,10 @@ body {
 }
 
 .dish-modal__media.is-dragging-interactive {
+  will-change: transform;
+}
+
+.dish-modal__media.is-pinching-interactive {
   will-change: transform;
 }
 
@@ -2365,7 +2372,9 @@ body {
   cursor: grab;
   user-select: none;
   z-index: 1;
-  transform: translateZ(0);
+  transform-origin: var(--dish-interactive-origin-x) var(--dish-interactive-origin-y);
+  transform: translateZ(0) scale(var(--dish-interactive-scale));
+  transition: transform 160ms ease-out;
   backface-visibility: hidden;
   overscroll-behavior: contain;
 }
@@ -2380,9 +2389,16 @@ body {
   cursor: grab;
   user-select: none;
   z-index: 1;
-  transform: translateZ(0);
+  transform-origin: var(--dish-interactive-origin-x) var(--dish-interactive-origin-y);
+  transform: translateZ(0) scale(var(--dish-interactive-scale));
+  transition: transform 160ms ease-out;
   backface-visibility: hidden;
   overscroll-behavior: contain;
+}
+
+.dish-modal__media.is-pinching-interactive .dish-modal__media-canvas,
+.dish-modal__media.is-pinching-interactive .dish-modal__media-video {
+  transition: none;
 }
 
 .dish-modal__media-canvas.is-dragging {

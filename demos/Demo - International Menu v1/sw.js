@@ -1,7 +1,7 @@
-const SHELL_CACHE_NAME = "menu-export-shell-1773689057099";
-const SPRITE_CACHE_NAME = "menu-export-sprites-1773689057099";
+const SHELL_CACHE_NAME = "menu-export-shell-1773897826619";
+const SPRITE_CACHE_NAME = "menu-export-sprites-1773897826619";
 const CACHE_PREFIX = "menu-export-";
-const PRECACHE_URLS = ["./","index.html","app.js?v=1773689057099","styles.css?v=1773689057099","favicon.png?v=1773689057099","Logo.png?v=1773689057099","visual_onboarding/circular_motion_arrows.png?v=1773689057099","visual_onboarding/hor_ver_motion_arrows.png?v=1773689057099","visual_onboarding/horizontal_motion_arrows.png?v=1773689057099","visual_onboarding/pointing_hand.png?v=1773689057099","visual_onboarding/sample_2d_dish.png?v=1773689057099"];
+const PRECACHE_URLS = ["./","index.html","app.js?v=1773897826619","styles.css?v=1773897826619","favicon.png?v=1773897826619","Logo.png?v=1773897826619","visual_onboarding/circular_motion_arrows.png?v=1773897826619","visual_onboarding/hor_ver_motion_arrows.png?v=1773897826619","visual_onboarding/horizontal_motion_arrows.png?v=1773897826619","visual_onboarding/pointing_hand.png?v=1773897826619","visual_onboarding/sample_2d_dish.png?v=1773897826619"];
 const resolvePrecacheRequestUrl = (value) => new URL(value, self.location.href).href;
 const PRECACHE_REQUEST_URLS = new Set(PRECACHE_URLS.map(resolvePrecacheRequestUrl));
 const isSameOrigin = (url) => url.origin === self.location.origin;
