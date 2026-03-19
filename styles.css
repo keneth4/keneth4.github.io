@@ -494,6 +494,10 @@ section[id] {
   gap: 1rem;
 }
 
+.experience-narrative-rail--portrait {
+  display: none;
+}
+
 .experience-story-chapter {
   display: none;
   gap: 0.32rem;
@@ -564,6 +568,12 @@ section[id] {
   min-height: calc(100svh - var(--experience-stage-offset) - 1.2rem);
   display: grid;
   place-items: center;
+}
+
+.experience-stage-stack {
+  width: 100%;
+  display: grid;
+  gap: 0;
 }
 
 .experience-stage-shell {
@@ -913,7 +923,9 @@ section[id] {
 .experience-embedded-modal .dish-modal__title {
   margin: 0;
   display: -webkit-box;
+  font-family: "Sora", "Avenir Next", sans-serif;
   font-size: 1.16rem;
+  font-weight: 800;
   line-height: 1.12;
   color: inherit;
   overflow: hidden;
@@ -2272,6 +2284,16 @@ section[id] {
     max-width: 14ch;
   }
 
+  .experience-narrative-sticky {
+    min-height: var(
+      --experience-landscape-sticky-height,
+      calc(100svh - var(--experience-stage-offset) - 0.35rem)
+    );
+    height: var(--experience-landscape-sticky-height, auto);
+    align-content: center;
+    overflow: hidden;
+  }
+
   .experience-stage-sticky {
     min-height: calc(100svh - var(--experience-stage-offset) - 0.35rem);
     justify-items: stretch;
@@ -2349,7 +2371,7 @@ section[id] {
   }
 
   .experience-embedded-modal .dish-modal__price {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
     line-height: 1.2;
   }
 }
@@ -2493,7 +2515,7 @@ section[id] {
     --experience-stage-offset: calc(var(--header-offset) + 0.55rem);
     --experience-modal-surface-width: min(100%, 28.5rem);
     --experience-stage-size: min(100%, 16.75rem);
-    --experience-modal-surface-height: min(31rem, calc(100svh - var(--experience-stage-offset) - 10rem));
+    --experience-modal-surface-height: clamp(25rem, calc(100svh - var(--experience-stage-offset) - 9rem), 35rem);
     --experience-ticket-width: min(100%, 22.75rem);
   }
 
@@ -2512,19 +2534,26 @@ section[id] {
   .experience-stage-column {
     grid-row: 1 / span 2;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
   .experience-narrative-column {
     grid-row: 2;
     position: relative;
-    z-index: 3;
+    z-index: 1;
     padding-top: 0;
   }
 
   .experience-stage-sticky {
+    min-height: calc(100svh - var(--experience-stage-offset) - 1rem);
+    display: grid;
+    align-content: start;
+  }
+
+  .experience-stage-stack {
     min-height: 0;
-    display: block;
+    gap: 0.18rem;
+    align-content: start;
   }
 
   .experience-stage-shell {
@@ -2534,28 +2563,60 @@ section[id] {
   }
 
   .experience-narrative-sticky {
-    position: sticky;
-    top: calc(var(--experience-stage-offset) + var(--experience-modal-surface-height) + 0.85rem);
-    z-index: 3;
+    display: none;
+    position: static;
+    top: auto;
+    z-index: auto;
   }
 
-  .experience-narrative-rail {
+  .experience-narrative-column .experience-narrative-rail {
+    display: none;
+  }
+
+  .experience-narrative-rail--portrait {
+    width: min(100%, 28.5rem);
+    display: grid;
+    gap: 0;
+    min-height: auto;
+    align-content: start;
+    margin-inline: auto;
+  }
+
+  .experience-narrative-rail--portrait .experience-story-chapter {
+    display: none;
+  }
+
+  .experience-narrative-rail--portrait .experience-story-chapter.is-revealed {
+    display: none;
+  }
+
+  .experience-narrative-rail--portrait .experience-story-chapter.is-active {
+    display: grid;
+    gap: 0.32rem;
+    opacity: 1;
+    padding-top: 0.42rem;
+    padding-inline-end: clamp(3.65rem, 18vw, 4.45rem);
+  }
+
+  .experience-narrative-rail--portrait .experience-story-chapter h3 {
     width: 100%;
-    gap: 1.1rem;
-    padding-bottom: 0.45rem;
-  }
-
-  .experience-story-chapter h3 {
     max-width: none;
   }
 
+  .experience-story-track {
+    margin-top: 0;
+  }
+
   .experience-story-surface-inner--text {
-    place-items: start center;
-    padding: 3rem 0.9rem 1.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.9rem;
   }
 
   .experience-story-surface--text .experience-story-ticket {
     width: min(calc(100% - 1.25rem), 22.75rem);
+    margin-block: auto;
   }
 
   .experience-story-surface--text .experience-story-ticket--text {
@@ -2639,15 +2700,83 @@ section[id] {
     line-height: 1.28;
   }
 
+  .experience-story-surface--interactive .dish-modal__card {
+    gap: 0.52rem;
+    padding: 0.76rem 0.72rem 0.68rem;
+  }
+
+  .experience-story-surface--interactive .dish-modal__media-slot {
+    width: min(100%, 19rem);
+    max-width: calc(100% - 0.8rem);
+  }
+
+  .experience-story-surface--interactive .dish-modal__title {
+    font-family: "Sora", "Avenir Next", sans-serif;
+    font-size: 0.98rem;
+    font-weight: 800;
+    line-height: 1.12;
+  }
+
+  .experience-story-surface--interactive .dish-modal__content {
+    gap: 0.38rem;
+    align-self: stretch;
+  }
+
+  .experience-story-surface--interactive .dish-modal__copy-scroll {
+    gap: 0.28rem;
+    padding-right: 0.12rem;
+  }
+
+  .experience-story-surface--interactive .dish-modal__desc {
+    font-size: 0.78rem;
+    line-height: 1.34;
+  }
+
+  .experience-story-surface--interactive .dish-modal__long {
+    font-size: 0.68rem;
+    line-height: 1.34;
+  }
+
+  .experience-story-surface--interactive .dish-modal__meta {
+    gap: 0.22rem;
+    margin-top: auto;
+    padding-top: 0.34rem;
+  }
+
+  .experience-story-surface--interactive .menu-pill {
+    min-height: 17px;
+    padding: 2px 6px;
+    font-size: 0.6rem;
+  }
+
+  .experience-story-surface--interactive .dish-modal__allergens {
+    font-size: 0.61rem;
+    line-height: 1.24;
+  }
+
+  .experience-story-surface--interactive .dish-modal__price {
+    font-size: 0.84rem;
+  }
+
+  .experience-story-surface-inner--photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 0.9rem;
+  }
+
   .experience-photo-shell {
-    justify-items: center;
-    align-content: start;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.72rem;
-    padding: 0.85rem 0.9rem;
+    padding: 0.65rem 0.9rem;
   }
 
   .experience-embedded-modal .dish-modal__card.experience-photo-card {
-    width: min(100%, 17.25rem);
+    width: min(100%, 18.75rem);
     min-height: auto;
     height: auto;
     background: transparent;
@@ -2660,14 +2789,16 @@ section[id] {
       "media"
       "support";
     gap: 0.72rem;
-    overflow: hidden;
-    align-content: start;
+    overflow: visible;
+    align-content: center;
     justify-items: center;
+    align-self: center;
+    margin-inline: auto;
   }
 
   .experience-embedded-modal .experience-photo-card .dish-modal__media-slot {
-    width: min(100%, 14rem);
-    max-width: 14rem;
+    width: 100%;
+    max-width: none;
     height: auto;
     justify-self: center;
   }
@@ -2681,8 +2812,15 @@ section[id] {
     justify-self: stretch;
   }
 
+  .experience-photo-card__support .experience-menu-entry-head {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.56rem;
+    align-items: start;
+  }
+
   .experience-photo-card__support .experience-menu-entry--wide {
     width: 100%;
+    padding: 0.82rem 1rem 0.9rem;
   }
 
   .experience-story-ticket--photo {
@@ -2694,11 +2832,27 @@ section[id] {
   }
 
   .experience-story-track-step {
-    min-height: 56svh;
+    min-height: 54svh;
+  }
+
+  .experience-story-track-step[data-phase="text"] {
+    min-height: 68svh;
   }
 
   .experience-story-track-step--tail {
-    min-height: 32svh;
+    min-height: 28svh;
+  }
+}
+
+@media (min-width: 1041px) {
+  .experience-narrative-rail {
+    gap: 1.72rem;
+  }
+
+  .experience-story-chapter h3 {
+    font-size: 1.3rem;
+    line-height: 1.12;
+    max-width: 16ch;
   }
 }
 

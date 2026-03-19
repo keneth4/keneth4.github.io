@@ -90,20 +90,20 @@ const LANDING_CONTENT_BY_LOCALE = {
     experience: {
       eyebrow: "The Experience",
       heading: "The future of menus is visual.",
-      body: "Notice how the same dish feels different.",
+      body: "See how the same dish becomes clearer, richer, and more desirable.",
       defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
       steps: [
         {
-          title: "TEXT",
+          title: "TEXT MENU",
           body: "Guests guess what they’ll get."
         },
         {
-          title: "PHOTO",
-          body: "Guests start to recognize dishes."
+          title: "PHOTO MENU",
+          body: "Guests get a better idea."
         },
         {
-          title: "INTERACTIVE",
-          body: "Guests know before they order."
+          title: "IMMERSIVE MENU",
+          body: "Guests see the dish, understand it, and want it."
         }
       ],
       samples: {
@@ -314,20 +314,20 @@ const LANDING_CONTENT_BY_LOCALE = {
     experience: {
       eyebrow: "La Experiencia",
       heading: "El futuro de los menús es visual.",
-      body: "Observa cómo el mismo plato se siente diferente.",
+      body: "Descubre cómo el mismo plato se vuelve más claro, más atractivo y más deseable.",
       defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
       steps: [
         {
-          title: "TEXTO",
+          title: "MENÚ DE TEXTO",
           body: "Los comensales adivinan qué van a recibir."
         },
         {
-          title: "FOTO",
-          body: "Los comensales empiezan a reconocer los platos."
+          title: "MENÚ CON FOTO",
+          body: "Los comensales se hacen una mejor idea."
         },
         {
-          title: "INTERACTIVO",
-          body: "Los comensales saben qué pedir antes de ordenar."
+          title: "MENÚ INMERSIVO",
+          body: "Los comensales ven el plato, lo entienden y lo desean."
         }
       ],
       samples: {
@@ -538,20 +538,20 @@ const LANDING_CONTENT_BY_LOCALE = {
     experience: {
       eyebrow: "Die Experience",
       heading: "Die Zukunft von Menüs ist visuell.",
-      body: "Beobachte, wie sich dasselbe Gericht anders anfühlt.",
+      body: "Erlebe, wie dasselbe Gericht klarer, reichhaltiger und begehrenswerter wird.",
       defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
       steps: [
         {
-          title: "TEXT",
+          title: "TEXTMENÜ",
           body: "Gäste ahnen, was sie bekommen."
         },
         {
-          title: "FOTO",
-          body: "Gäste beginnen, die Gerichte zu erkennen."
+          title: "FOTOMENÜ",
+          body: "Gäste bekommen eine bessere Vorstellung."
         },
         {
-          title: "INTERAKTIV",
-          body: "Gäste wissen vor der Bestellung, was sie bestellen werden."
+          title: "IMMERSIVES MENÜ",
+          body: "Gäste sehen das Gericht, verstehen es und wollen es."
         }
       ],
       samples: {
@@ -1686,13 +1686,14 @@ const remapClamped = (value, start, end) => {
   return clampNumber((value - start) / (end - start));
 };
 
-const renderExperienceStoryChapters = (steps = []) =>
+const renderExperienceStoryChapters = (steps = [], modifierClass = "") =>
   EXPERIENCE_STORY_PHASES.map((phase, index) => {
     const step = steps[index] ?? {};
     const number = String(index + 1).padStart(2, "0");
+    const chapterClass = modifierClass ? ` ${modifierClass}` : "";
     return `
       <article
-        class="experience-story-chapter${index === 0 ? " is-active is-revealed" : ""}"
+        class="experience-story-chapter${chapterClass}${index === 0 ? " is-active is-revealed" : ""}"
         data-experience-chapter
         data-phase="${htmlEscape(phase)}"
       >
@@ -1841,7 +1842,7 @@ const renderEmbeddedInteractiveModal = ({ sample, posterAssetKey, interactiveSpr
     <div class="experience-embedded-modal">
       <div class="dish-modal__card experience-embedded-modal__card">
         <div class="dish-modal__header">
-          <p class="dish-modal__title">${htmlEscape(sample.name)}</p>
+          <h3 class="dish-modal__title">${htmlEscape(sample.name)}</h3>
         </div>
         <div class="dish-modal__media-slot">
           <div
@@ -1933,28 +1934,33 @@ const renderExperience = () => {
       <div class="experience-story-layout">
         <div class="experience-narrative-column">
           <div class="experience-narrative-sticky">
-            <div class="experience-narrative-rail">
-              ${renderExperienceStoryChapters(Array.isArray(experience.steps) ? experience.steps : [])}
+            <div class="experience-narrative-rail experience-narrative-rail--wide">
+              ${renderExperienceStoryChapters(Array.isArray(experience.steps) ? experience.steps : [], "experience-story-chapter--wide")}
             </div>
           </div>
           ${renderExperienceStoryTrack()}
         </div>
         <div class="experience-stage-column">
           <div class="experience-stage-sticky">
-            <div class="experience-stage-shell" data-experience-story-stage-shell>
-              <div class="experience-stage-frame" aria-hidden="true"></div>
-              ${renderExperienceStoryTextSurface(selectedSample)}
-              ${renderExperienceStoryPhotoSurface({
-                sample: selectedSample,
-                posterAssetKey,
-                ui
-              })}
-              ${renderExperienceStoryInteractiveSurface({
-                sample: selectedSample,
-                posterAssetKey,
-                interactiveSpriteAssetKey,
-                ui
-              })}
+            <div class="experience-stage-stack">
+              <div class="experience-stage-shell" data-experience-story-stage-shell>
+                <div class="experience-stage-frame" aria-hidden="true"></div>
+                ${renderExperienceStoryTextSurface(selectedSample)}
+                ${renderExperienceStoryPhotoSurface({
+                  sample: selectedSample,
+                  posterAssetKey,
+                  ui
+                })}
+                ${renderExperienceStoryInteractiveSurface({
+                  sample: selectedSample,
+                  posterAssetKey,
+                  interactiveSpriteAssetKey,
+                  ui
+                })}
+              </div>
+              <div class="experience-narrative-rail experience-narrative-rail--portrait">
+                ${renderExperienceStoryChapters(Array.isArray(experience.steps) ? experience.steps : [], "experience-story-chapter--portrait")}
+              </div>
             </div>
           </div>
         </div>
@@ -2309,9 +2315,17 @@ const setupExperienceStory = () => {
   const track = story.querySelector("[data-experience-story-track]");
   const trackSteps = Array.from(story.querySelectorAll("[data-experience-story-track-step]"));
   const chapters = Array.from(story.querySelectorAll("[data-experience-chapter]"));
+  const narrativeSticky = story.querySelector(".experience-narrative-sticky");
+  const wideRail = story.querySelector(".experience-narrative-rail--wide");
+  const wideChapters = wideRail instanceof HTMLElement
+    ? Array.from(wideRail.querySelectorAll("[data-experience-chapter]"))
+    : [];
+  const stageSticky = story.querySelector(".experience-stage-sticky");
+  const stageShell = story.querySelector(".experience-stage-shell");
   const textLayer = story.querySelector('[data-experience-story-layer="text"]');
   const photoLayer = story.querySelector('[data-experience-story-layer="photo"]');
   const interactiveLayer = story.querySelector('[data-experience-story-layer="interactive"]');
+  const compactLandscapeQuery = window.matchMedia("(max-width: 1040px) and (orientation: landscape)");
 
   const photoStage = story.querySelector("[data-experience-photo-stage]");
   const photoImage = story.querySelector("[data-experience-photo-image]");
@@ -2355,6 +2369,65 @@ const setupExperienceStory = () => {
     return;
   }
 
+  let landscapeFocusTop = null;
+  let landscapeFocusKey = "";
+
+  const resetWideRailLandscapeShift = () => {
+    landscapeFocusTop = null;
+    landscapeFocusKey = "";
+    story.style.removeProperty("--experience-landscape-sticky-height");
+    if (!(wideRail instanceof HTMLElement)) return;
+    wideRail.style.removeProperty("transform");
+  };
+
+  const syncWideRailLandscapeShift = (snapshot) => {
+    if (!(wideRail instanceof HTMLElement) || !(narrativeSticky instanceof HTMLElement)) return;
+
+    if (!compactLandscapeQuery.matches || !wideChapters.length) {
+      resetWideRailLandscapeShift();
+      return;
+    }
+
+    const stageReference =
+      stageShell instanceof HTMLElement
+        ? stageShell.getBoundingClientRect()
+        : stageSticky instanceof HTMLElement
+          ? stageSticky.getBoundingClientRect()
+          : null;
+
+    if (!stageReference || stageReference.height <= 0) {
+      resetWideRailLandscapeShift();
+      return;
+    }
+
+    story.style.setProperty("--experience-landscape-sticky-height", `${stageReference.height}px`);
+
+    const firstChapter = wideChapters[0];
+    const activeChapter = wideChapters[snapshot.chapterIndex] ?? firstChapter;
+    const stickyRect = narrativeSticky.getBoundingClientRect();
+    const railRect = wideRail.getBoundingClientRect();
+    const firstChapterRect = firstChapter.getBoundingClientRect();
+    const stickyHeight = stageReference.height;
+    const firstChapterNaturalTop =
+      stickyRect.top + (stickyHeight - firstChapterRect.height) / 2 + firstChapter.offsetTop;
+    const focusKey = [
+      Math.round(stickyRect.top),
+      Math.round(stickyHeight),
+      Math.round(firstChapterRect.height),
+      Math.round(firstChapter.offsetTop)
+    ].join(":");
+
+    if (landscapeFocusTop == null || landscapeFocusKey !== focusKey) {
+      landscapeFocusTop = firstChapterNaturalTop;
+      landscapeFocusKey = focusKey;
+    }
+
+    const activeChapterNaturalTop =
+      stickyRect.top + (stickyHeight - railRect.height) / 2 + activeChapter.offsetTop;
+    const shift = landscapeFocusTop - activeChapterNaturalTop;
+    wideRail.style.transform = `translateY(${shift}px)`;
+  };
+
   const syncStoryState = (snapshot) => {
     story.dataset.activePhase = snapshot.activePhase;
     story.dataset.interactivePrepared = String(interactivePrepared);
@@ -2362,12 +2435,17 @@ const setupExperienceStory = () => {
     story.classList.toggle("is-interactive-prepared", interactivePrepared);
     story.classList.toggle("is-interactive-unlocked", snapshot.isInteractiveUnlocked);
 
-    chapters.forEach((chapter, index) => {
+    chapters.forEach((chapter) => {
       if (!(chapter instanceof HTMLElement)) return;
-      chapter.classList.toggle("is-revealed", index <= snapshot.chapterIndex);
-      chapter.classList.toggle("is-active", index === snapshot.chapterIndex);
-      chapter.classList.toggle("is-complete", index < snapshot.chapterIndex);
+      const phase = String(chapter.dataset.phase ?? "").trim();
+      const chapterIndex = EXPERIENCE_STORY_PHASES.indexOf(phase);
+      if (chapterIndex < 0) return;
+      chapter.classList.toggle("is-revealed", chapterIndex <= snapshot.chapterIndex);
+      chapter.classList.toggle("is-active", chapterIndex === snapshot.chapterIndex);
+      chapter.classList.toggle("is-complete", chapterIndex < snapshot.chapterIndex);
     });
+
+    syncWideRailLandscapeShift(snapshot);
 
     applyExperienceStoryLayerStyles(textLayer, {
       opacity: 1 - snapshot.textToPhoto,
@@ -2394,12 +2472,7 @@ const setupExperienceStory = () => {
     applyExperienceStoryLayerStyles(interactiveLayer, {
       opacity: snapshot.chapterIndex === 0 ? 0 : snapshot.chapterIndex === 1 ? snapshot.photoToInteractive : 1,
       scale: snapshot.chapterIndex === 1 ? 0.96 + snapshot.photoToInteractive * 0.04 : 1,
-      translateY:
-        snapshot.chapterIndex === 0
-          ? 28
-          : snapshot.chapterIndex === 1
-            ? (1 - snapshot.photoToInteractive) * 22
-            : -snapshot.interactiveSettle * 6,
+      translateY: 0,
       blur: snapshot.chapterIndex === 1 ? (1 - snapshot.photoToInteractive) * 0.9 : 0
     });
   };
@@ -2428,16 +2501,21 @@ const setupExperienceStory = () => {
 
   updateStory();
 
-  const resizeHandler = () => requestUpdate();
+  const resizeHandler = () => {
+    resetWideRailLandscapeShift();
+    requestUpdate();
+  };
   const scrollHandler = () => requestUpdate();
   window.addEventListener("scroll", scrollHandler, { passive: true });
   window.addEventListener("resize", resizeHandler, { passive: true });
   window.addEventListener("orientationchange", resizeHandler, { passive: true });
+  compactLandscapeQuery.addEventListener("change", resizeHandler);
 
   experienceMediaDisposers.push(() => {
     window.removeEventListener("scroll", scrollHandler);
     window.removeEventListener("resize", resizeHandler);
     window.removeEventListener("orientationchange", resizeHandler);
+    compactLandscapeQuery.removeEventListener("change", resizeHandler);
     if (rafId) window.cancelAnimationFrame(rafId);
   });
 };
