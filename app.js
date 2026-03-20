@@ -8,23 +8,27 @@ const SUPPORTED_LOCALES = ["en", "es", "de"];
 const DEFAULT_LOCALE = "en";
 const LOCALE_STORAGE_KEY = "cv_locale";
 const COMPACT_HEADER_MEDIA_QUERY = "(max-width: 760px), ((max-width: 1040px) and (orientation: landscape))";
-const HERO_SAMPLE_ID = "short-ribs";
+const HERO_GIF_ROTATION_MS = 4000;
+const HERO_GIF_FADE_MS = 400;
+const HERO_GIF_SEQUENCE = [
+  {
+    id: "short-ribs",
+    src: "./Short-Ribs.gif"
+  },
+  {
+    id: "strawberry-croissant",
+    src: "./Strawberry-Croissant.gif"
+  },
+  {
+    id: "sushi",
+    src: "./Sushi.gif"
+  }
+];
 const DEFAULT_EXPERIENCE_SAMPLE_ID = "sushi";
 const LANDING_DISH_MEDIA = {
-  "short-ribs": {
-    posterSrc: "./Short-Ribs-int-poster.webp",
-    teaserMdSrc: "./Short-Ribs-int-sprite-md.webp",
-    interactiveSpriteSrc: "./Short-Ribs-int-sprite.webp"
-  },
   sushi: {
     posterSrc: "./Sushi-int-poster.webp",
-    teaserMdSrc: "./Sushi-int-sprite-md.webp",
     interactiveSpriteSrc: "./Sushi-int-sprite.webp"
-  },
-  "strawberry-croissant": {
-    posterSrc: "./Strawberry-Croissant-int-poster.webp",
-    teaserMdSrc: "./Strawberry-Croissant-int-sprite-md.webp",
-    interactiveSpriteSrc: "./Strawberry-Croissant-int-sprite.webp"
   }
 };
 const LANDING_MODAL_GUIDANCE_ASSETS = {
@@ -38,11 +42,12 @@ const LANDING_MODAL_GUIDANCE_ASSET_KEYS = {
   sampleDish: "guidance:sampleDish"
 };
 const LANDING_MEDIA_ASSETS = Object.fromEntries([
-  ...Object.entries(LANDING_DISH_MEDIA).flatMap(([sampleId, media]) => [
-    [`${sampleId}:poster`, media.posterSrc],
-    [`${sampleId}:teaser`, media.teaserMdSrc],
-    [`${sampleId}:interactive`, media.interactiveSpriteSrc]
-  ]),
+  ...Object.entries(LANDING_DISH_MEDIA).flatMap(([sampleId, media]) =>
+    [
+      media.posterSrc ? [`${sampleId}:poster`, media.posterSrc] : null,
+      media.interactiveSpriteSrc ? [`${sampleId}:interactive`, media.interactiveSpriteSrc] : null
+    ].filter(Boolean)
+  ),
   ...Object.entries(LANDING_MODAL_GUIDANCE_ASSETS).map(([assetName, src]) => [
     LANDING_MODAL_GUIDANCE_ASSET_KEYS[assetName],
     src
@@ -107,18 +112,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         }
       ],
       samples: {
-        "short-ribs": {
-          ...LANDING_DISH_MEDIA["short-ribs"],
-          name: "Braised Beef Short Ribs",
-          shortDescription: "Slow-cooked beef short rib served with mash, vegetables, and its own sauce.",
-          longDescription:
-            "Short ribs are prized for their rich flavor and silky texture when cooked slowly. Long braising allows the collagen to break down, making the meat especially tender. In contemporary cooking they are often paired with root vegetable purées, carrots, or squash, whose natural sweetness balances the depth of the meat juices.",
-          badges: [],
-          allergensText: "Dairy",
-          price: 26.8,
-          currency: "EUR",
-          alt: "Braised beef short ribs presentation"
-        },
         sushi: {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Mexican-Style Sushi Roll",
@@ -130,18 +123,6 @@ const LANDING_CONTENT_BY_LOCALE = {
           price: 14,
           currency: "EUR",
           alt: "Mexican-style sushi roll presentation"
-        },
-        "strawberry-croissant": {
-          ...LANDING_DISH_MEDIA["strawberry-croissant"],
-          name: "Strawberry Cream Croissant",
-          shortDescription: "Flaky croissant filled with cream and finished with strawberry and powdered sugar.",
-          longDescription:
-            "The croissant is one of the great icons of Viennese and French baking. It is made with laminated dough, whose light, flaky texture comes from alternating layers of dough and butter. In this dessert version it is filled with cream and finished with fresh fruit, creating a contrast between buttery pastry, smooth filling, and the natural brightness of strawberry.",
-          badges: [],
-          allergensText: "Gluten, Dairy, Egg",
-          price: 5,
-          currency: "EUR",
-          alt: "Strawberry cream croissant presentation"
         }
       }
     },
@@ -310,18 +291,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         }
       ],
       samples: {
-        "short-ribs": {
-          ...LANDING_DISH_MEDIA["short-ribs"],
-          name: "Short ribs braseadas",
-          shortDescription: "Costilla de res cocinada lentamente, servida con puré, verduras y su jugo.",
-          longDescription:
-            "Las short ribs son un corte muy apreciado por su sabor intenso y su textura melosa cuando se cocinan a fuego lento. El braseado prolongado permite que el colágeno se transforme y vuelva la carne especialmente tierna. En cocina contemporánea suelen acompañarse con purés de raíz, zanahorias o calabaza, porque sus notas dulces equilibran la profundidad del jugo de carne.",
-          badges: [],
-          allergensText: "Lácteos",
-          price: 26.8,
-          currency: "EUR",
-          alt: "Presentación de short ribs braseadas"
-        },
         sushi: {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Sushi estilo mexicano",
@@ -333,18 +302,6 @@ const LANDING_CONTENT_BY_LOCALE = {
           price: 14,
           currency: "EUR",
           alt: "Presentación de sushi estilo mexicano"
-        },
-        "strawberry-croissant": {
-          ...LANDING_DISH_MEDIA["strawberry-croissant"],
-          name: "Croissant relleno de crema y fresa",
-          shortDescription: "Croissant hojaldrado relleno de crema y decorado con fresa y azúcar glas.",
-          longDescription:
-            "El croissant es uno de los grandes íconos de la panadería vienesa y francesa. Se elabora con masa laminada, cuya textura ligera y hojaldrada surge de alternar capas de masa y mantequilla. En esta versión se presenta como postre, con relleno cremoso y fruta fresca, una combinación que aporta contraste entre la mantequilla del hojaldre, la suavidad de la crema y la acidez natural de la fresa.",
-          badges: [],
-          allergensText: "Gluten, Lácteos, Huevo",
-          price: 5,
-          currency: "EUR",
-          alt: "Presentación de croissant con crema y fresa"
         }
       }
     },
@@ -513,18 +470,6 @@ const LANDING_CONTENT_BY_LOCALE = {
         }
       ],
       samples: {
-        "short-ribs": {
-          ...LANDING_DISH_MEDIA["short-ribs"],
-          name: "Geschmorte Rinder-Short-Ribs",
-          shortDescription: "Langsam geschmorte Rinder-Short-Rib mit Püree, Gemüse und Bratensauce.",
-          longDescription:
-            "Short Ribs werden wegen ihres kräftigen Geschmacks und ihrer zarten, saftigen Konsistenz geschätzt, wenn sie langsam geschmort werden. Durch langes Garen wandelt sich das Kollagen und macht das Fleisch besonders weich. In der modernen Küche werden sie oft mit Pürees aus Wurzelgemüse, Karotten oder Kürbis serviert, deren Süße die intensive Sauce ausgleicht.",
-          badges: [],
-          allergensText: "Milchprodukte",
-          price: 26.8,
-          currency: "EUR",
-          alt: "Präsentation geschmorter Short Ribs"
-        },
         sushi: {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Sushi auf mexikanische Art",
@@ -536,18 +481,6 @@ const LANDING_CONTENT_BY_LOCALE = {
           price: 14,
           currency: "EUR",
           alt: "Präsentation von Sushi auf mexikanische Art"
-        },
-        "strawberry-croissant": {
-          ...LANDING_DISH_MEDIA["strawberry-croissant"],
-          name: "Croissant mit Erdbeere und Creme",
-          shortDescription: "Blättriges Croissant mit Cremefüllung, Erdbeere und Puderzucker.",
-          longDescription:
-            "Das Croissant gehört zu den großen Klassikern der Wiener und französischen Backkunst. Es wird aus laminiertem Teig hergestellt, dessen leichte, blättrige Struktur durch viele Schichten aus Teig und Butter entsteht. In dieser Dessertvariante ist es mit Creme gefüllt und mit frischer Frucht garniert – ein Zusammenspiel aus buttrigem Gebäck, weicher Füllung und frischer Erdbeere.",
-          badges: [],
-          allergensText: "Gluten, Milchprodukte, Ei",
-          price: 5,
-          currency: "EUR",
-          alt: "Präsentation eines Croissants mit Erdbeere und Creme"
         }
       }
     },
@@ -1068,8 +1001,7 @@ const assetStateSubscribersByKey = new Map(
 );
 const assetImageCacheByKey = new Map();
 const assetPromiseByKey = new Map();
-let landingAssetPreloadStarted = false;
-let heroMediaDispose = null;
+let heroGifCarouselDispose = null;
 let experienceMediaDisposers = [];
 let mobileHeaderController = null;
 
@@ -1167,22 +1099,37 @@ const loadLandingAssetImage = async (assetKey) => {
   return wrappedTask;
 };
 
-const startLandingAssetPreload = () => {
-  if (landingAssetPreloadStarted) return;
-  landingAssetPreloadStarted = true;
-
-  void (async () => {
-    await loadLandingAssetImage(`${HERO_SAMPLE_ID}:teaser`).catch(() => {});
-    await loadLandingAssetImage(`${HERO_SAMPLE_ID}:poster`).catch(() => {});
-  })();
-};
-
 const setMediaStageState = (stage, state) => {
   if (!stage) return;
   stage.classList.toggle("is-loading-media", state === "loading");
   stage.classList.toggle("is-media-ready", state === "ready");
   stage.classList.toggle("is-media-error", state === "error");
 };
+
+const preloadHeroGifSlide = (slide) =>
+  new Promise((resolve) => {
+    if (!(slide instanceof HTMLImageElement)) {
+      resolve(false);
+      return;
+    }
+
+    if (slide.complete) {
+      resolve(slide.naturalWidth > 0);
+      return;
+    }
+
+    const finish = (loaded) => {
+      slide.removeEventListener("load", handleLoad);
+      slide.removeEventListener("error", handleError);
+      resolve(loaded);
+    };
+
+    const handleLoad = () => finish(true);
+    const handleError = () => finish(false);
+
+    slide.addEventListener("load", handleLoad, { once: true });
+    slide.addEventListener("error", handleError, { once: true });
+  });
 
 const resolveInteractiveOrbitFrame = (rect) => {
   const left = Number(rect?.left) || 0;
@@ -2426,21 +2373,112 @@ const hydrateExperienceGuidanceAssets = async (guidanceNode) => {
   return true;
 };
 
-const setupHeroMediaStage = () => {
-  const stage = document.querySelector("[data-hero-media-stage]");
+const setupHeroGifCarousel = () => {
+  const stage = document.querySelector("[data-hero-gif-stage]");
   if (!(stage instanceof HTMLElement)) return;
-  if (heroMediaDispose) {
+  if (heroGifCarouselDispose) {
     try {
-      heroMediaDispose();
+      heroGifCarouselDispose();
     } catch {}
   }
-  const imageNode = stage.querySelector("[data-hero-media-image]");
-  heroMediaDispose = createImageStageController({
-    stage,
-    imageNode,
-    primaryAssetKey: `${HERO_SAMPLE_ID}:teaser`,
-    fallbackAssetKey: `${HERO_SAMPLE_ID}:poster`
+
+  const slides = Array.from(stage.querySelectorAll("[data-hero-gif-slide]")).filter(
+    (slide) => slide instanceof HTMLImageElement
+  );
+  const slideById = new Map(
+    slides.map((slide) => [slide.dataset.heroGifId ?? "", slide]).filter(([id]) => Boolean(id))
+  );
+  const assetStatusById = new Map(HERO_GIF_SEQUENCE.map(({ id }) => [id, "loading"]));
+  let disposed = false;
+  let settledCount = 0;
+  let activeSlideId = "";
+  let rotationTimeoutId = 0;
+
+  const clearRotationTimeout = () => {
+    if (!rotationTimeoutId) return;
+    window.clearTimeout(rotationTimeoutId);
+    rotationTimeoutId = 0;
+  };
+
+  const setActiveSlide = (nextSlide) => {
+    activeSlideId = nextSlide?.dataset.heroGifId ?? "";
+    slides.forEach((slide) => {
+      const isActive = slide === nextSlide;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+  };
+
+  const getReadySlides = () =>
+    HERO_GIF_SEQUENCE.map(({ id }) => slideById.get(id)).filter(
+      (slide) => slide && assetStatusById.get(slide.dataset.heroGifId ?? "") === "loaded"
+    );
+
+  const scheduleNextRotation = () => {
+    clearRotationTimeout();
+    const readySlides = getReadySlides();
+    if (readySlides.length < 2) return;
+
+    rotationTimeoutId = window.setTimeout(() => {
+      if (disposed) return;
+      const currentIndex = readySlides.findIndex((slide) => (slide.dataset.heroGifId ?? "") === activeSlideId);
+      const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % readySlides.length : 0;
+      setActiveSlide(readySlides[nextIndex] ?? readySlides[0]);
+      scheduleNextRotation();
+    }, HERO_GIF_ROTATION_MS);
+  };
+
+  const syncCarouselState = () => {
+    const readySlides = getReadySlides();
+    if (readySlides.length > 0) {
+      if (!readySlides.some((slide) => (slide.dataset.heroGifId ?? "") === activeSlideId)) {
+        setActiveSlide(readySlides[0]);
+      }
+      setMediaStageState(stage, "ready");
+      scheduleNextRotation();
+      return;
+    }
+
+    clearRotationTimeout();
+    if (settledCount >= HERO_GIF_SEQUENCE.length) {
+      setActiveSlide(null);
+      setMediaStageState(stage, "error");
+      return;
+    }
+    setMediaStageState(stage, "loading");
+  };
+
+  stage.style.setProperty("--hero-gif-fade-duration", `${HERO_GIF_FADE_MS}ms`);
+  setMediaStageState(stage, "loading");
+  setActiveSlide(null);
+
+  HERO_GIF_SEQUENCE.forEach(({ id }) => {
+    const slide = slideById.get(id);
+    if (!(slide instanceof HTMLImageElement)) {
+      assetStatusById.set(id, "error");
+      settledCount += 1;
+      syncCarouselState();
+      return;
+    }
+
+    preloadHeroGifSlide(slide).then((loaded) => {
+      if (disposed) return;
+      assetStatusById.set(id, loaded ? "loaded" : "error");
+      if (!loaded) {
+        slide.classList.add("is-unavailable");
+        slide.setAttribute("aria-hidden", "true");
+      } else {
+        slide.classList.remove("is-unavailable");
+      }
+      settledCount += 1;
+      syncCarouselState();
+    });
   });
+
+  heroGifCarouselDispose = () => {
+    disposed = true;
+    clearRotationTimeout();
+  };
 };
 
 const applyExperienceStoryLayerStyles = (layer, { opacity, scale, translateY, blur = 0 }) => {
@@ -3436,8 +3474,7 @@ const main = async () => {
   setupBackToTop();
 
   hydrateLanding();
-  startLandingAssetPreload();
-  setupHeroMediaStage();
+  setupHeroGifCarousel();
   setupRevealAnimation();
 
   hydrateFooterYear();

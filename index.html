@@ -31,8 +31,9 @@
       rel="stylesheet"
     />
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
-    <link rel="preload" as="image" href="./Short-Ribs-int-sprite-md.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="./Short-Ribs-int-poster.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="./Short-Ribs.gif" fetchpriority="high" />
+    <link rel="preload" as="image" href="./Strawberry-Croissant.gif" fetchpriority="high" />
+    <link rel="preload" as="image" href="./Sushi.gif" fetchpriority="high" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -138,7 +139,7 @@
           </div>
 
           <div class="hero-visual reveal" aria-label="Dish preview teaser">
-            <div class="hero-visual-frame landing-media-stage" data-hero-media-stage>
+            <div class="hero-visual-frame landing-media-stage hero-gif-stage" data-hero-gif-stage>
               <div
                 class="landing-media-loader"
                 role="status"
@@ -148,13 +149,37 @@
                 <span class="landing-media-loader__spinner" aria-hidden="true"></span>
               </div>
               <img
-                class="landing-media-fallback hero-media-fallback"
-                data-hero-media-image
-                src="./Short-Ribs-int-sprite-md.webp"
-                alt="Short ribs immersive 3D dish preview"
-                loading="lazy"
-                fetchpriority="low"
+                class="landing-media-fallback hero-media-fallback hero-gif-slide is-active"
+                data-hero-gif-slide
+                data-hero-gif-id="short-ribs"
+                src="./Short-Ribs.gif"
+                alt="Braised beef short ribs preview"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
+                draggable="false"
+              />
+              <img
+                class="landing-media-fallback hero-media-fallback hero-gif-slide"
+                data-hero-gif-slide
+                data-hero-gif-id="strawberry-croissant"
+                src="./Strawberry-Croissant.gif"
+                alt="Strawberry cream croissant preview"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                aria-hidden="true"
+              />
+              <img
+                class="landing-media-fallback hero-media-fallback hero-gif-slide"
+                data-hero-gif-slide
+                data-hero-gif-id="sushi"
+                src="./Sushi.gif"
+                alt="Mexican-style sushi roll preview"
+                loading="eager"
+                decoding="async"
+                draggable="false"
+                aria-hidden="true"
               />
               <div class="hero-glow" aria-hidden="true"></div>
             </div>

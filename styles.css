@@ -437,9 +437,27 @@ section[id] {
 }
 
 .hero-media-fallback {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
+}
+
+.hero-gif-stage {
+  --hero-gif-fade-duration: 400ms;
+}
+
+.hero-gif-slide {
+  opacity: 0;
+  transition: opacity var(--hero-gif-fade-duration) ease;
+  animation: none;
+}
+
+.hero-gif-slide.is-active {
+  opacity: 1;
   animation: floatShift 11s ease-in-out infinite;
+}
+
+.hero-gif-slide.is-unavailable {
+  display: none;
 }
 
 .hero-glow {
@@ -2258,7 +2276,7 @@ section[id] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-media-fallback {
+  .hero-gif-slide.is-active {
     animation: none;
   }
 
