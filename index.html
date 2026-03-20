@@ -63,7 +63,7 @@
           <a href="#experience" data-i18n="nav.experience">Experience</a>
           <a href="#demos" data-i18n="nav.demos">Demos</a>
           <a href="#collaboration" data-i18n="nav.pricing">Pricing</a>
-          <a href="#consultation" data-i18n="nav.consultation">Consultation</a>
+          <a href="#consultation" data-i18n="nav.consultation">Contact</a>
         </nav>
         <div class="locale-switch locale-switch-desktop">
           <label class="locale-label" for="locale-select-desktop" data-i18n="locale.label">Language</label>
@@ -101,7 +101,7 @@
             <a class="mobile-nav-link" href="#experience" data-i18n="nav.experience">Experience</a>
             <a class="mobile-nav-link" href="#demos" data-i18n="nav.demos">Demos</a>
             <a class="mobile-nav-link" href="#collaboration" data-i18n="nav.pricing">Pricing</a>
-            <a class="mobile-nav-link" href="#consultation" data-i18n="nav.consultation">Consultation</a>
+            <a class="mobile-nav-link" href="#consultation" data-i18n="nav.consultation">Contact</a>
           </nav>
           <div class="locale-switch locale-switch-mobile-sheet">
             <label class="locale-label" for="locale-select-mobile-sheet" data-i18n="locale.label">Language</label>
@@ -128,13 +128,12 @@
             <p class="eyebrow" data-content="hero.eyebrow"></p>
             <h1 data-content="hero.headline"></h1>
             <p class="lead" data-content="hero.subheadline"></p>
-            <p class="micro-value" data-content="hero.microValue"></p>
 
             <div class="hero-cta-row">
               <a id="hero-demo-cta" class="btn btn-primary" href="#demos" data-demo-jump>
-                <span data-i18n="hero.ctaDemo">View Interactive Demo</span>
+                <span data-i18n="hero.ctaDemo">Open Live Demo</span>
               </a>
-              <a class="btn btn-ghost" href="#consultation" data-i18n="hero.ctaConsult">Book a Consultation</a>
+              <a class="btn btn-ghost" href="#consultation" data-i18n="hero.ctaConsult">Request Information</a>
             </div>
           </div>
 
@@ -207,7 +206,7 @@
           <h2 data-content="collaboration.heading"></h2>
           <div id="collaboration-content" class="collaboration-content"></div>
           <a class="btn btn-primary package-cta" href="#consultation" data-i18n="collaboration.applyCta">
-            Apply for a Consultation
+            Request Information
           </a>
         </div>
       </section>
@@ -264,7 +263,7 @@
               </div>
 
               <details class="consultation-form-optional">
-                <summary data-i18n="form.optionalDetailsSummary">Optional details (helps us prepare the consultation)</summary>
+                <summary data-i18n="form.optionalDetailsSummary">Optional details (help us respond)</summary>
                 <div class="consultation-form-optional-grid">
                   <label>
                     <span data-i18n="form.cityCountryLabel">City / Country</span>
@@ -319,27 +318,22 @@
               </div>
 
               <button id="consultation-submit" type="submit" class="btn btn-primary" data-i18n="form.submitIdle">
-                Send Consultation Request
+                Request Information
               </button>
-              <p class="form-reassurance" data-i18n="form.reassuranceText">No obligation - just a short conversation about possibilities.</p>
+              <p class="form-reassurance" data-i18n="form.reassuranceText">No pressure. Ask for details, pricing, or next steps.</p>
               <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
 
           <aside id="consultation-success-panel" class="consultation-success-panel" hidden>
             <div class="consultation-success-stack">
-              <h2 id="consultation-success-heading" data-i18n="form.successHeadline">Your consultation request has been received.</h2>
-              <p data-i18n="form.successBodyLine1">Thank you for reaching out to Creativivid Studio.</p>
-              <p data-i18n="form.successBodyLine2">
-                We'll review your message and respond shortly to discuss how we can elevate your restaurant's menu experience.
-              </p>
-              <p class="consultation-success-footnote" data-i18n="form.successFootnote">Typical response time: within 24 hours.</p>
-              <div class="consultation-success-divider" aria-hidden="true"></div>
+              <h2 id="consultation-success-heading" data-i18n="form.successHeadline">Your request has been received.</h2>
+              <p data-i18n="form.successBody">We'll reply within 24 hours with details and next steps.</p>
               <p class="consultation-success-cta-copy" data-i18n="form.successDemoText">
-                While you wait, explore one of our interactive demos.
+                While you wait, open a live demo.
               </p>
               <a id="consultation-success-demo-cta" class="btn btn-primary" href="#demos" data-i18n="form.successDemoCta">
-                View Interactive Demo
+                Open Live Demo
               </a>
             </div>
           </aside>

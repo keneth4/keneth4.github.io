@@ -64,20 +64,14 @@ const LANDING_CONTENT_BY_LOCALE = {
       eyebrow: "Visual Menus for Restaurants",
       headline: "Let guests see what they’re about to order.",
       subheadline:
-        "Interactive visual menus designed for restaurants with international visitors.",
-      microValue:
-        "Help guests order with confidence by showing them exactly what each dish looks like."
+        "Interactive visual menus for restaurants that want faster, more confident orders, especially from international guests."
     },
     whyItMatters: {
       eyebrow: "Why It Matters",
-      heading: "Why this matters for restaurants",
+      heading: "What changes when guests can see the dish",
       intro: [
-        "Across Germany and Europe, many restaurants still rely on paper menus or static PDFs. For international guests, unfamiliar ingredients and unclear allergen context create friction at the point of ordering.",
-        "When guests cannot clearly visualize what they are ordering, hesitation rises and premium perception drops. Presentation is not decoration. Presentation is positioning."
+        "If guests cannot picture the dish, they hesitate. Visual clarity speeds decisions and protects premium perception, especially for international guests."
       ],
-      fitLabel: "Best fit for",
-      fitText:
-        "independent restaurants, boutique dining venues, and tourist-area concepts where visual clarity helps guests decide faster.",
       impacts: [
         {
           title: "Elevate Premium Perception",
@@ -88,12 +82,8 @@ const LANDING_CONTENT_BY_LOCALE = {
           body: "Most restaurants still use static menus; immersive interaction differentiates instantly."
         },
         {
-          title: "Reduce Ordering Hesitation",
-          body: "Dish clarity and context shorten decision time for international guests."
-        },
-        {
-          title: "Improve Guest Confidence",
-          body: "Allergen and dietary cues make ordering clearer and more comfortable."
+          title: "Speed Up Confident Orders",
+          body: "Dish visuals, allergen cues, and dietary context reduce hesitation and make unfamiliar dishes easier to choose."
         }
       ]
     },
@@ -109,11 +99,11 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           title: "PHOTO MENU",
-          body: "Guests get a better idea."
+          body: "Guests get a clearer idea of the dish."
         },
         {
           title: "IMMERSIVE MENU",
-          body: "Guests see the dish, understand it, and want it."
+          body: "Guests see the dish, understand it, and want to order it."
         }
       ],
       samples: {
@@ -157,107 +147,100 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     demos: {
       eyebrow: "Live Demos",
-      heading: "Published demo experiences",
-      body: "A focused selection of published demos to show how the interactive menu experience feels in practice."
+      heading: "Open the live experience.",
+      body: "Explore real demos and see how the menu feels."
     },
     howItWorks: {
       eyebrow: "How It Works",
-      heading: "Two capture paths. One production flow.",
-      body: "We handle technical complexity end-to-end so your team can stay focused on guest experience.",
-      pathATitle: "Option 1: On-Site Capture",
-      pathASubtitle: "Best for venues that want full production support",
+      heading: "Two ways to capture. One production flow.",
+      body: "We handle production. Your team stays focused on service.",
+      pathATitle: "On-Site Capture",
+      pathASubtitle: "Best for full production support",
       pathAIntroSteps: ["We visit your location.", "We capture your dishes professionally."],
-      pathBTitle: "Option 2: Remote Capture",
-      pathBSubtitle: "Best for faster, flexible scheduling",
-      pathBIntroSteps: ["You record a guided few-minutes clip per item."],
-      sharedTitle: "Shared Production & Delivery Flow",
+      pathBTitle: "Remote Capture",
+      pathBSubtitle: "Best for a faster rollout",
+      pathBIntroSteps: ["You record one short guided clip per dish."],
+      sharedTitle: "From production to launch",
       sharedSteps: [
-        "We process immersive 3D assets.",
-        "We build your interactive web experience.",
-        "You receive a ready-to-deploy interactive website.",
-        "Optional domain and server setup assistance is available."
-      ]
+        "We process the assets.",
+        "We build the interactive menu site.",
+        "We host it for you or support integration into your existing website."
+      ],
+      sharedNote: "You keep full ownership of the delivered files either way."
     },
     collaboration: {
-      eyebrow: "Collaboration Options",
-      heading: "Selective engagement model",
+      eyebrow: "Project Pricing",
+      heading: "Clear pricing for an interactive menu project tailored to your restaurant.",
       intro: [
-        "Creativivid Studio works with a limited number of independent dining venues per quarter to maintain creative and technical excellence.",
-        "Pricing is structured around a simple setup fee and the number of dishes included in the experience. Restaurants can begin with a focused selection and expand the experience over time."
+        "It’s an interactive website tailored to your restaurant: we capture the dishes, configure the experience around your brand and menu, publish it, and include one year of updates."
       ],
       standardPricing: {
-        title: "Standard Project Pricing",
+        title: "Project pricing",
         items: [
           {
             label: "Base setup",
             price: "€500",
-            body: "Project setup, interactive menu structure, visual environment configuration, and deployment preparation."
+            body: "Site setup, hosting configuration, menu structure, visual system, and publication prep."
           },
           {
             label: "Dish digitization",
             price: "€100 per dish",
-            body: "Dish capture and processing, visual optimization, and integration into the interactive menu."
+            body: "Dish capture or processing, visual optimization, and integration into the interactive website."
           },
           {
             label: "Typical project investment",
             price: "€1,200 – €3,000",
-            body: "Final pricing depends primarily on the number of dishes included.",
+            body: "Most complete restaurant projects land in this range.",
             emphasis: true
           }
         ],
-        examplesTitle: "Pricing examples",
+        examplesTitle: "Typical project budgets",
         examples: [
           { label: "10 dishes", price: "€1,500" },
           { label: "15 dishes", price: "€2,000" },
           { label: "25 dishes", price: "€3,000" }
         ]
       },
-      included: {
-        title: "Included in every project",
-        items: [
-          "Interactive menu website",
-          "Dish visual integration",
+      projectIncludes: {
+        title: "What you get",
+        deliveryTitle: "At launch",
+        deliveryItems: [
+          "Hosted interactive menu website",
           "Multi-language menu support",
-          "Full ownership of delivered files",
-          "1 year of menu updates included"
-        ]
-      },
-      updatesIncluded: {
-        title: "1 year of menu updates included",
-        items: [
-          "Price changes",
-          "Dish name adjustments",
-          "Description edits",
-          "Presentation background changes",
+          "Full file ownership and optional integration into your existing website"
+        ],
+        updatesTitle: "Included for 1 year",
+        updatesItems: [
+          "Price and name changes",
+          "Copy and visual updates",
           "Seasonal refinements"
         ],
-        body: "These updates help keep the menu accurate as your offerings evolve.",
-        note: "New dishes are not included in these updates."
+        note:
+          "Hosting is included by default. If you already have your own website, you keep full ownership of the delivered files and we can support integration there."
       },
       newDishes: {
-        title: "Add new dishes later",
+        title: "Expand with new dishes",
         items: [
           { label: "Standard addition", price: "€100 per new dish" },
           { label: "Seasonal bundle", price: "€400 for 5 dishes" }
         ],
-        body: "The bundle is useful for seasonal menu updates or new menu sections."
+        body: "Best for seasonal additions or a new menu section."
       },
       launchOffer: {
-        title: "Launch Offer — First 5 Restaurants",
+        title: "Early launch offer",
         items: [
           "No €500 setup fee",
-          "€70 per dish digitized",
-          "1 year of menu updates included",
-          "Limited availability"
+          "€70 per digitized dish",
+          "1 year of hosting and menu updates included"
         ],
-        body: "This offer is intended for the first restaurants participating during the launch stage of the studio's interactive menu format."
+        body: "Reserved for the first 5 restaurant projects."
       },
       aftercareNote:
-        "After the first year, ongoing menu updates and maintenance are available for €100 per year, including hosting, technical maintenance, and continued menu updates."
+        "After year one, hosting, maintenance, and menu updates continue for €100/year."
     },
     faq: {
       eyebrow: "FAQ",
-      heading: "Clear answers before we start",
+      heading: "Key questions, answered",
       items: [
         {
           q: "Do guests need to download an app?",
@@ -265,43 +248,33 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           q: "Can we update dishes later?",
-          a: "Yes. During the first year, text, pricing, and presentation refinements are included. New dishes can be added later with separate dish pricing."
+          a: "Yes. First-year text, price, and visual updates are included. New dishes are priced separately."
         },
         {
-          q: "What if we do not have professional recording equipment?",
-          a: "We provide a practical remote capture guide and quality checks before production starts."
-        },
-        {
-          q: "Is this only for luxury restaurants?",
-          a: "It is for independent restaurants and dining venues that value presentation, storytelling, and differentiation."
+          q: "Is hosting included, or do we receive the files?",
+          a: "Hosting is included by default. If you already have your own website, you keep full ownership of the delivered files and we can support integration there."
         }
       ]
     },
     consultation: {
-      heading: "Elevate how guests experience your menu.",
+      heading: "Request information or start your project.",
       body:
-        "If your brand values presentation, story, and differentiation, let's discuss your concept and evaluate strategic fit."
+        "Tell us about your restaurant, your menu, and what you want to launch. We’ll reply with details, pricing, and next steps."
     }
   },
   es: {
     hero: {
       eyebrow: "Menús visuales para restaurantes",
-      headline: "Permite que los comensales vean lo que están a punto de pedir.",
+      headline: "Haz que tus comensales vean lo que están a punto de pedir.",
       subheadline:
-        "Menús visuales interactivos diseñados para restaurantes con visitantes internacionales.",
-      microValue:
-        "Ayuda a los comensales a pedir con confianza mostrándoles exactamente cómo luce cada plato."
+        "Menús visuales interactivos para restaurantes que quieren pedidos más rápidos y seguros, especialmente con clientes internacionales."
     },
     whyItMatters: {
       eyebrow: "Por Qué Importa",
-      heading: "Por qué esto importa para los restaurantes",
+      heading: "Qué cambia cuando el cliente ve el plato",
       intro: [
-        "En Alemania y Europa, muchos restaurantes aún dependen de menús impresos o PDF estáticos. Para clientes internacionales, ingredientes poco familiares y contexto de alérgenos poco claro generan fricción al ordenar.",
-        "Cuando los clientes no pueden visualizar con claridad lo que piden, aumenta la duda y baja la percepción premium. La presentación no es decoración. La presentación es posicionamiento."
+        "Si el cliente no imagina el plato, la decisión se frena. La claridad visual reduce la duda y sostiene la percepción premium, sobre todo en clientes internacionales."
       ],
-      fitLabel: "Ideal para",
-      fitText:
-        "restaurantes independientes, espacios boutique y conceptos en zonas turísticas donde la claridad visual ayuda a decidir más rápido.",
       impacts: [
         {
           title: "Eleva la percepción premium",
@@ -312,19 +285,15 @@ const LANDING_CONTENT_BY_LOCALE = {
           body: "La mayoría aún usa menús estáticos; la interacción inmersiva destaca de inmediato."
         },
         {
-          title: "Reduce la duda al ordenar",
-          body: "La claridad del plato y su contexto reducen el tiempo de decisión de clientes internacionales."
-        },
-        {
-          title: "Mejora la confianza del cliente",
-          body: "Indicadores de dieta y alérgenos hacen el pedido más claro y seguro."
+          title: "Acelera decisiones seguras",
+          body: "Los visuales del plato, alérgenos y contexto dietario reducen la duda y facilitan elegir."
         }
       ]
     },
     experience: {
       eyebrow: "La Experiencia",
       heading: "El futuro de los menús es visual.",
-      body: "Descubre cómo el mismo plato se vuelve más claro, más atractivo y más deseable.",
+      body: "Mira cómo el mismo plato se vuelve más claro, más atractivo y más deseable.",
       defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
       steps: [
         {
@@ -333,11 +302,11 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           title: "MENÚ CON FOTO",
-          body: "Los comensales se hacen una mejor idea."
+          body: "Los comensales se hacen una idea más clara del plato."
         },
         {
           title: "MENÚ INMERSIVO",
-          body: "Los comensales ven el plato, lo entienden y lo desean."
+          body: "Los comensales ven el plato, lo entienden y quieren pedirlo."
         }
       ],
       samples: {
@@ -381,151 +350,134 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     demos: {
       eyebrow: "Demos en Vivo",
-      heading: "Experiencias demo publicadas",
-      body: "Una selección enfocada de demos publicadas para mostrar cómo se siente la experiencia de menú interactivo."
+      heading: "Abre la experiencia en vivo.",
+      body: "Explora demos reales y mira cómo se siente el menú."
     },
     howItWorks: {
-      eyebrow: "Como Funciona",
-      heading: "Dos rutas de captura. Un flujo de producción.",
-      body: "Nos encargamos de la complejidad técnica de principio a fin para que tu equipo se enfoque en la experiencia del cliente.",
-      pathATitle: "Opción 1: Captura en Sitio",
-      pathASubtitle: "Ideal para espacios que buscan soporte completo de producción",
+      eyebrow: "Cómo Funciona",
+      heading: "Dos formas de capturar. Un mismo flujo de producción.",
+      body: "Nos encargamos de la producción. Tu equipo sigue enfocado en el servicio.",
+      pathATitle: "Captura en sitio",
+      pathASubtitle: "Ideal para soporte completo de producción",
       pathAIntroSteps: ["Visitamos tu ubicación.", "Capturamos tus platos de forma profesional."],
-      pathBTitle: "Opción 2: Captura Remota",
-      pathBSubtitle: "Ideal para tiempos más rápidos y flexibles",
-      pathBIntroSteps: ["Tu grabas un clip guiado de pocos minutos por item."],
-      sharedTitle: "Flujo Compartido de Produccion y Entrega",
+      pathBTitle: "Captura remota",
+      pathBSubtitle: "Ideal para un lanzamiento más rápido",
+      pathBIntroSteps: ["Tú grabas un clip guiado y corto por ítem."],
+      sharedTitle: "De producción a lanzamiento",
       sharedSteps: [
-        "Procesamos activos 3D inmersivos.",
-        "Construimos tu experiencia web interactiva.",
-        "Recibes un sitio interactivo listo para desplegar.",
-        "Soporte opcional para dominio y servidor disponible."
-      ]
+        "Procesamos los activos.",
+        "Construimos el sitio de menú interactivo.",
+        "Lo publicamos con hosting o te ayudamos a integrarlo en tu web."
+      ],
+      sharedNote: "En ambos casos mantienes la propiedad total de los archivos entregados."
     },
     collaboration: {
-      eyebrow: "Opciones de Colaboración",
-      heading: "Modelo de colaboracion selectivo",
+      eyebrow: "Precios del proyecto",
+      heading: "Precios claros para un proyecto de menú interactivo adaptado a tu restaurante.",
       intro: [
-        "Creativivid Studio trabaja con un número limitado de espacios gastronómicos independientes por trimestre para mantener excelencia creativa y técnica.",
-        "El precio se estructura de forma transparente con una tarifa base simple y el número de platos incluidos. Los restaurantes pueden comenzar con una selección enfocada y ampliar la experiencia con el tiempo."
+        "Es una web interactiva adaptada a tu restaurante: capturamos los platos, configuramos la experiencia con tu marca y tu menú, la publicamos y cubrimos un año de actualizaciones."
       ],
       standardPricing: {
-        title: "Precio estándar del proyecto",
+        title: "Precios del proyecto",
         items: [
           {
             label: "Configuración base",
             price: "€500",
-            body: "Configuración del proyecto, estructura del menú interactivo, configuración del entorno visual y preparación para el despliegue."
+            body: "Configuración del sitio, hosting, estructura del menú, sistema visual y preparación de publicación."
           },
           {
             label: "Digitalización por plato",
             price: "€100 por plato",
-            body: "Captura o procesamiento del plato, optimización visual e integración en el menú interactivo."
+            body: "Captura o procesamiento del plato, optimización visual e integración en la web interactiva."
           },
           {
             label: "Inversión típica del proyecto",
             price: "€1,200 – €3,000",
-            body: "El precio final depende principalmente del número de platos incluidos.",
+            body: "La mayoría de proyectos completos para restaurantes cae en este rango.",
             emphasis: true
           }
         ],
-        examplesTitle: "Ejemplos de precio",
+        examplesTitle: "Presupuestos típicos del proyecto",
         examples: [
           { label: "10 platos", price: "€1,500" },
           { label: "15 platos", price: "€2,000" },
           { label: "25 platos", price: "€3,000" }
         ]
       },
-      included: {
-        title: "Incluido en cada proyecto",
-        items: [
-          "Sitio web de menú interactivo",
-          "Integración visual de platos",
+      projectIncludes: {
+        title: "Lo que recibes",
+        deliveryTitle: "En el lanzamiento",
+        deliveryItems: [
+          "Sitio de menú interactivo con hosting incluido",
           "Soporte de menú multilenguaje",
-          "Propiedad total de los archivos entregados",
-          "1 año de actualizaciones del menú incluido"
-        ]
-      },
-      updatesIncluded: {
-        title: "1 año de actualizaciones del menú incluido",
-        items: [
-          "Cambios de precio",
-          "Ajustes en nombres de platos",
-          "Ediciones de descripciones",
-          "Cambios en el fondo de presentación",
-          "Refinamientos estacionales"
+          "Propiedad total de los archivos y soporte opcional para integrarlo en tu sitio web"
         ],
-        body: "Estas actualizaciones están incluidas para mantener el menú preciso y alineado con la evolución de tu oferta.",
-        note: "Los platos nuevos no están incluidos en estas actualizaciones."
+        updatesTitle: "Incluido durante 1 año",
+        updatesItems: [
+          "Cambios de precio y nombre",
+          "Ajustes de texto y visuales",
+          "Actualizaciones estacionales"
+        ],
+        note:
+          "El servicio incluye hosting por defecto. Si ya tienes tu propia web, mantienes la propiedad total de los archivos entregados y podemos ayudarte a integrarlo allí."
       },
       newDishes: {
-        title: "Agregar nuevos platos después",
+        title: "Amplía con nuevos platos",
         items: [
           { label: "Adición estándar", price: "€100 por plato nuevo" },
           { label: "Paquete estacional", price: "€400 por 5 platos" }
         ],
-        body: "El paquete es útil para actualizaciones estacionales del menú o nuevas secciones."
+        body: "Ideal para platos de temporada o una nueva sección del menú."
       },
       launchOffer: {
-        title: "Oferta de lanzamiento — Primeros 5 restaurantes",
+        title: "Oferta de lanzamiento inicial",
         items: [
           "Sin tarifa de configuración de €500",
           "€70 por plato digitalizado",
-          "1 año de actualizaciones del menú incluido",
-          "Disponibilidad limitada"
+          "1 año de hosting y actualizaciones del menú incluido"
         ],
-        body: "Esta oferta está pensada para los primeros restaurantes que participen en la etapa de lanzamiento del formato de menú interactivo del estudio."
+        body: "Reservada para los primeros 5 proyectos de restaurante."
       },
       aftercareNote:
-        "Después del primer año, las actualizaciones continuas del menú y el mantenimiento están disponibles por €100 al año, incluyendo hosting, mantenimiento técnico y actualizaciones continuas del menú."
+        "Tras el primer año, hosting, mantenimiento y actualizaciones continúan por €100/año."
     },
     faq: {
       eyebrow: "Preguntas Frecuentes",
-      heading: "Respuestas claras antes de empezar",
+      heading: "Preguntas clave, resueltas",
       items: [
         {
-          q: "Los clientes necesitan descargar una app?",
-          a: "No. Todo funciona directamente en el navegador, en movil y desktop."
+          q: "¿Los clientes necesitan descargar una app?",
+          a: "No. Todo funciona directamente en el navegador, en móvil y desktop."
         },
         {
-          q: "Podemos actualizar platos despues?",
-          a: "Sí. Durante el primer año se incluyen ajustes de texto, precio y presentación. Los platos nuevos pueden añadirse después con precio por plato."
+          q: "¿Podemos actualizar platos después?",
+          a: "Sí. El primer año incluye ajustes de texto, precio y visuales. Los platos nuevos se cotizan aparte."
         },
         {
-          q: "Que pasa si no tenemos equipo profesional de grabacion?",
-          a: "Entregamos una guia practica de captura remota y validamos calidad antes de producir."
-        },
-        {
-          q: "Esto es solo para restaurantes de lujo?",
-          a: "Es para restaurantes y espacios gastronómicos independientes que valoran presentación, historia y diferenciación."
+          q: "¿El servicio incluye hosting o recibimos los archivos?",
+          a: "El servicio incluye hosting por defecto. Si ya tienes tu propia web, mantienes la propiedad total de los archivos entregados y podemos ayudarte a integrarlo allí."
         }
       ]
     },
     consultation: {
-      heading: "Eleva la forma en que tus clientes viven tu menú.",
+      heading: "Solicita información o empieza tu proyecto.",
       body:
-        "Si tu marca valora presentación, historia y diferenciación, conversemos tu concepto y evaluemos si hay encaje estratégico."
+        "Cuéntanos sobre tu restaurante, tu menú y lo que quieres lanzar. Te responderemos con detalles, precios y siguientes pasos."
     }
   },
   de: {
     hero: {
       eyebrow: "Visuelle Menüs für Restaurants",
-      headline: "Lassen Sie Gäste sehen, was sie gleich bestellen.",
+      headline: "Lass Gäste sehen, was sie gleich bestellen.",
       subheadline:
-        "Interaktive visuelle Menüs für Restaurants mit internationalen Gästen.",
-      microValue:
-        "Helfen Sie Gästen, sicherer zu bestellen, indem Sie genau zeigen, wie jedes Gericht aussieht."
+        "Interaktive visuelle Menüs für Restaurants, die schnellere und sicherere Bestellungen wollen, besonders bei internationalen Gästen."
     },
     whyItMatters: {
       eyebrow: "Warum es wichtig ist",
-      heading: "Warum das für Restaurants wichtig ist",
+      heading: "Was sich ändert, wenn Gäste das Gericht sehen",
       intro: [
-        "In Deutschland und Europa setzen viele Restaurants noch auf Papiermenüs oder statische PDFs. Für internationale Gäste sorgen unbekannte Zutaten und unklarer Allergenkontext für Reibung beim Bestellen.",
-        "Wenn Gäste nicht klar erkennen können, was sie bestellen, steigt Unsicherheit und die Premium-Wahrnehmung sinkt. Präsentation ist nicht Dekoration. Präsentation ist Positionierung."
+        "Wenn Gäste sich das Gericht nicht vorstellen können, stockt die Entscheidung. Visuelle Klarheit reduziert Unsicherheit und stärkt die Premium-Wahrnehmung, besonders bei internationalen Gästen."
       ],
-      fitLabel: "Ideal für",
-      fitText:
-        "unabhängige Restaurants, Boutique-Konzepte und Standorte in touristischen Lagen, in denen visuelle Klarheit schnellere Entscheidungen unterstützt.",
       impacts: [
         {
           title: "Stärkere Premium-Wahrnehmung",
@@ -536,32 +488,28 @@ const LANDING_CONTENT_BY_LOCALE = {
           body: "Viele Restaurants nutzen weiterhin statische Menüs; immersive Interaktion differenziert sofort."
         },
         {
-          title: "Weniger Unsicherheit bei Bestellungen",
-          body: "Mehr Klarheit zum Gericht verkürzt die Entscheidungszeit internationaler Gäste."
-        },
-        {
-          title: "Mehr Sicherheit für Gäste",
-          body: "Allergen- und Ernährungshinweise machen Bestellungen klarer und angenehmer."
+          title: "Schnellere sichere Entscheidungen",
+          body: "Gerichtsvisuals, Allergenhinweise und Ernährungskontext reduzieren Unsicherheit und erleichtern die Wahl."
         }
       ]
     },
     experience: {
       eyebrow: "Die Experience",
       heading: "Die Zukunft von Menüs ist visuell.",
-      body: "Erlebe, wie dasselbe Gericht klarer, reichhaltiger und begehrenswerter wird.",
+      body: "Sieh, wie dasselbe Gericht klarer, eindrucksvoller und begehrenswerter wird.",
       defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
       steps: [
         {
           title: "TEXTMENÜ",
-          body: "Gäste ahnen, was sie bekommen."
+          body: "Gäste raten, was sie bekommen."
         },
         {
           title: "FOTOMENÜ",
-          body: "Gäste bekommen eine bessere Vorstellung."
+          body: "Gäste bekommen eine klarere Vorstellung vom Gericht."
         },
         {
           title: "IMMERSIVES MENÜ",
-          body: "Gäste sehen das Gericht, verstehen es und wollen es."
+          body: "Gäste sehen das Gericht, verstehen es und wollen es bestellen."
         }
       ],
       samples: {
@@ -605,107 +553,100 @@ const LANDING_CONTENT_BY_LOCALE = {
     },
     demos: {
       eyebrow: "Live-Demos",
-      heading: "Veröffentlichte Demo-Erlebnisse",
-      body: "Eine fokussierte Auswahl veröffentlichter Demos, damit das interaktive Menüerlebnis direkt greifbar wird."
+      heading: "Öffne das Live-Erlebnis.",
+      body: "Sieh reale Demos und prüfe, wie sich das Menü anfühlt."
     },
     howItWorks: {
       eyebrow: "So funktioniert es",
-      heading: "Zwei Capture-Wege. Ein Produktionsfluss.",
-      body: "Wir übernehmen die technische Komplexität end-to-end, damit dein Team beim Gästeerlebnis bleiben kann.",
-      pathATitle: "Option 1: Capture vor Ort",
-      pathASubtitle: "Ideal für Venues mit Wunsch nach voller Produktionsbegleitung",
+      heading: "Zwei Wege zur Erfassung. Ein gemeinsamer Produktionsablauf.",
+      body: "Wir übernehmen die Produktion. Dein Team bleibt beim Service.",
+      pathATitle: "Capture vor Ort",
+      pathASubtitle: "Ideal für volle Produktionsbegleitung",
       pathAIntroSteps: ["Wir besuchen deine Location.", "Wir erfassen deine Gerichte professionell."],
-      pathBTitle: "Option 2: Remote Capture",
-      pathBSubtitle: "Ideal für schnellere, flexible Zeitpläne",
-      pathBIntroSteps: ["Du zeichnest pro Item einen gefuehrten Kurzclip auf."],
-      sharedTitle: "Gemeinsamer Produktions- und Delivery-Flow",
+      pathBTitle: "Remote Capture",
+      pathBSubtitle: "Ideal für einen schnelleren Rollout",
+      pathBIntroSteps: ["Du zeichnest pro Item einen kurzen geführten Clip auf."],
+      sharedTitle: "Von Produktion bis Launch",
       sharedSteps: [
-        "Wir verarbeiten immersive 3D-Assets.",
-        "Wir bauen dein interaktives Web-Erlebnis.",
-        "Du erhältst eine sofort einsetzbare interaktive Website.",
-        "Optionale Hilfe bei Domain- und Server-Setup verfügbar."
-      ]
+        "Wir verarbeiten die 3D-Assets.",
+        "Wir bauen die interaktive Menü-Website.",
+        "Wir hosten sie für dich oder unterstützen die Integration in deine bestehende Website."
+      ],
+      sharedNote: "In beiden Fällen behältst du das volle Eigentum an den gelieferten Dateien."
     },
     collaboration: {
-      eyebrow: "Zusammenarbeitsoptionen",
-      heading: "Selektives Engagement-Modell",
+      eyebrow: "Projektpreise",
+      heading: "Klare Preise für ein interaktives Menüprojekt, abgestimmt auf dein Restaurant.",
       intro: [
-        "Creativivid Studio arbeitet pro Quartal mit einer begrenzten Zahl unabhängiger Dining Venues, um kreative und technische Exzellenz zu sichern.",
-        "Die Preisgestaltung ist transparent aufgebaut: mit einer einfachen Grundgebühr und der Anzahl der eingebundenen Gerichte. Restaurants können mit einer fokussierten Auswahl starten und die Experience später erweitern."
+        "Es ist eine interaktive Website, die auf dein Restaurant abgestimmt ist: Wir erfassen die Gerichte, richten das Erlebnis auf deine Marke und dein Menü aus, veröffentlichen es und decken ein Jahr an Updates ab."
       ],
       standardPricing: {
-        title: "Standard-Projektpreis",
+        title: "Projektpreise",
         items: [
           {
             label: "Basis-Setup",
             price: "€500",
-            body: "Projektsetup, Struktur des interaktiven Menüs, Konfiguration der visuellen Umgebung und Vorbereitung des Deployments."
+            body: "Setup der Website, Hosting-Konfiguration, Menüstruktur, visuelles System und Veröffentlichungsvorbereitung."
           },
           {
             label: "Gerichtsdigitalisierung",
             price: "€100 pro Gericht",
-            body: "Erfassung oder Verarbeitung des Gerichts, visuelle Optimierung und Integration in das interaktive Menü."
+            body: "Erfassung oder Verarbeitung des Gerichts, visuelle Optimierung und Integration in die interaktive Website."
           },
           {
             label: "Typische Projektinvestition",
             price: "€1,200 – €3,000",
-            body: "Der Endpreis hängt vor allem von der Anzahl der eingebundenen Gerichte ab.",
+            body: "Die meisten vollständigen Restaurantprojekte liegen in diesem Bereich.",
             emphasis: true
           }
         ],
-        examplesTitle: "Preisbeispiele",
+        examplesTitle: "Typische Projektbudgets",
         examples: [
           { label: "10 Gerichte", price: "€1,500" },
           { label: "15 Gerichte", price: "€2,000" },
           { label: "25 Gerichte", price: "€3,000" }
         ]
       },
-      included: {
-        title: "In jedem Projekt enthalten",
-        items: [
-          "Interaktive Menü-Website",
-          "Visuelle Gerichtsintegration",
+      projectIncludes: {
+        title: "Was du bekommst",
+        deliveryTitle: "Zum Launch",
+        deliveryItems: [
+          "Interaktive Menü-Website inklusive Hosting",
           "Mehrsprachige Menüunterstützung",
-          "Vollständige Dateiübergabe",
-          "1 Jahr Menüupdates inklusive"
-        ]
-      },
-      updatesIncluded: {
-        title: "1 Jahr Menüupdates inklusive",
-        items: [
-          "Preisänderungen",
-          "Anpassungen von Gerichtsnamen",
-          "Änderungen an Beschreibungen",
-          "Änderungen des Präsentationshintergrunds",
+          "Volle Dateieigentümerschaft und optionale Integration in deine bestehende Website"
+        ],
+        updatesTitle: "1 Jahr inklusive",
+        updatesItems: [
+          "Preis- und Namensänderungen",
+          "Text- und visuelle Anpassungen",
           "Saisonale Verfeinerungen"
         ],
-        body: "Diese Anpassungen sind inklusive, damit dein Menü korrekt bleibt und zu deinem sich entwickelnden Angebot passt.",
-        note: "Neue Gerichte sind in diesen Updates nicht enthalten."
+        note:
+          "Hosting ist standardmäßig inklusive. Wenn du bereits eine eigene Website hast, behältst du das volle Eigentum an den gelieferten Dateien und wir können die Integration dort unterstützen."
       },
       newDishes: {
-        title: "Neue Gerichte später ergänzen",
+        title: "Mit neuen Gerichten erweitern",
         items: [
           { label: "Standard-Ergänzung", price: "€100 pro neues Gericht" },
           { label: "Saisonales Bundle", price: "€400 für 5 Gerichte" }
         ],
-        body: "Das Bundle eignet sich für saisonale Kartenupdates oder neue Menübereiche."
+        body: "Sinnvoll für saisonale Gerichte oder einen neuen Menübereich."
       },
       launchOffer: {
-        title: "Launch-Angebot — Erste 5 Restaurants",
+        title: "Frühes Launch-Angebot",
         items: [
           "Keine €500 Setup-Gebühr",
           "€70 pro digitalisiertem Gericht",
-          "1 Jahr Menüupdates inklusive",
-          "Begrenzte Verfügbarkeit"
+          "1 Jahr Hosting und Menüupdates inklusive"
         ],
-        body: "Dieses Angebot ist für die ersten Restaurants gedacht, die sich in der Launch-Phase am interaktiven Menüformat des Studios beteiligen."
+        body: "Reserviert für die ersten 5 Restaurantprojekte."
       },
       aftercareNote:
-        "Nach dem ersten Jahr sind laufende Menüupdates und Wartung für €100 pro Jahr verfügbar, inklusive Hosting, technischer Wartung und fortlaufenden Menüupdates."
+        "Nach dem ersten Jahr laufen Hosting, Wartung und Menüupdates für €100/Jahr weiter."
     },
     faq: {
       eyebrow: "FAQ",
-      heading: "Klare Antworten vor dem Start",
+      heading: "Die wichtigsten Fragen, beantwortet",
       items: [
         {
           q: "Müssen Gäste eine App herunterladen?",
@@ -713,22 +654,18 @@ const LANDING_CONTENT_BY_LOCALE = {
         },
         {
           q: "Können wir Gerichte später aktualisieren?",
-          a: "Ja. Im ersten Jahr sind Text-, Preis- und Präsentationsanpassungen inklusive. Neue Gerichte können später separat pro Gericht ergänzt werden."
+          a: "Ja. Im ersten Jahr sind Text-, Preis- und visuelle Anpassungen inklusive. Neue Gerichte werden separat berechnet."
         },
         {
-          q: "Was, wenn wir kein professionelles Aufnahme-Equipment haben?",
-          a: "Wir liefern eine praxisnahe Remote-Capture-Anleitung und Qualitätschecks vor Produktionsstart."
-        },
-        {
-          q: "Ist das nur für Luxusrestaurants?",
-          a: "Es ist für unabhängige Restaurants und Dining Venues, die Präsentation, Storytelling und Differenzierung schätzen."
+          q: "Ist Hosting inklusive oder erhalten wir die Dateien?",
+          a: "Hosting ist standardmäßig inklusive. Wenn du bereits eine eigene Website hast, behältst du das volle Eigentum an den gelieferten Dateien und wir können die Integration dort unterstützen."
         }
       ]
     },
     consultation: {
-      heading: "Steigere, wie Gäste dein Menü erleben.",
+      heading: "Information anfragen oder Projekt starten.",
       body:
-        "Wenn deine Marke Präsentation, Story und Differenzierung schätzt, sprechen wir über dein Konzept und prüfen den strategischen Fit."
+        "Erzähl uns von deinem Restaurant, deinem Menü und deinem geplanten Launch. Wir antworten mit Details, Preisen und den nächsten Schritten."
     }
   }
 };
@@ -747,7 +684,7 @@ const UI_TEXT_BY_LOCALE = {
       experience: "Experience",
       demos: "Demos",
       pricing: "Pricing",
-      consultation: "Consultation",
+      consultation: "Contact",
       menuOpen: "Open menu",
       menuClose: "Close menu"
     },
@@ -755,8 +692,8 @@ const UI_TEXT_BY_LOCALE = {
       label: "Language"
     },
     hero: {
-      ctaDemo: "View Interactive Demo",
-      ctaConsult: "Book a Consultation",
+      ctaDemo: "Open Live Demo",
+      ctaConsult: "Request Information",
       chipLanguages: "9 menu languages",
       chipDietary: "Dietary & allergen tags",
       chipScroll: "Drag or swipe to rotate",
@@ -775,7 +712,7 @@ const UI_TEXT_BY_LOCALE = {
       untitled: "Untitled demo"
     },
     collaboration: {
-      applyCta: "Request a Consultation"
+      applyCta: "Request Information"
     },
     form: {
       menuSituationLegend: "Tell us a little about your menu",
@@ -786,7 +723,7 @@ const UI_TEXT_BY_LOCALE = {
       restaurantBrandLabel: "Restaurant / Brand *",
       contactNameLabel: "Contact Name *",
       contactEmailLabel: "Email *",
-      optionalDetailsSummary: "Optional details (helps us prepare the consultation)",
+      optionalDetailsSummary: "Optional details (help us respond)",
       cityCountryLabel: "City / Country",
       projectScopeLabel: "What initial project scope fits best?",
       projectScopeUpTo10: "Up to 10 dishes",
@@ -804,25 +741,22 @@ const UI_TEXT_BY_LOCALE = {
         "I consent to Creativivid Studio processing my information to respond to this inquiry and understand the ",
       privacyLinkText: "privacy policy",
       consentSuffix: ".",
-      submitIdle: "Send Consultation Request",
+      submitIdle: "Request Information",
       submitSending: "Sending...",
-      reassuranceText: "No obligation - just a short conversation about possibilities.",
+      reassuranceText: "No pressure. Ask for details, pricing, or next steps.",
       statusSending: "Sending your request...",
       statusRequired: "Please complete menu situation, restaurant/brand, contact name, and email.",
       statusInvalidEmail: "Please provide a valid email address.",
       statusNoConsent: "Please provide consent to continue.",
       statusCaptchaRequired: "Complete the security check to continue.",
       statusEndpoint:
-        "Consultation form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
-      statusSuccess: "Thank you. Your consultation request has been received.",
+        "Contact form is not connected yet. Replace FORM_ENDPOINT in app.js with your Formspree endpoint.",
+      statusSuccess: "Thank you. Your request has been received.",
       statusError: "Request failed. Please try again shortly.",
-      successHeadline: "Your consultation request has been received.",
-      successBodyLine1: "Thank you for reaching out to Creativivid Studio.",
-      successBodyLine2:
-        "We'll review your message and respond shortly to discuss how we can elevate your restaurant's menu experience.",
-      successFootnote: "Typical response time: within 24 hours.",
-      successDemoText: "While you wait, explore one of our interactive demos.",
-      successDemoCta: "View Interactive Demo"
+      successHeadline: "Your request has been received.",
+      successBody: "We’ll reply within 24 hours with details and next steps.",
+      successDemoText: "While you wait, open a live demo.",
+      successDemoCta: "Open Live Demo"
     },
     footer: {
       copyrightBody: "Creativivid Studio. All rights reserved.",
@@ -846,7 +780,7 @@ const UI_TEXT_BY_LOCALE = {
       experience: "Experiencia",
       demos: "Demos",
       pricing: "Precios",
-      consultation: "Consulta",
+      consultation: "Contacto",
       menuOpen: "Abrir menú",
       menuClose: "Cerrar menú"
     },
@@ -854,8 +788,8 @@ const UI_TEXT_BY_LOCALE = {
       label: "Idioma"
     },
     hero: {
-      ctaDemo: "Ver demo interactiva",
-      ctaConsult: "Reservar una consulta",
+      ctaDemo: "Abrir demo en vivo",
+      ctaConsult: "Solicitar información",
       chipLanguages: "9 idiomas de menú",
       chipDietary: "Etiquetas dietarias y de alérgenos",
       chipScroll: "Arrastra o desliza para rotar",
@@ -874,7 +808,7 @@ const UI_TEXT_BY_LOCALE = {
       untitled: "Demo sin titulo"
     },
     collaboration: {
-      applyCta: "Solicitar una consulta"
+      applyCta: "Solicitar información"
     },
     form: {
       menuSituationLegend: "Cuéntanos un poco sobre tu menú",
@@ -885,7 +819,7 @@ const UI_TEXT_BY_LOCALE = {
       restaurantBrandLabel: "Restaurante / Marca *",
       contactNameLabel: "Nombre de contacto *",
       contactEmailLabel: "Correo electrónico *",
-      optionalDetailsSummary: "Detalles opcionales (nos ayudan a preparar la consulta)",
+      optionalDetailsSummary: "Detalles opcionales (nos ayudan a responder)",
       cityCountryLabel: "Ciudad / País",
       projectScopeLabel: "¿Qué alcance inicial del proyecto encaja mejor?",
       projectScopeUpTo10: "Hasta 10 platos",
@@ -903,25 +837,22 @@ const UI_TEXT_BY_LOCALE = {
         "Acepto que Creativivid Studio procese mi información para responder esta consulta y entiendo la ",
       privacyLinkText: "política de privacidad",
       consentSuffix: ".",
-      submitIdle: "Enviar solicitud de consulta",
+      submitIdle: "Solicitar información",
       submitSending: "Enviando...",
-      reassuranceText: "Sin compromiso: solo una breve conversación sobre posibilidades.",
+      reassuranceText: "Sin presión. Puedes pedir detalles, precios o siguientes pasos.",
       statusSending: "Enviando tu solicitud...",
       statusRequired: "Completa situación del menú, restaurante/marca, nombre de contacto y correo electrónico.",
       statusInvalidEmail: "Ingresa un correo electrónico válido.",
       statusNoConsent: "Debes otorgar consentimiento para continuar.",
       statusCaptchaRequired: "Completa la verificación de seguridad para continuar.",
       statusEndpoint:
-        "El formulario aún no está conectado. Reemplaza FORM_ENDPOINT en app.js con tu endpoint de Formspree.",
-      statusSuccess: "Gracias. Tu solicitud de consulta fue recibida.",
+        "El formulario de contacto aún no está conectado. Reemplaza FORM_ENDPOINT en app.js con tu endpoint de Formspree.",
+      statusSuccess: "Gracias. Tu solicitud fue recibida.",
       statusError: "La solicitud falló. Inténtalo de nuevo en breve.",
-      successHeadline: "Tu solicitud de consulta ha sido recibida.",
-      successBodyLine1: "Gracias por contactar a Creativivid Studio.",
-      successBodyLine2:
-        "Revisaremos tu mensaje y te responderemos pronto para hablar sobre cómo elevar la experiencia del menú de tu restaurante.",
-      successFootnote: "Tiempo de respuesta habitual: dentro de 24 horas.",
-      successDemoText: "Mientras esperas, explora una de nuestras demos interactivas.",
-      successDemoCta: "Ver demo interactiva"
+      successHeadline: "Tu solicitud ha sido recibida.",
+      successBody: "Responderemos dentro de 24 horas con detalles y siguientes pasos.",
+      successDemoText: "Mientras esperas, abre una demo en vivo.",
+      successDemoCta: "Abrir demo en vivo"
     },
     footer: {
       copyrightBody: "Creativivid Studio. Todos los derechos reservados.",
@@ -945,7 +876,7 @@ const UI_TEXT_BY_LOCALE = {
       experience: "Experience",
       demos: "Demos",
       pricing: "Preise",
-      consultation: "Beratung",
+      consultation: "Kontakt",
       menuOpen: "Menü öffnen",
       menuClose: "Menü schließen"
     },
@@ -953,8 +884,8 @@ const UI_TEXT_BY_LOCALE = {
       label: "Sprache"
     },
     hero: {
-      ctaDemo: "Interaktive Demo ansehen",
-      ctaConsult: "Beratung buchen",
+      ctaDemo: "Live-Demo öffnen",
+      ctaConsult: "Information anfragen",
       chipLanguages: "9 Menüsprachen",
       chipDietary: "Ernährungs- und Allergenhinweise",
       chipScroll: "Ziehen oder wischen zum Drehen",
@@ -973,7 +904,7 @@ const UI_TEXT_BY_LOCALE = {
       untitled: "Demo ohne Titel"
     },
     collaboration: {
-      applyCta: "Beratung anfragen"
+      applyCta: "Information anfragen"
     },
     form: {
       menuSituationLegend: "Erzähl uns kurz etwas über dein Menü",
@@ -984,7 +915,7 @@ const UI_TEXT_BY_LOCALE = {
       restaurantBrandLabel: "Restaurant / Marke *",
       contactNameLabel: "Ansprechperson *",
       contactEmailLabel: "E-Mail *",
-      optionalDetailsSummary: "Optionale Details (helfen uns bei der Vorbereitung)",
+      optionalDetailsSummary: "Optionale Details (helfen uns bei der Antwort)",
       cityCountryLabel: "Stadt / Land",
       projectScopeLabel: "Welcher anfängliche Projektumfang passt am besten?",
       projectScopeUpTo10: "Bis zu 10 Gerichte",
@@ -1002,25 +933,22 @@ const UI_TEXT_BY_LOCALE = {
         "Ich stimme zu, dass Creativivid Studio meine Daten zur Beantwortung dieser Anfrage verarbeitet und die ",
       privacyLinkText: "Datenschutzerklärung",
       consentSuffix: " verstehe.",
-      submitIdle: "Beratungsanfrage senden",
+      submitIdle: "Information anfragen",
       submitSending: "Wird gesendet...",
-      reassuranceText: "Unverbindlich - nur ein kurzes Gespräch über Möglichkeiten.",
+      reassuranceText: "Ohne Druck. Frag nach Details, Preisen oder den nächsten Schritten.",
       statusSending: "Deine Anfrage wird gesendet...",
       statusRequired: "Bitte Menüsituation, Restaurant/Marke, Ansprechperson und E-Mail ausfüllen.",
       statusInvalidEmail: "Bitte eine gültige E-Mail-Adresse eingeben.",
       statusNoConsent: "Bitte Zustimmung erteilen, um fortzufahren.",
       statusCaptchaRequired: "Bitte schließe die Sicherheitsprüfung ab, um fortzufahren.",
       statusEndpoint:
-        "Das Formular ist noch nicht verbunden. Ersetze FORM_ENDPOINT in app.js durch deinen Formspree-Endpoint.",
-      statusSuccess: "Danke. Deine Beratungsanfrage wurde erhalten.",
+        "Das Kontaktformular ist noch nicht verbunden. Ersetze FORM_ENDPOINT in app.js durch deinen Formspree-Endpoint.",
+      statusSuccess: "Danke. Deine Anfrage ist eingegangen.",
       statusError: "Anfrage fehlgeschlagen. Bitte versuche es in Kürze erneut.",
-      successHeadline: "Deine Beratungsanfrage ist eingegangen.",
-      successBodyLine1: "Danke, dass du Creativivid Studio kontaktiert hast.",
-      successBodyLine2:
-        "Wir prüfen deine Nachricht und melden uns zeitnah, um zu besprechen, wie wir das Menüerlebnis deines Restaurants aufwerten können.",
-      successFootnote: "Typische Antwortzeit: innerhalb von 24 Stunden.",
-      successDemoText: "Während du wartest, sieh dir eine unserer interaktiven Demos an.",
-      successDemoCta: "Interaktive Demo ansehen"
+      successHeadline: "Deine Anfrage ist eingegangen.",
+      successBody: "Wir antworten innerhalb von 24 Stunden mit Details und den nächsten Schritten.",
+      successDemoText: "Während du wartest, öffne eine Live-Demo.",
+      successDemoCta: "Live-Demo öffnen"
     },
     footer: {
       copyrightBody: "Creativivid Studio. Alle Rechte vorbehalten.",
@@ -1564,26 +1492,64 @@ const syncHeaderOffset = () => {
   document.documentElement.style.setProperty("--header-offset", `${offset}px`);
 };
 
+const SECTION_SCROLL_ALIGNMENT_TOLERANCE = 4;
+let sectionScrollCorrectionToken = 0;
+
+const resolveHeaderOffsetHeight = (headerOffsetOverride = null) => {
+  if (typeof headerOffsetOverride === "number") return headerOffsetOverride;
+  const header = document.querySelector(".site-header");
+  return header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+};
+
+const resolveSectionScrollTop = (target, headerOffsetOverride = null, targetTopAdjustment = 0) => {
+  const headerHeight = resolveHeaderOffsetHeight(headerOffsetOverride);
+  const targetTop = window.scrollY + target.getBoundingClientRect().top + targetTopAdjustment;
+  return Math.max(0, targetTop - headerHeight - 2);
+};
+
+const alignSectionAfterScroll = (hash, headerOffsetOverride = null) => {
+  const target = document.querySelector(hash);
+  if (!target) return true;
+
+  const headerHeight = resolveHeaderOffsetHeight(headerOffsetOverride);
+  const delta = target.getBoundingClientRect().top - headerHeight - 2;
+  if (Math.abs(delta) <= SECTION_SCROLL_ALIGNMENT_TOLERANCE) return true;
+
+  window.scrollTo(0, Math.max(0, window.scrollY + delta));
+  return false;
+};
+
+const scheduleSectionScrollCorrection = (hash, behavior = "smooth", headerOffsetOverride = null) => {
+  sectionScrollCorrectionToken += 1;
+  const token = sectionScrollCorrectionToken;
+  const correctionDelays = behavior === "instant" ? [0, 180, 420] : [180, 420, 720];
+
+  correctionDelays.forEach((delay, index, delays) => {
+    window.setTimeout(() => {
+      if (token !== sectionScrollCorrectionToken) return;
+      const isAligned = alignSectionAfterScroll(hash, headerOffsetOverride);
+      if (isAligned || index === delays.length - 1) {
+        if (token === sectionScrollCorrectionToken) {
+          sectionScrollCorrectionToken += 1;
+        }
+      }
+    }, delay);
+  });
+};
+
 const scrollToSectionWithOffset = (hash, behavior = "smooth", headerOffsetOverride = null, targetTopAdjustment = 0) => {
   if (!hash || !hash.startsWith("#")) return;
   const target = document.querySelector(hash);
   if (!target) return;
 
-  const header = document.querySelector(".site-header");
-  const headerHeight =
-    typeof headerOffsetOverride === "number"
-      ? headerOffsetOverride
-      : header
-        ? Math.ceil(header.getBoundingClientRect().height)
-        : 0;
-  const targetTop = window.scrollY + target.getBoundingClientRect().top + targetTopAdjustment;
-  const scrollTop = Math.max(0, targetTop - headerHeight - 2);
+  const scrollTop = resolveSectionScrollTop(target, headerOffsetOverride, targetTopAdjustment);
 
   if (behavior === "instant") {
     window.scrollTo(0, scrollTop);
   } else {
     window.scrollTo({ top: scrollTop, behavior });
   }
+  scheduleSectionScrollCorrection(hash, behavior, headerOffsetOverride);
 
   if (history.replaceState) {
     history.replaceState(null, "", hash);
@@ -1754,13 +1720,18 @@ const setupMobileHeader = () => {
   };
 };
 
-const setupStickyNavAnchors = () => {
-  const headerLinks = Array.from(document.querySelectorAll(".site-header a[href^='#']"));
-  if (!headerLinks.length) return;
+const setupInPageAnchors = () => {
+  const anchorLinks = Array.from(document.querySelectorAll('a[href^="#"]')).filter((link) => {
+    const href = link.getAttribute("href");
+    return typeof href === "string" && href.trim().length > 1;
+  });
+  if (!anchorLinks.length) return;
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches ?? false;
-  const behavior = prefersReducedMotion ? "instant" : "smooth";
+  const defaultBehavior = prefersReducedMotion ? "instant" : "smooth";
 
-  headerLinks.forEach((link) => {
+  anchorLinks.forEach((link) => {
+    if (link.dataset.inPageAnchorBound === "true") return;
+    link.dataset.inPageAnchorBound = "true";
     link.addEventListener("click", (event) => {
       if (event.defaultPrevented) return;
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -1769,6 +1740,7 @@ const setupStickyNavAnchors = () => {
       if (!hash || hash === "#") return;
       if (!document.querySelector(hash)) return;
 
+      const behavior = link.classList.contains("skip-link") ? "instant" : defaultBehavior;
       event.preventDefault();
       const shouldUseCollapsedOffset = mobileHeaderController?.isMenuOpen?.() ?? false;
       mobileHeaderController?.holdVisible?.();
@@ -1848,10 +1820,6 @@ const renderWhyItMatters = () => {
           )
           .join("")}
       </ul>
-    </div>
-    <div class="why-fit-band">
-      <span class="why-fit-label">${htmlEscape(section.fitLabel)}</span>
-      <p>${htmlEscape(section.fitText)}</p>
     </div>
   `;
 };
@@ -2799,6 +2767,7 @@ const renderTimeline = () => {
         <ol>
           ${section.sharedSteps.map((step) => `<li>${htmlEscape(step)}</li>`).join("")}
         </ol>
+        <p>${htmlEscape(section.sharedNote ?? "")}</p>
       </article>
     </div>
   `;
@@ -2859,38 +2828,39 @@ const renderCollaborationSection = () => {
         </div>
 
         <div class="collaboration-block">
-          <h4>${htmlEscape(section.included.title)}</h4>
-          <ul class="collaboration-checklist">
-            ${section.included.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
-          </ul>
+          <h4>${htmlEscape(section.projectIncludes.title)}</h4>
+          <div class="collaboration-detail-columns">
+            <section class="collaboration-detail-block">
+              <p class="collaboration-note">${htmlEscape(section.projectIncludes.deliveryTitle)}</p>
+              <ul class="collaboration-checklist">
+                ${section.projectIncludes.deliveryItems.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
+              </ul>
+            </section>
+            <section class="collaboration-detail-block">
+              <p class="collaboration-note">${htmlEscape(section.projectIncludes.updatesTitle)}</p>
+              <ul class="collaboration-checklist">
+                ${section.projectIncludes.updatesItems.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
+              </ul>
+            </section>
+          </div>
+          <p class="collaboration-block-copy">${htmlEscape(section.projectIncludes.note)}</p>
         </div>
 
-        <div class="collaboration-detail-columns">
-          <section class="collaboration-block collaboration-detail-block">
-            <h4>${htmlEscape(section.updatesIncluded.title)}</h4>
-            <ul class="collaboration-checklist">
-              ${section.updatesIncluded.items.map((item) => `<li>${htmlEscape(item)}</li>`).join("")}
-            </ul>
-            <p class="collaboration-block-copy">${htmlEscape(section.updatesIncluded.body)}</p>
-            <p class="collaboration-note">${htmlEscape(section.updatesIncluded.note)}</p>
-          </section>
-
-          <section class="collaboration-block collaboration-detail-block">
-            <h4>${htmlEscape(section.newDishes.title)}</h4>
-            <ul class="collaboration-price-options">
-              ${section.newDishes.items
-                .map(
-                  (item) => `
-                    <li class="collaboration-price-option">
-                      <span class="collaboration-price-label">${htmlEscape(item.label)}</span>
-                      <strong class="collaboration-price-value">${htmlEscape(item.price)}</strong>
-                    </li>
-                  `
-                )
-                .join("")}
-            </ul>
-            <p class="collaboration-block-copy">${htmlEscape(section.newDishes.body)}</p>
-          </section>
+        <div class="collaboration-block">
+          <h4>${htmlEscape(section.newDishes.title)}</h4>
+          <ul class="collaboration-price-options">
+            ${section.newDishes.items
+              .map(
+                (item) => `
+                  <li class="collaboration-price-option">
+                    <span class="collaboration-price-label">${htmlEscape(item.label)}</span>
+                    <strong class="collaboration-price-value">${htmlEscape(item.price)}</strong>
+                  </li>
+                `
+              )
+              .join("")}
+          </ul>
+          <p class="collaboration-block-copy">${htmlEscape(section.newDishes.body)}</p>
         </div>
       </article>
 
@@ -3462,7 +3432,7 @@ const main = async () => {
     document.fonts.ready.then(syncHeaderOffset).catch(() => {});
   }
 
-  setupStickyNavAnchors();
+  setupInPageAnchors();
   setupBackToTop();
 
   hydrateLanding();

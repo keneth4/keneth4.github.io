@@ -364,13 +364,6 @@ section[id] {
   font-size: clamp(1rem, 1.8vw, 1.14rem);
 }
 
-.hero-copy .micro-value {
-  margin-top: 1rem;
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: color-mix(in srgb, var(--text-light) 74%, transparent);
-}
-
 .hero-cta-row {
   margin-top: 1.6rem;
   display: flex;
@@ -500,38 +493,11 @@ section[id] {
   margin-top: 0.86rem;
 }
 
-.why-fit-band {
-  display: grid;
-  gap: 0.42rem;
-  width: 100%;
-  padding: 0.92rem 1rem 1rem;
-  border-radius: 12px;
-  border: 1px solid color-mix(in srgb, var(--line-light) 82%, #ffffff);
-  background: color-mix(in srgb, var(--surface-light) 90%, #ffffff);
-  color: color-mix(in srgb, var(--text-dark) 78%, transparent);
-  box-shadow: var(--shadow-soft);
-}
-
-.why-fit-label {
-  display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: var(--accent-strong);
-}
-
-.why-fit-band p {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.52;
-}
-
 .why-impact-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.82rem;
+  grid-template-columns: 1fr;
+  gap: 0.96rem;
 }
 
 .why-impact-card {
@@ -539,7 +505,7 @@ section[id] {
   border: 1px solid color-mix(in srgb, var(--line-light) 88%, #ffffff);
   border-radius: var(--radius-md);
   background: #ffffff;
-  padding: 1rem;
+  padding: 1.08rem 1.1rem;
   box-shadow: var(--shadow-soft);
 }
 
@@ -2165,17 +2131,6 @@ section[id] {
   color: color-mix(in srgb, var(--text-light) 85%, transparent);
 }
 
-.consultation-success-footnote {
-  margin-top: 0.2rem;
-  font-size: 0.8rem;
-  color: color-mix(in srgb, var(--text-muted-dark) 94%, transparent);
-}
-
-.consultation-success-divider {
-  margin-top: 0.36rem;
-  border-top: 1px solid color-mix(in srgb, var(--line-dark) 74%, #ffffff);
-}
-
 .consultation-success-cta-copy {
   color: color-mix(in srgb, var(--text-light) 84%, transparent);
 }
@@ -2326,7 +2281,6 @@ section[id] {
     grid-template-columns: 1fr;
   }
 
-  .why-impact-grid,
   .demos-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
