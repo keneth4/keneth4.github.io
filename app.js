@@ -116,9 +116,9 @@ const LANDING_CONTENT_BY_LOCALE = {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Chihuahua Especial",
           shortDescription:
-            "Breaded baked roll with beef, bacon, shrimp, avocado, and chile toreado, topped with melted cheese and bacon.",
+            "Breaded baked roll with beef, bacon, shrimp, avocado, chile toreado, melted cheese, and salsa macha.",
           longDescription:
-            "Chihuahua Especial is a breaded and baked sushi roll filled with beef, bacon, shrimp, avocado, and chile toreado. It is finished with a melted cheese blend, extra bacon, and a side of the house special salsa macha, giving the roll a rich, smoky, creamy, and lightly spicy profile.",
+            "In Mexico, Japanese cuisine evolved into a distinct fusion style that adapts sushi technique to local tastes. In many cities, rolls became bolder, warmer, and more indulgent, often featuring breaded textures, baked finishes, cheese, bacon, chilies, and house sauces. Chihuahua Especial belongs to that Mexican fusion tradition: a sushi roll shaped by contrast, richness, and a more expressive flavor profile.",
           badges: [{ key: "spice-1", label: "Spice", tone: "spice", spiceLevel: 1 }],
           allergensText: "Gluten, Dairy, Shellfish",
           price: 17.5,
@@ -296,9 +296,9 @@ const LANDING_CONTENT_BY_LOCALE = {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Chihuahua Especial",
           shortDescription:
-            "Rollo empanizado y horneado con res, tocino, camarón, aguacate y chile toreado, cubierto con queso y tocino.",
+            "Rollo empanizado y horneado con res, tocino, camarón, aguacate, chile toreado, queso fundido y salsa macha.",
           longDescription:
-            "Chihuahua Especial es un rollo empanizado y horneado con res, tocino, camarón, aguacate y chile toreado por dentro. Se termina con una cubierta de mezcla de quesos con tocino y se acompaña con salsa macha especial, dando como resultado un perfil intenso, cremoso, ahumado y ligeramente picante.",
+            "En México, la cocina japonesa se reinterpretó con un lenguaje propio. En muchas ciudades, el sushi dejó de limitarse a formatos más clásicos y adoptó ingredientes, salsas y técnicas cercanas al gusto local: rollos empanizados, preparaciones horneadas, quesos, tocino, chiles y aderezos más intensos. Chihuahua Especial se inscribe en esa historia de fusión japonesa en México, donde la técnica del rollo convive con sabores más expresivos, cremosos y picantes.",
           badges: [{ key: "spice-1", label: "Picante", tone: "spice", spiceLevel: 1 }],
           allergensText: "Gluten, Lácteos, Crustáceos",
           price: 115,
@@ -476,9 +476,9 @@ const LANDING_CONTENT_BY_LOCALE = {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Chihuahua Especial",
           shortDescription:
-            "Panierte und gebackene Rolle mit Rindfleisch, Bacon, Garnele, Avocado und Chile toreado, überbacken mit Käse und Bacon.",
+            "Panierte und gebackene Rolle mit Rindfleisch, Bacon, Garnele, Avocado, Chile toreado, geschmolzenem Käse und Salsa macha.",
           longDescription:
-            "Chihuahua Especial ist eine panierte und gebackene Sushirolle mit Rindfleisch, Bacon, Garnele, Avocado und Chile toreado im Inneren. Obenauf kommen eine Käsemischung und Bacon; serviert wird sie mit einer speziellen Salsa macha. So entsteht ein kräftiges, cremiges, rauchiges und leicht scharfes Geschmacksprofil.",
+            "In Mexiko hat sich die japanische Küche zu einem eigenständigen Fusionsstil weiterentwickelt. In vielen Städten wurde Sushi stärker an lokale Vorlieben angepasst: mit panierten Texturen, überbackenen Rollen, Käse, Bacon, Chilis und markanteren Saucen. Chihuahua Especial steht genau in dieser Tradition mexikanisch-japanischer Fusionsküche, in der klassische Rollentechnik mit kräftigeren, cremigeren und würzigeren Aromen kombiniert wird.",
           badges: [{ key: "spice-1", label: "Scharf", tone: "spice", spiceLevel: 1 }],
           allergensText: "Gluten, Milchprodukte, Krebstiere",
           price: 15.5,
@@ -656,9 +656,9 @@ const LANDING_CONTENT_BY_LOCALE = {
           ...LANDING_DISH_MEDIA.sushi,
           name: "Chihuahua Especial",
           shortDescription:
-            "牛肉、ベーコン、えび、アボカド、チレ・トレアドを包み、チーズとベーコンをのせて焼き上げたパン粉仕立てのロール。",
+            "牛肉、ベーコン、えび、アボカド、チレ・トレアドを包み、チーズ、ベーコン、サルサ・マチャを合わせたパン粉仕立てのベイクドロール。",
           longDescription:
-            "Chihuahua Especial は、牛肉、ベーコン、えび、アボカド、チレ・トレアドを包んだパン粉仕立てのベイクドロールです。仕上げにチーズブレンドとベーコンを重ね、特製サルサ・マチャを添えることで、コク、スモーキーさ、ほどよい辛みを楽しめます。",
+            "メキシコでは、日本料理はそのまま受け入れられるだけでなく、現地の味覚に合わせて独自に発展しました。多くの都市では、寿司はより力強い味わいへと再解釈され、パン粉を使った食感、オーブン仕上げ、チーズ、ベーコン、チレ、濃厚なソースなどが取り入れられています。Chihuahua Especial は、そうしたメキシコにおける和食フュージョンの流れを表すロールで、巻き寿司の技法に、よりコクのある刺激的な味づくりを重ねた一品です。",
           badges: [{ key: "spice-1", label: "辛味", tone: "spice", spiceLevel: 1 }],
           allergensText: "小麦, 乳, えび",
           price: 1450,
