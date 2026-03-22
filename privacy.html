@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -62,6 +62,19 @@
       h2 {
         margin: 0;
         font-family: "Sora", sans-serif;
+      }
+      html:lang(ja) body,
+      html:lang(ja) button,
+      html:lang(ja) input,
+      html:lang(ja) select,
+      html:lang(ja) textarea {
+        font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      }
+      html:lang(ja) h1,
+      html:lang(ja) h2 {
+        font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+        letter-spacing: 0;
+        line-height: 1.26;
       }
       h1 {
         font-size: clamp(1.6rem, 4vw, 2.2rem);
@@ -300,7 +313,7 @@
     </main>
 
     <script>
-      const SUPPORTED_LOCALES = ["en", "es", "de"];
+      const SUPPORTED_LOCALES = ["en", "es", "de", "ja"];
       const DEFAULT_LOCALE = "en";
       const LOCALE_STORAGE_KEY = "cv_locale";
       const PRIVACY_FORM_ENDPOINT = "https://formspree.io/f/xeerzlkb";
@@ -508,6 +521,73 @@
             statusSending: "Deine Datenschutzanfrage wird gesendet...",
             statusSuccess: "Deine Datenschutzanfrage wurde übermittelt.",
             statusError: "Anfrage fehlgeschlagen. Bitte versuche es in Kürze erneut."
+          }
+        },
+        ja: {
+          metaTitle: "プライバシーポリシー | Creativivid Studio",
+          metaDescription:
+            "Creativivid Studio におけるお問い合わせおよび個人情報に関する請求への対応方針、外部処理事業者、越境移転に関する情報を記載しています。",
+          title: "プライバシーポリシー",
+          intro:
+            "本ポリシーでは、本サイトを通じて送信されたお問い合わせおよび個人情報に関する請求に関して、Creativivid Studio がどのように個人データを取り扱うかを説明します。",
+          purposeTitle: "1. 個人データ利用の目的",
+          purposeBody:
+            "送信された情報は、お問い合わせへの対応、連絡、協業可否の検討、ならびに個人情報に関する請求への対応のために利用します。",
+          dataTitle: "2. 取得・処理する情報",
+          dataLine1: "氏名やメールアドレスなど、ご提供いただく連絡先情報",
+          dataLine2: "店舗名・ブランド名、所在地やプロジェクト背景などの任意情報",
+          dataLine3: "現在のメニュー状況、想定する協業内容、導入時期、任意メッセージ",
+          dataLine4: "プライバシー請求フォームから送信される個人情報に関する請求内容",
+          legalTitle: "3. 法的根拠",
+          legalBody:
+            "お問い合わせデータは同意に基づいて処理します。個人情報に関する請求は、適用されるデータ保護法上の義務を履行するために処理します。",
+          retentionTitle: "4. 保存期間",
+          retentionBody:
+            "情報は、お問い合わせ対応、フォローアップ、法令遵守に必要な期間のみ保持します。協業に至らない場合は、保存義務がある場合を除き、妥当な期間内に削除します。",
+          rightsTitle: "5. お客様の権利",
+          rightsBody:
+            "適用法に基づき、開示、訂正、削除、処理制限、データポータビリティ、異議申立てを求めることができます。また、同意はいつでも撤回できます。",
+          rightsTimeline:
+            "法令に従い、不当な遅延なく、通常1か月以内の回答を目指します。",
+          processorTitle: "6. 外部処理事業者と越境移転",
+          processorBody1:
+            "お問い合わせおよびプライバシー請求は、処理受託者として Formspree（フォームバックエンドサービス）を通じて処理される場合があります。",
+          processorBody2:
+            "EEA 外へデータが移転される場合は、提供事業者の文書に従い、標準契約条項などの適切な保護措置を講じます。",
+          processorBody3:
+            "Cloudflare Turnstile は、人による利用と自動化された不正アクセスを判別し、フォームをスパムから保護するために、技術的な操作情報を処理する場合があります。",
+          contactTitle: "7. プライバシーに関する連絡窓口",
+          contactBody: "個人情報に関する権利行使やご質問は、以下のフォームからご連絡ください。",
+          backHome: "トップページへ戻る",
+          form: {
+            nameLabel: "氏名 *",
+            emailLabel: "メールアドレス *",
+            requestTypeLabel: "請求の種類 *",
+            selectOne: "選択してください",
+            typeAccess: "開示",
+            typeRectification: "訂正",
+            typeErasure: "削除",
+            typeRestriction: "利用制限",
+            typePortability: "データポータビリティ",
+            typeObjection: "異議申立て",
+            typeWithdraw: "同意の撤回",
+            typeQuestion: "プライバシーに関する質問",
+            typeOther: "その他",
+            countryLabel: "国・地域（任意）",
+            messageLabel: "ご依頼内容 *",
+            messagePlaceholder: "内容を具体的にご記入ください。適切に対応するために使用します。",
+            consentLabel:
+              "この請求がご自身の情報に関するものである、またはご本人を代理する正当な権限があることを確認します。",
+            submitIdle: "プライバシー請求を送信",
+            submitSending: "送信中...",
+            statusRequired: "氏名、メールアドレス、請求の種類、ご依頼内容を入力してください。",
+            statusInvalidEmail: "有効なメールアドレスを入力してください。",
+            statusNoConsent: "確認項目への同意が必要です。",
+            statusCaptchaRequired: "続行するにはセキュリティ確認を完了してください。",
+            statusEndpoint: "プライバシーフォームの設定が正しくありません。",
+            statusSending: "プライバシー請求を送信しています...",
+            statusSuccess: "プライバシー請求を受け付けました。",
+            statusError: "送信に失敗しました。時間をおいて再度お試しください。"
           }
         }
       };

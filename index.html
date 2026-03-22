@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
@@ -78,6 +78,7 @@
             <option value="en">EN</option>
             <option value="es">ES</option>
             <option value="de">DE</option>
+            <option value="ja">JA</option>
           </select>
         </div>
         <button
@@ -116,6 +117,7 @@
               <option value="en">EN</option>
               <option value="es">ES</option>
               <option value="de">DE</option>
+              <option value="ja">JA</option>
             </select>
           </div>
         </div>
@@ -138,7 +140,12 @@
             </div>
           </div>
 
-          <div class="hero-visual reveal" aria-label="Dish preview teaser">
+          <div
+            class="hero-visual reveal"
+            role="img"
+            aria-label="Dish preview teaser"
+            data-i18n-aria-label="hero.visualAria"
+          >
             <div class="hero-visual-frame landing-media-stage hero-gif-stage" data-hero-gif-stage>
               <div
                 class="landing-media-loader"
@@ -153,18 +160,19 @@
                 data-hero-gif-slide
                 data-hero-gif-id="short-ribs"
                 src="./Short-Ribs.gif"
-                alt="Braised beef short ribs preview"
+                alt=""
                 loading="eager"
                 fetchpriority="high"
                 decoding="async"
                 draggable="false"
+                aria-hidden="true"
               />
               <img
                 class="landing-media-fallback hero-media-fallback hero-gif-slide"
                 data-hero-gif-slide
                 data-hero-gif-id="strawberry-croissant"
                 src="./Strawberry-Croissant.gif"
-                alt="Strawberry cream croissant preview"
+                alt=""
                 loading="eager"
                 decoding="async"
                 draggable="false"
@@ -175,7 +183,7 @@
                 data-hero-gif-slide
                 data-hero-gif-id="sushi"
                 src="./Sushi.gif"
-                alt="Mexican-style sushi roll preview"
+                alt=""
                 loading="eager"
                 decoding="async"
                 draggable="false"

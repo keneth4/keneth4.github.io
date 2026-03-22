@@ -4,7 +4,7 @@ const CONSULTATION_MIN_LOADING_MS = 1200;
 const TURNSTILE_SITE_KEY = "0x4AAAAAACqP0xV6NCSkGF91";
 const TURNSTILE_TOKEN_FIELD = "cf-turnstile-response";
 
-const SUPPORTED_LOCALES = ["en", "es", "de"];
+const SUPPORTED_LOCALES = ["en", "es", "de", "ja"];
 const DEFAULT_LOCALE = "en";
 const LOCALE_STORAGE_KEY = "cv_locale";
 const COMPACT_HEADER_MEDIA_QUERY = "(max-width: 760px), ((max-width: 1040px) and (orientation: landscape))";
@@ -114,15 +114,16 @@ const LANDING_CONTENT_BY_LOCALE = {
       samples: {
         sushi: {
           ...LANDING_DISH_MEDIA.sushi,
-          name: "Mexican-Style Sushi Roll",
-          shortDescription: "Crunchy fusion roll with sesame topping, sauces, and bold flavors.",
+          name: "Chihuahua Especial",
+          shortDescription:
+            "Breaded baked roll with beef, bacon, shrimp, avocado, and chile toreado, topped with melted cheese and bacon.",
           longDescription:
-            "Mexican-style sushi is a contemporary reinterpretation of Japanese sushi, popular in many cities across Mexico and Latin America. It often incorporates crunchy textures, creamy dressings, sweet or spicy sauces, and generally bolder seasoning than traditional sushi. This version reflects a fusion approach that combines Japanese technique with local tastes.",
+            "Chihuahua Especial is a breaded and baked sushi roll filled with beef, bacon, shrimp, avocado, and chile toreado. It is finished with a melted cheese blend, extra bacon, and a side of the house special salsa macha, giving the roll a rich, smoky, creamy, and lightly spicy profile.",
           badges: [{ key: "spice-1", label: "Spice", tone: "spice", spiceLevel: 1 }],
-          allergensText: "Gluten, Egg, Soy, Fish, Sesame",
-          price: 14,
-          currency: "EUR",
-          alt: "Mexican-style sushi roll presentation"
+          allergensText: "Gluten, Dairy, Shellfish",
+          price: 17.5,
+          currency: "USD",
+          alt: "Chihuahua Especial sushi roll presentation"
         }
       }
     },
@@ -293,15 +294,16 @@ const LANDING_CONTENT_BY_LOCALE = {
       samples: {
         sushi: {
           ...LANDING_DISH_MEDIA.sushi,
-          name: "Sushi estilo mexicano",
-          shortDescription: "Roll crujiente con cobertura de ajonjolí, salsas y sabores intensos de fusión.",
+          name: "Chihuahua Especial",
+          shortDescription:
+            "Rollo empanizado y horneado con res, tocino, camarón, aguacate y chile toreado, cubierto con queso y tocino.",
           longDescription:
-            "El sushi estilo mexicano es una reinterpretación contemporánea del sushi japonés, popular en muchas ciudades de México y América Latina. Suele incorporar ingredientes crujientes, aderezos cremosos, salsas dulces o picantes y, con frecuencia, un sabor más intenso que el sushi tradicional. Esta versión refleja una cocina de fusión que combina técnica japonesa con preferencias locales.",
+            "Chihuahua Especial es un rollo empanizado y horneado con res, tocino, camarón, aguacate y chile toreado por dentro. Se termina con una cubierta de mezcla de quesos con tocino y se acompaña con salsa macha especial, dando como resultado un perfil intenso, cremoso, ahumado y ligeramente picante.",
           badges: [{ key: "spice-1", label: "Picante", tone: "spice", spiceLevel: 1 }],
-          allergensText: "Gluten, Huevo, Soya, Pescado, Ajonjolí",
-          price: 14,
-          currency: "EUR",
-          alt: "Presentación de sushi estilo mexicano"
+          allergensText: "Gluten, Lácteos, Crustáceos",
+          price: 115,
+          currency: "MXN",
+          alt: "Presentación del rollo Chihuahua Especial"
         }
       }
     },
@@ -472,15 +474,16 @@ const LANDING_CONTENT_BY_LOCALE = {
       samples: {
         sushi: {
           ...LANDING_DISH_MEDIA.sushi,
-          name: "Sushi auf mexikanische Art",
-          shortDescription: "Knusprige Fusionsrolle mit Sesam, Saucen und kräftigen Aromen.",
+          name: "Chihuahua Especial",
+          shortDescription:
+            "Panierte und gebackene Rolle mit Rindfleisch, Bacon, Garnele, Avocado und Chile toreado, überbacken mit Käse und Bacon.",
           longDescription:
-            "Mexikanisches Sushi ist eine moderne Neuinterpretation des japanischen Sushi und in vielen Städten Mexikos und Lateinamerikas beliebt. Häufig enthält es knusprige Elemente, cremige Dressings, süße oder scharfe Saucen und insgesamt kräftigere Aromen als klassisches Sushi. Diese Variante steht für eine Fusionsküche, die japanische Technik mit lokalen Vorlieben verbindet.",
+            "Chihuahua Especial ist eine panierte und gebackene Sushirolle mit Rindfleisch, Bacon, Garnele, Avocado und Chile toreado im Inneren. Obenauf kommen eine Käsemischung und Bacon; serviert wird sie mit einer speziellen Salsa macha. So entsteht ein kräftiges, cremiges, rauchiges und leicht scharfes Geschmacksprofil.",
           badges: [{ key: "spice-1", label: "Scharf", tone: "spice", spiceLevel: 1 }],
-          allergensText: "Gluten, Ei, Soja, Fisch, Sesam",
-          price: 14,
+          allergensText: "Gluten, Milchprodukte, Krebstiere",
+          price: 15.5,
           currency: "EUR",
-          alt: "Präsentation von Sushi auf mexikanische Art"
+          alt: "Präsentation der Sushirolle Chihuahua Especial"
         }
       }
     },
@@ -600,6 +603,186 @@ const LANDING_CONTENT_BY_LOCALE = {
       body:
         "Erzähl uns von deinem Restaurant, deinem Menü und deinem geplanten Launch. Wir antworten mit Details, Preisen und den nächsten Schritten."
     }
+  },
+  ja: {
+    hero: {
+      eyebrow: "レストラン向けビジュアルメニュー",
+      headline: "注文前に、料理の魅力がひと目で伝わるメニュー体験へ。",
+      subheadline:
+        "訪日客対応や多言語接客が求められるレストラン向けに、迷いを減らし、納得感のある注文につなげるインタラクティブなビジュアルメニューを提供します。"
+    },
+    whyItMatters: {
+      eyebrow: "導入メリット",
+      heading: "料理が見えるだけで、注文体験は変わります",
+      intro: [
+        "料理のイメージが伝わらないと、お客様は迷います。視覚的にわかりやすく伝えることで、注文判断が早くなり、店の上質さも伝わります。特に海外からのお客様への案内に効果的です。"
+      ],
+      impacts: [
+        {
+          title: "プレミアム感が伝わる",
+          body: "料理の見せ方ひとつで、価値や品質は口に運ばれる前から伝わります。"
+        },
+        {
+          title: "他店との差別化になる",
+          body: "静的なメニューが多い中で、視覚体験のあるメニューはすぐに印象の差を生みます。"
+        },
+        {
+          title: "注文の迷いを減らせる",
+          body: "料理画像、アレルゲン、食の条件が見えることで、不慣れな料理でも選びやすくなります。"
+        }
+      ]
+    },
+    experience: {
+      eyebrow: "体験イメージ",
+      heading: "これからのメニューは、もっと視覚的に。",
+      body: "同じ一品でも、伝え方が変わると魅力の届き方は大きく変わります。",
+      defaultSampleId: DEFAULT_EXPERIENCE_SAMPLE_ID,
+      steps: [
+        {
+          title: "文字だけのメニュー",
+          body: "お客様は料理を想像しながら選びます。"
+        },
+        {
+          title: "写真付きメニュー",
+          body: "料理のイメージがかなり伝わりやすくなります。"
+        },
+        {
+          title: "インタラクティブメニュー",
+          body: "見た目も内容も理解でき、注文したくなる体験になります。"
+        }
+      ],
+      samples: {
+        sushi: {
+          ...LANDING_DISH_MEDIA.sushi,
+          name: "Chihuahua Especial",
+          shortDescription:
+            "牛肉、ベーコン、えび、アボカド、チレ・トレアドを包み、チーズとベーコンをのせて焼き上げたパン粉仕立てのロール。",
+          longDescription:
+            "Chihuahua Especial は、牛肉、ベーコン、えび、アボカド、チレ・トレアドを包んだパン粉仕立てのベイクドロールです。仕上げにチーズブレンドとベーコンを重ね、特製サルサ・マチャを添えることで、コク、スモーキーさ、ほどよい辛みを楽しめます。",
+          badges: [{ key: "spice-1", label: "辛味", tone: "spice", spiceLevel: 1 }],
+          allergensText: "小麦, 乳, えび",
+          price: 1450,
+          currency: "JPY",
+          alt: "Chihuahua Especial のロール寿司"
+        }
+      }
+    },
+    demos: {
+      eyebrow: "デモ",
+      heading: "公開中の体験をそのまま確認できます。",
+      body: "実際のデモを開いて、メニューの見え方や操作感を確認してください。"
+    },
+    howItWorks: {
+      eyebrow: "導入の流れ",
+      heading: "撮影方法は2通り。制作フローはひとつ。",
+      body: "制作は私たちが担当するので、現場チームは通常の接客と運営に集中できます。",
+      pathATitle: "現地での撮影",
+      pathASubtitle: "撮影までまとめて任せたい店舗向け",
+      pathAIntroSteps: ["店舗へ伺います。", "料理をプロ品質で撮影します。"],
+      pathBTitle: "リモート撮影",
+      pathBSubtitle: "より短期間で始めたい店舗向け",
+      pathBIntroSteps: ["各料理ごとに、ガイドに沿って短い動画を撮影していただきます。"],
+      sharedTitle: "制作から公開まで",
+      sharedSteps: [
+        "素材を最適化します。",
+        "ブランドとメニューに合わせて体験を構築します。",
+        "公開まで対応し、既存サイトへの組み込みもサポートします。"
+      ],
+      sharedNote: "どちらの方法でも、納品データの所有権は店舗側に残ります。"
+    },
+    collaboration: {
+      eyebrow: "導入費用",
+      heading: "レストランに合わせて設計する、インタラクティブメニュープロジェクトの明確な料金。",
+      intro: [
+        "料理撮影、ブランドに合わせた体験設計、公開作業、そして1年間の更新対応までを含む、レストラン向けのインタラクティブメニュー制作です。"
+      ],
+      standardPricing: {
+        title: "プロジェクト料金",
+        items: [
+          {
+            label: "基本セットアップ",
+            price: "€500",
+            body: "サイト設定、ホスティング設定、メニュー構成、ビジュアル設計、公開準備を含みます。"
+          },
+          {
+            label: "料理ごとのデジタル化",
+            price: "€100 / 1品",
+            body: "料理素材の撮影または加工、見せ方の最適化、インタラクティブサイトへの実装を行います。"
+          },
+          {
+            label: "一般的な導入予算",
+            price: "€1,200 – €3,000",
+            body: "多くのレストランプロジェクトはこのレンジに収まります。",
+            emphasis: true
+          }
+        ],
+        examplesTitle: "よくある予算イメージ",
+        examples: [
+          { label: "10品", price: "€1,500" },
+          { label: "15品", price: "€2,000" },
+          { label: "25品", price: "€3,000" }
+        ]
+      },
+      projectIncludes: {
+        title: "提供内容",
+        deliveryTitle: "公開時に含まれるもの",
+        deliveryItems: [
+          "ホスティング込みのインタラクティブメニューサイト",
+          "多言語メニュー対応",
+          "納品データの完全所有権と既存サイトへの組み込みサポート（任意）"
+        ],
+        updatesTitle: "1年間の更新対応",
+        updatesItems: [
+          "価格・商品名の変更",
+          "文言・ビジュアルの調整",
+          "季節メニューへの更新"
+        ],
+        note:
+          "ホスティングは標準で含まれます。既存サイトをお持ちの場合は、納品データの所有権を保持したまま、そちらへの組み込みも支援できます。"
+      },
+      newDishes: {
+        title: "新しい料理の追加",
+        items: [
+          { label: "通常追加", price: "€100 / 追加1品" },
+          { label: "季節メニューセット", price: "€400 / 5品" }
+        ],
+        body: "季節限定メニューや新カテゴリーの追加に適しています。"
+      },
+      launchOffer: {
+        title: "初期導入オファー",
+        items: [
+          "セットアップ費 €500 が不要",
+          "1品あたり €70 でデジタル化",
+          "1年間のホスティングとメニュー更新込み"
+        ],
+        body: "先着5店舗限定のご案内です。"
+      },
+      aftercareNote:
+        "初年度終了後は、ホスティング・保守・メニュー更新を €100/年 で継続できます。"
+    },
+    faq: {
+      eyebrow: "よくある質問",
+      heading: "導入前によくいただく質問",
+      items: [
+        {
+          q: "お客様はアプリをダウンロードする必要がありますか？",
+          a: "いいえ。すべてモバイルとデスクトップのブラウザ上でそのまま動作します。"
+        },
+        {
+          q: "あとから料理情報を更新できますか？",
+          a: "はい。初年度は、文言、価格、ビジュアルの更新に対応します。新規料理の追加は別料金です。"
+        },
+        {
+          q: "ホスティング込みですか？それともファイル納品ですか？",
+          a: "標準ではホスティング込みです。既存サイトをお持ちの場合は、納品データの所有権を保持したまま、そちらへの組み込みも支援できます。"
+        }
+      ]
+    },
+    consultation: {
+      heading: "ご相談・導入のお問い合わせはこちら。",
+      body:
+        "レストランの内容、メニュー、導入したい体験について教えてください。内容確認後、詳細、料金、次の進め方をご案内します。"
+    }
   }
 };
 
@@ -627,6 +810,7 @@ const UI_TEXT_BY_LOCALE = {
     hero: {
       ctaDemo: "Open Live Demo",
       ctaConsult: "Request Information",
+      visualAria: "Dish preview teaser",
       chipLanguages: "9 menu languages",
       chipDietary: "Dietary & allergen tags",
       chipScroll: "Drag or swipe to rotate",
@@ -723,6 +907,7 @@ const UI_TEXT_BY_LOCALE = {
     hero: {
       ctaDemo: "Abrir demo en vivo",
       ctaConsult: "Solicitar información",
+      visualAria: "Vista previa del plato",
       chipLanguages: "9 idiomas de menú",
       chipDietary: "Etiquetas dietarias y de alérgenos",
       chipScroll: "Arrastra o desliza para rotar",
@@ -819,6 +1004,7 @@ const UI_TEXT_BY_LOCALE = {
     hero: {
       ctaDemo: "Live-Demo öffnen",
       ctaConsult: "Information anfragen",
+      visualAria: "Gerichtsvorschau",
       chipLanguages: "9 Menüsprachen",
       chipDietary: "Ernährungs- und Allergenhinweise",
       chipScroll: "Ziehen oder wischen zum Drehen",
@@ -890,6 +1076,103 @@ const UI_TEXT_BY_LOCALE = {
     backToTopAria: "Nach oben",
     faq: {
       mergeNote: "Beide Wege führen hier zusammen."
+    }
+  },
+  ja: {
+    meta: {
+      title: "Creativivid Studio | レストラン向けビジュアルメニュー",
+      description:
+        "Creativivid Studio は、料理の魅力を注文前に伝え、海外ゲストにもわかりやすいインタラクティブなビジュアルメニューをレストラン向けに提供します。"
+    },
+    skipLink: "本文へ移動",
+    brandAria: "Creativivid Studio ホーム",
+    nav: {
+      aria: "メインナビゲーション",
+      experience: "体験",
+      demos: "デモ",
+      pricing: "料金",
+      consultation: "お問い合わせ",
+      menuOpen: "メニューを開く",
+      menuClose: "メニューを閉じる"
+    },
+    locale: {
+      label: "言語"
+    },
+    hero: {
+      ctaDemo: "デモを見る",
+      ctaConsult: "お問い合わせ",
+      visualAria: "料理プレビュー",
+      chipLanguages: "9言語メニュー対応",
+      chipDietary: "食事制限・アレルゲン表示",
+      chipScroll: "ドラッグまたはスワイプで回転",
+      dragHint: "ドラッグして確認"
+    },
+    menuTerms: {
+      allergens: "アレルゲン"
+    },
+    media: {
+      loadingAria: "画像を読み込み中"
+    },
+    demos: {
+      cardCta: "デモを見る",
+      previewFrameTitle: "{name} のプレビュー",
+      emptyState: "現在公開中のデモはありません。まず /demos/ にエクスポートを公開してください。",
+      untitled: "無題のデモ"
+    },
+    collaboration: {
+      applyCta: "お問い合わせ"
+    },
+    form: {
+      menuSituationLegend: "現在のメニュー運用について教えてください",
+      menuSituationPaperPdf: "紙または PDF のメニューを使っている",
+      menuSituationWebsite: "すでに Web メニューがある",
+      menuSituationNew: "まったく新しく作りたい",
+      contactStageTitle: "ご連絡先",
+      restaurantBrandLabel: "店舗名 / ブランド名 *",
+      contactNameLabel: "ご担当者名 *",
+      contactEmailLabel: "メールアドレス *",
+      optionalDetailsSummary: "任意項目（回答の参考になります）",
+      cityCountryLabel: "都市 / 国",
+      projectScopeLabel: "初期導入の想定規模はどれに近いですか？",
+      projectScopeUpTo10: "10品まで",
+      projectScope11to15: "11〜15品",
+      projectScope16to25: "16〜25品",
+      projectScopeNotSure: "まだ決まっていないので相談したい",
+      timelineLabel: "導入または更新の希望時期はいつ頃ですか？",
+      selectOneOption: "選択してください",
+      timelineAsapOption: "できるだけ早く",
+      timelineSoonOption: "1〜2か月以内",
+      timelineExploringOption: "まずは情報収集段階",
+      messageLabel: "店舗やプロジェクトについて補足があればご記入ください",
+      messagePlaceholder: "コンセプト、メニューの課題、導入背景などを自由にご記入ください。",
+      consentPrefix:
+        "このお問い合わせへの対応のために、Creativivid Studio が私の情報を処理することに同意し、",
+      privacyLinkText: "プライバシーポリシー",
+      consentSuffix: "を確認しました。",
+      submitIdle: "お問い合わせする",
+      submitSending: "送信中...",
+      reassuranceText: "無理な営業は行いません。まずは詳細や進め方だけのご相談でも大丈夫です。",
+      statusSending: "お問い合わせを送信しています...",
+      statusRequired: "メニュー運用、店舗名 / ブランド名、ご担当者名、メールアドレスを入力してください。",
+      statusInvalidEmail: "有効なメールアドレスを入力してください。",
+      statusNoConsent: "送信には同意が必要です。",
+      statusCaptchaRequired: "続行するにはセキュリティ確認を完了してください。",
+      statusEndpoint:
+        "お問い合わせフォームが未設定です。app.js の FORM_ENDPOINT を Formspree のエンドポイントに置き換えてください。",
+      statusSuccess: "お問い合わせを受け付けました。",
+      statusError: "送信に失敗しました。少し時間をおいて再度お試しください。",
+      successHeadline: "お問い合わせを受け付けました。",
+      successBody: "24時間以内を目安に、詳細と次の進め方をご案内します。",
+      successDemoText: "お待ちの間に、公開中のデモをご覧ください。",
+      successDemoCta: "デモを見る"
+    },
+    footer: {
+      copyrightBody: "Creativivid Studio. 無断転載・複製を禁じます。",
+      privacyPolicy: "プライバシーポリシー"
+    },
+    backToTopAria: "ページ上部へ戻る",
+    faq: {
+      mergeNote: "ここで一本の流れにまとまります。"
     }
   }
 };
@@ -1020,6 +1303,12 @@ const formatPrice = (amount, currency = "EUR") => {
   const numericAmount = Number(amount);
   const normalizedAmount = Number.isFinite(numericAmount) ? numericAmount : 0;
   const fractionDigits = Number.isInteger(normalizedAmount) ? 0 : 1;
+  if (currentLocale === "es" && currency === "MXN") {
+    return `$${new Intl.NumberFormat("es-MX", {
+      minimumFractionDigits: fractionDigits,
+      maximumFractionDigits: fractionDigits
+    }).format(normalizedAmount)}`;
+  }
   return new Intl.NumberFormat(currentLocale, {
     style: "currency",
     currency,

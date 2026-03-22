@@ -58,6 +58,23 @@ h4 {
   margin: 0;
 }
 
+html:lang(ja) body,
+html:lang(ja) button,
+html:lang(ja) input,
+html:lang(ja) select,
+html:lang(ja) textarea {
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+html:lang(ja) h1,
+html:lang(ja) h2,
+html:lang(ja) h3,
+html:lang(ja) h4 {
+  font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  letter-spacing: 0;
+  line-height: 1.24;
+}
+
 p {
   margin: 0;
 }
