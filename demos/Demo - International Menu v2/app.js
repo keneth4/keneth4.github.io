@@ -1,11 +1,11 @@
 
-const DATA = {"meta":{"slug":"restaurant-menu","name":"Restaurant Menu","restaurantName":{"es":"Restaurante Internacional","en":"International Restaurant","de":"Internationales Restaurant"},"title":{"es":"Menú Internacional","en":"International Menu","de":"Internationales Menü"},"identityMode":"logo","logoSrc":"assets/logos/pngwing.com.png?v=1773897879489","fontFamily":"Fraunces","fontSource":"","primaryColor":{"mode":"custom","hex":"#150f0c","tone":0,"opacity":0.8},"template":"jukebox","locales":["es","en","de"],"defaultLocale":"en","currency":"EUR","currencyPosition":"right","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","scrollSensitivity":{"hero360":5,"item":5,"section":5},"fontRoles":{"title":{"family":"Cinzel","source":""}},"priceDecimalSeparator":"comma"},"backgrounds":[{"id":"bg-1773011234136","label":"Fondo 1","src":"assets/backgrounds/Uhland-bg.webp?v=1773897879489","type":"image","originalSrc":"assets/backgrounds/Uhland-bg.webp?v=1773897879489","viewportFocus":{"portrait":{"x":70,"y":50}}}],"categories":[{"id":"section-1773012554844","name":{"es":"Platos principales","en":"Main Courses","de":"Hauptgerichte"},"backgroundId":"bg-1773011234136","items":[{"id":"dish-1773012647888","name":{"es":"Enmoladas","en":"Enmoladas","de":"Enmoladas"},"description":{"es":"Tortillas de maíz rellenas y bañadas en mole, coronadas con crema, queso, ajonjolí y aguacate.","en":"Filled corn tortillas covered in mole sauce and finished with cream, cheese, sesame, and avocado.","de":"Gefüllte Maistortillas in Mole-Sauce, garniert mit Creme, Käse, Sesam und Avocado."},"longDescription":{"es":"Las enmoladas son una variante tradicional de las enchiladas mexicanas. Se preparan con tortillas de maíz dobladas o enrolladas, generalmente rellenas de pollo, y cubiertas con mole: una salsa compleja elaborada con chiles secos, especias, semillas y, en muchas versiones, un toque de chocolate. El mole es uno de los grandes emblemas de la cocina mexicana y destaca por su profundidad de sabor y su larga historia culinaria.","en":"Enmoladas are a traditional Mexican variation of enchiladas. They are made with folded or rolled corn tortillas, usually filled with chicken, and covered in mole: a complex sauce prepared with dried chilies, spices, seeds, and in many versions, a touch of chocolate. Mole is one of the great emblems of Mexican cuisine, celebrated for its depth of flavor and long culinary history.","de":"Enmoladas sind eine traditionelle mexikanische Variante der Enchiladas. Sie bestehen aus gefalteten oder gerollten Maistortillas, meist mit Hähnchen gefüllt, und werden mit Mole überzogen – einer komplexen Sauce aus getrockneten Chilis, Gewürzen, Samen und in vielen Varianten auch etwas Schokolade. Mole gilt als eines der bekanntesten Symbole der mexikanischen Küche und ist für seine Tiefe und Geschichte berühmt."},"priceVisible":true,"price":{"amount":12,"currency":"EUR"},"allergens":[{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"sesame","label":{"es":"Ajonjolí","en":"Sesame","de":"Sesam"}}],"badges":[],"spiceLevel":1,"media":{"hero360":"assets/items/Enmoladas-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Enmoladas-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Enmoladas","gallery":[],"responsive":{"small":"assets/items/Enmoladas-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Enmoladas-int-sprite-md.webp?v=1773897879489","large":"assets/items/Enmoladas-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Enmoladas-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Enmoladas-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Enmoladas-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Enmoladas-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012587145","name":{"es":"Linguine a la boloñesa","en":"Linguine alla Bolognese","de":"Linguine Bolognese"},"description":{"es":"Pasta larga servida con una salsa boloñesa clásica de carne, tomate y queso rallado.","en":"Long pasta served with a classic Bolognese sauce made with meat, tomato, and grated cheese.","de":"Lange Pasta mit klassischer Bolognese aus Fleisch, Tomaten und geriebenem Käse."},"longDescription":{"es":"Inspirada en el ragù alla bolognese de la ciudad italiana de Bolonia, esta pasta combina una salsa de carne cocinada lentamente con tomate, cebolla y especias. Aunque la receta tradicional italiana suele servirse con tagliatelle, hoy es común disfrutarla con linguine u otras pastas largas. Es un plato reconfortante, conocido por su equilibrio entre acidez, dulzor y sabor umami.","en":"Inspired by ragù alla bolognese from the Italian city of Bologna, this pasta pairs a slow-cooked meat sauce with tomato, onion, and seasonings. While the traditional Italian version is often served with tagliatelle, it is now commonly enjoyed with linguine and other long pasta shapes. It is a comforting dish known for its balance of acidity, sweetness, and savory depth.","de":"Inspiriert vom Ragù alla Bolognese aus der italienischen Stadt Bologna verbindet dieses Gericht eine langsam gekochte Fleischsauce mit Tomaten, Zwiebeln und Gewürzen. Traditionell wird sie in Italien oft mit Tagliatelle serviert, heute aber auch häufig mit Linguine und anderer langer Pasta. Es ist ein herzhaftes Wohlfühlgericht mit ausgewogener Säure, leichter Süße und viel Umami."},"priceVisible":true,"price":{"amount":13,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Bolognese-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Bolognese-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Bolognese","gallery":[],"responsive":{"small":"assets/items/Bolognese-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Bolognese-int-sprite-md.webp?v=1773897879489","large":"assets/items/Bolognese-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Bolognese-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Bolognese-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Bolognese-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Bolognese-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012672844","name":{"es":"Schnitzel con papas","en":"Schnitzel with Potatoes","de":"Schnitzel mit Kartoffeln"},"description":{"es":"Filete empanizado y dorado, acompañado con papas salteadas y limón.","en":"Breaded golden cutlet served with sautéed potatoes and lemon.","de":"Paniertes, goldbraun gebratenes Schnitzel mit Bratkartoffeln und Zitrone."},"longDescription":{"es":"El schnitzel es un clásico de Europa central, especialmente popular en Austria y Alemania. Su versión más famosa, el Wiener Schnitzel, se prepara tradicionalmente con ternera empanizada, aunque hoy también existen versiones con cerdo o pollo. El contraste entre la cubierta crujiente, la carne tierna y el toque cítrico del limón lo ha convertido en un plato muy apreciado en tabernas y restaurantes familiares.","en":"Schnitzel is a Central European classic, especially popular in Austria and Germany. Its most famous version, Wiener Schnitzel, is traditionally made with breaded veal, though pork and chicken versions are also common today. The contrast between the crisp coating, tender meat, and bright lemon finish has made it a favorite in inns, taverns, and family restaurants.","de":"Das Schnitzel ist ein Klassiker der mitteleuropäischen Küche und besonders in Österreich und Deutschland beliebt. Die bekannteste Variante, das Wiener Schnitzel, wird traditionell aus paniertem Kalbfleisch zubereitet, heute aber auch oft mit Schwein oder Hähnchen. Der Kontrast aus knuspriger Panade, zartem Fleisch und frischer Zitrone macht es zu einem beliebten Gericht in Gasthäusern und Familienrestaurants."},"priceVisible":true,"price":{"amount":19.8,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Schnitzel-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Schnitzel-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Schnitzel","gallery":[],"responsive":{"small":"assets/items/Schnitzel-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Schnitzel-int-sprite-md.webp?v=1773897879489","large":"assets/items/Schnitzel-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Schnitzel-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Schnitzel-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Schnitzel-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Schnitzel-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012722320","name":{"es":"Short ribs braseadas","en":"Braised Beef Short Ribs","de":"Geschmorte Rinder-Short-Ribs"},"description":{"es":"Costilla de res cocinada lentamente, servida con puré, verduras y su jugo.","en":"Slow-cooked beef short rib served with mash, vegetables, and its own sauce.","de":"Langsam geschmorte Rinder-Short-Rib mit Püree, Gemüse und Bratensauce."},"longDescription":{"es":"Las short ribs son un corte muy apreciado por su sabor intenso y su textura melosa cuando se cocinan a fuego lento. El braseado prolongado permite que el colágeno se transforme y vuelva la carne especialmente tierna. En cocina contemporánea suelen acompañarse con purés de raíz, zanahorias o calabaza, porque sus notas dulces equilibran la profundidad del jugo de carne.","en":"Short ribs are prized for their rich flavor and silky texture when cooked slowly. Long braising allows the collagen to break down, making the meat especially tender. In contemporary cooking they are often paired with root vegetable purées, carrots, or squash, whose natural sweetness balances the depth of the meat juices.","de":"Short Ribs werden wegen ihres kräftigen Geschmacks und ihrer zarten, saftigen Konsistenz geschätzt, wenn sie langsam geschmort werden. Durch langes Garen wandelt sich das Kollagen und macht das Fleisch besonders weich. In der modernen Küche werden sie oft mit Pürees aus Wurzelgemüse, Karotten oder Kürbis serviert, deren Süße die intensive Sauce ausgleicht."},"priceVisible":true,"price":{"amount":26.8,"currency":"EUR"},"allergens":[{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Short-Ribs-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Short-Ribs-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Short-Ribs","gallery":[],"responsive":{"small":"assets/items/Short-Ribs-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Short-Ribs-int-sprite-md.webp?v=1773897879489","large":"assets/items/Short-Ribs-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Short-Ribs-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Short-Ribs-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Short-Ribs-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Short-Ribs-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013379297","name":{"es":"Ensalada de acompañamiento","en":"Side Salad","de":"Beilagensalat"},"description":{"es":"Mezcla fresca de lechugas, vegetales y encurtidos ligeros.","en":"Fresh mix of lettuce, vegetables, and light pickled garnishes.","de":"Frische Mischung aus Blattsalat, Gemüse und mild eingelegten Beilagen."},"longDescription":{"es":"Las ensaladas de acompañamiento ayudan a aportar frescura y equilibrio a platos principales más intensos. Esta versión combina hojas verdes con vegetales crudos y encurtidos, una práctica común en cocinas europeas y mediterráneas para aportar contraste de textura, color y acidez. Es una opción ligera que complementa carnes, frituras o platos de pasta.","en":"Side salads bring freshness and balance to richer main dishes. This version combines leafy greens with raw and lightly pickled vegetables, a common approach in European and Mediterranean cooking to add contrast in texture, color, and acidity. It is a light option that pairs well with meats, fried dishes, or pasta.","de":"Beilagensalate sorgen für Frische und Ausgleich zu kräftigeren Hauptgerichten. Diese Variante kombiniert Blattsalate mit rohem und leicht eingelegtem Gemüse – eine in der europäischen und mediterranen Küche verbreitete Art, Kontrast in Textur, Farbe und Säure zu schaffen. Sie passt gut zu Fleisch, frittierten Speisen oder Pasta."},"priceVisible":true,"price":{"amount":5,"currency":"EUR"},"allergens":[],"badges":["vegan"],"spiceLevel":0,"media":{"hero360":"assets/items/Beilagensalat-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Beilagensalat-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Beilagensalat","gallery":[],"responsive":{"small":"assets/items/Beilagensalat-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Beilagensalat-int-sprite-md.webp?v=1773897879489","large":"assets/items/Beilagensalat-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Beilagensalat-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Beilagensalat-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Beilagensalat-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Beilagensalat-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013219070","name":{"es":"Espagueti rojo","en":"Red Spaghetti","de":"Spaghetti mit roter Sauce"},"description":{"es":"Espagueti con salsa roja de tomate y carne, acompañado con pan.","en":"Spaghetti with red tomato and meat sauce, served with bread.","de":"Spaghetti mit roter Tomaten-Fleischsauce, serviert mit Brot."},"longDescription":{"es":"El espagueti rojo es una preparación muy popular en mesas familiares y menús casuales. La base suele ser una salsa de tomate condimentada, a veces enriquecida con carne molida, que cubre la pasta y le da un perfil casero y reconfortante. Servido con pan, es un ejemplo claro de cómo la pasta italiana se adaptó a distintos estilos de cocina fuera de Italia.","en":"Red spaghetti is a popular dish in family-style meals and casual menus. It is usually built around a seasoned tomato sauce, sometimes enriched with minced meat, which coats the pasta and gives it a homestyle, comforting profile. Served with bread, it is a clear example of how Italian pasta traditions have been adapted in many other cuisines.","de":"Spaghetti mit roter Sauce ist ein beliebtes Gericht in Familienküchen und auf unkomplizierten Speisekarten. Die Grundlage ist meist eine gewürzte Tomatensauce, manchmal mit Hackfleisch verfeinert, die der Pasta einen hausgemachten und tröstlichen Charakter verleiht. Mit Brot serviert zeigt das Gericht gut, wie sich italienische Pastatraditionen in vielen Ländern weiterentwickelt haben."},"priceVisible":true,"price":{"amount":11,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Pasta-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Pasta-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Pasta","gallery":[],"responsive":{"small":"assets/items/Pasta-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Pasta-int-sprite-md.webp?v=1773897879489","large":"assets/items/Pasta-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Pasta-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Pasta-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Pasta-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Pasta-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013317712","name":{"es":"Sushi estilo mexicano","en":"Mexican-Style Sushi Roll","de":"Sushi auf mexikanische Art"},"description":{"es":"Roll crujiente con cobertura de ajonjolí, salsas y sabores intensos de fusión.","en":"Crunchy fusion roll with sesame topping, sauces, and bold flavors.","de":"Knusprige Fusionsrolle mit Sesam, Saucen und kräftigen Aromen."},"longDescription":{"es":"El sushi estilo mexicano es una reinterpretación contemporánea del sushi japonés, popular en muchas ciudades de México y América Latina. Suele incorporar ingredientes crujientes, aderezos cremosos, salsas dulces o picantes y, con frecuencia, un sabor más intenso que el sushi tradicional. Esta versión refleja una cocina de fusión que combina técnica japonesa con preferencias locales.","en":"Mexican-style sushi is a contemporary reinterpretation of Japanese sushi, popular in many cities across Mexico and Latin America. It often incorporates crunchy textures, creamy dressings, sweet or spicy sauces, and generally bolder seasoning than traditional sushi. This version reflects a fusion approach that combines Japanese technique with local tastes.","de":"Mexikanisches Sushi ist eine moderne Neuinterpretation des japanischen Sushi und in vielen Städten Mexikos und Lateinamerikas beliebt. Häufig enthält es knusprige Elemente, cremige Dressings, süße oder scharfe Saucen und insgesamt kräftigere Aromen als klassisches Sushi. Diese Variante steht für eine Fusionsküche, die japanische Technik mit lokalen Vorlieben verbindet."},"priceVisible":true,"price":{"amount":14,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"soy","label":{"es":"Soya","en":"Soy","de":"Soja"}},{"id":"fish","label":{"es":"Pescado","en":"Fish","de":"Fisch"}},{"id":"sesame","label":{"es":"Ajonjolí","en":"Sesame","de":"Sesam"}}],"badges":[],"spiceLevel":1,"media":{"hero360":"assets/items/Sushi-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Sushi-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Sushi","gallery":[],"responsive":{"small":"assets/items/Sushi-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Sushi-int-sprite-md.webp?v=1773897879489","large":"assets/items/Sushi-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Sushi-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Sushi-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Sushi-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Sushi-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1773012574194","name":{"es":"Postres","en":"Desserts","de":"Desserts"},"backgroundId":"bg-1773011234136","items":[{"id":"dish-1773013450480","name":{"es":"Croissant relleno de crema y fresa","en":"Strawberry Cream Croissant","de":"Croissant mit Erdbeere und Creme"},"description":{"es":"Croissant hojaldrado relleno de crema y decorado con fresa y azúcar glas.","en":"Flaky croissant filled with cream and finished with strawberry and powdered sugar.","de":"Blättriges Croissant mit Cremefüllung, Erdbeere und Puderzucker."},"longDescription":{"es":"El croissant es uno de los grandes íconos de la panadería vienesa y francesa. Se elabora con masa laminada, cuya textura ligera y hojaldrada surge de alternar capas de masa y mantequilla. En esta versión se presenta como postre, con relleno cremoso y fruta fresca, una combinación que aporta contraste entre la mantequilla del hojaldre, la suavidad de la crema y la acidez natural de la fresa.","en":"The croissant is one of the great icons of Viennese and French baking. It is made with laminated dough, whose light, flaky texture comes from alternating layers of dough and butter. In this dessert version it is filled with cream and finished with fresh fruit, creating a contrast between buttery pastry, smooth filling, and the natural brightness of strawberry.","de":"Das Croissant gehört zu den großen Klassikern der Wiener und französischen Backkunst. Es wird aus laminiertem Teig hergestellt, dessen leichte, blättrige Struktur durch viele Schichten aus Teig und Butter entsteht. In dieser Dessertvariante ist es mit Creme gefüllt und mit frischer Frucht garniert – ein Zusammenspiel aus buttrigem Gebäck, weicher Füllung und frischer Erdbeere."},"priceVisible":true,"price":{"amount":5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Strawberry-Croissant-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Strawberry-Croissant","gallery":[],"responsive":{"small":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1773897879489","large":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Strawberry-Croissant-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Strawberry-Croissant-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013505628","name":{"es":"Croissant con chocolate","en":"Chocolate Croissant","de":"Schokoladen-Croissant"},"description":{"es":"Croissant hojaldrado con relleno y cobertura de chocolate.","en":"Flaky croissant with chocolate filling and chocolate topping.","de":"Blättriges Croissant mit Schokoladenfüllung und Schokoladenglasur."},"longDescription":{"es":"El croissant con chocolate es una versión golosa de la panadería clásica europea. El hojaldre laminado aporta ligereza y textura, mientras que el chocolate añade dulzor e intensidad aromática. Es una pieza muy popular en cafeterías y panaderías porque combina la elegancia del croissant con un perfil más indulgente y postrero.","en":"The chocolate croissant is an indulgent take on classic European pastry. The laminated dough provides lightness and texture, while the chocolate adds sweetness and aromatic depth. It is especially popular in cafés and bakeries because it combines the elegance of a croissant with a richer dessert profile.","de":"Das Schokoladen-Croissant ist eine genussvolle Variante klassischer europäischer Backkunst. Der laminierte Teig sorgt für Leichtigkeit und Struktur, während die Schokolade Süße und aromatische Tiefe beisteuert. In Cafés und Bäckereien ist es besonders beliebt, weil es die Eleganz des Croissants mit einem deutlich dessertartigen Charakter verbindet."},"priceVisible":true,"price":{"amount":4.5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"soy","label":{"es":"Soya","en":"Soy","de":"Soja"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Chocolate-Croissant-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Chocolate-Croissant","gallery":[],"responsive":{"small":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1773897879489","large":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Chocolate-Croissant-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Chocolate-Croissant-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013546304","name":{"es":"Baklava","en":"Baklava","de":"Baklava"},"description":{"es":"Dulce de capas de masa filo con nueces o pistache, bañado en jarabe.","en":"Layered filo pastry with nuts or pistachio soaked in syrup.","de":"Schichtgebäck aus Filoteig mit Nüssen oder Pistazien in Sirup."},"longDescription":{"es":"La baklava es uno de los postres más célebres del Mediterráneo oriental y Medio Oriente. Se prepara con finas capas de masa filo, relleno de frutos secos y un baño de almíbar o miel que le da brillo y jugosidad. Es famosa por su textura crujiente y su dulzor intenso, y suele compartirse en celebraciones o acompañarse con café o té.","en":"Baklava is one of the most celebrated desserts of the Eastern Mediterranean and the Middle East. It is made with delicate layers of filo pastry, a filling of nuts, and a syrup or honey soak that gives it shine and moisture. It is famous for its crisp texture and intense sweetness, and it is often shared during celebrations or served with coffee or tea.","de":"Baklava ist eines der bekanntesten Desserts des östlichen Mittelmeerraums und des Nahen Ostens. Sie wird aus feinen Schichten Filoteig, einer Füllung aus Nüssen und einem Sirup- oder Honigbad hergestellt, das für Glanz und Saftigkeit sorgt. Berühmt ist sie für ihre knusprige Textur und ihre intensive Süße; oft wird sie zu Festen oder mit Kaffee und Tee serviert."},"priceVisible":true,"price":{"amount":4,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"nuts","label":{"es":"Frutos secos","en":"Nuts","de":"Schalenfrüchte"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Baklava-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Baklava-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Baklava","gallery":[],"responsive":{"small":"assets/items/Baklava-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Baklava-int-sprite-md.webp?v=1773897879489","large":"assets/items/Baklava-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Baklava-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Baklava-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Baklava-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Baklava-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013561558","name":{"es":"Dona de caramelo con nuez","en":"Caramel Nut Donut","de":"Karamell-Donut mit Nüssen"},"description":{"es":"Dona glaseada con cobertura de caramelo y trozos de nuez.","en":"Glazed donut topped with caramel icing and chopped nuts.","de":"Glasierter Donut mit Karamellüberzug und gehackten Nüssen."},"longDescription":{"es":"La dona moderna se popularizó en Norteamérica y se convirtió en un icono de panaderías y cafeterías. Su masa frita ofrece una textura suave por dentro y ligeramente firme por fuera. En esta versión, el glaseado de caramelo aporta notas tostadas y mantequillosas, mientras que la nuez añade contraste crujiente y un sabor más profundo.","en":"The modern donut became popular in North America and turned into an icon of bakeries and coffee shops. Its fried dough offers a soft interior with a lightly firm outer layer. In this version, caramel icing adds toasted, buttery notes, while chopped nuts bring crunch and deeper flavor.","de":"Der moderne Donut wurde vor allem in Nordamerika populär und ist heute ein Klassiker in Bäckereien und Cafés. Sein frittierter Teig ist innen weich und außen leicht fest. In dieser Variante sorgt Karamellglasur für geröstete, buttrige Noten, während gehackte Nüsse Knusprigkeit und mehr Tiefe bringen."},"priceVisible":true,"price":{"amount":3.5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"nuts","label":{"es":"Frutos secos","en":"Nuts","de":"Schalenfrüchte"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Dona-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Dona-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Dona","gallery":[],"responsive":{"small":"assets/items/Dona-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Dona-int-sprite-md.webp?v=1773897879489","large":"assets/items/Dona-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Dona-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Dona-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Dona-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Dona-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013582012","name":{"es":"Surtido de galletas","en":"Assorted Cookies","de":"Gemischte Kekse"},"description":{"es":"Selección variada de galletas y bocados dulces con distintas coberturas.","en":"Assorted selection of sweet cookies and pastry bites with different toppings.","de":"Gemischte Auswahl an süßen Keksen und kleinen Gebäcken mit verschiedenen Toppings."},"longDescription":{"es":"Las galletas y pequeños bocados de pastelería han formado parte de la repostería europea durante siglos, desde las masas de mantequilla hasta las versiones cubiertas de chocolate o coco. Un surtido como este ofrece variedad de texturas y sabores: piezas suaves, crujientes, rellenas o decoradas, ideales para acompañar café, té o compartir en mesa.","en":"Cookies and small pastry bites have been part of European confectionery for centuries, from butter-based doughs to versions coated with chocolate or coconut. An assortment like this offers variety in both texture and flavor: soft, crisp, filled, or decorated pieces that pair especially well with coffee, tea, or sharing at the table.","de":"Kekse und kleine Gebäckstücke gehören seit Jahrhunderten zur europäischen Konditorei – von buttrigen Teigen bis zu Varianten mit Schokolade oder Kokos. Eine solche Auswahl bietet verschiedene Texturen und Aromen: weiche, knusprige, gefüllte oder dekorierte Stücke, die besonders gut zu Kaffee, Tee oder zum Teilen passen."},"priceVisible":true,"price":{"amount":4.5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"nuts","label":{"es":"Frutos secos","en":"Nuts","de":"Schalenfrüchte"}},{"id":"soy","label":{"es":"Soya","en":"Soy","de":"Soja"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cookies-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Cookies-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cookies","gallery":[],"responsive":{"small":"assets/items/Cookies-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Cookies-int-sprite-md.webp?v=1773897879489","large":"assets/items/Cookies-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cookies-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Cookies-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cookies-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Cookies-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1773012367214","name":{"es":"Bebidas","en":"Drinks","de":"Getränke"},"backgroundId":"bg-1773011234136","items":[{"id":"dish-1773012371096","name":{"es":"Té verde Arizona","en":"Arizona Green Tea","de":"Arizona Grüner Tee"},"description":{"es":"Bebida fría de té verde endulzado con perfil suave y refrescante.","en":"Sweetened iced green tea with a smooth and refreshing profile.","de":"Gesüßter grüner Eistee mit mildem und erfrischendem Geschmack."},"longDescription":{"es":"Arizona Green Tea es una bebida lista para tomar muy reconocible por sus latas decoradas y su perfil dulce y ligero. El té verde aporta notas herbales suaves y una asociación popular con antioxidantes naturales, mientras que el formato frío lo convierte en una bebida refrescante para acompañar comidas ligeras, snacks o postres.","en":"Arizona Green Tea is a ready-to-drink beverage well known for its decorated cans and its light, sweet profile. Green tea brings gentle herbal notes and a popular association with natural antioxidants, while the chilled format makes it refreshing alongside light meals, snacks, or desserts.","de":"Arizona Green Tea ist ein trinkfertiges Getränk, das für seine dekorativen Dosen und sein leicht süßes Geschmacksprofil bekannt ist. Grüner Tee bringt milde, pflanzliche Noten und wird häufig mit natürlichen Antioxidantien in Verbindung gebracht. Gekühlt eignet er sich gut als erfrischende Begleitung zu leichten Speisen, Snacks oder Desserts."},"priceVisible":true,"price":{"amount":3,"currency":"EUR"},"allergens":[],"badges":["vegan","kosher"],"spiceLevel":0,"media":{"hero360":"assets/items/Arizona-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Arizona-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Arizona","gallery":[],"responsive":{"small":"assets/items/Arizona-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Arizona-int-sprite-md.webp?v=1773897879489","large":"assets/items/Arizona-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Arizona-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Arizona-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Arizona-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Arizona-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012404013","name":{"es":"Prime sabor limonada","en":"Prime Lemonade","de":"Prime Limonade"},"description":{"es":"Bebida hidratante con sabor a limón, pensada para refrescar después de la actividad física.","en":"Lemon-flavored hydration drink designed to refresh after physical activity.","de":"Hydrationsgetränk mit Zitronengeschmack, entwickelt zur Erfrischung nach körperlicher Aktivität."},"longDescription":{"es":"Las bebidas hidratantes modernas buscan reponer líquidos y ofrecer un sabor más intenso que el agua simple. Esta versión con perfil de limonada combina una sensación cítrica y dulce con una imagen vinculada al deporte y al consumo funcional. Se sirve fría y resulta popular entre quienes buscan una bebida llamativa y refrescante.","en":"Modern hydration drinks aim to replenish fluids while offering a more intense flavor than plain water. This lemonade-style version combines a sweet citrus profile with branding associated with sport and functional refreshment. Served cold, it is popular among people looking for a bold and cooling beverage.","de":"Moderne Hydrationsgetränke sollen Flüssigkeit ersetzen und zugleich intensiver schmecken als normales Wasser. Diese Variante mit Limonadenprofil verbindet eine süß-zitronige Note mit einem Image rund um Sport und funktionelle Erfrischung. Gut gekühlt ist sie besonders beliebt bei Gästen, die ein auffälliges und erfrischendes Getränk suchen."},"priceVisible":true,"price":{"amount":4,"currency":"EUR"},"allergens":[],"badges":["vegan","halal","kosher"],"spiceLevel":0,"media":{"hero360":"assets/items/Prime-int-sprite-md.webp?v=1773897879489","originalHero360":"assets/items/Prime-int-poster.webp?v=1773897879489","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Prime","gallery":[],"responsive":{"small":"assets/items/Prime-int-sprite-md.webp?v=1773897879489","medium":"assets/items/Prime-int-sprite-md.webp?v=1773897879489","large":"assets/items/Prime-int-sprite-md.webp?v=1773897879489"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Prime-int-sprite-md.webp?v=1773897879489"},"large":{"webp":"assets/items/Prime-int-sprite-md.webp?v=1773897879489"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Prime-int-poster.webp?v=1773897879489","sprite":{"image":"assets/items/Prime-int-sprite.webp?v=1773897879489","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
+const DATA = {"meta":{"slug":"restaurant-menu","name":"Restaurant Menu","restaurantName":{"es":"Restaurante Internacional","en":"International Restaurant","de":"Internationales Restaurant"},"title":{"es":"Menú Internacional","en":"International Menu","de":"Internationales Menü"},"identityMode":"logo","logoSrc":"assets/logos/pngwing.com.png?v=1774256696927","fontFamily":"Fraunces","fontSource":"","primaryColor":{"mode":"custom","hex":"#150f0c","tone":0,"opacity":0.8},"template":"jukebox","locales":["es","en","de"],"defaultLocale":"en","currency":"EUR","currencyPosition":"right","backgroundCarouselSeconds":10,"backgroundDisplayMode":"carousel","scrollSensitivity":{"hero360":5,"item":5,"section":5},"fontRoles":{"title":{"family":"Cinzel","source":""}},"priceDecimalSeparator":"comma"},"backgrounds":[{"id":"bg-1773011234136","label":"Fondo 1","src":"assets/backgrounds/Uhland-bg.webp?v=1774256696927","type":"image","originalSrc":"assets/backgrounds/Uhland-bg.webp?v=1774256696927","viewportFocus":{"portrait":{"x":70,"y":50}}}],"categories":[{"id":"section-1773012554844","name":{"es":"Platos principales","en":"Main Courses","de":"Hauptgerichte"},"backgroundId":"bg-1773011234136","items":[{"id":"dish-1773012647888","name":{"es":"Enmoladas","en":"Enmoladas","de":"Enmoladas"},"description":{"es":"Tortillas de maíz rellenas y bañadas en mole, coronadas con crema, queso, ajonjolí y aguacate.","en":"Filled corn tortillas covered in mole sauce and finished with cream, cheese, sesame, and avocado.","de":"Gefüllte Maistortillas in Mole-Sauce, garniert mit Creme, Käse, Sesam und Avocado."},"longDescription":{"es":"Las enmoladas son una variante tradicional de las enchiladas mexicanas. Se preparan con tortillas de maíz dobladas o enrolladas, generalmente rellenas de pollo, y cubiertas con mole: una salsa compleja elaborada con chiles secos, especias, semillas y, en muchas versiones, un toque de chocolate. El mole es uno de los grandes emblemas de la cocina mexicana y destaca por su profundidad de sabor y su larga historia culinaria.","en":"Enmoladas are a traditional Mexican variation of enchiladas. They are made with folded or rolled corn tortillas, usually filled with chicken, and covered in mole: a complex sauce prepared with dried chilies, spices, seeds, and in many versions, a touch of chocolate. Mole is one of the great emblems of Mexican cuisine, celebrated for its depth of flavor and long culinary history.","de":"Enmoladas sind eine traditionelle mexikanische Variante der Enchiladas. Sie bestehen aus gefalteten oder gerollten Maistortillas, meist mit Hähnchen gefüllt, und werden mit Mole überzogen – einer komplexen Sauce aus getrockneten Chilis, Gewürzen, Samen und in vielen Varianten auch etwas Schokolade. Mole gilt als eines der bekanntesten Symbole der mexikanischen Küche und ist für seine Tiefe und Geschichte berühmt."},"priceVisible":true,"price":{"amount":12,"currency":"EUR"},"allergens":[{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"sesame","label":{"es":"Ajonjolí","en":"Sesame","de":"Sesam"}}],"badges":[],"spiceLevel":1,"media":{"hero360":"assets/items/Enmoladas-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Enmoladas-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Enmoladas","gallery":[],"responsive":{"small":"assets/items/Enmoladas-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Enmoladas-int-sprite-md.webp?v=1774256696927","large":"assets/items/Enmoladas-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Enmoladas-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Enmoladas-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Enmoladas-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Enmoladas-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012587145","name":{"es":"Linguine a la boloñesa","en":"Linguine alla Bolognese","de":"Linguine Bolognese"},"description":{"es":"Pasta larga servida con una salsa boloñesa clásica de carne, tomate y queso rallado.","en":"Long pasta served with a classic Bolognese sauce made with meat, tomato, and grated cheese.","de":"Lange Pasta mit klassischer Bolognese aus Fleisch, Tomaten und geriebenem Käse."},"longDescription":{"es":"Inspirada en el ragù alla bolognese de la ciudad italiana de Bolonia, esta pasta combina una salsa de carne cocinada lentamente con tomate, cebolla y especias. Aunque la receta tradicional italiana suele servirse con tagliatelle, hoy es común disfrutarla con linguine u otras pastas largas. Es un plato reconfortante, conocido por su equilibrio entre acidez, dulzor y sabor umami.","en":"Inspired by ragù alla bolognese from the Italian city of Bologna, this pasta pairs a slow-cooked meat sauce with tomato, onion, and seasonings. While the traditional Italian version is often served with tagliatelle, it is now commonly enjoyed with linguine and other long pasta shapes. It is a comforting dish known for its balance of acidity, sweetness, and savory depth.","de":"Inspiriert vom Ragù alla Bolognese aus der italienischen Stadt Bologna verbindet dieses Gericht eine langsam gekochte Fleischsauce mit Tomaten, Zwiebeln und Gewürzen. Traditionell wird sie in Italien oft mit Tagliatelle serviert, heute aber auch häufig mit Linguine und anderer langer Pasta. Es ist ein herzhaftes Wohlfühlgericht mit ausgewogener Säure, leichter Süße und viel Umami."},"priceVisible":true,"price":{"amount":13,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Bolognese-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Bolognese-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Bolognese","gallery":[],"responsive":{"small":"assets/items/Bolognese-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Bolognese-int-sprite-md.webp?v=1774256696927","large":"assets/items/Bolognese-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Bolognese-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Bolognese-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Bolognese-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Bolognese-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012672844","name":{"es":"Schnitzel con papas","en":"Schnitzel with Potatoes","de":"Schnitzel mit Kartoffeln"},"description":{"es":"Filete empanizado y dorado, acompañado con papas salteadas y limón.","en":"Breaded golden cutlet served with sautéed potatoes and lemon.","de":"Paniertes, goldbraun gebratenes Schnitzel mit Bratkartoffeln und Zitrone."},"longDescription":{"es":"El schnitzel es un clásico de Europa central, especialmente popular en Austria y Alemania. Su versión más famosa, el Wiener Schnitzel, se prepara tradicionalmente con ternera empanizada, aunque hoy también existen versiones con cerdo o pollo. El contraste entre la cubierta crujiente, la carne tierna y el toque cítrico del limón lo ha convertido en un plato muy apreciado en tabernas y restaurantes familiares.","en":"Schnitzel is a Central European classic, especially popular in Austria and Germany. Its most famous version, Wiener Schnitzel, is traditionally made with breaded veal, though pork and chicken versions are also common today. The contrast between the crisp coating, tender meat, and bright lemon finish has made it a favorite in inns, taverns, and family restaurants.","de":"Das Schnitzel ist ein Klassiker der mitteleuropäischen Küche und besonders in Österreich und Deutschland beliebt. Die bekannteste Variante, das Wiener Schnitzel, wird traditionell aus paniertem Kalbfleisch zubereitet, heute aber auch oft mit Schwein oder Hähnchen. Der Kontrast aus knuspriger Panade, zartem Fleisch und frischer Zitrone macht es zu einem beliebten Gericht in Gasthäusern und Familienrestaurants."},"priceVisible":true,"price":{"amount":19.8,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Schnitzel-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Schnitzel-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Schnitzel","gallery":[],"responsive":{"small":"assets/items/Schnitzel-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Schnitzel-int-sprite-md.webp?v=1774256696927","large":"assets/items/Schnitzel-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Schnitzel-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Schnitzel-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Schnitzel-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Schnitzel-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012722320","name":{"es":"Short ribs braseadas","en":"Braised Beef Short Ribs","de":"Geschmorte Rinder-Short-Ribs"},"description":{"es":"Costilla de res cocinada lentamente, servida con puré, verduras y su jugo.","en":"Slow-cooked beef short rib served with mash, vegetables, and its own sauce.","de":"Langsam geschmorte Rinder-Short-Rib mit Püree, Gemüse und Bratensauce."},"longDescription":{"es":"Las short ribs son un corte muy apreciado por su sabor intenso y su textura melosa cuando se cocinan a fuego lento. El braseado prolongado permite que el colágeno se transforme y vuelva la carne especialmente tierna. En cocina contemporánea suelen acompañarse con purés de raíz, zanahorias o calabaza, porque sus notas dulces equilibran la profundidad del jugo de carne.","en":"Short ribs are prized for their rich flavor and silky texture when cooked slowly. Long braising allows the collagen to break down, making the meat especially tender. In contemporary cooking they are often paired with root vegetable purées, carrots, or squash, whose natural sweetness balances the depth of the meat juices.","de":"Short Ribs werden wegen ihres kräftigen Geschmacks und ihrer zarten, saftigen Konsistenz geschätzt, wenn sie langsam geschmort werden. Durch langes Garen wandelt sich das Kollagen und macht das Fleisch besonders weich. In der modernen Küche werden sie oft mit Pürees aus Wurzelgemüse, Karotten oder Kürbis serviert, deren Süße die intensive Sauce ausgleicht."},"priceVisible":true,"price":{"amount":26.8,"currency":"EUR"},"allergens":[{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Short-Ribs-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Short-Ribs-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Short-Ribs","gallery":[],"responsive":{"small":"assets/items/Short-Ribs-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Short-Ribs-int-sprite-md.webp?v=1774256696927","large":"assets/items/Short-Ribs-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Short-Ribs-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Short-Ribs-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Short-Ribs-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Short-Ribs-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013379297","name":{"es":"Ensalada de acompañamiento","en":"Side Salad","de":"Beilagensalat"},"description":{"es":"Mezcla fresca de lechugas, vegetales y encurtidos ligeros.","en":"Fresh mix of lettuce, vegetables, and light pickled garnishes.","de":"Frische Mischung aus Blattsalat, Gemüse und mild eingelegten Beilagen."},"longDescription":{"es":"Las ensaladas de acompañamiento ayudan a aportar frescura y equilibrio a platos principales más intensos. Esta versión combina hojas verdes con vegetales crudos y encurtidos, una práctica común en cocinas europeas y mediterráneas para aportar contraste de textura, color y acidez. Es una opción ligera que complementa carnes, frituras o platos de pasta.","en":"Side salads bring freshness and balance to richer main dishes. This version combines leafy greens with raw and lightly pickled vegetables, a common approach in European and Mediterranean cooking to add contrast in texture, color, and acidity. It is a light option that pairs well with meats, fried dishes, or pasta.","de":"Beilagensalate sorgen für Frische und Ausgleich zu kräftigeren Hauptgerichten. Diese Variante kombiniert Blattsalate mit rohem und leicht eingelegtem Gemüse – eine in der europäischen und mediterranen Küche verbreitete Art, Kontrast in Textur, Farbe und Säure zu schaffen. Sie passt gut zu Fleisch, frittierten Speisen oder Pasta."},"priceVisible":true,"price":{"amount":5,"currency":"EUR"},"allergens":[],"badges":["vegan"],"spiceLevel":0,"media":{"hero360":"assets/items/Beilagensalat-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Beilagensalat-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Beilagensalat","gallery":[],"responsive":{"small":"assets/items/Beilagensalat-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Beilagensalat-int-sprite-md.webp?v=1774256696927","large":"assets/items/Beilagensalat-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Beilagensalat-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Beilagensalat-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Beilagensalat-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Beilagensalat-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013219070","name":{"es":"Espagueti rojo","en":"Red Spaghetti","de":"Spaghetti mit roter Sauce"},"description":{"es":"Espagueti con salsa roja de tomate y carne, acompañado con pan.","en":"Spaghetti with red tomato and meat sauce, served with bread.","de":"Spaghetti mit roter Tomaten-Fleischsauce, serviert mit Brot."},"longDescription":{"es":"El espagueti rojo es una preparación muy popular en mesas familiares y menús casuales. La base suele ser una salsa de tomate condimentada, a veces enriquecida con carne molida, que cubre la pasta y le da un perfil casero y reconfortante. Servido con pan, es un ejemplo claro de cómo la pasta italiana se adaptó a distintos estilos de cocina fuera de Italia.","en":"Red spaghetti is a popular dish in family-style meals and casual menus. It is usually built around a seasoned tomato sauce, sometimes enriched with minced meat, which coats the pasta and gives it a homestyle, comforting profile. Served with bread, it is a clear example of how Italian pasta traditions have been adapted in many other cuisines.","de":"Spaghetti mit roter Sauce ist ein beliebtes Gericht in Familienküchen und auf unkomplizierten Speisekarten. Die Grundlage ist meist eine gewürzte Tomatensauce, manchmal mit Hackfleisch verfeinert, die der Pasta einen hausgemachten und tröstlichen Charakter verleiht. Mit Brot serviert zeigt das Gericht gut, wie sich italienische Pastatraditionen in vielen Ländern weiterentwickelt haben."},"priceVisible":true,"price":{"amount":11,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Pasta-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Pasta-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Pasta","gallery":[],"responsive":{"small":"assets/items/Pasta-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Pasta-int-sprite-md.webp?v=1774256696927","large":"assets/items/Pasta-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Pasta-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Pasta-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Pasta-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Pasta-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013317712","name":{"es":"Sushi estilo mexicano","en":"Mexican-Style Sushi Roll","de":"Sushi auf mexikanische Art"},"description":{"es":"Roll crujiente con cobertura de ajonjolí, salsas y sabores intensos de fusión.","en":"Crunchy fusion roll with sesame topping, sauces, and bold flavors.","de":"Knusprige Fusionsrolle mit Sesam, Saucen und kräftigen Aromen."},"longDescription":{"es":"El sushi estilo mexicano es una reinterpretación contemporánea del sushi japonés, popular en muchas ciudades de México y América Latina. Suele incorporar ingredientes crujientes, aderezos cremosos, salsas dulces o picantes y, con frecuencia, un sabor más intenso que el sushi tradicional. Esta versión refleja una cocina de fusión que combina técnica japonesa con preferencias locales.","en":"Mexican-style sushi is a contemporary reinterpretation of Japanese sushi, popular in many cities across Mexico and Latin America. It often incorporates crunchy textures, creamy dressings, sweet or spicy sauces, and generally bolder seasoning than traditional sushi. This version reflects a fusion approach that combines Japanese technique with local tastes.","de":"Mexikanisches Sushi ist eine moderne Neuinterpretation des japanischen Sushi und in vielen Städten Mexikos und Lateinamerikas beliebt. Häufig enthält es knusprige Elemente, cremige Dressings, süße oder scharfe Saucen und insgesamt kräftigere Aromen als klassisches Sushi. Diese Variante steht für eine Fusionsküche, die japanische Technik mit lokalen Vorlieben verbindet."},"priceVisible":true,"price":{"amount":14,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"soy","label":{"es":"Soya","en":"Soy","de":"Soja"}},{"id":"fish","label":{"es":"Pescado","en":"Fish","de":"Fisch"}},{"id":"sesame","label":{"es":"Ajonjolí","en":"Sesame","de":"Sesam"}}],"badges":[],"spiceLevel":1,"media":{"hero360":"assets/items/Sushi-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Sushi-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Sushi","gallery":[],"responsive":{"small":"assets/items/Sushi-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Sushi-int-sprite-md.webp?v=1774256696927","large":"assets/items/Sushi-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Sushi-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Sushi-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Sushi-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Sushi-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1773012574194","name":{"es":"Postres","en":"Desserts","de":"Desserts"},"backgroundId":"bg-1773011234136","items":[{"id":"dish-1773013450480","name":{"es":"Croissant relleno de crema y fresa","en":"Strawberry Cream Croissant","de":"Croissant mit Erdbeere und Creme"},"description":{"es":"Croissant hojaldrado relleno de crema y decorado con fresa y azúcar glas.","en":"Flaky croissant filled with cream and finished with strawberry and powdered sugar.","de":"Blättriges Croissant mit Cremefüllung, Erdbeere und Puderzucker."},"longDescription":{"es":"El croissant es uno de los grandes íconos de la panadería vienesa y francesa. Se elabora con masa laminada, cuya textura ligera y hojaldrada surge de alternar capas de masa y mantequilla. En esta versión se presenta como postre, con relleno cremoso y fruta fresca, una combinación que aporta contraste entre la mantequilla del hojaldre, la suavidad de la crema y la acidez natural de la fresa.","en":"The croissant is one of the great icons of Viennese and French baking. It is made with laminated dough, whose light, flaky texture comes from alternating layers of dough and butter. In this dessert version it is filled with cream and finished with fresh fruit, creating a contrast between buttery pastry, smooth filling, and the natural brightness of strawberry.","de":"Das Croissant gehört zu den großen Klassikern der Wiener und französischen Backkunst. Es wird aus laminiertem Teig hergestellt, dessen leichte, blättrige Struktur durch viele Schichten aus Teig und Butter entsteht. In dieser Dessertvariante ist es mit Creme gefüllt und mit frischer Frucht garniert – ein Zusammenspiel aus buttrigem Gebäck, weicher Füllung und frischer Erdbeere."},"priceVisible":true,"price":{"amount":5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Strawberry-Croissant-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Strawberry-Croissant","gallery":[],"responsive":{"small":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256696927","large":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Strawberry-Croissant-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Strawberry-Croissant-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013505628","name":{"es":"Croissant con chocolate","en":"Chocolate Croissant","de":"Schokoladen-Croissant"},"description":{"es":"Croissant hojaldrado con relleno y cobertura de chocolate.","en":"Flaky croissant with chocolate filling and chocolate topping.","de":"Blättriges Croissant mit Schokoladenfüllung und Schokoladenglasur."},"longDescription":{"es":"El croissant con chocolate es una versión golosa de la panadería clásica europea. El hojaldre laminado aporta ligereza y textura, mientras que el chocolate añade dulzor e intensidad aromática. Es una pieza muy popular en cafeterías y panaderías porque combina la elegancia del croissant con un perfil más indulgente y postrero.","en":"The chocolate croissant is an indulgent take on classic European pastry. The laminated dough provides lightness and texture, while the chocolate adds sweetness and aromatic depth. It is especially popular in cafés and bakeries because it combines the elegance of a croissant with a richer dessert profile.","de":"Das Schokoladen-Croissant ist eine genussvolle Variante klassischer europäischer Backkunst. Der laminierte Teig sorgt für Leichtigkeit und Struktur, während die Schokolade Süße und aromatische Tiefe beisteuert. In Cafés und Bäckereien ist es besonders beliebt, weil es die Eleganz des Croissants mit einem deutlich dessertartigen Charakter verbindet."},"priceVisible":true,"price":{"amount":4.5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"soy","label":{"es":"Soya","en":"Soy","de":"Soja"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Chocolate-Croissant-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Chocolate-Croissant","gallery":[],"responsive":{"small":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256696927","large":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Chocolate-Croissant-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Chocolate-Croissant-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013546304","name":{"es":"Baklava","en":"Baklava","de":"Baklava"},"description":{"es":"Dulce de capas de masa filo con nueces o pistache, bañado en jarabe.","en":"Layered filo pastry with nuts or pistachio soaked in syrup.","de":"Schichtgebäck aus Filoteig mit Nüssen oder Pistazien in Sirup."},"longDescription":{"es":"La baklava es uno de los postres más célebres del Mediterráneo oriental y Medio Oriente. Se prepara con finas capas de masa filo, relleno de frutos secos y un baño de almíbar o miel que le da brillo y jugosidad. Es famosa por su textura crujiente y su dulzor intenso, y suele compartirse en celebraciones o acompañarse con café o té.","en":"Baklava is one of the most celebrated desserts of the Eastern Mediterranean and the Middle East. It is made with delicate layers of filo pastry, a filling of nuts, and a syrup or honey soak that gives it shine and moisture. It is famous for its crisp texture and intense sweetness, and it is often shared during celebrations or served with coffee or tea.","de":"Baklava ist eines der bekanntesten Desserts des östlichen Mittelmeerraums und des Nahen Ostens. Sie wird aus feinen Schichten Filoteig, einer Füllung aus Nüssen und einem Sirup- oder Honigbad hergestellt, das für Glanz und Saftigkeit sorgt. Berühmt ist sie für ihre knusprige Textur und ihre intensive Süße; oft wird sie zu Festen oder mit Kaffee und Tee serviert."},"priceVisible":true,"price":{"amount":4,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"nuts","label":{"es":"Frutos secos","en":"Nuts","de":"Schalenfrüchte"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Baklava-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Baklava-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Baklava","gallery":[],"responsive":{"small":"assets/items/Baklava-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Baklava-int-sprite-md.webp?v=1774256696927","large":"assets/items/Baklava-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Baklava-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Baklava-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Baklava-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Baklava-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013561558","name":{"es":"Dona de caramelo con nuez","en":"Caramel Nut Donut","de":"Karamell-Donut mit Nüssen"},"description":{"es":"Dona glaseada con cobertura de caramelo y trozos de nuez.","en":"Glazed donut topped with caramel icing and chopped nuts.","de":"Glasierter Donut mit Karamellüberzug und gehackten Nüssen."},"longDescription":{"es":"La dona moderna se popularizó en Norteamérica y se convirtió en un icono de panaderías y cafeterías. Su masa frita ofrece una textura suave por dentro y ligeramente firme por fuera. En esta versión, el glaseado de caramelo aporta notas tostadas y mantequillosas, mientras que la nuez añade contraste crujiente y un sabor más profundo.","en":"The modern donut became popular in North America and turned into an icon of bakeries and coffee shops. Its fried dough offers a soft interior with a lightly firm outer layer. In this version, caramel icing adds toasted, buttery notes, while chopped nuts bring crunch and deeper flavor.","de":"Der moderne Donut wurde vor allem in Nordamerika populär und ist heute ein Klassiker in Bäckereien und Cafés. Sein frittierter Teig ist innen weich und außen leicht fest. In dieser Variante sorgt Karamellglasur für geröstete, buttrige Noten, während gehackte Nüsse Knusprigkeit und mehr Tiefe bringen."},"priceVisible":true,"price":{"amount":3.5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"nuts","label":{"es":"Frutos secos","en":"Nuts","de":"Schalenfrüchte"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Dona-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Dona-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Dona","gallery":[],"responsive":{"small":"assets/items/Dona-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Dona-int-sprite-md.webp?v=1774256696927","large":"assets/items/Dona-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Dona-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Dona-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Dona-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Dona-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773013582012","name":{"es":"Surtido de galletas","en":"Assorted Cookies","de":"Gemischte Kekse"},"description":{"es":"Selección variada de galletas y bocados dulces con distintas coberturas.","en":"Assorted selection of sweet cookies and pastry bites with different toppings.","de":"Gemischte Auswahl an süßen Keksen und kleinen Gebäcken mit verschiedenen Toppings."},"longDescription":{"es":"Las galletas y pequeños bocados de pastelería han formado parte de la repostería europea durante siglos, desde las masas de mantequilla hasta las versiones cubiertas de chocolate o coco. Un surtido como este ofrece variedad de texturas y sabores: piezas suaves, crujientes, rellenas o decoradas, ideales para acompañar café, té o compartir en mesa.","en":"Cookies and small pastry bites have been part of European confectionery for centuries, from butter-based doughs to versions coated with chocolate or coconut. An assortment like this offers variety in both texture and flavor: soft, crisp, filled, or decorated pieces that pair especially well with coffee, tea, or sharing at the table.","de":"Kekse und kleine Gebäckstücke gehören seit Jahrhunderten zur europäischen Konditorei – von buttrigen Teigen bis zu Varianten mit Schokolade oder Kokos. Eine solche Auswahl bietet verschiedene Texturen und Aromen: weiche, knusprige, gefüllte oder dekorierte Stücke, die besonders gut zu Kaffee, Tee oder zum Teilen passen."},"priceVisible":true,"price":{"amount":4.5,"currency":"EUR"},"allergens":[{"id":"gluten","label":{"es":"Gluten","en":"Gluten","de":"Gluten"}},{"id":"dairy","label":{"es":"Lácteos","en":"Dairy","de":"Milchprodukte"}},{"id":"egg","label":{"es":"Huevo","en":"Egg","de":"Ei"}},{"id":"nuts","label":{"es":"Frutos secos","en":"Nuts","de":"Schalenfrüchte"}},{"id":"soy","label":{"es":"Soya","en":"Soy","de":"Soja"}}],"badges":[],"spiceLevel":0,"media":{"hero360":"assets/items/Cookies-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Cookies-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Cookies","gallery":[],"responsive":{"small":"assets/items/Cookies-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Cookies-int-sprite-md.webp?v=1774256696927","large":"assets/items/Cookies-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Cookies-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Cookies-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Cookies-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Cookies-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]},{"id":"section-1773012367214","name":{"es":"Bebidas","en":"Drinks","de":"Getränke"},"backgroundId":"bg-1773011234136","items":[{"id":"dish-1773012371096","name":{"es":"Té verde Arizona","en":"Arizona Green Tea","de":"Arizona Grüner Tee"},"description":{"es":"Bebida fría de té verde endulzado con perfil suave y refrescante.","en":"Sweetened iced green tea with a smooth and refreshing profile.","de":"Gesüßter grüner Eistee mit mildem und erfrischendem Geschmack."},"longDescription":{"es":"Arizona Green Tea es una bebida lista para tomar muy reconocible por sus latas decoradas y su perfil dulce y ligero. El té verde aporta notas herbales suaves y una asociación popular con antioxidantes naturales, mientras que el formato frío lo convierte en una bebida refrescante para acompañar comidas ligeras, snacks o postres.","en":"Arizona Green Tea is a ready-to-drink beverage well known for its decorated cans and its light, sweet profile. Green tea brings gentle herbal notes and a popular association with natural antioxidants, while the chilled format makes it refreshing alongside light meals, snacks, or desserts.","de":"Arizona Green Tea ist ein trinkfertiges Getränk, das für seine dekorativen Dosen und sein leicht süßes Geschmacksprofil bekannt ist. Grüner Tee bringt milde, pflanzliche Noten und wird häufig mit natürlichen Antioxidantien in Verbindung gebracht. Gekühlt eignet er sich gut als erfrischende Begleitung zu leichten Speisen, Snacks oder Desserts."},"priceVisible":true,"price":{"amount":3,"currency":"EUR"},"allergens":[],"badges":["vegan","kosher"],"spiceLevel":0,"media":{"hero360":"assets/items/Arizona-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Arizona-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Arizona","gallery":[],"responsive":{"small":"assets/items/Arizona-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Arizona-int-sprite-md.webp?v=1774256696927","large":"assets/items/Arizona-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Arizona-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Arizona-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Arizona-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Arizona-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}},{"id":"dish-1773012404013","name":{"es":"Prime sabor limonada","en":"Prime Lemonade","de":"Prime Limonade"},"description":{"es":"Bebida hidratante con sabor a limón, pensada para refrescar después de la actividad física.","en":"Lemon-flavored hydration drink designed to refresh after physical activity.","de":"Hydrationsgetränk mit Zitronengeschmack, entwickelt zur Erfrischung nach körperlicher Aktivität."},"longDescription":{"es":"Las bebidas hidratantes modernas buscan reponer líquidos y ofrecer un sabor más intenso que el agua simple. Esta versión con perfil de limonada combina una sensación cítrica y dulce con una imagen vinculada al deporte y al consumo funcional. Se sirve fría y resulta popular entre quienes buscan una bebida llamativa y refrescante.","en":"Modern hydration drinks aim to replenish fluids while offering a more intense flavor than plain water. This lemonade-style version combines a sweet citrus profile with branding associated with sport and functional refreshment. Served cold, it is popular among people looking for a bold and cooling beverage.","de":"Moderne Hydrationsgetränke sollen Flüssigkeit ersetzen und zugleich intensiver schmecken als normales Wasser. Diese Variante mit Limonadenprofil verbindet eine süß-zitronige Note mit einem Image rund um Sport und funktionelle Erfrischung. Gut gekühlt ist sie besonders beliebt bei Gästen, die ein auffälliges und erfrischendes Getränk suchen."},"priceVisible":true,"price":{"amount":4,"currency":"EUR"},"allergens":[],"badges":["vegan","halal","kosher"],"spiceLevel":0,"media":{"hero360":"assets/items/Prime-int-sprite-md.webp?v=1774256696927","originalHero360":"assets/items/Prime-int-poster.webp?v=1774256696927","rotationDirection":"cw","scrollAnimationMode":"hero360","scrollAnimationSrc":"","assetSetId":"Prime","gallery":[],"responsive":{"small":"assets/items/Prime-int-sprite-md.webp?v=1774256696927","medium":"assets/items/Prime-int-sprite-md.webp?v=1774256696927","large":"assets/items/Prime-int-sprite-md.webp?v=1774256696927"},"derived":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","medium":{"webp":"assets/items/Prime-int-sprite-md.webp?v=1774256696927"},"large":{"webp":"assets/items/Prime-int-sprite-md.webp?v=1774256696927"}},"interactive":{"profileId":"ffmpeg-v19-item-sequencezip-sprite-pair","poster":"assets/items/Prime-int-poster.webp?v=1774256696927","sprite":{"image":"assets/items/Prime-int-sprite.webp?v=1774256696927","frameCount":60,"columns":10,"rows":6,"fps":24,"frameWidth":500,"frameHeight":500}}},"typography":{}}]}],"sound":{"enabled":false,"theme":"bar-amber","volume":0.6,"map":{}}};
 const currencySymbols = {
   MXN: "$", USD: "$", EUR: "€", GBP: "£", JPY: "¥", COP: "$", ARS: "$"
 };
 const BRAND_LANDING_URL = "https://creativivid.com/";
 const BRAND_SIGNATURE_ARIA_LABEL = "Creativivid Studio";
-const BRAND_SIGNATURE_LOGO = "Logo.png?v=1773897879489";
+const BRAND_SIGNATURE_LOGO = "favicon.png?v=1774256696927";
 const FOCUS_ROWS_WHEEL_STEP_THRESHOLD = 260;
 const FOCUS_ROWS_WHEEL_SETTLE_MS = 200;
 const FOCUS_ROWS_WHEEL_DELTA_CAP = 140;
@@ -47,6 +47,7 @@ const sectionBackgroundByCategoryId = new Map(
     return [category.id, isUnique && typeof mapped === "number" ? mapped : -1];
   })
 );
+const categoryById = new Map((DATA.categories || []).map((category) => [category.id, category]));
 const normalizeBackgroundCarouselSeconds = (value) => {
   const parsed = Number(value);
   if (!Number.isFinite(parsed)) return 10;
@@ -71,6 +72,13 @@ const app = document.getElementById("app");
 const modal = document.getElementById("dish-modal");
 const modalBackdrop = document.getElementById("dish-modal-backdrop");
 const modalContent = document.getElementById("dish-modal-content");
+const setRuntimeBootState = (state) => {
+  document.documentElement?.setAttribute("data-runtime-boot", state);
+  if (app) {
+    app.dataset.runtimeBoot = state;
+  }
+};
+setRuntimeBootState("loading");
 const DEBUG_FLICKER_QUERY_PARAM = "debugFlicker";
 const DEBUG_FLICKER_PRESET_QUERY_PARAM = "debugFlickerPreset";
 const DEBUG_FLICKER_RENDERER_QUERY_PARAM = "debugFlickerRenderer";
@@ -129,6 +137,7 @@ let debugFlickerPreset = resolveDebugFlickerPreset();
 let debugFlickerRenderer = resolveDebugFlickerRenderer();
 let debugFlickerResolvedRenderer = "fallback-image";
 let debugFlickerBlockedCount = 0;
+let debugFlickerHudVisible = false;
 let appliedDebugFlickerPresetClass = "";
 let carouselCleanup = [];
 let startupLoading = true;
@@ -163,9 +172,6 @@ const INTERACTIVE_SPRITE_CACHE_LIMIT = 1;
 const interactiveDetailSpriteCache = new Map();
 const interactiveDetailSpritePending = new Map();
 const detailPrefetchedSources = new Set();
-const startupAssetBytes = new Map();
-let startupAssetBytesPromise = null;
-let startupAssetBytesReady = false;
 const sectionBackgroundPreloadSources = new Set();
 const sectionBackgroundPreloadImages = [];
 let detailRotateDirection = -1;
@@ -483,7 +489,6 @@ const wrapCarouselIndex = (value, count) => {
 };
 const TRANSPARENT_PIXEL_SRC =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E";
-const CAROUSEL_MEDIA_ACTIVE_RADIUS = 2.25;
 const setCarouselCardMediaState = (card, state) => {
   const media = card?.querySelector(".carousel-media");
   if (!(media instanceof HTMLElement)) return;
@@ -540,8 +545,8 @@ const hydrateCarouselCardMedia = (card) => {
     setCarouselCardMediaState(card, "loaded");
   }
 };
-const maybeHydrateCarouselCardMedia = (card, distance) => {
-  if (distance > CAROUSEL_MEDIA_ACTIVE_RADIUS) return;
+const maybeHydrateCarouselCardMedia = (card, categoryId, itemId) => {
+  if (!shouldActivateRuntimeExplorationCard(explorationCoreState, categoryId, itemId)) return;
   const image = card?.querySelector(".carousel-media img");
   if (!(image instanceof HTMLImageElement)) return;
   const source = (image.dataset.mediaSrc || "").trim();
@@ -563,6 +568,29 @@ const normalizeFocusRowWheelDelta = (event) => {
   return Math.max(-FOCUS_ROWS_WHEEL_DELTA_CAP, Math.min(FOCUS_ROWS_WHEEL_DELTA_CAP, scaled));
 };
 
+const RUNTIME_CARD_MEDIA_ACTIVE_RADIUS = 2.25;
+const normalizeRuntimeCardIndex = (value, count) => {
+  if (count <= 0) return 0;
+  if (!Number.isFinite(value)) return 0;
+  return ((value % count) + count) % count;
+};
+const getRuntimeCardCircularDistance = (activeIndex, targetIndex, count) => {
+  if (count <= 1) return 0;
+  const normalizedActive = normalizeRuntimeCardIndex(activeIndex, count);
+  const normalizedTarget = normalizeRuntimeCardIndex(targetIndex, count);
+  const delta = Math.abs(normalizedTarget - normalizedActive);
+  return Math.min(delta, count - delta);
+};
+const getRuntimeCardActivationTier = (activeIndex, targetIndex, count, neighborRadius = RUNTIME_CARD_MEDIA_ACTIVE_RADIUS) => {
+  const distance = getRuntimeCardCircularDistance(activeIndex, targetIndex, count);
+  if (distance === 0) return "active";
+  if (distance <= neighborRadius) return "neighbor";
+  return "deferred";
+};
+const shouldActivateRuntimeCard = (activeIndex, targetIndex, count, neighborRadius = RUNTIME_CARD_MEDIA_ACTIVE_RADIUS) =>
+  getRuntimeCardActivationTier(activeIndex, targetIndex, count, neighborRadius) !== "deferred";
+const shouldHydrateCarouselCardMedia = (activeIndex, targetIndex, count, neighborRadius = RUNTIME_CARD_MEDIA_ACTIVE_RADIUS) =>
+  shouldActivateRuntimeCard(activeIndex, targetIndex, count, neighborRadius);
 const IMAGE_DERIVED_FORMAT_PREFERENCE = ["webp","gif"];
 const RESPONSIVE_IMAGE_WIDTHS = {"small":480,"medium":960,"large":1440};
 const CAROUSEL_VARIANT_PRIORITY = ["medium","large","small"];
@@ -632,28 +660,649 @@ const getDetailImageSrc = (item) =>
   readInteractivePosterSource(item) ||
   readOriginalHeroSource(item) ||
   pickPrioritySource(item, DETAIL_VARIANT_PRIORITY);
-const decodeMaybe = (value) => {
-  try {
-    return decodeURIComponent(value);
-  } catch {
-    return value;
-  }
+const RUNTIME_MANIFEST_PATH = "runtime-manifest.json?v=1774256696927";
+const RUNTIME_MANIFEST_SCHEMA_VERSION = 1;
+const DETAIL_PREFETCH_NEIGHBOR_RADIUS = 1;
+const DETAIL_WARMUP_CONCURRENCY = 1;
+let runtimeManifest = null;
+const runtimeManifestAssetById = new Map();
+const runtimeManifestAssetsByItemKey = new Map();
+let runtimeManifestDeliveryPlan = {
+  blocking: [],
+  earlyVisible: [],
+  deferred: [],
+  onDemand: [],
+  intentPrefetch: [],
+  backgroundWarmup: []
 };
-const normalizeInteractiveSource = (value) => {
-  const trimmed = String(value || "").trim();
+const runtimeManifestDeliverySets = {
+  blocking: new Set(),
+  earlyVisible: new Set(),
+  deferred: new Set(),
+  onDemand: new Set(),
+  intentPrefetch: new Set(),
+  backgroundWarmup: new Set()
+};
+const runtimeDetailTaskByKey = new Map();
+const interactiveDetailVideoPending = new Map();
+const interactiveDetailVideoPrefetchedSources = new Set();
+let runtimeDeferredLoadActive = false;
+let runtimeWarmupInFlight = 0;
+let runtimeWarmupIdleHandle = 0;
+let runtimeUrgentDetailTasks = 0;
+const VALID_RUNTIME_MANIFEST_KINDS = new Set([
+  "background",
+  "branding",
+  "guidance",
+  "listSpriteMd",
+  "listAlternate",
+  "detailPoster",
+  "detailSpriteHq",
+  "detailVideo",
+  "font",
+  "shell"
+]);
+const VALID_RUNTIME_MANIFEST_SURFACES = new Set(["startup-list", "modal-detail", "shell"]);
+const VALID_RUNTIME_MANIFEST_DELIVERY_CLASSES = new Set([
+  "blocking",
+  "early-visible",
+  "deferred",
+  "on-demand",
+  "intent-prefetch",
+  "background-warmup"
+]);
+const normalizeRuntimeManifestPath = (value) => {
+  if (typeof value !== "string") return "";
+  return value.trim();
+};
+const normalizeRuntimeManifestPathKey = (value) =>
+  normalizeRuntimeManifestPath(value).replace(/^\/+/, "").split(/[?#]/, 1)[0];
+const createRuntimeManifestItemKey = (categoryId, itemId) =>
+  String(categoryId || "").trim() + "::" + String(itemId || "").trim();
+const readRuntimeManifestPrimaryPath = (asset) => {
+  const direct = normalizeRuntimeManifestPath(asset?.runtimePath);
+  if (direct) return direct;
+  const emissions = Array.isArray(asset?.emissions) ? asset.emissions : [];
+  for (const emission of emissions) {
+    const source = normalizeRuntimeManifestPath(emission?.runtimePath);
+    if (source) return source;
+  }
+  return "";
+};
+const uniqueRuntimeManifestSources = (values) => {
+  const next = [];
+  const seen = new Set();
+  values.forEach((value) => {
+    const source = normalizeRuntimeManifestPath(value);
+    if (!source || seen.has(source)) return;
+    seen.add(source);
+    next.push(source);
+  });
+  return next;
+};
+const resetRuntimeManifestState = () => {
+  runtimeManifest = null;
+  runtimeManifestAssetById.clear();
+  runtimeManifestAssetsByItemKey.clear();
+  runtimeManifestDeliveryPlan = {
+    blocking: [],
+    earlyVisible: [],
+    deferred: [],
+    onDemand: [],
+    intentPrefetch: [],
+    backgroundWarmup: []
+  };
+  Object.values(runtimeManifestDeliverySets).forEach((set) => set.clear());
+};
+const normalizeRuntimeManifestAsset = (entry) => {
+  const id = typeof entry?.id === "string" ? entry.id.trim() : "";
+  if (!id) throw new Error("Runtime manifest asset is missing id.");
+  const kind = typeof entry?.kind === "string" ? entry.kind.trim() : "";
+  const surface = typeof entry?.surface === "string" ? entry.surface.trim() : "";
+  const deliveryClass = typeof entry?.deliveryClass === "string" ? entry.deliveryClass.trim() : "";
+  if (!VALID_RUNTIME_MANIFEST_KINDS.has(kind)) throw new Error("Unsupported runtime asset kind: " + kind);
+  if (!VALID_RUNTIME_MANIFEST_SURFACES.has(surface)) throw new Error("Unsupported runtime asset surface: " + surface);
+  if (!VALID_RUNTIME_MANIFEST_DELIVERY_CLASSES.has(deliveryClass)) throw new Error("Unsupported runtime delivery class: " + deliveryClass);
+  const runtimePath = normalizeRuntimeManifestPath(entry.runtimePath);
+  const emissions = Array.isArray(entry?.emissions)
+    ? entry.emissions
+        .map((emission) => ({
+          runtimePath: normalizeRuntimeManifestPath(emission?.runtimePath),
+          ...(emission?.responsiveVariant != null ? { responsiveVariant: emission.responsiveVariant } : {})
+        }))
+        .filter((emission) => emission.runtimePath.length > 0)
+    : [];
+  if (!runtimePath && emissions.length === 0) {
+    throw new Error("Runtime manifest asset has no runtime source: " + id);
+  }
+  return {
+    id,
+    kind,
+    surface,
+    deliveryClass,
+    ...(runtimePath ? { runtimePath } : {}),
+    ...(typeof entry?.sectionId === "string" && entry.sectionId.trim() ? { sectionId: entry.sectionId.trim() } : {}),
+    ...(typeof entry?.itemId === "string" && entry.itemId.trim() ? { itemId: entry.itemId.trim() } : {}),
+    ...(Array.isArray(entry?.usages) && entry.usages.length > 0 ? { usages: entry.usages.map((value) => String(value).trim()).filter(Boolean) } : {}),
+    ...(entry?.sprite && typeof entry.sprite === "object" ? { sprite: entry.sprite } : {}),
+    ...(entry?.warmupEligible ? { warmupEligible: true } : {}),
+    ...(emissions.length > 0 ? { emissions } : {})
+  };
+};
+const normalizeRuntimeManifestIdList = (value, assetIds, label) => {
+  if (!Array.isArray(value)) throw new Error("Runtime manifest delivery plan is missing " + label + ".");
+  const ids = [];
+  const seen = new Set();
+  value.forEach((entry) => {
+    const id = typeof entry === "string" ? entry.trim() : "";
+    if (!id || seen.has(id)) return;
+    if (!assetIds.has(id)) throw new Error("Runtime manifest delivery plan references unknown asset id: " + id);
+    seen.add(id);
+    ids.push(id);
+  });
+  return ids;
+};
+const applyRuntimeManifest = (payload) => {
+  if (!payload || typeof payload !== "object") throw new Error("Runtime manifest payload is invalid.");
+  if (payload.schemaVersion !== RUNTIME_MANIFEST_SCHEMA_VERSION) {
+    throw new Error("Runtime manifest schema is not supported.");
+  }
+  const assets = Array.isArray(payload.assets) ? payload.assets.map(normalizeRuntimeManifestAsset) : null;
+  if (!assets) throw new Error("Runtime manifest is missing assets.");
+  resetRuntimeManifestState();
+  assets.forEach((asset) => {
+    runtimeManifestAssetById.set(asset.id, asset);
+    if (asset.sectionId && asset.itemId) {
+      const itemKey = createRuntimeManifestItemKey(asset.sectionId, asset.itemId);
+      const list = runtimeManifestAssetsByItemKey.get(itemKey) || [];
+      list.push(asset);
+      runtimeManifestAssetsByItemKey.set(itemKey, list);
+    }
+  });
+  const assetIds = new Set(assets.map((asset) => asset.id));
+  const deliveryPlan = payload.deliveryPlan && typeof payload.deliveryPlan === "object" ? payload.deliveryPlan : null;
+  if (!deliveryPlan) throw new Error("Runtime manifest is missing deliveryPlan.");
+  runtimeManifestDeliveryPlan = {
+    blocking: normalizeRuntimeManifestIdList(deliveryPlan.blocking, assetIds, "blocking"),
+    earlyVisible: normalizeRuntimeManifestIdList(deliveryPlan.earlyVisible, assetIds, "earlyVisible"),
+    deferred: normalizeRuntimeManifestIdList(deliveryPlan.deferred, assetIds, "deferred"),
+    onDemand: normalizeRuntimeManifestIdList(deliveryPlan.onDemand, assetIds, "onDemand"),
+    intentPrefetch: normalizeRuntimeManifestIdList(deliveryPlan.intentPrefetch, assetIds, "intentPrefetch"),
+    backgroundWarmup: normalizeRuntimeManifestIdList(deliveryPlan.backgroundWarmup, assetIds, "backgroundWarmup")
+  };
+  Object.entries(runtimeManifestDeliveryPlan).forEach(([key, ids]) => {
+    const target = runtimeManifestDeliverySets[key];
+    target.clear();
+    ids.forEach((id) => target.add(id));
+  });
+  runtimeManifest = {
+    schemaVersion: RUNTIME_MANIFEST_SCHEMA_VERSION,
+    exportVersion: typeof payload.exportVersion === "string" ? payload.exportVersion : "",
+    assets,
+    deliveryPlan: runtimeManifestDeliveryPlan
+  };
+  return runtimeManifest;
+};
+const loadRuntimeManifest = async () => {
+  if (runtimeManifest) return runtimeManifest;
+  const response = await fetch(RUNTIME_MANIFEST_PATH, { cache: "force-cache" });
+  if (!response.ok) throw new Error("Runtime manifest request failed.");
+  const payload = await response.json();
+  return applyRuntimeManifest(payload);
+};
+const collectRuntimeManifestSourcesByIds = (ids, surface) =>
+  uniqueRuntimeManifestSources(
+    ids
+      .map((id) => runtimeManifestAssetById.get(id))
+      .filter((asset) => asset && (!surface || asset.surface === surface))
+      .map((asset) => readRuntimeManifestPrimaryPath(asset))
+  );
+const buildStartupSourcePlan = () => ({
+  blocking: collectRuntimeManifestSourcesByIds(runtimeManifestDeliveryPlan.blocking, "startup-list"),
+  earlyVisible: collectRuntimeManifestSourcesByIds(runtimeManifestDeliveryPlan.earlyVisible, "startup-list"),
+  deferred: collectRuntimeManifestSourcesByIds(runtimeManifestDeliveryPlan.deferred, "startup-list")
+});
+const resolveDetailPrefetchIndexes = (itemCount, index, includeNeighbors = false) => {
+  if (itemCount <= 0 || index < 0 || index >= itemCount) return [];
+  const targets = [index];
+  if (includeNeighbors && itemCount > 1 && DETAIL_PREFETCH_NEIGHBOR_RADIUS > 0) {
+    for (let step = 1; step <= DETAIL_PREFETCH_NEIGHBOR_RADIUS; step += 1) {
+      targets.push((index - step + itemCount) % itemCount);
+      targets.push((index + step) % itemCount);
+    }
+  }
+  return Array.from(new Set(targets));
+};
+const collectRuntimeManifestDetailAssetsByIds = (categoryId, itemId, includeNeighbors, predicate) => {
+  const category = DATA.categories.find((entry) => entry.id === categoryId);
+  if (!category || !category.items?.length) return [];
+  const index = category.items.findIndex((entry) => entry.id === itemId);
+  if (index < 0) return [];
+  const targets = resolveDetailPrefetchIndexes(category.items.length, index, includeNeighbors);
+  const assets = [];
+  const seen = new Set();
+  targets.forEach((targetIndex) => {
+    const dish = category.items[targetIndex];
+    if (!dish) return;
+    const itemAssets = runtimeManifestAssetsByItemKey.get(createRuntimeManifestItemKey(categoryId, dish.id)) || [];
+    itemAssets.forEach((asset) => {
+      if (!asset?.id || seen.has(asset.id)) return;
+      if (predicate && !predicate(asset)) return;
+      seen.add(asset.id);
+      assets.push(asset);
+    });
+  });
+  return assets;
+};
+const collectDetailPrefetchSourcesByIds = (categoryId, itemId, includeNeighbors = false) =>
+  uniqueRuntimeManifestSources(
+    collectRuntimeManifestDetailAssetsByIds(
+      categoryId,
+      itemId,
+      includeNeighbors,
+      (asset) => asset.kind === "detailPoster" || runtimeManifestDeliverySets.intentPrefetch.has(asset.id)
+    ).map((asset) => readRuntimeManifestPrimaryPath(asset))
+  );
+const collectDetailOnDemandAssetsByIds = (categoryId, itemId) =>
+  collectRuntimeManifestDetailAssetsByIds(
+    categoryId,
+    itemId,
+    false,
+    (asset) =>
+      runtimeManifestDeliverySets.onDemand.has(asset.id) ||
+      asset.kind === "detailSpriteHq" ||
+      asset.kind === "detailVideo"
+  );
+const collectDetailWarmupAssets = () =>
+  runtimeManifestDeliveryPlan.backgroundWarmup
+    .map((id) => runtimeManifestAssetById.get(id))
+    .filter((asset) => asset && (asset.warmupEligible || runtimeManifestDeliverySets.backgroundWarmup.has(asset.id)));
+const prefetchDetailSources = (sources) => {
+  sources.forEach((detailSource) => {
+    if (!detailSource || detailPrefetchedSources.has(detailSource)) return;
+    detailPrefetchedSources.add(detailSource);
+    const preload = new Image();
+    preload.decoding = "async";
+    preload.src = detailSource;
+  });
+};
+const prefetchDishDetailByIds = (categoryId, itemId, includeNeighbors = false) => {
+  prefetchDetailSources(collectDetailPrefetchSourcesByIds(categoryId, itemId, includeNeighbors));
+};
+const readManifestVideoSource = (asset) => {
+  const candidates = [];
+  const direct = normalizeRuntimeManifestPath(asset?.runtimePath);
+  if (direct) candidates.push(direct);
+  const emissions = Array.isArray(asset?.emissions) ? asset.emissions : [];
+  emissions.forEach((entry) => {
+    const source = normalizeRuntimeManifestPath(entry?.runtimePath);
+    if (source) candidates.push(source);
+  });
+  const unique = Array.from(new Set(candidates));
+  return pickInteractiveVideoSource({
+    webm: unique.find((entry) => /\.webm(?:[?#]|$)/i.test(entry)),
+    mp4: unique.find((entry) => /\.mp4(?:[?#]|$)/i.test(entry))
+  });
+};
+const preloadInteractiveVideoSource = (source) => {
+  const normalized = normalizeRuntimeManifestPath(source);
+  if (!normalized) return Promise.resolve();
+  if (interactiveDetailVideoPrefetchedSources.has(normalized)) return Promise.resolve();
+  const pending = interactiveDetailVideoPending.get(normalized);
+  if (pending) return pending;
+  const task = fetch(normalized, { cache: "force-cache" })
+    .catch(() => undefined)
+    .then(() => {
+      interactiveDetailVideoPrefetchedSources.add(normalized);
+    })
+    .finally(() => {
+      interactiveDetailVideoPending.delete(normalized);
+    });
+  interactiveDetailVideoPending.set(normalized, task);
+  return task;
+};
+const isRuntimeDetailAssetWarm = (asset) => {
+  if (!asset) return true;
+  if (asset.kind === "detailSpriteHq") {
+    const source = readRuntimeManifestPrimaryPath(asset);
+    return interactiveDetailSpriteCache.has(source) || interactiveDetailSpritePending.has(source);
+  }
+  if (asset.kind === "detailVideo") {
+    const source = readManifestVideoSource(asset);
+    return !source || interactiveDetailVideoPrefetchedSources.has(source) || interactiveDetailVideoPending.has(source);
+  }
+  const source = readRuntimeManifestPrimaryPath(asset);
+  return !source || detailPrefetchedSources.has(source);
+};
+const runtimeDetailTaskPriority = (priority) =>
+  priority === "on-demand" ? 2 : priority === "intent-prefetch" ? 1 : 0;
+const applyRuntimeDetailTaskPriority = (task, nextPriority) => {
+  const previousPriority =
+    task?.priority === "on-demand" || task?.priority === "intent-prefetch"
+      ? task.priority
+      : "background-warmup";
+  if (runtimeDetailTaskPriority(nextPriority) <= runtimeDetailTaskPriority(previousPriority)) {
+    return previousPriority;
+  }
+  if (previousPriority === "background-warmup" && nextPriority !== "background-warmup") {
+    runtimeWarmupInFlight = Math.max(0, runtimeWarmupInFlight - 1);
+    runtimeUrgentDetailTasks += 1;
+  }
+  task.priority = nextPriority;
+  return task.priority;
+};
+const scheduleRuntimeDetailAsset = (asset, priority = "background-warmup") => {
+  if (!asset?.id) return Promise.resolve();
+  const existing = runtimeDetailTaskByKey.get(asset.id);
+  if (existing) {
+    applyRuntimeDetailTaskPriority(existing, priority);
+    return existing.promise;
+  }
+  const taskState = { priority, promise: Promise.resolve() };
+  if (taskState.priority !== "background-warmup") runtimeUrgentDetailTasks += 1;
+  if (taskState.priority === "background-warmup") runtimeWarmupInFlight += 1;
+  const source = readRuntimeManifestPrimaryPath(asset);
+  const task = (() => {
+    if (asset.kind === "detailSpriteHq") {
+      return source ? loadInteractiveSpriteImage(source).then(() => undefined).catch(() => undefined) : Promise.resolve();
+    }
+    if (asset.kind === "detailVideo") {
+      const videoSource = readManifestVideoSource(asset);
+      return videoSource ? preloadInteractiveVideoSource(videoSource) : Promise.resolve();
+    }
+    return source ? preloadImageAsset(source) : Promise.resolve();
+  })().finally(() => {
+    runtimeDetailTaskByKey.delete(asset.id);
+    if (taskState.priority !== "background-warmup") {
+      runtimeUrgentDetailTasks = Math.max(0, runtimeUrgentDetailTasks - 1);
+    }
+    if (taskState.priority === "background-warmup") {
+      runtimeWarmupInFlight = Math.max(0, runtimeWarmupInFlight - 1);
+    }
+    scheduleRuntimeBackgroundWarmup();
+  });
+  taskState.promise = task;
+  runtimeDetailTaskByKey.set(asset.id, taskState);
+  return task;
+};
+const ensureDetailOnDemandByIds = (categoryId, itemId) =>
+  Promise.all(
+    collectDetailOnDemandAssetsByIds(categoryId, itemId).map((asset) =>
+      scheduleRuntimeDetailAsset(asset, "on-demand")
+    )
+  );
+const pumpRuntimeBackgroundWarmup = () => {
+  if (!runtimeManifest || startupLoading || runtimeDeferredLoadActive) return;
+  if (runtimeUrgentDetailTasks > 0 || runtimeWarmupInFlight >= DETAIL_WARMUP_CONCURRENCY) return;
+  const nextAsset = collectDetailWarmupAssets().find(
+    (asset) => asset && !runtimeDetailTaskByKey.has(asset.id) && !isRuntimeDetailAssetWarm(asset)
+  );
+  if (!nextAsset) return;
+  void scheduleRuntimeDetailAsset(nextAsset, "background-warmup");
+};
+const scheduleRuntimeBackgroundWarmup = () => {
+  if (runtimeWarmupIdleHandle) return;
+  if (!runtimeManifest || startupLoading || runtimeDeferredLoadActive || runtimeUrgentDetailTasks > 0) return;
+  const run = () => {
+    runtimeWarmupIdleHandle = 0;
+    pumpRuntimeBackgroundWarmup();
+  };
+  if ("requestIdleCallback" in window && typeof window.requestIdleCallback === "function") {
+    runtimeWarmupIdleHandle = window.requestIdleCallback(run, { timeout: 600 });
+    return;
+  }
+  runtimeWarmupIdleHandle = window.setTimeout(run, 180);
+};
+const readRuntimePrimaryTouchValue = (touch, axis) =>
+  axis === "vertical" ? touch.clientY : touch.clientX;
+const readRuntimeAxisDelta = (event, axis) =>
+  axis === "horizontal"
+    ? Math.abs(event.deltaX) > 0.1
+      ? event.deltaX
+      : event.shiftKey
+        ? event.deltaY
+        : 0
+    : event.deltaY;
+const resolveRuntimeWheelIntent = (
+  event,
+  sectionAxis,
+  itemAxis,
+  minIntentPx = 8,
+  dominanceRatio = 1.12
+) => {
+  const sectionDelta = readRuntimeAxisDelta(event, sectionAxis);
+  const itemDelta = readRuntimeAxisDelta(event, itemAxis);
+  const sectionMagnitude = Math.abs(sectionDelta);
+  const itemMagnitude = Math.abs(itemDelta);
+  if (sectionMagnitude < minIntentPx && itemMagnitude < minIntentPx) {
+    return { sectionIntent: false, itemIntent: false, sectionDelta: 0 };
+  }
+  const sectionIntent =
+    sectionMagnitude >= minIntentPx &&
+    (itemMagnitude < minIntentPx || sectionMagnitude >= itemMagnitude * dominanceRatio);
+  const itemIntent =
+    itemMagnitude >= minIntentPx &&
+    (sectionMagnitude < minIntentPx || itemMagnitude >= sectionMagnitude * dominanceRatio);
+  if (sectionIntent && !itemIntent) {
+    return { sectionIntent: true, itemIntent: false, sectionDelta };
+  }
+  if (itemIntent && !sectionIntent) {
+    return { sectionIntent: false, itemIntent: true, sectionDelta: 0 };
+  }
+  if (sectionMagnitude >= itemMagnitude) {
+    return { sectionIntent: true, itemIntent: false, sectionDelta };
+  }
+  return { sectionIntent: false, itemIntent: true, sectionDelta: 0 };
+};
+const resolveRuntimeTouchIntentAxis = ({ totalDx, totalDy, sectionAxis, itemAxis, minIntentPx }) => {
+  if (Math.max(Math.abs(totalDx), Math.abs(totalDy)) < minIntentPx) {
+    return "pending";
+  }
+  const sectionMagnitude = sectionAxis === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
+  const itemMagnitude = itemAxis === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
+  return sectionMagnitude >= itemMagnitude ? "section" : "item";
+};
+const resolveRuntimeFocusedIndex = ({
+  centers,
+  focusAnchor,
+  focusBandStart,
+  focusBandEnd,
+  stableIndex,
+  hysteresisPx
+}) => {
+  if (centers.length === 0) return -1;
+  let closestIndex = 0;
+  let closestDistance = Number.POSITIVE_INFINITY;
+  centers.forEach((center, index) => {
+    const distance = Math.abs(center - focusAnchor);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestIndex = index;
+    }
+  });
+  if (stableIndex >= 0 && stableIndex < centers.length && stableIndex !== closestIndex) {
+    const stableCenter = centers[stableIndex];
+    const stableDistance = Math.abs(stableCenter - focusAnchor);
+    if (stableCenter >= focusBandStart && stableCenter <= focusBandEnd) {
+      return stableIndex;
+    }
+    if (stableDistance <= closestDistance + hysteresisPx) {
+      return stableIndex;
+    }
+  }
+  return closestIndex;
+};
+const resolveRuntimeSectionMoveTarget = (currentIndex, direction, sectionCount) => {
+  if (sectionCount <= 0 || currentIndex < 0) {
+    return { nextIndex: currentIndex, hitBoundary: true };
+  }
+  const nextIndex = Math.min(sectionCount - 1, Math.max(0, currentIndex + direction));
+  return { nextIndex, hitBoundary: nextIndex === currentIndex };
+};
+const resolveRuntimeArrowKeyBindings = (sectionAxis, itemAxis) => ({
+  sectionBackKey: sectionAxis === "horizontal" ? "ArrowLeft" : "ArrowUp",
+  sectionForwardKey: sectionAxis === "horizontal" ? "ArrowRight" : "ArrowDown",
+  itemBackKey: itemAxis === "horizontal" ? "ArrowLeft" : "ArrowUp",
+  itemForwardKey: itemAxis === "horizontal" ? "ArrowRight" : "ArrowDown"
+});
+const dedupeRuntimeExplorationCardKeys = (values) => Array.from(
+  new Set(
+    values.map((value) => String(value || "").trim()).filter((value) => value.length > 0)
+  )
+);
+const createRuntimeExplorationCardKey = (sectionId, itemId) => `${String(sectionId || "").trim()}::${String(itemId || "").trim()}`;
+const createRuntimeExplorationCardEntry = (sectionId, itemId, tier) => ({
+  cardKey: createRuntimeExplorationCardKey(sectionId, itemId),
+  tier
+});
+const groupRuntimeExplorationCardKeys = (entries) => {
+  const activeCardKeys = [];
+  const neighborCardKeys = [];
+  const deferredCardKeys = [];
+  entries.forEach((entry) => {
+    const cardKey = String(entry?.cardKey || "").trim();
+    if (!cardKey) return;
+    if (entry.tier === "active") {
+      activeCardKeys.push(cardKey);
+      return;
+    }
+    if (entry.tier === "neighbor") {
+      neighborCardKeys.push(cardKey);
+      return;
+    }
+    deferredCardKeys.push(cardKey);
+  });
+  return {
+    activeCardKeys: dedupeRuntimeExplorationCardKeys(activeCardKeys),
+    neighborCardKeys: dedupeRuntimeExplorationCardKeys(neighborCardKeys),
+    deferredCardKeys: dedupeRuntimeExplorationCardKeys(deferredCardKeys)
+  };
+};
+const createExplorationCoreState = (input = {}) => ({
+  focusedSectionIndex: Number.isFinite(input.focusedSectionIndex) ? Math.max(0, Math.round(input.focusedSectionIndex)) : 0,
+  activeItemIndexBySection: { ...input.activeItemIndexBySection ?? {} },
+  activeCardKeys: dedupeRuntimeExplorationCardKeys(input.activeCardKeys ?? []),
+  neighborCardKeys: dedupeRuntimeExplorationCardKeys(input.neighborCardKeys ?? []),
+  deferredCardKeys: dedupeRuntimeExplorationCardKeys(input.deferredCardKeys ?? []),
+  sectionHintVisible: Boolean(input.sectionHintVisible),
+  itemHintVisibleBySection: { ...input.itemHintVisibleBySection ?? {} }
+});
+const deriveExplorationCoreState = (input = {}) => {
+  const grouped = groupRuntimeExplorationCardKeys(
+    (input.cardEntries ?? []).map(
+      (entry) => createRuntimeExplorationCardEntry(entry.sectionId, entry.itemId, entry.tier)
+    )
+  );
+  return createExplorationCoreState({
+    focusedSectionIndex: input.focusedSectionIndex,
+    activeItemIndexBySection: input.activeItemIndexBySection,
+    sectionHintVisible: input.sectionHintVisible,
+    itemHintVisibleBySection: input.itemHintVisibleBySection,
+    ...grouped
+  });
+};
+const readRuntimeExplorationCardTier = (state, sectionId, itemId) => {
+  const cardKey = createRuntimeExplorationCardKey(sectionId, itemId);
+  if (state.activeCardKeys.includes(cardKey)) return "active";
+  if (state.neighborCardKeys.includes(cardKey)) return "neighbor";
+  return "deferred";
+};
+const shouldActivateRuntimeExplorationCard = (state, sectionId, itemId) => readRuntimeExplorationCardTier(state, sectionId, itemId) !== "deferred";
+const normalizeRuntimeDetailSource = (value) => {
+  const trimmed = String(value ?? "").trim();
   return trimmed.length > 0 ? trimmed : "";
 };
-const normalizePositiveInt = (value, minimum = 1) => {
+const normalizeRuntimePositiveInt = (value, minimum = 1) => {
   const parsed = Number(value);
   if (!Number.isFinite(parsed)) return null;
   const rounded = Math.round(parsed);
   if (rounded < minimum) return null;
   return rounded;
 };
-const normalizePositiveNumber = (value, minimum = 0.01) => {
+const normalizeRuntimePositiveNumber = (value, minimum = 0.01) => {
   const parsed = Number(value);
   if (!Number.isFinite(parsed) || parsed < minimum) return null;
   return parsed;
+};
+const createRuntimeDetailVideoAsset = (video) => {
+  const webm = normalizeRuntimeDetailSource(video?.webm) || void 0;
+  const mp4 = normalizeRuntimeDetailSource(video?.mp4) || void 0;
+  if (!webm && !mp4) return void 0;
+  return {
+    ...webm ? { webm } : {},
+    ...mp4 ? { mp4 } : {}
+  };
+};
+const createRuntimeDetailSpriteAsset = (sprite) => {
+  const image = normalizeRuntimeDetailSource(sprite?.image);
+  const frameCount = normalizeRuntimePositiveInt(sprite?.frameCount, 2);
+  const columns = normalizeRuntimePositiveInt(sprite?.columns, 1);
+  const rows = normalizeRuntimePositiveInt(sprite?.rows, 1);
+  const fps = normalizeRuntimePositiveNumber(sprite?.fps, 0.01);
+  const frameWidth = normalizeRuntimePositiveInt(sprite?.frameWidth, 1);
+  const frameHeight = normalizeRuntimePositiveInt(sprite?.frameHeight, 1);
+  if (!image || !frameCount || !columns || !rows || !fps || !frameWidth || !frameHeight) {
+    return void 0;
+  }
+  return {
+    image,
+    frameCount,
+    columns,
+    rows,
+    fps,
+    frameWidth,
+    frameHeight
+  };
+};
+const pickRuntimeDetailPrimarySource = (asset) => normalizeRuntimeDetailSource(asset.sprite?.image) || normalizeRuntimeDetailSource(asset.video?.webm) || normalizeRuntimeDetailSource(asset.video?.mp4) || normalizeRuntimeDetailSource(asset.poster);
+const selectRuntimeDetailVideoSource = (video, options = {}) => {
+  const normalized = createRuntimeDetailVideoAsset(video);
+  if (!normalized) return null;
+  const webm = normalizeRuntimeDetailSource(normalized.webm);
+  const mp4 = normalizeRuntimeDetailSource(normalized.mp4);
+  if (!webm && !mp4) return null;
+  const canPlayType = options.canPlayType ?? (() => true);
+  const supportsVp9Webm = webm.length > 0 && (canPlayType('video/webm; codecs="vp9"') || canPlayType('video/webm; codecs="vp09.00.10.08"') || canPlayType("video/webm"));
+  const supportsHvc1Mp4 = mp4.length > 0 && (canPlayType('video/mp4; codecs="hvc1"') || canPlayType('video/mp4; codecs="hev1"') || canPlayType("video/mp4"));
+  if (options.preferMp4OnWebKit && mp4 && supportsHvc1Mp4) return mp4;
+  if (webm && supportsVp9Webm) return webm;
+  if (mp4 && supportsHvc1Mp4) return mp4;
+  if (webm) return webm;
+  if (mp4) return mp4;
+  return null;
+};
+const buildRuntimeDetailAsset = (interactive) => {
+  if (!interactive || typeof interactive !== "object") return null;
+  const poster = normalizeRuntimeDetailSource(interactive.poster) || void 0;
+  const video = createRuntimeDetailVideoAsset(interactive.video);
+  const sprite = createRuntimeDetailSpriteAsset(interactive.sprite);
+  if (!poster && !video && !sprite) return null;
+  const source = pickRuntimeDetailPrimarySource({ poster, video, sprite });
+  if (!source) return null;
+  return {
+    source,
+    ...poster ? { poster } : {},
+    ...video ? { video } : {},
+    ...sprite ? { sprite } : {}
+  };
+};
+const buildRuntimeDetailAssetFromMenuItem = (item) => buildRuntimeDetailAsset(item?.media?.interactive);
+const normalizeInteractiveSource = normalizeRuntimeDetailSource;
+const normalizePositiveInt = normalizeRuntimePositiveInt;
+const normalizePositiveNumber = normalizeRuntimePositiveNumber;
+const pickInteractivePrimarySource = pickRuntimeDetailPrimarySource;
+const pickInteractiveVideoSource = (video) =>
+  selectRuntimeDetailVideoSource(video, {
+    canPlayType: canPlayVideoType,
+    preferMp4OnWebKit: isLikelyWebKit()
+  });
+const getInteractiveDetailAsset = (item) => buildRuntimeDetailAssetFromMenuItem(item);
+const decodeMaybe = (value) => {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
 };
 const createVideoCapabilityProbe = () => {
   if (typeof document === "undefined") return null;
@@ -670,81 +1319,6 @@ const isLikelyWebKit = () => {
   const isSafariVendor = vendor.includes("apple");
   const isExcluded = /crios|fxios|edgios|android|chromium|chrome/.test(userAgent);
   return isSafariVendor && !isExcluded;
-};
-const pickInteractiveVideoSource = (video) => {
-  if (!video) return null;
-  const webm = normalizeInteractiveSource(video.webm);
-  const mp4 = normalizeInteractiveSource(video.mp4);
-  if (!webm && !mp4) return null;
-
-  const supportsVp9Webm =
-    canPlayVideoType('video/webm; codecs="vp9"') ||
-    canPlayVideoType('video/webm; codecs="vp09.00.10.08"') ||
-    canPlayVideoType("video/webm");
-  const supportsHvc1Mp4 =
-    canPlayVideoType('video/mp4; codecs="hvc1"') ||
-    canPlayVideoType('video/mp4; codecs="hev1"') ||
-    canPlayVideoType("video/mp4");
-
-  if (isLikelyWebKit() && mp4 && supportsHvc1Mp4) return mp4;
-  if (webm && supportsVp9Webm) return webm;
-  if (mp4 && supportsHvc1Mp4) return mp4;
-  if (webm) return webm;
-  if (mp4) return mp4;
-  return null;
-};
-const pickInteractivePrimarySource = (asset) =>
-  normalizeInteractiveSource(asset?.sprite?.image) ||
-  normalizeInteractiveSource(asset?.video?.webm) ||
-  normalizeInteractiveSource(asset?.video?.mp4) ||
-  normalizeInteractiveSource(asset?.poster);
-const getInteractiveDetailAsset = (item) => {
-  const interactive = item?.media?.interactive;
-  if (!interactive || typeof interactive !== "object") return null;
-
-  const poster = normalizeInteractiveSource(interactive.poster) || undefined;
-  const videoWebm = normalizeInteractiveSource(interactive.video?.webm) || undefined;
-  const videoMp4 = normalizeInteractiveSource(interactive.video?.mp4) || undefined;
-  const spriteImage = normalizeInteractiveSource(interactive.sprite?.image);
-
-  const frameCount = normalizePositiveInt(interactive.sprite?.frameCount, 2);
-  const columns = normalizePositiveInt(interactive.sprite?.columns, 1);
-  const rows = normalizePositiveInt(interactive.sprite?.rows, 1);
-  const fps = normalizePositiveNumber(interactive.sprite?.fps, 0.01);
-  const frameWidth = normalizePositiveInt(interactive.sprite?.frameWidth, 1);
-  const frameHeight = normalizePositiveInt(interactive.sprite?.frameHeight, 1);
-
-  const sprite =
-    spriteImage && frameCount && columns && rows && fps && frameWidth && frameHeight
-      ? {
-          image: spriteImage,
-          frameCount,
-          columns,
-          rows,
-          fps,
-          frameWidth,
-          frameHeight
-        }
-      : undefined;
-
-  const video =
-    videoWebm || videoMp4
-      ? {
-          ...(videoWebm ? { webm: videoWebm } : {}),
-          ...(videoMp4 ? { mp4: videoMp4 } : {})
-        }
-      : undefined;
-
-  if (!poster && !video && !sprite) return null;
-  const source = pickInteractivePrimarySource({ poster, video, sprite });
-  if (!source) return null;
-
-  return {
-    source,
-    ...(poster ? { poster } : {}),
-    ...(video ? { video } : {}),
-    ...(sprite ? { sprite } : {})
-  };
 };
 const supportsInteractiveMedia = () =>
   typeof window !== "undefined" &&
@@ -863,30 +1437,6 @@ const loadInteractiveSpriteImage = async (source) => {
   interactiveDetailSpritePending.set(normalized, task);
   return task;
 };
-const prefetchDishDetailItem = (dish) => {
-  if (!dish) return;
-  const detailSource = (getDetailImageSrc(dish) || "").trim();
-  if (detailSource && !detailPrefetchedSources.has(detailSource)) {
-    detailPrefetchedSources.add(detailSource);
-    const preload = new Image();
-    preload.decoding = "async";
-    preload.src = detailSource;
-  }
-};
-const prefetchDishDetailByIds = (categoryId, itemId, includeNeighbors = false) => {
-  const category = DATA.categories.find((entry) => entry.id === categoryId);
-  if (!category || !category.items?.length) return;
-  const index = category.items.findIndex((entry) => entry.id === itemId);
-  if (index < 0) return;
-  const targets = [index];
-  if (includeNeighbors && category.items.length > 1) {
-    targets.push((index - 1 + category.items.length) % category.items.length);
-    targets.push((index + 1) % category.items.length);
-  }
-  Array.from(new Set(targets)).forEach((target) => {
-    prefetchDishDetailItem(category.items[target]);
-  });
-};
 const persistDebugFlickerState = () => {
   if (!debugFlickerEnabled) return;
   const storage = getDebugFlickerStorage();
@@ -896,13 +1446,13 @@ const persistDebugFlickerState = () => {
 const syncDebugFlickerBodyClass = () => {
   const isModalOpen = modal?.classList.contains("open");
   const shouldMirrorGhostDebugFlicker =
-    !debugFlickerEnabled &&
+    !debugFlickerHudVisible &&
     Boolean(isModalOpen && interactiveModalSurfaceFrozen && activeModalInteractiveAsset);
   document.body.classList.toggle(
     DEBUG_FLICKER_ACTIVE_BODY_CLASS,
-    Boolean(isModalOpen && (debugFlickerEnabled || shouldMirrorGhostDebugFlicker))
+    Boolean(isModalOpen && ((debugFlickerEnabled && debugFlickerHudVisible) || shouldMirrorGhostDebugFlicker))
   );
-  const nextPresetClass = isModalOpen && (debugFlickerEnabled || shouldMirrorGhostDebugFlicker)
+  const nextPresetClass = isModalOpen && ((debugFlickerEnabled && debugFlickerHudVisible) || shouldMirrorGhostDebugFlicker)
     ? DEBUG_FLICKER_PRESET_BODY_CLASS_PREFIX + (debugFlickerEnabled ? debugFlickerPreset : "baseline")
     : "";
   if (appliedDebugFlickerPresetClass && appliedDebugFlickerPresetClass !== nextPresetClass) {
@@ -914,11 +1464,11 @@ const syncDebugFlickerBodyClass = () => {
   appliedDebugFlickerPresetClass = nextPresetClass;
 };
 const renderDebugFlickerHud = () => {
-  if (!debugFlickerEnabled) return "";
+  if (!debugFlickerEnabled || !debugFlickerHudVisible) return "";
   return renderFlickerDebugHudMarkup();
 };
 const renderGhostDebugFlickerHud = () => {
-  if (debugFlickerEnabled || !interactiveModalSurfaceFrozen || !activeModalInteractiveAsset) {
+  if (debugFlickerHudVisible || !interactiveModalSurfaceFrozen || !activeModalInteractiveAsset) {
     return "";
   }
   return renderFlickerDebugHudMarkup(true);
@@ -973,6 +1523,15 @@ const updateDebugFlickerHud = () => {
   if (resolved) resolved.textContent = "Renderer: " + debugFlickerResolvedRenderer;
   if (freeze) freeze.textContent = "Freeze: " + (interactiveModalSurfaceFrozen ? "active" : "inactive");
   if (blocked) blocked.textContent = "Blocked: " + String(debugFlickerBlockedCount);
+};
+const syncModalDebugFlickerHud = () => {
+  if (!modalContent || !modal?.classList.contains("open")) return;
+  modalContent.querySelectorAll(".dish-modal__flicker-debug").forEach((node) => node.remove());
+  const markup = renderDebugFlickerHud() || renderGhostDebugFlickerHud();
+  if (!markup) return;
+  modalContent.insertAdjacentHTML("afterbegin", markup);
+  bindDebugFlickerHud(modalContent);
+  updateDebugFlickerHud();
 };
 const recordFrozenSurfaceBlockedEvent = () => {
   if (!interactiveModalSurfaceFrozen) return;
@@ -1037,6 +1596,7 @@ const syncInteractiveModalSurfaceFrozenState = () => {
     interactiveModalSurfaceFrozen && Boolean(activeModalInteractiveAsset)
   );
   syncDebugFlickerBodyClass();
+  syncModalDebugFlickerHud();
   updateDebugFlickerHud();
 };
 const stopBackgroundRotation = () => {
@@ -1073,12 +1633,14 @@ const setDebugFlickerPreset = (nextPreset) => {
   debugFlickerPreset = normalizeDebugFlickerPreset(nextPreset);
   persistDebugFlickerState();
   syncDebugFlickerBodyClass();
+  syncModalDebugFlickerHud();
   updateDebugFlickerHud();
 };
 const setDebugFlickerRenderer = (nextRenderer) => {
   if (!debugFlickerEnabled) return;
   debugFlickerRenderer = normalizeDebugFlickerRenderer(nextRenderer);
   persistDebugFlickerState();
+  syncModalDebugFlickerHud();
   updateDebugFlickerHud();
   refreshInteractiveModalRenderer();
 };
@@ -1088,11 +1650,19 @@ const resetDebugFlickerState = () => {
   debugFlickerRenderer = "auto";
   persistDebugFlickerState();
   syncDebugFlickerBodyClass();
+  syncModalDebugFlickerHud();
   updateDebugFlickerHud();
   refreshInteractiveModalRenderer();
 };
+const toggleDebugFlickerHudVisibility = () => {
+  if (!debugFlickerEnabled) return;
+  debugFlickerHudVisible = !debugFlickerHudVisible;
+  syncDebugFlickerBodyClass();
+  syncModalDebugFlickerHud();
+  updateDebugFlickerHud();
+};
 const bindDebugFlickerHud = (root) => {
-  if (!debugFlickerEnabled || !root) return;
+  if (!debugFlickerEnabled || !debugFlickerHudVisible || !root) return;
   root.querySelectorAll("[data-debug-flicker-action]").forEach((button) => {
     button.addEventListener("click", (event) => {
       event.preventDefault();
@@ -1669,7 +2239,7 @@ const setupInteractiveModalMedia = async (asset) => {
 };
 const instructionCopy = {"en":{"loadingLabel":"Loading assets","tapHint":"Tap for details","assetDisclaimer":"Assets belong to their owners. Do not copy or reuse this content without permission.","jukeboxHint":"Scroll to rotate • Swipe to explore","focusRowsHint":"Scroll to browse • Swipe to explore","rotateHintTouch":"Swipe horizontally on the image to rotate","rotateHintMouse":"Drag horizontally with the mouse to rotate","rotateToggle":"Reverse rotation"},"es":{"loadingLabel":"Cargando assets","tapHint":"Toca para ver detalles","assetDisclaimer":"Los assets pertenecen a sus propietarios. No copies ni reutilices este contenido sin autorización.","jukeboxHint":"Desplaza para girar • Desliza para explorar","focusRowsHint":"Desplaza para recorrer • Desliza para explorar","rotateHintTouch":"Desliza horizontal sobre la imagen para girar","rotateHintMouse":"Arrastra horizontal con el mouse para girar","rotateToggle":"Invertir giro"},"fr":{"loadingLabel":"Chargement des assets","tapHint":"Touchez pour voir les détails","assetDisclaimer":"Les assets appartiennent à leurs propriétaires. Ne copiez ni ne réutilisez ce contenu sans autorisation.","jukeboxHint":"Faites défiler pour tourner • Balayez pour explorer","focusRowsHint":"Faites défiler pour parcourir • Balayez pour explorer","rotateHintTouch":"Balayez horizontalement l'image pour faire tourner","rotateHintMouse":"Faites glisser horizontalement avec la souris pour faire tourner","rotateToggle":"Inverser la rotation"},"pt":{"loadingLabel":"Carregando assets","tapHint":"Toque para ver detalhes","assetDisclaimer":"Os assets pertencem aos seus proprietários. Não copie nem reutilize este conteúdo sem autorização.","jukeboxHint":"Role para girar • Deslize para explorar","focusRowsHint":"Role para navegar • Deslize para explorar","rotateHintTouch":"Deslize horizontalmente na imagem para girar","rotateHintMouse":"Arraste horizontalmente com o mouse para girar","rotateToggle":"Inverter rotação"},"it":{"loadingLabel":"Caricamento assets","tapHint":"Tocca per i dettagli","assetDisclaimer":"Gli assets appartengono ai rispettivi proprietari. Non copiare o riutilizzare questo contenuto senza autorizzazione.","jukeboxHint":"Scorri per ruotare • Sfiora per esplorare","focusRowsHint":"Scorri per sfogliare • Sfiora per esplorare","rotateHintTouch":"Scorri orizzontalmente sull'immagine per ruotare","rotateHintMouse":"Trascina orizzontalmente con il mouse per ruotare","rotateToggle":"Inverti rotazione"},"de":{"loadingLabel":"Assets werden geladen","tapHint":"Tippen für Details","assetDisclaimer":"Assets gehören ihren Eigentümern. Bitte nicht ohne Genehmigung kopieren oder wiederverwenden.","jukeboxHint":"Scrollen zum Drehen • Wischen zum Entdecken","focusRowsHint":"Scrollen zum Blättern • Wischen zum Entdecken","rotateHintTouch":"Wische horizontal über das Bild, um zu drehen","rotateHintMouse":"Ziehe horizontal mit der Maus, um zu drehen","rotateToggle":"Drehrichtung umkehren"},"ja":{"loadingLabel":"アセットを読み込み中","tapHint":"タップで詳細","assetDisclaimer":"アセットは各所有者に帰属します。許可なく複製・再利用しないでください。","jukeboxHint":"スクロールで回転 • スワイプで探索","focusRowsHint":"スクロールで閲覧 • スワイプで探索","rotateHintTouch":"画像上で横にスワイプして回転","rotateHintMouse":"画像上で横にドラッグして回転","rotateToggle":"回転方向を反転"},"ko":{"loadingLabel":"에셋 로딩 중","tapHint":"탭해서 자세히 보기","assetDisclaimer":"에셋은 각 소유자에게 귀속됩니다. 허가 없이 복사하거나 재사용하지 마세요.","jukeboxHint":"스크롤로 회전 • 스와이프로 탐색","focusRowsHint":"스크롤로 둘러보기 • 스와이프로 탐색","rotateHintTouch":"이미지에서 가로로 스와이프해 회전","rotateHintMouse":"마우스로 가로로 드래그해 회전","rotateToggle":"회전 방향 반전"},"zh":{"loadingLabel":"正在加载素材","tapHint":"点按查看详情","assetDisclaimer":"素材归其所有者所有。未经许可请勿复制或再利用。","jukeboxHint":"滚动可旋转 • 滑动可探索","focusRowsHint":"滚动可浏览 • 滑动可探索","rotateHintTouch":"在图片上横向滑动以旋转","rotateHintMouse":"用鼠标横向拖动以旋转","rotateToggle":"反向旋转"}};
 const runtimeLegalCopy = {"es":{"openAriaLabel":"Abrir aviso legal","dialogTitle":"Aviso legal","closeAriaLabel":"Cerrar aviso legal"},"en":{"openAriaLabel":"Open legal notice","dialogTitle":"Legal notice","closeAriaLabel":"Close legal notice"}};
-const RUNTIME_GUIDANCE_ASSETS = {"circularMotionArrows":"visual_onboarding/circular_motion_arrows.png?v=1773897879489","horVerMotionArrows":"visual_onboarding/hor_ver_motion_arrows.png?v=1773897879489","horizontalMotionArrows":"visual_onboarding/horizontal_motion_arrows.png?v=1773897879489","pointingHand":"visual_onboarding/pointing_hand.png?v=1773897879489","sampleDish":"visual_onboarding/sample_2d_dish.png?v=1773897879489"};
+const RUNTIME_GUIDANCE_ASSETS = {"circularMotionArrows":"visual_onboarding/circular_motion_arrows.png?v=1774256696927","horVerMotionArrows":"visual_onboarding/hor_ver_motion_arrows.png?v=1774256696927","horizontalMotionArrows":"visual_onboarding/horizontal_motion_arrows.png?v=1774256696927","pointingHand":"visual_onboarding/pointing_hand.png?v=1774256696927","sampleDish":"visual_onboarding/sample_2d_dish.png?v=1774256696927"};
 const RUNTIME_GUIDANCE_CAPTURE_QUERY_PARAM = "capture";
 
 const normalizeLocale = (value) => (value || "").toLowerCase().split("-")[0];
@@ -1705,10 +2275,14 @@ let runtimeGuidanceVisible = false;
 let modalInteractiveGuidanceDismissed = runtimeGuidanceCaptureMode;
 let assetUsageDialogOpen = false;
 let applyRuntimeGuidanceState = () => {};
+let explorationCoreState = createExplorationCoreState();
 let runtimeGuidanceGhostClickGuard = false;
 let runtimeGuidanceGhostClickGuardTimer = null;
 const syncRuntimeGuidanceState = () => {
   applyRuntimeGuidanceState();
+  if (app?.querySelector(".menu-scroll")) {
+    syncRuntimeExplorationState();
+  }
 };
 const dismissRuntimeGuidance = () => {
   if (!runtimeGuidanceVisible) return;
@@ -1811,127 +2385,6 @@ const resolveTemplateId = (value) => {
 };
 const activeTemplateId = resolveTemplateId(DATA.meta.template || "focus-rows");
 const isJukeboxTemplate = () => activeTemplateId === "jukebox";
-const STARTUP_BLOCKING_BACKGROUND_LIMIT = 1;
-const STARTUP_BLOCKING_ITEM_LIMIT = 3;
-const normalizeStartupSourceKey = (value) =>
-  String(value || "").trim().replace(/^\/+/, "").split(/[?#]/, 1)[0];
-const estimateStartupAssetBytes = (source) => {
-  const key = normalizeStartupSourceKey(source).toLowerCase();
-  const isBackground = key.includes("/backgrounds/");
-  const isGif = key.endsWith(".gif");
-  const isWebp = key.endsWith(".webp");
-  const isAvif = key.endsWith(".avif");
-  const isPng = key.endsWith(".png");
-  const isJpeg = key.endsWith(".jpg") || key.endsWith(".jpeg");
-  if (isBackground) {
-    if (isGif) return 1300000;
-    if (isWebp) return 650000;
-    if (isAvif) return 420000;
-    if (isPng || isJpeg) return 700000;
-    return 900000;
-  }
-  if (isGif) return 650000;
-  if (isWebp) return 260000;
-  if (isAvif) return 180000;
-  if (isPng || isJpeg) return 320000;
-  return 300000;
-};
-const readStartupAssetBytes = (source) => {
-  const key = normalizeStartupSourceKey(source);
-  const bytes = startupAssetBytes.get(key);
-  if (typeof bytes === "number" && Number.isFinite(bytes) && bytes > 0) {
-    return Math.round(bytes);
-  }
-  return estimateStartupAssetBytes(source);
-};
-const sortSourcesByStartupWeight = (sources) =>
-  [...sources].sort((left, right) => readStartupAssetBytes(left) - readStartupAssetBytes(right));
-const loadStartupAssetBytes = async () => {
-  if (startupAssetBytesReady) return;
-  if (startupAssetBytesPromise) return startupAssetBytesPromise;
-  startupAssetBytesPromise = (async () => {
-    try {
-      const response = await fetch("asset-manifest.json?v=1773897879489", { cache: "force-cache" });
-      if (!response.ok) return;
-      const payload = await response.json();
-      const assets = Array.isArray(payload?.assets) ? payload.assets : [];
-      assets.forEach((entry) => {
-        const outputPath = typeof entry?.outputPath === "string" ? entry.outputPath : "";
-        const bytes = Number(entry?.bytes);
-        if (!outputPath || !Number.isFinite(bytes) || bytes <= 0) return;
-        startupAssetBytes.set(normalizeStartupSourceKey(outputPath), Math.round(bytes));
-      });
-    } catch {
-      // Ignore diagnostics loading failures; fallback estimates will be used.
-    } finally {
-      startupAssetBytesReady = true;
-      startupAssetBytesPromise = null;
-    }
-  })();
-  return startupAssetBytesPromise;
-};
-const collectStartupItemPrioritySources = () => {
-  const rows = DATA.categories.map((category) =>
-    category.items
-      .map((item) => (getCarouselImageSrc(item) || "").trim())
-      .filter((src) => src.length > 0)
-  );
-  const ordered = [];
-  let depth = 0;
-  while (true) {
-    let foundAtDepth = false;
-    rows.forEach((row) => {
-      const src = row[depth];
-      if (!src) return;
-      ordered.push(src);
-      foundAtDepth = true;
-    });
-    if (!foundAtDepth) break;
-    depth += 1;
-  }
-  const deduped = [];
-  const seen = new Set();
-  ordered.forEach((src) => {
-    if (seen.has(src)) return;
-    seen.add(src);
-    deduped.push(src);
-  });
-  return deduped;
-};
-const buildStartupSourcePlan = () => {
-  const backgroundSources = [];
-  const backgroundSeen = new Set();
-  backgrounds.forEach((bg) => {
-    const src = (bg?.src || "").trim();
-    if (!src || backgroundSeen.has(src)) return;
-    backgroundSeen.add(src);
-    backgroundSources.push(src);
-  });
-  const itemSources = collectStartupItemPrioritySources();
-  const backgroundBlockingCandidates = sortSourcesByStartupWeight(backgroundSources);
-  const itemBlockingCandidates = sortSourcesByStartupWeight(itemSources);
-  const blocking = [];
-  const blockingSet = new Set();
-  backgroundBlockingCandidates.slice(0, STARTUP_BLOCKING_BACKGROUND_LIMIT).forEach((src) => {
-    if (blockingSet.has(src)) return;
-    blockingSet.add(src);
-    blocking.push(src);
-  });
-  itemBlockingCandidates.slice(0, STARTUP_BLOCKING_ITEM_LIMIT).forEach((src) => {
-    if (blockingSet.has(src)) return;
-    blockingSet.add(src);
-    blocking.push(src);
-  });
-  const all = [];
-  const seen = new Set();
-  [...backgroundSources, ...itemSources].forEach((src) => {
-    if (!src || seen.has(src)) return;
-    seen.add(src);
-    all.push(src);
-  });
-  const deferred = all.filter((src) => !blockingSet.has(src));
-  return { blocking, deferred };
-};
 const preloadImageAsset = (src) =>
   new Promise((resolve) => {
     if (!src) {
@@ -1963,10 +2416,28 @@ const preloadImageBatch = async (sources, onProgress, concurrency = 4) => {
   };
   await Promise.all(Array.from({ length: workers }, () => runWorker()));
 };
+const mergeUniqueStartupSources = (...groups) => {
+  const merged = [];
+  const seen = new Set();
+  groups.flat().forEach((source) => {
+    const normalized = String(source || "").trim();
+    if (!normalized || seen.has(normalized)) return;
+    seen.add(normalized);
+    merged.push(normalized);
+  });
+  return merged;
+};
 const preloadDeferredAssets = (sources) => {
-  if (!sources.length) return;
+  if (!sources.length) {
+    scheduleRuntimeBackgroundWarmup();
+    return;
+  }
   const run = () => {
-    void preloadImageBatch(sources, null, 3);
+    runtimeDeferredLoadActive = true;
+    void preloadImageBatch(sources, null, 3).finally(() => {
+      runtimeDeferredLoadActive = false;
+      scheduleRuntimeBackgroundWarmup();
+    });
   };
   if ("requestIdleCallback" in window && typeof window.requestIdleCallback === "function") {
     window.requestIdleCallback(() => run(), { timeout: 900 });
@@ -1991,11 +2462,13 @@ const syncStartupUi = () => {
 };
 const preloadStartupAssets = async () => {
   const token = ++startupToken;
-  await loadStartupAssetBytes();
   const plan = buildStartupSourcePlan();
-  startupBlockingSourceSet = new Set(plan.blocking);
+  const blockingSources = mergeUniqueStartupSources(plan.blocking);
+  const earlyVisibleSources = mergeUniqueStartupSources(plan.earlyVisible);
+  const startupVisibleSources = mergeUniqueStartupSources(blockingSources, earlyVisibleSources);
+  startupBlockingSourceSet = new Set(blockingSources);
   refreshVisibleCarouselMedia();
-  if (plan.blocking.length === 0) {
+  if (startupVisibleSources.length === 0) {
     startupProgress = 100;
     startupLoading = false;
     startupBlockingSourceSet = new Set();
@@ -2004,26 +2477,33 @@ const preloadStartupAssets = async () => {
     preloadDeferredAssets(plan.deferred);
     return;
   }
-  const totalWeight = Math.max(
-    1,
-    plan.blocking.reduce((sum, source) => sum + readStartupAssetBytes(source), 0)
-  );
-  let loadedWeight = 0;
+  const totalSources = Math.max(1, startupVisibleSources.length);
+  let loadedCount = 0;
   startupLoading = true;
   startupProgress = 0;
   syncStartupUi();
   await preloadImageBatch(
-    plan.blocking,
-    (source) => {
+    blockingSources,
+    () => {
       if (token !== startupToken) return;
-      loadedWeight += readStartupAssetBytes(source);
-      startupProgress = Math.max(
-        1,
-        Math.min(100, Math.round((loadedWeight / totalWeight) * 100))
-      );
+      loadedCount += 1;
+      startupProgress = Math.max(1, Math.min(70, Math.round((loadedCount / totalSources) * 70)));
       syncStartupUi();
     },
     4
+  );
+  if (token !== startupToken) return;
+  startupBlockingSourceSet = new Set(startupVisibleSources);
+  refreshVisibleCarouselMedia();
+  await preloadImageBatch(
+    earlyVisibleSources,
+    () => {
+      if (token !== startupToken) return;
+      loadedCount += 1;
+      startupProgress = Math.max(70, Math.min(100, Math.round((loadedCount / totalSources) * 100)));
+      syncStartupUi();
+    },
+    3
   );
   if (token !== startupToken) return;
   startupProgress = 100;
@@ -2031,7 +2511,21 @@ const preloadStartupAssets = async () => {
   startupBlockingSourceSet = new Set();
   syncStartupUi();
   refreshVisibleCarouselMedia();
-  preloadDeferredAssets(plan.deferred);
+  preloadDeferredAssets(mergeUniqueStartupSources(plan.deferred));
+};
+const renderRuntimeBootError = (message) => {
+  if (!app) return;
+  setRuntimeBootState("error");
+  const text = String(message || "").trim() || "Missing or invalid runtime-manifest.json.";
+  app.innerHTML =
+    '<div data-runtime-boot-error="true" role="alert" style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:#111;color:#fff;font-family:system-ui,sans-serif;text-align:center;">' +
+    '<div style="max-width:560px;">' +
+    '<h1 style="margin:0 0 12px;font-size:1.4rem;">Export boot failed</h1>' +
+    '<p style="margin:0;opacity:0.86;line-height:1.5;">' +
+    text.replace(/[<>&]/g, "") +
+    "</p>" +
+    "</div>" +
+    "</div>";
 };
 
 const buildCarousel = (category) => {
@@ -2370,11 +2864,14 @@ const render = () => {
 
 const applyFocusState = (container, activeIndex, itemCount = 0) => {
   const cards = Array.from(container.querySelectorAll(".carousel-card"));
+  const categoryId = String(container?.dataset?.categoryId || "").trim();
   const count = itemCount || cards.length || 1;
   const hideAt = Math.max(1.6, count / 2 - 0.25);
+  syncRuntimeExplorationState();
   if (isJukeboxTemplate()) {
     cards.forEach((card, index) => {
       const sourceIndex = Number(card.dataset.source || index);
+      const itemId = String(card.dataset.item || "").trim();
       const offset = getCircularOffset(activeIndex, sourceIndex, count);
       const distance = Math.abs(offset);
       const wheelRadius = 420;
@@ -2399,13 +2896,14 @@ const applyFocusState = (container, activeIndex, itemCount = 0) => {
       card.classList.toggle("near", Math.abs(offset) >= 0.5 && Math.abs(offset) < 1.25);
       card.classList.toggle("far", Math.abs(offset) >= 1.25);
       card.classList.toggle("is-hidden", distance >= hideAt);
-      maybeHydrateCarouselCardMedia(card, distance);
+      maybeHydrateCarouselCardMedia(card, categoryId, itemId);
     });
     return;
   }
 
   cards.forEach((card, index) => {
     const sourceIndex = Number(card.dataset.source || index);
+    const itemId = String(card.dataset.item || "").trim();
     const offset = getCircularOffset(activeIndex, sourceIndex, count);
     const distance = Math.abs(offset);
     const stepX = 220;
@@ -2430,7 +2928,7 @@ const applyFocusState = (container, activeIndex, itemCount = 0) => {
     card.classList.toggle("near", distance >= 0.5 && distance < 1.5);
     card.classList.toggle("far", distance >= 1.5 && distance < 2.5);
     card.classList.toggle("is-hidden", distance >= hideAt);
-    maybeHydrateCarouselCardMedia(card, distance);
+    maybeHydrateCarouselCardMedia(card, categoryId, itemId);
   });
 };
 
@@ -2567,50 +3065,10 @@ const resolveHorizontalSectionLaneFrame = (
   };
 };
 
-const getPrimaryTouchValue = (touch, axis) =>
-  axis === "vertical" ? touch.clientY : touch.clientX;
-
-const readWheelAxisDelta = (event, axis) =>
-  axis === "horizontal"
-    ? Math.abs(event.deltaX) > 0.1
-      ? event.deltaX
-      : event.shiftKey
-        ? event.deltaY
-        : 0
-    : event.deltaY;
-
 const normalizeItemLaneWheelDelta = (event) => {
   const modeScale = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? 240 : 1;
-  const scaled = readWheelAxisDelta(event, ITEM_LANE_AXIS) * modeScale;
+  const scaled = readRuntimeAxisDelta(event, ITEM_LANE_AXIS) * modeScale;
   return clamp(scaled, -ITEM_LANE_WHEEL_DELTA_CAP, ITEM_LANE_WHEEL_DELTA_CAP);
-};
-
-const resolveWheelLaneIntent = (event) => {
-  const sectionDelta = readWheelAxisDelta(event, SECTION_LANE_AXIS);
-  const itemDelta = readWheelAxisDelta(event, ITEM_LANE_AXIS);
-  const sectionMagnitude = Math.abs(sectionDelta);
-  const itemMagnitude = Math.abs(itemDelta);
-  if (sectionMagnitude < AXIS_INTENT_MIN_PX && itemMagnitude < AXIS_INTENT_MIN_PX) {
-    return { sectionIntent: false, itemIntent: false, sectionDelta: 0 };
-  }
-  const sectionIntent =
-    sectionMagnitude >= AXIS_INTENT_MIN_PX &&
-    (itemMagnitude < AXIS_INTENT_MIN_PX ||
-      sectionMagnitude >= itemMagnitude * AXIS_DOMINANCE_RATIO);
-  const itemIntent =
-    itemMagnitude >= AXIS_INTENT_MIN_PX &&
-    (sectionMagnitude < AXIS_INTENT_MIN_PX ||
-      itemMagnitude >= sectionMagnitude * AXIS_DOMINANCE_RATIO);
-  if (sectionIntent && !itemIntent) {
-    return { sectionIntent: true, itemIntent: false, sectionDelta };
-  }
-  if (itemIntent && !sectionIntent) {
-    return { sectionIntent: false, itemIntent: true, sectionDelta: 0 };
-  }
-  if (sectionMagnitude >= itemMagnitude) {
-    return { sectionIntent: true, itemIntent: false, sectionDelta };
-  }
-  return { sectionIntent: false, itemIntent: true, sectionDelta: 0 };
 };
 
 const resolveFocusedSectionIndexByAxis = (container, axis) => {
@@ -2627,33 +3085,18 @@ const resolveFocusedSectionIndexByAxis = (container, axis) => {
   const focusBandStart = scroll + size * SECTION_FOCUS_BAND_START_RATIO;
   const focusBandEnd = scroll + size * SECTION_FOCUS_BAND_END_RATIO;
   const focusAnchor = scroll + size * 0.5;
-  let closestIndex = 0;
-  let closestDistance = Number.POSITIVE_INFINITY;
-  sections.forEach((section, index) => {
-    const center = getSectionCenter(section, axis);
-    const distance = Math.abs(center - focusAnchor);
-    if (distance < closestDistance) {
-      closestDistance = distance;
-      closestIndex = index;
-    }
-  });
-
   const stableIndex = axis === "horizontal" ? stableHorizontalSectionIndex : stableVerticalSectionIndex;
-  if (stableIndex >= 0 && stableIndex < sections.length && stableIndex !== closestIndex) {
-    const stableCenter = getSectionCenter(sections[stableIndex], axis);
-    const stableDistance = Math.abs(stableCenter - focusAnchor);
-    if (stableCenter >= focusBandStart && stableCenter <= focusBandEnd) {
-      closestIndex = stableIndex;
-    } else {
-      const hysteresisPx = Math.max(
-        axis === "horizontal" ? HORIZONTAL_INDEX_HYSTERESIS_PX : VERTICAL_INDEX_HYSTERESIS_PX,
-        Math.round(size * 0.04)
-      );
-      if (stableDistance <= closestDistance + hysteresisPx) {
-        closestIndex = stableIndex;
-      }
-    }
-  }
+  const closestIndex = resolveRuntimeFocusedIndex({
+    centers: sections.map((section) => getSectionCenter(section, axis)),
+    focusAnchor,
+    focusBandStart,
+    focusBandEnd,
+    stableIndex,
+    hysteresisPx: Math.max(
+      axis === "horizontal" ? HORIZONTAL_INDEX_HYSTERESIS_PX : VERTICAL_INDEX_HYSTERESIS_PX,
+      Math.round(size * 0.04)
+    )
+  });
 
   if (axis === "horizontal") {
     stableHorizontalSectionIndex = closestIndex;
@@ -2725,6 +3168,42 @@ const getFocusedSectionIndex = (container = app.querySelector(".menu-scroll")) =
   return resolveFocusedSectionIndexByAxis(container, SECTION_LANE_AXIS);
 };
 
+const syncRuntimeExplorationState = (focusedSectionIndex = getFocusedSectionIndex()) => {
+  const activeItemIndexBySection = {};
+  const itemHintVisibleBySection = {};
+  const cardEntries = [];
+  const carousels = Array.from(app.querySelectorAll(".menu-carousel"));
+  carousels.forEach((container) => {
+    const categoryId = String(container?.dataset?.categoryId || "").trim();
+    if (!categoryId) return;
+    const category = categoryById.get(categoryId);
+    const cards = Array.from(container.querySelectorAll(".carousel-card"));
+    const count = category?.items?.length || cards.length || 0;
+    const rawActiveIndex = Number(container.dataset.activeIndex || "0") || 0;
+    const activeIndex = count > 0 ? wrapCarouselIndex(Math.round(rawActiveIndex), count) : 0;
+    activeItemIndexBySection[categoryId] = activeIndex;
+    itemHintVisibleBySection[categoryId] = false;
+    cards.forEach((card, index) => {
+      const itemId = String(card?.dataset?.item || "").trim();
+      if (!itemId) return;
+      const sourceIndex = Number(card.dataset.source || index);
+      cardEntries.push({
+        sectionId: categoryId,
+        itemId,
+        tier: count > 0 ? getRuntimeCardActivationTier(activeIndex, sourceIndex, count) : "deferred"
+      });
+    });
+  });
+  explorationCoreState = deriveExplorationCoreState({
+    focusedSectionIndex,
+    activeItemIndexBySection,
+    cardEntries,
+    sectionHintVisible: runtimeGuidanceVisible && !runtimeGuidanceDismissed,
+    itemHintVisibleBySection
+  });
+  return explorationCoreState;
+};
+
 const centerSectionByLane = (container, index, behavior = "smooth") => {
   if (SECTION_LANE_AXIS === "horizontal") {
     centerSectionHorizontally(container, index, behavior);
@@ -2779,6 +3258,7 @@ const applySectionFocus = (container) => {
     section.style.setProperty("--section-focus", focus.toFixed(3));
     section.classList.toggle("is-centered", index === closestIndex);
   });
+  syncRuntimeExplorationState(closestIndex);
 };
 
 const snapSectionLane = (container, behavior = "smooth") => {
@@ -2805,13 +3285,17 @@ const shiftSection = (direction, behavior = "smooth") => {
   if (sections.length <= 1) return;
   const current = getFocusedSectionIndex(container);
   if (current < 0) return;
-  const next = Math.min(sections.length - 1, Math.max(0, current + direction));
-  if (next === current) {
+  const { nextIndex, hitBoundary } = resolveRuntimeSectionMoveTarget(
+    current,
+    direction,
+    sections.length
+  );
+  if (hitBoundary) {
     triggerSectionBoundaryRecoil(container, SECTION_LANE_AXIS, direction);
     return;
   }
-  centerSectionByLane(container, next, behavior);
-  syncBackgroundForSectionIndex(next);
+  centerSectionByLane(container, nextIndex, behavior);
+  syncBackgroundForSectionIndex(nextIndex);
   applySectionFocus(container);
 };
 
@@ -2836,6 +3320,18 @@ const getFocusedSectionCategoryId = () => {
 
 const handleKeyboardNavigation = (event) => {
   if (event.defaultPrevented) return;
+  if (
+    debugFlickerEnabled &&
+    event.altKey &&
+    event.shiftKey &&
+    !event.metaKey &&
+    !event.ctrlKey &&
+    String(event.key || "").toLowerCase() === "d"
+  ) {
+    event.preventDefault();
+    toggleDebugFlickerHudVisibility();
+    return;
+  }
   if (event.metaKey || event.ctrlKey || event.altKey) return;
   if (isEditableKeyboardTarget(event.target)) return;
 
@@ -2859,10 +3355,8 @@ const handleKeyboardNavigation = (event) => {
   const categoryId = getFocusedSectionCategoryId();
   if (!categoryId) return;
 
-  const sectionBackKey = SECTION_LANE_AXIS === "horizontal" ? "ArrowLeft" : "ArrowUp";
-  const sectionForwardKey = SECTION_LANE_AXIS === "horizontal" ? "ArrowRight" : "ArrowDown";
-  const itemBackKey = ITEM_LANE_AXIS === "horizontal" ? "ArrowLeft" : "ArrowUp";
-  const itemForwardKey = ITEM_LANE_AXIS === "horizontal" ? "ArrowRight" : "ArrowDown";
+  const { sectionBackKey, sectionForwardKey, itemBackKey, itemForwardKey } =
+    resolveRuntimeArrowKeyBindings(SECTION_LANE_AXIS, ITEM_LANE_AXIS);
 
   if (event.key === sectionBackKey) {
     event.preventDefault();
@@ -2958,7 +3452,7 @@ const beginItemLaneTouch = (categoryId, event) => {
     id: touch.identifier,
     startX: touch.clientX,
     startY: touch.clientY,
-    lastPrimary: getPrimaryTouchValue(touch, ITEM_LANE_AXIS),
+    lastPrimary: readRuntimePrimaryTouchValue(touch, ITEM_LANE_AXIS),
     axis: "pending"
   };
 };
@@ -2972,19 +3466,19 @@ const moveItemLaneTouch = (categoryId, event) => {
   if (!touch) return false;
   const totalDx = touch.clientX - state.touch.startX;
   const totalDy = touch.clientY - state.touch.startY;
-  const primaryMagnitude =
-    ITEM_LANE_AXIS === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
-  const secondaryMagnitude =
-    ITEM_LANE_AXIS === "vertical" ? Math.abs(totalDx) : Math.abs(totalDy);
-  if (
-    state.touch.axis === "pending" &&
-    Math.max(Math.abs(totalDx), Math.abs(totalDy)) >= ITEM_LANE_TOUCH_INTENT_THRESHOLD
-  ) {
-    state.touch.axis = primaryMagnitude >= secondaryMagnitude ? "primary" : "secondary";
+  if (state.touch.axis === "pending") {
+    const intentAxis = resolveRuntimeTouchIntentAxis({
+      totalDx,
+      totalDy,
+      sectionAxis: ITEM_LANE_AXIS,
+      itemAxis: SECTION_LANE_AXIS,
+      minIntentPx: ITEM_LANE_TOUCH_INTENT_THRESHOLD
+    });
+    state.touch.axis = intentAxis === "section" ? "primary" : intentAxis;
   }
   if (state.touch.axis !== "primary") return false;
   event.preventDefault();
-  const currentPrimary = getPrimaryTouchValue(touch, ITEM_LANE_AXIS);
+  const currentPrimary = readRuntimePrimaryTouchValue(touch, ITEM_LANE_AXIS);
   const delta = currentPrimary - state.touch.lastPrimary;
   state.touch.lastPrimary = currentPrimary;
   if (Math.abs(delta) < 0.2) return true;
@@ -3048,7 +3542,13 @@ const bindCarousels = () => {
         return;
       }
       if (event.defaultPrevented) return;
-      const intent = resolveWheelLaneIntent(event);
+      const intent = resolveRuntimeWheelIntent(
+        event,
+        SECTION_LANE_AXIS,
+        ITEM_LANE_AXIS,
+        AXIS_INTENT_MIN_PX,
+        AXIS_DOMINANCE_RATIO
+      );
       if (!intent.itemIntent) return;
       event.preventDefault();
       dismissRuntimeGuidance();
@@ -3132,6 +3632,7 @@ const bindCards = () => {
       if (!dish) return;
       dismissRuntimeGuidance();
       prefetchDishDetailByIds(categoryId, itemId, true);
+      void ensureDetailOnDemandByIds(categoryId, itemId);
       const allergenLabel = getTerm("allergens");
       const description = textOf(dish.description);
       const longDesc = textOf(dish.longDescription);
@@ -3165,6 +3666,7 @@ const bindCards = () => {
       setInteractiveModalSurfaceFrozen(Boolean(activeModalInteractiveAsset));
       debugFlickerResolvedRenderer = "fallback-image";
       detailRotateDirection = getDishRotateDirection(dish);
+      modal.classList.add("open");
       modalContent.style.cssText = getItemFontStyle(dish);
       modalContent.innerHTML = `
         ${renderDebugFlickerHud() || renderGhostDebugFlickerHud()}
@@ -3197,10 +3699,8 @@ const bindCards = () => {
           ${metaHtml}
         </div>
       `;
-      modal.classList.add("open");
       syncDebugFlickerBodyClass();
-      bindDebugFlickerHud(modalContent);
-      updateDebugFlickerHud();
+      syncModalDebugFlickerHud();
       if (activeModalInteractiveAsset) {
         void setupInteractiveModalMedia(activeModalInteractiveAsset);
       }
@@ -3224,7 +3724,13 @@ const bindSectionFocus = () => {
       blockFrozenEvent(event);
       return;
     }
-    const intent = resolveWheelLaneIntent(event);
+    const intent = resolveRuntimeWheelIntent(
+      event,
+      SECTION_LANE_AXIS,
+      ITEM_LANE_AXIS,
+      AXIS_INTENT_MIN_PX,
+      AXIS_DOMINANCE_RATIO
+    );
     if (!intent.sectionIntent) return;
     event.preventDefault();
     dismissRuntimeGuidance();
@@ -3266,7 +3772,7 @@ const bindSectionFocus = () => {
       id: touch.identifier,
       startX: touch.clientX,
       startY: touch.clientY,
-      lastPrimary: getPrimaryTouchValue(touch, SECTION_LANE_AXIS),
+      lastPrimary: readRuntimePrimaryTouchValue(touch, SECTION_LANE_AXIS),
       axis: "pending"
     };
   };
@@ -3283,21 +3789,20 @@ const bindSectionFocus = () => {
     if (!touch) return;
     const totalDx = touch.clientX - sectionLaneTouchState.startX;
     const totalDy = touch.clientY - sectionLaneTouchState.startY;
-    const sectionMagnitude =
-      SECTION_LANE_AXIS === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
-    const itemMagnitude =
-      ITEM_LANE_AXIS === "vertical" ? Math.abs(totalDy) : Math.abs(totalDx);
-    if (
-      sectionLaneTouchState.axis === "pending" &&
-      Math.max(Math.abs(totalDx), Math.abs(totalDy)) >= SECTION_LANE_TOUCH_INTENT_THRESHOLD
-    ) {
-      sectionLaneTouchState.axis = sectionMagnitude >= itemMagnitude ? "section" : "item";
+    if (sectionLaneTouchState.axis === "pending") {
+      sectionLaneTouchState.axis = resolveRuntimeTouchIntentAxis({
+        totalDx,
+        totalDy,
+        sectionAxis: SECTION_LANE_AXIS,
+        itemAxis: ITEM_LANE_AXIS,
+        minIntentPx: SECTION_LANE_TOUCH_INTENT_THRESHOLD
+      });
     }
     if (sectionLaneTouchState.axis !== "section") return;
     event.preventDefault();
     dismissRuntimeGuidance();
     if (Date.now() < sectionLaneWheelCooldownUntil) return;
-    const currentPrimary = getPrimaryTouchValue(touch, SECTION_LANE_AXIS);
+    const currentPrimary = readRuntimePrimaryTouchValue(touch, SECTION_LANE_AXIS);
     const delta = currentPrimary - sectionLaneTouchState.lastPrimary;
     sectionLaneTouchState.lastPrimary = currentPrimary;
     if (Math.abs(delta) < 0.2) return;
@@ -3415,5 +3920,16 @@ modal?.addEventListener(
 );
 window.addEventListener("keydown", handleKeyboardNavigation);
 
-render();
-void preloadStartupAssets();
+const bootRuntime = async () => {
+  try {
+    await loadRuntimeManifest();
+    render();
+    setRuntimeBootState("ready");
+    await preloadStartupAssets();
+  } catch (error) {
+    console.error("Runtime export boot failed", error);
+    renderRuntimeBootError("Missing or invalid runtime-manifest.json.");
+  }
+};
+
+void bootRuntime();

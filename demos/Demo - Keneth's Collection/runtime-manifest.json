@@ -1,0 +1,771 @@
+{
+  "schemaVersion": 1,
+  "exportVersion": "1774256761188",
+  "assets": [
+    {
+      "id": "background:bg-1771825781037",
+      "kind": "background",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/backgrounds/backgroundMannheim.webp?v=1774256761188"
+    },
+    {
+      "id": "branding:shared",
+      "kind": "branding",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "favicon.png?v=1774256761188",
+      "usages": [
+        "favicon",
+        "brandSignature"
+      ]
+    },
+    {
+      "id": "detail-poster:section-1770875951604:dish-1770876206157",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360Flowers-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876206157"
+    },
+    {
+      "id": "detail-poster:section-1770875951604:dish-1770876434114",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360Nochebuena-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876434114"
+    },
+    {
+      "id": "detail-poster:section-1770875951604:dish-1770876569880",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360Tesla-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876569880"
+    },
+    {
+      "id": "detail-poster:section-1770876020774:dish-1770876738287",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360vrHeadset-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770876738287"
+    },
+    {
+      "id": "detail-poster:section-1770876020774:dish-1770876880105",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360Instax-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770876880105"
+    },
+    {
+      "id": "detail-poster:section-1770876020774:dish-1770877008309",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/Switch-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770877008309"
+    },
+    {
+      "id": "detail-poster:section-1770876032404:dish-1770877112789",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360Cats-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1770877112789"
+    },
+    {
+      "id": "detail-poster:section-1770876032404:dish-1770877246224",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/360MarryGo-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1770877246224"
+    },
+    {
+      "id": "detail-poster:section-1770876032404:dish-1772934816012",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/Cat-Painting-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772934816012"
+    },
+    {
+      "id": "detail-poster:section-1770876032404:dish-1772935523073",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/Cat-Sculpture-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772935523073"
+    },
+    {
+      "id": "detail-poster:section-1770876032404:dish-1772935892779",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/Glass-Cat-int-poster.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772935892779"
+    },
+    {
+      "id": "detail-sprite:section-1770875951604:dish-1770876206157",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360Flowers-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876206157",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770875951604:dish-1770876434114",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360Nochebuena-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876434114",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770875951604:dish-1770876569880",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360Tesla-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876569880",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876020774:dish-1770876738287",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360vrHeadset-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770876738287",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876020774:dish-1770876880105",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360Instax-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770876880105",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876020774:dish-1770877008309",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/Switch-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770877008309",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876032404:dish-1770877112789",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360Cats-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1770877112789",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876032404:dish-1770877246224",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/360MarryGo-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1770877246224",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876032404:dish-1772934816012",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/Cat-Painting-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772934816012",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876032404:dish-1772935523073",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/Cat-Sculpture-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772935523073",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1770876032404:dish-1772935892779",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/Glass-Cat-int-sprite.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772935892779",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "font:0:assets/fonts/QuickingRegular-gw5KY.otf?v=1774256761188",
+      "kind": "font",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/fonts/QuickingRegular-gw5KY.otf?v=1774256761188"
+    },
+    {
+      "id": "font:1:assets/fonts/SuperBrigadeGradient-V4qA6.otf?v=1774256761188",
+      "kind": "font",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/fonts/SuperBrigadeGradient-V4qA6.otf?v=1774256761188"
+    },
+    {
+      "id": "guidance:circularMotionArrows",
+      "kind": "guidance",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "visual_onboarding/circular_motion_arrows.png?v=1774256761188"
+    },
+    {
+      "id": "guidance:horizontalMotionArrows",
+      "kind": "guidance",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "visual_onboarding/horizontal_motion_arrows.png?v=1774256761188"
+    },
+    {
+      "id": "guidance:horVerMotionArrows",
+      "kind": "guidance",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "visual_onboarding/hor_ver_motion_arrows.png?v=1774256761188"
+    },
+    {
+      "id": "guidance:pointingHand",
+      "kind": "guidance",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "visual_onboarding/pointing_hand.png?v=1774256761188"
+    },
+    {
+      "id": "guidance:sampleDish",
+      "kind": "guidance",
+      "surface": "shell",
+      "deliveryClass": "deferred",
+      "runtimePath": "visual_onboarding/sample_2d_dish.png?v=1774256761188"
+    },
+    {
+      "id": "list:section-1770875951604:dish-1770876206157",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360Flowers-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876206157",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360Flowers-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360Flowers-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360Flowers-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360Flowers-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770875951604:dish-1770876434114",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360Nochebuena-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876434114",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360Nochebuena-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360Nochebuena-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360Nochebuena-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360Nochebuena-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770875951604:dish-1770876569880",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360Tesla-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770875951604",
+      "itemId": "dish-1770876569880",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360Tesla-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360Tesla-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360Tesla-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360Tesla-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876020774:dish-1770876738287",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360vrHeadset-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770876738287",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360vrHeadset-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360vrHeadset-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360vrHeadset-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360vrHeadset-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876020774:dish-1770876880105",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360Instax-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770876880105",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360Instax-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360Instax-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360Instax-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360Instax-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876020774:dish-1770877008309",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/Switch-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876020774",
+      "itemId": "dish-1770877008309",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/Switch-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/Switch-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/Switch-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/Switch-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876032404:dish-1770877112789",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360Cats-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1770877112789",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360Cats-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360Cats-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360Cats-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360Cats-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876032404:dish-1770877246224",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/360MarryGo-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1770877246224",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/360MarryGo-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/360MarryGo-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/360MarryGo-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/360MarryGo-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876032404:dish-1772934816012",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/Cat-Painting-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772934816012",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/Cat-Painting-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/Cat-Painting-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/Cat-Painting-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/Cat-Painting-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876032404:dish-1772935523073",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/Cat-Sculpture-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772935523073",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/Cat-Sculpture-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/Cat-Sculpture-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/Cat-Sculpture-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/Cat-Sculpture-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1770876032404:dish-1772935892779",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/Glass-Cat-int-sprite-md.webp?v=1774256761188",
+      "sectionId": "section-1770876032404",
+      "itemId": "dish-1772935892779",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/Glass-Cat-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/Glass-Cat-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/Glass-Cat-int-sprite-md.webp?v=1774256761188",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/Glass-Cat-int-sprite-md.webp?v=1774256761188"
+        }
+      ]
+    },
+    {
+      "id": "shell:app.js",
+      "kind": "shell",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "app.js?v=1774256761188"
+    },
+    {
+      "id": "shell:index.html",
+      "kind": "shell",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "index.html?v=1774256761188"
+    },
+    {
+      "id": "shell:menu.json",
+      "kind": "shell",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "menu.json?v=1774256761188"
+    },
+    {
+      "id": "shell:runtime-manifest.json",
+      "kind": "shell",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "runtime-manifest.json?v=1774256761188"
+    },
+    {
+      "id": "shell:styles.css",
+      "kind": "shell",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "styles.css?v=1774256761188"
+    },
+    {
+      "id": "shell:sw.js",
+      "kind": "shell",
+      "surface": "shell",
+      "deliveryClass": "blocking",
+      "runtimePath": "sw.js?v=1774256761188"
+    }
+  ],
+  "deliveryPlan": {
+    "blocking": [
+      "shell:index.html",
+      "shell:menu.json",
+      "shell:runtime-manifest.json",
+      "shell:styles.css",
+      "shell:app.js",
+      "shell:sw.js",
+      "branding:shared",
+      "background:bg-1771825781037",
+      "list:section-1770876032404:dish-1770877112789",
+      "list:section-1770875951604:dish-1770876206157",
+      "list:section-1770876020774:dish-1770877008309"
+    ],
+    "earlyVisible": [
+      "list:section-1770876032404:dish-1772934816012",
+      "list:section-1770875951604:dish-1770876434114",
+      "list:section-1770876020774:dish-1770876738287"
+    ],
+    "deferred": [
+      "list:section-1770876032404:dish-1772935523073",
+      "list:section-1770875951604:dish-1770876569880",
+      "list:section-1770876020774:dish-1770876880105",
+      "list:section-1770876032404:dish-1772935892779",
+      "list:section-1770876032404:dish-1770877246224",
+      "font:0:assets/fonts/QuickingRegular-gw5KY.otf?v=1774256761188",
+      "font:1:assets/fonts/SuperBrigadeGradient-V4qA6.otf?v=1774256761188",
+      "guidance:circularMotionArrows",
+      "guidance:horVerMotionArrows",
+      "guidance:horizontalMotionArrows",
+      "guidance:pointingHand",
+      "guidance:sampleDish"
+    ],
+    "onDemand": [
+      "detail-sprite:section-1770876032404:dish-1770877112789",
+      "detail-sprite:section-1770875951604:dish-1770876206157",
+      "detail-sprite:section-1770876020774:dish-1770877008309",
+      "detail-sprite:section-1770876032404:dish-1772934816012",
+      "detail-sprite:section-1770875951604:dish-1770876434114",
+      "detail-sprite:section-1770876020774:dish-1770876738287",
+      "detail-sprite:section-1770876032404:dish-1772935523073",
+      "detail-sprite:section-1770875951604:dish-1770876569880",
+      "detail-sprite:section-1770876020774:dish-1770876880105",
+      "detail-sprite:section-1770876032404:dish-1772935892779",
+      "detail-sprite:section-1770876032404:dish-1770877246224"
+    ],
+    "intentPrefetch": [
+      "detail-poster:section-1770876032404:dish-1770877112789",
+      "detail-poster:section-1770875951604:dish-1770876206157",
+      "detail-poster:section-1770876020774:dish-1770877008309",
+      "detail-poster:section-1770876032404:dish-1772934816012",
+      "detail-poster:section-1770875951604:dish-1770876434114",
+      "detail-poster:section-1770876020774:dish-1770876738287",
+      "detail-poster:section-1770876032404:dish-1772935523073",
+      "detail-poster:section-1770875951604:dish-1770876569880",
+      "detail-poster:section-1770876020774:dish-1770876880105",
+      "detail-poster:section-1770876032404:dish-1772935892779",
+      "detail-poster:section-1770876032404:dish-1770877246224"
+    ],
+    "backgroundWarmup": [
+      "detail-sprite:section-1770876032404:dish-1770877112789",
+      "detail-sprite:section-1770875951604:dish-1770876206157",
+      "detail-sprite:section-1770876020774:dish-1770877008309",
+      "detail-sprite:section-1770876032404:dish-1772934816012",
+      "detail-sprite:section-1770875951604:dish-1770876434114",
+      "detail-sprite:section-1770876020774:dish-1770876738287",
+      "detail-sprite:section-1770876032404:dish-1772935523073",
+      "detail-sprite:section-1770875951604:dish-1770876569880",
+      "detail-sprite:section-1770876020774:dish-1770876880105",
+      "detail-sprite:section-1770876032404:dish-1772935892779",
+      "detail-sprite:section-1770876032404:dish-1770877246224"
+    ]
+  }
+}

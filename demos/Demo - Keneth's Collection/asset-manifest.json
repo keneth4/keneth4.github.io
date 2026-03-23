@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "keneth-s-gaussian-splattings-collection",
-  "generatedAt": "2026-03-19T05:17:42.015Z",
+  "generatedAt": "2026-03-23T09:06:03.475Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 167855,
+      "bytes": 191046,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -55,7 +55,7 @@
       "mime": "image/webp",
       "bytes": 1758372,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/360Cats-int-sprite.webp",
@@ -82,7 +82,7 @@
       "mime": "image/webp",
       "bytes": 2095632,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/360Flowers-int-sprite.webp",
@@ -109,7 +109,7 @@
       "mime": "image/webp",
       "bytes": 1095672,
       "responsiveVariant": null,
-      "firstView": true
+      "firstView": false
     },
     {
       "outputPath": "assets/items/360Instax-int-sprite.webp",
@@ -163,7 +163,7 @@
       "mime": "image/webp",
       "bytes": 2245316,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/360Nochebuena-int-sprite.webp",
@@ -190,7 +190,7 @@
       "mime": "image/webp",
       "bytes": 1105076,
       "responsiveVariant": null,
-      "firstView": true
+      "firstView": false
     },
     {
       "outputPath": "assets/items/360Tesla-int-sprite.webp",
@@ -217,7 +217,7 @@
       "mime": "image/webp",
       "bytes": 1674770,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/360vrHeadset-int-sprite.webp",
@@ -325,7 +325,7 @@
       "mime": "image/webp",
       "bytes": 1422446,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/Switch-int-sprite.webp",
@@ -355,15 +355,6 @@
       "firstView": false
     },
     {
-      "outputPath": "Logo.png",
-      "sourcePath": null,
-      "role": "shell",
-      "mime": "image/png",
-      "bytes": 345838,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
       "outputPath": "menu.json",
       "sourcePath": null,
       "role": "shell",
@@ -378,6 +369,15 @@
       "role": "shell",
       "mime": "text/plain",
       "bytes": 289,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "runtime-manifest.json",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/json",
+      "bytes": 26569,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -404,7 +404,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 90680,
+      "bytes": 68543,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -413,7 +413,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 3311,
+      "bytes": 3350,
       "responsiveVariant": null,
       "firstView": false
     },

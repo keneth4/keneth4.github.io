@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu",
-  "generatedAt": "2026-03-19T05:24:46.871Z",
+  "generatedAt": "2026-03-23T09:04:59.248Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 175929,
+      "bytes": 199120,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -118,7 +118,7 @@
       "mime": "image/webp",
       "bytes": 1114134,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/Bolognese-int-sprite.webp",
@@ -226,7 +226,7 @@
       "mime": "image/webp",
       "bytes": 2215528,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/Enmoladas-int-sprite.webp",
@@ -361,7 +361,7 @@
       "mime": "image/webp",
       "bytes": 1544270,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/Strawberry-Croissant-int-sprite.webp",
@@ -427,15 +427,6 @@
       "firstView": false
     },
     {
-      "outputPath": "Logo.png",
-      "sourcePath": null,
-      "role": "shell",
-      "mime": "image/png",
-      "bytes": 345838,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
       "outputPath": "menu.json",
       "sourcePath": null,
       "role": "shell",
@@ -450,6 +441,15 @@
       "role": "shell",
       "mime": "text/plain",
       "bytes": 289,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "runtime-manifest.json",
+      "sourcePath": null,
+      "role": "shell",
+      "mime": "application/json",
+      "bytes": 31990,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -476,7 +476,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "text/css",
-      "bytes": 90680,
+      "bytes": 68543,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -485,7 +485,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 3311,
+      "bytes": 3350,
       "responsiveVariant": null,
       "firstView": false
     },

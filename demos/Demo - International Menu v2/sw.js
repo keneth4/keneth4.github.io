@@ -1,12 +1,13 @@
-const SHELL_CACHE_NAME = "menu-export-shell-1773897879489";
-const SPRITE_CACHE_NAME = "menu-export-sprites-1773897879489";
+const SHELL_CACHE_NAME = "menu-export-shell-1774256696927";
+const SPRITE_CACHE_NAME = "menu-export-sprites-1774256696927";
 const CACHE_PREFIX = "menu-export-";
-const PRECACHE_URLS = ["./","index.html","app.js?v=1773897879489","styles.css?v=1773897879489","favicon.png?v=1773897879489","Logo.png?v=1773897879489","visual_onboarding/circular_motion_arrows.png?v=1773897879489","visual_onboarding/hor_ver_motion_arrows.png?v=1773897879489","visual_onboarding/horizontal_motion_arrows.png?v=1773897879489","visual_onboarding/pointing_hand.png?v=1773897879489","visual_onboarding/sample_2d_dish.png?v=1773897879489"];
+const PRECACHE_URLS = ["./","index.html","app.js?v=1774256696927","runtime-manifest.json?v=1774256696927","styles.css?v=1774256696927","favicon.png?v=1774256696927","visual_onboarding/circular_motion_arrows.png?v=1774256696927","visual_onboarding/hor_ver_motion_arrows.png?v=1774256696927","visual_onboarding/horizontal_motion_arrows.png?v=1774256696927","visual_onboarding/pointing_hand.png?v=1774256696927","visual_onboarding/sample_2d_dish.png?v=1774256696927"];
 const resolvePrecacheRequestUrl = (value) => new URL(value, self.location.href).href;
 const PRECACHE_REQUEST_URLS = new Set(PRECACHE_URLS.map(resolvePrecacheRequestUrl));
 const isSameOrigin = (url) => url.origin === self.location.origin;
-const isInteractiveSpriteRequest = (url) =>
-  isSameOrigin(url) && /\/assets\/items\/.+-int-sprite\.webp$/i.test(url.pathname);
+const isInteractiveDetailRequest = (url) =>
+  isSameOrigin(url) &&
+  /\/assets\/items\/.+-int-(?:sprite\.webp|alpha\.(?:webm|mp4))$/i.test(url.pathname);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -64,7 +65,7 @@ const handleShellAssetRequest = async (request) => {
   return response;
 };
 
-const handleInteractiveSpriteRequest = async (request) => {
+const handleInteractiveDetailRequest = async (request) => {
   const cache = await caches.open(SPRITE_CACHE_NAME);
   const cached = await cache.match(request);
   if (cached) return cached;
@@ -84,8 +85,8 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(handleNavigationRequest(request));
     return;
   }
-  if (isInteractiveSpriteRequest(url)) {
-    event.respondWith(handleInteractiveSpriteRequest(request));
+  if (isInteractiveDetailRequest(url)) {
+    event.respondWith(handleInteractiveDetailRequest(request));
     return;
   }
   if (PRECACHE_REQUEST_URLS.has(url.href)) {
