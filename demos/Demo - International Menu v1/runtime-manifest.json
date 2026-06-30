@@ -1,20 +1,34 @@
 {
   "schemaVersion": 1,
-  "exportVersion": "1774256454547",
+  "exportVersion": "1782804572998",
   "assets": [
     {
       "id": "background:bg-1773011234136",
       "kind": "background",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/backgrounds/Uhland-bg.webp?v=1774256454547"
+      "runtimePath": "assets/backgrounds/karthik-vadlamani-ycLHTttzI-4-unsplash-md.webp?v=1782804572998"
+    },
+    {
+      "id": "background:bg-1782801647326",
+      "kind": "background",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp?v=1782804572998"
+    },
+    {
+      "id": "background:bg-1782802608444",
+      "kind": "background",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/backgrounds/restaurant-md.webp?v=1782804572998"
     },
     {
       "id": "branding:shared",
       "kind": "branding",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "favicon.png?v=1774256454547",
+      "runtimePath": "favicon.png?v=1782804572998",
       "usages": [
         "favicon",
         "brandSignature"
@@ -25,7 +39,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Arizona-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Ciel-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012367214",
       "itemId": "dish-1773012371096"
     },
@@ -34,16 +48,25 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Prime-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Sprite-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012367214",
       "itemId": "dish-1773012404013"
+    },
+    {
+      "id": "detail-poster:section-1773012367214:dish-1782798282968",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "intent-prefetch",
+      "runtimePath": "assets/items/Prime-tricolor-int-poster.webp?v=1782804572998",
+      "sectionId": "section-1773012367214",
+      "itemId": "dish-1782798282968"
     },
     {
       "id": "detail-poster:section-1773012554844:dish-1773012587145",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Bolognese-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Bolognese-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012587145"
     },
@@ -52,7 +75,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Enmoladas-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Enmoladas-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012647888"
     },
@@ -61,7 +84,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Schnitzel-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Schnitzel-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012672844"
     },
@@ -70,7 +93,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Short-Ribs-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Short-Ribs-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012722320"
     },
@@ -79,7 +102,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Pasta-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Pasta-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013219070"
     },
@@ -88,7 +111,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Sushi-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Sushi-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013317712"
     },
@@ -97,7 +120,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Beilagensalat-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Beilagensalat-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013379297"
     },
@@ -106,7 +129,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Strawberry-Croissant-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Strawberry-Croissant-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013450480"
     },
@@ -115,7 +138,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Chocolate-Croissant-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Chocolate-Croissant-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013505628"
     },
@@ -124,7 +147,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Baklava-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Baklava-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013546304"
     },
@@ -133,7 +156,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Dona-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Dona-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013561558"
     },
@@ -142,7 +165,7 @@
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Cookies-int-poster.webp?v=1774256454547",
+      "runtimePath": "assets/items/Cookies-int-poster.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013582012"
     },
@@ -151,7 +174,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Arizona-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Ciel-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012367214",
       "itemId": "dish-1773012371096",
       "sprite": {
@@ -169,9 +192,27 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Prime-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Sprite-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012367214",
       "itemId": "dish-1773012404013",
+      "sprite": {
+        "frameCount": 60,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 10,
+        "rows": 6,
+        "fps": 24
+      },
+      "warmupEligible": true
+    },
+    {
+      "id": "detail-sprite:section-1773012367214:dish-1782798282968",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/Prime-tricolor-int-sprite.webp?v=1782804572998",
+      "sectionId": "section-1773012367214",
+      "itemId": "dish-1782798282968",
       "sprite": {
         "frameCount": 60,
         "frameWidth": 500,
@@ -187,7 +228,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Bolognese-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Bolognese-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012587145",
       "sprite": {
@@ -205,7 +246,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Enmoladas-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Enmoladas-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012647888",
       "sprite": {
@@ -223,7 +264,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Schnitzel-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Schnitzel-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012672844",
       "sprite": {
@@ -241,7 +282,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Short-Ribs-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Short-Ribs-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012722320",
       "sprite": {
@@ -259,7 +300,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Pasta-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Pasta-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013219070",
       "sprite": {
@@ -277,7 +318,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Sushi-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Sushi-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013317712",
       "sprite": {
@@ -295,7 +336,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Beilagensalat-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Beilagensalat-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013379297",
       "sprite": {
@@ -313,7 +354,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Strawberry-Croissant-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Strawberry-Croissant-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013450480",
       "sprite": {
@@ -331,7 +372,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Chocolate-Croissant-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Chocolate-Croissant-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013505628",
       "sprite": {
@@ -349,7 +390,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Baklava-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Baklava-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013546304",
       "sprite": {
@@ -367,7 +408,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Dona-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Dona-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013561558",
       "sprite": {
@@ -385,7 +426,7 @@
       "kind": "detailSpriteHq",
       "surface": "modal-detail",
       "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Cookies-int-sprite.webp?v=1774256454547",
+      "runtimePath": "assets/items/Cookies-int-sprite.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013582012",
       "sprite": {
@@ -403,59 +444,59 @@
       "kind": "guidance",
       "surface": "shell",
       "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/circular_motion_arrows.png?v=1774256454547"
+      "runtimePath": "visual_onboarding/circular_motion_arrows.png?v=1782804572998"
     },
     {
       "id": "guidance:horizontalMotionArrows",
       "kind": "guidance",
       "surface": "shell",
       "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/horizontal_motion_arrows.png?v=1774256454547"
+      "runtimePath": "visual_onboarding/horizontal_motion_arrows.png?v=1782804572998"
     },
     {
       "id": "guidance:horVerMotionArrows",
       "kind": "guidance",
       "surface": "shell",
       "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/hor_ver_motion_arrows.png?v=1774256454547"
+      "runtimePath": "visual_onboarding/hor_ver_motion_arrows.png?v=1782804572998"
     },
     {
       "id": "guidance:pointingHand",
       "kind": "guidance",
       "surface": "shell",
       "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/pointing_hand.png?v=1774256454547"
+      "runtimePath": "visual_onboarding/pointing_hand.png?v=1782804572998"
     },
     {
       "id": "guidance:sampleDish",
       "kind": "guidance",
       "surface": "shell",
       "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/sample_2d_dish.png?v=1774256454547"
+      "runtimePath": "visual_onboarding/sample_2d_dish.png?v=1782804572998"
     },
     {
       "id": "list:section-1773012367214:dish-1773012371096",
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Arizona-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012367214",
       "itemId": "dish-1773012371096",
       "emissions": [
         {
-          "runtimePath": "assets/items/Arizona-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Arizona-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Arizona-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Arizona-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -464,24 +505,50 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Prime-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012367214",
       "itemId": "dish-1773012404013",
       "emissions": [
         {
-          "runtimePath": "assets/items/Prime-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Prime-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Prime-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Prime-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1782804572998"
+        }
+      ]
+    },
+    {
+      "id": "list:section-1773012367214:dish-1782798282968",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782804572998",
+      "sectionId": "section-1773012367214",
+      "itemId": "dish-1782798282968",
+      "emissions": [
+        {
+          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782804572998",
+          "responsiveVariant": "small"
+        },
+        {
+          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782804572998",
+          "responsiveVariant": "medium"
+        },
+        {
+          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782804572998",
+          "responsiveVariant": "large"
+        },
+        {
+          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -490,24 +557,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012587145",
       "emissions": [
         {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -516,24 +583,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012647888",
       "emissions": [
         {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -542,24 +609,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012672844",
       "emissions": [
         {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -568,24 +635,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773012722320",
       "emissions": [
         {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -594,24 +661,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013219070",
       "emissions": [
         {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -620,24 +687,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013317712",
       "emissions": [
         {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -646,24 +713,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012554844",
       "itemId": "dish-1773013379297",
       "emissions": [
         {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -672,24 +739,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013450480",
       "emissions": [
         {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -698,24 +765,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013505628",
       "emissions": [
         {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -724,24 +791,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013546304",
       "emissions": [
         {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -750,24 +817,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013561558",
       "emissions": [
         {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -776,24 +843,24 @@
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1774256454547",
+      "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1782804572998",
       "sectionId": "section-1773012574194",
       "itemId": "dish-1773013582012",
       "emissions": [
         {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "small"
         },
         {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "medium"
         },
         {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1774256454547",
+          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1782804572998",
           "responsiveVariant": "large"
         },
         {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1774256454547"
+          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1782804572998"
         }
       ]
     },
@@ -802,42 +869,42 @@
       "kind": "shell",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "app.js?v=1774256454547"
+      "runtimePath": "app.js?v=1782804572998"
     },
     {
       "id": "shell:index.html",
       "kind": "shell",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "index.html?v=1774256454547"
+      "runtimePath": "index.html?v=1782804572998"
     },
     {
       "id": "shell:menu.json",
       "kind": "shell",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "menu.json?v=1774256454547"
+      "runtimePath": "menu.json?v=1782804572998"
     },
     {
       "id": "shell:runtime-manifest.json",
       "kind": "shell",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "runtime-manifest.json?v=1774256454547"
+      "runtimePath": "runtime-manifest.json?v=1782804572998"
     },
     {
       "id": "shell:styles.css",
       "kind": "shell",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "styles.css?v=1774256454547"
+      "runtimePath": "styles.css?v=1782804572998"
     },
     {
       "id": "shell:sw.js",
       "kind": "shell",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "sw.js?v=1774256454547"
+      "runtimePath": "sw.js?v=1782804572998"
     }
   ],
   "deliveryPlan": {
@@ -849,7 +916,7 @@
       "shell:app.js",
       "shell:sw.js",
       "branding:shared",
-      "background:bg-1773011234136",
+      "background:bg-1782802608444",
       "list:section-1773012554844:dish-1773012647888",
       "list:section-1773012574194:dish-1773013450480",
       "list:section-1773012367214:dish-1773012371096"
@@ -860,8 +927,11 @@
       "list:section-1773012367214:dish-1773012404013"
     ],
     "deferred": [
+      "background:bg-1782801647326",
+      "background:bg-1773011234136",
       "list:section-1773012554844:dish-1773012672844",
       "list:section-1773012574194:dish-1773013546304",
+      "list:section-1773012367214:dish-1782798282968",
       "list:section-1773012554844:dish-1773012722320",
       "list:section-1773012574194:dish-1773013561558",
       "list:section-1773012554844:dish-1773013379297",
@@ -883,6 +953,7 @@
       "detail-sprite:section-1773012367214:dish-1773012404013",
       "detail-sprite:section-1773012554844:dish-1773012672844",
       "detail-sprite:section-1773012574194:dish-1773013546304",
+      "detail-sprite:section-1773012367214:dish-1782798282968",
       "detail-sprite:section-1773012554844:dish-1773012722320",
       "detail-sprite:section-1773012574194:dish-1773013561558",
       "detail-sprite:section-1773012554844:dish-1773013379297",
@@ -899,6 +970,7 @@
       "detail-poster:section-1773012367214:dish-1773012404013",
       "detail-poster:section-1773012554844:dish-1773012672844",
       "detail-poster:section-1773012574194:dish-1773013546304",
+      "detail-poster:section-1773012367214:dish-1782798282968",
       "detail-poster:section-1773012554844:dish-1773012722320",
       "detail-poster:section-1773012574194:dish-1773013561558",
       "detail-poster:section-1773012554844:dish-1773013379297",
@@ -915,6 +987,7 @@
       "detail-sprite:section-1773012367214:dish-1773012404013",
       "detail-sprite:section-1773012554844:dish-1773012672844",
       "detail-sprite:section-1773012574194:dish-1773013546304",
+      "detail-sprite:section-1773012367214:dish-1782798282968",
       "detail-sprite:section-1773012554844:dish-1773012722320",
       "detail-sprite:section-1773012574194:dish-1773013561558",
       "detail-sprite:section-1773012554844:dish-1773013379297",
