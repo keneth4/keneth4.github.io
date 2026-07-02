@@ -1,70 +1,43 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu-new",
-  "generatedAt": "2026-06-30T07:29:35.365Z",
+  "generatedAt": "2026-07-02T07:54:50.327Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 202626,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
-      "outputPath": "assets/backgrounds/karthik-vadlamani-ycLHTttzI-4-unsplash-md.webp",
-      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/karthik-vadlamani-ycLHTttzI-4-unsplash-md.webp",
-      "role": "background",
-      "mime": "image/webp",
-      "bytes": 588208,
-      "responsiveVariant": null,
-      "firstView": false
-    },
-    {
-      "outputPath": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp",
-      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp",
-      "role": "background",
-      "mime": "image/webp",
-      "bytes": 489712,
+      "bytes": 207187,
       "responsiveVariant": null,
       "firstView": false
     },
     {
       "outputPath": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg",
       "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg",
-      "role": "other",
+      "role": "background",
       "mime": "image/jpeg",
       "bytes": 2304305,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "assets/backgrounds/restaurant-md.webp",
-      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/restaurant-md.webp",
-      "role": "background",
-      "mime": "image/webp",
-      "bytes": 4505408,
-      "responsiveVariant": null,
-      "firstView": true
-    },
-    {
       "outputPath": "assets/backgrounds/restaurant.jpg",
       "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/restaurant.jpg",
-      "role": "other",
+      "role": "background",
       "mime": "image/jpeg",
       "bytes": 13725747,
       "responsiveVariant": null,
       "firstView": false
     },
     {
-      "outputPath": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash.jpg",
-      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash.jpg",
+      "outputPath": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp",
       "role": "background",
-      "mime": "image/jpeg",
-      "bytes": 8532605,
+      "mime": "image/webp",
+      "bytes": 1755498,
       "responsiveVariant": null,
-      "firstView": false
+      "firstView": true
     },
     {
       "outputPath": "assets/items/Baklava-int-poster.webp",
@@ -256,6 +229,33 @@
       "firstView": false
     },
     {
+      "outputPath": "assets/items/DrPepperZero-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/DrPepperZero-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 82604,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/DrPepperZero-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/DrPepperZero-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1170186,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/DrPepperZero-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/DrPepperZero-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 4993122,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
       "outputPath": "assets/items/Enmoladas-int-poster.webp",
       "sourcePath": "projects/restaurant-menu-new/assets/items/Enmoladas-int-poster.webp",
       "role": "other",
@@ -391,6 +391,33 @@
       "firstView": false
     },
     {
+      "outputPath": "assets/items/Snapple-Frambuesa-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/Snapple-Frambuesa-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 108450,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Snapple-Frambuesa-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/Snapple-Frambuesa-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1321482,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Snapple-Frambuesa-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/Snapple-Frambuesa-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 6564020,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
       "outputPath": "assets/items/Sprite-int-poster.webp",
       "sourcePath": "projects/restaurant-menu-new/assets/items/Sprite-int-poster.webp",
       "role": "other",
@@ -503,7 +530,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 63062,
+      "bytes": 69188,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -521,7 +548,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 34643,
+      "bytes": 38796,
       "responsiveVariant": null,
       "firstView": false
     },
