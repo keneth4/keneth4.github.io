@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu-new",
-  "generatedAt": "2026-07-02T07:54:50.327Z",
+  "generatedAt": "2026-07-02T09:08:22.533Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 207187,
+      "bytes": 209877,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -310,6 +310,33 @@
       "firstView": false
     },
     {
+      "outputPath": "assets/items/Pen-afiel-int-poster.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/Pen-afiel-int-poster.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 81832,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Pen-afiel-int-sprite-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/Pen-afiel-int-sprite-md.webp",
+      "role": "hero",
+      "mime": "image/webp",
+      "bytes": 1084254,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/items/Pen-afiel-int-sprite.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/items/Pen-afiel-int-sprite.webp",
+      "role": "other",
+      "mime": "image/webp",
+      "bytes": 4945484,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
       "outputPath": "assets/items/Prime-tricolor-int-poster.webp",
       "sourcePath": "projects/restaurant-menu-new/assets/items/Prime-tricolor-int-poster.webp",
       "role": "other",
@@ -530,7 +557,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 69188,
+      "bytes": 72791,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -548,7 +575,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 38796,
+      "bytes": 40842,
       "responsiveVariant": null,
       "firstView": false
     },
