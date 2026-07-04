@@ -1,43 +1,70 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu-new",
-  "generatedAt": "2026-07-02T09:08:22.533Z",
+  "generatedAt": "2026-07-04T04:01:10.741Z",
   "assets": [
     {
       "outputPath": "app.js",
       "sourcePath": null,
       "role": "shell",
       "mime": "application/javascript",
-      "bytes": 209877,
+      "bytes": 210617,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
+      "outputPath": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp",
+      "role": "background",
+      "mime": "image/webp",
+      "bytes": 489712,
       "responsiveVariant": null,
       "firstView": false
     },
     {
       "outputPath": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg",
       "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg",
-      "role": "background",
+      "role": "other",
       "mime": "image/jpeg",
       "bytes": 2304305,
       "responsiveVariant": null,
       "firstView": false
     },
     {
+      "outputPath": "assets/backgrounds/restaurant-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/restaurant-md.webp",
+      "role": "background",
+      "mime": "image/webp",
+      "bytes": 4505408,
+      "responsiveVariant": null,
+      "firstView": true
+    },
+    {
       "outputPath": "assets/backgrounds/restaurant.jpg",
       "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/restaurant.jpg",
-      "role": "background",
+      "role": "other",
       "mime": "image/jpeg",
       "bytes": 13725747,
       "responsiveVariant": null,
       "firstView": false
     },
     {
+      "outputPath": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md-md.webp",
+      "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md-md.webp",
+      "role": "background",
+      "mime": "image/webp",
+      "bytes": 631964,
+      "responsiveVariant": null,
+      "firstView": false
+    },
+    {
       "outputPath": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp",
       "sourcePath": "projects/restaurant-menu-new/assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp",
-      "role": "background",
+      "role": "other",
       "mime": "image/webp",
       "bytes": 1755498,
       "responsiveVariant": null,
-      "firstView": true
+      "firstView": false
     },
     {
       "outputPath": "assets/items/Baklava-int-poster.webp",
@@ -395,7 +422,7 @@
       "sourcePath": "projects/restaurant-menu-new/assets/items/Short-Ribs-int-poster.webp",
       "role": "other",
       "mime": "image/webp",
-      "bytes": 166502,
+      "bytes": 200576,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -404,7 +431,7 @@
       "sourcePath": "projects/restaurant-menu-new/assets/items/Short-Ribs-int-sprite-md.webp",
       "role": "hero",
       "mime": "image/webp",
-      "bytes": 1658720,
+      "bytes": 2224948,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -413,7 +440,7 @@
       "sourcePath": "projects/restaurant-menu-new/assets/items/Short-Ribs-int-sprite.webp",
       "role": "other",
       "mime": "image/webp",
-      "bytes": 10379792,
+      "bytes": 13014912,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -557,7 +584,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 72791,
+      "bytes": 73792,
       "responsiveVariant": null,
       "firstView": false
     },
@@ -575,7 +602,7 @@
       "sourcePath": null,
       "role": "shell",
       "mime": "application/json",
-      "bytes": 40842,
+      "bytes": 40853,
       "responsiveVariant": null,
       "firstView": false
     },

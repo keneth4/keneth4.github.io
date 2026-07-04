@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "slug": "restaurant-menu-new",
-  "generatedAt": "2026-07-02T09:08:22.533Z",
+  "generatedAt": "2026-07-04T04:01:10.741Z",
   "totals": {
-    "files": 73,
-    "assetFiles": 58,
+    "files": 76,
+    "assetFiles": 61,
     "shellFiles": 15,
-    "totalBytes": 205266730,
-    "assetBytes": 203727325,
-    "shellBytes": 1539405,
+    "totalBytes": 214130988,
+    "assetBytes": 212589831,
+    "shellBytes": 1541157,
     "firstViewAssetFiles": 7,
-    "firstViewImageBytes": 11043148,
+    "firstViewImageBytes": 13793058,
     "missingAssets": 0
   },
   "responsiveCoverage": {
@@ -19,7 +19,7 @@
     "ratio": 0
   },
   "references": {
-    "referencedAssets": 58,
+    "referencedAssets": 61,
     "unresolvedAssets": 0
   },
   "budgets": {
@@ -29,7 +29,7 @@
         "key": "jsGzipBytes",
         "label": "Export JS (gzip)",
         "threshold": 97280,
-        "actual": 47864,
+        "actual": 47924,
         "status": "pass"
       },
       {
@@ -43,7 +43,7 @@
         "key": "firstViewImageBytes",
         "label": "First-view images",
         "threshold": 1258291,
-        "actual": 11043148,
+        "actual": 13793058,
         "status": "fail"
       }
     ]

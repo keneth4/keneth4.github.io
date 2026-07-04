@@ -13,7 +13,7 @@
       "de": "Internationales Menü"
     },
     "identityMode": "logo",
-    "logoSrc": "assets/logos/pngwing.com.png?v=1782983299846",
+    "logoSrc": "assets/logos/pngwing.com.png?v=1783137667790",
     "fontFamily": "Fraunces",
     "fontSource": "",
     "primaryColor": {
@@ -50,9 +50,9 @@
     {
       "id": "bg-1782802608444",
       "label": "Fondo 3",
-      "src": "assets/backgrounds/restaurant.jpg?v=1782983299846",
+      "src": "assets/backgrounds/restaurant-md.webp?v=1783137667790",
       "type": "image",
-      "originalSrc": "assets/backgrounds/restaurant.jpg?v=1782983299846",
+      "originalSrc": "assets/backgrounds/restaurant.jpg?v=1783137667790",
       "viewportFocus": {
         "portrait": {
           "x": 70,
@@ -62,14 +62,23 @@
           "x": 50,
           "y": 79
         }
+      },
+      "derived": {
+        "profileId": "ffmpeg-v7-background-2of3-animated-webp",
+        "medium": {
+          "webp": "assets/backgrounds/restaurant-md.webp?v=1783137667790"
+        },
+        "large": {
+          "webp": "assets/backgrounds/restaurant-md.webp?v=1783137667790"
+        }
       }
     },
     {
       "id": "bg-1782801647326",
       "label": "Fondo 2",
-      "src": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg?v=1782983299846",
+      "src": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp?v=1783137667790",
       "type": "image",
-      "originalSrc": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg?v=1782983299846",
+      "originalSrc": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash.jpg?v=1783137667790",
       "viewportFocus": {
         "portrait": {
           "x": 0,
@@ -79,14 +88,23 @@
           "x": 50,
           "y": 75
         }
+      },
+      "derived": {
+        "profileId": "ffmpeg-v7-background-2of3-animated-webp",
+        "medium": {
+          "webp": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp?v=1783137667790"
+        },
+        "large": {
+          "webp": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp?v=1783137667790"
+        }
       }
     },
     {
       "id": "bg-1773011234136",
       "label": "Fondo 1",
-      "src": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp?v=1782983299846",
+      "src": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md-md.webp?v=1783137667790",
       "type": "image",
-      "originalSrc": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp?v=1782983299846",
+      "originalSrc": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md.webp?v=1783137667790",
       "viewportFocus": {
         "portrait": {
           "x": 100,
@@ -95,6 +113,15 @@
         "wide": {
           "x": 50,
           "y": 33
+        }
+      },
+      "derived": {
+        "profileId": "ffmpeg-v7-background-2of3-animated-webp",
+        "medium": {
+          "webp": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md-md.webp?v=1783137667790"
+        },
+        "large": {
+          "webp": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md-md.webp?v=1783137667790"
         }
       }
     }
@@ -152,32 +179,32 @@
           "badges": [],
           "spiceLevel": 1,
           "media": {
-            "hero360": "assets/items/Enmoladas-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Enmoladas-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Enmoladas-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Enmoladas",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Enmoladas-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Enmoladas-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Enmoladas-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Enmoladas-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Enmoladas-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Enmoladas-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Enmoladas-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Enmoladas-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Enmoladas-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -240,32 +267,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Bolognese-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Bolognese-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Bolognese-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Bolognese",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Bolognese-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Bolognese-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Bolognese-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Bolognese-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Bolognese-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Bolognese-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Bolognese-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Bolognese-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Bolognese-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -320,32 +347,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Schnitzel-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Schnitzel-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Schnitzel-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Schnitzel",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Schnitzel-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Schnitzel-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Schnitzel-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Schnitzel-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Schnitzel-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Schnitzel-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Schnitzel-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Schnitzel-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Schnitzel-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -392,32 +419,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Short-Ribs-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Short-Ribs-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Short-Ribs",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Short-Ribs-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Short-Ribs-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Short-Ribs-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Short-Ribs-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Short-Ribs-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -457,32 +484,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Beilagensalat-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Beilagensalat-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Beilagensalat",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Beilagensalat-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Beilagensalat-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Beilagensalat-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Beilagensalat-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Beilagensalat-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -529,32 +556,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Pasta-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Pasta-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Pasta-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Pasta",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Pasta-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Pasta-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Pasta-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Pasta-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Pasta-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Pasta-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Pasta-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Pasta-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Pasta-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -633,32 +660,32 @@
           "badges": [],
           "spiceLevel": 1,
           "media": {
-            "hero360": "assets/items/Sushi-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Sushi-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Sushi-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Sushi",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Sushi-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Sushi-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Sushi-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Sushi-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Sushi-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Sushi-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Sushi-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Sushi-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Sushi-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -732,32 +759,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Strawberry-Croissant-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Strawberry-Croissant-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Strawberry-Croissant",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Strawberry-Croissant-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Strawberry-Croissant-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Strawberry-Croissant-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Strawberry-Croissant-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -828,32 +855,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Chocolate-Croissant-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Chocolate-Croissant-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Chocolate-Croissant",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Chocolate-Croissant-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Chocolate-Croissant-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Chocolate-Croissant-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Chocolate-Croissant-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -916,32 +943,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Baklava-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Baklava-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Baklava-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Baklava",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Baklava-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Baklava-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Baklava-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Baklava-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Baklava-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Baklava-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Baklava-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Baklava-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Baklava-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1012,32 +1039,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Dona-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Dona-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Dona-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Dona",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Dona-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Dona-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Dona-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Dona-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Dona-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Dona-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Dona-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Dona-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Dona-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Dona-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Dona-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Dona-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1116,32 +1143,32 @@
           "badges": [],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Cookies-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Cookies-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Cookies-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Cookies",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Cookies-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Cookies-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Cookies-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Cookies-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Cookies-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Cookies-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Cookies-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Cookies-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Cookies-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1192,32 +1219,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Ciel-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Ciel-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Ciel-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Ciel",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Ciel-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Ciel-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Ciel-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Ciel-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Ciel-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Ciel-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Ciel-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Ciel-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Ciel-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1257,32 +1284,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Sprite-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Sprite-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Sprite-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Sprite",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Sprite-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Sprite-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Sprite-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Sprite-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Sprite-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Sprite-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Sprite-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Sprite-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Sprite-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1322,32 +1349,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Prime-tricolor-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Prime-tricolor-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Prime-tricolor",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Prime-tricolor-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Prime-tricolor-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Prime-tricolor-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Prime-tricolor-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1387,32 +1414,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/DrPepperZero-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/DrPepperZero-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/DrPepperZero-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "DrPepperZero",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/DrPepperZero-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/DrPepperZero-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/DrPepperZero-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/DrPepperZero-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/DrPepperZero-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/DrPepperZero-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/DrPepperZero-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/DrPepperZero-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/DrPepperZero-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1452,32 +1479,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Snapple-Frambuesa-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Snapple-Frambuesa-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Snapple-Frambuesa",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Snapple-Frambuesa-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Snapple-Frambuesa-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Snapple-Frambuesa-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Snapple-Frambuesa-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
@@ -1517,32 +1544,32 @@
           ],
           "spiceLevel": 0,
           "media": {
-            "hero360": "assets/items/Pen-afiel-int-sprite-md.webp?v=1782983299846",
-            "originalHero360": "assets/items/Pen-afiel-int-poster.webp?v=1782983299846",
+            "hero360": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
+            "originalHero360": "assets/items/Pen-afiel-int-poster.webp?v=1783137667790",
             "rotationDirection": "cw",
             "scrollAnimationMode": "hero360",
             "scrollAnimationSrc": "",
             "assetSetId": "Pen-afiel",
             "gallery": [],
             "responsive": {
-              "small": "assets/items/Pen-afiel-int-sprite-md.webp?v=1782983299846",
-              "medium": "assets/items/Pen-afiel-int-sprite-md.webp?v=1782983299846",
-              "large": "assets/items/Pen-afiel-int-sprite-md.webp?v=1782983299846"
+              "small": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
+              "medium": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
+              "large": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790"
             },
             "derived": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
               "medium": {
-                "webp": "assets/items/Pen-afiel-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790"
               },
               "large": {
-                "webp": "assets/items/Pen-afiel-int-sprite-md.webp?v=1782983299846"
+                "webp": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790"
               }
             },
             "interactive": {
               "profileId": "ffmpeg-v19-item-sequencezip-sprite-pair",
-              "poster": "assets/items/Pen-afiel-int-poster.webp?v=1782983299846",
+              "poster": "assets/items/Pen-afiel-int-poster.webp?v=1783137667790",
               "sprite": {
-                "image": "assets/items/Pen-afiel-int-sprite.webp?v=1782983299846",
+                "image": "assets/items/Pen-afiel-int-sprite.webp?v=1783137667790",
                 "frameCount": 60,
                 "columns": 10,
                 "rows": 6,
