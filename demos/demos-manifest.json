@@ -4,10 +4,10 @@
   "total": 3,
   "demos": [
     {
-      "name": "Demo - AM PM",
-      "folder": "Demo - AM PM",
-      "href": "/demos/Demo%20-%20AM%20PM/",
-      "previewImage": "/demos/Demo%20-%20AM%20PM/preview.webp"
+      "name": "AM PM",
+      "folder": "AM PM",
+      "href": "/demos/AM%20PM/",
+      "previewImage": "/demos/AM%20PM/preview.webp"
     },
     {
       "name": "Demo - International Menu v2",
