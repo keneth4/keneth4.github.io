@@ -1,0 +1,1970 @@
+{
+  "kind": "menumaker.catalog",
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-16T18:23:54.980Z",
+  "exportVersion": "catalog2-editor",
+  "meta": {
+    "slug": "sitio-am-pm",
+    "name": "Sitio AM PM",
+    "locales": [
+      "es"
+    ],
+    "defaultLocale": "es",
+    "money": {
+      "currency": "$",
+      "currencyPosition": "left",
+      "decimalSeparator": "dot"
+    },
+    "theme": {
+      "presetId": "custom",
+      "fontPreset": "custom",
+      "customFont": {
+        "path": "assets/fonts/cy-grotesk-key-bold.ttf",
+        "mime": "font/ttf",
+        "bytes": 251844
+      },
+      "primaryColor": "#59d8dc",
+      "secondaryColor": "#feffff",
+      "backgroundColor": "#9a3c97",
+      "backgroundStyle": "radial",
+      "panelColor": "#dca4da",
+      "textColor": "#f7f7f7",
+      "headerLabel": "Interactive catalog",
+      "textStyles": {
+        "cardPrice": {
+          "size": "xl",
+          "fontPreset": "serif",
+          "color": "#feffff"
+        },
+        "detailPrice": {
+          "fontPreset": "serif",
+          "size": "md",
+          "color": "#feffff"
+        },
+        "headerTitle": {
+          "fontPreset": "custom",
+          "size": "md"
+        },
+        "landingTitle": {
+          "fontPreset": "custom"
+        }
+      }
+    }
+  },
+  "business": {
+    "name": {
+      "es": "AM:PM",
+      "en": "International Menu",
+      "de": "Internationales Menü"
+    },
+    "logo": {
+      "path": "assets/logos/sitio-am-pm-logo.png",
+      "mime": "image/png",
+      "bytes": 45238
+    },
+    "aboutTitle": {
+      "es": "¿Qué es AM:PM?"
+    },
+    "aboutMarkdown": {
+      "es": "**AM:PM** es un concepto gastronómico enfocado en **desayunos y brunch**, cuyo principal diferenciador son los **chilaquiles**. Ofrece una propuesta atractiva con **siete tipos diferentes de salsas**, permitiendo al cliente personalizar su experiencia.\n\nAdemás de su producto estrella, el menú incluye una variedad de opciones tradicionales de desayuno como **molletes**, **huevos al gusto** y alternativas dulces como **waffles**, logrando un equilibrio entre lo clásico y lo indulgente."
+    },
+    "faqs": [
+      {
+        "id": "faq-mrmy9hdo",
+        "question": {
+          "es": "¿Pregunta 1?"
+        },
+        "answer": {
+          "es": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque. "
+        }
+      },
+      {
+        "id": "faq-mrmyb0l2",
+        "question": {
+          "es": "¿Pregunta 2?"
+        },
+        "answer": {
+          "es": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque."
+        }
+      },
+      {
+        "id": "faq-mrmyb4y0",
+        "question": {
+          "es": "¿Pregunta 3?"
+        },
+        "answer": {
+          "es": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet consectetur adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque."
+        }
+      }
+    ],
+    "contactMarkdown": {
+      "es": "El negocio está ubicado en **Plaza San Miguel**, donde actualmente no cuenta con competencia directa en el giro de desayunos, lo que representa una oportunidad estratégica para posicionarse como la **opción principal dentro de la zona**.\n\n**e-mail:** sample@mail.com"
+    },
+    "locations": [
+      {
+        "id": "location-1",
+        "label": {
+          "es": "Plaza San Miguel",
+          "en": "M"
+        },
+        "address": {
+          "es": "AM PM restaurante, Plaza San Miguel El Llano, 20900 Aguascalientes, Ags., México",
+          "en": "M"
+        },
+        "description": {
+          "es": "Ofrecemos una variedad de desayunos y brunch por la mañana, donde nuestra especialidad son los chilaquiles y waffles. Excelente ambiente familiar."
+        },
+        "hours": {
+          "es": "Lun-Dom 9:00-14:00"
+        },
+        "phone": "+524497568340",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AM%20PM%20restaurante%2C%20Plaza%20San%20Miguel%20El%20Llano%2C%2020900%20Aguascalientes%2C%20Ags.%2C%20M%C3%A9xico",
+        "embedUrl": "https://www.google.com/maps?q=AM%20PM%20restaurante%2C%20Plaza%20San%20Miguel%20El%20Llano%2C%2020900%20Aguascalientes%2C%20Ags.%2C%20M%C3%A9xico&output=embed"
+      }
+    ]
+  },
+  "order": {
+    "enabled": true,
+    "fulfillmentModes": [
+      {
+        "id": "pickup",
+        "label": {
+          "es": "Recoger",
+          "en": "Pickup"
+        },
+        "enabled": true
+      },
+      {
+        "id": "table",
+        "label": {
+          "es": "Mesa",
+          "en": "Table"
+        },
+        "enabled": true,
+        "requiresTable": true
+      }
+    ],
+    "fees": [
+      {
+        "id": "delivery-fee",
+        "label": {
+          "es": "Delivery fee",
+          "en": "Delivery fee"
+        },
+        "amount": 0,
+        "appliesToModes": [
+          "delivery"
+        ],
+        "enabled": false
+      }
+    ],
+    "whatsapp": {
+      "defaultContactId": "main",
+      "contacts": [
+        {
+          "id": "main",
+          "label": "Main",
+          "phone": "+524491890200"
+        }
+      ]
+    },
+    "paymentInstructions": {
+      "es": "La información de pago se confirma por Whatsapp. Los pedidos para recoger requieren pago previo."
+    },
+    "deliveryLinks": [
+      {
+        "id": "delivery-mrmz9ata",
+        "label": {
+          "es": "Uber Eats"
+        },
+        "url": "https://www.ubereats.com/mx/store/chilaquiles-am%3A-pm%3A/eUvas235RVCgw5_9UIAU0w?utm_campaign=CM2508147-search-free-nonbrand-google-pas_e_all_acq_Global&utm_medium=search-free-nonbrand&utm_source=google-pas&rwg_token=AE37R_gEtkAkBK9Fx32pzJ-ciO3mlwBglZ77VS3oacnO7hiqvVw6Q-ZFfvNua0nGBLB0OdkUfQHMJO3Ty7bGlf09xdaOKJl8RA%3D%3D",
+        "enabled": true,
+        "icon": {
+          "path": "assets/logos/uber-eats-delivery-icon.webp",
+          "mime": "image/webp",
+          "bytes": 1332,
+          "width": 96,
+          "height": 96
+        }
+      },
+      {
+        "id": "delivery-mrmzhw8f",
+        "label": {
+          "es": "DiDi Food"
+        },
+        "url": "https://oia.didiglobal.com/ds/q9TJD0?dp_sub1=5764607673916721604&dp_sub2=googlemap&dp_sub3=es-MX&dp_sub4=10&dp_sub5=52010100&dp_sub6=21.935814&dp_sub7=-102.315169",
+        "enabled": true,
+        "icon": {
+          "path": "assets/logos/didi-food-delivery-icon.webp",
+          "mime": "image/webp",
+          "bytes": 1584,
+          "width": 96,
+          "height": 96
+        }
+      }
+    ]
+  },
+  "modifierGroups": [
+    {
+      "id": "modifier-1",
+      "label": {
+        "es": "Salsa"
+      },
+      "required": false,
+      "minSelected": 0,
+      "maxSelected": 2,
+      "options": [
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Cinco chiles"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "spiceLevel": 5
+        },
+        {
+          "id": "option-2",
+          "label": {
+            "es": "Roja"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "spiceLevel": 4
+        },
+        {
+          "id": "option-3",
+          "label": {
+            "es": "Morita"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "spiceLevel": 3
+        },
+        {
+          "id": "option-4",
+          "label": {
+            "es": "Molcajete"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "spiceLevel": 3
+        },
+        {
+          "id": "option-5",
+          "label": {
+            "es": "De la Casa"
+          },
+          "priceDelta": 15,
+          "available": true,
+          "spiceLevel": 3
+        },
+        {
+          "id": "option-6",
+          "label": {
+            "es": "Verde"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "spiceLevel": 1
+        },
+        {
+          "id": "option-7",
+          "label": {
+            "es": "Mole"
+          },
+          "priceDelta": 15,
+          "available": true,
+          "spiceLevel": 1
+        },
+        {
+          "id": "option-8",
+          "label": {
+            "es": "Kids"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "spiceLevel": 0
+        }
+      ],
+      "description": {
+        "es": "Elige hasta dos salsas"
+      }
+    },
+    {
+      "id": "modifier-2",
+      "label": {
+        "es": "Proteína"
+      },
+      "required": true,
+      "minSelected": 1,
+      "maxSelected": 1,
+      "options": [
+        {
+          "id": "option-2",
+          "label": {
+            "es": "Arrachera"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-3",
+          "label": {
+            "es": "Cochinita Pibil"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-4",
+          "label": {
+            "es": "Chicharrón prensado"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-5",
+          "label": {
+            "es": "Chorizo"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-6",
+          "label": {
+            "es": "Huevo"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-7",
+          "label": {
+            "es": "Pollo"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Natural"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "defaultSelected": true
+        }
+      ]
+    },
+    {
+      "id": "modifier-3",
+      "label": {
+        "en": "Portion",
+        "es": "Porcion"
+      },
+      "required": true,
+      "minSelected": 1,
+      "maxSelected": 1,
+      "options": [
+        {
+          "id": "regular",
+          "label": {
+            "en": "Regular",
+            "es": "Regular"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "defaultSelected": true
+        },
+        {
+          "id": "small",
+          "label": {
+            "en": "Large",
+            "es": "Media porción"
+          },
+          "priceDelta": 0,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "modifier-4",
+      "label": {
+        "es": "Tipo de Totopo"
+      },
+      "required": true,
+      "minSelected": 1,
+      "maxSelected": 1,
+      "options": [
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Regulares"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "defaultSelected": true
+        },
+        {
+          "id": "option-2",
+          "label": {
+            "es": "Fit"
+          },
+          "priceDelta": 30,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "modifier-5",
+      "label": {
+        "es": "Tipo de mollete"
+      },
+      "required": true,
+      "minSelected": 1,
+      "maxSelected": 1,
+      "options": [
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Regulares"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "defaultSelected": true
+        },
+        {
+          "id": "option-2",
+          "label": {
+            "es": "Mollequiles"
+          },
+          "priceDelta": 30,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "modifier-6",
+      "label": {
+        "es": "Estilo de Huevos"
+      },
+      "required": true,
+      "minSelected": 1,
+      "maxSelected": 1,
+      "options": [
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Tradicionales"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "defaultSelected": true,
+          "description": {
+            "es": "Dos huevos estrellados o revueltos acompañados de frijoles"
+          }
+        },
+        {
+          "id": "option-2",
+          "label": {
+            "es": "Jamón o Salchicha"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 80
+        },
+        {
+          "id": "option-3",
+          "label": {
+            "es": "a la Mexicana"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 80
+        },
+        {
+          "id": "option-4",
+          "label": {
+            "es": "Chicharrón o Chorizo"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 120
+        },
+        {
+          "id": "option-5",
+          "label": {
+            "es": "Arrachera"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 130
+        },
+        {
+          "id": "option-6",
+          "label": {
+            "es": "Omelet"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 100
+        },
+        {
+          "id": "option-7",
+          "label": {
+            "es": "Divorciados"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 100,
+          "description": {
+            "es": "Elige dos salsas de tu preferencia"
+          }
+        },
+        {
+          "id": "option-8",
+          "label": {
+            "es": "Rancheros"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 100,
+          "description": {
+            "es": "Montados sobre dos tortillas fritas y dos salsas de tu preferencia"
+          }
+        },
+        {
+          "id": "option-9",
+          "label": {
+            "es": "AM"
+          },
+          "priceDelta": 0,
+          "available": true,
+          "priceOverride": 120,
+          "description": {
+            "es": "Acompañados con una pequeña porción de chilaquiles y frijoles"
+          }
+        }
+      ]
+    },
+    {
+      "id": "modifier-7",
+      "label": {
+        "es": "Toppings"
+      },
+      "required": false,
+      "minSelected": 0,
+      "maxSelected": 2,
+      "options": [
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Crema de avellana"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-2",
+          "label": {
+            "es": "Cajeta"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-3",
+          "label": {
+            "es": "Fresa"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-4",
+          "label": {
+            "es": "Leche condensada"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-5",
+          "label": {
+            "es": "Maple"
+          },
+          "priceDelta": 0,
+          "available": true
+        },
+        {
+          "id": "option-6",
+          "label": {
+            "es": "Platano"
+          },
+          "priceDelta": 0,
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "modifier-8",
+      "label": {
+        "es": "Topping Extra"
+      },
+      "required": false,
+      "minSelected": 0,
+      "maxSelected": 1,
+      "options": [
+        {
+          "id": "option-1",
+          "label": {
+            "es": "Topping Extra"
+          },
+          "priceDelta": 25,
+          "available": true
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "section-1",
+      "title": {
+        "es": "Platos Principales",
+        "en": ""
+      },
+      "productIds": [
+        "product-1",
+        "product-19",
+        "product-20",
+        "product-21"
+      ],
+      "presentation": {
+        "presetId": "contained-rail"
+      },
+      "icon": "chefHat"
+    },
+    {
+      "id": "section-2",
+      "title": {
+        "es": "Postres",
+        "en": ""
+      },
+      "productIds": [
+        "product-8",
+        "product-9"
+      ],
+      "presentation": {
+        "presetId": "contained-rail"
+      },
+      "icon": "iceCream"
+    },
+    {
+      "id": "section-3",
+      "title": {
+        "es": "Bebidas",
+        "en": ""
+      },
+      "productIds": [
+        "product-13",
+        "product-14",
+        "product-16",
+        "product-17",
+        "product-18"
+      ],
+      "presentation": {
+        "presetId": "thumbnails"
+      },
+      "icon": "wine"
+    }
+  ],
+  "products": [
+    {
+      "id": "product-1",
+      "kind": "configurable",
+      "name": {
+        "es": "Chilaquiles",
+        "en": ""
+      },
+      "description": {
+        "es": "Totopos de maíz frito servidos con ajonjolí negro, queso, crema y cebolla.",
+        "en": ""
+      },
+      "servingSize": {
+        "es": "1 porción - 250g"
+      },
+      "basePrice": 120,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/platos-principales-chilaquiles-poster.webp",
+          "mime": "image/webp",
+          "bytes": 204444,
+          "width": 500,
+          "height": 500,
+          "hash": "63b2547dd85fd228df5857a7f63fd45edbd0072ed890f950051c06058eea660a"
+        },
+        "listSprite360": {
+          "path": "assets/items/platos-principales-chilaquiles-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 10413214,
+          "width": 3520,
+          "height": 3520,
+          "hash": "71fae38e5e3fa7779f64b4626b3824adf061ca33c15d4d0b0099945f5b3248d7",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/platos-principales-chilaquiles-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 21051350,
+          "width": 5500,
+          "height": 5500,
+          "hash": "fcebe0f60bbf84e5576f75e139e3cef1809faec788d1f1b9a3a1768e6acc4a9a",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [
+        {
+          "id": "chef-recommendation",
+          "intent": "marketing",
+          "label": {
+            "en": "Recommended",
+            "es": "Recomendacion"
+          },
+          "tone": "accent"
+        }
+      ],
+      "dietaryBadges": [],
+      "allergens": [
+        {
+          "id": "dairy",
+          "label": {
+            "en": "Dairy",
+            "es": "Lacteos"
+          }
+        },
+        {
+          "id": "sesame",
+          "label": {
+            "en": "Sesame",
+            "es": "Ajonjoli"
+          }
+        }
+      ],
+      "spiceLevel": 0,
+      "modifierGroupRefs": [
+        {
+          "groupId": "modifier-1"
+        },
+        {
+          "groupId": "modifier-2",
+          "optionOverrides": [
+            {
+              "optionId": "option-2",
+              "priceDelta": 0,
+              "priceOverride": 150
+            },
+            {
+              "optionId": "option-3",
+              "priceDelta": 0,
+              "priceOverride": 145
+            },
+            {
+              "optionId": "option-4",
+              "priceDelta": 0,
+              "priceOverride": 130
+            },
+            {
+              "optionId": "option-5",
+              "priceDelta": 0,
+              "priceOverride": 130
+            },
+            {
+              "optionId": "option-6",
+              "priceDelta": 0,
+              "spiceLevel": 0,
+              "priceOverride": 120
+            },
+            {
+              "optionId": "option-7",
+              "priceDelta": 0,
+              "priceOverride": 130
+            },
+            {
+              "optionId": "option-1",
+              "priceDelta": 0,
+              "priceOverride": 100
+            }
+          ]
+        },
+        {
+          "groupId": "modifier-4"
+        },
+        {
+          "groupId": "modifier-3"
+        }
+      ],
+      "priceRules": [
+        {
+          "id": "variant-1",
+          "label": {
+            "es": "Naturales"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-1"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 100,
+          "defaultSelected": true
+        },
+        {
+          "id": "variant-2",
+          "label": {
+            "es": "Naturales 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-1"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 80,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-3",
+          "label": {
+            "es": "Huevos"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-6"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 120,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-4",
+          "label": {
+            "es": "Huevos 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-6"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 100,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-5",
+          "label": {
+            "es": "Arrachera"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-2"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 150,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-6",
+          "label": {
+            "es": "Arrachera 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-2"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 130,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-7",
+          "label": {
+            "es": "Chicharrón"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-4"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 130,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-8",
+          "label": {
+            "es": "Chicharrón 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-4"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 110,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-9",
+          "label": {
+            "es": "Chorizo"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-5"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 130,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-10",
+          "label": {
+            "es": "Chorizo 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-5"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 110,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-11",
+          "label": {
+            "es": "Cochinita"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-3"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 145,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-12",
+          "label": {
+            "es": "Cochinita 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-3"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 125,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-13",
+          "label": {
+            "es": "Pollo"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-7"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "regular"
+              ]
+            }
+          ],
+          "priceOverride": 130,
+          "defaultSelected": false
+        },
+        {
+          "id": "variant-14",
+          "label": {
+            "es": "Pollo 1/2"
+          },
+          "enabled": true,
+          "modifierConditions": [
+            {
+              "groupId": "modifier-2",
+              "optionIds": [
+                "option-7"
+              ]
+            },
+            {
+              "groupId": "modifier-3",
+              "optionIds": [
+                "small"
+              ]
+            }
+          ],
+          "priceOverride": 100,
+          "defaultSelected": false
+        }
+      ],
+      "comboSlots": [],
+      "sectionIds": [
+        "section-1"
+      ]
+    },
+    {
+      "id": "product-8",
+      "kind": "simple",
+      "name": {
+        "es": "Churro",
+        "en": ""
+      },
+      "description": {
+        "es": "Tira de masa frita, crujiente por fuera y suave por dentro, extruido con forma de estrella. Se espolvorea con azúcar y canela.",
+        "en": ""
+      },
+      "basePrice": 10,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/postres-churro-poster.webp",
+          "mime": "image/webp",
+          "bytes": 114104,
+          "width": 500,
+          "height": 500,
+          "hash": "f10fa7d0e877bcc2949160d8c5e7e435e8e60d316cd8c77c7ddeabfb9f269d2c"
+        },
+        "listSprite360": {
+          "path": "assets/items/postres-churro-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 6474938,
+          "width": 3520,
+          "height": 3520,
+          "hash": "9db7bf2fd1cd580ca547fcb23ab02b6ca176ed4a1943545f047d4b766f6add98",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/postres-churro-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 13750992,
+          "width": 5500,
+          "height": 5500,
+          "hash": "7cbe614c398385d755e47afa0cc1390a11afce10ffe8e22113463cdbb0ad9305",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [
+        {
+          "id": "gluten",
+          "label": {
+            "en": "Gluten",
+            "es": "Gluten"
+          }
+        }
+      ],
+      "modifierGroupRefs": [],
+      "comboSlots": [],
+      "sectionIds": [
+        "section-2"
+      ]
+    },
+    {
+      "id": "product-9",
+      "kind": "configurable",
+      "name": {
+        "es": "Waffle Clásico",
+        "en": ""
+      },
+      "description": {
+        "es": "Postre o desayuno tradicional hecho de masa ligera. Se caracteriza por su distintiva forma tridimensional cuadriculada y su perfecta combinación de texturas: un exterior crujiente y un interior suave y esponjoso.",
+        "en": ""
+      },
+      "basePrice": 75,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/postres-croissant-con-chocolate-poster.webp",
+          "mime": "image/webp",
+          "bytes": 125618,
+          "width": 500,
+          "height": 500,
+          "hash": "85cdb5bde770c71da4ba0bd6d8d9cff7ef510b8c345e295d0fd6f4f6c37f68df"
+        },
+        "listSprite360": {
+          "path": "assets/items/postres-croissant-con-chocolate-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 7687150,
+          "width": 3520,
+          "height": 3520,
+          "hash": "377c98829f01e3e92f11d05c02d261d00365cad609af4abc0daf79ae79ba1eea",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/postres-croissant-con-chocolate-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 15813204,
+          "width": 5500,
+          "height": 5500,
+          "hash": "cda325ab36ab700bca2f5c01c0ff6c0c0c73a2177e6aeddd2a5cd3d087eb7acd",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [
+        {
+          "id": "best-seller",
+          "intent": "marketing",
+          "label": {
+            "en": "Best seller",
+            "es": "Mas vendido"
+          },
+          "tone": "success"
+        }
+      ],
+      "dietaryBadges": [],
+      "allergens": [
+        {
+          "id": "gluten",
+          "label": {
+            "en": "Gluten",
+            "es": "Gluten"
+          }
+        },
+        {
+          "id": "egg",
+          "label": {
+            "en": "Egg",
+            "es": "Huevo"
+          }
+        }
+      ],
+      "modifierGroupRefs": [
+        {
+          "groupId": "modifier-7"
+        },
+        {
+          "groupId": "modifier-8"
+        },
+        {
+          "groupId": "modifier-7",
+          "refId": "modifier-7-3",
+          "label": {
+            "es": "Extras"
+          },
+          "dependsOn": {
+            "groupId": "modifier-8",
+            "optionIds": [
+              "option-1"
+            ],
+            "mode": "any"
+          }
+        }
+      ],
+      "comboSlots": [],
+      "sectionIds": [
+        "section-2"
+      ]
+    },
+    {
+      "id": "product-13",
+      "kind": "simple",
+      "name": {
+        "es": "Ciel Mineralizada",
+        "en": ""
+      },
+      "description": {
+        "es": "",
+        "en": ""
+      },
+      "basePrice": 35,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/bebidas-ciel-mineralizada-poster.webp",
+          "mime": "image/webp",
+          "bytes": 145296,
+          "width": 500,
+          "height": 500,
+          "hash": "ff10cf829ee13accb20b112329bed5942b04a1667103c12e05f4ceaf9854c592"
+        },
+        "listSprite360": {
+          "path": "assets/items/bebidas-ciel-mineralizada-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 9609606,
+          "width": 3520,
+          "height": 3520,
+          "hash": "e1de86152a8fae310bf2d206d4f589fa3e4a86758062b04bcca01bf3d8612447",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/bebidas-ciel-mineralizada-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 19121764,
+          "width": 5500,
+          "height": 5500,
+          "hash": "7c03ee050767b6d3a8ca51bd2028e4eac6273a49d470054b0970725d0d8dc652",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [],
+      "sectionIds": [
+        "section-3"
+      ]
+    },
+    {
+      "id": "product-14",
+      "kind": "simple",
+      "name": {
+        "es": "Sprite Zero",
+        "en": ""
+      },
+      "description": {
+        "es": "",
+        "en": ""
+      },
+      "basePrice": 35,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/bebidas-sprite-zero-poster.webp",
+          "mime": "image/webp",
+          "bytes": 110188,
+          "width": 500,
+          "height": 500,
+          "hash": "0698bbc77fcab521fffed7100b0f1a731265d1a13a0e6afcfee62d290dc2924f"
+        },
+        "listSprite360": {
+          "path": "assets/items/bebidas-sprite-zero-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 8168948,
+          "width": 3520,
+          "height": 3520,
+          "hash": "145a51c55f5b9864e8a9f7c801b548c7624099fd07138d687c06b124af3961cf",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/bebidas-sprite-zero-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 16933050,
+          "width": 5500,
+          "height": 5500,
+          "hash": "7f2210156708d797c6831579edd2360704f958749119df3bdf9c6b5e50b03026",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [],
+      "sectionIds": [
+        "section-3"
+      ]
+    },
+    {
+      "id": "product-16",
+      "kind": "simple",
+      "name": {
+        "es": "Dr Pepper Zero Azúcar",
+        "en": ""
+      },
+      "description": {
+        "es": "",
+        "en": ""
+      },
+      "basePrice": 35,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/bebidas-dr-pepper-zero-az-car-poster.webp",
+          "mime": "image/webp",
+          "bytes": 82164,
+          "width": 500,
+          "height": 500,
+          "hash": "3c4dfdd5f11787522a3a008c34bea407f28b9d783aaf03cedb01e94b080b5a8c"
+        },
+        "listSprite360": {
+          "path": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 5210696,
+          "width": 3520,
+          "height": 3520,
+          "hash": "0470ce8521f3f2dac78406385fe2bcf1d9c075797f3e991d2942af8371d38926",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 10488584,
+          "width": 5500,
+          "height": 5500,
+          "hash": "a9dcc1ed672a94b70b9261d6dc595aa3a1102c45e35ad8d7a5a53000b8a96a80",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [],
+      "sectionIds": [
+        "section-3"
+      ]
+    },
+    {
+      "id": "product-17",
+      "kind": "simple",
+      "name": {
+        "es": "Snapple Té de Frambuesa",
+        "en": ""
+      },
+      "description": {
+        "es": "",
+        "en": ""
+      },
+      "basePrice": 35,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/bebidas-snapple-t-de-frambuesa-poster.webp",
+          "mime": "image/webp",
+          "bytes": 108990,
+          "width": 500,
+          "height": 500,
+          "hash": "44d35366bd0fddf4b287c260d5b8ec31e817cd91314d524bf9cdfa9bd6bc9784"
+        },
+        "listSprite360": {
+          "path": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 6847822,
+          "width": 3520,
+          "height": 3520,
+          "hash": "e4cbf5ab248a0602e10636cffaa5de7f22f596278fb034d9c7fbdf2f99ebe2bb",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 13835398,
+          "width": 5500,
+          "height": 5500,
+          "hash": "f299c53a189288189f956ff266d95fdcfc821b29bea0db90998b85c233613ed2",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [],
+      "sectionIds": [
+        "section-3"
+      ]
+    },
+    {
+      "id": "product-18",
+      "kind": "simple",
+      "name": {
+        "es": "Peñafiel Limonada Sin Azúcar",
+        "en": ""
+      },
+      "description": {
+        "es": "",
+        "en": ""
+      },
+      "basePrice": 35,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-poster.webp",
+          "mime": "image/webp",
+          "bytes": 81012,
+          "width": 500,
+          "height": 500,
+          "hash": "ba35d6ed4fe43de47fb64082563733c0c280a67151a2ba04e09e55fddb60da35"
+        },
+        "listSprite360": {
+          "path": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 5009438,
+          "width": 3520,
+          "height": 3520,
+          "hash": "51c2db828e9fe017bb657ebeb0005667e5c0fd2ae7536a78ba2f4283d43d6d3e",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 10259278,
+          "width": 5500,
+          "height": 5500,
+          "hash": "e1f09a7f58c647a4c1346601a4541d8169612714aab07363ebf1c445a9cdeba7",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [],
+      "sectionIds": [
+        "section-3"
+      ]
+    },
+    {
+      "id": "product-19",
+      "kind": "configurable",
+      "name": {
+        "es": "Sopes"
+      },
+      "description": {
+        "es": "Tres sopes de maíz frito con frijoles, lechuga, proteína a elegir y la salsa de tu preferencia."
+      },
+      "basePrice": 95,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/platos-principales-sopes-poster.webp",
+          "mime": "image/webp",
+          "bytes": 122998,
+          "width": 500,
+          "height": 500,
+          "hash": "e638ff894e76df092127b7ad648ec6798608f5487243679818a78f27bfd6c82a"
+        },
+        "listSprite360": {
+          "path": "assets/items/platos-principales-sopes-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 7689624,
+          "width": 3520,
+          "height": 3520,
+          "hash": "9a315973b7c14dc42a3059c635a6194b81d228815927bb1463d4b0b0845e741f",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/platos-principales-sopes-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 15648544,
+          "width": 5500,
+          "height": 5500,
+          "hash": "9f90dc2b9e6c96903a011ab6a75fdced6b76a6c47b266ea3b05b6fe0f31d8af5",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [
+        {
+          "id": "dairy",
+          "label": {
+            "en": "Dairy",
+            "es": "Lacteos"
+          }
+        }
+      ],
+      "spiceLevel": 0,
+      "modifierGroupRefs": [
+        {
+          "groupId": "modifier-2",
+          "optionOverrides": [
+            {
+              "optionId": "option-2",
+              "priceDelta": 50
+            },
+            {
+              "optionId": "option-3",
+              "priceDelta": 45
+            },
+            {
+              "optionId": "option-4",
+              "priceDelta": 30
+            },
+            {
+              "optionId": "option-5",
+              "priceDelta": 30
+            },
+            {
+              "optionId": "option-6",
+              "priceDelta": 20
+            },
+            {
+              "optionId": "option-7",
+              "priceDelta": 30
+            }
+          ]
+        },
+        {
+          "groupId": "modifier-1"
+        }
+      ],
+      "comboSlots": [],
+      "sectionIds": [
+        "section-1"
+      ]
+    },
+    {
+      "id": "product-20",
+      "kind": "configurable",
+      "name": {
+        "es": "Molletes"
+      },
+      "description": {
+        "es": "Dos mitades de bolillo tostado con frijoles refritos y queso gratinado acompañados de pico de gallo."
+      },
+      "basePrice": 80,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/platos-principales-poster.webp",
+          "mime": "image/webp",
+          "bytes": 112264,
+          "width": 500,
+          "height": 500,
+          "hash": "9b516406326f36fd600b09c15bdffb8fb63eb822ce99ced43f530b2d8bc29318"
+        },
+        "listSprite360": {
+          "path": "assets/items/platos-principales-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 7148290,
+          "width": 3520,
+          "height": 3520,
+          "hash": "e02f1e88d044a05170f5cf8353180d02c94d14ec8feea47b9b01e0ce157291a1",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/platos-principales-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 14628836,
+          "width": 5500,
+          "height": 5500,
+          "hash": "c8c39be74559590f2e0c338f05e46ab3aee94a8f660117f360dcf741adddcc88",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [
+        {
+          "id": "dairy",
+          "label": {
+            "en": "Dairy",
+            "es": "Lacteos"
+          }
+        },
+        {
+          "id": "gluten",
+          "label": {
+            "en": "Gluten",
+            "es": "Gluten"
+          }
+        }
+      ],
+      "spiceLevel": 0,
+      "modifierGroupRefs": [
+        {
+          "groupId": "modifier-2",
+          "optionOverrides": [
+            {
+              "optionId": "option-2",
+              "priceDelta": 0,
+              "priceOverride": 120
+            },
+            {
+              "optionId": "option-3",
+              "priceDelta": 0,
+              "priceOverride": 120
+            },
+            {
+              "optionId": "option-4",
+              "priceDelta": 0,
+              "priceOverride": 110
+            },
+            {
+              "optionId": "option-5",
+              "priceDelta": 0,
+              "priceOverride": 100
+            },
+            {
+              "optionId": "option-6",
+              "priceDelta": 0,
+              "priceOverride": 90
+            },
+            {
+              "optionId": "option-7",
+              "priceDelta": 0,
+              "priceOverride": 100
+            }
+          ]
+        },
+        {
+          "groupId": "modifier-1"
+        },
+        {
+          "groupId": "modifier-5"
+        }
+      ],
+      "comboSlots": [],
+      "sectionIds": [
+        "section-1"
+      ]
+    },
+    {
+      "id": "product-21",
+      "kind": "configurable",
+      "name": {
+        "es": "Huevos"
+      },
+      "description": {
+        "es": "Dos huevos estrellados o revueltos acompañados de frijoles."
+      },
+      "basePrice": 70,
+      "available": true,
+      "unavailableMode": "disabled",
+      "media": {
+        "poster": {
+          "path": "assets/items/platos-principales-huevos-poster.webp",
+          "mime": "image/webp",
+          "bytes": 153314,
+          "width": 500,
+          "height": 500,
+          "hash": "d8eba88417c98281f5e1ce3afb08a5cdbfe32f476da928b6590eea2f506ef6fa"
+        },
+        "listSprite360": {
+          "path": "assets/items/platos-principales-huevos-sprite360-list.webp",
+          "mime": "image/webp",
+          "bytes": 9168212,
+          "width": 3520,
+          "height": 3520,
+          "hash": "36d20ec45f4c5d8705620d372a1997fc2f352b40d1028081be8670c146558982",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 320,
+          "frameHeight": 320,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        },
+        "sprite360": {
+          "path": "assets/items/platos-principales-huevos-sprite360.webp",
+          "mime": "image/webp",
+          "bytes": 19053522,
+          "width": 5500,
+          "height": 5500,
+          "hash": "38659c266e2908c5a355ea54d3d7b7bd188c96e70345863344e9fc0559adca39",
+          "frameCount": 120,
+          "fps": 24,
+          "frameWidth": 500,
+          "frameHeight": 500,
+          "columns": 11,
+          "rows": 11,
+          "movement": "radial",
+          "rotationDirection": "cw"
+        }
+      },
+      "marketingBadges": [],
+      "dietaryBadges": [],
+      "allergens": [
+        {
+          "id": "egg",
+          "label": {
+            "en": "Egg",
+            "es": "Huevo"
+          }
+        }
+      ],
+      "modifierGroupRefs": [
+        {
+          "groupId": "modifier-6",
+          "label": {
+            "es": "Estilo"
+          }
+        },
+        {
+          "groupId": "modifier-1",
+          "dependsOn": {
+            "groupId": "modifier-6",
+            "optionIds": [
+              "option-7",
+              "option-8",
+              "option-9"
+            ],
+            "mode": "any"
+          }
+        }
+      ],
+      "comboSlots": [],
+      "sectionIds": [
+        "section-1"
+      ]
+    }
+  ]
+}

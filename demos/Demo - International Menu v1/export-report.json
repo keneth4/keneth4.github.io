@@ -1,52 +1,272 @@
 {
   "schemaVersion": 1,
-  "slug": "restaurant-menu-new",
-  "generatedAt": "2026-07-04T04:01:10.741Z",
+  "generatedAt": "2026-07-16T18:23:54.980Z",
+  "exportVersion": "catalog2-editor",
+  "slug": "sitio-am-pm",
   "totals": {
-    "files": 76,
-    "assetFiles": 61,
-    "shellFiles": 15,
-    "totalBytes": 214130988,
-    "assetBytes": 212589831,
-    "shellBytes": 1541157,
-    "firstViewAssetFiles": 7,
-    "firstViewImageBytes": 13793058,
-    "missingAssets": 0
+    "products": 11,
+    "assetFiles": 37,
+    "knownAssetBytes": 255672850,
+    "firstViewKnownBytes": 25987916
   },
-  "responsiveCoverage": {
-    "heroSources": 18,
-    "heroWithResponsiveVariants": 0,
-    "ratio": 0
+  "validation": {
+    "projectIssues": [],
+    "catalogIssues": []
   },
-  "references": {
-    "referencedAssets": 61,
-    "unresolvedAssets": 0
-  },
-  "budgets": {
-    "passed": false,
-    "checks": [
-      {
-        "key": "jsGzipBytes",
-        "label": "Export JS (gzip)",
-        "threshold": 97280,
-        "actual": 47924,
-        "status": "pass"
-      },
-      {
-        "key": "cssGzipBytes",
-        "label": "Export CSS (gzip)",
-        "threshold": 12288,
-        "actual": 10964,
-        "status": "pass"
-      },
-      {
-        "key": "firstViewImageBytes",
-        "label": "First-view images",
-        "threshold": 1258291,
-        "actual": 13793058,
-        "status": "fail"
-      }
+  "media360": {
+    "strategy": "progressive-list-detail",
+    "listSprite360ProductIds": [
+      "product-1",
+      "product-8",
+      "product-9",
+      "product-13",
+      "product-14",
+      "product-16",
+      "product-17",
+      "product-18",
+      "product-19",
+      "product-20",
+      "product-21"
+    ],
+    "sprite360ProductIds": [
+      "product-1",
+      "product-8",
+      "product-9",
+      "product-13",
+      "product-14",
+      "product-16",
+      "product-17",
+      "product-18",
+      "product-19",
+      "product-20",
+      "product-21"
     ]
   },
-  "missingAssets": []
+  "runtime": {
+    "strategy": "capability-planned",
+    "bundlePlan": {
+      "features": {
+        "has360": true,
+        "hasModifiers": true,
+        "hasComboSlots": false,
+        "hasPriceRules": true,
+        "hasFilters": true,
+        "hasCart": true,
+        "hasContactPage": true,
+        "hasLocations": true,
+        "hasFaq": true,
+        "hasDeliveryLinks": true,
+        "hasAboutPage": true,
+        "hasTextStyles": true,
+        "hasCustomFont": true,
+        "hasSectionIcons": true
+      },
+      "sectionIconIds": [
+        "chefHat",
+        "iceCream",
+        "wine"
+      ],
+      "vendorEntries": [],
+      "styleModules": [
+        "base",
+        "home",
+        "info",
+        "menu",
+        "filters",
+        "locations",
+        "faq",
+        "detail",
+        "cart",
+        "delivery"
+      ],
+      "budgetTargets": {
+        "firstViewHtmlJsCssBytes": 120000,
+        "firstViewHtmlJsCssHardLimitBytes": 125000
+      }
+    }
+  },
+  "budgetWarnings": [
+    {
+      "code": "poster-budget-exceeded",
+      "path": "assets/items/platos-principales-chilaquiles-poster.webp",
+      "message": "poster exceeds target budget.",
+      "actual": 204444,
+      "target": 180000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-chilaquiles-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 10413214,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-chilaquiles-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 21051350,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/postres-churro-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 6474938,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/postres-churro-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 13750992,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/postres-croissant-con-chocolate-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 7687150,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/postres-croissant-con-chocolate-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 15813204,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/bebidas-ciel-mineralizada-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 9609606,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/bebidas-ciel-mineralizada-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 19121764,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/bebidas-sprite-zero-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 8168948,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/bebidas-sprite-zero-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 16933050,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 5210696,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 10488584,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 6847822,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 13835398,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 5009438,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 10259278,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-sopes-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 7689624,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-sopes-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 15648544,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 7148290,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 14628836,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-huevos-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 9168212,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-huevos-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 19053522,
+      "target": 8000000
+    },
+    {
+      "code": "first-view-list-sprite-budget-exceeded",
+      "path": "assets/items",
+      "message": "First-view list 360 assets exceed the mobile startup budget.",
+      "actual": 25251128,
+      "target": 2500000
+    },
+    {
+      "code": "first-view-image-budget-exceeded",
+      "path": "assets/items",
+      "message": "First-view images exceed the mobile startup budget.",
+      "actual": 25942678,
+      "target": 3500000
+    },
+    {
+      "code": "total-budget-over-expected-range",
+      "path": "assets",
+      "message": "Known asset bytes exceed the expected export range.",
+      "actual": 255672850,
+      "target": 120000000
+    }
+  ]
 }

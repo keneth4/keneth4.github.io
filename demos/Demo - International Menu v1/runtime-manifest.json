@@ -1,1170 +1,713 @@
 {
   "schemaVersion": 1,
-  "exportVersion": "1783137667790",
+  "exportVersion": "catalog2-editor",
   "assets": [
     {
-      "id": "background:bg-1773011234136",
-      "kind": "background",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/backgrounds/sana-sana-IbLdWdDrZMI-unsplash-md-md.webp?v=1783137667790"
-    },
-    {
-      "id": "background:bg-1782801647326",
-      "kind": "background",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/backgrounds/pinar-kucuk-3-PfUgbyWEs-unsplash-md.webp?v=1783137667790"
-    },
-    {
-      "id": "background:bg-1782802608444",
-      "kind": "background",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/backgrounds/restaurant-md.webp?v=1783137667790"
-    },
-    {
-      "id": "branding:shared",
+      "id": "branding:logo",
+      "role": "logo",
       "kind": "branding",
       "surface": "shell",
       "deliveryClass": "blocking",
-      "runtimePath": "favicon.png?v=1783137667790",
-      "usages": [
-        "favicon",
-        "brandSignature"
-      ]
+      "runtimePath": "assets/logos/sitio-am-pm-logo.png?v=catalog2-editor",
+      "outputPath": "assets/logos/sitio-am-pm-logo.png",
+      "bytes": 45238
     },
     {
-      "id": "detail-poster:section-1773012367214:dish-1773012371096",
+      "id": "poster:0:0:section-1:product-1",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Ciel-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1773012371096"
+      "runtimePath": "assets/items/platos-principales-chilaquiles-poster.webp?v=63b2547dd85fd228",
+      "outputPath": "assets/items/platos-principales-chilaquiles-poster.webp",
+      "sectionId": "section-1",
+      "itemId": "product-1",
+      "bytes": 204444,
+      "hash": "63b2547dd85fd228df5857a7f63fd45edbd0072ed890f950051c06058eea660a"
     },
     {
-      "id": "detail-poster:section-1773012367214:dish-1773012404013",
+      "id": "list:0:0:section-1:product-1",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/platos-principales-chilaquiles-sprite360-list.webp?v=71fae38e5e3fa777",
+      "outputPath": "assets/items/platos-principales-chilaquiles-sprite360-list.webp",
+      "sectionId": "section-1",
+      "itemId": "product-1",
+      "bytes": 10413214,
+      "hash": "71fae38e5e3fa7779f64b4626b3824adf061ca33c15d4d0b0099945f5b3248d7",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:0:0:section-1:product-1",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-chilaquiles-sprite360.webp?v=fcebe0f60bbf84e5",
+      "outputPath": "assets/items/platos-principales-chilaquiles-sprite360.webp",
+      "sectionId": "section-1",
+      "itemId": "product-1",
+      "bytes": 21051350,
+      "hash": "fcebe0f60bbf84e5576f75e139e3cef1809faec788d1f1b9a3a1768e6acc4a9a",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:0:1:section-1:product-19",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Sprite-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1773012404013"
+      "runtimePath": "assets/items/platos-principales-sopes-poster.webp?v=e638ff894e76df09",
+      "outputPath": "assets/items/platos-principales-sopes-poster.webp",
+      "sectionId": "section-1",
+      "itemId": "product-19",
+      "bytes": 122998,
+      "hash": "e638ff894e76df092127b7ad648ec6798608f5487243679818a78f27bfd6c82a"
     },
     {
-      "id": "detail-poster:section-1773012367214:dish-1782798282968",
+      "id": "list:0:1:section-1:product-19",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/platos-principales-sopes-sprite360-list.webp?v=9a315973b7c14dc4",
+      "outputPath": "assets/items/platos-principales-sopes-sprite360-list.webp",
+      "sectionId": "section-1",
+      "itemId": "product-19",
+      "bytes": 7689624,
+      "hash": "9a315973b7c14dc42a3059c635a6194b81d228815927bb1463d4b0b0845e741f",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:0:1:section-1:product-19",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-sopes-sprite360.webp?v=9f90dc2b9e6c9690",
+      "outputPath": "assets/items/platos-principales-sopes-sprite360.webp",
+      "sectionId": "section-1",
+      "itemId": "product-19",
+      "bytes": 15648544,
+      "hash": "9f90dc2b9e6c96903a011ab6a75fdced6b76a6c47b266ea3b05b6fe0f31d8af5",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:0:2:section-1:product-20",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Prime-tricolor-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782798282968"
+      "runtimePath": "assets/items/platos-principales-poster.webp?v=9b516406326f36fd",
+      "outputPath": "assets/items/platos-principales-poster.webp",
+      "sectionId": "section-1",
+      "itemId": "product-20",
+      "bytes": 112264,
+      "hash": "9b516406326f36fd600b09c15bdffb8fb63eb822ce99ced43f530b2d8bc29318"
     },
     {
-      "id": "detail-poster:section-1773012367214:dish-1782976063247",
+      "id": "list:0:2:section-1:product-20",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/platos-principales-sprite360-list.webp?v=e02f1e88d044a051",
+      "outputPath": "assets/items/platos-principales-sprite360-list.webp",
+      "sectionId": "section-1",
+      "itemId": "product-20",
+      "bytes": 7148290,
+      "hash": "e02f1e88d044a05170f5cf8353180d02c94d14ec8feea47b9b01e0ce157291a1",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:0:2:section-1:product-20",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-sprite360.webp?v=c8c39be74559590f",
+      "outputPath": "assets/items/platos-principales-sprite360.webp",
+      "sectionId": "section-1",
+      "itemId": "product-20",
+      "bytes": 14628836,
+      "hash": "c8c39be74559590f2e0c338f05e46ab3aee94a8f660117f360dcf741adddcc88",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:0:3:section-1:product-21",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/DrPepperZero-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782976063247"
+      "runtimePath": "assets/items/platos-principales-huevos-poster.webp?v=d8eba88417c98281",
+      "outputPath": "assets/items/platos-principales-huevos-poster.webp",
+      "sectionId": "section-1",
+      "itemId": "product-21",
+      "bytes": 153314,
+      "hash": "d8eba88417c98281f5e1ce3afb08a5cdbfe32f476da928b6590eea2f506ef6fa"
     },
     {
-      "id": "detail-poster:section-1773012367214:dish-1782976082467",
+      "id": "list:0:3:section-1:product-21",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/platos-principales-huevos-sprite360-list.webp?v=36d20ec45f4c5d87",
+      "outputPath": "assets/items/platos-principales-huevos-sprite360-list.webp",
+      "sectionId": "section-1",
+      "itemId": "product-21",
+      "bytes": 9168212,
+      "hash": "36d20ec45f4c5d8705620d372a1997fc2f352b40d1028081be8670c146558982",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:0:3:section-1:product-21",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-huevos-sprite360.webp?v=38659c266e2908c5",
+      "outputPath": "assets/items/platos-principales-huevos-sprite360.webp",
+      "sectionId": "section-1",
+      "itemId": "product-21",
+      "bytes": 19053522,
+      "hash": "38659c266e2908c5a355ea54d3d7b7bd188c96e70345863344e9fc0559adca39",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:1:0:section-2:product-8",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Snapple-Frambuesa-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782976082467"
+      "runtimePath": "assets/items/postres-churro-poster.webp?v=f10fa7d0e877bcc2",
+      "outputPath": "assets/items/postres-churro-poster.webp",
+      "sectionId": "section-2",
+      "itemId": "product-8",
+      "bytes": 114104,
+      "hash": "f10fa7d0e877bcc2949160d8c5e7e435e8e60d316cd8c77c7ddeabfb9f269d2c"
     },
     {
-      "id": "detail-poster:section-1773012367214:dish-1782982891705",
+      "id": "list:1:0:section-2:product-8",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/postres-churro-sprite360-list.webp?v=9db7bf2fd1cd580c",
+      "outputPath": "assets/items/postres-churro-sprite360-list.webp",
+      "sectionId": "section-2",
+      "itemId": "product-8",
+      "bytes": 6474938,
+      "hash": "9db7bf2fd1cd580ca547fcb23ab02b6ca176ed4a1943545f047d4b766f6add98",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:1:0:section-2:product-8",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/postres-churro-sprite360.webp?v=7cbe614c398385d7",
+      "outputPath": "assets/items/postres-churro-sprite360.webp",
+      "sectionId": "section-2",
+      "itemId": "product-8",
+      "bytes": 13750992,
+      "hash": "7cbe614c398385d755e47afa0cc1390a11afce10ffe8e22113463cdbb0ad9305",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:1:1:section-2:product-9",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Pen-afiel-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782982891705"
+      "runtimePath": "assets/items/postres-croissant-con-chocolate-poster.webp?v=85cdb5bde770c71d",
+      "outputPath": "assets/items/postres-croissant-con-chocolate-poster.webp",
+      "sectionId": "section-2",
+      "itemId": "product-9",
+      "bytes": 125618,
+      "hash": "85cdb5bde770c71da4ba0bd6d8d9cff7ef510b8c345e295d0fd6f4f6c37f68df"
     },
     {
-      "id": "detail-poster:section-1773012554844:dish-1773012587145",
+      "id": "list:1:1:section-2:product-9",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/postres-croissant-con-chocolate-sprite360-list.webp?v=377c98829f01e3e9",
+      "outputPath": "assets/items/postres-croissant-con-chocolate-sprite360-list.webp",
+      "sectionId": "section-2",
+      "itemId": "product-9",
+      "bytes": 7687150,
+      "hash": "377c98829f01e3e92f11d05c02d261d00365cad609af4abc0daf79ae79ba1eea",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:1:1:section-2:product-9",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/postres-croissant-con-chocolate-sprite360.webp?v=cda325ab36ab700b",
+      "outputPath": "assets/items/postres-croissant-con-chocolate-sprite360.webp",
+      "sectionId": "section-2",
+      "itemId": "product-9",
+      "bytes": 15813204,
+      "hash": "cda325ab36ab700bca2f5c01c0ff6c0c0c73a2177e6aeddd2a5cd3d087eb7acd",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:2:0:section-3:product-13",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Bolognese-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012587145"
+      "runtimePath": "assets/items/bebidas-ciel-mineralizada-poster.webp?v=ff10cf829ee13acc",
+      "outputPath": "assets/items/bebidas-ciel-mineralizada-poster.webp",
+      "sectionId": "section-3",
+      "itemId": "product-13",
+      "bytes": 145296,
+      "hash": "ff10cf829ee13accb20b112329bed5942b04a1667103c12e05f4ceaf9854c592"
     },
     {
-      "id": "detail-poster:section-1773012554844:dish-1773012647888",
+      "id": "list:2:0:section-3:product-13",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/bebidas-ciel-mineralizada-sprite360-list.webp?v=e1de86152a8fae31",
+      "outputPath": "assets/items/bebidas-ciel-mineralizada-sprite360-list.webp",
+      "sectionId": "section-3",
+      "itemId": "product-13",
+      "bytes": 9609606,
+      "hash": "e1de86152a8fae310bf2d206d4f589fa3e4a86758062b04bcca01bf3d8612447",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:2:0:section-3:product-13",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/bebidas-ciel-mineralizada-sprite360.webp?v=7c03ee050767b6d3",
+      "outputPath": "assets/items/bebidas-ciel-mineralizada-sprite360.webp",
+      "sectionId": "section-3",
+      "itemId": "product-13",
+      "bytes": 19121764,
+      "hash": "7c03ee050767b6d3a8ca51bd2028e4eac6273a49d470054b0970725d0d8dc652",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:2:1:section-3:product-14",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Enmoladas-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012647888"
+      "runtimePath": "assets/items/bebidas-sprite-zero-poster.webp?v=0698bbc77fcab521",
+      "outputPath": "assets/items/bebidas-sprite-zero-poster.webp",
+      "sectionId": "section-3",
+      "itemId": "product-14",
+      "bytes": 110188,
+      "hash": "0698bbc77fcab521fffed7100b0f1a731265d1a13a0e6afcfee62d290dc2924f"
     },
     {
-      "id": "detail-poster:section-1773012554844:dish-1773012672844",
+      "id": "list:2:1:section-3:product-14",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/bebidas-sprite-zero-sprite360-list.webp?v=145a51c55f5b9864",
+      "outputPath": "assets/items/bebidas-sprite-zero-sprite360-list.webp",
+      "sectionId": "section-3",
+      "itemId": "product-14",
+      "bytes": 8168948,
+      "hash": "145a51c55f5b9864e8a9f7c801b548c7624099fd07138d687c06b124af3961cf",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:2:1:section-3:product-14",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/bebidas-sprite-zero-sprite360.webp?v=7f2210156708d797",
+      "outputPath": "assets/items/bebidas-sprite-zero-sprite360.webp",
+      "sectionId": "section-3",
+      "itemId": "product-14",
+      "bytes": 16933050,
+      "hash": "7f2210156708d797c6831579edd2360704f958749119df3bdf9c6b5e50b03026",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:2:2:section-3:product-16",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Schnitzel-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012672844"
+      "runtimePath": "assets/items/bebidas-dr-pepper-zero-az-car-poster.webp?v=3c4dfdd5f1178752",
+      "outputPath": "assets/items/bebidas-dr-pepper-zero-az-car-poster.webp",
+      "sectionId": "section-3",
+      "itemId": "product-16",
+      "bytes": 82164,
+      "hash": "3c4dfdd5f11787522a3a008c34bea407f28b9d783aaf03cedb01e94b080b5a8c"
     },
     {
-      "id": "detail-poster:section-1773012554844:dish-1773012722320",
+      "id": "list:2:2:section-3:product-16",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360-list.webp?v=0470ce8521f3f2da",
+      "outputPath": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360-list.webp",
+      "sectionId": "section-3",
+      "itemId": "product-16",
+      "bytes": 5210696,
+      "hash": "0470ce8521f3f2dac78406385fe2bcf1d9c075797f3e991d2942af8371d38926",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:2:2:section-3:product-16",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360.webp?v=a9dcc1ed672a94b7",
+      "outputPath": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360.webp",
+      "sectionId": "section-3",
+      "itemId": "product-16",
+      "bytes": 10488584,
+      "hash": "a9dcc1ed672a94b70b9261d6dc595aa3a1102c45e35ad8d7a5a53000b8a96a80",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:2:3:section-3:product-17",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Short-Ribs-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012722320"
+      "runtimePath": "assets/items/bebidas-snapple-t-de-frambuesa-poster.webp?v=44d35366bd0fddf4",
+      "outputPath": "assets/items/bebidas-snapple-t-de-frambuesa-poster.webp",
+      "sectionId": "section-3",
+      "itemId": "product-17",
+      "bytes": 108990,
+      "hash": "44d35366bd0fddf4b287c260d5b8ec31e817cd91314d524bf9cdfa9bd6bc9784"
     },
     {
-      "id": "detail-poster:section-1773012554844:dish-1773013219070",
+      "id": "list:2:3:section-3:product-17",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "startup-list",
+      "deliveryClass": "deferred",
+      "runtimePath": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360-list.webp?v=e4cbf5ab248a0602",
+      "outputPath": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360-list.webp",
+      "sectionId": "section-3",
+      "itemId": "product-17",
+      "bytes": 6847822,
+      "hash": "e4cbf5ab248a0602e10636cffaa5de7f22f596278fb034d9c7fbdf2f99ebe2bb",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:2:3:section-3:product-17",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360.webp?v=f299c53a18928818",
+      "outputPath": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360.webp",
+      "sectionId": "section-3",
+      "itemId": "product-17",
+      "bytes": 13835398,
+      "hash": "f299c53a189288189f956ff266d95fdcfc821b29bea0db90998b85c233613ed2",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:2:4:section-3:product-18",
+      "role": "poster",
       "kind": "detailPoster",
       "surface": "modal-detail",
       "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Pasta-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013219070"
+      "runtimePath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-poster.webp?v=ba35d6ed4fe43de4",
+      "outputPath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-poster.webp",
+      "sectionId": "section-3",
+      "itemId": "product-18",
+      "bytes": 81012,
+      "hash": "ba35d6ed4fe43de47fb64082563733c0c280a67151a2ba04e09e55fddb60da35"
     },
     {
-      "id": "detail-poster:section-1773012554844:dish-1773013317712",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Sushi-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013317712"
-    },
-    {
-      "id": "detail-poster:section-1773012554844:dish-1773013379297",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Beilagensalat-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013379297"
-    },
-    {
-      "id": "detail-poster:section-1773012574194:dish-1773013450480",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Strawberry-Croissant-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013450480"
-    },
-    {
-      "id": "detail-poster:section-1773012574194:dish-1773013505628",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Chocolate-Croissant-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013505628"
-    },
-    {
-      "id": "detail-poster:section-1773012574194:dish-1773013546304",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Baklava-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013546304"
-    },
-    {
-      "id": "detail-poster:section-1773012574194:dish-1773013561558",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Dona-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013561558"
-    },
-    {
-      "id": "detail-poster:section-1773012574194:dish-1773013582012",
-      "kind": "detailPoster",
-      "surface": "modal-detail",
-      "deliveryClass": "intent-prefetch",
-      "runtimePath": "assets/items/Cookies-int-poster.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013582012"
-    },
-    {
-      "id": "detail-sprite:section-1773012367214:dish-1773012371096",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Ciel-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1773012371096",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012367214:dish-1773012404013",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Sprite-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1773012404013",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012367214:dish-1782798282968",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Prime-tricolor-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782798282968",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012367214:dish-1782976063247",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/DrPepperZero-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782976063247",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012367214:dish-1782976082467",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Snapple-Frambuesa-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782976082467",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012367214:dish-1782982891705",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Pen-afiel-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782982891705",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773012587145",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Bolognese-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012587145",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773012647888",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Enmoladas-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012647888",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773012672844",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Schnitzel-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012672844",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773012722320",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Short-Ribs-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012722320",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773013219070",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Pasta-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013219070",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773013317712",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Sushi-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013317712",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012554844:dish-1773013379297",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Beilagensalat-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013379297",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012574194:dish-1773013450480",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Strawberry-Croissant-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013450480",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012574194:dish-1773013505628",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Chocolate-Croissant-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013505628",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012574194:dish-1773013546304",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Baklava-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013546304",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012574194:dish-1773013561558",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Dona-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013561558",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "detail-sprite:section-1773012574194:dish-1773013582012",
-      "kind": "detailSpriteHq",
-      "surface": "modal-detail",
-      "deliveryClass": "on-demand",
-      "runtimePath": "assets/items/Cookies-int-sprite.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013582012",
-      "sprite": {
-        "frameCount": 60,
-        "frameWidth": 500,
-        "frameHeight": 500,
-        "columns": 10,
-        "rows": 6,
-        "fps": 24
-      },
-      "warmupEligible": true
-    },
-    {
-      "id": "guidance:circularMotionArrows",
-      "kind": "guidance",
-      "surface": "shell",
-      "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/circular_motion_arrows.png?v=1783137667790"
-    },
-    {
-      "id": "guidance:horizontalMotionArrows",
-      "kind": "guidance",
-      "surface": "shell",
-      "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/horizontal_motion_arrows.png?v=1783137667790"
-    },
-    {
-      "id": "guidance:horVerMotionArrows",
-      "kind": "guidance",
-      "surface": "shell",
-      "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/hor_ver_motion_arrows.png?v=1783137667790"
-    },
-    {
-      "id": "guidance:pointingHand",
-      "kind": "guidance",
-      "surface": "shell",
-      "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/pointing_hand.png?v=1783137667790"
-    },
-    {
-      "id": "guidance:sampleDish",
-      "kind": "guidance",
-      "surface": "shell",
-      "deliveryClass": "deferred",
-      "runtimePath": "visual_onboarding/sample_2d_dish.png?v=1783137667790"
-    },
-    {
-      "id": "list:section-1773012367214:dish-1773012371096",
+      "id": "list:2:4:section-3:product-18",
+      "role": "listSprite360",
       "kind": "listSpriteMd",
       "surface": "startup-list",
       "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1773012371096",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Ciel-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
+      "runtimePath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360-list.webp?v=51c2db828e9fe017",
+      "outputPath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360-list.webp",
+      "sectionId": "section-3",
+      "itemId": "product-18",
+      "bytes": 5009438,
+      "hash": "51c2db828e9fe017bb657ebeb0005667e5c0fd2ae7536a78ba2f4283d43d6d3e",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
     },
     {
-      "id": "list:section-1773012367214:dish-1773012404013",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1773012404013",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Sprite-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012367214:dish-1782798282968",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782798282968",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Prime-tricolor-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012367214:dish-1782976063247",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782976063247",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/DrPepperZero-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012367214:dish-1782976082467",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782976082467",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Snapple-Frambuesa-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012367214:dish-1782982891705",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012367214",
-      "itemId": "dish-1782982891705",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Pen-afiel-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773012587145",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012587145",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Bolognese-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773012647888",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012647888",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Enmoladas-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773012672844",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012672844",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Schnitzel-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773012722320",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773012722320",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Short-Ribs-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773013219070",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013219070",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Pasta-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773013317712",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013317712",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Sushi-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012554844:dish-1773013379297",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012554844",
-      "itemId": "dish-1773013379297",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Beilagensalat-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012574194:dish-1773013450480",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013450480",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Strawberry-Croissant-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012574194:dish-1773013505628",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013505628",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Chocolate-Croissant-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012574194:dish-1773013546304",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013546304",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Baklava-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012574194:dish-1773013561558",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013561558",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Dona-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "list:section-1773012574194:dish-1773013582012",
-      "kind": "listSpriteMd",
-      "surface": "startup-list",
-      "deliveryClass": "deferred",
-      "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
-      "sectionId": "section-1773012574194",
-      "itemId": "dish-1773013582012",
-      "emissions": [
-        {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "small"
-        },
-        {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "medium"
-        },
-        {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790",
-          "responsiveVariant": "large"
-        },
-        {
-          "runtimePath": "assets/items/Cookies-int-sprite-md.webp?v=1783137667790"
-        }
-      ]
-    },
-    {
-      "id": "shell:app.js",
-      "kind": "shell",
-      "surface": "shell",
-      "deliveryClass": "blocking",
-      "runtimePath": "app.js?v=1783137667790"
-    },
-    {
-      "id": "shell:index.html",
-      "kind": "shell",
-      "surface": "shell",
-      "deliveryClass": "blocking",
-      "runtimePath": "index.html?v=1783137667790"
-    },
-    {
-      "id": "shell:menu.json",
-      "kind": "shell",
-      "surface": "shell",
-      "deliveryClass": "blocking",
-      "runtimePath": "menu.json?v=1783137667790"
-    },
-    {
-      "id": "shell:runtime-manifest.json",
-      "kind": "shell",
-      "surface": "shell",
-      "deliveryClass": "blocking",
-      "runtimePath": "runtime-manifest.json?v=1783137667790"
-    },
-    {
-      "id": "shell:styles.css",
-      "kind": "shell",
-      "surface": "shell",
-      "deliveryClass": "blocking",
-      "runtimePath": "styles.css?v=1783137667790"
-    },
-    {
-      "id": "shell:sw.js",
-      "kind": "shell",
-      "surface": "shell",
-      "deliveryClass": "blocking",
-      "runtimePath": "sw.js?v=1783137667790"
+      "id": "detail:2:4:section-3:product-18",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360.webp?v=e1f09a7f58c647a4",
+      "outputPath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360.webp",
+      "sectionId": "section-3",
+      "itemId": "product-18",
+      "bytes": 10259278,
+      "hash": "e1f09a7f58c647a4c1346601a4541d8169612714aab07363ebf1c445a9cdeba7",
+      "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
     }
   ],
   "deliveryPlan": {
     "blocking": [
-      "shell:index.html",
-      "shell:menu.json",
-      "shell:runtime-manifest.json",
-      "shell:styles.css",
-      "shell:app.js",
-      "shell:sw.js",
-      "branding:shared",
-      "background:bg-1782802608444",
-      "list:section-1773012554844:dish-1773012647888",
-      "list:section-1773012574194:dish-1773013450480",
-      "list:section-1773012367214:dish-1773012371096"
+      "branding:logo"
     ],
     "earlyVisible": [
-      "list:section-1773012554844:dish-1773012587145",
-      "list:section-1773012574194:dish-1773013505628",
-      "list:section-1773012367214:dish-1773012404013"
+      "list:0:0:section-1:product-1",
+      "list:0:1:section-1:product-19",
+      "list:0:2:section-1:product-20"
     ],
     "deferred": [
-      "background:bg-1782801647326",
-      "background:bg-1773011234136",
-      "list:section-1773012554844:dish-1773012672844",
-      "list:section-1773012574194:dish-1773013546304",
-      "list:section-1773012367214:dish-1782798282968",
-      "list:section-1773012554844:dish-1773012722320",
-      "list:section-1773012574194:dish-1773013561558",
-      "list:section-1773012367214:dish-1782976063247",
-      "list:section-1773012554844:dish-1773013379297",
-      "list:section-1773012574194:dish-1773013582012",
-      "list:section-1773012367214:dish-1782976082467",
-      "list:section-1773012554844:dish-1773013219070",
-      "list:section-1773012367214:dish-1782982891705",
-      "list:section-1773012554844:dish-1773013317712",
-      "guidance:circularMotionArrows",
-      "guidance:horVerMotionArrows",
-      "guidance:horizontalMotionArrows",
-      "guidance:pointingHand",
-      "guidance:sampleDish"
+      "list:0:3:section-1:product-21",
+      "list:1:0:section-2:product-8",
+      "list:1:1:section-2:product-9",
+      "list:2:0:section-3:product-13",
+      "list:2:1:section-3:product-14",
+      "list:2:2:section-3:product-16",
+      "list:2:3:section-3:product-17",
+      "list:2:4:section-3:product-18"
     ],
     "onDemand": [
-      "detail-sprite:section-1773012554844:dish-1773012647888",
-      "detail-sprite:section-1773012574194:dish-1773013450480",
-      "detail-sprite:section-1773012367214:dish-1773012371096",
-      "detail-sprite:section-1773012554844:dish-1773012587145",
-      "detail-sprite:section-1773012574194:dish-1773013505628",
-      "detail-sprite:section-1773012367214:dish-1773012404013",
-      "detail-sprite:section-1773012554844:dish-1773012672844",
-      "detail-sprite:section-1773012574194:dish-1773013546304",
-      "detail-sprite:section-1773012367214:dish-1782798282968",
-      "detail-sprite:section-1773012554844:dish-1773012722320",
-      "detail-sprite:section-1773012574194:dish-1773013561558",
-      "detail-sprite:section-1773012367214:dish-1782976063247",
-      "detail-sprite:section-1773012554844:dish-1773013379297",
-      "detail-sprite:section-1773012574194:dish-1773013582012",
-      "detail-sprite:section-1773012367214:dish-1782976082467",
-      "detail-sprite:section-1773012554844:dish-1773013219070",
-      "detail-sprite:section-1773012367214:dish-1782982891705",
-      "detail-sprite:section-1773012554844:dish-1773013317712"
+      "detail:0:0:section-1:product-1",
+      "detail:0:1:section-1:product-19",
+      "detail:0:2:section-1:product-20",
+      "detail:0:3:section-1:product-21",
+      "detail:1:0:section-2:product-8",
+      "detail:1:1:section-2:product-9",
+      "detail:2:0:section-3:product-13",
+      "detail:2:1:section-3:product-14",
+      "detail:2:2:section-3:product-16",
+      "detail:2:3:section-3:product-17",
+      "detail:2:4:section-3:product-18"
     ],
     "intentPrefetch": [
-      "detail-poster:section-1773012554844:dish-1773012647888",
-      "detail-poster:section-1773012574194:dish-1773013450480",
-      "detail-poster:section-1773012367214:dish-1773012371096",
-      "detail-poster:section-1773012554844:dish-1773012587145",
-      "detail-poster:section-1773012574194:dish-1773013505628",
-      "detail-poster:section-1773012367214:dish-1773012404013",
-      "detail-poster:section-1773012554844:dish-1773012672844",
-      "detail-poster:section-1773012574194:dish-1773013546304",
-      "detail-poster:section-1773012367214:dish-1782798282968",
-      "detail-poster:section-1773012554844:dish-1773012722320",
-      "detail-poster:section-1773012574194:dish-1773013561558",
-      "detail-poster:section-1773012367214:dish-1782976063247",
-      "detail-poster:section-1773012554844:dish-1773013379297",
-      "detail-poster:section-1773012574194:dish-1773013582012",
-      "detail-poster:section-1773012367214:dish-1782976082467",
-      "detail-poster:section-1773012554844:dish-1773013219070",
-      "detail-poster:section-1773012367214:dish-1782982891705",
-      "detail-poster:section-1773012554844:dish-1773013317712"
+      "poster:0:0:section-1:product-1",
+      "poster:0:1:section-1:product-19",
+      "poster:0:2:section-1:product-20",
+      "poster:0:3:section-1:product-21",
+      "poster:1:0:section-2:product-8",
+      "poster:1:1:section-2:product-9",
+      "poster:2:0:section-3:product-13",
+      "poster:2:1:section-3:product-14",
+      "poster:2:2:section-3:product-16",
+      "poster:2:3:section-3:product-17",
+      "poster:2:4:section-3:product-18"
     ],
     "backgroundWarmup": [
-      "detail-sprite:section-1773012554844:dish-1773012647888",
-      "detail-sprite:section-1773012574194:dish-1773013450480",
-      "detail-sprite:section-1773012367214:dish-1773012371096",
-      "detail-sprite:section-1773012554844:dish-1773012587145",
-      "detail-sprite:section-1773012574194:dish-1773013505628",
-      "detail-sprite:section-1773012367214:dish-1773012404013",
-      "detail-sprite:section-1773012554844:dish-1773012672844",
-      "detail-sprite:section-1773012574194:dish-1773013546304",
-      "detail-sprite:section-1773012367214:dish-1782798282968",
-      "detail-sprite:section-1773012554844:dish-1773012722320",
-      "detail-sprite:section-1773012574194:dish-1773013561558",
-      "detail-sprite:section-1773012367214:dish-1782976063247",
-      "detail-sprite:section-1773012554844:dish-1773013379297",
-      "detail-sprite:section-1773012574194:dish-1773013582012",
-      "detail-sprite:section-1773012367214:dish-1782976082467",
-      "detail-sprite:section-1773012554844:dish-1773013219070",
-      "detail-sprite:section-1773012367214:dish-1782982891705",
-      "detail-sprite:section-1773012554844:dish-1773013317712"
+      "detail:0:0:section-1:product-1",
+      "detail:0:1:section-1:product-19",
+      "detail:0:2:section-1:product-20",
+      "detail:0:3:section-1:product-21",
+      "detail:1:0:section-2:product-8",
+      "detail:1:1:section-2:product-9",
+      "detail:2:0:section-3:product-13",
+      "detail:2:1:section-3:product-14",
+      "detail:2:2:section-3:product-16",
+      "detail:2:3:section-3:product-17",
+      "detail:2:4:section-3:product-18"
     ]
   }
 }
