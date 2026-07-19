@@ -22,6 +22,7 @@
       "outputPath": "assets/items/platos-principales-chilaquiles-poster.webp",
       "sectionId": "section-1",
       "itemId": "product-1",
+      "visualId": "primary",
       "bytes": 204444,
       "hash": "63b2547dd85fd228df5857a7f63fd45edbd0072ed890f950051c06058eea660a"
     },
@@ -35,6 +36,7 @@
       "outputPath": "assets/items/platos-principales-chilaquiles-sprite360-list.webp",
       "sectionId": "section-1",
       "itemId": "product-1",
+      "visualId": "primary",
       "bytes": 10413214,
       "hash": "71fae38e5e3fa7779f64b4626b3824adf061ca33c15d4d0b0099945f5b3248d7",
       "sprite": {
@@ -57,9 +59,70 @@
       "outputPath": "assets/items/platos-principales-chilaquiles-sprite360.webp",
       "sectionId": "section-1",
       "itemId": "product-1",
+      "visualId": "primary",
       "bytes": 21051350,
       "hash": "fcebe0f60bbf84e5576f75e139e3cef1809faec788d1f1b9a3a1768e6acc4a9a",
       "warmupEligible": true,
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 500,
+        "frameHeight": 500,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "poster:0:0:section-1:product-1:asd",
+      "role": "poster",
+      "kind": "detailPoster",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-chilaquiles-asd-poster.webp?v=28ca0633e20addd3",
+      "outputPath": "assets/items/platos-principales-chilaquiles-asd-poster.webp",
+      "sectionId": "section-1",
+      "itemId": "product-1",
+      "visualId": "asd",
+      "bytes": 153722,
+      "hash": "28ca0633e20addd3d998e9adfe7c2826f05b112635d41af707149919262e3c39"
+    },
+    {
+      "id": "list:0:0:section-1:product-1:asd",
+      "role": "listSprite360",
+      "kind": "listSpriteMd",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-chilaquiles-asd-sprite360-list.webp?v=5a66d738ce6194ca",
+      "outputPath": "assets/items/platos-principales-chilaquiles-asd-sprite360-list.webp",
+      "sectionId": "section-1",
+      "itemId": "product-1",
+      "visualId": "asd",
+      "bytes": 8406432,
+      "hash": "5a66d738ce6194caa55ac794be4592fe251d7ceaac569c90ced85aa304b20abf",
+      "sprite": {
+        "frameCount": 120,
+        "frameWidth": 320,
+        "frameHeight": 320,
+        "columns": 11,
+        "rows": 11,
+        "fps": 24,
+        "rotationDirection": "cw"
+      }
+    },
+    {
+      "id": "detail:0:0:section-1:product-1:asd",
+      "role": "sprite360",
+      "kind": "detailSpriteHq",
+      "surface": "modal-detail",
+      "deliveryClass": "on-demand",
+      "runtimePath": "assets/items/platos-principales-chilaquiles-asd-sprite360.webp?v=84ce00b891c5f1d4",
+      "outputPath": "assets/items/platos-principales-chilaquiles-asd-sprite360.webp",
+      "sectionId": "section-1",
+      "itemId": "product-1",
+      "visualId": "asd",
+      "bytes": 17458044,
+      "hash": "84ce00b891c5f1d4f2c435622710ebc96b9c47b9b7a81f6a00f03e21d04cf627",
       "sprite": {
         "frameCount": 120,
         "frameWidth": 500,
@@ -80,6 +143,7 @@
       "outputPath": "assets/items/platos-principales-sopes-poster.webp",
       "sectionId": "section-1",
       "itemId": "product-19",
+      "visualId": "primary",
       "bytes": 122998,
       "hash": "e638ff894e76df092127b7ad648ec6798608f5487243679818a78f27bfd6c82a"
     },
@@ -93,6 +157,7 @@
       "outputPath": "assets/items/platos-principales-sopes-sprite360-list.webp",
       "sectionId": "section-1",
       "itemId": "product-19",
+      "visualId": "primary",
       "bytes": 7689624,
       "hash": "9a315973b7c14dc42a3059c635a6194b81d228815927bb1463d4b0b0845e741f",
       "sprite": {
@@ -115,6 +180,7 @@
       "outputPath": "assets/items/platos-principales-sopes-sprite360.webp",
       "sectionId": "section-1",
       "itemId": "product-19",
+      "visualId": "primary",
       "bytes": 15648544,
       "hash": "9f90dc2b9e6c96903a011ab6a75fdced6b76a6c47b266ea3b05b6fe0f31d8af5",
       "warmupEligible": true,
@@ -138,6 +204,7 @@
       "outputPath": "assets/items/platos-principales-poster.webp",
       "sectionId": "section-1",
       "itemId": "product-20",
+      "visualId": "primary",
       "bytes": 112264,
       "hash": "9b516406326f36fd600b09c15bdffb8fb63eb822ce99ced43f530b2d8bc29318"
     },
@@ -151,6 +218,7 @@
       "outputPath": "assets/items/platos-principales-sprite360-list.webp",
       "sectionId": "section-1",
       "itemId": "product-20",
+      "visualId": "primary",
       "bytes": 7148290,
       "hash": "e02f1e88d044a05170f5cf8353180d02c94d14ec8feea47b9b01e0ce157291a1",
       "sprite": {
@@ -173,6 +241,7 @@
       "outputPath": "assets/items/platos-principales-sprite360.webp",
       "sectionId": "section-1",
       "itemId": "product-20",
+      "visualId": "primary",
       "bytes": 14628836,
       "hash": "c8c39be74559590f2e0c338f05e46ab3aee94a8f660117f360dcf741adddcc88",
       "warmupEligible": true,
@@ -196,6 +265,7 @@
       "outputPath": "assets/items/platos-principales-huevos-poster.webp",
       "sectionId": "section-1",
       "itemId": "product-21",
+      "visualId": "primary",
       "bytes": 153314,
       "hash": "d8eba88417c98281f5e1ce3afb08a5cdbfe32f476da928b6590eea2f506ef6fa"
     },
@@ -209,6 +279,7 @@
       "outputPath": "assets/items/platos-principales-huevos-sprite360-list.webp",
       "sectionId": "section-1",
       "itemId": "product-21",
+      "visualId": "primary",
       "bytes": 9168212,
       "hash": "36d20ec45f4c5d8705620d372a1997fc2f352b40d1028081be8670c146558982",
       "sprite": {
@@ -231,6 +302,7 @@
       "outputPath": "assets/items/platos-principales-huevos-sprite360.webp",
       "sectionId": "section-1",
       "itemId": "product-21",
+      "visualId": "primary",
       "bytes": 19053522,
       "hash": "38659c266e2908c5a355ea54d3d7b7bd188c96e70345863344e9fc0559adca39",
       "warmupEligible": true,
@@ -254,6 +326,7 @@
       "outputPath": "assets/items/postres-churro-poster.webp",
       "sectionId": "section-2",
       "itemId": "product-8",
+      "visualId": "primary",
       "bytes": 114104,
       "hash": "f10fa7d0e877bcc2949160d8c5e7e435e8e60d316cd8c77c7ddeabfb9f269d2c"
     },
@@ -267,6 +340,7 @@
       "outputPath": "assets/items/postres-churro-sprite360-list.webp",
       "sectionId": "section-2",
       "itemId": "product-8",
+      "visualId": "primary",
       "bytes": 6474938,
       "hash": "9db7bf2fd1cd580ca547fcb23ab02b6ca176ed4a1943545f047d4b766f6add98",
       "sprite": {
@@ -289,6 +363,7 @@
       "outputPath": "assets/items/postres-churro-sprite360.webp",
       "sectionId": "section-2",
       "itemId": "product-8",
+      "visualId": "primary",
       "bytes": 13750992,
       "hash": "7cbe614c398385d755e47afa0cc1390a11afce10ffe8e22113463cdbb0ad9305",
       "warmupEligible": true,
@@ -312,6 +387,7 @@
       "outputPath": "assets/items/postres-croissant-con-chocolate-poster.webp",
       "sectionId": "section-2",
       "itemId": "product-9",
+      "visualId": "primary",
       "bytes": 125618,
       "hash": "85cdb5bde770c71da4ba0bd6d8d9cff7ef510b8c345e295d0fd6f4f6c37f68df"
     },
@@ -325,6 +401,7 @@
       "outputPath": "assets/items/postres-croissant-con-chocolate-sprite360-list.webp",
       "sectionId": "section-2",
       "itemId": "product-9",
+      "visualId": "primary",
       "bytes": 7687150,
       "hash": "377c98829f01e3e92f11d05c02d261d00365cad609af4abc0daf79ae79ba1eea",
       "sprite": {
@@ -347,6 +424,7 @@
       "outputPath": "assets/items/postres-croissant-con-chocolate-sprite360.webp",
       "sectionId": "section-2",
       "itemId": "product-9",
+      "visualId": "primary",
       "bytes": 15813204,
       "hash": "cda325ab36ab700bca2f5c01c0ff6c0c0c73a2177e6aeddd2a5cd3d087eb7acd",
       "warmupEligible": true,
@@ -370,6 +448,7 @@
       "outputPath": "assets/items/bebidas-ciel-mineralizada-poster.webp",
       "sectionId": "section-3",
       "itemId": "product-13",
+      "visualId": "primary",
       "bytes": 145296,
       "hash": "ff10cf829ee13accb20b112329bed5942b04a1667103c12e05f4ceaf9854c592"
     },
@@ -383,6 +462,7 @@
       "outputPath": "assets/items/bebidas-ciel-mineralizada-sprite360-list.webp",
       "sectionId": "section-3",
       "itemId": "product-13",
+      "visualId": "primary",
       "bytes": 9609606,
       "hash": "e1de86152a8fae310bf2d206d4f589fa3e4a86758062b04bcca01bf3d8612447",
       "sprite": {
@@ -405,6 +485,7 @@
       "outputPath": "assets/items/bebidas-ciel-mineralizada-sprite360.webp",
       "sectionId": "section-3",
       "itemId": "product-13",
+      "visualId": "primary",
       "bytes": 19121764,
       "hash": "7c03ee050767b6d3a8ca51bd2028e4eac6273a49d470054b0970725d0d8dc652",
       "warmupEligible": true,
@@ -428,6 +509,7 @@
       "outputPath": "assets/items/bebidas-sprite-zero-poster.webp",
       "sectionId": "section-3",
       "itemId": "product-14",
+      "visualId": "primary",
       "bytes": 110188,
       "hash": "0698bbc77fcab521fffed7100b0f1a731265d1a13a0e6afcfee62d290dc2924f"
     },
@@ -441,6 +523,7 @@
       "outputPath": "assets/items/bebidas-sprite-zero-sprite360-list.webp",
       "sectionId": "section-3",
       "itemId": "product-14",
+      "visualId": "primary",
       "bytes": 8168948,
       "hash": "145a51c55f5b9864e8a9f7c801b548c7624099fd07138d687c06b124af3961cf",
       "sprite": {
@@ -463,6 +546,7 @@
       "outputPath": "assets/items/bebidas-sprite-zero-sprite360.webp",
       "sectionId": "section-3",
       "itemId": "product-14",
+      "visualId": "primary",
       "bytes": 16933050,
       "hash": "7f2210156708d797c6831579edd2360704f958749119df3bdf9c6b5e50b03026",
       "warmupEligible": true,
@@ -486,6 +570,7 @@
       "outputPath": "assets/items/bebidas-dr-pepper-zero-az-car-poster.webp",
       "sectionId": "section-3",
       "itemId": "product-16",
+      "visualId": "primary",
       "bytes": 82164,
       "hash": "3c4dfdd5f11787522a3a008c34bea407f28b9d783aaf03cedb01e94b080b5a8c"
     },
@@ -499,6 +584,7 @@
       "outputPath": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360-list.webp",
       "sectionId": "section-3",
       "itemId": "product-16",
+      "visualId": "primary",
       "bytes": 5210696,
       "hash": "0470ce8521f3f2dac78406385fe2bcf1d9c075797f3e991d2942af8371d38926",
       "sprite": {
@@ -521,6 +607,7 @@
       "outputPath": "assets/items/bebidas-dr-pepper-zero-az-car-sprite360.webp",
       "sectionId": "section-3",
       "itemId": "product-16",
+      "visualId": "primary",
       "bytes": 10488584,
       "hash": "a9dcc1ed672a94b70b9261d6dc595aa3a1102c45e35ad8d7a5a53000b8a96a80",
       "warmupEligible": true,
@@ -544,6 +631,7 @@
       "outputPath": "assets/items/bebidas-snapple-t-de-frambuesa-poster.webp",
       "sectionId": "section-3",
       "itemId": "product-17",
+      "visualId": "primary",
       "bytes": 108990,
       "hash": "44d35366bd0fddf4b287c260d5b8ec31e817cd91314d524bf9cdfa9bd6bc9784"
     },
@@ -557,6 +645,7 @@
       "outputPath": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360-list.webp",
       "sectionId": "section-3",
       "itemId": "product-17",
+      "visualId": "primary",
       "bytes": 6847822,
       "hash": "e4cbf5ab248a0602e10636cffaa5de7f22f596278fb034d9c7fbdf2f99ebe2bb",
       "sprite": {
@@ -579,6 +668,7 @@
       "outputPath": "assets/items/bebidas-snapple-t-de-frambuesa-sprite360.webp",
       "sectionId": "section-3",
       "itemId": "product-17",
+      "visualId": "primary",
       "bytes": 13835398,
       "hash": "f299c53a189288189f956ff266d95fdcfc821b29bea0db90998b85c233613ed2",
       "warmupEligible": true,
@@ -602,6 +692,7 @@
       "outputPath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-poster.webp",
       "sectionId": "section-3",
       "itemId": "product-18",
+      "visualId": "primary",
       "bytes": 81012,
       "hash": "ba35d6ed4fe43de47fb64082563733c0c280a67151a2ba04e09e55fddb60da35"
     },
@@ -615,6 +706,7 @@
       "outputPath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360-list.webp",
       "sectionId": "section-3",
       "itemId": "product-18",
+      "visualId": "primary",
       "bytes": 5009438,
       "hash": "51c2db828e9fe017bb657ebeb0005667e5c0fd2ae7536a78ba2f4283d43d6d3e",
       "sprite": {
@@ -637,6 +729,7 @@
       "outputPath": "assets/items/bebidas-pe-afiel-limonada-sin-az-car-sprite360.webp",
       "sectionId": "section-3",
       "itemId": "product-18",
+      "visualId": "primary",
       "bytes": 10259278,
       "hash": "e1f09a7f58c647a4c1346601a4541d8169612714aab07363ebf1c445a9cdeba7",
       "warmupEligible": true,
@@ -672,6 +765,9 @@
     ],
     "onDemand": [
       "detail:0:0:section-1:product-1",
+      "poster:0:0:section-1:product-1:asd",
+      "list:0:0:section-1:product-1:asd",
+      "detail:0:0:section-1:product-1:asd",
       "detail:0:1:section-1:product-19",
       "detail:0:2:section-1:product-20",
       "detail:0:3:section-1:product-21",

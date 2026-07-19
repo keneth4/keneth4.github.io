@@ -80,6 +80,42 @@
     ]
   },
   {
+    "productId": "product-1",
+    "role": "poster",
+    "path": "assets/items/platos-principales-chilaquiles-asd-poster.webp",
+    "mime": "image/webp",
+    "bytes": 153722,
+    "hash": "28ca0633e20addd3d998e9adfe7c2826f05b112635d41af707149919262e3c39",
+    "firstView": false,
+    "roles": [
+      "poster"
+    ]
+  },
+  {
+    "productId": "product-1",
+    "role": "listSprite360",
+    "path": "assets/items/platos-principales-chilaquiles-asd-sprite360-list.webp",
+    "mime": "image/webp",
+    "bytes": 8406432,
+    "hash": "5a66d738ce6194caa55ac794be4592fe251d7ceaac569c90ced85aa304b20abf",
+    "firstView": false,
+    "roles": [
+      "listSprite360"
+    ]
+  },
+  {
+    "productId": "product-1",
+    "role": "sprite360",
+    "path": "assets/items/platos-principales-chilaquiles-asd-sprite360.webp",
+    "mime": "image/webp",
+    "bytes": 17458044,
+    "hash": "84ce00b891c5f1d4f2c435622710ebc96b9c47b9b7a81f6a00f03e21d04cf627",
+    "firstView": false,
+    "roles": [
+      "sprite360"
+    ]
+  },
+  {
     "productId": "product-8",
     "role": "poster",
     "path": "assets/items/postres-churro-poster.webp",

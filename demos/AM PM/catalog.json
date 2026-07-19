@@ -1,7 +1,7 @@
 {
   "kind": "menumaker.catalog",
   "schemaVersion": 2,
-  "generatedAt": "2026-07-19T02:13:19.391Z",
+  "generatedAt": "2026-07-19T08:52:34.025Z",
   "exportVersion": "catalog2-editor",
   "meta": {
     "slug": "sitio-am-pm",
@@ -700,6 +700,10 @@
       "available": true,
       "unavailableMode": "disabled",
       "media": {
+        "label": {
+          "es": "Chilaquiles de Pollo con Salsa de Molcajete (1/2 Porción)"
+        },
+        "showLabel": true,
         "poster": {
           "path": "assets/items/platos-principales-chilaquiles-poster.webp",
           "mime": "image/webp",
@@ -739,7 +743,56 @@
           "rows": 11,
           "movement": "radial",
           "rotationDirection": "cw"
-        }
+        },
+        "visuals": [
+          {
+            "id": "asd",
+            "label": {
+              "es": "Chilaquiles de Arrachera con Salsa de Molcajete"
+            },
+            "showLabel": true,
+            "poster": {
+              "path": "assets/items/platos-principales-chilaquiles-asd-poster.webp",
+              "mime": "image/webp",
+              "bytes": 153722,
+              "width": 500,
+              "height": 500,
+              "hash": "28ca0633e20addd3d998e9adfe7c2826f05b112635d41af707149919262e3c39"
+            },
+            "listSprite360": {
+              "path": "assets/items/platos-principales-chilaquiles-asd-sprite360-list.webp",
+              "mime": "image/webp",
+              "bytes": 8406432,
+              "width": 3520,
+              "height": 3520,
+              "hash": "5a66d738ce6194caa55ac794be4592fe251d7ceaac569c90ced85aa304b20abf",
+              "frameCount": 120,
+              "fps": 24,
+              "frameWidth": 320,
+              "frameHeight": 320,
+              "columns": 11,
+              "rows": 11,
+              "movement": "radial",
+              "rotationDirection": "cw"
+            },
+            "sprite360": {
+              "path": "assets/items/platos-principales-chilaquiles-asd-sprite360.webp",
+              "mime": "image/webp",
+              "bytes": 17458044,
+              "width": 5500,
+              "height": 5500,
+              "hash": "84ce00b891c5f1d4f2c435622710ebc96b9c47b9b7a81f6a00f03e21d04cf627",
+              "frameCount": 120,
+              "fps": 24,
+              "frameWidth": 500,
+              "frameHeight": 500,
+              "columns": 11,
+              "rows": 11,
+              "movement": "radial",
+              "rotationDirection": "cw"
+            }
+          }
+        ]
       },
       "marketingBadges": [
         {

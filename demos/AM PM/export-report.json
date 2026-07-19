@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-19T02:13:19.391Z",
+  "generatedAt": "2026-07-19T08:52:34.025Z",
   "exportVersion": "catalog2-editor",
   "slug": "sitio-am-pm",
   "totals": {
     "products": 11,
-    "assetFiles": 37,
-    "knownAssetBytes": 255672850,
+    "assetFiles": 40,
+    "knownAssetBytes": 281691048,
     "firstViewKnownBytes": 25987916
   },
   "validation": {
@@ -40,7 +40,11 @@
       "product-19",
       "product-20",
       "product-21"
-    ]
+    ],
+    "extraVisualProductIds": [
+      "product-1"
+    ],
+    "extraVisualCount": 1
   },
   "runtime": {
     "strategy": "capability-planned",
@@ -59,7 +63,8 @@
         "hasAboutPage": true,
         "hasTextStyles": true,
         "hasCustomFont": true,
-        "hasSectionIcons": true
+        "hasSectionIcons": true,
+        "hasProductVisuals": true
       },
       "sectionIconIds": [
         "chefHat",
@@ -78,6 +83,7 @@
         "locations",
         "faq",
         "detail",
+        "productVisuals",
         "cart",
         "delivery"
       ],
@@ -107,6 +113,20 @@
       "path": "assets/items/platos-principales-chilaquiles-sprite360.webp",
       "message": "sprite360 exceeds target budget.",
       "actual": 21051350,
+      "target": 8000000
+    },
+    {
+      "code": "listSprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-chilaquiles-asd-sprite360-list.webp",
+      "message": "listSprite360 exceeds target budget.",
+      "actual": 8406432,
+      "target": 900000
+    },
+    {
+      "code": "sprite360-budget-exceeded",
+      "path": "assets/items/platos-principales-chilaquiles-asd-sprite360.webp",
+      "message": "sprite360 exceeds target budget.",
+      "actual": 17458044,
       "target": 8000000
     },
     {
@@ -267,7 +287,7 @@
       "code": "total-budget-over-expected-range",
       "path": "assets",
       "message": "Known asset bytes exceed the expected export range.",
-      "actual": 255672850,
+      "actual": 281691048,
       "target": 120000000
     }
   ]
