@@ -1,401 +1,92 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="only light" />
-    <meta
-      name="description"
-      content="Creativivid Studio creates immersive 3D menu experiences for independent restaurants and dining venues in Germany and beyond."
-    />
-    <title>Creativivid Studio | Immersive 3D Menus</title>
-    <script>
-      (() => {
-        const redirectHosts = new Set(["www.creativivid.com", "keneth4.github.io", "keneth4.github.com"]);
-
-        if (!redirectHosts.has(window.location.hostname)) {
-          return;
-        }
-
-        const target = new URL(window.location.href);
-        target.protocol = "https:";
-        target.hostname = "creativivid.com";
-        target.port = "";
-        window.location.replace(target.toString());
-      })();
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
-    <link rel="preload" as="image" href="./Short-Ribs.gif" fetchpriority="high" />
-    <link rel="preload" as="image" href="./Strawberry-Croissant.gif" fetchpriority="high" />
-    <link rel="preload" as="image" href="./Sushi.gif" fetchpriority="high" />
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#hero" data-i18n="skipLink">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container site-header-inner">
-        <a href="#hero" class="brand-mark" aria-label="Creativivid Studio home" data-i18n-aria-label="brandAria">
-          <span class="brand-wordmark" aria-hidden="true">
-            <img
-              class="brand-wordmark-image brand-wordmark-transparent"
-              src="./Brand-transparency.png"
-              alt=""
-              width="967"
-              height="354"
-            />
-            <img
-              class="brand-wordmark-image brand-wordmark-solid"
-              src="./Brand.png"
-              alt=""
-              width="967"
-              height="354"
-            />
-          </span>
-        </a>
-        <nav class="site-nav" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
-          <a href="#experience" data-i18n="nav.experience">Experience</a>
-          <a href="#demos" data-i18n="nav.demos">Demos</a>
-          <a href="#collaboration" data-i18n="nav.pricing">Pricing</a>
-          <a href="#consultation" data-i18n="nav.consultation">Contact</a>
-        </nav>
-        <div class="locale-switch locale-switch-desktop">
-          <label class="locale-label" for="locale-select-desktop" data-i18n="locale.label">Language</label>
-          <select
-            id="locale-select-desktop"
-            class="locale-select"
-            data-locale-select
-            aria-label="Language"
-            data-i18n-aria-label="locale.label"
-          >
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="de">DE</option>
-            <option value="ja">JA</option>
-          </select>
-        </div>
-        <button
-          class="site-nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="mobile-nav-sheet"
-          aria-label="Open menu"
-          data-mobile-nav-toggle
-        >
-          <span class="visually-hidden" data-mobile-nav-toggle-label>Open menu</span>
-          <span class="site-nav-toggle-bars" aria-hidden="true">
-            <span class="site-nav-toggle-line"></span>
-            <span class="site-nav-toggle-line"></span>
-            <span class="site-nav-toggle-line"></span>
-          </span>
-        </button>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Creativivid crea sitios web, tiendas online y experiencias interactivas diseñados alrededor de tu negocio." />
+  <title>Creativivid — Sitios web y experiencias digitales</title>
+  <script>
+    if (["www.creativivid.com", "keneth4.github.io", "keneth4.github.com"].includes(location.hostname)) {
+      const canonical = new URL(location.href);
+      canonical.protocol = "https:";
+      canonical.hostname = "creativivid.com";
+      canonical.port = "";
+      location.replace(canonical.toString());
+    }
+  </script>
+  <link rel="icon" href="./favicon.png" />
+  <link rel="preload" href="./assets/rework/dm-sans.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./rework.css" />
+  <script src="./rework.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-copy="skip">Ir al contenido</a>
+  <header class="header shell">
+    <a class="wordmark" href="#main" aria-label="Creativivid">creativivid</a>
+    <nav aria-label="Navegación principal" data-label="navLabel">
+      <a href="#proyectos" data-copy="work">Proyectos</a>
+      <a href="#servicios" data-copy="services">Servicios</a>
+      <a class="button button-outline" href="#contacto" data-copy="talk">Hablemos</a>
+    </nav>
+    <label class="language"><span class="sr-only" data-copy="language">Idioma</span><select id="language" aria-label="Idioma" data-label="language"><option value="es">ES</option><option value="en">EN</option><option value="de">DE</option><option value="ja">JA</option></select></label>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title" data-lines="heroTitle"><span>Tu negocio<span class="dot">.</span></span><span>Una experiencia</span><span>digital<span class="dot">.</span></span></h1>
+        <p class="lead" data-copy="heroBody">Sitios web, tiendas online y experiencias interactivas. Diseñados alrededor de tu negocio.</p>
+        <a class="button button-dark" href="#contacto" data-copy="heroCta">Cuéntanos tu proyecto</a>
       </div>
-      <div id="mobile-nav-sheet" class="mobile-nav-sheet" aria-hidden="true" data-mobile-nav-sheet>
-        <div class="container mobile-nav-sheet-inner">
-          <nav class="mobile-nav" aria-label="Main navigation" data-i18n-aria-label="nav.aria">
-            <a class="mobile-nav-link" href="#experience" data-i18n="nav.experience">Experience</a>
-            <a class="mobile-nav-link" href="#demos" data-i18n="nav.demos">Demos</a>
-            <a class="mobile-nav-link" href="#collaboration" data-i18n="nav.pricing">Pricing</a>
-            <a class="mobile-nav-link" href="#consultation" data-i18n="nav.consultation">Contact</a>
-          </nav>
-          <div class="locale-switch locale-switch-mobile-sheet">
-            <label class="locale-label" for="locale-select-mobile-sheet" data-i18n="locale.label">Language</label>
-            <select
-              id="locale-select-mobile-sheet"
-              class="locale-select"
-              data-locale-select
-              aria-label="Language"
-              data-i18n-aria-label="locale.label"
-            >
-              <option value="en">EN</option>
-              <option value="es">ES</option>
-              <option value="de">DE</option>
-              <option value="ja">JA</option>
-            </select>
-          </div>
-        </div>
+      <figure class="hero-project">
+        <a href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" aria-label="Explorar el sitio de AMPM (abre en otra pestaña)" data-label="projectLinkLabel"><img src="./assets/rework/ampm-desktop.png" alt="Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante" data-alt="projectAlt" width="1440" height="900" fetchpriority="high" /></a>
+        <figcaption data-copy="projectCaption">AM:PM — Sitio web y menú interactivo</figcaption>
+      </figure>
+    </section>
+    <section id="proyectos" class="case shell" aria-labelledby="case-title">
+      <h2 id="case-title" data-lines="caseTitle"><span>Un negocio real<span class="dot">.</span></span><span>Una experiencia distinta<span class="dot">.</span></span></h2>
+      <div class="case-intro">
+        <div class="case-client"><h3>AM:PM</h3><p data-copy="projectLocation">Restaurante · Aguascalientes, México</p></div>
+        <div class="case-story"><h3 data-copy="caseHeadline">Del primer antojo al pedido.</h3><p data-copy="caseBody">Una web con identidad propia. Un menú que permite explorar platos en 3D, elegir ingredientes y preparar un pedido por WhatsApp.</p></div>
+        <a class="button button-outline" href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer"><span data-copy="explore">Explorar AM:PM</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></a>
       </div>
-    </header>
-
-    <main>
-      <section id="hero" class="section section-dark hero">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow" data-content="hero.eyebrow"></p>
-            <h1 data-content="hero.headline"></h1>
-            <p class="lead" data-content="hero.subheadline"></p>
-
-            <div class="hero-cta-row">
-              <a id="hero-demo-cta" class="btn btn-primary" href="#demos" data-demo-jump>
-                <span data-i18n="hero.ctaDemo">Open Live Demo</span>
-              </a>
-              <a class="btn btn-ghost" href="#consultation" data-i18n="hero.ctaConsult">Request Information</a>
-            </div>
-          </div>
-
-          <div
-            class="hero-visual reveal"
-            role="img"
-            aria-label="Dish preview teaser"
-            data-i18n-aria-label="hero.visualAria"
-          >
-            <div class="hero-visual-frame landing-media-stage hero-gif-stage" data-hero-gif-stage>
-              <div
-                class="landing-media-loader"
-                role="status"
-                aria-live="polite"
-                data-i18n-aria-label="media.loadingAria"
-              >
-                <span class="landing-media-loader__spinner" aria-hidden="true"></span>
-              </div>
-              <img
-                class="landing-media-fallback hero-media-fallback hero-gif-slide is-active"
-                data-hero-gif-slide
-                data-hero-gif-id="short-ribs"
-                src="./Short-Ribs.gif"
-                alt=""
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                draggable="false"
-                aria-hidden="true"
-              />
-              <img
-                class="landing-media-fallback hero-media-fallback hero-gif-slide"
-                data-hero-gif-slide
-                data-hero-gif-id="strawberry-croissant"
-                src="./Strawberry-Croissant.gif"
-                alt=""
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                aria-hidden="true"
-              />
-              <img
-                class="landing-media-fallback hero-media-fallback hero-gif-slide"
-                data-hero-gif-slide
-                data-hero-gif-id="sushi"
-                src="./Sushi.gif"
-                alt=""
-                loading="eager"
-                decoding="async"
-                draggable="false"
-                aria-hidden="true"
-              />
-              <div class="hero-glow" aria-hidden="true"></div>
-            </div>
-
-            <div class="hero-ui-layer" aria-hidden="true">
-              <span class="chip" data-i18n="hero.chipLanguages">9 menu languages</span>
-              <span class="chip" data-i18n="hero.chipDietary">Dietary &amp; allergen tags</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="why-it-matters" class="section section-neutral why-it-matters">
-        <div class="container reveal">
-          <div id="why-it-matters-content" class="why-it-matters-content"></div>
-        </div>
-      </section>
-
-      <section id="experience" class="section section-dark experience">
-        <div class="container reveal">
-          <p class="eyebrow" data-content="experience.eyebrow"></p>
-          <h2 data-content="experience.heading"></h2>
-          <p class="section-intro" data-content="experience.body"></p>
-          <div id="experience-grid" class="experience-grid"></div>
-        </div>
-      </section>
-
-      <section id="demos" class="section section-light demos">
-        <div class="container reveal">
-          <p class="eyebrow" data-content="demos.eyebrow"></p>
-          <h2 data-content="demos.heading"></h2>
-          <p class="section-intro" data-content="demos.body"></p>
-          <ul class="demos-list" id="demos-list"></ul>
-        </div>
-      </section>
-
-      <section id="how-it-works" class="section section-neutral how-it-works">
-        <div class="container reveal">
-          <p class="eyebrow" data-content="howItWorks.eyebrow"></p>
-          <h2 data-content="howItWorks.heading"></h2>
-          <p class="section-intro" data-content="howItWorks.body"></p>
-          <div id="timeline-grid" class="timeline-grid"></div>
-        </div>
-      </section>
-
-      <section id="collaboration" class="section section-dark collaboration">
-        <div class="container reveal">
-          <p class="eyebrow" data-content="collaboration.eyebrow"></p>
-          <h2 data-content="collaboration.heading"></h2>
-          <div id="collaboration-content" class="collaboration-content"></div>
-          <a class="btn btn-primary package-cta" href="#consultation" data-i18n="collaboration.applyCta">
-            Request Information
-          </a>
-        </div>
-      </section>
-
-      <section id="faq" class="section section-light faq">
-        <div class="container reveal">
-          <p class="eyebrow" data-content="faq.eyebrow"></p>
-          <h2 data-content="faq.heading"></h2>
-          <div id="faq-list" class="faq-list"></div>
-        </div>
-      </section>
-
-      <section id="consultation" class="section section-dark consultation">
-        <div id="consultation-layout" class="container consultation-grid reveal">
-          <div id="consultation-intro">
-            <h2 data-content="consultation.heading"></h2>
-            <p class="section-intro" data-content="consultation.body"></p>
-          </div>
-
-          <div class="consultation-form-wrap" id="consultation-form-wrap">
-            <form id="consultation-form" class="consultation-form" novalidate>
-              <fieldset class="menu-situation-fieldset">
-                <legend data-i18n="form.menuSituationLegend">Tell us a little about your menu</legend>
-                <div class="menu-situation-options">
-                  <label class="menu-situation-option">
-                    <input name="menu_situation" type="radio" value="paper_or_pdf" required />
-                    <span data-i18n="form.menuSituationPaperPdf">We currently use a paper or PDF menu</span>
-                  </label>
-                  <label class="menu-situation-option">
-                    <input name="menu_situation" type="radio" value="website_menu" required />
-                    <span data-i18n="form.menuSituationWebsite">We already have a website menu</span>
-                  </label>
-                  <label class="menu-situation-option">
-                    <input name="menu_situation" type="radio" value="completely_new" required />
-                    <span data-i18n="form.menuSituationNew">We want something completely new</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <div class="consultation-form-stage">
-                <p class="consultation-form-stage-title" data-i18n="form.contactStageTitle">Contact Details</p>
-                <label>
-                  <span data-i18n="form.restaurantBrandLabel">Restaurant / Brand *</span>
-                  <input name="restaurant_brand" type="text" autocomplete="organization" required />
-                </label>
-                <label>
-                  <span data-i18n="form.contactNameLabel">Contact Name *</span>
-                  <input name="contact_name" type="text" autocomplete="name" required />
-                </label>
-                <label>
-                  <span data-i18n="form.contactEmailLabel">Email *</span>
-                  <input name="contact_email" type="email" autocomplete="email" required />
-                </label>
-              </div>
-
-              <details class="consultation-form-optional">
-                <summary data-i18n="form.optionalDetailsSummary">Optional details (help us respond)</summary>
-                <div class="consultation-form-optional-grid">
-                  <label>
-                    <span data-i18n="form.cityCountryLabel">City / Country</span>
-                    <input name="city_country" type="text" autocomplete="address-level2" />
-                  </label>
-                  <label>
-                    <span data-i18n="form.projectScopeLabel">What initial project scope fits best?</span>
-                    <select name="project_scope">
-                      <option value="" data-i18n="form.selectOneOption">Select one...</option>
-                      <option value="up_to_10" data-i18n="form.projectScopeUpTo10">Up to 10 dishes</option>
-                      <option value="11_15" data-i18n="form.projectScope11to15">11-15 dishes</option>
-                      <option value="16_25" data-i18n="form.projectScope16to25">16-25 dishes</option>
-                      <option value="not_sure" data-i18n="form.projectScopeNotSure">Not sure yet - let's discuss</option>
-                    </select>
-                  </label>
-                  <label>
-                    <span data-i18n="form.timelineLabel">When are you hoping to launch or update your menu?</span>
-                    <select name="timeline">
-                      <option value="" data-i18n="form.selectOneOption">Select one...</option>
-                      <option value="asap" data-i18n="form.timelineAsapOption">As soon as possible</option>
-                      <option value="1_2_months" data-i18n="form.timelineSoonOption">Within 1-2 months</option>
-                      <option value="future_exploring" data-i18n="form.timelineExploringOption">Exploring for the future</option>
-                    </select>
-                  </label>
-                  <label>
-                    <span data-i18n="form.messageLabel">Anything you'd like us to know about your restaurant or project?</span>
-                    <textarea
-                      name="message"
-                      rows="4"
-                      placeholder="Tell us about your concept, menu goals, or context."
-                      data-i18n-placeholder="form.messagePlaceholder"
-                    ></textarea>
-                  </label>
-                </div>
-              </details>
-
-              <label class="consent-row">
-                <input name="consent" type="checkbox" required />
-                <span>
-                  <span data-i18n="form.consentPrefix">
-                    I consent to Creativivid Studio processing my information to respond to this inquiry and understand the
-                  </span>
-                  <a href="/privacy.html" target="_blank" rel="noopener noreferrer" data-privacy-link data-i18n="form.privacyLinkText">
-                    privacy policy
-                  </a>
-                  <span data-i18n="form.consentSuffix">.</span>
-                </span>
-              </label>
-
-              <div class="turnstile-wrap">
-                <div id="consultation-turnstile" class="turnstile-widget" aria-hidden="true"></div>
-              </div>
-
-              <button id="consultation-submit" type="submit" class="btn btn-primary" data-i18n="form.submitIdle">
-                Request Information
-              </button>
-              <p class="form-reassurance" data-i18n="form.reassuranceText">No pressure. Ask for details, pricing, or next steps.</p>
-              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-
-          <aside id="consultation-success-panel" class="consultation-success-panel" hidden>
-            <div class="consultation-success-stack">
-              <h2 id="consultation-success-heading" data-i18n="form.successHeadline">Your request has been received.</h2>
-              <p data-i18n="form.successBody">We'll reply within 24 hours with details and next steps.</p>
-              <p class="consultation-success-cta-copy" data-i18n="form.successDemoText">
-                While you wait, open a live demo.
-              </p>
-              <a id="consultation-success-demo-cta" class="btn btn-primary" href="#demos" data-i18n="form.successDemoCta">
-                Open Live Demo
-              </a>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container site-footer-inner">
-        <div class="footer-brand">
-          <img src="./Logo.png" alt="" aria-hidden="true" width="1080" height="1080" />
-          <p>© <span id="year"></span> <span data-i18n="footer.copyrightBody">Creativivid Studio. All rights reserved.</span></p>
-        </div>
-        <a href="/privacy.html" data-privacy-link data-i18n="footer.privacyPolicy">Privacy Policy</a>
+      <a class="case-image" href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" aria-label="Explorar el sitio de AMPM (abre en otra pestaña)" data-label="projectLinkLabel"><img src="./assets/rework/ampm-desktop.png" alt="Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante" data-alt="projectAlt" width="1440" height="900" loading="lazy" /></a>
+      <div class="project-details">
+        <article><h3 data-copy="identity">Identidad</h3><p data-copy="identityBody">Una presencia digital hecha para el restaurante.</p></article>
+        <article><h3 data-copy="exploration">Exploración</h3><p data-copy="explorationBody">Platos en 3D, opciones e información en varios idiomas.</p></article>
+        <article><h3 data-copy="order">Pedido</h3><p data-copy="orderBody">Personalización del plato y envío por WhatsApp.</p></article>
       </div>
-    </footer>
-
-    <button
-      id="back-to-top"
-      class="back-to-top"
-      type="button"
-      aria-label="Back to top"
-      data-i18n-aria-label="backToTopAria"
-      aria-hidden="true"
-      tabindex="-1"
-    >
-      ↑
-    </button>
-
-    <script type="module" src="./app.js"></script>
-  </body>
+    </section>
+    <section id="servicios" class="services shell" aria-labelledby="services-title">
+      <h2 id="services-title" data-lines="servicesTitle"><span>Lo que tu negocio</span><span>necesita. Hecho</span><span><mark>a su medida.</mark></span></h2>
+      <div class="service-list">
+        <article><span class="number" aria-hidden="true">01</span><div><h3 data-copy="web">Sitios web</h3><p data-copy="webBody">Una presencia digital con identidad, contenido claro y un camino para contactar.</p></div></article>
+        <article><span class="number" aria-hidden="true">02</span><div><h3 data-copy="commerce">Comercio online</h3><p data-copy="commerceBody">Catálogos, tiendas y flujos de compra según la operación de tu negocio.</p></div></article>
+        <article><span class="number" aria-hidden="true">03</span><div><h3 data-copy="interactive">Experiencias interactivas</h3><p data-copy="interactiveBody">Productos y espacios que se pueden explorar, con tecnología 3D cuando aporta valor.</p></div></article>
+      </div>
+    </section>
+    <section class="process shell" aria-label="Cómo trabajamos" data-label="processLabel">
+      <article><span class="number" aria-hidden="true">01</span><div><h3 data-copy="step1">Conversamos</h3><p data-copy="step1Body">Entendemos tu negocio y tus objetivos.</p></div><svg class="arrow process-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></article>
+      <article><span class="number" aria-hidden="true">02</span><div><h3 data-copy="step2">Definimos</h3><p data-copy="step2Body">Acordamos alcance, inversión y entregables.</p></div><svg class="arrow process-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></article>
+      <article><span class="number" aria-hidden="true">03</span><div><h3 data-copy="step3">Creamos</h3><p data-copy="step3Body">Diseñamos, desarrollamos y acompañamos la entrega.</p></div></article>
+    </section>
+    <section id="contacto" class="contact" aria-labelledby="contact-title">
+      <div class="contact-grid shell">
+        <div class="contact-copy"><h2 id="contact-title" data-lines="contactTitle"><span>Tu siguiente paso</span><span>empieza <mark>aquí.</mark></span></h2><p class="lead" data-copy="contactBody">Cada proyecto se define según lo que tu negocio necesita, su alcance y la inversión disponible.</p></div>
+        <form id="project-form">
+          <label class="field"><span data-copy="name">Tu nombre</span><input name="contact_name" autocomplete="name" required maxlength="150" /></label>
+          <label class="field"><span data-copy="email">Correo electrónico</span><input name="email" type="email" autocomplete="email" required maxlength="254" /></label>
+          <label class="field"><span data-copy="business">Negocio o marca</span><input name="business" autocomplete="organization" required maxlength="200" /></label>
+          <label class="field"><span data-copy="message">¿Qué te gustaría crear?</span><textarea name="message" rows="3" required maxlength="5000"></textarea></label>
+          <label class="field"><span data-copy="budget">Inversión aproximada (opcional)</span><input name="budget" maxlength="150" /></label>
+          <label class="consent"><input type="checkbox" name="consent" required /><span><span data-copy="consent">He leído la</span> <a href="./privacy.html?lang=es" data-privacy data-copy="privacyPolicy">política de privacidad</a>.</span></label>
+          <div id="captcha"></div>
+          <button type="submit" class="button button-accent"><span data-copy="submit">Enviar proyecto</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <footer class="footer shell"><a class="wordmark" href="#main" aria-label="Creativivid">creativivid</a><nav aria-label="Enlaces del pie" data-label="footerLabel"><a href="#proyectos" data-copy="work">Proyectos</a><a href="#servicios" data-copy="services">Servicios</a><a href="./privacy.html?lang=es" data-privacy data-copy="privacy">Privacidad</a></nav><small>© <span id="year">2026</span> Creativivid</small></footer>
+    </section>
+  </main>
+</body>
 </html>
