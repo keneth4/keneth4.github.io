@@ -15,15 +15,17 @@
       location.replace(canonical.toString());
     }
   </script>
-  <link rel="icon" href="./favicon.png" />
+  <link rel="icon" href="./assets/brand/muyal-canonical.png" />
   <link rel="preload" href="./assets/rework/dm-sans.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="./rework.css" />
-  <script src="./rework.js" defer></script>
+  <link rel="stylesheet" href="./rework.css?v=20261012b" />
+  <script src="./rework.js?v=20261012b" defer></script>
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three.module.js","three/addons/postprocessing/Pass.js":"./assets/vendor/Pass.js"}}</script>
+  <script type="module" src="./splat-demo.js?v=20261012b"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-copy="skip">Ir al contenido</a>
   <header class="header shell">
-    <a class="wordmark" href="#main" aria-label="Creativivid">creativivid</a>
+    <a class="wordmark" href="#main" aria-label="Creativivid"><img src="./assets/brand/muyal-canonical.png" alt="" width="1254" height="1254" /><span>Creativivid</span></a>
     <nav aria-label="Navegación principal" data-label="navLabel">
       <a href="#proyectos" data-copy="work">Proyectos</a>
       <a href="#servicios" data-copy="services">Servicios</a>
@@ -38,9 +40,13 @@
         <p class="lead" data-copy="heroBody">Sitios web, tiendas online y experiencias interactivas. Diseñados alrededor de tu negocio.</p>
         <a class="button button-dark" href="#contacto" data-copy="heroCta">Cuéntanos tu proyecto</a>
       </div>
-      <figure class="hero-project">
-        <a href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" aria-label="Explorar el sitio de AMPM (abre en otra pestaña)" data-label="projectLinkLabel"><img src="./assets/rework/ampm-desktop.png" alt="Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante" data-alt="projectAlt" width="1440" height="900" fetchpriority="high" /></a>
-        <figcaption data-copy="projectCaption">AM:PM — Sitio web y menú interactivo</figcaption>
+      <figure class="hero-project demo-panel">
+        <div class="demo-stage" id="splat-stage">
+          <a class="demo-poster" href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" aria-label="Explorar AMPM" data-label="projectLinkLabel"><img src="./assets/rework/ampm-desktop.png" alt="Sitio de AMPM" data-alt="projectAlt" width="1440" height="900" fetchpriority="high" /></a>
+          <div id="splat-canvas" hidden></div>
+        </div>
+        <div class="demo-actions"><button class="button button-demo" id="demo-start" type="button"><span id="demo-button-text">Explorar en 3D</span><span aria-hidden="true">↗</span></button><button class="demo-reset" id="demo-reset" type="button" hidden>Restablecer vista</button><button class="demo-back" id="demo-back" type="button" hidden>Ver sitio</button></div>
+        <figcaption id="demo-caption">AM:PM — Sitio web y menú interactivo</figcaption><p id="demo-status" role="status" aria-live="polite"></p>
       </figure>
     </section>
     <section id="proyectos" class="case shell" aria-labelledby="case-title">
@@ -72,7 +78,7 @@
     </section>
     <section id="contacto" class="contact" aria-labelledby="contact-title">
       <div class="contact-grid shell">
-        <div class="contact-copy"><h2 id="contact-title" data-lines="contactTitle"><span>Tu siguiente paso</span><span>empieza <mark>aquí.</mark></span></h2><p class="lead" data-copy="contactBody">Cada proyecto se define según lo que tu negocio necesita, su alcance y la inversión disponible.</p></div>
+        <div class="contact-copy"><h2 id="contact-title" data-lines="contactTitle"><span>Tu siguiente paso</span><span>empieza <mark>aquí.</mark></span></h2><p class="lead" data-copy="contactBody">Cada proyecto se define según lo que tu negocio necesita, su alcance y la inversión disponible.</p><img class="contact-orbit" src="./assets/brand/contact-orbit.svg" alt="" aria-hidden="true" width="270" height="225" /></div>
         <form id="project-form">
           <label class="field"><span data-copy="name">Tu nombre</span><input name="contact_name" autocomplete="name" required maxlength="150" /></label>
           <label class="field"><span data-copy="email">Correo electrónico</span><input name="email" type="email" autocomplete="email" required maxlength="254" /></label>
@@ -85,7 +91,7 @@
           <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
-      <footer class="footer shell"><a class="wordmark" href="#main" aria-label="Creativivid">creativivid</a><nav aria-label="Enlaces del pie" data-label="footerLabel"><a href="#proyectos" data-copy="work">Proyectos</a><a href="#servicios" data-copy="services">Servicios</a><a href="./privacy.html?lang=es" data-privacy data-copy="privacy">Privacidad</a></nav><small>© <span id="year">2026</span> Creativivid</small></footer>
+      <footer class="footer shell"><a class="wordmark" href="#main" aria-label="Creativivid"><img src="./assets/brand/muyal-canonical.png" alt="" width="1254" height="1254" /><span>Creativivid</span></a><nav aria-label="Enlaces del pie" data-label="footerLabel"><a href="#proyectos" data-copy="work">Proyectos</a><a href="#servicios" data-copy="services">Servicios</a><a href="./privacy.html?lang=es" data-privacy data-copy="privacy">Privacidad</a></nav><small>© <span id="year">2026</span> Creativivid</small></footer>
     </section>
   </main>
 </body>

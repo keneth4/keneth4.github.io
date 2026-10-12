@@ -1,0 +1,22 @@
+[
+  {
+    "foreground": "#181818",
+    "background": "#F6F4EF",
+    "contrast": 16.15
+  },
+  {
+    "foreground": "#625F69",
+    "background": "#F6F4EF",
+    "contrast": 5.69
+  },
+  {
+    "foreground": "#FFFFFF",
+    "background": "#5A3EE0",
+    "contrast": 6.56
+  },
+  {
+    "foreground": "#5A3EE0",
+    "background": "#F6F4EF",
+    "contrast": 5.97
+  }
+]
