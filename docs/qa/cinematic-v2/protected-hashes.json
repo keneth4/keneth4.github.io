@@ -1,0 +1,15 @@
+{
+  "assets/brand/muyal-canonical.png": "8d29e1cab93da1ddf480190519f5d9b5b1beeecf62cfa187bcf5467a82f28957",
+  "assets/brand/sniglet-400.ttf": "9487c024cd08354128005f07c9b2be98d27cfe5caec531822d168fc05d6cab3f",
+  "assets/rework/ampm-mollequiles.spz": "4156ff2caf74fc5c313dc4a6419d4a4c5b993a6035ee2cf97acac5794143de1c",
+  "assets/rework/mollequiles-560.webp": "6d26dc4180be56ff1cbbd2f86ed35f7acd06392596b71c696b66ac8620a686d1",
+  "assets/rework/mollequiles-1120.webp": "2b7989de150abab7cf704473aa36fe4d1f605f9a9df4c915e4cbf011ec476fb3",
+  "motion/splat-viewer.js": "4f15e15063a408f35a25d37956570639fbab1b6f32b9948fd563e793f6adf7ca",
+  "motion/landing-motion.js": "f867db91527792ddf0ced4cfa4f528aad92517f9d413e4d030596a56ec48941e",
+  "privacy.html": "516ca11e0a1a27552695338c4401e23dd965a617404c47809a58fec322467dee",
+  "html:hero": "74f12c7ac0beb1463e48e247de824637781eb10e041e6a8dce7a82a8b74879b1",
+  "html:other-sections": "dbaadd0dfce38471f2044de234bd2d75562c7e1bf85430b3d058a8c68c28a110",
+  "html:form": "e1b967362ba5327c57561294201fffea49c9868057beb35db1553d31e0824148",
+  "html:before-story": "abc52e4ec72267301ce67f4521dedd38740929afb18cf76e6c9f46ddfb4a8e2e",
+  "html:after-story": "76d437f87da7f8bd251abe1853a188bbe11185c672fa9b86a9babaf27e258409"
+}
