@@ -30,7 +30,7 @@ export function createViewer(host, onFailure) {
     setPose,
     setInteractive(active) { host.dataset.interactive = String(active); },
     resize() { if (current) setPose(current); },
-    pause(value = true) { paused = value; if (!value && current) setPose(current); },
+    pause(value = true) { if (paused === value) return; paused = value; if (!value && current) setPose(current); },
     dispose() { disposed = true; abort.abort(); runtime?.dispose(); runtime = null; host.replaceChildren(); }
   };
 }

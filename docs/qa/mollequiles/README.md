@@ -1,4 +1,16 @@
-# Mollequiles — integration QA
+# Mollequiles — integration QA (revisión móvil v2)
+
+La revisión vigente implementa historia con scroll en móvil, cámara más amplia y 600svh de recorrido. Exploración voluntaria permite órbita en dos ejes y pinch; los botones de zoom no aparecen en pantallas táctiles. Plan vigente: [07-mobile-and-motion-revision.md](../../plans/muyal-pinned-story/07-mobile-and-motion-revision.md).
+
+**V2 automatizado:** 18 escenarios de navegador y 7 unit tests pasan. `v2/results.json` contiene el detalle. La prueba de dos dedos usa Input.dispatchTouchEvent de Chromium, no eventos sintéticos DOM. Verifica cambio de zoom y elevación/yaw, canvas visible durante la historia, reentrada, scroll de un dedo sobre el plato durante la historia, traducciones móviles, fallbacks y regresiones.
+
+`v2/wide-camera-contact-sheet.jpg` compara A, B, C, D y puntos intermedios. El lateral B y la vista superior C son claramente distintos; no se observaron agujeros grandes en esas capturas. C recorta el borde del plato deliberadamente. A/poster no cambian. `v2/mobile-story.png` y `v2/mobile-explore.png` documentan los modos separados. Una tolerancia de 1 CSS px en el inicio evita que offsets fraccionales impidan rearmar la pasada.
+
+**QA físico:** el usuario probó V1 en Poco X6 Pro y reportó las limitaciones que motivaron V2. Retest V2 e iPhone/Safari siguen pendientes, igual que permisos de redistribución. No PR ni publicación.
+
+La medición inicial controlada de V1 se conserva abajo como referencia; no se presenta como perfil de rendimiento de la nueva cámara en teléfonos. Se redujo además la configuración redundante de cámara al invocar pause(false) sin cambio de estado.
+
+## Evidencia histórica de V1
 
 Status: implemented locally; automated QA passed. Physical-device QA and asset/application-glue redistribution permission are pending. No PR or publication.
 

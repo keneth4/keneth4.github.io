@@ -1,5 +1,6 @@
 # CreatiVivid — 05. Especificación ejecutable para Codex: Mollequiles pinned
 
+> Revisión vigente de cámara, móvil y gestos: [07-mobile-and-motion-revision.md](07-mobile-and-motion-revision.md). Las decisiones anteriores sobre móvil sin pin y botones de zoom son históricas.
 Estado: plan de desarrollo. Este documento no implementa ni publica cambios.
 
 ## 0. Contrato de trabajo

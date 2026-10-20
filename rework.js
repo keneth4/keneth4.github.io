@@ -1,5 +1,6 @@
 const COPY = {
   es: {
+    case3dActive: "Exploración 3D activa.",
     caseSeeStory: "Conoce el proyecto",
     caseDishAlt: "Mollequiles de AM:PM en un plato blanco",
     caseDishCaption: "Mollequiles · AM:PM",
@@ -13,7 +14,7 @@ const COPY = {
     caseZoomIn: "Acercar",
     caseZoomOut: "Alejar",
     case3dLabel: "Exploración 3D de Mollequiles",
-    case3dHelp: "Arrastra horizontalmente o usa las flechas para explorar. Usa los botones para acercar y alejar; Escape para salir.",
+    case3dHelp: "Arrastra para girar y usa dos dedos para acercar o alejar. Desliza fuera del plato para bajar por la página. Escape para salir.",
     case3dLoading: "Cargando experiencia 3D…",
     case3dError: "No se pudo abrir el 3D. Puedes conocer el proyecto y visitar AM:PM.",
 
@@ -30,6 +31,7 @@ const COPY = {
     sending: 'Enviando…', captcha: 'Completa la verificación antes de enviar.', captchaError: 'No se pudo cargar la verificación. Recarga la página e inténtalo de nuevo.', error: 'No se pudo enviar. Tus datos siguen en el formulario; inténtalo de nuevo.', success: 'Recibimos tu proyecto. Te contactaremos para conversar sobre los siguientes pasos.', local: 'Formulario validado. Esta vista local no envía solicitudes; tus datos no se han enviado.'
   },
   en: {
+    case3dActive: "3D exploration active.",
     caseSeeStory: "Discover the project",
     caseDishAlt: "AM:PM Mollequiles on a white plate",
     caseDishCaption: "Mollequiles · AM:PM",
@@ -43,7 +45,7 @@ const COPY = {
     caseZoomIn: "Zoom in",
     caseZoomOut: "Zoom out",
     case3dLabel: "Explore Mollequiles in 3D",
-    case3dHelp: "Drag horizontally or use the arrow keys to explore. Use the buttons to zoom; Escape to exit.",
+    case3dHelp: "Drag to orbit and pinch with two fingers to zoom. Swipe outside the dish to scroll the page. Escape to exit.",
     case3dLoading: "Loading the 3D experience…",
     case3dError: "The 3D experience could not load. You can still read about the project and visit AM:PM.",
 
@@ -60,6 +62,7 @@ const COPY = {
     sending: 'Sending…', captcha: 'Complete the verification before sending.', captchaError: 'Verification could not load. Reload the page and try again.', error: 'Could not send. Your details remain in the form; please try again.', success: 'We received your project. We’ll get in touch to discuss next steps.', local: 'Form validated. This local preview does not send requests; your details have not been sent.'
   },
   de: {
+    case3dActive: "3D-Erkundung aktiviert.",
     caseSeeStory: "Das Projekt entdecken",
     caseDishAlt: "Mollequiles von AM:PM auf einem weißen Teller",
     caseDishCaption: "Mollequiles · AM:PM",
@@ -73,7 +76,7 @@ const COPY = {
     caseZoomIn: "Vergrößern",
     caseZoomOut: "Verkleinern",
     case3dLabel: "Mollequiles in 3D erkunden",
-    case3dHelp: "Ziehe horizontal oder nutze die Pfeiltasten. Mit den Tasten kannst du zoomen; Escape beendet die Erkundung.",
+    case3dHelp: "Zum Drehen ziehen, zum Zoomen zwei Finger verwenden. Außerhalb des Tellers wischen, um die Seite zu scrollen. Escape beendet die Erkundung.",
     case3dLoading: "3D-Erlebnis wird geladen…",
     case3dError: "Das 3D-Erlebnis konnte nicht geladen werden. Die Projektbeschreibung und die Website von AM:PM bleiben zugänglich.",
 
@@ -90,6 +93,7 @@ const COPY = {
     sending: 'Wird gesendet…', captcha: 'Bitte schließe die Überprüfung vor dem Senden ab.', captchaError: 'Die Überprüfung konnte nicht geladen werden. Lade die Seite neu.', error: 'Senden fehlgeschlagen. Deine Angaben bleiben im Formular. Bitte versuche es erneut.', success: 'Wir haben dein Projekt erhalten und melden uns für die nächsten Schritte.', local: 'Formular geprüft. Diese lokale Vorschau sendet keine Anfragen. Deine Angaben wurden nicht gesendet.'
   },
   ja: {
+    case3dActive: "3D探索中です。",
     caseSeeStory: "プロジェクトを見る",
     caseDishAlt: "白い皿に盛られたAM:PMのモジェキレス",
     caseDishCaption: "モジェキレス · AM:PM",
@@ -103,7 +107,7 @@ const COPY = {
     caseZoomIn: "拡大",
     caseZoomOut: "縮小",
     case3dLabel: "モジェキレスを3Dで探索",
-    case3dHelp: "横にドラッグするか矢印キーで探索できます。ボタンで拡大・縮小し、Escapeで終了します。",
+    case3dHelp: "ドラッグで回転、2本指のピンチで拡大・縮小できます。ページのスクロールは皿の外で行えます。Escapeで終了します。",
     case3dLoading: "3D体験を読み込み中…",
     case3dError: "3Dを読み込めませんでした。プロジェクトの説明とAM:PMのサイトは引き続きご覧いただけます。",
 

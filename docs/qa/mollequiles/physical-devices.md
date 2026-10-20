@@ -1,35 +1,31 @@
-# QA físico asistido — pendiente
+# QA físico asistido — revisión móvil v2
 
-Vista temporal en la red Wi-Fi del equipo: http://192.168.100.3:8770
-No es un despliegue público. Mantener este equipo y el servidor encendidos.
-Si cambia la IP, ejecutar `ipconfig getifaddr en0` y usar `http://IP:8770`.
+Vista temporal: http://192.168.100.3:8770 (misma red Wi-Fi). Recargar la página para recibir la revisión `20261020b`.
+Mantener este equipo y el servidor encendidos. Si cambia la IP: `ipconfig getifaddr en0`.
 Servidor: `python3 -m http.server 8770 --bind 0.0.0.0 --directory /private/tmp/creativivid-muyal`.
-Los hosts localhost, .local y direcciones privadas usan validación local del formulario, sin envío.
+Los hosts privados y .local usan validación local del formulario, sin envío.
 
-## Registro requerido
+| Dispositivo | SO / navegador | Resultado |
+|---|---|---|
+| Poco X6 Pro físico | Android; versión y navegador pendientes | V1 probado por el usuario: giro solo horizontal y botones de zoom deficientes; pidió recorrido móvil y movimiento más visible. V2 pendiente de retest. |
+| iPhone físico | Modelo, iOS y Safari pendientes | Pendiente |
 
-| Dispositivo | Modelo | SO | Navegador/versión | Resultado |
-|---|---|---|---|---|
-| iPhone físico | Pendiente | Pendiente | Safari, pendiente | Pendiente del usuario |
-| Android físico | Pendiente | Pendiente | Chrome, pendiente | Pendiente del usuario |
+No confundir los eventos táctiles de Chromium con validación en un teléfono físico. No cerrar feature ni abrir PR antes de completarla.
 
-La emulación de Chromium no sustituye estos resultados. No cerrar feature ni abrir PR antes de completarlos.
+## Checklist v2
 
-## Checklist (cada teléfono)
+- Recargar; hero e identidad intactos. El formulario debe permanecer en modo local.
+- Llegar al caso y seguir desplazando sin pulsar Explorar: ahora hay historia sticky también en móvil. El movimiento debe ser claramente visible y seguir el avance del dedo; el tramo es más largo, con posibilidad de parar y retroceder.
+- Pasar lentamente por vistas lateral, superior y cierre; comprobar que no haya agujeros grandes, saltos de cámara, texto tapado o avance brusco entre dos vistas.
+- Si el 3D llegó tarde, se conserva el poster esa pasada: volver por encima del inicio y entrar de nuevo para ver el recorrido cargado.
+- Al final, pulsar Explorar: un dedo permite girar horizontal Y verticalmente; dos dedos permiten pinch-to-zoom sin botones +/− en pantalla táctil.
+- Mientras exploras, el arrastre sobre el plato mueve el modelo. Para desplazar la página, deslizar fuera del plato o pulsar Volver al recorrido. Nunca bloquear todo el documento.
+- Levantar un dedo tras el pinch: continuar arrastrando sin salto de zoom/órbita.
+- Reset vuelve al cierre D; salir vuelve al progreso de scroll y recupera foco sin saltar la página.
+- Girar el teléfono: si el contenido no cabe, usar fallback estático; no ocultar controles ni capturar scroll. Verificar las barras del navegador expandiéndose/contrayéndose.
+- Probar zoom de texto y ES/EN/DE/JA; nada debe solaparse. En DE/JA el fallback estático por falta de espacio es aceptable.
+- Con movimiento reducido: no pin ni cámara automática; exploración voluntaria y pinch siguen disponibles.
+- Con red lenta: poster, explicación y enlaces siempre presentes.
+- Completar formulario con datos ficticios: mensaje de validación local, sin envío.
 
-- Abrir la página en vertical: hero e identidad intactos; texto legible, sin desbordamiento horizontal.
-- Llegar al caso: poster cuadrado visible sin pin; explicación y enlace a AM:PM accesibles sin 3D.
-- Pulsar Explorar: estado de carga anunciado y primer frame visible antes de controles.
-- Arrastre horizontal rota; un dedo vertical permite bajar por la página, incluso empezando sobre el plato.
-- Pinch y rueda no cambian zoom del visor; botones +/− acercan/alejan dentro de límites.
-- Reset vuelve a A; salir devuelve poster, foco visible y controles ocultos.
-- Salir del caso hacia arriba/abajo pausa la escena; volver no activa exploración automáticamente.
-- Rotar el teléfono y expandir/contraer barras del navegador: sin recortes de texto ni controles inaccesibles.
-- Aumentar tamaño de texto/zoom: leer todo y contactar sigue siendo posible.
-- Activar movimiento reducido antes de cargar: sin pin, sin recorrido; 3D solo al pulsar.
-- Probar ES/EN/DE/JA, especialmente DE y JA; navegación y privacidad mantienen el idioma.
-- Probar red lenta: poster y contenido siguen presentes; carga no bloquea scroll.
-- Completar formulario con datos ficticios: debe decir vista local y no enviar.
-- Si dispones de teclado/lector de pantalla: etiquetas, estado de carga, salida y foco comprensibles.
-
-Anotar por fallo: pasos, orientación, idioma, captura y resultado esperado/observado.
+Registrar modelo, versión del SO, navegador/versión, orientación, idioma y pasos/capturas de cualquier fallo. Volver a pedir retest cuando cambie el comportamiento.
