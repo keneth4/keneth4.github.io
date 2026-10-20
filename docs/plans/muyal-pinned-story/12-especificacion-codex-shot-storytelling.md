@@ -5,18 +5,19 @@
 
 ## 1. Alcance y decisiones confirmadas
 
-Evolucionar el pinned existente, con una sola escena PlayCanvas. Mantener asset, poster, orientación, target, FOV, límites, logo/wordmark, motivos de otras secciones, formulario y caso comercial. No generar imágenes nuevas, usar otro renderer ni prometer reiluminación o una campaña ya producida.
+Evolucionar el pinned existente, con una sola escena PlayCanvas. Mantener SPZ, orientación, target, FOV, límites, logo/wordmark, motivos, formulario y caso comercial. Por solicitud posterior del usuario se revisan A–D y se regenera el poster para que A muestre comida y plato completos. No generar imágenes sintéticas, usar otro renderer ni prometer reiluminación o una campaña ya producida.
 
 El usuario eligió **arranque desde .04, pausas solo en B/C** y **progreso suavizado compartido**. Conservar 600svh/100svh cuando cabe, scroll nativo, gestos opt-in, reduced-motion, poster-latch, listeners/dispose/bfcache y comportamiento landscape de main. La prueba física previa valida la base, no este cambio de narrativa.
 
 ## 2. Una configuración y un progreso de presentación
 
-`POSES` conserva exactamente sus valores actuales: A (.04,90°,45°,1), B (.38,135°,34°,1.24), C (.72,55°,68°,.78), D (.90,105°,48°,1.04). `SHOTS` referencia cada objeto de POSES e incluye únicamente id, keys de traducción y holdUntil: A=POSES[0].p; B=.425; C=.765; D=1. No repetir start/end ni porcentajes de llegada en metadatos, controller o HTML. Marca de cada toma = su pose.p.
+`POSES` revisado tras feedback visual: A (.04,90°,45°,1.50), B (.38,180°,30°,1.45), C (.72,45°,88°,1.15), D (.90,0°,55°,.75). A presenta comida y plato completos; B es ángulo bajo, C vista superior y D detalle. El adaptador obtiene su vista inicial de POSES[0] para que el primer frame coincida con el nuevo poster; no cambian FOV, target, orientación ni el factor base .65. El master anterior se conserva como referencia histórica; nuevo master vivo2100×2100 y pruebas en ../../qa/cinematic-v3/. `SHOTS` referencia cada objeto de POSES e incluye únicamente id, keys de traducción y holdUntil: A=POSES[0].p; B=.425; C=.765; D=1. No repetir start/end ni porcentajes de llegada en metadatos, controller o HTML. Marca de cada toma = su pose.p.
 
 Contratos de `motion/story-timeline.mjs`:
 
 - `shotAt(q)` devuelve índice 0–3; el índice inicial es 0 incluso antes de .04. Para las demás tomas, seleccionar el último índice cuya pose.p <= q. Entradas finitas fuera de rango se limitan a 0–1; no finitas se tratan como 0.
 - `cameraAt(q)` usa esa misma configuración. Hasta holdUntil devuelve la pose exacta; después interpola hacia la siguiente pose hasta su pose.p. A→B usa sin(t·π/2); B→C y C→D smoothstep. No overshoot; conservar clampPose y exports previos para compatibilidad. No introducir límites ni configuración del renderer en SHOTS.
+- `travellingAt(q)` devuelve el índice de segmento0–2 solo después del hold y antes de la siguiente llegada; devuelve −1 en holds. Durante el movimiento se usa copy de transición neutral respecto a la dirección, sin afirmar que ya está visible la siguiente toma. `shotAt` sigue gobernando las cuatro marcas/contador; no se añade una quinta vista.
 - `revealAt`, `passAt` y `progressAt` conservan sus contratos. El valor raw **p** sigue calculado con la distancia sticky medida y sirve para reveal, latch, entrada/salida, proximidad y resize; no para seleccionar una segunda fase visual.
 
 El controller incorpora **q**, progreso presentado. Mientras hay timeline visible, una sola actualización aplica `q += (pTarget-q) * (1-exp(-dt/85))`, dt limitado a 100 ms. pTarget es p, salvo que esté a <=1 CSS px real de un hito de POSES: se ajusta a ese hito. Si la distancia restante entre q y pTarget es <=.25 CSS px, fijar q=pTarget para alcanzar exactamente holds y umbrales. Distancias expresadas en progreso se convierten usando `max(1, altoStory-altoPin)`. No ajustar q a un hito por adelantado de forma independiente.
@@ -32,14 +33,14 @@ En entrada, refresh avanzado, cambio de modo, reentrada desde fuera, pageshow y 
 | q | Cámara | Texto activo |
 |---|---|---|
 | 0–.04 | A; reveal usa p=.005–.04 | Toma 01 |
-| .04–.38 | A→B desde el inicio aprobado, sin hold extra | Toma 01 |
+| .04–.38 | A→B desde el inicio aprobado, sin hold extra | Transición 01–02 |
 | .38–.425 | Hold B | Toma 02 |
-| .425–.72 | B→C | Toma 02 |
+| .425–.72 | B→C | Transición 02–03 |
 | .72–.765 | Hold C | Toma 03 |
-| .765–.90 | C→D | Toma 03 |
+| .765–.90 | C→D | Transición 03–04 |
 | .90–1 | Hold D; explorar opt-in | Toma 04 |
 
-No añadir hold hasta .055 ni alternativa de adelantar etiquetas durante el último 10% del travelling. El texto cambia al alcanzar la pose en el progreso presentado. Las pausas son tramos de scroll, no duración temporal mínima ni autoplay. La longitud del story no aumenta.
+No añadir hold hasta .055 ni alternativa de adelantar etiquetas durante el último 10% del travelling. El nombre y descripción específicos de una toma aparecen durante su hold; durante travelling se muestra el texto de intervalo definido abajo. No describir un ángulo bajo que ya se está abandonando. El estado depende solo de q y conserva el mismo texto al invertir scroll. Las pausas son tramos de scroll, no duración temporal mínima ni autoplay. La longitud del story no aumenta.
 
 ## 4. DOM, copy y transición
 
@@ -51,29 +52,61 @@ Textos completos canónicos, incorporados al COPY existente (no crear un segundo
 
 ```js
 const SHOT_COPY = {
-  es: {
-    caseShot1Label:'01/04 · Plano principal', caseShot1Title:'Una captura. Muchas posibilidades.', caseShot1Body:'El plato es el punto de partida para una historia visual.',
-    caseShot2Label:'02/04 · Perspectiva lateral', caseShot2Title:'Cambia el ángulo. Cambia la historia.', caseShot2Body:'Un nuevo ángulo revela el volumen y cambia la lectura de la escena.',
-    caseShot3Label:'03/04 · Plano detalle', caseShot3Title:'Los detalles también cuentan.', caseShot3Body:'Un acercamiento destaca texturas, ingredientes y contrastes.',
-    caseShot4Label:'04/04 · Composición editorial', caseShot4Title:'Una escena. Distintas maneras de mostrarla.', caseShot4Body:'De planos generales a primeros planos para contar nuevas historias.'
+  "es": {
+    "caseShot1Label": "01/04 · Plano de conjunto",
+    "caseShot1Title": "Una captura. Muchas posibilidades.",
+    "caseShot1Body": "Comida y plato, juntos en una vista completa.",
+    "caseShot2Label": "02/04 · Ángulo bajo",
+    "caseShot2Title": "El volumen cambia la lectura.",
+    "caseShot2Body": "Una vista más baja destaca la altura y las capas del plato.",
+    "caseShot3Label": "03/04 · Vista superior",
+    "caseShot3Title": "Desde arriba, otra composición.",
+    "caseShot3Body": "La vista superior muestra la distribución de ingredientes y colores.",
+    "caseShot4Label": "04/04 · Plano detalle",
+    "caseShot4Title": "Ahora, los ingredientes de cerca.",
+    "caseShot4Body": "El acercamiento concentra el encuadre en ingredientes, capas y texturas."
   },
-  en: {
-    caseShot1Label:'01/04 · Hero shot', caseShot1Title:'One capture. Many possibilities.', caseShot1Body:'The dish becomes the starting point for a visual story.',
-    caseShot2Label:'02/04 · Side perspective', caseShot2Title:'Change the angle. Change the story.', caseShot2Body:'A new angle reveals volume and a different reading of the scene.',
-    caseShot3Label:'03/04 · Close-up', caseShot3Title:'Details tell a story too.', caseShot3Body:'A close-up brings textures, ingredients and contrasts into focus.',
-    caseShot4Label:'04/04 · Editorial frame', caseShot4Title:'One scene. More ways to show it.', caseShot4Body:'Explore wide shots and close-ups for different visual stories.'
+  "en": {
+    "caseShot1Label": "01/04 · Complete view",
+    "caseShot1Title": "One capture. Many possibilities.",
+    "caseShot1Body": "The food and plate, together in a complete view.",
+    "caseShot2Label": "02/04 · Low angle",
+    "caseShot2Title": "Volume changes the view.",
+    "caseShot2Body": "A lower viewpoint reveals the height and layers of the dish.",
+    "caseShot3Label": "03/04 · Overhead view",
+    "caseShot3Title": "Another composition from above.",
+    "caseShot3Body": "The view from above reveals the arrangement of ingredients and colors.",
+    "caseShot4Label": "04/04 · Close-up",
+    "caseShot4Title": "Now, a closer look at the ingredients.",
+    "caseShot4Body": "A closer frame focuses on ingredients, layers and textures."
   },
-  de: {
-    caseShot1Label:'01/04 · Hauptaufnahme', caseShot1Title:'Eine Aufnahme. Viele Möglichkeiten.', caseShot1Body:'Das Gericht wird zum Ausgangspunkt einer visuellen Geschichte.',
-    caseShot2Label:'02/04 · Seitenperspektive', caseShot2Title:'Neuer Blickwinkel. Neue Wirkung.', caseShot2Body:'Ein anderer Kamerawinkel zeigt Volumen und eine neue Perspektive.',
-    caseShot3Label:'03/04 · Detailaufnahme', caseShot3Title:'Auch Details erzählen.', caseShot3Body:'Eine Nahaufnahme betont Texturen, Zutaten und Kontraste.',
-    caseShot4Label:'04/04 · Editorial-Komposition', caseShot4Title:'Eine Szene. Viele Blickwinkel.', caseShot4Body:'Von der Totalen bis zum Detail entstehen neue Bildideen.'
+  "de": {
+    "caseShot1Label": "01/04 · Gesamtansicht",
+    "caseShot1Title": "Eine Aufnahme. Viele Möglichkeiten.",
+    "caseShot1Body": "Speise und Teller gemeinsam im vollständigen Bild.",
+    "caseShot2Label": "02/04 · Tiefer Blickwinkel",
+    "caseShot2Title": "Volumen verändert den Blick.",
+    "caseShot2Body": "Ein tieferer Blickwinkel zeigt Höhe und Schichten des Gerichts.",
+    "caseShot3Label": "03/04 · Draufsicht",
+    "caseShot3Title": "Von oben entsteht ein anderes Bild.",
+    "caseShot3Body": "Die Draufsicht zeigt die Anordnung von Zutaten und Farben.",
+    "caseShot4Label": "04/04 · Detailaufnahme",
+    "caseShot4Title": "Jetzt kommen die Zutaten näher.",
+    "caseShot4Body": "Der nähere Ausschnitt konzentriert sich auf Zutaten, Schichten und Texturen."
   },
-  ja: {
-    caseShot1Label:'01/04 · メインショット', caseShot1Title:'ひとつの撮影から、さまざまな表現へ。', caseShot1Body:'料理の記録が、映像表現の出発点になります。',
-    caseShot2Label:'02/04 · サイドアングル', caseShot2Title:'角度が変わると、見え方も変わる。', caseShot2Body:'視点を動かすことで、料理の奥行きや立体感が伝わります。',
-    caseShot3Label:'03/04 · クローズアップ', caseShot3Title:'細部にも物語がある。', caseShot3Body:'質感や食材、色のコントラストを引き立てます。',
-    caseShot4Label:'04/04 · エディトリアル', caseShot4Title:'ひとつのシーンに、いくつもの構図。', caseShot4Body:'引きの画から寄りの画まで、多彩な表現を探れます。'
+  "ja": {
+    "caseShot1Label": "01/04 · 全体のショット",
+    "caseShot1Title": "ひとつの撮影から、さまざまな表現へ。",
+    "caseShot1Body": "料理と皿をひとつの構図に収めます。",
+    "caseShot2Label": "02/04 · 低いアングル",
+    "caseShot2Title": "高さと重なりが見えてくる。",
+    "caseShot2Body": "低い視点から、料理の高さと層を見せます。",
+    "caseShot3Label": "03/04 · 上からの視点",
+    "caseShot3Title": "真上に近い視点で、構図が変わる。",
+    "caseShot3Body": "上から、食材や色の配置を見せます。",
+    "caseShot4Label": "04/04 · クローズアップ",
+    "caseShot4Title": "次は、食材を間近に。",
+    "caseShot4Body": "食材の重なりや質感に注目する構図です。"
   }
 };
 ```
@@ -84,12 +117,22 @@ Añadir keys `caseShotNTitleCompact` y `caseShotNBodyCompact`. El label es el mi
 
 | Toma | ES | EN | DE | JA |
 |---|---|---|---|---|
-| A | Una captura. Muchas posibilidades. / El inicio de una historia visual. | One capture. Many possibilities. / A visual story begins here. | Eine Aufnahme. Viele Möglichkeiten. / Der Anfang einer Bildgeschichte. | ひとつの撮影、多彩な表現。 / 料理から始まる物語。 |
-| B | Otro ángulo. Otra historia. / El volumen cambia la lectura. | New angle. New story. / Volume changes the view. | Neuer Winkel. Neue Wirkung. / Volumen verändert den Blick. | 角度で変わる物語。 / 立体感が伝わる視点。 |
-| C | Los detalles cuentan. / Texturas, ingredientes y contraste. | Details tell a story. / Textures, ingredients, contrast. | Details erzählen. / Texturen, Zutaten, Kontraste. | 細部にも物語。 / 質感、食材、色の対比。 |
-| D | Una escena. Más encuadres. / Del plano general al detalle. | One scene. More frames. / From wide shot to close-up. | Eine Szene. Mehr Bildideen. / Von der Totalen zum Detail. | ひとつのシーン、多彩な構図。 / 引きの画から寄りの画へ。 |
+| A | El plato completo. / Comida y plato en un solo encuadre. | See the whole dish. / Food and plate in one frame. | Das ganze Gericht. / Speise und Teller in einem Bild. | 料理も皿も、全体を。 / ひとつの構図で全体を見せます。 |
+| B | El volumen se hace visible. / Un ángulo bajo para leer las capas. | See the volume. / A low angle reveals the layers. | Volumen wird sichtbar. / Ein tiefer Blick zeigt die Schichten. | 高さと重なりを見る。 / 低い視点で立体感を伝えます。 |
+| C | El emplatado, desde arriba. / Ingredientes y colores en conjunto. | The arrangement, from above. / Ingredients and colors together. | Das Gericht von oben. / Zutaten und Farben im Überblick. | 上から見る盛り付け。 / 食材と色の配置を見渡します。 |
+| D | Los ingredientes, de cerca. / Un recorte para observar las texturas. | Ingredients, up close. / A tighter frame reveals textures. | Zutaten aus der Nähe. / Ein enger Ausschnitt zeigt Texturen. | 食材を間近に。 / 構図を絞り、質感に注目します。 |
 
 Las traducciones son contenido editorial fijado para implementar; no se les atribuye revisión nativa. Su equivalencia editorial y altura deben revisarse visualmente antes de aprobar el feature. No cambiar el copy ajeno a Mollequiles.
+
+### Copy durante travellings
+
+El feedback del usuario invalida mantener nombres de plano mientras la cámara ya los deja atrás. Usar `caseTravelNLabel/Title/Body` y sus `TitleCompact/BodyCompact` para los tres intervalos; cambiar strings solo al cambiar de estado, no cada frame. No usar verbos direccionales que sean falsos en reversa. La copia canónica completa y compacta en los cuatro idiomas está fijada en [copy.json](../../qa/cinematic-v3/copy.json), snapshot de COPY, sin segundo almacén runtime.
+
+| Intervalo | Label ES | Titular ES | Apoyo ES |
+|---|---|---|---|
+| A–B | 01–02 · Cambio de ángulo | Un nuevo ángulo cambia la lectura. | Un recorrido entre la vista de conjunto y el ángulo bajo. |
+| B–C | 02–03 · Cambio de altura | La altura cambia la composición. | Un recorrido entre la vista baja y la vista superior. |
+| C–D | 03–04 · Cambio de escala | La escala dirige la atención. | Un recorrido entre el conjunto y los ingredientes de cerca. |
 
 ## 5. Layout medido, landscape y accesibilidad
 
@@ -97,10 +140,10 @@ Sustituir los selectores amplios `.case-story-captions p` y sus overrides respon
 
 Algoritmo de variante por medición:
 
-1. Tras fonts.ready y en idioma/resize/visualViewport, medir los cuatro bloques completos a su ancho final con altura natural, sin stretch ni acumular la reserva anterior. Separar métricas del estado de recorrido, del de explorar y del panel de vista previa (titular A, aviso y enlace); usar su máximo y preservar foco. En landscape, explorar sustituye el bloque narrativo y el slot de barra por ayuda/controles, como en main.
+1. Tras fonts.ready y en idioma/resize/visualViewport, medir los cuatro bloques y las tres variantes de transición a su ancho final con altura natural, sin stretch ni acumular la reserva anterior. Separar métricas del estado de recorrido, del de explorar y del panel de vista previa (titular A, aviso y enlace); usar su máximo y preservar foco. En landscape, explorar sustituye el bloque narrativo y el slot de barra por ayuda/controles, como en main.
 2. Probar primero completa para desktop no táctil; probar primero compacta si ancho<=760 o touch landscape (any-pointer:coarse, ancho>alto, alto<=600). Si completa no cabe, probar compacta. No cambiar variantes por toma: se fija una para las cuatro en cada medición de layout.
 3. Aplicar la medición y reglas vigentes: landscape desde 220px de altura útil solo si todos los estados medidos caben, padding real 24px; portrait exige visual mínimo 180px; desktop no táctil conserva mínimo 700px. Sin volver al mínimo landscape de 300px ni al límite de ancho 1100px. La altura estable 100svh puede ser menor que innerHeight por las barras del navegador. Con texto ampliado o espacio insuficiente, usar estático completo.
-4. Reservar altura máxima de los cuatro bloques de la variante/idioma elegidos, incluidos márgenes. Medir de nuevo tras aplicar las strings seleccionadas; no observar un contenedor cuya altura crece por su propia reserva. Mantener overflow-anchor:none y slot estable de barra durante recorrido. Solo un bloque visible en pinned; estático muestra todos en flujo.
+4. Reservar altura máxima de los cuatro planos y tres transiciones de la variante/idioma elegidos, incluidos márgenes. Medir de nuevo tras aplicar las strings seleccionadas; no observar un contenedor cuya altura crece por su propia reserva. Mantener overflow-anchor:none y slot estable de barra durante recorrido. Solo un bloque visible en pinned; estático muestra todos en flujo.
 
 En estático (no-JS, reduced-motion o falta de espacio), usar copy completo y cuatro artículos en flujo, poster A, sin barra de avance falsa. No-JS trae ese HTML inicial completo; solo JS introduce variantes compactas y hidden.
 
@@ -130,3 +173,7 @@ Commits: baseline/documentación; datos+progreso compartido/tests; copy+DOM+i18n
 ## Estado de implementación local — 20/oct/2026
 
 Implementado en esta rama a petición expresa del usuario posterior al cierre documental. QA automático local y evidencia disponibles en [cinematic-v2](../../qa/cinematic-v2/README.md). Pendientes aprobación visual y retest físico de esta evolución. Los estados anteriores de «sin implementar» describen el momento de cierre de la especificación. Sin PR, integración a main ni despliegue.
+
+## Revisión visual posterior — objeto completo y planos distintos
+
+La revisión del usuario detectó similitud A/D y descripciones que no correspondían durante movimiento. Su petición de ver comida y plato completos en A sustituye la restricción inicial de conservar poses/poster. Mantener los hitos, holds y progreso compartido; reemplazar únicamente encuadres/copy y poster derivados. A ahora está en el máximo de distancia permitido, por lo que el primer segmento no promete dolly-out. Evidencia, hashes autorizados y QA de esta revisión: [cinematic-v3](../../qa/cinematic-v3/README.md). Solo local; sin PR ni despliegue.

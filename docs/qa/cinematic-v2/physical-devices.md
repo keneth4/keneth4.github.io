@@ -1,4 +1,7 @@
-# Revisión local asistida — cinematic V2
+# Revisión local asistida — cinematic V2 (histórico)
+
+**Revisión vigente:** [cinematic-v3](../cinematic-v3/README.md), con A completo y encuadres/copy revisados por feedback posterior. La aprobación física de V3 sigue pendiente.
+
 
 URL persistente: http://MacBook-Air-de-Keneth.local:8776/?revision=cinematic-v2
 Respaldo de IP actual: http://192.168.101.109:8776/?revision=cinematic-v2

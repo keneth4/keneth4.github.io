@@ -1,5 +1,5 @@
-import { cameraAt, clampPose, passAt, progressAt, revealAt, shotAt, SHOTS, POSES, clamp, presentationTarget, advancePresentation } from './story-timeline.mjs';
-import { createViewer } from './splat-viewer.js';
+import { cameraAt, clampPose, passAt, progressAt, revealAt, shotAt, travellingAt, SHOTS, POSES, clamp, presentationTarget, advancePresentation } from './story-timeline.mjs?v=cinematic3';
+import { createViewer } from './splat-viewer.js?v=cinematic3';
 const section = document.querySelector('[data-case-story]');
 if (section) {
   const pin = section.querySelector('[data-case-pin]');
@@ -29,6 +29,7 @@ if (section) {
   const pointers = new Map();
   let pinch, disposed = false;
   let renderPose = cameraAt(0), lastFrame = 0, q = 0, target = 0, travel = 1;
+  let lastCopyKey = '';
   let syncQ = true, wasInView = false, failedBeforeEntry = false, measuring = false, measuredWidth = 0;
   let scrollIntent = scrollY > 0 || !!location.hash;
   const words = () => window.creativividCopy || {};
@@ -63,17 +64,19 @@ if (section) {
     }).catch(() => { if (!disposed) fail(); });
     return loading;
   }
+  function writeCaption(caption, index, variant, travelling = false) {
+    const prefix = `${travelling ? 'caseTravel' : 'caseShot'}${index + 1}`;
+    for (const [selector, field] of [['.case-story-shot-label', 'Label'], ['[data-shot-title]', 'Title'], ['[data-shot-body]', 'Body']]) {
+      const node = caption.querySelector(selector);
+      node.dataset.copy = prefix + field + (field !== 'Label' && variant === 'compact' ? 'Compact' : '');
+      node.textContent = words()[node.dataset.copy] || '';
+    }
+  }
   function applyVariant(root, variant) {
     root.dataset.copyVariant = variant;
-    const compact = variant === 'compact' ? 'Compact' : '';
-    root.querySelectorAll('[data-case-caption]').forEach((caption, i) => {
-      for (const [selector, key] of [['[data-shot-title]', SHOTS[i].titleKey], ['[data-shot-body]', SHOTS[i].bodyKey]]) {
-        const node = caption.querySelector(selector); node.dataset.copy = key + compact;
-        node.textContent = words()[key + compact] || '';
-      }
-    });
+    root.querySelectorAll('[data-case-caption]').forEach((caption, i) => writeCaption(caption, i, variant));
     const title = root.querySelector('[data-preview-title]');
-    title.dataset.copy = SHOTS[0].titleKey + compact;
+    title.dataset.copy = SHOTS[0].titleKey + (variant === 'compact' ? 'Compact' : '');
     title.textContent = words()[title.dataset.copy] || '';
   }
   function layout() {
@@ -107,7 +110,12 @@ if (section) {
       applyVariant(probe, variant); probe.dataset.state = 'story'; probe.dataset.presentation = 'narrative';
       probePreview.hidden = true;
       probe.style.setProperty('--caption-height', '0px');
-      const captionHeight = Math.max(...blocks.map(node => node.getBoundingClientRect().height));
+      let captionHeight = Math.max(...blocks.map(node => node.getBoundingClientRect().height));
+      for (let i = 0; i < blocks.length - 1; i++) {
+        writeCaption(blocks[i], i, variant, true);
+        captionHeight = Math.max(captionHeight, blocks[i].getBoundingClientRect().height);
+        writeCaption(blocks[i], i, variant);
+      }
       probe.style.setProperty('--caption-height', `${captionHeight}px`);
       probeHelp.hidden = true; probeControls.hidden = true; probeExplore.hidden = false;
       probeStatus.textContent = words().case3dLoading || '';
@@ -132,7 +140,7 @@ if (section) {
     if (!result.fits && selected === 'full') { selected = 'compact'; result = measure(selected); }
     probe.remove();
     if (!result.fits) selected = 'full';
-    applyVariant(section, selected);
+    applyVariant(section, selected); lastCopyKey = '';
     section.style.setProperty('--caption-height', `${result.captionHeight}px`);
     section.style.setProperty('--case-media-size', `${Math.max(180, result.mediaSize)}px`);
     section.dataset.requiredHeight = String(result.required);
@@ -177,7 +185,14 @@ if (section) {
     progress.style.setProperty('--view-progress', viewProgress(q));
     progressValue.textContent = `${percent}%`;
     progressBar.setAttribute('aria-valuenow', String(percent));
-    const activeShot = shotAt(q);
+    const activeShot = shotAt(q), travelIndex = travellingAt(q);
+    const copyKey = `${pinned}:${previewing}:${travelIndex}:${section.dataset.copyVariant}:${document.documentElement.lang}`;
+    if (lastCopyKey !== copyKey) {
+      applyVariant(section, section.dataset.copyVariant);
+      if (pinned && !previewing && travelIndex >= 0) writeCaption(captions[travelIndex], travelIndex, section.dataset.copyVariant, true);
+      lastCopyKey = copyKey;
+    }
+    section.dataset.copyState = !pinned ? 'static' : previewing ? 'preview' : travelIndex >= 0 ? `travel-${travelIndex + 1}` : `shot-${activeShot + 1}`;
     progressBar.setAttribute('aria-valuetext', (words().caseProgressView || 'View {current} of {total}').replace('{current}', activeShot + 1).replace('{total}', SHOTS.length));
     progressMarks.forEach((mark, i) => { mark.dataset.reached = String(q >= SHOTS[i].pose.p); });
     const canExplore = !failed && (!pinned || (ready && q >= POSES.at(-1).p));

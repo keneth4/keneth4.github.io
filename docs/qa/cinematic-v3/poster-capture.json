@@ -1,0 +1,44 @@
+{
+  "pose": {
+    "p": 0.04,
+    "yawDeg": 90,
+    "elevationDeg": 45,
+    "zoom": 1.5
+  },
+  "framebuffer": [
+    2100,
+    2100
+  ],
+  "css": [
+    1200,
+    1200
+  ],
+  "dpr": 1.75,
+  "losslessMasterRGBAEqual": true,
+  "transparentBackground": true,
+  "objectBoundsAlphaAbove10": [
+    174,
+    495,
+    1923,
+    1693
+  ],
+  "objectClearOfAllFourEdges": true,
+  "derivatives": {
+    "560": {
+      "size": [
+        560,
+        560
+      ],
+      "bytes": 173634,
+      "sha256": "dbbb2a1d1d697a6af8ae257c7ca38173434fa480c71b7fb79f5cd3ef102ed5c1"
+    },
+    "1120": {
+      "size": [
+        1120,
+        1120
+      ],
+      "bytes": 547700,
+      "sha256": "147777cd76528bbb2a37251603b73bddee5496aa8437fd456d61a600f5091542"
+    }
+  }
+}

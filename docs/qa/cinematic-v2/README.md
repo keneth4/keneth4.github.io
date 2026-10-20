@@ -1,4 +1,7 @@
-# Cinematic V2 — revisión local lista
+# Cinematic V2 — evidencia histórica
+
+**Revisión vigente:** [cinematic-v3](../cinematic-v3/README.md), con A completo y encuadres/copy revisados por feedback posterior. La aprobación física de V3 sigue pendiente.
+
 
 Rama `codex/creativivid-mollequiles-cinematic-shots`, especificación `e43730d`, base de producto `main@31f41430`. Implementación disponible **solo en commits locales**: sin push de implementación, PR, merge ni despliegue. La revisión visual del usuario y el QA físico de esta versión están pendientes.
 

@@ -7,7 +7,7 @@
 
 Evolucionar el recorrido funcional existente: cuatro planos del **mismo Mollequiles**, unidos por scroll nativo, que muestran decisiones de encuadre y potencial creativo. No reconstruir la experiencia, añadir SHARP ni otra escena WebGL. La captura no promete reiluminación física, geometría completa, macro más allá de la resolución real ni una campaña ya producida.
 
-Conservar SPZ NGSP v4, posters reales, pose A alineada con el poster, PlayCanvas, orientación, target, FOV y clampPose vigente (yaw −90..270, elevación30..88, distancia relativa .5..1.5). El recorte de C es deliberado y se valida contra el asset; no añadir crop extra. No modificar logo MUYAL, wordmark/Sniglet ni motivos/estructura de hero, servicios, proceso y contacto. Sin blur/DOF agresivo, letterboxing, luces ficticias ni texto en canvas.
+Conservar SPZ NGSP v4, posters reales, pose A alineada con el poster, PlayCanvas, orientación, target, FOV y clampPose vigente (yaw −90..270, elevación30..88, distancia relativa .5..1.5). A debe contener comida y plato completos con margen. C muestra el emplatado desde arriba; D permite el recorte intencional de detalle. Validar contra el asset, sin crop CSS adicional. No modificar logo MUYAL, wordmark/Sniglet ni motivos/estructura de hero, servicios, proceso y contacto. Sin blur/DOF agresivo, letterboxing, luces ficticias ni texto en canvas.
 
 La lectura del caso, el enlace AM:PM y contacto permanecen disponibles sin completar el recorrido o disponer de WebGL.
 
@@ -15,12 +15,12 @@ La lectura del caso, el enlace AM:PM y contacto permanecen disponibles sin compl
 
 Los textos siguientes coinciden con la versión completa canónica del 12. Sus variantes compactas y traducciones ES/EN/DE/JA también están fijadas allí; no son decisiones delegadas a implementación.
 
-| Toma | Pose conservada | Titular ES | Descripción ES | Razón visual |
+| Toma | Pose revisada | Titular ES | Descripción ES | Razón visual |
 |---|---|---|---|---|
-| 01/04 · Plano principal | A:90°,45°,×1.00 | Una captura. Muchas posibilidades. | El plato es el punto de partida para una historia visual. | Frame inicial coherente con poster |
-| 02/04 · Perspectiva lateral | B:135°,34°,×1.24 | Cambia el ángulo. Cambia la historia. | Un nuevo ángulo revela el volumen y cambia la lectura de la escena. | Dolly-out y paralaje del volumen |
-| 03/04 · Plano detalle | C:55°,68°,×.78 | Los detalles también cuentan. | Un acercamiento destaca texturas, ingredientes y contrastes. | Dolly-in a detalle realmente capturado |
-| 04/04 · Composición editorial | D:105°,48°,×1.04 | Una escena. Distintas maneras de mostrarla. | De planos generales a primeros planos para contar nuevas historias. | Reencuadre equilibrado y exploración voluntaria |
+| 01/04 · Plano de conjunto | A:90°,45°,×1.50 | Una captura. Muchas posibilidades. | Comida y plato, juntos en una vista completa. | Comida y plato completos; poster del mismo frame |
+| 02/04 · Ángulo bajo | B:180°,30°,×1.45 | El volumen cambia la lectura. | Una vista más baja destaca la altura y las capas del plato. | Altura y capas desde un ángulo bajo |
+| 03/04 · Vista superior | C:45°,88°,×1.15 | Desde arriba, otra composición. | La vista superior muestra la distribución de ingredientes y colores. | Distribución de ingredientes y colores desde arriba |
+| 04/04 · Plano detalle | D:0°,55°,×.75 | Ahora, los ingredientes de cerca. | El acercamiento concentra el encuadre en ingredientes, capas y texturas. | Acercamiento real a ingredientes y texturas |
 
 No quinta vista, proporciones publicitarias ni mockups ficticios. Cualquier futura tira de stills deberá exportarse realmente del modelo y validarse en otra iteración.
 
@@ -33,14 +33,14 @@ Distinguir **p** (scroll medido, para carga/reveal/latch) y **q** (progreso pres
 | q | Cámara | Texto |
 |---|---|---|
 | 0–.04 | A | Toma01 |
-| .04–.38 | A→B desde .04, sin hold extra | Toma01 |
+| .04–.38 | A→B desde .04, sin hold extra | Cambio de ángulo 01–02 |
 | .38–.425 | B fija | Toma02 |
-| .425–.72 | B→C | Toma02 |
+| .425–.72 | B→C | Cambio de altura 02–03 |
 | .72–.765 | C fija | Toma03 |
-| .765–.90 | C→D | Toma03 |
+| .765–.90 | C→D | Cambio de escala 03–04 |
 | .90–1 | D fija; explorar cuando ready | Toma04 |
 
-El texto cambia al alcanzar cada pose en q, **sin fade ni desplazamiento tipográfico**. No adelantar etiquetas durante el travelling. En scroll rápido los cuatro componentes se asientan juntos; la igualdad ida/vuelta se exige para el mismo q y, tras converger, para el mismo p. No se promete igualdad del frame para un p instantáneo mientras q sigue convergiendo. Los holds son distancia de scroll, sin reproducción temporal forzada.
+Las categorías de plano aparecen en los holds; durante travellings se describe el intervalo entre encuadres, con copy neutral también en reversa. No adelantar el nombre de la siguiente toma ni mantener un ángulo que la cámara ya abandona. Cambios instantáneos, **sin fade ni desplazamiento tipográfico**. En scroll rápido los cuatro componentes se asientan juntos; la igualdad ida/vuelta se exige para el mismo q y, tras converger, para el mismo p. No se promete igualdad del frame para un p instantáneo mientras q sigue convergiendo. Los holds son distancia de scroll, sin reproducción temporal forzada.
 
 Las cuatro marcas siguen derivadas de POSES. Antes de q=.04: vista1/0% y primera marca apagada; en q=.38/.72/.90: pose, copy, contador y marca coinciden en el mismo frame. Tolerancias de píxel y convergencia definidas únicamente en el 12.
 
@@ -69,3 +69,7 @@ Esta aprobación cierra la dirección y especificación, no los resultados de im
 ## Estado de implementación local — 20/oct/2026
 
 Implementado en esta rama a petición expresa del usuario posterior al cierre documental. QA automático local y evidencia disponibles en [cinematic-v2](../../qa/cinematic-v2/README.md). Pendientes aprobación visual y retest físico de esta evolución. Los estados anteriores de «sin implementar» describen el momento de cierre de la especificación. Sin PR, integración a main ni despliegue.
+
+## Revisión visual solicitada por el usuario
+
+El usuario pidió corregir tomas repetidas y descripciones que no coincidían, y mostrar comida y plato completos en la principal. Las poses/poster de esta revisión sustituyen los valores conservados al comienzo de la implementación. A no se recorta y su nuevo master se captura del mismo runtime; se mantienen SPZ, orientación, target, FOV y límites. Los cuatro planos y las tres transiciones de texto se fijan en el documento12 actualizado. Ver [evidencia cinematic-v3](../../qa/cinematic-v3/README.md). Validación física de esta revisión pendiente.

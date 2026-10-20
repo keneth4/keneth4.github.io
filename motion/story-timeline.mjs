@@ -2,17 +2,17 @@ export const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
 export const REVEAL_START = .005;
 export const REVEAL_END = .04;
 export const POSES = Object.freeze([
-  { p: .04, yawDeg: 90, elevationDeg: 45, zoom: 1 },
-  { p: .38, yawDeg: 135, elevationDeg: 34, zoom: 1.24 },
-  { p: .72, yawDeg: 55, elevationDeg: 68, zoom: .78 },
-  { p: .90, yawDeg: 105, elevationDeg: 48, zoom: 1.04 }
+  { p: .04, yawDeg: 90, elevationDeg: 45, zoom: 1.5 },
+  { p: .38, yawDeg: 180, elevationDeg: 30, zoom: 1.45 },
+  { p: .72, yawDeg: 45, elevationDeg: 88, zoom: 1.15 },
+  { p: .90, yawDeg: 0, elevationDeg: 55, zoom: .75 }
 ]);
 export function clampPose(pose) {
   return { yawDeg: clamp(pose.yawDeg, -90, 270), elevationDeg: clamp(pose.elevationDeg, 30, 88), zoom: clamp(pose.zoom, .5, 1.5) };
 }
 // Arrival positions live only in POSES; editorial holds do not duplicate them.
 export const SHOTS = Object.freeze(POSES.map((pose, index) => Object.freeze({
-  id: ['hero', 'volume', 'detail', 'editorial'][index], pose,
+  id: ['hero', 'volume', 'overhead', 'detail'][index], pose,
   holdUntil: [POSES[0].p, .425, .765, 1][index],
   labelKey: `caseShot${index + 1}Label`, titleKey: `caseShot${index + 1}Title`, bodyKey: `caseShot${index + 1}Body`
 })));
@@ -30,6 +30,10 @@ export function cameraAt(value) {
   let t = clamp((q - shot.holdUntil) / (next.pose.p - shot.holdUntil), 0, 1);
   t = index === 0 ? Math.sin(t * Math.PI / 2) : t * t * (3 - 2 * t);
   return clampPose(Object.fromEntries(['yawDeg', 'elevationDeg', 'zoom'].map(k => [k, shot.pose[k] + (next.pose[k] - shot.pose[k]) * t])));
+}
+export function travellingAt(value) {
+  const q = normalized(value), index = shotAt(q);
+  return index < SHOTS.length - 1 && q > SHOTS[index].holdUntil ? index : -1;
 }
 // A single target tolerance drives camera, copy, marks and counter together.
 export function presentationTarget(value, travel) {
