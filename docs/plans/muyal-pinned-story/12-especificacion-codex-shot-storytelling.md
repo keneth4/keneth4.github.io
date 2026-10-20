@@ -1,268 +1,128 @@
-# CreatiVivid · 12. Especificación Codex — cinematic shot-based storytelling
+# CreatiVivid · 12. Especificación cerrada — storytelling por tomas
 
-**Base:** `main@31f41430e72cd64090aa9964817006a9c810d139` (20/oct/2026).  
-**Feature branch:** `codex/creativivid-mollequiles-cinematic-shots`.  
-**Storyboard:** [11-storyboard-cinematografico-por-tomas.md](11-storyboard-cinematografico-por-tomas.md).  
-**Estado:** diseño y especificación; no es código implementado ni desplegado.
+**Base:** `main@31f41430e72cd64090aa9964817006a9c810d139`. **Rama:** `codex/creativivid-mollequiles-cinematic-shots`.
+**Estado:** decisiones documentales cerradas el 20/oct/2026; implementación y QA de esta evolución todavía no realizados. Complementa al [storyboard 11](11-storyboard-cinematografico-por-tomas.md). Este documento es la fuente canónica de textos y contratos técnicos; sustituye sus ejemplos anteriores.
 
-## 1. Objetivo y alcance
+## 1. Alcance y decisiones confirmadas
 
-Evolucionar **el pinned de Mollequiles ya implementado**, sin reconstruirlo. Cada pose A/B/C/D debe formar una toma cinematográfica con título y descripción propios. El scrolling nativo une los planos; hay una pausa breve en B/C y la selección del copy cambia solo al llegar al ángulo correspondiente. Mantener una sola escena WebGL y la exploración opt-in.
+Evolucionar el pinned existente, con una sola escena PlayCanvas. Mantener asset, poster, orientación, target, FOV, límites, logo/wordmark, motivos de otras secciones, formulario y caso comercial. No generar imágenes nuevas, usar otro renderer ni prometer reiluminación o una campaña ya producida.
 
-**No tocar:** `assets/brand/muyal-canonical.png`, wordmark CreatiVivid/Sniglet, dimensiones, paleta, hero, servicios, proceso, contacto, formulario, links, SPZ/posters, scripts de otras secciones, intro/story comercial del proyecto ni idiomas existentes fuera de nuevas keys.
+El usuario eligió **arranque desde .04, pausas solo en B/C** y **progreso suavizado compartido**. Conservar 600svh/100svh cuando cabe, scroll nativo, gestos opt-in, reduced-motion, poster-latch, listeners/dispose/bfcache y comportamiento landscape de main. La prueba física previa valida la base, no este cambio de narrativa.
 
-**Mantener:** `600svh` para el story y `100svh` para el pin cuando la medición real de layout lo permite, responsive incluso en móvil y landscape, fallback por espacio/reduced-motion, poster-latch, carga diferida, barra de cuatro vistas, un renderer, gesture handling, teclado, reentrada, dispose/bfcache y scroll nativo.
+## 2. Una configuración y un progreso de presentación
 
-## 2. Inventario y archivos específicos en main
+`POSES` conserva exactamente sus valores actuales: A (.04,90°,45°,1), B (.38,135°,34°,1.24), C (.72,55°,68°,.78), D (.90,105°,48°,1.04). `SHOTS` referencia cada objeto de POSES e incluye únicamente id, keys de traducción y holdUntil: A=POSES[0].p; B=.425; C=.765; D=1. No repetir start/end ni porcentajes de llegada en metadatos, controller o HTML. Marca de cada toma = su pose.p.
 
-| Path | Papel actual | Cambio propuesto |
+Contratos de `motion/story-timeline.mjs`:
+
+- `shotAt(q)` devuelve índice 0–3; el índice inicial es 0 incluso antes de .04. Para las demás tomas, seleccionar el último índice cuya pose.p <= q. Entradas finitas fuera de rango se limitan a 0–1; no finitas se tratan como 0.
+- `cameraAt(q)` usa esa misma configuración. Hasta holdUntil devuelve la pose exacta; después interpola hacia la siguiente pose hasta su pose.p. A→B usa sin(t·π/2); B→C y C→D smoothstep. No overshoot; conservar clampPose y exports previos para compatibilidad. No introducir límites ni configuración del renderer en SHOTS.
+- `revealAt`, `passAt` y `progressAt` conservan sus contratos. El valor raw **p** sigue calculado con la distancia sticky medida y sirve para reveal, latch, entrada/salida, proximidad y resize; no para seleccionar una segunda fase visual.
+
+El controller incorpora **q**, progreso presentado. Mientras hay timeline visible, una sola actualización aplica `q += (pTarget-q) * (1-exp(-dt/85))`, dt limitado a 100 ms. pTarget es p, salvo que esté a <=1 CSS px real de un hito de POSES: se ajusta a ese hito. Si la distancia restante entre q y pTarget es <=.25 CSS px, fijar q=pTarget para alcanzar exactamente holds y umbrales. Distancias expresadas en progreso se convierten usando `max(1, altoStory-altoPin)`. No ajustar q a un hito por adelantado de forma independiente.
+
+**Cámara = cameraAt(q), texto/contador = shotAt(q), porcentaje y marcas = q.** Eliminar el segundo suavizado por componentes de pose durante timeline: no acumular dos filtros. La tolerancia se aplica al objetivo común, nunca por separado a barra/captions. Porcentaje normalizado entre A.p y D.p; antes de .04 muestra 0% y vista 1, con primera marca apagada hasta q=.04. Con q=.38/.72/.90, cámara exacta B/C/D, texto, contador y marca cambian en el mismo frame.
+
+La reversibilidad exacta se exige para un mismo **q**, no para el mismo p instantáneo durante el asentamiento. Con scroll detenido, q alcanza pTarget y el resultado ya no depende de la dirección anterior. En saltos rápidos q atraviesa la misma ruta sin adelantar títulos a la pose objetivo. El movimiento termina al converger; sin rAF perpetuo.
+
+En entrada, refresh avanzado, cambio de modo, reentrada desde fuera, pageshow y retorno de documento oculto: inicializar q=pTarget para no reproducir desde una posición obsoleta. En resize/idioma dentro de un mismo modo pinned: recalcular pTarget y mantener q mientras se asienta; si cambia el modo, reinicializarlo. El latch siempre usa p, conservando refresh avanzado con poster. Explorar solo cuando ready y q>=D.p (también tras carga tardía); durante exploración pausar q y mantener oculta la barra y, solo en landscape, el copy narrativo. Reset=D; al salir fijar q=pTarget y aplicar cameraAt(q). En estático reset=A y salir devuelve poster.
+
+## 3. Tramos y entrada perceptible
+
+| q | Cámara | Texto activo |
 |---|---|---|
-| `motion/story-timeline.mjs` | POSES A–D, `cameraAt`, fases/reveal/progreso | Añadir `SHOTS`, `shotAt`; modificar easing local para holds cortos sin alterar poses |
-| `motion/pinned-case-controller.js` | Controla captions por `phaseAt`, barra y visor | Selección por `shotAt`, etiquetas/títulos/copy, compatibilidad con layout/idioma |
-| `index.html` | Cuatro `p[data-case-caption]` en `.case-story-captions` | Convertir en cuatro bloques semánticos de toma (eyebrow, heading y desc) |
-| `rework.js` | COPY en ES/EN/DE/JA, atributos `data-copy` | Añadir 4× keys para títulos, descripciones y nombres de toma, sin borrar traducciones de otro contenido |
-| `rework.css` | Captions, medidas y estados de vista desktop/portrait/landscape | Estilo editorial que reserva altura máxima real para los 4 bloques, sin saltos ni tapar controles |
-| Test suites existentes / QA | Contratos de cámara, gestos, fallback, marcas | Agregar paridad fases/títulos/sync en reversa y fotos de las poses |
+| 0–.04 | A; reveal usa p=.005–.04 | Toma 01 |
+| .04–.38 | A→B desde el inicio aprobado, sin hold extra | Toma 01 |
+| .38–.425 | Hold B | Toma 02 |
+| .425–.72 | B→C | Toma 02 |
+| .72–.765 | Hold C | Toma 03 |
+| .765–.90 | C→D | Toma 03 |
+| .90–1 | Hold D; explorar opt-in | Toma 04 |
 
-**Nota:** `motion/splat-viewer.js` ya apunta a `ampm-mollequiles.spz` vía PlayCanvas, con configuración de modelo validada. No cambiar ni duplicar su configuración. `motion/story-timeline.mjs` contiene estos valores existentes: A p=.04 / 90°,45°,1.00; B p=.38 / 135°,34°,1.24; C p=.72 / 55°,68°,.78; D p=.90 / 105°,48°,1.04. Mantener `clampPose` (yaw -90..270, elev 30..88, zoom .5..1.5) y `VIEW`/`ORIENTATION` del visor.
+No añadir hold hasta .055 ni alternativa de adelantar etiquetas durante el último 10% del travelling. El texto cambia al alcanzar la pose en el progreso presentado. Las pausas son tramos de scroll, no duración temporal mínima ni autoplay. La longitud del story no aumenta.
 
-## 3. Datos declarativos de shots (un solo origen)
+## 4. DOM, copy y transición
 
-**No** mantener dos mapas distintos de porcentajes para la cámara y los textos. Derivar los captions/indicador de una configuración única, con umbrales `p=.04,.38,.72,.90` ya aprobados. Los holds usan puntos de easing declarativos y no alteran los hitos de llegada.
+Convertir los cuatro párrafos `[data-case-caption]` en cuatro `article` con el mismo atributo y data-case-shot. Cada uno contiene label, h3 y descripción; son nodos DOM, con hidden solo mediante JS. Sin aria-live en la narración. Mantener etiqueta Mollequiles · AM:PM, enlace al caso y controles.
 
-```js
-// motion/story-timeline.mjs — propuesta; conservar exports existentes
-export const SHOTS = Object.freeze([
-  { id: 'hero',   poseIndex: 0, start: 0,    end: .38,
-    eyebrowKey: 'caseShot1Label', titleKey: 'caseShot1Title', bodyKey: 'caseShot1Body',
-    shotType: 'establishing' },
-  { id: 'volume', poseIndex: 1, start: .38,  end: .72,
-    eyebrowKey: 'caseShot2Label', titleKey: 'caseShot2Title', bodyKey: 'caseShot2Body',
-    shotType: 'lateral' },
-  { id: 'detail', poseIndex: 2, start: .72,  end: .90,
-    eyebrowKey: 'caseShot3Label', titleKey: 'caseShot3Title', bodyKey: 'caseShot3Body',
-    shotType: 'close-up' },
-  { id: 'editorial',poseIndex: 3, start: .90,end: 1.001,
-    eyebrowKey: 'caseShot4Label', titleKey: 'caseShot4Title', bodyKey: 'caseShot4Body',
-    shotType: 'editorial' }
-]);
-export const shotAt = p => SHOTS.findLastIndex(s => p >= s.start);
-// 0, 1, 2 o 3, mismo índice que POSES / marcas
-```
+**Cambio instantáneo de bloque**, sin fade, desplazamiento ni temporizadores en esta iteración. El progreso de cámara ya aporta continuidad. No dejar implementación alternativa de polish pendiente. El contenedor tiene label localizado: ES «Tomas de Mollequiles», EN «Mollequiles shots», DE «Mollequiles-Aufnahmen», JA «モジェキレスのショット». La barra conserva las traducciones actuales de Vista n de 4.
 
-La primera toma comprende el poster y tránsito hasta B; B aparece en el hold `.38–.425`; C en `.72–.765`; D en `.90–1`. No agregar una quinta vista visual sin una quinta pose/ítem/barra y pruebas; el cierre es parte de la cuarta toma.
-
-## 4. Modificación de timeline, cálculos y easing
-
-`revealAt` y `passAt` quedan sin cambios: primer intento de reveal `.005–.04`, poster latched si el viewer no estaba listo.
-
-La ruta propuesta conserva todos los **cuatro POSES** del main. El nuevo `cameraAt` mantiene hold A hasta .055 (para conservar respuesta visible cerca de .06); A→B de .055 a .38; hold B .38→.425; B→C .425→.72; hold C .72→.765; C→D .765→.90; hold D .90→1.
-
-```js
-const easeSmooth = t => t*t*(3-2*t);
-const easeFirst = t => Math.sin(t*Math.PI/2);
-const local = (p,start,end) => clamp((p-start)/(end-start),0,1);
-const blend = (a,b,t) => clampPose({
-  yawDeg: a.yawDeg + (b.yawDeg-a.yawDeg)*t,
-  elevationDeg: a.elevationDeg + (b.elevationDeg-a.elevationDeg)*t,
-  zoom: a.zoom + (b.zoom-a.zoom)*t
-});
-// Preserva POSES ya presentes.
-export function cameraAt(p) {
-  const A=POSES[0],B=POSES[1],C=POSES[2],D=POSES[3];
-  if(p<=.055) return clampPose(A);
-  if(p<.38) return blend(A,B,easeFirst(local(p,.055,.38)));
-  if(p<=.425) return clampPose(B);
-  if(p<.72) return blend(B,C,easeSmooth(local(p,.425,.72)));
-  if(p<=.765) return clampPose(C);
-  if(p<.90) return blend(C,D,easeSmooth(local(p,.765,.90)));
-  return clampPose(D);
-}
-```
-
-`cameraAt` es pura, reversible y no depende de timestamps. El controlador existente conserva su filtro exponencial de 85ms para asentamiento. No hay autoplay, intervalos ni tiempo real que desincronicen copy y vista. 
-
-**Punto UX a validar:** en las transiciones largas, el caption de la toma anterior permanece hasta alcanzar la nueva. Evaluar con usuarios si se prefiere revelar la nueva etiqueta en el último 10% del movimiento, **solo si** la imagen ya comunica esa toma y sin perder univocidad de fase.
-
-## 5. HTML semántico mínimo
-
-Reemplazar **solo** los cuatro párrafos directos de `.case-story-captions` por cuatro bloques. Mantener `[data-case-caption]` para reaprovechar medición/layout/foco del controlador:
-
-```html
-<div class="case-story-captions" aria-label="Tomas cinematográficas de Mollequiles">
-  <article data-case-caption data-case-shot="hero">
-    <p class="case-story-shot-label" data-copy="caseShot1Label">01 · Plano principal</p>
-    <h3 class="case-story-shot-title" data-copy="caseShot1Title">Una captura. Muchas posibilidades.</h3>
-    <p class="case-story-shot-body" data-copy="caseShot1Body">
-      El plato es el punto de partida para una historia visual.
-    </p>
-  </article>
-  <article data-case-caption data-case-shot="volume">
-    <p class="case-story-shot-label" data-copy="caseShot2Label">02 · Perspectiva lateral</p>
-    <h3 class="case-story-shot-title" data-copy="caseShot2Title">Cambia el ángulo. Cambia la historia.</h3>
-    <p class="case-story-shot-body" data-copy="caseShot2Body">
-      Un nuevo ángulo revela el volumen y cambia la lectura de la escena.
-    </p>
-  </article>
-  <article data-case-caption data-case-shot="detail">
-    <p class="case-story-shot-label" data-copy="caseShot3Label">03 · Plano detalle</p>
-    <h3 class="case-story-shot-title" data-copy="caseShot3Title">Los detalles también cuentan.</h3>
-    <p class="case-story-shot-body" data-copy="caseShot3Body">
-      Un acercamiento destaca texturas, ingredientes y contrastes.
-    </p>
-  </article>
-  <article data-case-caption data-case-shot="editorial">
-    <p class="case-story-shot-label" data-copy="caseShot4Label">04 · Composición editorial</p>
-    <h3 class="case-story-shot-title" data-copy="caseShot4Title">Una escena. Distintas maneras de mostrarla.</h3>
-    <p class="case-story-shot-body" data-copy="caseShot4Body">
-      De planos generales a primeros planos para contar nuevas historias.
-    </p>
-  </article>
-</div>
-```
-
-**Importante:** `rework.js` debe traducir las nueve palabras de estructura que cambien (si aplica), preservar atributos de idioma, y dar equivalentes a las 12 keys del nuevo contenido. Mantener el caso comercial AM:PM fuera del storyboard sin cambios.
-
-## 6. Localización editorial propuesta (revisar con hablantes)
-
-Las siguientes strings son ejemplo de contenido requerido, no traducciones verificadas por hablantes nativos. Priorizar equivalencia de intención sobre literalidad, y revisar particularmente longitud de DE/JA.
+Textos completos canónicos, incorporados al COPY existente (no crear un segundo almacén runtime):
 
 ```js
 const SHOT_COPY = {
   es: {
-    caseShot1Label:'01 · Plano principal', caseShot1Title:'Una captura. Muchas posibilidades.', caseShot1Body:'El plato es el punto de partida para una historia visual.',
-    caseShot2Label:'02 · Perspectiva lateral', caseShot2Title:'Cambia el ángulo. Cambia la historia.', caseShot2Body:'Un nuevo ángulo revela el volumen y cambia la lectura de la escena.',
-    caseShot3Label:'03 · Plano detalle', caseShot3Title:'Los detalles también cuentan.', caseShot3Body:'Un acercamiento destaca texturas, ingredientes y contrastes.',
-    caseShot4Label:'04 · Composición editorial', caseShot4Title:'Una escena. Distintas maneras de mostrarla.', caseShot4Body:'De planos generales a primeros planos para contar nuevas historias.'
+    caseShot1Label:'01/04 · Plano principal', caseShot1Title:'Una captura. Muchas posibilidades.', caseShot1Body:'El plato es el punto de partida para una historia visual.',
+    caseShot2Label:'02/04 · Perspectiva lateral', caseShot2Title:'Cambia el ángulo. Cambia la historia.', caseShot2Body:'Un nuevo ángulo revela el volumen y cambia la lectura de la escena.',
+    caseShot3Label:'03/04 · Plano detalle', caseShot3Title:'Los detalles también cuentan.', caseShot3Body:'Un acercamiento destaca texturas, ingredientes y contrastes.',
+    caseShot4Label:'04/04 · Composición editorial', caseShot4Title:'Una escena. Distintas maneras de mostrarla.', caseShot4Body:'De planos generales a primeros planos para contar nuevas historias.'
   },
   en: {
-    caseShot1Label:'01 · Hero shot', caseShot1Title:'One capture. Many possibilities.', caseShot1Body:'The dish becomes the starting point for a visual story.',
-    caseShot2Label:'02 · Side perspective', caseShot2Title:'Change the angle. Change the story.', caseShot2Body:'A new angle reveals volume and a different reading of the scene.',
-    caseShot3Label:'03 · Close-up', caseShot3Title:'Details tell a story too.', caseShot3Body:'A close-up brings textures, ingredients and contrasts into focus.',
-    caseShot4Label:'04 · Editorial frame', caseShot4Title:'One scene. More ways to show it.', caseShot4Body:'Explore wide shots and close-ups for different visual stories.'
+    caseShot1Label:'01/04 · Hero shot', caseShot1Title:'One capture. Many possibilities.', caseShot1Body:'The dish becomes the starting point for a visual story.',
+    caseShot2Label:'02/04 · Side perspective', caseShot2Title:'Change the angle. Change the story.', caseShot2Body:'A new angle reveals volume and a different reading of the scene.',
+    caseShot3Label:'03/04 · Close-up', caseShot3Title:'Details tell a story too.', caseShot3Body:'A close-up brings textures, ingredients and contrasts into focus.',
+    caseShot4Label:'04/04 · Editorial frame', caseShot4Title:'One scene. More ways to show it.', caseShot4Body:'Explore wide shots and close-ups for different visual stories.'
   },
   de: {
-    caseShot1Label:'01 · Hauptaufnahme', caseShot1Title:'Eine Aufnahme. Viele Möglichkeiten.', caseShot1Body:'Das Gericht wird zum Ausgangspunkt einer visuellen Geschichte.',
-    caseShot2Label:'02 · Seitenperspektive', caseShot2Title:'Neuer Blickwinkel. Neue Wirkung.', caseShot2Body:'Ein anderer Kamerawinkel zeigt Volumen und eine neue Perspektive.',
-    caseShot3Label:'03 · Detailaufnahme', caseShot3Title:'Auch Details erzählen.', caseShot3Body:'Eine Nahaufnahme betont Texturen, Zutaten und Kontraste.',
-    caseShot4Label:'04 · Editorial-Komposition', caseShot4Title:'Eine Szene. Viele Blickwinkel.', caseShot4Body:'Von der Totalen bis zum Detail entstehen neue Bildideen.'
+    caseShot1Label:'01/04 · Hauptaufnahme', caseShot1Title:'Eine Aufnahme. Viele Möglichkeiten.', caseShot1Body:'Das Gericht wird zum Ausgangspunkt einer visuellen Geschichte.',
+    caseShot2Label:'02/04 · Seitenperspektive', caseShot2Title:'Neuer Blickwinkel. Neue Wirkung.', caseShot2Body:'Ein anderer Kamerawinkel zeigt Volumen und eine neue Perspektive.',
+    caseShot3Label:'03/04 · Detailaufnahme', caseShot3Title:'Auch Details erzählen.', caseShot3Body:'Eine Nahaufnahme betont Texturen, Zutaten und Kontraste.',
+    caseShot4Label:'04/04 · Editorial-Komposition', caseShot4Title:'Eine Szene. Viele Blickwinkel.', caseShot4Body:'Von der Totalen bis zum Detail entstehen neue Bildideen.'
   },
   ja: {
-    caseShot1Label:'01 · メインショット', caseShot1Title:'ひとつの撮影から、さまざまな表現へ。', caseShot1Body:'料理の記録が、映像表現の出発点になります。',
-    caseShot2Label:'02 · サイドアングル', caseShot2Title:'角度が変わると、見え方も変わる。', caseShot2Body:'視点を動かすことで、料理の奥行きや立体感が伝わります。',
-    caseShot3Label:'03 · クローズアップ', caseShot3Title:'細部にも物語がある。', caseShot3Body:'質感や食材、色のコントラストを引き立てます。',
-    caseShot4Label:'04 · エディトリアル', caseShot4Title:'ひとつのシーンに、いくつもの構図。', caseShot4Body:'引きの画から寄りの画まで、多彩な表現を探れます。'
+    caseShot1Label:'01/04 · メインショット', caseShot1Title:'ひとつの撮影から、さまざまな表現へ。', caseShot1Body:'料理の記録が、映像表現の出発点になります。',
+    caseShot2Label:'02/04 · サイドアングル', caseShot2Title:'角度が変わると、見え方も変わる。', caseShot2Body:'視点を動かすことで、料理の奥行きや立体感が伝わります。',
+    caseShot3Label:'03/04 · クローズアップ', caseShot3Title:'細部にも物語がある。', caseShot3Body:'質感や食材、色のコントラストを引き立てます。',
+    caseShot4Label:'04/04 · エディトリアル', caseShot4Title:'ひとつのシーンに、いくつもの構図。', caseShot4Body:'引きの画から寄りの画まで、多彩な表現を探れます。'
   }
 };
 ```
 
-## 7. Controller — dos fuentes a sincronizar
+### Variantes compactas canónicas
 
-Actualmente el controller llama `phaseAt(p)` y `captions.forEach((caption,index)=>caption.hidden=pinned && index!==phase)`. Debe pasar a `shotAt(p)` con las mismas fronteras de `POSES`. Conservar el funcionamiento del estado no-pinned:
+Añadir keys `caseShotNTitleCompact` y `caseShotNBodyCompact`. El label es el mismo del contenido completo. Cada celda siguiente contiene **título / descripción**; no son candidatos opcionales.
 
-```js
-// Cambiar import phaseAt por shotAt, conservar progressAt/passAt/revealAt.
-const activeShot = shotAt(p);
-captions.forEach((caption, index) => {
-  caption.hidden = pinned && index !== activeShot;
-});
-const reachedP = p + 1 / Math.max(1, rect.height - pin.offsetHeight);
-const currentView = Math.max(1, POSES.filter(v => reachedP >= v.p).length);
-// Garantizar paridad actual-view vs activo en fronteras y posterior.
-```
+| Toma | ES | EN | DE | JA |
+|---|---|---|---|---|
+| A | Una captura. Muchas posibilidades. / El inicio de una historia visual. | One capture. Many possibilities. / A visual story begins here. | Eine Aufnahme. Viele Möglichkeiten. / Der Anfang einer Bildgeschichte. | ひとつの撮影、多彩な表現。 / 料理から始まる物語。 |
+| B | Otro ángulo. Otra historia. / El volumen cambia la lectura. | New angle. New story. / Volume changes the view. | Neuer Winkel. Neue Wirkung. / Volumen verändert den Blick. | 角度で変わる物語。 / 立体感が伝わる視点。 |
+| C | Los detalles cuentan. / Texturas, ingredientes y contraste. | Details tell a story. / Textures, ingredients, contrast. | Details erzählen. / Texturen, Zutaten, Kontraste. | 細部にも物語。 / 質感、食材、色の対比。 |
+| D | Una escena. Más encuadres. / Del plano general al detalle. | One scene. More frames. / From wide shot to close-up. | Eine Szene. Mehr Bildideen. / Von der Totalen zum Detail. | ひとつのシーン、多彩な構図。 / 引きの画から寄りの画へ。 |
 
-En `p<.04`, `shotAt` devuelve 0, mientras la barra puede mostrar 1 sin haber alcanzado la marca A. Se admite esta condición como «vista inicial», pero debe definirse si la primera marca se enciende en .04 o inmediatamente; conservar la implementación y sus tests de `main` a menos que QA revele confusión.
+Las traducciones son contenido editorial fijado para implementar; no se les atribuye revisión nativa. Su equivalencia editorial y altura deben revisarse visualmente antes de aprobar el feature. No cambiar el copy ajeno a Mollequiles.
 
-**Accesibilidad y animación tipográfica:** la opción más robusta es **cambio instantáneo** al cruzar el umbral con CSS fade breve solo cuando `prefers-reduced-motion:no-preference`. Un efecto de desvanecimiento CSS basado en el cambio de atributo no debe dejar palabras superpuestas ni pérdida de foco; no ocultar con opacity=0 de forma permanente. El diseño puede optar por cambio sin transición si la semántica es más clara.
+## 5. Layout medido, landscape y accesibilidad
 
-**No hacer que `aria-live` anuncie cada toma**. La barra mantiene `aria-valuetext="Vista n de 4"`; los bloques son DOM y aparecen de forma ordenada con scrolling. En fallback/no-JS, todos los captions permanecen legibles con flujo natural; no fijar `hidden` en HTML inicial.
+Sustituir los selectores amplios `.case-story-captions p` y sus overrides responsive: ya no deben dar tamaño de titular a label/body. Usar selectores explícitos con prioridad efectiva por variante y modo, sin conservar reglas antiguas que los sobreescriban. Label 11px/1.4; título completo clamp(24px,2.55vw,38px)/1.13 y body clamp(14px,1.1vw,17px)/1.5; compacto título 20px/1.15, body 13px/1.4. En touch landscape: título compacto 18px/1.15. No truncar, usar line-clamp, reducir transformando texto ni ocultar arbitrariamente descripciones.
 
-## 8. CSS — estabilidad visual del copy
+Algoritmo de variante por medición:
 
-El controller mide `Math.max(...captions.map(el=>el.getBoundingClientRect().height))` y alterna temporalmente estados `story`/`explore` para encontrar espacio de ambos. Los nuevos `<article>` pueden aumentar considerablemente esa altura. **No usar** altura estática de 5em o truncamiento indiscriminado.
+1. Tras fonts.ready y en idioma/resize/visualViewport, medir los cuatro bloques completos a su ancho final con altura natural, sin stretch ni acumular la reserva anterior. Separar métricas del estado de recorrido, del de explorar y del panel de vista previa (titular A, aviso y enlace); usar su máximo y preservar foco. En landscape, explorar sustituye el bloque narrativo y el slot de barra por ayuda/controles, como en main.
+2. Probar primero completa para desktop no táctil; probar primero compacta si ancho<=760 o touch landscape (any-pointer:coarse, ancho>alto, alto<=600). Si completa no cabe, probar compacta. No cambiar variantes por toma: se fija una para las cuatro en cada medición de layout.
+3. Aplicar la medición y reglas vigentes: landscape desde 220px de altura útil solo si todos los estados medidos caben, padding real 24px; portrait exige visual mínimo 180px; desktop no táctil conserva mínimo 700px. Sin volver al mínimo landscape de 300px ni al límite de ancho 1100px. La altura estable 100svh puede ser menor que innerHeight por las barras del navegador. Con texto ampliado o espacio insuficiente, usar estático completo.
+4. Reservar altura máxima de los cuatro bloques de la variante/idioma elegidos, incluidos márgenes. Medir de nuevo tras aplicar las strings seleccionadas; no observar un contenedor cuya altura crece por su propia reserva. Mantener overflow-anchor:none y slot estable de barra durante recorrido. Solo un bloque visible en pinned; estático muestra todos en flujo.
 
-Implementación orientativa:
+En estático (no-JS, reduced-motion o falta de espacio), usar copy completo y cuatro artículos en flujo, poster A, sin barra de avance falsa. No-JS trae ese HTML inicial completo; solo JS introduce variantes compactas y hidden.
 
-```css
-/* Agregar despues del CSS actual, conservando estilos de pinned/movil/landscape */
-.case-story-captions [data-case-caption] {
-  min-width: 0;
-  align-self: start;
-}
-.case-story-shot-label {
-  font-size: 11px;
-  line-height: 1.45;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.case-story-shot-title {
-  font-size: clamp(24px, 2.55vw, 38px);
-  line-height: 1.13;
-  letter-spacing: -.035em;
-  margin: .5rem 0;
-  max-width: 22ch;
-}
-.case-story-shot-body {
-  font-size: clamp(14px, 1.1vw, 17px);
-  line-height: 1.5;
-  max-width: 44ch;
-}
-@media(max-width:760px) {
-  .case-story-scroll[data-pinned="true"] .case-story-shot-title {
-    font-size: clamp(20px, 5.8vw, 26px);
-    max-width: none;
-  }
-  .case-story-scroll[data-pinned="true"] .case-story-shot-body {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-}
-```
+## 6. Carga tardía, error y lectura completa
 
-Revisar los estilos actuales `.case-story-captions p` porque afectan ahora a label+body; crear selectors específicos y evitar que hereden una tipografía de titular de 28–44px por accidente. Calcular `--caption-height` como altura máxima de los **cuatro bloques**, incluidos títulos/descripcion, medir después de cambio de idioma, `document.fonts.ready`, viewport resize y estado de botones reales. Mantener `overflow-anchor:none` y reservar la fila de progress bar. En viewport corto reducir el texto auxiliar (mediante versión corta editorial, no ocultación arbitraria) antes de perder pin. Los tests existentes sobre paisaje táctil pequeño y controles deben pasar.
+Distinguir **recorrido 3D activo** de **vista previa con poster**. Si la pasada queda latched al poster, no mostrar caption B/C/D ni contador/marcas de una cámara que no está visible. El panel muestra label Mollequiles · AM:PM, titular A completo/compacto según layout y aviso localizado de vista previa. No se trata de una quinta toma.
 
-## 9. Dónde radica la cinematografía y qué NO prometer
+Para no colapsar 600svh ni desplazar contenido durante una pasada, mantener la geometría de la sección hasta la siguiente entrada desde arriba. El aviso incluye un enlace de ancla nativo a un resumen de las cuatro tomas, colocado inmediatamente **después del contenedor de scroll**, fuera del pin. Ese resumen está siempre disponible como `details` con summary localizado; contiene los cuatro labels/títulos/descripciones completos con las mismas keys. No duplicar IDs. Al seguir el ancla, abrir details antes del desplazamiento nativo; no animar ni compensar scroll manualmente. Los argumentos del caso se pueden leer sin recorrer todo el tramo. En no-JS/estático, los cuatro artículos principales ya son legibles y no se necesita mostrar un resumen duplicado; ocultar ese details de mejora progresiva por defecto y habilitarlo solo en modo pinned.
 
-La cinematografía aquí proviene de:
-- el guion de **cuatro planos** y el porqué de cada uno;
-- transiciones de cámara **reversibles** con aceleración/desaceleración deliberada;
-- pausas y cambio editorial de textos según la llegada a la pose;
-- encuadre que respeta agujeros/bordes de la reconstrucción y poster real;
-- composición de copy que permite lectura, no de efectos de trailer.
+Error de descarga/WebGL/contexto perdido dentro de pinned: conservar poster y la misma presentación de vista previa, ocultar progreso y explorar, anunciar error solo en status accesible y mantener enlace al resumen/caso. No fingir recorrido visual ni reintentar en bucle. Si el error precede a la entrada, iniciar en estático. El error no rearma el renderer automáticamente. Carga tardía que finalmente queda ready: explorar puede habilitarse al alcanzar q>=D.p, mostrando directamente D al activar; al salir recupera poster, sin relanzar reveal en esa pasada. Rearmar reveal solo tras salida completa por arriba y nueva entrada, como main.
 
-No prometer capacidad de reiluminación libre, fotos completamente nuevas desde ángulos no capturados, ni campaña publicitaria creada; el mensaje describe **potencial de selección y dirección de cámara a partir de un modelo**. Los distintos recortes finales se convierten en entregables solo tras producir/validar archivos de salida reales.
+Strings adicionales canónicas (vista previa / enlace-resumen y summary): ES «Vista previa: el recorrido 3D no está activo.» / «Ver las cuatro tomas»; EN «Preview: the 3D story is not active.» / «View all four shots»; DE «Vorschau: Die 3D-Sequenz ist nicht aktiv.» / «Alle vier Aufnahmen ansehen»; JA «プレビュー：3Dの動きは表示されていません。» / «4つのショットを見る». En error, el aviso de error existente explica el motivo; no reemplazarlo por el aviso genérico. Mantener formularios y enlaces externos sin cambios.
 
-## 10. Orden de trabajo y commits recomendados
+## 7. QA y entrega antes de PR
 
-1. **Baseline**: captura el actual `main` y sus números de QA; documentar `docs/qa/cinematic-v2-baseline.md` con 4 poses y móvil/desktop, sin mover engine.
-2. **Shot data y timeline**: `SHOTS`, `shotAt`, `cameraAt` holds y tests de fronteras (0,.005,.04,.055,.38,.425,.72,.765,.90,1), continuidad/reversa, límites y primer movimiento alrededor de .06.
-3. **Copy e i18n**: markup 4× `article`, 12 keys en 4 idiomas, CSS de estabilidad, alturas medidas y fallback no-JS.
-4. **Controller**: conectar `shotAt` y mantener progress bar exactamente alineado a POSES y captions; activar el título para cada pose.
-5. **Polish**: transiciones suaves del copy, ajuste fino de crop/timing basado en capturas físicas, sin modificar parámetros del visor ni crear otro renderer.
-6. **QA y documentación**: Playwright/Unit desktop 1440×900, tablet, móviles 390×844, Poco, iPhone, landscape 844×390, 740×360, 844×280 fallback, ES/EN/DE/JA, reduce-motion, WebGL off, carga tardía, foco/teclado, acceso a contacto, compare/main y control de assets.
-7. **PR**: abrir a `main` una vez completas pruebas y revisión visual del usuario, no antes. Cada commit de implementación verificable; Markdown por avance importante.
+- Capturar baseline del main actualizado: A/B/C/D, apertura, timings, portrait/landscape; registrar commit. No atribuirle QA cinematográfico.
+- Unitarias: configuración única; hitos y holds; continuidad de posición; q/cameraAt/shotAt reversibles; clamps y entradas no finitas; normalización de barra; fronteras ±1px; convergencia y fin de rAF. Primer movimiento desde .04 y apreciable cerca de .06, sin pausa adicional.
+- Browser: verificar cámara, copy, contador y marcas en el **mismo frame** ante scroll lento/rápido/inverso, saltos/anclas y paradas exactas en B/C/D. Capturar salida del periodo de asentamiento; no exigir misma imagen al mismo p mientras q aún converge.
+- Medir los cuatro idiomas completos/compactos y zoom de texto 200%; desktop1440×900, tablet, portrait390×844, landscape844×390,740×360,844×270,740×270,932×299,1200×320. Simular 100svh250 con innerHeight390 y barras abiertas/cerradas; 200px mantiene fallback si no cabe. No usar 844×280 como fallback obligatorio. Comprobar explorar/reset/salida/foco y cambios portrait↔landscape durante recorrido/exploración.
+- Simular ready antes/después de .005, refresh avanzado, reentrada desde ambos extremos, carga abortada, GPU fallida y pérdida de contexto. En poster-only/error no hay captions de poses invisibles; se puede abrir y alcanzar el resumen y el caso sin completar el scroll.
+- Probar reduced-motion, sin JS, bfcache, ocultar documento, teclado, pinch y órbita solo opt-in, contacto y validación del formulario sin enviar solicitudes reales. No live-announcements al cruzar tomas, un renderer, sin CLS atribuible al cambio de caption ni modificaciones de identidad/asset.
+- Comparación visual A/B frente a main y aprobación del usuario de holds/textos, incluyendo Poco/Android e iPhone físicos con barras visibles y zoom de texto; registrar modelos/versiones cuando se suministren y marcar cobertura desconocida sin inferirla.
+- Verificar **paquete de Cloudflare**, no solo repo local: módulos motion, MIME y assets; mantener build/check de dependencias. Tras un despliegue autorizado comprobar creativivid.com con bytes, primer frame y navegación en tamaños bajos. Un build de GitHub Pages no acredita ese dominio.
 
-## 11. Checklist de aceptación
-
-- [ ] Logo/wordmark y assets SPZ/poster no cambian ni se renombran.
-- [ ] Cuatro tomas con cuatro textos y razones visuales distintos, ES/EN/DE/JA.
-- [ ] Un único `shotAt` determina copy y barra de vistas; umbrales de llegada exactos.
-- [ ] Misma `cameraAt(p)` para scroll ida/vuelta; holds B/C suaves, sin saltos angulares.
-- [ ] Primer movimiento apreciable aprox. p=.06; no alargar el silencio de apertura.
-- [ ] Móvil y landscape conservan pin cuando cabe, pinch óptico y orbita; reduced-motion sin animación obligatoria.
-- [ ] No-JS/ error muestra todos los planos como texto legible y enlace.
-- [ ] Ninguna toma añade artefactos ni duplica escena GPU; failover poster.
-- [ ] Medición de captions y botones evita recortes, CLS o scroll anchoring.
-- [ ] Progressbar accesible, teclado/foco/formulario/traducciones intactos.
-- [ ] Documentación de QA y evidencia visual comparativa; PR después de validar.
-
-## 12. Fuentes internas
-
-- [11-storyboard-cinematografico-por-tomas.md](11-storyboard-cinematografico-por-tomas.md)
-- `main:motion/story-timeline.mjs`, `motion/pinned-case-controller.js`, `motion/splat-viewer.js`
-- `main:index.html`, `rework.css`, `rework.js`
-- `docs/plans/muyal-pinned-story/07-mobile-and-motion-revision.md`
-- `docs/plans/muyal-pinned-story/08-early-response-and-dolly.md`
-- `docs/plans/muyal-pinned-story/09-view-progress.md`
-- `docs/plans/muyal-pinned-story/10-block06-landing-motifs.md`
+Commits: baseline/documentación; datos+progreso compartido/tests; copy+DOM+i18n/layout; integración de estados; QA/evidencia. No abrir PR hasta tests, comparación visual y QA físico aprobados. Esta fase solo cierra documentos: no ejecutar implementación, PR, merge ni despliegue con esa aprobación documental.
