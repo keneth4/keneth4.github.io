@@ -122,15 +122,32 @@ try {
     assert.ok(zoom.zoom>=.5);await cdp.detach();
   });
   await mobile.screenshot({path:out+'/mobile-explore.png'});await mobile.locator('[data-case-exit]').click();await mobile.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='story');
-  await check('mobile explore returns to scroll story, landscape falls back when content cannot fit',async()=>{
+  await check('mobile explore returns to scroll story, short landscape keeps safe fallback',async()=>{
     assert.ok(await mobile.locator('[data-case-input]').isHidden());
-    await mobile.setViewportSize({width:844,height:390});await mobile.waitForTimeout(200);assert.equal(await mobile.locator(story).getAttribute('data-pinned'),'false');
+    await mobile.setViewportSize({width:844,height:280});await mobile.waitForTimeout(200);assert.equal(await mobile.locator(story).getAttribute('data-pinned'),'false');
   });await mobile.context().close();
   const reduce=await pageFor({reducedMotion:'reduce'});await reduce.goto(base,{waitUntil:'domcontentloaded'});await reduce.locator(story).scrollIntoViewIfNeeded();
   await check('reduced motion: static, no automatic 3D, all captions readable',async()=>{assert.equal(await reduce.locator(story).getAttribute('data-pinned'),'false');assert.equal(await reduce.locator('canvas').count(),0);assert.equal(await reduce.locator('[data-case-caption]:visible').count(),4);assert.ok(await reduce.locator('[data-case-progress]').isHidden())});await reduce.context().close();
   const lost=await pageFor({reducedMotion:'reduce'});await lost.goto(base,{waitUntil:'domcontentloaded'});await lost.locator('[data-case-explore]').click();await lost.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');await lost.locator('canvas').evaluate(c=>c.getContext('webgl2').getExtension('WEBGL_lose_context').loseContext());await lost.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='error');
   await check('GPU context loss disposes renderer and retains fallback',async()=>{assert.equal(await lost.locator('canvas').count(),0);assert.ok(await lost.locator('[data-case-status]').innerText())});await lost.context().close();
   const nojs=await pageFor({javaScriptEnabled:false});await nojs.goto(base,{waitUntil:'domcontentloaded'});await check('no JavaScript: poster, case and links retained',async()=>{assert.equal(await nojs.locator('[data-case-caption]').count(),4);assert.ok(await nojs.locator('[data-case-media] img').isVisible());assert.ok(await nojs.locator('[data-case-explore]').isHidden());assert.equal(await nojs.locator('canvas').count(),0)});await nojs.context().close();
+  await check('touch landscape keeps timeline/progress and fits all translated copy',async()=>{
+    const landscape=await pageFor({viewport:{width:844,height:390},isMobile:true,hasTouch:true});
+    await landscape.goto(base);await landscape.evaluate(()=>document.fonts.ready);
+    for(const size of [{width:844,height:390},{width:740,height:360}]){
+      await landscape.setViewportSize(size);
+      for(const lang of ['es','en','de','ja']){
+        await landscape.locator('#language').selectOption(lang);await landscape.waitForTimeout(200);
+        assert.equal(await landscape.locator(story).getAttribute('data-pinned'),'true',`${size.width} ${lang}`);
+        await at(landscape,0);await landscape.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');
+        await at(landscape,.5);assert.ok(await landscape.locator('[data-case-progress]').isVisible());
+        const fits=await landscape.locator('.case-story-copy').evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=-1&&r.bottom<=innerHeight+1});assert.ok(fits,`${size.width} ${lang} copy fits`);
+      }
+    }
+    await landscape.screenshot({path:out+'/touch-landscape.png'});
+    await landscape.setViewportSize({width:390,height:844});await landscape.waitForTimeout(200);assert.equal(await landscape.locator(story).getAttribute('data-pinned'),'true');
+    await landscape.context().close();
+  });
   const slow=await pageFor();let release;const gate=new Promise(r=>release=r);await slow.route('**/ampm-mollequiles.spz',async route=>{await gate;await route.continue()});await slow.goto(base,{waitUntil:'domcontentloaded'});await at(slow,.5);await slow.waitForTimeout(300);assert.equal(await slow.locator(story).getAttribute('data-poster-only'),'true');release();await slow.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');
   await check('late load stays poster, bottom reentry does not rearm; upward exit does',async()=>{await at(slow,.95);assert.equal(await slow.locator('[data-case-media]').evaluate(e=>e.style.getPropertyValue('--canvas-opacity')),'0');await at(slow,1);await at(slow,.5);assert.equal(await slow.locator(story).getAttribute('data-poster-only'),'true');await at(slow,0);await at(slow,.5);assert.equal(await slow.locator(story).getAttribute('data-poster-only'),'false')});await slow.context().close();
   const fail=await pageFor();await fail.route('**/ampm-mollequiles.spz',r=>r.fulfill({status:503,body:'QA intentional asset failure'}));await fail.goto(base,{waitUntil:'domcontentloaded'});await at(fail,.5);await fail.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='error');await check('failed asset: poster and links survive',async()=>{assert.ok(await fail.locator('[data-case-status]').innerText());assert.ok(await fail.locator('[data-case-media] img').isVisible());assert.equal(await fail.locator('canvas').count(),0)});await fail.screenshot({path:out+'/asset-error.png'});await fail.context().close();

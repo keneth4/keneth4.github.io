@@ -57,7 +57,9 @@ if (section) {
   }
   function layout() {
     // Measure all translated captions, even when an enhanced phase hides them.
-    const mobile = innerWidth <= 760;
+    const landscape = matchMedia('(pointer: coarse)').matches && innerWidth > innerHeight && innerWidth <= 1100 && innerHeight <= 600;
+    const mobile = innerWidth <= 760 && !landscape;
+    section.classList.toggle('case-story-landscape', landscape);
     section.classList.toggle('case-story-mobile', mobile);
     section.classList.add('case-story-measuring');
     // Measure the stable small viewport and every translated caption/control.
@@ -68,7 +70,7 @@ if (section) {
     section.style.setProperty('--caption-height', `${captionHeight}px`);
     const required = copy.scrollHeight + (mobile ? 32 : 64);
     const mediaSize = Math.min(section.clientWidth, screenHeight - required);
-    const next = !reduced.matches && (mobile ? mediaSize >= 180 : innerHeight >= 700 && required <= screenHeight);
+    const next = !reduced.matches && (mobile ? mediaSize >= 180 : (landscape ? screenHeight >= 300 : innerHeight >= 700) && required <= screenHeight);
     section.style.setProperty('--case-media-size', `${Math.max(180, mediaSize)}px`);
     section.classList.remove('case-story-measuring');
     if (next !== pinned) {
