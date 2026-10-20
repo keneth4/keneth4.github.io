@@ -17,10 +17,9 @@
   </script>
   <link rel="icon" href="./assets/brand/muyal-canonical.png" />
   <link rel="preload" href="./assets/rework/dm-sans.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="./rework.css?v=20261012b" />
-  <script src="./rework.js?v=20261019a" defer></script>
-  <script type="importmap">{"imports":{"three":"./assets/vendor/three.module.js","three/addons/postprocessing/Pass.js":"./assets/vendor/Pass.js"}}</script>
-  <script type="module" src="./splat-demo.js?v=20261012e"></script>
+  <link rel="stylesheet" href="./rework.css?v=20261020a" />
+  <script src="./rework.js?v=20261020a" defer></script>
+  <script type="module" src="./motion/pinned-case-controller.js?v=20261020a"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-copy="skip">Ir al contenido</a>
@@ -43,10 +42,9 @@
       <figure class="hero-project demo-panel">
         <div class="demo-stage" id="splat-stage">
           <a class="demo-poster" href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" aria-label="Explorar AMPM" data-label="projectLinkLabel"><img src="./assets/rework/ampm-desktop.png" alt="Sitio de AMPM" data-alt="projectAlt" width="1440" height="900" fetchpriority="high" /></a>
-          <div id="splat-canvas" hidden></div>
         </div>
-        <div class="demo-actions"><button class="button button-demo" id="demo-start" type="button"><span id="demo-button-text">Explorar en 3D</span><span aria-hidden="true">↗</span></button><button class="demo-reset" id="demo-reset" type="button" hidden>Restablecer vista</button><button class="demo-back" id="demo-back" type="button" hidden>Ver sitio</button></div>
-        <figcaption id="demo-caption">AM:PM — Sitio web y menú interactivo</figcaption><p id="demo-status" role="status" aria-live="polite"></p>
+        <div class="demo-actions"><a class="button button-demo" href="#proyectos" data-copy="caseSeeStory">Conoce el proyecto</a></div>
+        <figcaption data-copy="projectCaption">AM:PM — Sitio web y menú interactivo</figcaption>
       </figure>
     </section>
     <section id="proyectos" class="case shell" aria-labelledby="case-title">
@@ -56,7 +54,37 @@
         <div class="case-story"><h3 data-copy="caseHeadline">Del primer antojo al pedido.</h3><p data-copy="caseBody">Una web con identidad propia. Un menú que permite explorar platos en 3D, elegir ingredientes y preparar un pedido por WhatsApp.</p></div>
         <a class="button button-outline" href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer"><span data-copy="explore">Explorar AM:PM</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg></a>
       </div>
-      <a class="case-image" href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" aria-label="Explorar el sitio de AMPM (abre en otra pestaña)" data-label="projectLinkLabel"><img src="./assets/rework/ampm-desktop.png" alt="Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante" data-alt="projectAlt" width="1440" height="900" loading="lazy" /></a>
+      <div class="case-story-scroll" data-case-story>
+        <div class="case-story-pin" data-case-pin>
+          <figure class="case-story-media" data-case-media>
+            <img class="case-story-poster" src="./assets/rework/mollequiles-1120.webp" srcset="./assets/rework/mollequiles-560.webp 560w, ./assets/rework/mollequiles-1120.webp 1120w" sizes="(max-width: 760px) 90vw, 50vw" width="1120" height="1120" loading="lazy" alt="Mollequiles de AM:PM en un plato blanco" data-alt="caseDishAlt" />
+            <div class="case-story-canvas" data-case-canvas aria-hidden="true"></div>
+            <div class="case-story-input" data-case-input tabindex="0" role="group" aria-label="Exploración 3D de Mollequiles" data-label="case3dLabel" aria-describedby="case-3d-help" hidden></div>
+            <figcaption class="sr-only" data-copy="caseDishCaption">Mollequiles · AM:PM</figcaption>
+          </figure>
+          <div class="case-story-copy">
+            <p class="case-story-eyebrow" data-copy="caseDishCaption">Mollequiles · AM:PM</p>
+            <div class="case-story-captions">
+              <p data-case-caption data-copy="caseStoryIntro">Una identidad que se puede explorar.</p>
+              <p data-case-caption data-copy="caseStoryReveal">De la imagen a la presencia.</p>
+              <p data-case-caption data-copy="caseStoryDepth">Un platillo real, reconstruido para explorarlo.</p>
+              <p data-case-caption data-copy="caseStoryOutro">Mira el trabajo de cerca.</p>
+            </div>
+            <p id="case-3d-help" class="case-story-help" data-copy="case3dHelp">Arrastra horizontalmente o usa las flechas para explorar. Usa los botones para acercar y alejar; Escape para salir.</p>
+            <div class="case-story-actions">
+              <button type="button" class="button button-dark" data-case-explore data-copy="caseExplore3d" hidden>Explorar en 3D</button>
+              <div data-case-controls hidden>
+                <button type="button" class="button button-outline" data-case-zoom-in data-label="caseZoomIn" aria-label="Acercar">+</button>
+                <button type="button" class="button button-outline" data-case-zoom-out data-label="caseZoomOut" aria-label="Alejar">−</button>
+                <button type="button" class="case-story-text-button" data-case-reset data-copy="caseReset">Restablecer vista</button>
+                <button type="button" class="case-story-text-button" data-case-exit data-copy="caseExit">Volver al recorrido</button>
+              </div>
+              <a href="https://ampm.creativivid.com/" target="_blank" rel="noopener noreferrer" data-copy="explore">Explorar AM:PM</a>
+            </div>
+            <p class="case-story-status" role="status" aria-live="polite" data-case-status></p>
+          </div>
+        </div>
+      </div>
       <div class="project-details">
         <article><h3 data-copy="identity">Identidad</h3><p data-copy="identityBody">Una presencia digital hecha para el restaurante.</p></article>
         <article><h3 data-copy="exploration">Exploración</h3><p data-copy="explorationBody">Platos en 3D, opciones e información en varios idiomas.</p></article>
