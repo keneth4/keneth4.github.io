@@ -29,4 +29,4 @@ Centralizar la fase del caption con los mismos umbrales del reveal, evitando que
 - Nueve unit tests: continuidad, reversibilidad, límites, inicio temprano, dolly alejar→acercar→recuperar y latch actualizado.
 - Repetir los 18 escenarios de navegador que cubren móvil/touch, navegación, fallbacks y formulario.
 - Capturar A, movimiento inicial, B, C, D y puntos intermedios; comprobar composición y ausencia de agujeros grandes. Evidencia en `../../qa/mollequiles/v3/`.
-- Registrar la confirmación funcional física de V2 sin atribuirla a esta revisión visual aún no probada por el usuario. La aceptación visual de V3 sigue pendiente. iPhone/Safari físico y permisos de redistribución siguen pendientes; no abrir PR/publicar todavía.
+- V3 revisada y aprobada visualmente por el usuario en desktop y móvil, además de la validación funcional previa en Poco X6 Pro. iPhone/Safari físico y permisos de redistribución siguen pendientes; después corresponde revisión final del diff y actualización contra main antes del PR. Publicación fuera de alcance.

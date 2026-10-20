@@ -4,7 +4,7 @@
 
 18 escenarios de navegador y 9 unit tests pasan. Evidencia en `v3/results.json` y `v3/zoom-camera-contact-sheet.jpg`. Las muestras del arranque y del dolly muestran cambio visible temprano y composiciones distintas sin agujeros grandes observados; C conserva el recorte de detalle.
 
-El usuario confirmó el funcionamiento de scroll/órbita/pinch en desktop y Poco X6 Pro para V2. Sus observaciones restantes motivaron este refinamiento visual. Aceptación visual V3, iPhone/Safari y permisos de redistribución siguen pendientes; no PR/publicación.
+El usuario confirmó que V3 se ve bien en desktop y móvil tras revisar la entrada y el recorrido de zoom. La funcionalidad de scroll/órbita/pinch y la aceptación visual quedan aprobadas por el usuario en desktop y Poco X6 Pro. No se infiere cobertura física de Safari/iPhone ni pruebas instrumentadas de rendimiento. iPhone/Safari y permisos de redistribución siguen pendientes; no PR/publicación.
 
 ## Historial V2
 

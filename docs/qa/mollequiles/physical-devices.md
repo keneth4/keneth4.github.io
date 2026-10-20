@@ -1,13 +1,13 @@
 # QA físico asistido — revisión visual v3
 
-Vista temporal: http://192.168.100.3:8770 (misma red Wi-Fi). Recargar la página para recibir la revisión `20261020c`.
+Vista temporal: http://MacBook-Air-de-Keneth.local:8770 (misma red Wi-Fi). Recargar la página para recibir la revisión `20261020c`.
 Mantener este equipo y el servidor encendidos. Si cambia la IP: `ipconfig getifaddr en0`.
 Servidor: `python3 -m http.server 8770 --bind 0.0.0.0 --directory /private/tmp/creativivid-muyal`.
 Los hosts privados y .local usan validación local del formulario, sin envío.
 
 | Dispositivo | SO / navegador | Resultado |
 |---|---|---|
-| Poco X6 Pro físico | Android; versión y navegador pendientes | V1 probado por el usuario: giro solo horizontal y botones de zoom deficientes; pidió recorrido móvil y movimiento más visible. V2: el usuario confirma que scroll y gestos funcionan bien en móvil y desktop. V3: aceptación visual de entrada/zoom pendiente. |
+| Poco X6 Pro físico | Android; versión y navegador pendientes | V1 probado por el usuario: giro solo horizontal y botones de zoom deficientes; pidió recorrido móvil y movimiento más visible. V2: el usuario confirma que scroll y gestos funcionan bien en móvil y desktop. V3: el usuario aprueba la apariencia y el recorrido en desktop y móvil. |
 | iPhone físico | Modelo, iOS y Safari pendientes | Pendiente |
 
 No confundir los eventos táctiles de Chromium con validación en un teléfono físico. No cerrar feature ni abrir PR antes de completarla.
@@ -32,4 +32,4 @@ Registrar modelo, versión del SO, navegador/versión, orientación, idioma y pa
 
 ## Confirmación funcional y refinamiento visual
 
-El usuario confirmó funcionamiento correcto de V2 en móvil y escritorio. Se conserva ese resultado; la objeción restante fue visual: entrada demasiado larga y distancias poco variadas. V3 acorta la entrada y añade alejamiento B/acercamiento C/recuperación D. Comprobar estas dos diferencias sin presentar aún la estética como aprobada.
+El usuario confirmó funcionamiento correcto de V2 en móvil y escritorio. Se conserva ese resultado; la objeción restante fue visual: entrada demasiado larga y distancias poco variadas. V3 acorta la entrada y añade alejamiento B/acercamiento C/recuperación D. El usuario revisó de nuevo en desktop y móvil y aprobó el resultado visual. Esto cierra la revisión funcional y visual reportada en Poco; el checklist completo de iPhone/Safari permanece pendiente.
