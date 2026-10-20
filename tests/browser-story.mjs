@@ -124,7 +124,7 @@ try {
   await mobile.screenshot({path:out+'/mobile-explore.png'});await mobile.locator('[data-case-exit]').click();await mobile.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='story');
   await check('mobile explore returns to scroll story, short landscape keeps safe fallback',async()=>{
     assert.ok(await mobile.locator('[data-case-input]').isHidden());
-    await mobile.setViewportSize({width:844,height:280});await mobile.waitForTimeout(200);assert.equal(await mobile.locator(story).getAttribute('data-pinned'),'false');
+    await mobile.setViewportSize({width:844,height:200});await mobile.waitForTimeout(200);assert.equal(await mobile.locator(story).getAttribute('data-pinned'),'false');
   });await mobile.context().close();
   const reduce=await pageFor({reducedMotion:'reduce'});await reduce.goto(base,{waitUntil:'domcontentloaded'});await reduce.locator(story).scrollIntoViewIfNeeded();
   await check('reduced motion: static, no automatic 3D, all captions readable',async()=>{assert.equal(await reduce.locator(story).getAttribute('data-pinned'),'false');assert.equal(await reduce.locator('canvas').count(),0);assert.equal(await reduce.locator('[data-case-caption]:visible').count(),4);assert.ok(await reduce.locator('[data-case-progress]').isHidden())});await reduce.context().close();
@@ -134,16 +134,25 @@ try {
   await check('touch landscape keeps timeline/progress and fits all translated copy',async()=>{
     const landscape=await pageFor({viewport:{width:844,height:390},isMobile:true,hasTouch:true});
     await landscape.goto(base);await landscape.evaluate(()=>document.fonts.ready);
-    for(const size of [{width:844,height:390},{width:740,height:360}]){
+    for(const size of [{width:844,height:390},{width:740,height:360},{width:844,height:270},{width:740,height:270},{width:932,height:299},{width:1200,height:320}]){
       await landscape.setViewportSize(size);
       for(const lang of ['es','en','de','ja']){
         await landscape.locator('#language').selectOption(lang);await landscape.waitForTimeout(200);
-        assert.equal(await landscape.locator(story).getAttribute('data-pinned'),'true',`${size.width} ${lang}`);
+        assert.equal(await landscape.locator(story).getAttribute('data-pinned'),'true',`${size.width}x${size.height} ${lang}`);
         await at(landscape,0);await landscape.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');
         await at(landscape,.5);assert.ok(await landscape.locator('[data-case-progress]').isVisible());
         const fits=await landscape.locator('.case-story-copy').evaluate(e=>{const r=e.getBoundingClientRect();return r.top>=-1&&r.bottom<=innerHeight+1});assert.ok(fits,`${size.width} ${lang} copy fits`);
       }
     }
+    // Real browser chrome can reduce 100svh below innerHeight; a regular
+    // Playwright viewport alone does not model this difference.
+    await landscape.setViewportSize({width:844,height:390});
+    const chrome=await landscape.addStyleTag({content:'.case-story-scroll[data-pinned="true"] .case-story-pin{height:250px!important}.case-story-landscape[data-pinned="true"] .case-story-media{width:min(100%,226px)}'});
+    await landscape.locator('#language').selectOption('es');await landscape.evaluate(()=>visualViewport.dispatchEvent(new Event('resize')));await landscape.waitForTimeout(200);
+    assert.equal(await landscape.locator(story).getAttribute('data-pinned'),'true','250px stable viewport with browser chrome');
+    await at(landscape,0);await at(landscape,.5);assert.ok(await landscape.locator('[data-case-progress]').isVisible());
+    assert.equal(await landscape.locator('[data-case-caption]:visible').count(),1);
+    await chrome.evaluate(e=>e.remove());await landscape.evaluate(()=>dispatchEvent(new Event('resize')));
     await landscape.screenshot({path:out+'/touch-landscape.png'});
     await landscape.setViewportSize({width:390,height:844});await landscape.waitForTimeout(200);assert.equal(await landscape.locator(story).getAttribute('data-pinned'),'true');
     await landscape.context().close();
