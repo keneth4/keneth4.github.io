@@ -39,3 +39,7 @@ Verificación local de la revisión: 20 escenarios de story, 11 de motivos y 9 p
 ## Aprobación del usuario — 20 de octubre de 2026
 
 El usuario revisó la corrección en Poco X6 Pro físico y desktop e informó que todo funciona bien. Se registra aprobación de la revisión de landscape y servicios, además de la aprobación visual previa del bloque. No se proporcionaron versiones de Android/navegador ni detalles del equipo desktop. No se extiende esta aprobación a Safari/iPhone ni al icono del crédito en el sitio independiente de AM:PM.
+
+## Autorización de integración — 20 de octubre de 2026
+
+El usuario reporta funcionamiento correcto en iPhone físico tras las aprobaciones de Poco y desktop, y solicita integrar a main. Esta instrucción sustituye la espera anterior para abrir PR/integrar. No se inventan versiones de dispositivos ni se declara resuelta la documentación de permisos del asset. GitHub Pages está configurado para publicar desde main.

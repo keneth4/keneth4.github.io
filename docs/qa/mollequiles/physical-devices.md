@@ -8,7 +8,7 @@ Los hosts privados y .local usan validación local del formulario, sin envío.
 | Dispositivo | SO / navegador | Resultado |
 |---|---|---|
 | Poco X6 Pro físico | Android; versión y navegador pendientes | V1 probado por el usuario: giro solo horizontal y botones de zoom deficientes; pidió recorrido móvil y movimiento más visible. V2: el usuario confirma que scroll y gestos funcionan bien en móvil y desktop. V3: el usuario aprueba la apariencia y el recorrido en desktop y móvil. |
-| iPhone físico | Modelo, iOS y Safari pendientes | Pendiente |
+| iPhone físico | Modelo, versión de iOS y navegador no especificados | El 20 de octubre de 2026, el usuario informa funcionamiento correcto y autoriza integrar a main. |
 
 No confundir los eventos táctiles de Chromium con validación en un teléfono físico. No cerrar feature ni abrir PR antes de completarla.
 
@@ -33,3 +33,7 @@ Registrar modelo, versión del SO, navegador/versión, orientación, idioma y pa
 ## Confirmación funcional y refinamiento visual
 
 El usuario confirmó funcionamiento correcto de V2 en móvil y escritorio. Se conserva ese resultado; la objeción restante fue visual: entrada demasiado larga y distancias poco variadas. V3 acorta la entrada y añade alejamiento B/acercamiento C/recuperación D. El usuario revisó de nuevo en desktop y móvil y aprobó el resultado visual. Esto cierra la revisión funcional y visual reportada en Poco; el checklist completo de iPhone/Safari permanece pendiente.
+
+## Cierre reportado por el usuario — 20 de octubre de 2026
+
+Tras aprobar Poco X6 Pro y desktop, el usuario informa que el sitio funciona correctamente en un iPhone físico y solicita integrar a main. Se registra el resultado reportado, sin inferir modelo, navegador, versiones ni ejecución individual de cada caso del checklist. La integración a main activa GitHub Pages automáticamente. La autorización de integración no constituye evidencia adicional de titularidad/licencia del material AM:PM; se conserva su procedencia y el pendiente documental en NOTICE.md.
