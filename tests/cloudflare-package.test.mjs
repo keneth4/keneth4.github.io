@@ -15,7 +15,7 @@ test('Cloudflare package includes the exact landing module graph and 3D assets',
     if(relative.startsWith('assets/vendor/') || !/\.(m?js|html)$/.test(relative))return;
     const source=readFileSync(deployed,'utf8');
     const patterns=relative.endsWith('.html') ? [/\bsrc="(\.\/[^"?]+\.js)(?:\?[^" ]*)?"/g] : [/(?:from\s*|import\s*\(\s*)['"](\.[^'"]+)['"]/g];
-    for(const regex of patterns)for(const match of source.matchAll(regex))visit(path.normalize(path.join(path.dirname(relative),match[1])));
+    for(const regex of patterns)for(const match of source.matchAll(regex))visit(path.normalize(path.join(path.dirname(relative),match[1].split(/[?#]/)[0])));
   }
   visit('index.html');
   for(const name of readdirSync('motion'))visit(`motion/${name}`);

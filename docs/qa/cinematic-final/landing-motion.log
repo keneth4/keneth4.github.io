@@ -1,0 +1,11 @@
+PASS protected logo, asset, viewer and surrounding landing markup remain identical
+PASS page identity and decorative SVG accessibility
+PASS hero parallax affects only the motif, not copy or canonical signature
+PASS services curve and divider reveal follow normal scroll reversibly
+PASS desktop process connects all three steps, marker advances and reverses
+PASS contact motif settles once and stops when the form receives focus
+PASS desktop translations keep content and motifs within the viewport
+PASS mobile process uses a vertical route aligned to all three steps
+PASS mobile motifs do not overlap hero CTA, service heading or contact form
+PASS reduced motion is static, readable and keeps a completed route
+PASS no JavaScript keeps all services, steps, contact fields and static motifs

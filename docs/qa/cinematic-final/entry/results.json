@@ -1,0 +1,18 @@
+{
+  "viewports": [
+    [
+      390,
+      844
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "portraitLiftAtHalfViewportPx": 93.5341,
+  "liftAtStickyStartPx": 0,
+  "desktopTransform": "none",
+  "cueAtStart": true,
+  "cueHiddenAfterProgress015": true,
+  "pageErrors": []
+}

@@ -1,0 +1,39 @@
+{
+  "poster-at-A.png": {
+    "size": [
+      650,
+      650
+    ],
+    "objectBounds": [
+      55,
+      154,
+      593,
+      524
+    ],
+    "normalizedBounds": [
+      0.08462,
+      0.23692,
+      0.91231,
+      0.80615
+    ]
+  },
+  "rendered-A.png": {
+    "size": [
+      650,
+      650
+    ],
+    "objectBounds": [
+      55,
+      154,
+      594,
+      524
+    ],
+    "normalizedBounds": [
+      0.08462,
+      0.23692,
+      0.91385,
+      0.80615
+    ]
+  },
+  "maximumNormalizedFramingDifference": 0.0015400000000000968
+}

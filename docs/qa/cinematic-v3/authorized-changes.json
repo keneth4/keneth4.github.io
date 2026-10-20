@@ -1,0 +1,17 @@
+{
+  "assets/rework/mollequiles-560.webp": {
+    "previousSHA256": "6d26dc4180be56ff1cbbd2f86ed35f7acd06392596b71c696b66ac8620a686d1",
+    "newSHA256": "dbbb2a1d1d697a6af8ae257c7ca38173434fa480c71b7fb79f5cd3ef102ed5c1",
+    "reason": "User requests complete plate in A; poster and initial first-frame camera must match."
+  },
+  "assets/rework/mollequiles-1120.webp": {
+    "previousSHA256": "2b7989de150abab7cf704473aa36fe4d1f605f9a9df4c915e4cbf011ec476fb3",
+    "newSHA256": "147777cd76528bbb2a37251603b73bddee5496aa8437fd456d61a600f5091542",
+    "reason": "User requests complete plate in A; poster and initial first-frame camera must match."
+  },
+  "motion/splat-viewer.js": {
+    "previousSHA256": "4f15e15063a408f35a25d37956570639fbab1b6f32b9948fd563e793f6adf7ca",
+    "newSHA256": "405c2573a4ec1ce8e50f4283f2e1bff51e44c808715aece58baff546f7c6c366",
+    "reason": "User requests complete plate in A; poster and initial first-frame camera must match."
+  }
+}

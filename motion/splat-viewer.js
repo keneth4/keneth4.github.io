@@ -1,13 +1,14 @@
-import { clampPose } from './story-timeline.mjs';
+import { clampPose, POSES } from './story-timeline.mjs?v=cinematic3';
 const VIEW = Object.freeze({ yawDeg: 90, elevationDeg: 45, fieldOfViewDeg: 30, distanceMultiplier: .65, framingMargin: .95, target: { x: 0, y: -.1, z: 0 } });
 const ORIENTATION = { preset: 'flip-vertical', rotationDeg: { x: 0, y: 0, z: 180 }, flip: { x: false, y: false, z: false } };
 export function createViewer(host, onFailure) {
-  let runtime, pending, disposed = false, current, paused = false;
+  let runtime, pending, disposed = false, current = clampPose(POSES[0]), paused = false;
+  const viewFor = pose => ({ ...VIEW, yawDeg: pose.yawDeg, elevationDeg: pose.elevationDeg, distanceMultiplier: .65 * pose.zoom });
   const abort = new AbortController();
   function setPose(pose) {
     current = clampPose(pose);
     if (!runtime || paused || disposed) return;
-    runtime.setConfiguration({ view: { ...VIEW, yawDeg: current.yawDeg, elevationDeg: current.elevationDeg, distanceMultiplier: .65 * current.zoom }, resetInitialView: true, playbackPaused: true });
+    runtime.setConfiguration({ view: viewFor(current), resetInitialView: true, playbackPaused: true });
   }
   return {
     async load() {
@@ -15,7 +16,7 @@ export function createViewer(host, onFailure) {
       pending = (async () => {
         const { p } = await import('../assets/vendor/mollequiles/playCanvasSpzViewer-XM1S__iy.js');
         if (disposed) throw new Error('Viewer disposed');
-        runtime = p.createPlayCanvasSpzViewer({ host, view: VIEW, orientation: ORIENTATION, interaction: { minZoom: .5, maxZoom: 1.5, minElevationDeg: 30, maxElevationDeg: 88, horizontalOrbitRangeDeg: 360, autoRotate: false, idleResetMs: 0 }, motion: { preset: 'static' }, playbackPaused: true });
+        runtime = p.createPlayCanvasSpzViewer({ host, view: viewFor(current), orientation: ORIENTATION, interaction: { minZoom: .5, maxZoom: 1.5, minElevationDeg: 30, maxElevationDeg: 88, horizontalOrbitRangeDeg: 360, autoRotate: false, idleResetMs: 0 }, motion: { preset: 'static' }, playbackPaused: true });
         // Native controls capture wheel/pinch and start idle resets. The product uses
         // its own accessible input surface; native canvas never receives input.
         host.style.pointerEvents = 'none';

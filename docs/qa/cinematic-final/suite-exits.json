@@ -1,0 +1,18 @@
+[
+  {
+    "suite": "story",
+    "exitCode": 0
+  },
+  {
+    "suite": "cinematic",
+    "exitCode": 0
+  },
+  {
+    "suite": "landing-motion",
+    "exitCode": 0
+  },
+  {
+    "suite": "package-smoke",
+    "exitCode": 0
+  }
+]
