@@ -13,7 +13,15 @@ const results=[],errors=[];
 const deadline=setTimeout(async()=>{results.push({status:'fail',error:'Browser run exceeded the 90-second safety deadline'});await writeFile(out+'/results.json',JSON.stringify({engine,results,errors},null,2));process.exit(1);},90000);
 async function check(name,fn){await fn();results.push({name,status:'pass'});console.log('PASS',name)}
 async function open(options={}){const ctx=await browser.newContext({viewport:{width:1440,height:900},...options});const p=await ctx.newPage();p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text())});p.setDefaultTimeout(15000);await p.goto(base,{waitUntil:'domcontentloaded',timeout:15000});await p.waitForFunction(()=>document.readyState==='complete'&&document.fonts.status==='loaded',null,{timeout:10000});return p;}
-async function top(page,selector,y=120){await page.locator(selector).evaluate((e,y)=>scrollTo({top:scrollY+e.getBoundingClientRect().top-y,behavior:'instant'}),y);await page.waitForTimeout(180)}
+async function top(page,selector,y=120){await page.locator(selector).evaluate((e,y)=>scrollTo({top:scrollY+e.getBoundingClientRect().top-y,behavior:'instant'}),y);await page.waitForTimeout(180);
+  if(selector==='.services-motif')await page.waitForFunction(()=>{
+    const motif=document.querySelector('.services-motif');
+    const expected=Math.max(0,Math.min(1,(innerHeight*.9-motif.getBoundingClientRect().top)/(innerHeight*.55)));
+    const curve=motif.querySelector('.motif-trace'),point=curve.getPointAtLength(expected*curve.getTotalLength());
+    const matrix=motif.querySelector('[data-services-marker]').transform.baseVal.consolidate().matrix;
+    return Math.abs(Number(getComputedStyle(motif).getPropertyValue('--motif-draw'))-expected)<.01&&Math.hypot(matrix.e-point.x,matrix.f-point.y)<1;
+  });
+}
 const marker=p=>p.locator('[data-process-marker]').getAttribute('transform');
 async function point(p){return (await marker(p)).match(/[-\d.]+/g).map(Number)}
 function overlaps(a,b){return a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;}

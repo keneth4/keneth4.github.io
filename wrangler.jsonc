@@ -4,5 +4,8 @@
   "compatibility_date": "2026-03-13",
   "assets": {
     "directory": ".cloudflare-deploy"
+  },
+  "build": {
+    "command": "node scripts/build-cloudflare-assets.mjs && node --test tests/cloudflare-package.test.mjs"
   }
 }
