@@ -1,7 +1,7 @@
 # CreatiVivid · 11. Storyboard cinematográfico por tomas — Mollequiles
 
 **Base:** `main@31f41430e72cd64090aa9964817006a9c810d139`. **Rama:** `codex/creativivid-mollequiles-cinematic-shots`.
-**Estado:** gaps documentales cerrados el 20/oct/2026; esta evolución todavía no está implementada ni validada. Contratos y copy canónico: [documento 12](12-especificacion-codex-shot-storytelling.md). En caso de discrepancia técnica o editorial prevalece el 12.
+**Estado:** implementado y validado automáticamente en local el 20/oct/2026; aprobación visual y QA físico pendientes. Sin PR ni despliegue. Contratos y copy canónico: [documento 12](12-especificacion-codex-shot-storytelling.md). En caso de discrepancia técnica o editorial prevalece el 12.
 
 ## 1. Dirección narrativa y límites
 
@@ -65,3 +65,7 @@ Error de carga/WebGL durante la pasada usa poster, aviso accesible y resumen, si
 - Validar paquete de Cloudflare y, tras despliegue autorizado, dominio real creativivid.com; un pase de GitHub Pages no sustituye esa prueba.
 
 Esta aprobación cierra la dirección y especificación, no los resultados de implementación. No iniciar cambios de producto, abrir PR ni desplegar bajo esta tarea documental. El PR de implementación requiere los checks y revisión física/visual definidos en el 12.
+
+## Estado de implementación local — 20/oct/2026
+
+Implementado en esta rama a petición expresa del usuario posterior al cierre documental. QA automático local y evidencia disponibles en [cinematic-v2](../../qa/cinematic-v2/README.md). Pendientes aprobación visual y retest físico de esta evolución. Los estados anteriores de «sin implementar» describen el momento de cierre de la especificación. Sin PR, integración a main ni despliegue.

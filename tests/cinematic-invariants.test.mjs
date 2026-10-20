@@ -17,6 +17,7 @@ test('unrelated assets, identity, landing sections and original locale strings a
 });
 test('all four languages supply complete and compact shot copy and structural labels',()=>{
  for(const lang of ['es','en','de','ja']){const words=copy[lang];for(let i=1;i<=4;i++)for(const field of ['Label','Title','Body','TitleCompact','BodyCompact'])assert.ok(words[`caseShot${i}${field}`]?.length,`${lang} ${i} ${field}`);for(const key of ['caseShotsLabel','casePreview','caseAllShots'])assert.ok(words[key]);}
+ assert.match(html,/<div class="case-story-captions" role="group" aria-label=/);
  assert.equal((html.match(/data-case-caption data-case-shot=/g)||[]).length,4);
  assert.ok(!/aria-live/.test(html.slice(html.indexOf('<div class="case-story-captions"'),html.indexOf('<div class="case-story-preview"'))));
 });

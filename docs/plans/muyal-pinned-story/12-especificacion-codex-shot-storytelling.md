@@ -1,7 +1,7 @@
 # CreatiVivid · 12. Especificación cerrada — storytelling por tomas
 
 **Base:** `main@31f41430e72cd64090aa9964817006a9c810d139`. **Rama:** `codex/creativivid-mollequiles-cinematic-shots`.
-**Estado:** decisiones documentales cerradas el 20/oct/2026; implementación y QA de esta evolución todavía no realizados. Complementa al [storyboard 11](11-storyboard-cinematografico-por-tomas.md). Este documento es la fuente canónica de textos y contratos técnicos; sustituye sus ejemplos anteriores.
+**Estado:** implementación local y QA automático disponibles el 20/oct/2026; aprobación visual y QA físico pendientes. Sin PR ni despliegue. Complementa al [storyboard 11](11-storyboard-cinematografico-por-tomas.md). Este documento es la fuente canónica de textos y contratos técnicos; sustituye sus ejemplos anteriores.
 
 ## 1. Alcance y decisiones confirmadas
 
@@ -126,3 +126,7 @@ Strings adicionales canónicas (vista previa / enlace-resumen y summary): ES «V
 - Verificar **paquete de Cloudflare**, no solo repo local: módulos motion, MIME y assets; mantener build/check de dependencias. Tras un despliegue autorizado comprobar creativivid.com con bytes, primer frame y navegación en tamaños bajos. Un build de GitHub Pages no acredita ese dominio.
 
 Commits: baseline/documentación; datos+progreso compartido/tests; copy+DOM+i18n/layout; integración de estados; QA/evidencia. No abrir PR hasta tests, comparación visual y QA físico aprobados. Esta fase solo cierra documentos: no ejecutar implementación, PR, merge ni despliegue con esa aprobación documental.
+
+## Estado de implementación local — 20/oct/2026
+
+Implementado en esta rama a petición expresa del usuario posterior al cierre documental. QA automático local y evidencia disponibles en [cinematic-v2](../../qa/cinematic-v2/README.md). Pendientes aprobación visual y retest físico de esta evolución. Los estados anteriores de «sin implementar» describen el momento de cierre de la especificación. Sin PR, integración a main ni despliegue.
