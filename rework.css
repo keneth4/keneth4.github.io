@@ -785,7 +785,7 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 .case-story-input:focus-visible{outline:3px solid var(--accent,#5A3EE0);outline-offset:4px}
 .case-story-eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .case-story-captions{min-height:5em;margin:24px 0}
-.case-story-captions p{font-size:clamp(26px,3vw,44px);line-height:1.15;letter-spacing:-.035em;max-width:18ch;margin:0 0 16px}
+
 .case-story-help,.case-story-status{font-size:14px;color:var(--muted);line-height:1.6}
 .case-story-actions,[data-case-controls]{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
 .case-story-actions>a{display:inline-block;padding:12px 0;text-underline-offset:4px}
@@ -796,7 +796,7 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 .case-story-scroll[data-pinned="true"] .case-story-media{width:min(100%,calc(100svh - 80px));justify-self:center}
 .case-story-measuring [data-case-caption]{display:block!important}
 .case-story-copy::before{content:"";display:block;width:48px;height:6px;border-radius:99px;background:var(--accent,#5A3EE0);opacity:.55}
-@media(max-width:760px){.case-story-pin{grid-template-columns:minmax(0,1fr);gap:24px;padding:12px 0}.case-story-captions{min-height:0;margin:16px 0}.case-story-captions p{max-width:26ch;font-size:28px}.case-story-media{width:100%}.case-story-status{min-height:0}}
+@media(max-width:760px){.case-story-pin{grid-template-columns:minmax(0,1fr);gap:24px;padding:12px 0}.case-story-captions{min-height:0;margin:16px 0}.case-story-media{width:100%}.case-story-status{min-height:0}}
 @media(prefers-reduced-motion:reduce){.case-story-scroll{scroll-behavior:auto}.case-story-copy::before{opacity:.35}}
 /* Caption changes must not let native scroll anchoring move the timeline. */
 .case-story-scroll{overflow-anchor:none}
@@ -812,8 +812,7 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
   .case-story-scroll[data-pinned="true"] .case-story-media{width:min(100%,var(--case-media-size));align-self:center}
   .case-story-scroll[data-pinned="true"] .case-story-copy{width:100%}
   .case-story-scroll[data-pinned="true"] .case-story-captions{margin:8px 0;min-height:var(--caption-height,70px)}
-  .case-story-scroll[data-pinned="true"] .case-story-captions p{font-size:24px;line-height:1.15;margin-bottom:12px}
-  .case-story-scroll[data-pinned="true"] .case-story-eyebrow{margin:4px 0;font-size:11px}
+    .case-story-scroll[data-pinned="true"] .case-story-eyebrow{margin:4px 0;font-size:11px}
   .case-story-scroll[data-pinned="true"] .case-story-actions{gap:8px}
   .case-story-scroll[data-pinned="true"] .button{padding:10px 16px;font-size:14px}
   .case-story-scroll[data-pinned="true"] .case-story-actions>a,.case-story-text-button{font-size:14px;padding:8px 4px}
@@ -881,7 +880,6 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 /* Short touch landscape: keep the story visible beside its captions. */
 .case-story-landscape .case-story-pin{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto;gap:24px;padding:12px 0}
 .case-story-landscape .case-story-captions{margin:8px 0}
-.case-story-landscape .case-story-captions p{font-size:20px;line-height:1.15;margin-bottom:8px}
 .case-story-landscape .case-story-eyebrow{font-size:11px;margin:4px 0}
 .case-story-landscape .case-story-help{font-size:12px;line-height:1.3;margin:6px 0}
 .case-story-landscape .case-story-status{min-height:0;font-size:12px;margin:4px 0}
@@ -897,3 +895,25 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 
 /* In short landscape, exploration replaces narrative copy with gesture help. */
 .case-story-landscape[data-state="explore"] .case-story-captions,.case-story-landscape[data-state="explore"] .case-story-progress-slot{display:none}
+
+/* Cinematic shots: label, title and body have independent, measured typography. */
+.case-story-captions{min-height:0}
+[data-case-caption]{min-width:0;align-self:start;margin:0 0 24px}
+.case-story-shot-label{font-size:11px;line-height:1.4;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:0}
+.case-story-shot-title{font-size:clamp(24px,2.55vw,38px);line-height:1.13;letter-spacing:-.035em;max-width:22ch;margin:8px 0}
+.case-story-shot-body{font-size:clamp(14px,1.1vw,17px);line-height:1.5;max-width:44ch;margin:0}
+.case-story-scroll[data-pinned="true"] [data-case-caption]{margin:0}
+.case-story-scroll[data-copy-variant="compact"] .case-story-shot-title{font-size:20px;line-height:1.15;max-width:none;margin:4px 0}
+.case-story-scroll[data-copy-variant="compact"] .case-story-shot-body{font-size:13px;line-height:1.4}
+.case-story-landscape[data-copy-variant="compact"] .case-story-shot-title{font-size:18px}
+.case-story-preview-note{font-size:13px;line-height:1.4;margin:8px 0}
+.case-story-preview>a{display:inline-block;font-size:13px;line-height:1.4;padding:8px 0;text-underline-offset:4px}
+.case-story-preview{padding:4px 0}
+.case-story-scroll[data-presentation="preview"] .case-story-captions{display:none}
+.case-story-scroll[data-state="explore"].case-story-landscape .case-story-preview{display:none}
+.case-story-scroll[data-presentation="preview"] .case-story-progress-slot{visibility:hidden}
+.case-story-measuring .case-story-progress-slot{visibility:visible}
+.case-story-measuring[data-presentation="preview"] .case-story-progress-slot{visibility:hidden}
+.case-shots-summary{margin:24px 0 40px;scroll-margin-top:24px;border-top:1px solid var(--line);padding-top:20px}
+.case-shots-summary>summary{cursor:pointer;font-size:16px;padding:8px 0;color:var(--accent)}
+.case-shot-summary-item{margin:24px 0;max-width:680px}
