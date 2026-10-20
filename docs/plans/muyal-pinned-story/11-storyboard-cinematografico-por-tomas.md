@@ -46,8 +46,8 @@ Se conserva la **pose A (.04), B (.38), C (.72), D (.90)** del código vigente, 
 |---|---|---|---|
 | **0.000–0.005** | Poster real de Mollequiles, escena sin WebGL obligatorio | A | Toma 01 · Plano principal |
 | **0.005–0.040** | Reveal real poster → primer fotograma; conservar el latch de carga tardía | A fija | Toma 01 |
-| **0.040–0.075** | Hold estable del primer encuadre | A fija | Toma 01 |
-| **0.075–0.380** | Movimiento lateral y dolly-out con easing expresivo, desacelerando hasta B | A → B | Toma 01; el texto cambia al llegar a B |
+| **0.040–0.055** | Hold estable del primer encuadre | A fija | Toma 01 |
+| **0.055–0.380** | Movimiento lateral y dolly-out con easing expresivo, desacelerando hasta B | A → B | Toma 01; el texto cambia al llegar a B |
 | **0.380–0.425** | **Hold / corte editorial** de la perspectiva lateral, ~22.5svh efectivos | B fija | Toma 02 · Perspectiva lateral |
 | **0.425–0.720** | Cambio de altura + dolly-in hacia detalle, con easing de entrada/salida | B → C | Toma 02; el texto cambia al llegar a C |
 | **0.720–0.765** | **Hold / corte editorial** de textura, ~22.5svh efectivos | C fija | Toma 03 · Plano detalle |
