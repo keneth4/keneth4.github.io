@@ -1,4 +1,12 @@
-# Mollequiles — integration QA (revisión móvil v2)
+# Mollequiles — integration QA (revisión visual v3)
+
+**V3 vigente:** entrada de cámara a .04 en lugar de .25, reveal .005–.04 y distancias A=1 / B=1.24 / C=.78 / D=1.04. El movimiento inicial responde pronto y los captions usan los mismos umbrales. Plan completo en [08-early-response-and-dolly.md](../../plans/muyal-pinned-story/08-early-response-and-dolly.md).
+
+18 escenarios de navegador y 9 unit tests pasan. Evidencia en `v3/results.json` y `v3/zoom-camera-contact-sheet.jpg`. Las muestras del arranque y del dolly muestran cambio visible temprano y composiciones distintas sin agujeros grandes observados; C conserva el recorte de detalle.
+
+El usuario confirmó el funcionamiento de scroll/órbita/pinch en desktop y Poco X6 Pro para V2. Sus observaciones restantes motivaron este refinamiento visual. Aceptación visual V3, iPhone/Safari y permisos de redistribución siguen pendientes; no PR/publicación.
+
+## Historial V2
 
 La revisión vigente implementa historia con scroll en móvil, cámara más amplia y 600svh de recorrido. Exploración voluntaria permite órbita en dos ejes y pinch; los botones de zoom no aparecen en pantallas táctiles. Plan vigente: [07-mobile-and-motion-revision.md](../../plans/muyal-pinned-story/07-mobile-and-motion-revision.md).
 

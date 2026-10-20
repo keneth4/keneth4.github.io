@@ -1,5 +1,6 @@
 # Plan actualizado: recorrido móvil y cámara expresiva
 
+> Entrada, porcentajes y distancias vigentes: [08-early-response-and-dolly.md](08-early-response-and-dolly.md). Móvil y gestos de esta revisión se conservan.
 Esta revisión sustituye las decisiones de movimiento, móvil y gestos de 04–06. Motivación: prueba física del usuario en Poco X6 Pro (Android; versión y navegador pendientes). La versión anterior limitaba el giro horizontal y reemplazaba pinch con botones; el recorrido era demasiado sutil y corto.
 
 ## Experiencia final

@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.QA_URL || 'http://127.0.0.1:8770';
-const out = process.env.QA_OUTPUT || '/private/tmp/mollequiles-browser-qa-v2';
+const out = process.env.QA_OUTPUT || '/private/tmp/mollequiles-browser-qa-v3';
 await mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true, ...(process.env.CHROMIUM_EXECUTABLE ? { executablePath: process.env.CHROMIUM_EXECUTABLE } : {}) });
 const results = [], errors = [], metrics = [];
@@ -78,7 +78,7 @@ try {
   await check('mobile: native scroll story with extended scrub and no input capture',async()=>{
     assert.equal(await mobile.locator(story).getAttribute('data-pinned'),'true');
     await at(mobile,0);await mobile.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');
-    await at(mobile,.1);await at(mobile,.25);await at(mobile,.48);await mobile.waitForTimeout(600);
+    await at(mobile,.1);await at(mobile,.25);await at(mobile,.38);await mobile.waitForTimeout(600);
     const size=await mobile.locator('[data-case-media]').boundingBox();assert.ok(Math.abs(size.width-size.height)<2);
     assert.ok(await mobile.locator('[data-case-input]').isHidden());
     const data=await mobile.locator(story).evaluate(e=>({pose:JSON.parse(e.dataset.pose),height:e.offsetHeight,viewport:innerHeight}));
@@ -93,7 +93,7 @@ try {
     for(let i=1;i<=8;i++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y:y-i*12,id:1}]});await mobile.waitForTimeout(25)}
     await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await mobile.waitForTimeout(300);assert.ok(await mobile.evaluate(y=>scrollY>y+30,before));await cdp.detach();
     for(const lang of ['en','de','ja','es']){await mobile.locator('#language').selectOption(lang);await mobile.waitForTimeout(150);assert.ok(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
-    await at(mobile,.48);await mobile.waitForTimeout(600);
+    await at(mobile,.38);await mobile.waitForTimeout(600);
   });
   await mobile.screenshot({path:out+'/mobile-story.png'});await at(mobile,.95);
   await mobile.locator('[data-case-explore]').click();await mobile.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='explore');

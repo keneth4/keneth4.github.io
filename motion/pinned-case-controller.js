@@ -1,4 +1,4 @@
-import { cameraAt, clampPose, passAt, progressAt, revealAt } from './story-timeline.mjs';
+import { cameraAt, clampPose, passAt, progressAt, revealAt, phaseAt } from './story-timeline.mjs';
 import { createViewer } from './splat-viewer.js';
 const section = document.querySelector('[data-case-story]');
 if (section) {
@@ -96,7 +96,7 @@ if (section) {
     explore.disabled = !!loading;
     controls.hidden = !exploring;
     input.hidden = !exploring;
-    const phase = p < .20 ? 0 : p < .45 ? 1 : p < .90 ? 2 : 3;
+    const phase = phaseAt(p);
     captions.forEach((caption, index) => { caption.hidden = pinned && index !== phase; });
     viewer?.pause(!inView || document.hidden);
     if (ready && inView && !document.hidden) {
