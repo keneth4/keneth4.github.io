@@ -1,9 +1,10 @@
-import { cameraAt, clampPose, passAt, progressAt, revealAt, shotAt, travellingAt, SHOTS, POSES, clamp, presentationTarget, advancePresentation } from './story-timeline.mjs?v=cinematic3';
-import { createViewer } from './splat-viewer.js?v=cinematic3';
+import { cameraAt, clampPose, passAt, progressAt, revealAt, shotAt, travellingAt, SHOTS, POSES, clamp, presentationTarget, advancePresentation } from './story-timeline.mjs?v=cinematic4';
+import { createViewer } from './splat-viewer.js?v=cinematic4';
 const section = document.querySelector('[data-case-story]');
 if (section) {
   const pin = section.querySelector('[data-case-pin]');
   const media = section.querySelector('[data-case-media]');
+  const scrollCue = section.querySelector('[data-case-scroll-cue]');
   const host = section.querySelector('[data-case-canvas]');
   const input = section.querySelector('[data-case-input]');
   const captions = [...section.querySelectorAll('[data-case-caption]')];
@@ -171,6 +172,10 @@ if (section) {
     if (pinned && near && scrollIntent && !ready && !failed) load();
     const posterOnly = pinned && (!ready || pass.posterOnly || failed);
     const previewing = posterOnly && !exploring;
+    // Presentation-only offset: never alters sticky geometry or camera framing.
+    const entryLift = clamp(rect.top / Math.max(1, innerHeight * .5), 0, 1);
+    media.style.setProperty('--entry-lift', String(entryLift));
+    scrollCue.hidden = !pinned || previewing || exploring || q > .10;
     section.dataset.presentation = previewing ? 'preview' : 'narrative';
     preview.hidden = !previewing;
     preview.querySelector('.case-story-preview-note').hidden = failed;

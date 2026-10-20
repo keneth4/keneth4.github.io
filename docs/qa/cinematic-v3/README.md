@@ -2,7 +2,7 @@
 
 Solo local, misma rama cinematográfica. Sustituye la elección de encuadres y copy de V2 tras el feedback del usuario: A/D parecían repetidos, los nombres no siempre correspondían a la imagen y A debía mostrar comida y plato completos. No se atribuye esta revisión a una aprobación física previa.
 
-Vista: http://MacBook-Air-de-Keneth.local:8776/?revision=cinematic-v3 (misma Wi-Fi, Mac encendido). Servidor persistente del paquete local; sin publicación.
+Vista: http://MacBook-Air-de-Keneth.local:8776/?revision=cinematic-v4 (misma Wi-Fi, Mac encendido). Servidor persistente del paquete local; sin publicación.
 
 | Toma | Cámara yaw / elevación / distancia relativa | Lectura visual |
 |---|---|---|
@@ -30,3 +30,9 @@ El adaptador obtiene su configuración inicial de POSES[0], evitando que el prim
 Validación visual local del agente: A ya no corta plato/comida, B muestra el perfil bajo, C una vista superior y D un recorte cercano desde otro lado. No se presenta esa valoración como aprobación del usuario. Falta retest visual en desktop/Poco/iPhone de los nuevos encuadres, legibilidad durante los desplazamientos, orientación y el reveal del poster. Sin push de implementación, PR, merge ni despliegue.
 
 Reproducir el control geométrico: `python3 tests/poster-framing.test.py` (Pillow instalado). Las otras suites conservan los comandos de cinematic-v2 con QA_OUTPUT separado. La prueba de paquete admite imports versionados y compara los archivos locales sin query strings.
+
+## Ajuste de entrada y cue de scroll
+
+Se añade «Desliza para cambiar de vista» con flecha SVG y traducción ES/EN/DE/JA en el margen inferior del visual inicial. Solo aparece en recorrido disponible, hasta q=.10; no aparece en exploración, poster tardío/error, modo estático, reduced-motion o ausencia de JavaScript. No ocupa altura de layout ni recibe eventos.
+
+En portrait ≤760px, el visual entra hasta min(96px,24vw) más arriba y recupera su posición original al llegar el inicio del sticky al borde superior. El desplazamiento depende de la distancia real de entrada, es reversible y no cambia geometría sticky, p/q, cámara, tamaño ni encuadre del poster. Landscape y desktop conservan su composición. A partir del inicio el offset vale cero, incluida exploración. Revisión física del ajuste pendiente.
