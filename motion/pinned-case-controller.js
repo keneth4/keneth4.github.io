@@ -57,10 +57,12 @@ if (section) {
   }
   function layout() {
     // Measure all translated captions, even when an enhanced phase hides them.
-    const landscape = matchMedia('(pointer: coarse)').matches && innerWidth > innerHeight && innerWidth <= 1100 && innerHeight <= 600;
+    const landscape = matchMedia('(any-pointer: coarse)').matches && innerWidth > innerHeight && innerHeight <= 600;
     const mobile = innerWidth <= 760 && !landscape;
     section.classList.toggle('case-story-landscape', landscape);
     section.classList.toggle('case-story-mobile', mobile);
+    const state = section.dataset.state;
+    section.dataset.state = 'story';
     section.classList.add('case-story-measuring');
     // Measure the stable small viewport and every translated caption/control.
     section.dataset.pinned = 'true';
@@ -68,9 +70,22 @@ if (section) {
     const copy = section.querySelector('.case-story-copy');
     const captionHeight = Math.max(...captions.map(caption => caption.getBoundingClientRect().height)) + 12;
     section.style.setProperty('--caption-height', `${captionHeight}px`);
-    const required = copy.scrollHeight + (mobile ? 32 : 64);
+    // Measure the two real UI states separately. Showing help, explore and
+    // exploration controls together reserves a layout that never exists.
+    const help = section.querySelector('#case-3d-help');
+    const measured = [help, controls, explore];
+    const hidden = measured.map(node => node.hidden);
+    const focused = document.activeElement;
+    section.dataset.state = 'story'; help.hidden = true; controls.hidden = true; explore.hidden = false;
+    const storyHeight = copy.scrollHeight;
+    section.dataset.state = 'explore'; help.hidden = false; controls.hidden = false; explore.hidden = true;
+    const exploreHeight = copy.scrollHeight;
+    measured.forEach((node, i) => { node.hidden = hidden[i]; });
+    if (state === undefined) delete section.dataset.state; else section.dataset.state = state;
+    if (focused !== document.activeElement && copy.contains(focused) && !focused.hidden) focused.focus({ preventScroll: true });
+    const required = Math.max(storyHeight, exploreHeight) + (landscape ? 24 : mobile ? 32 : 64);
     const mediaSize = Math.min(section.clientWidth, screenHeight - required);
-    const next = !reduced.matches && (mobile ? mediaSize >= 180 : (landscape ? screenHeight >= 300 : innerHeight >= 700) && required <= screenHeight);
+    const next = !reduced.matches && (mobile ? mediaSize >= 180 : (landscape ? screenHeight >= 220 : innerHeight >= 700) && required <= screenHeight);
     section.style.setProperty('--case-media-size', `${Math.max(180, mediaSize)}px`);
     section.classList.remove('case-story-measuring');
     if (next !== pinned) {
@@ -185,6 +200,7 @@ if (section) {
   window.addEventListener('scroll', () => { scrollIntent = true; schedule(); }, { passive: true, signal });
   for (const event of ['hashchange', 'pageshow']) window.addEventListener(event, schedule, { passive: true, signal });
   window.addEventListener('resize', layout, { passive: true, signal });
+  window.visualViewport?.addEventListener('resize', layout, { passive: true, signal });
   document.addEventListener('visibilitychange', () => { if (document.hidden) exit(); schedule(); }, { signal });
   document.addEventListener('creativivid:locale', () => { announce(status.dataset.key); layout(); }, { signal });
   reduced.addEventListener('change', layout, { signal });

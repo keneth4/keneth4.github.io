@@ -805,7 +805,7 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 
 /* Revised story: longer native scrub, including mobile; gestures only on opt-in. */
 .case-story-help[hidden]{display:none!important}
-.case-story-measuring #case-3d-help,.case-story-measuring [data-case-controls]{display:flex!important}
+
 .case-story-scroll[data-state="explore"] .case-story-input{cursor:grab}
 @media(max-width:760px){
   .case-story-scroll[data-pinned="true"] .case-story-pin{grid-template-rows:minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 0}
@@ -889,8 +889,11 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 .case-story-landscape .case-story-actions{gap:6px}
 .case-story-landscape .button{font-size:13px;padding:8px 12px}
 .case-story-landscape .case-story-actions>a,.case-story-landscape .case-story-text-button{font-size:13px;padding:8px 2px}
-.case-story-landscape[data-pinned="true"] .case-story-media{width:min(100%,calc(100svh - 32px));align-self:center}
+.case-story-landscape[data-pinned="true"] .case-story-media{width:min(100%,calc(100svh - 24px));align-self:center}
 .case-story-landscape[data-pinned="true"] .case-story-copy{width:100%}
 .services-motif [data-services-marker]{stroke:var(--white);stroke-width:2;paint-order:stroke fill}
 /* Measuring overlapping captions must use natural height, not grid stretch. */
 .case-story-measuring [data-case-caption]{align-self:start}
+
+/* In short landscape, exploration replaces narrative copy with gesture help. */
+.case-story-landscape[data-state="explore"] .case-story-captions,.case-story-landscape[data-state="explore"] .case-story-progress-slot{display:none}
