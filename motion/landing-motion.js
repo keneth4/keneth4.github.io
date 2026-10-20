@@ -77,7 +77,10 @@ function update() {
       hero.style.setProperty('--hero-drift',`${drift.toFixed(2)}px`);
     }
     if (section === services) {
-      services.style.setProperty('--motif-draw',reduced.matches ? 1 : progress);
+      // Follow the visible motif, not the much taller services column.
+      const motif = services.querySelector('.services-motif').getBoundingClientRect();
+      const draw = clamp01((innerHeight * .9 - motif.top) / (innerHeight * .55));
+      services.style.setProperty('--motif-draw', reduced.matches ? 1 : draw);
       services.querySelectorAll('[data-service-reveal]').forEach(row => {
         const top=row.getBoundingClientRect().top;
         row.style.setProperty('--rule-progress',reduced.matches ? 1 : clamp01((innerHeight*.95-top)/(innerHeight*.35)));

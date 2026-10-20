@@ -44,11 +44,16 @@ try{
     for(const img of await page.locator('.wordmark img').all())assert.equal(await img.evaluate(e=>e.getAnimations().length),0);
   });
   await check('services curve and divider reveal follow normal scroll reversibly',async()=>{
-    await top(page,'#servicios',700);const early=await page.locator('#servicios').evaluate(e=>Number(e.style.getPropertyValue('--motif-draw')));
-    await top(page,'#servicios',80);const late=await page.locator('#servicios').evaluate(e=>Number(e.style.getPropertyValue('--motif-draw')));assert.ok(late>early);
+    await top(page,'.services-motif',810);const early=await page.locator('#servicios').evaluate(e=>Number(e.style.getPropertyValue('--motif-draw')));
+    await top(page,'.services-motif',315);const late=await page.locator('#servicios').evaluate(e=>Number(e.style.getPropertyValue('--motif-draw')));assert.ok(late>early);
+    await top(page,'.services-motif',810);
+    const visibleStart=await page.locator('#servicios').evaluate(e=>Number(e.style.getPropertyValue('--motif-draw')));
+    assert.ok(visibleStart<.05,'curve starts as its own SVG enters the viewport');
+    await top(page,'.services-motif',315);
+    assert.ok(await page.locator('#servicios').evaluate(e=>Number(e.style.getPropertyValue('--motif-draw'))>.99),'curve completes while SVG remains visible');
     const rules=await page.locator('[data-service-reveal]').evaluateAll(els=>els.map(e=>Number(e.style.getPropertyValue('--rule-progress'))));assert.ok(rules.every(v=>v>=0&&v<=1));assert.ok(rules.some(v=>v>.9));
-    await top(page,'#servicios',700);assert.ok(await page.locator('#servicios').evaluate((e,v)=>Number(e.style.getPropertyValue('--motif-draw'))<v,late));
-    await top(page,'#servicios',80);await page.waitForTimeout(550);
+    await top(page,'.services-motif',810);assert.ok(await page.locator('#servicios').evaluate((e,v)=>Number(e.style.getPropertyValue('--motif-draw'))<v,late));
+    await top(page,'.services-motif',315);await page.waitForTimeout(550);
     assert.ok(!overlaps(await page.locator('.services-motif').boundingBox(),await page.locator('#services-title').boundingBox()));
   });await page.screenshot({path:out+'/desktop-services.png'});
   await check('desktop process connects all three steps, marker advances and reverses',async()=>{
