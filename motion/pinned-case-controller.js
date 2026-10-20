@@ -1,4 +1,4 @@
-import { cameraAt, clampPose, passAt, progressAt, revealAt, phaseAt, POSES, clamp } from './story-timeline.mjs';
+import { cameraAt, clampPose, passAt, progressAt, revealAt, shotAt, SHOTS, POSES, clamp, presentationTarget, advancePresentation } from './story-timeline.mjs';
 import { createViewer } from './splat-viewer.js';
 const section = document.querySelector('[data-case-story]');
 if (section) {
@@ -10,6 +10,11 @@ if (section) {
   const explore = section.querySelector('[data-case-explore]');
   const controls = section.querySelector('[data-case-controls]');
   const status = section.querySelector('[data-case-status]');
+  const copy = section.querySelector('.case-story-copy');
+  const captionBox = section.querySelector('.case-story-captions');
+  const preview = section.querySelector('[data-case-preview]');
+  const help = section.querySelector('#case-3d-help');
+  const summary = document.querySelector('[data-case-summary]');
   const progress = section.querySelector('[data-case-progress]');
   const progressBar = section.querySelector('[data-case-progress-bar]');
   const progressValue = section.querySelector('[data-case-progress-value]');
@@ -23,7 +28,8 @@ if (section) {
   let first = true, raf = 0, inView = false, near = false, pose = cameraAt(0), lastPose = '';
   const pointers = new Map();
   let pinch, disposed = false;
-  let renderPose = cameraAt(0), lastFrame = 0;
+  let renderPose = cameraAt(0), lastFrame = 0, q = 0, target = 0, travel = 1;
+  let syncQ = true, wasInView = false, failedBeforeEntry = false, measuring = false, measuredWidth = 0;
   let scrollIntent = scrollY > 0 || !!location.hash;
   const words = () => window.creativividCopy || {};
   function announce(key = '') { status.textContent = words()[key] || ''; status.dataset.key = key; }
@@ -35,15 +41,17 @@ if (section) {
     exploring = false; pointers.clear(); pinch = undefined;
     viewer?.setInteractive(false); input.hidden = true; controls.hidden = true; explore.hidden = false;
     if (focus || controls.contains(document.activeElement) || document.activeElement === input) {
-      const target = pinned && p < .9 ? section.querySelector('a') : explore;
-      target.focus({ preventScroll: true });
+      const focusTarget = pinned && q < POSES.at(-1).p ? section.querySelector('.case-story-actions>a') : explore;
+      focusTarget.focus({ preventScroll: true });
     }
-    pose = cameraAt(pinned ? p : 0); lastPose = ''; announce(); schedule();
+    q = target = presentationTarget(p, travel);
+    pose = cameraAt(pinned ? q : 0); lastPose = ''; announce(); schedule();
   }
   function fail() {
     returnFocus(); exit(); failed = true; ready = false; loading = null;
     viewer?.dispose(); viewer = null;
-    section.dataset.state = 'error'; announce('case3dError'); schedule();
+    section.dataset.state = 'error'; announce('case3dError');
+    failedBeforeEntry = !inView; if (failedBeforeEntry) layout(); else schedule();
   }
   async function load() {
     if (ready || loading || failed || disposed) return loading;
@@ -55,45 +63,87 @@ if (section) {
     }).catch(() => { if (!disposed) fail(); });
     return loading;
   }
+  function applyVariant(root, variant) {
+    root.dataset.copyVariant = variant;
+    const compact = variant === 'compact' ? 'Compact' : '';
+    root.querySelectorAll('[data-case-caption]').forEach((caption, i) => {
+      for (const [selector, key] of [['[data-shot-title]', SHOTS[i].titleKey], ['[data-shot-body]', SHOTS[i].bodyKey]]) {
+        const node = caption.querySelector(selector); node.dataset.copy = key + compact;
+        node.textContent = words()[key + compact] || '';
+      }
+    });
+    const title = root.querySelector('[data-preview-title]');
+    title.dataset.copy = SHOTS[0].titleKey + compact;
+    title.textContent = words()[title.dataset.copy] || '';
+  }
   function layout() {
-    // Measure all translated captions, even when an enhanced phase hides them.
+    if (measuring || disposed) return;
+    measuring = true;
     const landscape = matchMedia('(any-pointer: coarse)').matches && innerWidth > innerHeight && innerHeight <= 600;
     const mobile = innerWidth <= 760 && !landscape;
     section.classList.toggle('case-story-landscape', landscape);
     section.classList.toggle('case-story-mobile', mobile);
-    const state = section.dataset.state;
-    section.dataset.state = 'story';
-    section.classList.add('case-story-measuring');
-    // Measure the stable small viewport and every translated caption/control.
+    // Inert offscreen copy: measuring never hides a focused real control or
+    // mutates an aria-live region. It contains no canvas and no duplicate IDs.
     section.dataset.pinned = 'true';
     const screenHeight = pin.getBoundingClientRect().height;
-    const copy = section.querySelector('.case-story-copy');
-    const captionHeight = Math.max(...captions.map(caption => caption.getBoundingClientRect().height)) + 12;
-    section.style.setProperty('--caption-height', `${captionHeight}px`);
-    // Measure the two real UI states separately. Showing help, explore and
-    // exploration controls together reserves a layout that never exists.
-    const help = section.querySelector('#case-3d-help');
-    const measured = [help, controls, explore];
-    const hidden = measured.map(node => node.hidden);
-    const focused = document.activeElement;
-    section.dataset.state = 'story'; help.hidden = true; controls.hidden = true; explore.hidden = false;
-    const storyHeight = copy.scrollHeight;
-    section.dataset.state = 'explore'; help.hidden = false; controls.hidden = false; explore.hidden = true;
-    const exploreHeight = copy.scrollHeight;
-    measured.forEach((node, i) => { node.hidden = hidden[i]; });
-    if (state === undefined) delete section.dataset.state; else section.dataset.state = state;
-    if (focused !== document.activeElement && copy.contains(focused) && !focused.hidden) focused.focus({ preventScroll: true });
-    const required = Math.max(storyHeight, exploreHeight) + (landscape ? 24 : mobile ? 32 : 64);
-    const mediaSize = Math.min(section.clientWidth, screenHeight - required);
-    const next = !reduced.matches && (mobile ? mediaSize >= 180 : (landscape ? screenHeight >= 220 : innerHeight >= 700) && required <= screenHeight);
-    section.style.setProperty('--case-media-size', `${Math.max(180, mediaSize)}px`);
-    section.classList.remove('case-story-measuring');
-    if (next !== pinned) {
-      returnFocus(); exit(); pinned = next; first = true;
+    const width = copy.getBoundingClientRect().width;
+    const probe = section.cloneNode(false), content = copy.cloneNode(true);
+    probe.removeAttribute('data-case-story'); probe.removeAttribute('id');
+    probe.classList.add('case-story-measuring'); probe.inert = true;
+    probe.setAttribute('aria-hidden', 'true');
+    probe.style.cssText = `position:fixed;left:-100000px;top:0;width:${width}px;height:auto;margin:0;visibility:hidden;pointer-events:none;--caption-height:0px`;
+    content.querySelectorAll('[id]').forEach(node => node.removeAttribute('id'));
+    content.querySelectorAll('[aria-live]').forEach(node => node.removeAttribute('aria-live'));
+    probe.append(content); section.after(probe);
+    const blocks = [...content.querySelectorAll('[data-case-caption]')];
+    const probeHelp = content.querySelector('.case-story-help');
+    const probeControls = content.querySelector('[data-case-controls]');
+    const probeExplore = content.querySelector('[data-case-explore]');
+    const probePreview = content.querySelector('[data-case-preview]');
+    const probeStatus = content.querySelector('[data-case-status]');
+    let selected = mobile || landscape ? 'compact' : 'full', result;
+    function measure(variant) {
+      applyVariant(probe, variant); probe.dataset.state = 'story'; probe.dataset.presentation = 'narrative';
+      probePreview.hidden = true;
+      probe.style.setProperty('--caption-height', '0px');
+      const captionHeight = Math.max(...blocks.map(node => node.getBoundingClientRect().height));
+      probe.style.setProperty('--caption-height', `${captionHeight}px`);
+      probeHelp.hidden = true; probeControls.hidden = true; probeExplore.hidden = false;
+      probeStatus.textContent = words().case3dLoading || '';
+      const storyHeight = content.scrollHeight;
+      probe.dataset.state = 'explore'; probeHelp.hidden = false; probeControls.hidden = false; probeExplore.hidden = true;
+      probeStatus.textContent = words().case3dActive || '';
+      const exploreHeight = content.scrollHeight;
+      probe.dataset.state = 'error'; probe.dataset.presentation = 'preview';
+      probeHelp.hidden = true; probeControls.hidden = true; probeExplore.hidden = false; probePreview.hidden = false;
+      // Error and generic preview are exclusive, but measure both real states.
+      const note = probePreview.querySelector('.case-story-preview-note');
+      note.hidden = true; probeStatus.textContent = words().case3dError || '';
+      const errorHeight = content.scrollHeight;
+      note.hidden = false; probeStatus.textContent = '';
+      const previewHeight = content.scrollHeight;
+      const required = Math.max(storyHeight, exploreHeight, errorHeight, previewHeight) + (landscape ? 24 : mobile ? 32 : 64);
+      const mediaSize = Math.min(section.clientWidth, screenHeight - required);
+      const fits = !reduced.matches && !failedBeforeEntry && (mobile ? mediaSize >= 180 : (landscape ? screenHeight >= 220 : innerHeight >= 700) && required <= screenHeight);
+      return { captionHeight, mediaSize, fits, required };
+    }
+    result = measure(selected);
+    if (!result.fits && selected === 'full') { selected = 'compact'; result = measure(selected); }
+    probe.remove();
+    if (!result.fits) selected = 'full';
+    applyVariant(section, selected);
+    section.style.setProperty('--caption-height', `${result.captionHeight}px`);
+    section.style.setProperty('--case-media-size', `${Math.max(180, result.mediaSize)}px`);
+    section.dataset.requiredHeight = String(result.required);
+    section.dataset.viewportHeight = String(screenHeight);
+    if (result.fits !== pinned) {
+      returnFocus(); exit(); pinned = result.fits; first = true; syncQ = true;
       pass = { crossed: false, posterOnly: false };
     }
-    section.dataset.pinned = String(pinned);
-    schedule();
+    section.dataset.pinned = String(pinned); summary.hidden = !pinned;
+    measuredWidth = copy.getBoundingClientRect().width;
+    viewer?.resize(); measuring = false; schedule();
   }
   function update(now) {
     raf = 0;
@@ -101,60 +151,60 @@ if (section) {
     lastFrame = now;
     const rect = section.getBoundingClientRect();
     inView = rect.bottom > 0 && rect.top < innerHeight;
+    travel = Math.max(1, rect.height - pin.getBoundingClientRect().height);
     p = pinned ? progressAt(rect.top, rect.height, pin.getBoundingClientRect().height) : 0;
+    target = presentationTarget(p, travel);
+    if (syncQ || (inView && !wasInView)) { q = target; syncQ = false; }
+    else if (!exploring && inView && !document.hidden) q = advancePresentation(q, target, dt, travel);
+    wasInView = inView;
     if (pinned) pass = passAt(pass, p, ready, first);
     first = false;
     if (!inView || document.hidden) exit();
     if (pinned && near && scrollIntent && !ready && !failed) load();
-    section.querySelector('#case-3d-help').hidden = !exploring;
+    const posterOnly = pinned && (!ready || pass.posterOnly || failed);
+    const previewing = posterOnly && !exploring;
+    section.dataset.presentation = previewing ? 'preview' : 'narrative';
+    preview.hidden = !previewing;
+    preview.querySelector('.case-story-preview-note').hidden = failed;
+    help.hidden = !exploring;
     const alpha = exploring ? 1 : pinned && ready && !pass.posterOnly ? revealAt(p) : 0;
     media.style.setProperty('--canvas-opacity', alpha);
-    // Both layers share one square and the same background; no geometry morph.
     media.style.setProperty('--poster-opacity', 1 - alpha);
     section.dataset.state = failed ? 'error' : exploring ? 'explore' : ready ? 'story' : loading ? 'loading' : 'poster';
     section.dataset.posterOnly = String(pass.posterOnly);
     progress.hidden = !pinned || exploring || !ready || pass.posterOnly || failed;
-    const percent = Math.round(viewProgress(p) * 100);
-    progress.style.setProperty('--view-progress', viewProgress(p));
+    const percent = Math.round(viewProgress(q) * 100);
+    progress.style.setProperty('--view-progress', viewProgress(q));
     progressValue.textContent = `${percent}%`;
     progressBar.setAttribute('aria-valuenow', String(percent));
-    const reachedP = p + 1 / Math.max(1, rect.height - pin.offsetHeight);
-    const currentView = Math.max(1, POSES.filter(view => reachedP >= view.p).length);
-    progressBar.setAttribute('aria-valuetext', (words().caseProgressView || 'View {current} of {total}').replace('{current}', currentView).replace('{total}', POSES.length));
-    progressMarks.forEach((mark, i) => { mark.dataset.reached = String(reachedP >= POSES[i].p); });
-    const canExplore = !failed && (!pinned || (ready && p >= .9));
-    if (!canExplore && document.activeElement === explore) section.querySelector('a').focus({ preventScroll: true });
+    const activeShot = shotAt(q);
+    progressBar.setAttribute('aria-valuetext', (words().caseProgressView || 'View {current} of {total}').replace('{current}', activeShot + 1).replace('{total}', SHOTS.length));
+    progressMarks.forEach((mark, i) => { mark.dataset.reached = String(q >= SHOTS[i].pose.p); });
+    const canExplore = !failed && (!pinned || (ready && q >= POSES.at(-1).p));
+    if (!canExplore && document.activeElement === explore) section.querySelector('.case-story-actions>a').focus({ preventScroll: true });
     explore.hidden = !canExplore || exploring;
     explore.disabled = !!loading;
-    controls.hidden = !exploring;
-    input.hidden = !exploring;
-    const phase = phaseAt(p);
-    captions.forEach((caption, index) => { caption.hidden = pinned && index !== phase; });
+    controls.hidden = !exploring; input.hidden = !exploring;
+    captions.forEach((caption, index) => { caption.hidden = pinned && (previewing || index !== activeShot); });
     viewer?.pause(!inView || document.hidden);
+    if (!exploring) pose = cameraAt(pinned && !posterOnly ? q : 0);
+    renderPose = { ...pose };
     if (ready && inView && !document.hidden) {
-      if (!exploring) pose = cameraAt(pinned ? p : 0);
-      // Follow native scroll with a short, time-based settle, never wheel hijacking.
-      const factor = exploring || reduced.matches ? 1 : 1 - Math.exp(-dt / 85);
-      let settling = false;
-      for (const key of ['yawDeg', 'elevationDeg', 'zoom']) {
-        const delta = pose[key] - renderPose[key];
-        const epsilon = key === 'zoom' ? .0001 : .01;
-        if (Math.abs(delta) > epsilon) { renderPose[key] += delta * factor; settling = true; }
-        else renderPose[key] = pose[key];
-      }
       const key = JSON.stringify(renderPose);
       if (key !== lastPose) { viewer.setPose(renderPose); lastPose = key; }
-      if (settling && !exploring) schedule();
     }
-    section.dataset.progress = p.toFixed(4);
+    section.dataset.progress = p.toFixed(6);
+    section.dataset.presentedProgress = q.toFixed(9);
     section.dataset.ready = String(ready);
+    section.dataset.shot = previewing ? 'preview' : SHOTS[activeShot].id;
     section.dataset.pose = JSON.stringify(renderPose);
+    if (pinned && inView && !document.hidden && !exploring && q !== target) schedule();
   }
   function schedule() { if (!disposed && !raf) raf = requestAnimationFrame(update); }
   explore.addEventListener('click', async () => {
     await load();
-    if (!ready || disposed || !inView || (pinned && p < .9)) return;
-    exploring = true; pose = cameraAt(pinned ? p : 0); lastPose = '';
+    if (!ready || disposed || !inView || (pinned && q < POSES.at(-1).p)) return;
+    exploring = true; pose = cameraAt(pinned ? 1 : 0); lastPose = '';
     viewer.setInteractive(true); input.hidden = false; controls.hidden = false;
     announce('case3dActive'); input.focus({ preventScroll: true }); schedule();
   }, { signal });
@@ -196,15 +246,19 @@ if (section) {
   section.querySelector('[data-case-zoom-out]').addEventListener('click', () => move(0, 0, .05), { signal });
   const observer = new IntersectionObserver(entries => { near = entries[0].isIntersecting; schedule(); }, { rootMargin: '1200px' });
   observer.observe(section);
-  const resize = new ResizeObserver(layout); resize.observe(section.querySelector('.case-story-copy'));
+  const resize = new ResizeObserver(() => {
+    if (!measuring && Math.abs(copy.getBoundingClientRect().width - measuredWidth) > .5) layout();
+  }); resize.observe(copy);
+  section.querySelector('[data-case-summary-link]').addEventListener('click', () => { summary.open = true; }, { signal });
   window.addEventListener('scroll', () => { scrollIntent = true; schedule(); }, { passive: true, signal });
-  for (const event of ['hashchange', 'pageshow']) window.addEventListener(event, schedule, { passive: true, signal });
+  for (const event of ['hashchange', 'pageshow']) window.addEventListener(event, () => { syncQ = true; schedule(); }, { passive: true, signal });
   window.addEventListener('resize', layout, { passive: true, signal });
   window.visualViewport?.addEventListener('resize', layout, { passive: true, signal });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) exit(); schedule(); }, { signal });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) exit(); syncQ = true; schedule(); }, { signal });
   document.addEventListener('creativivid:locale', () => { announce(status.dataset.key); layout(); }, { signal });
   reduced.addEventListener('change', layout, { signal });
   function dispose() { disposed = true; abort.abort(); observer.disconnect(); resize.disconnect(); cancelAnimationFrame(raf); viewer?.dispose(); }
   window.addEventListener('pagehide', e => { if (!e.persisted) dispose(); else { exit(); viewer?.pause(); } }, { signal });
+  document.fonts?.ready.then(() => { if (!disposed) layout(); });
   section.classList.add('case-story-enhanced'); explore.hidden = false; layout();
 }

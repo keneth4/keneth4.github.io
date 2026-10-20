@@ -917,3 +917,5 @@ body{line-height:1.6}.shell{width:min(1400px,100%)}
 .case-shots-summary{margin:24px 0 40px;scroll-margin-top:24px;border-top:1px solid var(--line);padding-top:20px}
 .case-shots-summary>summary{cursor:pointer;font-size:16px;padding:8px 0;color:var(--accent)}
 .case-shot-summary-item{margin:24px 0;max-width:680px}
+/* The preview shortcut uses native anchor navigation without a long scroll. */
+html:has(#mollequiles-shots:target){scroll-behavior:auto}

@@ -28,6 +28,13 @@ async function pageFor(options = {}) {
 async function at(page,p) {
   await page.locator(story).evaluate((el,p)=>{const pin=el.querySelector('[data-case-pin]');window.scrollTo({top:scrollY+el.getBoundingClientRect().top+p*(el.offsetHeight-pin.offsetHeight),behavior:"instant"});},p);
   await page.waitForFunction(p => Math.abs(Number(document.querySelector('[data-case-story]').dataset.progress)-p)<.01,p,{timeout:10000});
+  await page.evaluate(async()=>{window.qaTimeline ||= await import('/motion/story-timeline.mjs');});
+  await page.waitForFunction(()=>{
+    const {presentationTarget}=window.qaTimeline;
+    const e=document.querySelector('[data-case-story]');
+    const distance=e.getBoundingClientRect().height-e.querySelector('[data-case-pin]').getBoundingClientRect().height;
+    return Math.abs(Number(e.dataset.presentedProgress)-presentationTarget(Number(e.dataset.progress),distance))<.000002;
+  });
 }
 async function check(name, fn) { await fn(); results.push({name,status:'pass'}); console.log('PASS',name); }
 try {

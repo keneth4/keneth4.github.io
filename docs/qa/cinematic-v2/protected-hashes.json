@@ -11,5 +11,19 @@
   "html:other-sections": "dbaadd0dfce38471f2044de234bd2d75562c7e1bf85430b3d058a8c68c28a110",
   "html:form": "e1b967362ba5327c57561294201fffea49c9868057beb35db1553d31e0824148",
   "html:before-story": "abc52e4ec72267301ce67f4521dedd38740929afb18cf76e6c9f46ddfb4a8e2e",
-  "html:after-story": "76d437f87da7f8bd251abe1853a188bbe11185c672fa9b86a9babaf27e258409"
+  "html:after-story": "76d437f87da7f8bd251abe1853a188bbe11185c672fa9b86a9babaf27e258409",
+  "copy:original": "850a8447bce7bf333d1e99e1c4c79ecffb01151ad7ce827a9981eab4dae582c2",
+  "assets/vendor/mollequiles/NOTICE.md": "8b345d9f5e0b4a5d386f156c2d47d98cb2f83bee45e415302e3a5b963ab30f84",
+  "assets/vendor/mollequiles/PlayCanvas-LICENSE.txt": "42fa51ddd556be151a29f381fb97ee975825dcc454e805ea3ea9c079cca04d34",
+  "assets/vendor/mollequiles/Zstandard-LICENSE.txt": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+  "assets/vendor/mollequiles/libwebp-COPYING.txt": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf",
+  "assets/vendor/mollequiles/playCanvasSpzViewer-XM1S__iy.js": "b5b6044faceccd43e2441749768e4a8a64b4ec4acbad9e7fe957fc1eb1d08a0e",
+  "assets/vendor/mollequiles/preload-helper-CLcXU_4U.js": "61932c27a90c8926a196bddae8e292048aa48818704abebe6a6def4232e2ccb0",
+  "assets/vendor/mollequiles/provenance.json": "8d7ae2eb2a8d28d893be196a0fbb21183ca79c82bac1d2cb44ac8ea98bc5e445",
+  "assets/vendor/mollequiles/spz-parser-DjsOBSHF.js": "c35ae83a8d96772b3e79b103e999c250565db302c5f661d3073a4eca76dbd22a",
+  "assets/vendor/mollequiles/webp-BEcI0VC5.wasm": "e2c337e1afacf5c9e35f21916b5615fc6c5623074c6e110c07791bd0af071501",
+  "assets/vendor/mollequiles/webp-DOOpu-vT.js": "aa44ec12b96a55b4df5aafd8a6e0785f1b4d7b5dbd940ac5a0fdd91e5e837fa5",
+  "assets/vendor/mollequiles/zstd.wasm.js": "4c4b1126123be2d6d095e868171806430670311086b333da50494c1668aa2cc1",
+  "assets/vendor/mollequiles/zstd.wasm.wasm": "8b093c4c144273776d511f3baaa0fec32c111500c2798cb4569a71479020e72a",
+  "assets/vendor/mollequiles/zstddec-LICENSE.txt": "8d078b49fc02bd63c1beaf4ddc629a8b48e4ba6a435415408c8209e2a5c3aacf"
 }

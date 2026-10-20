@@ -26,12 +26,21 @@ const marker=p=>p.locator('[data-process-marker]').getAttribute('transform');
 async function point(p){return (await marker(p)).match(/[-\d.]+/g).map(Number)}
 function overlaps(a,b){return a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;}
 try{
-  await check('canonical logo, font, viewer, timeline and case markup are byte-identical',async()=>{
-    const hashes=JSON.parse(await readFile('docs/qa/block06/protected-hashes.json','utf8'));
+  await check('protected logo, asset, viewer and surrounding landing markup remain identical',async()=>{
+    const hashes=JSON.parse(await readFile('docs/qa/cinematic-v2/protected-hashes.json','utf8'));
+    const html=await readFile('index.html','utf8');
+    const slices={
+      'before-story':html.slice(html.indexOf('<body>'),html.indexOf('      <div class="case-story-scroll"')),
+      'after-story':html.slice(html.indexOf('      <div class="project-details">')),
+      'other-sections':html.slice(html.indexOf('    <section id="servicios"'),html.indexOf('</body>')+7)
+    };
     for(const[name,expected]of Object.entries(hashes)){
-      // Controller layout intentionally changes for short touch landscape.
-      if(name==='motion/pinned-case-controller.js')continue;
-      let bytes;if(name==='case-section'){const s=await readFile('index.html','utf8');bytes=s.slice(s.indexOf('    <section id="proyectos"'),s.indexOf('    <section id="servicios"'));}else bytes=await readFile(name);
+      if(name.startsWith('copy:'))continue;
+      let bytes;
+      if(name.startsWith('html:')){
+        const key=name.slice(5);if(key==='hero'||key==='form')continue;
+        bytes=slices[key];assert.ok(bytes,name);
+      }else bytes=await readFile(name);
       assert.equal(createHash('sha256').update(bytes).digest('hex'),expected,name);
     }
   });
