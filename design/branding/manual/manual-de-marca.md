@@ -1,24 +1,24 @@
-# Creativivid · Manual de identidad y dirección del sitio
+# CreatiVivid · Manual de identidad y dirección del sitio
 
-Versión 0.9 · 12 octubre 2026 · Documento vivo
+Versión 0.10 · 19 octubre 2026 · Documento vivo
 
 **Confirmado** identifica decisiones del usuario. **Propuesta** identifica el sistema visual desarrollado para revisión. La firma está elegida; color y estilo del sitio todavía no están aprobados. El historial se conserva en [historial-hasta-v0.8.md](historial-hasta-v0.8.md).
 
 ## 1. Esencia
 
-**Confirmado.** Creativivid combina Creativo y Vívido. Es un estudio que crea sitios web, experiencias online y comercio electrónico, con una evolución hacia experiencias espaciales y radiance fields, especialmente Gaussian Splatting.
+**Confirmado.** CreatiVivid combina Creativo y Vívido. Es un estudio que crea sitios web, experiencias online y comercio electrónico, con una evolución hacia experiencias espaciales y radiance fields, especialmente Gaussian Splatting.
 
 **Propuesta de brújula interna:** dar presencia a lo imaginado. No es un eslogan aprobado. La personalidad combina imaginación, precisión, vitalidad y cercanía. El diseño debe resultar comprensible también para clientes que no conocen la tecnología.
 
 ## 2. Oferta y audiencia
 
-Creativivid es el estudio. MenuMaker es una herramienta interna. La oferta actual se explica mediante servicios concretos y proyectos; las capacidades futuras se presentan como exploración del estudio. AMPM es el caso público disponible: https://ampm.creativivid.com/. Usar capturas y descripciones verificables, sin atribuir incrementos de ventas o conversión no medidos.
+CreatiVivid es el estudio. MenuMaker es una herramienta interna. La oferta actual se explica mediante servicios concretos y proyectos; las capacidades futuras se presentan como exploración del estudio. AMPM es el caso público disponible: https://ampm.creativivid.com/. Usar capturas y descripciones verificables, sin atribuir incrementos de ventas o conversión no medidos.
 
 Audiencia internacional, español primero; mantener las versiones EN, DE y JA como horizonte. Precios adaptados al alcance y contexto del negocio: en esta dirección se propone una conversación de proyecto y presupuesto, sin tabla de tarifas fijas. No convertir la adaptación de presupuesto en una promesa de aceptar cualquier importe.
 
 ## 3. Símbolo y firma
 
-**Confirmado.** MUYAL compacto refinado, [referencia canónica](../muyal/04-compact-refined.png). Firma E: símbolo centrado sobre Creativivid, Sniglet Regular 400, espaciado −0.025 em. Todo el nombre pertenece a una sola fuente. Se abandona el tratamiento de elipses en ivivi.
+**Confirmado.** MUYAL compacto refinado, [referencia canónica](../muyal/04-compact-refined.png). Firma E: símbolo centrado sobre CreatiVivid, Sniglet Regular 400, espaciado −0.025 em. Todo el nombre pertenece a una sola fuente. Se abandona el tratamiento de elipses en ivivi.
 
 El símbolo es una reinterpretación contemporánea de una referencia documentada de MUYAL, asociada a nube. La relación con nube de puntos y gaussianos es una lectura creativa del estudio; no un significado histórico del glifo. Identificar la referencia como maya, sin presentarla como símbolo general de México. No añadir ornamentación genérica para justificar el trasfondo cultural.
 
@@ -114,3 +114,7 @@ La prueba visual de esta guía no sustituye la landing ni publica cambios. Los c
 ## 12. Pendientes
 
 Aprobar paleta y combinación Sniglet/DM Sans; reconstruir símbolo en vector y validar fidelidad; ajustar proporciones de firma; preparar versiones para tamaños pequeños; revisar multilingüismo; definir canal de contacto; aplicar el sistema a la landing y comprobar accesibilidad, rendimiento y responsive.
+
+## Escritura del nombre · actualización 19 de octubre de 2026
+
+La escritura canónica es **CreatiVivid**, con C inicial y primera V mayúsculas. Esta V hace visible la unión de Creativo y Vívido. Se mantiene Sniglet Regular 400, el espaciado −0.025 em y el símbolo MUYAL centrado sobre el nombre. No se sustituyen letras por elipses. Los dominios, correos, rutas e identificadores técnicos conservan su escritura en minúsculas.

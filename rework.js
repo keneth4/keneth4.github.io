@@ -1,6 +1,6 @@
 const COPY = {
   es: {
-    title: 'Creativivid — Sitios web y experiencias digitales', description: 'Creativivid crea sitios web, tiendas online y experiencias interactivas diseñados alrededor de tu negocio.',
+    title: 'CreatiVivid — Sitios web y experiencias digitales', description: 'CreatiVivid crea sitios web, tiendas online y experiencias interactivas diseñados alrededor de tu negocio.',
     skip: 'Ir al contenido', navLabel: 'Navegación principal', footerLabel: 'Enlaces del pie', language: 'Idioma', work: 'Proyectos', services: 'Servicios', talk: 'Hablemos',
     heroTitle: ['Tu negocio.', 'Una experiencia', 'digital.'], heroBody: 'Sitios web, tiendas online y experiencias interactivas. Diseñados alrededor de tu negocio.', heroCta: 'Cuéntanos tu proyecto',
     projectCaption: 'AM:PM — Sitio web y menú interactivo', projectAlt: 'Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante', projectLinkLabel: 'Explorar el sitio de AMPM (abre en otra pestaña)',
@@ -13,7 +13,7 @@ const COPY = {
     sending: 'Enviando…', captcha: 'Completa la verificación antes de enviar.', captchaError: 'No se pudo cargar la verificación. Recarga la página e inténtalo de nuevo.', error: 'No se pudo enviar. Tus datos siguen en el formulario; inténtalo de nuevo.', success: 'Recibimos tu proyecto. Te contactaremos para conversar sobre los siguientes pasos.', local: 'Formulario validado. Esta vista local no envía solicitudes; tus datos no se han enviado.'
   },
   en: {
-    title: 'Creativivid — Websites & digital experiences', description: 'Creativivid creates websites, online stores and interactive experiences designed around your business.',
+    title: 'CreatiVivid — Websites & digital experiences', description: 'CreatiVivid creates websites, online stores and interactive experiences designed around your business.',
     skip: 'Skip to content', navLabel: 'Main navigation', footerLabel: 'Footer links', language: 'Language', work: 'Work', services: 'Services', talk: 'Let’s talk',
     heroTitle: ['Your business.', 'A digital', 'experience.'], heroBody: 'Websites, online stores and interactive experiences. Designed around your business.', heroCta: 'Tell us about your project',
     projectCaption: 'AM:PM — Website & interactive menu', projectAlt: 'AMPM website: pink homepage, chilaquiles and restaurant navigation', projectLinkLabel: 'Explore the AMPM website (opens in a new tab)',
@@ -26,7 +26,7 @@ const COPY = {
     sending: 'Sending…', captcha: 'Complete the verification before sending.', captchaError: 'Verification could not load. Reload the page and try again.', error: 'Could not send. Your details remain in the form; please try again.', success: 'We received your project. We’ll get in touch to discuss next steps.', local: 'Form validated. This local preview does not send requests; your details have not been sent.'
   },
   de: {
-    title: 'Creativivid — Websites & digitale Erlebnisse', description: 'Creativivid entwickelt Websites, Onlineshops und interaktive Erlebnisse für dein Unternehmen.',
+    title: 'CreatiVivid — Websites & digitale Erlebnisse', description: 'CreatiVivid entwickelt Websites, Onlineshops und interaktive Erlebnisse für dein Unternehmen.',
     skip: 'Zum Inhalt', navLabel: 'Hauptnavigation', footerLabel: 'Links im Footer', language: 'Sprache', work: 'Projekte', services: 'Leistungen', talk: 'Kontakt',
     heroTitle: ['Dein Unternehmen.', 'Ein digitales', 'Erlebnis.'], heroBody: 'Websites, Onlineshops und interaktive Erlebnisse. Für dein Unternehmen gestaltet.', heroCta: 'Erzähl uns von deinem Projekt',
     projectCaption: 'AM:PM — Website & interaktive Speisekarte', projectAlt: 'AMPM-Website: rosa Startseite, Chilaquiles und Restaurant-Navigation', projectLinkLabel: 'AMPM-Website erkunden (öffnet einen neuen Tab)',
@@ -39,7 +39,7 @@ const COPY = {
     sending: 'Wird gesendet…', captcha: 'Bitte schließe die Überprüfung vor dem Senden ab.', captchaError: 'Die Überprüfung konnte nicht geladen werden. Lade die Seite neu.', error: 'Senden fehlgeschlagen. Deine Angaben bleiben im Formular. Bitte versuche es erneut.', success: 'Wir haben dein Projekt erhalten und melden uns für die nächsten Schritte.', local: 'Formular geprüft. Diese lokale Vorschau sendet keine Anfragen. Deine Angaben wurden nicht gesendet.'
   },
   ja: {
-    title: 'Creativivid — ウェブサイトとデジタル体験', description: 'Creativividは、ビジネスに合わせたウェブサイト、オンラインストア、インタラクティブな体験を制作します。',
+    title: 'CreatiVivid — ウェブサイトとデジタル体験', description: 'CreatiVividは、ビジネスに合わせたウェブサイト、オンラインストア、インタラクティブな体験を制作します。',
     skip: 'コンテンツへ', navLabel: 'メインナビゲーション', footerLabel: 'フッターリンク', language: '言語', work: '制作実績', services: 'サービス', talk: 'ご相談',
     heroTitle: ['あなたのビジネスに。', '新しいデジタル', '体験を。'], heroBody: 'ウェブサイト、オンラインストア、インタラクティブな体験。あなたのビジネスに合わせて制作します。', heroCta: 'プロジェクトを相談する',
     projectCaption: 'AM:PM — ウェブサイトとインタラクティブメニュー', projectAlt: 'AMPMのウェブサイト：ピンクのトップページ、チラキレス、レストランのナビゲーション', projectLinkLabel: 'AMPMのサイトを見る（新しいタブで開きます）',
