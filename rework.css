@@ -756,7 +756,7 @@ html:lang(ja) h3 {
   }
 }
 
-/* Creativivid identity v0.9: approved MUYAL / Sniglet signature. */
+/* CreatiVivid identity v0.9: approved MUYAL / Sniglet signature. */
 @font-face{font-family:Sniglet;src:url('./assets/brand/sniglet-400.ttf') format('truetype');font-weight:400;font-display:swap}
 :root{--white:#F6F4EF;--ink:#181818;--accent:#5A3EE0;--muted:#625F69;--line:#DAD6E2;--soft:#ECE7FF;--gutter:clamp(22px,4vw,64px)}
 body{line-height:1.6}.shell{width:min(1400px,100%)}

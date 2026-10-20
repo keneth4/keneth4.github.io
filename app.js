@@ -789,12 +789,12 @@ const LANDING_CONTENT_BY_LOCALE = {
 const UI_TEXT_BY_LOCALE = {
   en: {
     meta: {
-      title: "Creativivid Studio | Visual Menus for Restaurants",
+      title: "CreatiVivid Studio | Visual Menus for Restaurants",
       description:
-        "Creativivid Studio creates interactive visual menus that help guests understand dishes before ordering, especially in restaurants with international visitors."
+        "CreatiVivid Studio creates interactive visual menus that help guests understand dishes before ordering, especially in restaurants with international visitors."
     },
     skipLink: "Skip to content",
-    brandAria: "Creativivid Studio home",
+    brandAria: "CreatiVivid Studio home",
     nav: {
       aria: "Main navigation",
       experience: "Experience",
@@ -855,7 +855,7 @@ const UI_TEXT_BY_LOCALE = {
       messageLabel: "Anything you'd like us to know about your restaurant or project?",
       messagePlaceholder: "Tell us about your concept, menu goals, or context.",
       consentPrefix:
-        "I consent to Creativivid Studio processing my information to respond to this inquiry and understand the ",
+        "I consent to CreatiVivid Studio processing my information to respond to this inquiry and understand the ",
       privacyLinkText: "privacy policy",
       consentSuffix: ".",
       submitIdle: "Request Information",
@@ -876,7 +876,7 @@ const UI_TEXT_BY_LOCALE = {
       successDemoCta: "Open Live Demo"
     },
     footer: {
-      copyrightBody: "Creativivid Studio. All rights reserved.",
+      copyrightBody: "CreatiVivid Studio. All rights reserved.",
       privacyPolicy: "Privacy Policy"
     },
     backToTopAria: "Back to top",
@@ -886,12 +886,12 @@ const UI_TEXT_BY_LOCALE = {
   },
   es: {
     meta: {
-      title: "Creativivid Studio | Menús visuales para restaurantes",
+      title: "CreatiVivid Studio | Menús visuales para restaurantes",
       description:
-        "Creativivid Studio crea menús visuales interactivos que ayudan a los comensales a entender los platos antes de pedir, especialmente en restaurantes con visitantes internacionales."
+        "CreatiVivid Studio crea menús visuales interactivos que ayudan a los comensales a entender los platos antes de pedir, especialmente en restaurantes con visitantes internacionales."
     },
     skipLink: "Saltar al contenido",
-    brandAria: "Inicio de Creativivid Studio",
+    brandAria: "Inicio de CreatiVivid Studio",
     nav: {
       aria: "Navegación principal",
       experience: "Experiencia",
@@ -952,7 +952,7 @@ const UI_TEXT_BY_LOCALE = {
       messageLabel: "¿Hay algo que quieras contarnos sobre tu restaurante o proyecto?",
       messagePlaceholder: "Cuéntanos sobre tu concepto, objetivos del menú o contexto.",
       consentPrefix:
-        "Acepto que Creativivid Studio procese mi información para responder esta consulta y entiendo la ",
+        "Acepto que CreatiVivid Studio procese mi información para responder esta consulta y entiendo la ",
       privacyLinkText: "política de privacidad",
       consentSuffix: ".",
       submitIdle: "Solicitar información",
@@ -973,7 +973,7 @@ const UI_TEXT_BY_LOCALE = {
       successDemoCta: "Abrir demo en vivo"
     },
     footer: {
-      copyrightBody: "Creativivid Studio. Todos los derechos reservados.",
+      copyrightBody: "CreatiVivid Studio. Todos los derechos reservados.",
       privacyPolicy: "Política de privacidad"
     },
     backToTopAria: "Volver arriba",
@@ -983,12 +983,12 @@ const UI_TEXT_BY_LOCALE = {
   },
   de: {
     meta: {
-      title: "Creativivid Studio | Visuelle Menüs für Restaurants",
+      title: "CreatiVivid Studio | Visuelle Menüs für Restaurants",
       description:
-        "Creativivid Studio entwickelt interaktive visuelle Menüs, die Gästen helfen, Gerichte vor der Bestellung besser zu verstehen, besonders in Restaurants mit internationalen Gästen."
+        "CreatiVivid Studio entwickelt interaktive visuelle Menüs, die Gästen helfen, Gerichte vor der Bestellung besser zu verstehen, besonders in Restaurants mit internationalen Gästen."
     },
     skipLink: "Zum Inhalt springen",
-    brandAria: "Startseite Creativivid Studio",
+    brandAria: "Startseite CreatiVivid Studio",
     nav: {
       aria: "Hauptnavigation",
       experience: "Experience",
@@ -1049,7 +1049,7 @@ const UI_TEXT_BY_LOCALE = {
       messageLabel: "Gibt es etwas, das wir über euer Restaurant oder Projekt wissen sollten?",
       messagePlaceholder: "Beschreibe kurz Konzept, Menüziele oder Kontext.",
       consentPrefix:
-        "Ich stimme zu, dass Creativivid Studio meine Daten zur Beantwortung dieser Anfrage verarbeitet und die ",
+        "Ich stimme zu, dass CreatiVivid Studio meine Daten zur Beantwortung dieser Anfrage verarbeitet und die ",
       privacyLinkText: "Datenschutzerklärung",
       consentSuffix: " verstehe.",
       submitIdle: "Information anfragen",
@@ -1070,7 +1070,7 @@ const UI_TEXT_BY_LOCALE = {
       successDemoCta: "Live-Demo öffnen"
     },
     footer: {
-      copyrightBody: "Creativivid Studio. Alle Rechte vorbehalten.",
+      copyrightBody: "CreatiVivid Studio. Alle Rechte vorbehalten.",
       privacyPolicy: "Datenschutz"
     },
     backToTopAria: "Nach oben",
@@ -1080,12 +1080,12 @@ const UI_TEXT_BY_LOCALE = {
   },
   ja: {
     meta: {
-      title: "Creativivid Studio | レストラン向けビジュアルメニュー",
+      title: "CreatiVivid Studio | レストラン向けビジュアルメニュー",
       description:
-        "Creativivid Studio は、料理の魅力を注文前に伝え、海外ゲストにもわかりやすいインタラクティブなビジュアルメニューをレストラン向けに提供します。"
+        "CreatiVivid Studio は、料理の魅力を注文前に伝え、海外ゲストにもわかりやすいインタラクティブなビジュアルメニューをレストラン向けに提供します。"
     },
     skipLink: "本文へ移動",
-    brandAria: "Creativivid Studio ホーム",
+    brandAria: "CreatiVivid Studio ホーム",
     nav: {
       aria: "メインナビゲーション",
       experience: "体験",
@@ -1146,7 +1146,7 @@ const UI_TEXT_BY_LOCALE = {
       messageLabel: "店舗やプロジェクトについて補足があればご記入ください",
       messagePlaceholder: "コンセプト、メニューの課題、導入背景などを自由にご記入ください。",
       consentPrefix:
-        "このお問い合わせへの対応のために、Creativivid Studio が私の情報を処理することに同意し、",
+        "このお問い合わせへの対応のために、CreatiVivid Studio が私の情報を処理することに同意し、",
       privacyLinkText: "プライバシーポリシー",
       consentSuffix: "を確認しました。",
       submitIdle: "お問い合わせする",
@@ -1167,7 +1167,7 @@ const UI_TEXT_BY_LOCALE = {
       successDemoCta: "デモを見る"
     },
     footer: {
-      copyrightBody: "Creativivid Studio. 無断転載・複製を禁じます。",
+      copyrightBody: "CreatiVivid Studio. 無断転載・複製を禁じます。",
       privacyPolicy: "プライバシーポリシー"
     },
     backToTopAria: "ページ上部へ戻る",
