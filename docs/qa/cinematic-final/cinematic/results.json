@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "name": "four editorial shots, holds, counter and camera share one presented progress",
+      "status": "pass"
+    },
+    {
+      "name": "fast jumps and reverse traversal stay synchronized on every sampled frame",
+      "status": "pass"
+    },
+    {
+      "name": "idle presentation converges and does not update its pose indefinitely",
+      "status": "pass"
+    },
+    {
+      "name": "complete desktop copy is translated, measured and stable across all shots",
+      "status": "pass"
+    },
+    {
+      "name": "state exits preserve focus and reset returns the actual D pose",
+      "status": "pass"
+    },
+    {
+      "name": "bfcache-style lifecycle and document visibility resynchronize without a stale travelling",
+      "status": "pass"
+    },
+    {
+      "name": "compact copy fits portrait and short landscape in all four languages",
+      "status": "pass"
+    },
+    {
+      "name": "orientation changes during exploration keep gestures and controls usable",
+      "status": "pass"
+    },
+    {
+      "name": "stable 250px viewport and 200 percent text select safe layouts without clipping",
+      "status": "pass"
+    },
+    {
+      "name": "late poster never describes unseen poses and all arguments have a native shortcut",
+      "status": "pass"
+    },
+    {
+      "name": "late-ready exploration shows D and exit restores poster, bottom reentry stays latched",
+      "status": "pass"
+    },
+    {
+      "name": "download error inside the pass preserves geometry and the full textual summary",
+      "status": "pass"
+    },
+    {
+      "name": "failure before entering switches to fully readable static copy",
+      "status": "pass"
+    },
+    {
+      "name": "no JavaScript exposes all complete shot arguments",
+      "status": "pass"
+    },
+    {
+      "name": "reduced motion exposes all complete shot arguments",
+      "status": "pass"
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ]
+}

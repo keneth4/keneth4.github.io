@@ -1,0 +1,26 @@
+✔ unrelated assets, identity, landing sections and original locale strings are intact (11.51775ms)
+✔ all four languages supply complete and compact shot copy and structural labels (0.389292ms)
+✔ Cloudflare package includes the exact landing module graph and 3D assets (15.175375ms)
+✔ Wrangler creates its asset directory for deploy and versions upload (0.444709ms)
+✔ sticky progress uses actual panel height and clamps anchor jumps (0.78975ms)
+✔ poses preserve declared keyframes and clamp outside timeline (1.231708ms)
+✔ segments are continuous and traversal is reversible (1.442042ms)
+✔ reveal is complete before camera starts moving (0.105125ms)
+✔ late ready latches poster until a full upward exit (0.138834ms)
+✔ first advanced entry keeps poster, even when renderer is ready (0.085458ms)
+✔ shots distinguish whole object, low angle, overhead and close-up over the extended scrub (0.091ms)
+✔ early scroll already moves the camera instead of holding A for a viewport (0.081917ms)
+✔ wide establishing frame reaches a genuinely closer detail frame (0.419333ms)
+✔ shots reference the original poses and clamp all selection inputs (0.414333ms)
+✔ editorial holds preserve B/C exactly and begin movement immediately after A (2.156291ms)
+✔ one-pixel tolerance snaps only the shared target at every pose (0.173917ms)
+✔ presented progress converges in both directions without overshoot or endless frames (0.263833ms)
+✔ shot-specific labels are reserved for holds; travels are reversible intervals (0.078792ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 82.157042

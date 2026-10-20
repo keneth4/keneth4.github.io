@@ -1,7 +1,7 @@
 # CreatiVivid · 12. Especificación cerrada — storytelling por tomas
 
 **Base:** `main@31f41430e72cd64090aa9964817006a9c810d139`. **Rama:** `codex/creativivid-mollequiles-cinematic-shots`.
-**Estado:** implementación local y QA automático disponibles el 20/oct/2026; aprobación visual y QA físico pendientes. Sin PR ni despliegue. Complementa al [storyboard 11](11-storyboard-cinematografico-por-tomas.md). Este documento es la fuente canónica de textos y contratos técnicos; sustituye sus ejemplos anteriores.
+**Estado:** cierre técnico y QA físico confirmados el 20/oct/2026; integración a main autorizada por el usuario. Evidencia vigente en [cinematic-final](../../qa/cinematic-final/README.md). Complementa al [storyboard 11](11-storyboard-cinematografico-por-tomas.md). Este documento es la fuente canónica de textos y contratos técnicos; sustituye sus ejemplos anteriores.
 
 ## 1. Alcance y decisiones confirmadas
 

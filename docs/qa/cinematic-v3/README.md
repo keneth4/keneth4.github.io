@@ -36,3 +36,7 @@ Reproducir el control geométrico: `python3 tests/poster-framing.test.py` (Pillo
 Se añade «Desliza para cambiar de vista» con flecha SVG y traducción ES/EN/DE/JA en el margen inferior del visual inicial. Solo aparece en recorrido disponible, hasta q=.10; no aparece en exploración, poster tardío/error, modo estático, reduced-motion o ausencia de JavaScript. No ocupa altura de layout ni recibe eventos.
 
 En portrait ≤760px, el visual entra hasta min(96px,24vw) más arriba y recupera su posición original al llegar el inicio del sticky al borde superior. El desplazamiento depende de la distancia real de entrada, es reversible y no cambia geometría sticky, p/q, cámara, tamaño ni encuadre del poster. Landscape y desktop conservan su composición. A partir del inicio el offset vale cero, incluida exploración. Revisión física del ajuste pendiente.
+
+## Cierre posterior
+
+El usuario declara completadas las pruebas físicas pendientes y autoriza integrar a main. La evidencia y el estado final se consolidan en [cinematic-final](../cinematic-final/README.md); los pendientes anteriores describen el estado de aquella entrega, no el estado actual.

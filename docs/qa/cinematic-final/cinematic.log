@@ -1,0 +1,15 @@
+PASS four editorial shots, holds, counter and camera share one presented progress
+PASS fast jumps and reverse traversal stay synchronized on every sampled frame
+PASS idle presentation converges and does not update its pose indefinitely
+PASS complete desktop copy is translated, measured and stable across all shots
+PASS state exits preserve focus and reset returns the actual D pose
+PASS bfcache-style lifecycle and document visibility resynchronize without a stale travelling
+PASS compact copy fits portrait and short landscape in all four languages
+PASS orientation changes during exploration keep gestures and controls usable
+PASS stable 250px viewport and 200 percent text select safe layouts without clipping
+PASS late poster never describes unseen poses and all arguments have a native shortcut
+PASS late-ready exploration shows D and exit restores poster, bottom reentry stays latched
+PASS download error inside the pass preserves geometry and the full textual summary
+PASS failure before entering switches to fully readable static copy
+PASS no JavaScript exposes all complete shot arguments
+PASS reduced motion exposes all complete shot arguments

@@ -1,0 +1,59 @@
+{
+  "environment": "Chromium local 1440x900; 3 fresh-context paired initial loads on this Mac; no physical mobile guarantee",
+  "rows": [
+    {
+      "version": "baseline",
+      "run": 0,
+      "lcp": 2172,
+      "cls": 0,
+      "longTasks": [],
+      "canvas": 0,
+      "transfer": 2653523
+    },
+    {
+      "version": "cinematic",
+      "run": 0,
+      "lcp": 124,
+      "cls": 0,
+      "longTasks": [],
+      "canvas": 0,
+      "transfer": 2220034
+    },
+    {
+      "version": "baseline",
+      "run": 1,
+      "lcp": 140,
+      "cls": 0,
+      "longTasks": [],
+      "canvas": 0,
+      "transfer": 2653523
+    },
+    {
+      "version": "cinematic",
+      "run": 1,
+      "lcp": 128,
+      "cls": 0,
+      "longTasks": [],
+      "canvas": 0,
+      "transfer": 2220034
+    },
+    {
+      "version": "baseline",
+      "run": 2,
+      "lcp": 152,
+      "cls": 0,
+      "longTasks": [],
+      "canvas": 0,
+      "transfer": 2653523
+    },
+    {
+      "version": "cinematic",
+      "run": 2,
+      "lcp": 108,
+      "cls": 0,
+      "longTasks": [],
+      "canvas": 0,
+      "transfer": 2220034
+    }
+  ]
+}
