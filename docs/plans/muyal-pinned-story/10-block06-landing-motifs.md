@@ -26,12 +26,16 @@ La firma, fuente y logo mantienen sus bytes. También permanecen idénticos los 
 - Comparación inicial local, tres cargas por versión: CLS 0, sin tareas >50 ms, sin canvas inicial; ~9.6 KB adicionales de transferencia. LCP mediano 168 ms antes / 148 ms después: variación local, no una promesa de mejora en producción.
 - Capturas desktop 1440×900 y móvil emulado 390×844 en `../../qa/block06/`. Prueba adicional local WebKit no completó el arranque; no se declara aprobada ni equivalente a iPhone físico.
 
-El trabajo de diseño previsto para estas cuatro secciones queda implementado. Siguen revisión visual del usuario sobre el bloque, Safari/iPhone físico y permisos de redistribución pendientes antes del PR/publicación. No se añaden otros splats ni cambios a la identidad.
+El trabajo de diseño previsto para estas cuatro secciones queda implementado. La revisión visual del usuario está aprobada. Siguen Safari/iPhone físico y permisos de redistribución pendientes antes del PR/publicación. No se añaden otros splats ni cambios a la identidad.
 
 ## Revisión landscape y visibilidad de servicios
 
 La revisión del usuario aprueba los motivos y detecta dos casos: móvil horizontal entraba en fallback por altura; el dibujo de servicios se percibía estático en desktop. Se conserva el dibujo reversible durante la entrada del SVG y se añade un punto que recorre la curva, sin bucle ni movimiento con reduced-motion.
 
-En touch horizontal hasta 1100 px de ancho y 600 px de alto, Mollequiles usa dos columnas compactas. El pin se permite desde 300 px de altura solo cuando todos los captions y controles medidos caben; por debajo o con texto ampliado se conserva el fallback. Portrait, poses, interpolación, poster y gestos no cambian. El controlador deja de ser byte-idéntico al snapshot de bloque 06 únicamente por esta decisión de layout; visor, timeline, HTML del caso e identidad siguen protegidos por hashes. La comprobación física de esta revisión en Poco y Safari/iPhone sigue pendiente.
+En touch horizontal hasta 1100 px de ancho y 600 px de alto, Mollequiles usa dos columnas compactas. El pin se permite desde 300 px de altura solo cuando todos los captions y controles medidos caben; por debajo o con texto ampliado se conserva el fallback. Portrait, poses, interpolación, poster y gestos no cambian. El controlador deja de ser byte-idéntico al snapshot de bloque 06 únicamente por esta decisión de layout; visor, timeline, HTML del caso e identidad siguen protegidos por hashes. La comprobación física de esta revisión en Poco está aprobada; Safari/iPhone sigue pendiente.
 
 Verificación local de la revisión: 20 escenarios de story, 11 de motivos y 9 pruebas unitarias pasan en Chromium/Playwright (Browser plugin no disponible). Landscape táctil 844×390 y 740×360 mantiene recorrido/barra y captions dentro del viewport en ES/EN/DE/JA, con regreso a portrait; 844×280 conserva fallback. Se corrige también la medición de altura natural de captions superpuestos para evitar que el estiramiento del grid infle la reserva. Capturas temporales: `/private/tmp/mollequiles-browser-qa-v4/touch-landscape.png` y `/private/tmp/block06-qa/desktop-services.png`. No equivale a Safari/iPhone físico.
+
+## Aprobación del usuario — 20 de octubre de 2026
+
+El usuario revisó la corrección en Poco X6 Pro físico y desktop e informó que todo funciona bien. Se registra aprobación de la revisión de landscape y servicios, además de la aprobación visual previa del bloque. No se proporcionaron versiones de Android/navegador ni detalles del equipo desktop. No se extiende esta aprobación a Safari/iPhone ni al icono del crédito en el sitio independiente de AM:PM.
