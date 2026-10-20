@@ -1,4 +1,4 @@
-import { cameraAt, clampPose, passAt, progressAt, revealAt, phaseAt } from './story-timeline.mjs';
+import { cameraAt, clampPose, passAt, progressAt, revealAt, phaseAt, POSES, clamp } from './story-timeline.mjs';
 import { createViewer } from './splat-viewer.js';
 const section = document.querySelector('[data-case-story]');
 if (section) {
@@ -10,6 +10,12 @@ if (section) {
   const explore = section.querySelector('[data-case-explore]');
   const controls = section.querySelector('[data-case-controls]');
   const status = section.querySelector('[data-case-status]');
+  const progress = section.querySelector('[data-case-progress]');
+  const progressBar = section.querySelector('[data-case-progress-bar]');
+  const progressValue = section.querySelector('[data-case-progress-value]');
+  const progressMarks = [...section.querySelectorAll('[data-case-progress-mark]')];
+  const viewProgress = p => clamp((p - POSES[0].p) / (POSES.at(-1).p - POSES[0].p), 0, 1);
+  progressMarks.forEach((mark, i) => { mark.style.left = `${viewProgress(POSES[i].p) * 100}%`; });
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const abort = new AbortController(), signal = abort.signal;
   let viewer, loading, ready = false, failed = false, exploring = false;
@@ -90,6 +96,15 @@ if (section) {
     media.style.setProperty('--poster-opacity', 1 - alpha);
     section.dataset.state = failed ? 'error' : exploring ? 'explore' : ready ? 'story' : loading ? 'loading' : 'poster';
     section.dataset.posterOnly = String(pass.posterOnly);
+    progress.hidden = !pinned || exploring || !ready || pass.posterOnly || failed;
+    const percent = Math.round(viewProgress(p) * 100);
+    progress.style.setProperty('--view-progress', viewProgress(p));
+    progressValue.textContent = `${percent}%`;
+    progressBar.setAttribute('aria-valuenow', String(percent));
+    const reachedP = p + 1 / Math.max(1, rect.height - pin.offsetHeight);
+    const currentView = Math.max(1, POSES.filter(view => reachedP >= view.p).length);
+    progressBar.setAttribute('aria-valuetext', (words().caseProgressView || 'View {current} of {total}').replace('{current}', currentView).replace('{total}', POSES.length));
+    progressMarks.forEach((mark, i) => { mark.dataset.reached = String(reachedP >= POSES[i].p); });
     const canExplore = !failed && (!pinned || (ready && p >= .9));
     if (!canExplore && document.activeElement === explore) section.querySelector('a').focus({ preventScroll: true });
     explore.hidden = !canExplore || exploring;

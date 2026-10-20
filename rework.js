@@ -1,5 +1,6 @@
 const COPY = {
   es: {
+    caseProgressLabel: "Recorrido", caseProgressView: "Vista {current} de {total}",
     case3dActive: "Exploración 3D activa.",
     caseSeeStory: "Conoce el proyecto",
     caseDishAlt: "Mollequiles de AM:PM en un plato blanco",
@@ -31,6 +32,7 @@ const COPY = {
     sending: 'Enviando…', captcha: 'Completa la verificación antes de enviar.', captchaError: 'No se pudo cargar la verificación. Recarga la página e inténtalo de nuevo.', error: 'No se pudo enviar. Tus datos siguen en el formulario; inténtalo de nuevo.', success: 'Recibimos tu proyecto. Te contactaremos para conversar sobre los siguientes pasos.', local: 'Formulario validado. Esta vista local no envía solicitudes; tus datos no se han enviado.'
   },
   en: {
+    caseProgressLabel: "View progress", caseProgressView: "View {current} of {total}",
     case3dActive: "3D exploration active.",
     caseSeeStory: "Discover the project",
     caseDishAlt: "AM:PM Mollequiles on a white plate",
@@ -62,6 +64,7 @@ const COPY = {
     sending: 'Sending…', captcha: 'Complete the verification before sending.', captchaError: 'Verification could not load. Reload the page and try again.', error: 'Could not send. Your details remain in the form; please try again.', success: 'We received your project. We’ll get in touch to discuss next steps.', local: 'Form validated. This local preview does not send requests; your details have not been sent.'
   },
   de: {
+    caseProgressLabel: "Rundgang", caseProgressView: "Ansicht {current} von {total}",
     case3dActive: "3D-Erkundung aktiviert.",
     caseSeeStory: "Das Projekt entdecken",
     caseDishAlt: "Mollequiles von AM:PM auf einem weißen Teller",
@@ -93,6 +96,7 @@ const COPY = {
     sending: 'Wird gesendet…', captcha: 'Bitte schließe die Überprüfung vor dem Senden ab.', captchaError: 'Die Überprüfung konnte nicht geladen werden. Lade die Seite neu.', error: 'Senden fehlgeschlagen. Deine Angaben bleiben im Formular. Bitte versuche es erneut.', success: 'Wir haben dein Projekt erhalten und melden uns für die nächsten Schritte.', local: 'Formular geprüft. Diese lokale Vorschau sendet keine Anfragen. Deine Angaben wurden nicht gesendet.'
   },
   ja: {
+    caseProgressLabel: "進行状況", caseProgressView: "{total}つの視点のうち{current}番目",
     case3dActive: "3D探索中です。",
     caseSeeStory: "プロジェクトを見る",
     caseDishAlt: "白い皿に盛られたAM:PMのモジェキレス",

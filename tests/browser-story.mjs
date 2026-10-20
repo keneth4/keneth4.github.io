@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.QA_URL || 'http://127.0.0.1:8770';
-const out = process.env.QA_OUTPUT || '/private/tmp/mollequiles-browser-qa-v3';
+const out = process.env.QA_OUTPUT || '/private/tmp/mollequiles-browser-qa-v4';
 await mkdir(out, { recursive: true });
 const browser = await chromium.launch({ headless: true, ...(process.env.CHROMIUM_EXECUTABLE ? { executablePath: process.env.CHROMIUM_EXECUTABLE } : {}) });
 const results = [], errors = [], metrics = [];
@@ -40,6 +40,14 @@ try {
   metrics.push({version:'feature',stage:'initial',...(await page.evaluate(()=>({...window.qaMetrics,resourceBytes:performance.getEntriesByType('resource').reduce((s,e)=>s+e.transferSize,0)})))});
   await at(page,0);await page.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');
   await check('desktop: first frame, one canvas, no duplicate hero',async()=>{assert.equal(await page.locator('canvas').count(),1);assert.equal(await page.locator(story).getAttribute('data-pinned'),'true')});
+  await check('view progress follows keyframes and reverses without changing scroll',async()=>{
+    for(const [p,value] of [[.04,'0'],[.38,'40'],[.72,'79'],[.9,'100'],[.38,'40']]){
+      await at(page,p);assert.ok(await page.locator('[data-case-progress]').isVisible());
+      assert.equal(await page.locator('[data-case-progress-bar]').getAttribute('aria-valuenow'),value);
+    }
+    assert.equal(await page.locator('[data-case-progress-mark][data-reached=true]').count(),2);
+    assert.match(await page.locator('[data-case-progress-bar]').getAttribute('aria-valuetext'),/2.*4/);
+  });
   await check('reversible scroll through keyframes and fast jumps',async()=>{
     for(const p of [.1,.3,.45,.6,.7,.8,.95,.7,.6,.45,.3,0,1,0]) {await at(page,p);assert.ok(Math.abs(Number(await page.locator(story).getAttribute('data-progress'))-p)<.01, `expected ${p}; actual ${await page.locator(story).getAttribute('data-progress')}; pinned ${await page.locator(story).getAttribute('data-pinned')}`);}
     assert.equal(await page.locator(story).getAttribute('data-poster-only'),'false');
@@ -98,6 +106,7 @@ try {
   await mobile.screenshot({path:out+'/mobile-story.png'});await at(mobile,.95);
   await mobile.locator('[data-case-explore]').click();await mobile.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='explore');
   await check('mobile: two-axis orbit and real two-finger pinch, no zoom buttons',async()=>{
+    assert.ok(await mobile.locator('[data-case-progress]').isHidden());
     assert.equal(await mobile.locator('[data-case-input]').evaluate(e=>getComputedStyle(e).touchAction),'none');
     assert.ok(await mobile.locator('[data-case-zoom-in]').isHidden());
     const cdp=await mobile.context().newCDPSession(mobile);const b=await mobile.locator('[data-case-input]').boundingBox();const x=b.x+b.width/2,y=b.y+b.height/2;
@@ -118,7 +127,7 @@ try {
     await mobile.setViewportSize({width:844,height:390});await mobile.waitForTimeout(200);assert.equal(await mobile.locator(story).getAttribute('data-pinned'),'false');
   });await mobile.context().close();
   const reduce=await pageFor({reducedMotion:'reduce'});await reduce.goto(base,{waitUntil:'domcontentloaded'});await reduce.locator(story).scrollIntoViewIfNeeded();
-  await check('reduced motion: static, no automatic 3D, all captions readable',async()=>{assert.equal(await reduce.locator(story).getAttribute('data-pinned'),'false');assert.equal(await reduce.locator('canvas').count(),0);assert.equal(await reduce.locator('[data-case-caption]:visible').count(),4)});await reduce.context().close();
+  await check('reduced motion: static, no automatic 3D, all captions readable',async()=>{assert.equal(await reduce.locator(story).getAttribute('data-pinned'),'false');assert.equal(await reduce.locator('canvas').count(),0);assert.equal(await reduce.locator('[data-case-caption]:visible').count(),4);assert.ok(await reduce.locator('[data-case-progress]').isHidden())});await reduce.context().close();
   const lost=await pageFor({reducedMotion:'reduce'});await lost.goto(base,{waitUntil:'domcontentloaded'});await lost.locator('[data-case-explore]').click();await lost.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.ready==='true');await lost.locator('canvas').evaluate(c=>c.getContext('webgl2').getExtension('WEBGL_lose_context').loseContext());await lost.waitForFunction(()=>document.querySelector('[data-case-story]').dataset.state==='error');
   await check('GPU context loss disposes renderer and retains fallback',async()=>{assert.equal(await lost.locator('canvas').count(),0);assert.ok(await lost.locator('[data-case-status]').innerText())});await lost.context().close();
   const nojs=await pageFor({javaScriptEnabled:false});await nojs.goto(base,{waitUntil:'domcontentloaded'});await check('no JavaScript: poster, case and links retained',async()=>{assert.equal(await nojs.locator('[data-case-caption]').count(),4);assert.ok(await nojs.locator('[data-case-media] img').isVisible());assert.ok(await nojs.locator('[data-case-explore]').isHidden());assert.equal(await nojs.locator('canvas').count(),0)});await nojs.context().close();

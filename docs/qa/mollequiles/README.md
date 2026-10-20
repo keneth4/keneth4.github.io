@@ -1,4 +1,10 @@
-# Mollequiles — integration QA (revisión visual v3)
+# Mollequiles — integration QA (mini barra v4)
+
+Mini barra implementada y probada: cuatro marcas derivadas de las poses, porcentaje reversible y etiquetas accesibles ES/EN/DE/JA. Cámara y gestos aprobados se conservan. La barra se oculta fuera del recorrido guiado y reserva espacio estable en el layout.
+
+19 escenarios de navegador y nueve unit tests pasan. Evidencia en `v4/results.json`, `v4/desktop-story.png` y `v4/mobile-story.png`. Detalles en [09-view-progress.md](../../plans/muyal-pinned-story/09-view-progress.md). iPhone/Safari físico y permisos de redistribución siguen pendientes; no PR/publicación.
+
+## Historial V3
 
 **V3 vigente:** entrada de cámara a .04 en lugar de .25, reveal .005–.04 y distancias A=1 / B=1.24 / C=.78 / D=1.04. El movimiento inicial responde pronto y los captions usan los mismos umbrales. Plan completo en [08-early-response-and-dolly.md](../../plans/muyal-pinned-story/08-early-response-and-dolly.md).
 
