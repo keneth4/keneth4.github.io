@@ -1,0 +1,50 @@
+{
+  "engine": "chromium",
+  "results": [
+    {
+      "name": "canonical logo, font and Mollequiles files/markup are byte-identical",
+      "status": "pass"
+    },
+    {
+      "name": "page identity and decorative SVG accessibility",
+      "status": "pass"
+    },
+    {
+      "name": "hero parallax affects only the motif, not copy or canonical signature",
+      "status": "pass"
+    },
+    {
+      "name": "services curve and divider reveal follow normal scroll reversibly",
+      "status": "pass"
+    },
+    {
+      "name": "desktop process connects all three steps, marker advances and reverses",
+      "status": "pass"
+    },
+    {
+      "name": "contact motif settles once and stops when the form receives focus",
+      "status": "pass"
+    },
+    {
+      "name": "desktop translations keep content and motifs within the viewport",
+      "status": "pass"
+    },
+    {
+      "name": "mobile process uses a vertical route aligned to all three steps",
+      "status": "pass"
+    },
+    {
+      "name": "mobile motifs do not overlap hero CTA, service heading or contact form",
+      "status": "pass"
+    },
+    {
+      "name": "reduced motion is static, readable and keeps a completed route",
+      "status": "pass"
+    },
+    {
+      "name": "no JavaScript keeps all services, steps, contact fields and static motifs",
+      "status": "pass"
+    }
+  ],
+  "errors": []
+}

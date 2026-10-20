@@ -1,5 +1,6 @@
 # CreatiVivid — 03. Plan incremental de Codex y criterios de aceptación
 
+> Bloque 06 implementado: [10-block06-landing-motifs.md](10-block06-landing-motifs.md). Esta hoja conserva el plan original; estado y evidencia actuales en los documentos de implementación/QA.
 Estado: planificación. Esta rama contiene documentos separados en commits separados; **no** modifica la web ni abre PR.
 
 ## 1. Forma de trabajo
