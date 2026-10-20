@@ -1,0 +1,65 @@
+[
+  {
+    "p": "0.2500",
+    "pose": {
+      "yawDeg": 90,
+      "elevationDeg": 45,
+      "zoom": 1
+    },
+    "posterOnly": "false"
+  },
+  {
+    "p": "0.3651",
+    "pose": {
+      "yawDeg": 112.51154609086238,
+      "elevationDeg": 39.495018116547584,
+      "zoom": 1.040036231879654
+    },
+    "posterOnly": "false"
+  },
+  {
+    "p": "0.4800",
+    "pose": {
+      "yawDeg": 134.99597216367607,
+      "elevationDeg": 34.00000108288748,
+      "zoom": 1.0799999921244547
+    },
+    "posterOnly": "false"
+  },
+  {
+    "p": "0.6100",
+    "pose": {
+      "yawDeg": 95.02797084070976,
+      "elevationDeg": 50.988112392523504,
+      "zoom": 0.9500624999978597
+    },
+    "posterOnly": "false"
+  },
+  {
+    "p": "0.7400",
+    "pose": {
+      "yawDeg": 55.01918075028832,
+      "elevationDeg": 67.99184818112747,
+      "zoom": 0.820062337438437
+    },
+    "posterOnly": "false"
+  },
+  {
+    "p": "0.8200",
+    "pose": {
+      "yawDeg": 79.96595261274238,
+      "elevationDeg": 58.01361895481351,
+      "zoom": 0.8899046673172902
+    },
+    "posterOnly": "false"
+  },
+  {
+    "p": "0.9000",
+    "pose": {
+      "yawDeg": 104.99453324276263,
+      "elevationDeg": 48.000004068303994,
+      "zoom": 0.959999971521872
+    },
+    "posterOnly": "false"
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "results": [
+    {
+      "name": "identity, hero static, no initial WebGL",
+      "status": "pass"
+    },
+    {
+      "name": "desktop: first frame, one canvas, no duplicate hero",
+      "status": "pass"
+    },
+    {
+      "name": "view progress follows keyframes and reverses without changing scroll",
+      "status": "pass"
+    },
+    {
+      "name": "reversible scroll through keyframes and fast jumps",
+      "status": "pass"
+    },
+    {
+      "name": "explore / zoom / reset / Escape / focus",
+      "status": "pass"
+    },
+    {
+      "name": "wheel remains document scroll during explore; exit on leaving case",
+      "status": "pass"
+    },
+    {
+      "name": "ES EN DE JA, translated labels, layout and anchors",
+      "status": "pass"
+    },
+    {
+      "name": "local form validation and privacy link preserved",
+      "status": "pass"
+    },
+    {
+      "name": "refresh in middle keeps poster, dynamic reduced motion releases pin",
+      "status": "pass"
+    },
+    {
+      "name": "mobile: native scroll story with extended scrub and no input capture",
+      "status": "pass"
+    },
+    {
+      "name": "mobile: one-finger story scroll stays native and translations fit",
+      "status": "pass"
+    },
+    {
+      "name": "mobile: two-axis orbit and real two-finger pinch, no zoom buttons",
+      "status": "pass"
+    },
+    {
+      "name": "mobile explore returns to scroll story, landscape falls back when content cannot fit",
+      "status": "pass"
+    },
+    {
+      "name": "reduced motion: static, no automatic 3D, all captions readable",
+      "status": "pass"
+    },
+    {
+      "name": "GPU context loss disposes renderer and retains fallback",
+      "status": "pass"
+    },
+    {
+      "name": "no JavaScript: poster, case and links retained",
+      "status": "pass"
+    },
+    {
+      "name": "late load stays poster, bottom reentry does not rearm; upward exit does",
+      "status": "pass"
+    },
+    {
+      "name": "failed asset: poster and links survive",
+      "status": "pass"
+    },
+    {
+      "name": "WebGL unavailable: accessible fallback",
+      "status": "pass"
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "metrics": [
+    {
+      "version": "feature",
+      "stage": "initial",
+      "lcp": 1932,
+      "cls": 0,
+      "longTasks": [],
+      "resourceBytes": 3608185
+    },
+    {
+      "version": "feature",
+      "stage": "after story + interactions",
+      "lcp": 3048,
+      "cls": 0.05424264862102409,
+      "longTasks": [
+        72,
+        415,
+        94
+      ],
+      "resourceBytes": 12618825
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "runtime": "PlayCanvas bundle from AMPM ZIP",
+  "poster": {
+    "width": 1200,
+    "height": 1200,
+    "type": "image/webp",
+    "bytes": 1164482
+  },
+  "keys": [
+    [
+      0.45,
+      90,
+      45,
+      1
+    ],
+    [
+      0.6,
+      102,
+      42,
+      0.96
+    ],
+    [
+      0.7,
+      110,
+      49,
+      0.88
+    ],
+    [
+      0.8,
+      98,
+      46,
+      0.92
+    ]
+  ],
+  "samples": 960,
+  "durationMs": 16000,
+  "rafIntervals": {
+    "p50": 16.69999999999891,
+    "p95": 17.099999999998545,
+    "over50ms": 0
+  },
+  "reverseComparison": [
+    {
+      "p": 0.7999999999999999,
+      "meanAbsoluteChannelDifference": 0,
+      "maxChannelDifference": 0,
+      "changedChannels": 0
+    },
+    {
+      "p": 0.7708333333333333,
+      "meanAbsoluteChannelDifference": 0.40241310586734697,
+      "maxChannelDifference": 14,
+      "changedChannels": 371625
+    },
+    {
+      "p": 0.7416666666666667,
+      "meanAbsoluteChannelDifference": 0.41073979591836735,
+      "maxChannelDifference": 14,
+      "changedChannels": 377307
+    },
+    {
+      "p": 0.7125,
+      "meanAbsoluteChannelDifference": 0.42794244260204084,
+      "maxChannelDifference": 13,
+      "changedChannels": 387691
+    },
+    {
+      "p": 0.6833333333333333,
+      "meanAbsoluteChannelDifference": 0.42555883290816326,
+      "maxChannelDifference": 13,
+      "changedChannels": 385843
+    },
+    {
+      "p": 0.6541666666666667,
+      "meanAbsoluteChannelDifference": 0.4079583864795918,
+      "maxChannelDifference": 14,
+      "changedChannels": 371975
+    },
+    {
+      "p": 0.625,
+      "meanAbsoluteChannelDifference": 0.405546875,
+      "maxChannelDifference": 17,
+      "changedChannels": 351437
+    },
+    {
+      "p": 0.5958333333333333,
+      "meanAbsoluteChannelDifference": 0.39896045918367345,
+      "maxChannelDifference": 17,
+      "changedChannels": 345694
+    },
+    {
+      "p": 0.5666666666666667,
+      "meanAbsoluteChannelDifference": 0.39914779974489795,
+      "maxChannelDifference": 20,
+      "changedChannels": 345990
+    },
+    {
+      "p": 0.5375,
+      "meanAbsoluteChannelDifference": 0.40194276147959185,
+      "maxChannelDifference": 17,
+      "changedChannels": 347389
+    },
+    {
+      "p": 0.5083333333333333,
+      "meanAbsoluteChannelDifference": 0.12377790178571428,
+      "maxChannelDifference": 5,
+      "changedChannels": 149616
+    },
+    {
+      "p": 0.4791666666666667,
+      "meanAbsoluteChannelDifference": 0.12432477678571428,
+      "maxChannelDifference": 5,
+      "changedChannels": 149973
+    },
+    {
+      "p": 0.45,
+      "meanAbsoluteChannelDifference": 0.14209263392857144,
+      "maxChannelDifference": 20,
+      "changedChannels": 163546
+    }
+  ],
+  "finalState": {
+    "status": "ready",
+    "progress": 1,
+    "error": "",
+    "bounds": {
+      "center": [
+        0.0014648437500000555,
+        0.170654296875,
+        0.0013427734375
+      ],
+      "size": [
+        1.9892578125,
+        0.7031250000000002,
+        1.989501953125
+      ],
+      "radius": 1.4499697782803507
+    },
+    "splatCount": 98180,
+    "yawDeg": 90,
+    "elevationDeg": 45,
+    "zoom": 1,
+    "sourceKind": "url",
+    "firstFrameMs": 206.19999998807907,
+    "frameMetrics": {
+      "p50Ms": null,
+      "p95Ms": null,
+      "longFrames": 0,
+      "samples": 0
+    },
+    "assetBytes": 2201784,
+    "decodeMs": 109
+  }
+}

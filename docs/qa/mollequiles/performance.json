@@ -1,0 +1,65 @@
+[
+  {
+    "port": 8771,
+    "run": 0,
+    "lcp": 1756,
+    "cls": 0,
+    "long": [],
+    "element": "<img src=\"./assets/rework/ampm-desktop.png\" alt=\"Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante\" data-alt=\"projectAlt\" width=\"1440\" height=\"900\" fetchpriority=\"high\">",
+    "bytes": 1616757,
+    "canvas": 0
+  },
+  {
+    "port": 8770,
+    "run": 0,
+    "lcp": 156,
+    "cls": 0,
+    "long": [],
+    "element": "<img src=\"./assets/rework/ampm-desktop.png\" alt=\"Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante\" data-alt=\"projectAlt\" width=\"1440\" height=\"900\" fetchpriority=\"high\">",
+    "bytes": 2633935,
+    "canvas": 0,
+    "caption": "--caption-height: 140px;"
+  },
+  {
+    "port": 8771,
+    "run": 1,
+    "lcp": 144,
+    "cls": 0,
+    "long": [],
+    "element": "<img src=\"./assets/rework/ampm-desktop.png\" alt=\"Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante\" data-alt=\"projectAlt\" width=\"1440\" height=\"900\" fetchpriority=\"high\">",
+    "bytes": 1616757,
+    "canvas": 0
+  },
+  {
+    "port": 8770,
+    "run": 1,
+    "lcp": 112,
+    "cls": 0,
+    "long": [],
+    "element": "<img src=\"./assets/rework/ampm-desktop.png\" alt=\"Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante\" data-alt=\"projectAlt\" width=\"1440\" height=\"900\" fetchpriority=\"high\">",
+    "bytes": 2633935,
+    "canvas": 0,
+    "caption": "--caption-height: 140px;"
+  },
+  {
+    "port": 8771,
+    "run": 2,
+    "lcp": 168,
+    "cls": 0,
+    "long": [],
+    "element": "<img src=\"./assets/rework/ampm-desktop.png\" alt=\"Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante\" data-alt=\"projectAlt\" width=\"1440\" height=\"900\" fetchpriority=\"high\">",
+    "bytes": 1616757,
+    "canvas": 0
+  },
+  {
+    "port": 8770,
+    "run": 2,
+    "lcp": 140,
+    "cls": 0,
+    "long": [],
+    "element": "<img src=\"./assets/rework/ampm-desktop.png\" alt=\"Sitio de AMPM: portada rosa, chilaquiles y navegación del restaurante\" data-alt=\"projectAlt\" width=\"1440\" height=\"900\" fetchpriority=\"high\">",
+    "bytes": 2633935,
+    "canvas": 0,
+    "caption": "--caption-height: 140px;"
+  }
+]

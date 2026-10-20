@@ -1,5 +1,24 @@
 const COPY = {
   es: {
+    caseProgressLabel: "Recorrido", caseProgressView: "Vista {current} de {total}",
+    case3dActive: "Exploración 3D activa.",
+    caseSeeStory: "Conoce el proyecto",
+    caseDishAlt: "Mollequiles de AM:PM en un plato blanco",
+    caseDishCaption: "Mollequiles · AM:PM",
+    caseStoryIntro: "Una identidad que se puede explorar.",
+    caseStoryReveal: "De la imagen a la presencia.",
+    caseStoryDepth: "Un platillo real, reconstruido para explorarlo.",
+    caseStoryOutro: "Mira el trabajo de cerca.",
+    caseExplore3d: "Explorar en 3D",
+    caseReset: "Restablecer vista",
+    caseExit: "Volver al recorrido",
+    caseZoomIn: "Acercar",
+    caseZoomOut: "Alejar",
+    case3dLabel: "Exploración 3D de Mollequiles",
+    case3dHelp: "Arrastra para girar y usa dos dedos para acercar o alejar. Desliza fuera del plato para bajar por la página. Escape para salir.",
+    case3dLoading: "Cargando experiencia 3D…",
+    case3dError: "No se pudo abrir el 3D. Puedes conocer el proyecto y visitar AM:PM.",
+
     title: 'CreatiVivid — Sitios web y experiencias digitales', description: 'CreatiVivid crea sitios web, tiendas online y experiencias interactivas diseñados alrededor de tu negocio.',
     skip: 'Ir al contenido', navLabel: 'Navegación principal', footerLabel: 'Enlaces del pie', language: 'Idioma', work: 'Proyectos', services: 'Servicios', talk: 'Hablemos',
     heroTitle: ['Tu negocio.', 'Una experiencia', 'digital.'], heroBody: 'Sitios web, tiendas online y experiencias interactivas. Diseñados alrededor de tu negocio.', heroCta: 'Cuéntanos tu proyecto',
@@ -13,6 +32,25 @@ const COPY = {
     sending: 'Enviando…', captcha: 'Completa la verificación antes de enviar.', captchaError: 'No se pudo cargar la verificación. Recarga la página e inténtalo de nuevo.', error: 'No se pudo enviar. Tus datos siguen en el formulario; inténtalo de nuevo.', success: 'Recibimos tu proyecto. Te contactaremos para conversar sobre los siguientes pasos.', local: 'Formulario validado. Esta vista local no envía solicitudes; tus datos no se han enviado.'
   },
   en: {
+    caseProgressLabel: "View progress", caseProgressView: "View {current} of {total}",
+    case3dActive: "3D exploration active.",
+    caseSeeStory: "Discover the project",
+    caseDishAlt: "AM:PM Mollequiles on a white plate",
+    caseDishCaption: "Mollequiles · AM:PM",
+    caseStoryIntro: "An identity you can explore.",
+    caseStoryReveal: "From image to presence.",
+    caseStoryDepth: "A real dish, reconstructed to explore.",
+    caseStoryOutro: "Take a closer look.",
+    caseExplore3d: "Explore in 3D",
+    caseReset: "Reset view",
+    caseExit: "Back to the story",
+    caseZoomIn: "Zoom in",
+    caseZoomOut: "Zoom out",
+    case3dLabel: "Explore Mollequiles in 3D",
+    case3dHelp: "Drag to orbit and pinch with two fingers to zoom. Swipe outside the dish to scroll the page. Escape to exit.",
+    case3dLoading: "Loading the 3D experience…",
+    case3dError: "The 3D experience could not load. You can still read about the project and visit AM:PM.",
+
     title: 'CreatiVivid — Websites & digital experiences', description: 'CreatiVivid creates websites, online stores and interactive experiences designed around your business.',
     skip: 'Skip to content', navLabel: 'Main navigation', footerLabel: 'Footer links', language: 'Language', work: 'Work', services: 'Services', talk: 'Let’s talk',
     heroTitle: ['Your business.', 'A digital', 'experience.'], heroBody: 'Websites, online stores and interactive experiences. Designed around your business.', heroCta: 'Tell us about your project',
@@ -26,6 +64,25 @@ const COPY = {
     sending: 'Sending…', captcha: 'Complete the verification before sending.', captchaError: 'Verification could not load. Reload the page and try again.', error: 'Could not send. Your details remain in the form; please try again.', success: 'We received your project. We’ll get in touch to discuss next steps.', local: 'Form validated. This local preview does not send requests; your details have not been sent.'
   },
   de: {
+    caseProgressLabel: "Rundgang", caseProgressView: "Ansicht {current} von {total}",
+    case3dActive: "3D-Erkundung aktiviert.",
+    caseSeeStory: "Das Projekt entdecken",
+    caseDishAlt: "Mollequiles von AM:PM auf einem weißen Teller",
+    caseDishCaption: "Mollequiles · AM:PM",
+    caseStoryIntro: "Eine Identität zum Entdecken.",
+    caseStoryReveal: "Vom Bild zur räumlichen Präsenz.",
+    caseStoryDepth: "Ein echtes Gericht, räumlich rekonstruiert.",
+    caseStoryOutro: "Sieh dir die Arbeit genauer an.",
+    caseExplore3d: "In 3D erkunden",
+    caseReset: "Ansicht zurücksetzen",
+    caseExit: "Zurück zur Geschichte",
+    caseZoomIn: "Vergrößern",
+    caseZoomOut: "Verkleinern",
+    case3dLabel: "Mollequiles in 3D erkunden",
+    case3dHelp: "Zum Drehen ziehen, zum Zoomen zwei Finger verwenden. Außerhalb des Tellers wischen, um die Seite zu scrollen. Escape beendet die Erkundung.",
+    case3dLoading: "3D-Erlebnis wird geladen…",
+    case3dError: "Das 3D-Erlebnis konnte nicht geladen werden. Die Projektbeschreibung und die Website von AM:PM bleiben zugänglich.",
+
     title: 'CreatiVivid — Websites & digitale Erlebnisse', description: 'CreatiVivid entwickelt Websites, Onlineshops und interaktive Erlebnisse für dein Unternehmen.',
     skip: 'Zum Inhalt', navLabel: 'Hauptnavigation', footerLabel: 'Links im Footer', language: 'Sprache', work: 'Projekte', services: 'Leistungen', talk: 'Kontakt',
     heroTitle: ['Dein Unternehmen.', 'Ein digitales', 'Erlebnis.'], heroBody: 'Websites, Onlineshops und interaktive Erlebnisse. Für dein Unternehmen gestaltet.', heroCta: 'Erzähl uns von deinem Projekt',
@@ -39,6 +96,25 @@ const COPY = {
     sending: 'Wird gesendet…', captcha: 'Bitte schließe die Überprüfung vor dem Senden ab.', captchaError: 'Die Überprüfung konnte nicht geladen werden. Lade die Seite neu.', error: 'Senden fehlgeschlagen. Deine Angaben bleiben im Formular. Bitte versuche es erneut.', success: 'Wir haben dein Projekt erhalten und melden uns für die nächsten Schritte.', local: 'Formular geprüft. Diese lokale Vorschau sendet keine Anfragen. Deine Angaben wurden nicht gesendet.'
   },
   ja: {
+    caseProgressLabel: "進行状況", caseProgressView: "{total}つの視点のうち{current}番目",
+    case3dActive: "3D探索中です。",
+    caseSeeStory: "プロジェクトを見る",
+    caseDishAlt: "白い皿に盛られたAM:PMのモジェキレス",
+    caseDishCaption: "モジェキレス · AM:PM",
+    caseStoryIntro: "触れて楽しめるアイデンティティ。",
+    caseStoryReveal: "画像から、立体的な存在へ。",
+    caseStoryDepth: "実際の料理を、探索できる3Dに。",
+    caseStoryOutro: "もっと近くで見てみよう。",
+    caseExplore3d: "3Dで見る",
+    caseReset: "視点をリセット",
+    caseExit: "ストーリーに戻る",
+    caseZoomIn: "拡大",
+    caseZoomOut: "縮小",
+    case3dLabel: "モジェキレスを3Dで探索",
+    case3dHelp: "ドラッグで回転、2本指のピンチで拡大・縮小できます。ページのスクロールは皿の外で行えます。Escapeで終了します。",
+    case3dLoading: "3D体験を読み込み中…",
+    case3dError: "3Dを読み込めませんでした。プロジェクトの説明とAM:PMのサイトは引き続きご覧いただけます。",
+
     title: 'CreatiVivid — ウェブサイトとデジタル体験', description: 'CreatiVividは、ビジネスに合わせたウェブサイト、オンラインストア、インタラクティブな体験を制作します。',
     skip: 'コンテンツへ', navLabel: 'メインナビゲーション', footerLabel: 'フッターリンク', language: '言語', work: '制作実績', services: 'サービス', talk: 'ご相談',
     heroTitle: ['あなたのビジネスに。', '新しいデジタル', '体験を。'], heroBody: 'ウェブサイト、オンラインストア、インタラクティブな体験。あなたのビジネスに合わせて制作します。', heroCta: 'プロジェクトを相談する',
@@ -52,7 +128,7 @@ const COPY = {
     sending: '送信中…', captcha: '送信前に認証を完了してください。', captchaError: '認証を読み込めませんでした。ページを再読み込みしてください。', error: '送信できませんでした。入力内容は保持されています。もう一度お試しください。', success: 'ご相談を受け付けました。次のステップについてご連絡します。', local: '入力を確認しました。このローカルプレビューでは送信しません。入力内容は送信されていません。'
   }
 };
-const LOCAL_PREVIEW = ['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname);
+const LOCAL_PREVIEW = ['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname) || /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.)/.test(location.hostname) || location.hostname.endsWith('.local');
 const FORM_ENDPOINT = 'https://formspree.io/f/xyknpdjv';
 const STORAGE_KEY = 'cv_rework_locale';
 let locale = 'es';
@@ -98,6 +174,7 @@ function renderLines(node, key, copy) {
 function applyLocale(next) {
   locale = Object.hasOwn(COPY, next) ? next : 'es';
   const copy = COPY[locale];
+  window.creativividCopy = copy;
   document.documentElement.lang = locale;
   document.title = copy.title;
   document.querySelector('meta[name="description"]').content = copy.description;
@@ -109,6 +186,7 @@ function applyLocale(next) {
   document.querySelectorAll('[data-privacy]').forEach(node => { node.href = `./privacy.html?lang=${locale}`; });
   if (sending) submitText.textContent = copy.sending;
   setStatus(statusKey, statusState);
+  document.dispatchEvent(new Event('creativivid:locale'));
   try { localStorage.setItem(STORAGE_KEY, locale); } catch { /* Private browsing may disable storage. */ }
 }
 let requestedLocale = new URLSearchParams(location.search).get('lang');

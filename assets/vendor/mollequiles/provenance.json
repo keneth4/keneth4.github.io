@@ -1,0 +1,62 @@
+{
+  "assets/vendor/mollequiles/webp-BEcI0VC5.wasm": {
+    "bytes": 352406,
+    "sha256": "e2c337e1afacf5c9e35f21916b5615fc6c5623074c6e110c07791bd0af071501"
+  },
+  "assets/vendor/mollequiles/preload-helper-CLcXU_4U.js": {
+    "bytes": 1036,
+    "sha256": "61932c27a90c8926a196bddae8e292048aa48818704abebe6a6def4232e2ccb0"
+  },
+  "assets/vendor/mollequiles/libwebp-COPYING.txt": {
+    "bytes": 1496,
+    "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+  },
+  "assets/vendor/mollequiles/zstd.wasm.js": {
+    "bytes": 2992,
+    "sha256": "4c4b1126123be2d6d095e868171806430670311086b333da50494c1668aa2cc1"
+  },
+  "assets/vendor/mollequiles/PlayCanvas-LICENSE.txt": {
+    "bytes": 1064,
+    "sha256": "42fa51ddd556be151a29f381fb97ee975825dcc454e805ea3ea9c079cca04d34"
+  },
+  "assets/vendor/mollequiles/zstd.wasm.wasm": {
+    "bytes": 54394,
+    "sha256": "8b093c4c144273776d511f3baaa0fec32c111500c2798cb4569a71479020e72a"
+  },
+  "assets/vendor/mollequiles/spz-parser-DjsOBSHF.js": {
+    "bytes": 9931,
+    "sha256": "c35ae83a8d96772b3e79b103e999c250565db302c5f661d3073a4eca76dbd22a"
+  },
+  "assets/vendor/mollequiles/zstddec-LICENSE.txt": {
+    "bytes": 2617,
+    "sha256": "8d078b49fc02bd63c1beaf4ddc629a8b48e4ba6a435415408c8209e2a5c3aacf"
+  },
+  "assets/vendor/mollequiles/Zstandard-LICENSE.txt": {
+    "bytes": 1549,
+    "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+  },
+  "assets/vendor/mollequiles/webp-DOOpu-vT.js": {
+    "bytes": 6008,
+    "sha256": "aa44ec12b96a55b4df5aafd8a6e0785f1b4d7b5dbd940ac5a0fdd91e5e837fa5"
+  },
+  "assets/vendor/mollequiles/NOTICE.md": {
+    "bytes": 1122,
+    "sha256": "8b345d9f5e0b4a5d386f156c2d47d98cb2f83bee45e415302e3a5b963ab30f84"
+  },
+  "assets/vendor/mollequiles/playCanvasSpzViewer-XM1S__iy.js": {
+    "bytes": 1948668,
+    "sha256": "b5b6044faceccd43e2441749768e4a8a64b4ec4acbad9e7fe957fc1eb1d08a0e"
+  },
+  "assets/rework/ampm-mollequiles.spz": {
+    "bytes": 2201784,
+    "sha256": "4156ff2caf74fc5c313dc4a6419d4a4c5b993a6035ee2cf97acac5794143de1c"
+  },
+  "assets/rework/mollequiles-560.webp": {
+    "bytes": 327644,
+    "sha256": "6d26dc4180be56ff1cbbd2f86ed35f7acd06392596b71c696b66ac8620a686d1"
+  },
+  "assets/rework/mollequiles-1120.webp": {
+    "bytes": 1003466,
+    "sha256": "2b7989de150abab7cf704473aa36fe4d1f605f9a9df4c915e4cbf011ec476fb3"
+  }
+}
