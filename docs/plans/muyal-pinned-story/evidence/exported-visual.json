@@ -1,0 +1,78 @@
+{
+  "id": "mollequiles",
+  "label": {
+    "es": "Mollequiles",
+    "en": "Mollequiles",
+    "de": "Mollequiles",
+    "fr": "Mollequiles",
+    "ja": "モジェキレス"
+  },
+  "showLabel": true,
+  "spz": {
+    "path": "assets/items/platos-principales-molletes-mollequiles-spz.spz",
+    "mime": "model/vnd.spz",
+    "bytes": 2201784,
+    "hash": "4156ff2caf74fc5c313dc4a6419d4a4c5b993a6035ee2cf97acac5794143de1c",
+    "containerKind": "niantic-ngsp",
+    "engine": "evaluate-alternative",
+    "readiness": "experimental",
+    "containerLabel": "Niantic NGSP v4",
+    "containerVersion": 4,
+    "orientation": {
+      "preset": "flip-vertical",
+      "rotationDeg": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "flip": {
+        "x": false,
+        "y": false,
+        "z": false
+      }
+    }
+  },
+  "poster": {
+    "path": "assets/items/platos-principales-molletes-mollequiles-mollequiles-poster.webp",
+    "mime": "image/webp",
+    "bytes": 1164330
+  },
+  "view": {
+    "yawDeg": 90,
+    "elevationDeg": 45,
+    "fieldOfViewDeg": 30,
+    "distanceMultiplier": 0.65,
+    "framingMargin": 0.95,
+    "target": {
+      "x": 0,
+      "y": -0.1,
+      "z": 0
+    }
+  },
+  "interaction": {
+    "minZoom": 0.5,
+    "maxZoom": 1.5,
+    "minElevationDeg": 30,
+    "maxElevationDeg": 88,
+    "horizontalOrbitRangeDeg": 360,
+    "autoRotate": true,
+    "rotationDirection": "cw",
+    "rotationSpeedRadPerSecond": 0.5,
+    "idleResetMs": 3000,
+    "resetDurationMs": 1000,
+    "preserveYawOnReset": true
+  },
+  "motion": {
+    "preset": "hero-reveal",
+    "durationMs": 3000,
+    "startDistanceScale": 0.78,
+    "arcDeg": 24,
+    "elevationDeltaDeg": 8,
+    "direction": "cw",
+    "easing": "smooth",
+    "cardCue": "derived"
+  },
+  "transform": {
+    "superSplatCorrection": true
+  }
+}

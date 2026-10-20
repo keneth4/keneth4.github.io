@@ -1,0 +1,78 @@
+{
+  "runtime": "PlayCanvas bundle from AMPM ZIP",
+  "poster": {
+    "width": 2100,
+    "height": 2100,
+    "type": "image/png",
+    "bytes": 5704113,
+    "cssWidth": 1200,
+    "cssHeight": 1200,
+    "note": "Original harness hardcoded 1200 dimensions; corrected here using actual saved PNG. DPR generated 2100\u00d72100 framebuffer."
+  },
+  "keys": [
+    [
+      0.45,
+      90,
+      45,
+      1
+    ],
+    [
+      0.6,
+      102,
+      42,
+      0.96
+    ],
+    [
+      0.7,
+      110,
+      49,
+      0.88
+    ],
+    [
+      0.8,
+      98,
+      46,
+      0.92
+    ]
+  ],
+  "samples": 784,
+  "durationMs": 16000,
+  "rafIntervals": {
+    "p50": 16.700000000000728,
+    "p95": 33.399999999999636,
+    "over50ms": 1
+  },
+  "reverseComparison": [],
+  "finalState": {
+    "status": "ready",
+    "progress": 1,
+    "error": "",
+    "bounds": {
+      "center": [
+        0.0014648437500000555,
+        0.170654296875,
+        0.0013427734375
+      ],
+      "size": [
+        1.9892578125,
+        0.7031250000000002,
+        1.989501953125
+      ],
+      "radius": 1.4499697782803507
+    },
+    "splatCount": 98180,
+    "yawDeg": 90.04110737237211,
+    "elevationDeg": 44.98972315690697,
+    "zoom": 1,
+    "sourceKind": "url",
+    "firstFrameMs": 159,
+    "frameMetrics": {
+      "p50Ms": null,
+      "p95Ms": null,
+      "longFrames": 0,
+      "samples": 0
+    },
+    "assetBytes": 2201784,
+    "decodeMs": 85.90000000596046
+  }
+}
